@@ -19,6 +19,11 @@
   Vitest compile the source. A filtered test command therefore needs no build
   first. `tsc -b` still runs in `typecheck` and `build` to check types.
 - ES modules only. Every relative import ends with `.js`.
+- Every package with tests carries a `tsconfig.test.json` that extends its
+  `tsconfig.json`, includes `src` and `test`, and emits nothing. The package
+  `typecheck` script runs both projects: `tsc -b && tsc -p tsconfig.test.json`.
+  Without it, `tsc` never reads the test files and a `@ts-expect-error` in a
+  test becomes a dead annotation.
 - `packages/engine` must not import a DOM type or an I/O module.
 - `packages/ui` must not import `@hades/data` or `@hades/schema`.
 - The deploy target is GitHub Pages under the path `/hades-prophecy-tracker/`.
