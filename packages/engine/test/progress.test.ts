@@ -69,6 +69,30 @@ describe('overallProgress', () => {
   it('reports a ratio of 0 for a collection with no achievements', () => {
     const empty: Dataset = { ...dataset, achievements: [] }
     expect(empty.collections.length).toBe(2)
-    expect(overallProgress(empty, {})).toMatchObject({ done: 0, total: 0, ratio: 0 })
+    const result = overallProgress(empty, {})
+    expect(result).toMatchObject({ done: 0, total: 0, ratio: 0 })
+    expect(result.byCollection['prophecy']).toEqual({ done: 0, total: 0, ratio: 0 })
+    expect(result.byCollection['codex']).toEqual({ done: 0, total: 0, ratio: 0 })
+  })
+
+  it('ignores an achievement whose collection is absent from the dataset', () => {
+    const orphaned: Dataset = {
+      ...dataset,
+      achievements: [
+        ...dataset.achievements,
+        {
+          id: 'ghost:example',
+          name: 'Ghost example',
+          description: 'An achievement in a collection the dataset does not list.',
+          collection: 'ghost',
+          requirement: { kind: 'all', of: ['a:one'] },
+        },
+      ],
+    }
+    const result = overallProgress(orphaned, { 'a:one': true, 'a:two': true, 'b:one': true })
+    expect(result).toMatchObject({ done: 3, total: 3, ratio: 1 })
+    expect(result.byCollection['ghost']).toBeUndefined()
+    expect(result.byCollection['prophecy']).toEqual({ done: 1, total: 1, ratio: 1 })
+    expect(result.byCollection['codex']).toEqual({ done: 1, total: 1, ratio: 1 })
   })
 })

@@ -52,4 +52,45 @@ describe('nextSteps', () => {
   it('breaks a tie by fact id', () => {
     expect(nextSteps(dataset, { 'a:shared': true })).toEqual(['a:one', 'a:two'])
   })
+
+  it('keeps an atLeast fact missing when it is below the threshold', () => {
+    const atLeastDataset: Dataset = {
+      collections: [{ id: 'prophecy', name: 'Prophecies' }],
+      facts: [{ id: 'a:threshold', label: 'Threshold', kind: 'number', collection: 'prophecy' }],
+      achievements: [
+        {
+          id: 'prophecy:threshold',
+          name: 'Threshold',
+          description: 'Threshold.',
+          collection: 'prophecy',
+          requirement: { kind: 'atLeast', fact: 'a:threshold', value: 4 },
+        },
+      ],
+    }
+    expect(nextSteps(atLeastDataset, { 'a:threshold': 2 })).toEqual(['a:threshold'])
+  })
+
+  it('does not flag a satisfied branch of a nested any node as missing', () => {
+    const nestedDataset: Dataset = {
+      collections: [{ id: 'prophecy', name: 'Prophecies' }],
+      facts: [
+        { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy' },
+        { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy' },
+        { id: 'a:three', label: 'Three', kind: 'boolean', collection: 'prophecy' },
+      ],
+      achievements: [
+        {
+          id: 'prophecy:nested',
+          name: 'Nested',
+          description: 'Nested.',
+          collection: 'prophecy',
+          requirement: {
+            kind: 'all',
+            of: ['a:one', { kind: 'any', of: ['a:two', 'a:three'] }],
+          },
+        },
+      ],
+    }
+    expect(nextSteps(nestedDataset, { 'a:three': true })).toEqual(['a:one'])
+  })
 })
