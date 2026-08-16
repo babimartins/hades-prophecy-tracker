@@ -973,7 +973,7 @@ export function overallProgress(dataset: Dataset, facts: FactMap): OverallProgre
 ```ts
 import type { Dataset, FactId } from '@hades/schema'
 import { evaluate, isComplete } from './evaluate.js'
-import { collectFactIds, isSatisfied, type FactMap } from './facts.js'
+import { collectFactIds, type FactMap } from './facts.js'
 
 /** Counts the achievements that reference the fact. */
 export function impact(factId: FactId, dataset: Dataset): number {
@@ -993,8 +993,10 @@ export function nextSteps(dataset: Dataset, facts: FactMap): FactId[] {
   for (const achievement of dataset.achievements) {
     const result = evaluate(achievement.requirement, facts)
     if (isComplete(result)) continue
-    for (const factId of collectFactIds(achievement.requirement)) {
-      if (isSatisfied(factId, facts)) continue
+    // Use evaluate's `missing`, never a raw fact walk. A raw walk drops a
+    // partial `atLeast` fact and keeps the redundant siblings of a satisfied
+    // `any` branch.
+    for (const factId of result.missing) {
       counts.set(factId, (counts.get(factId) ?? 0) + 1)
     }
   }
