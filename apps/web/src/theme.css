@@ -1,0 +1,16 @@
+:root {
+  --hd-color-text: #f3ead9;
+  --hd-color-muted: #a29684;
+  --hd-color-surface: #1b1420;
+  --hd-color-accent: #c8102e;
+  --hd-color-done: #2f9e6f;
+  color-scheme: dark;
+}
+
+body {
+  background: #120d16;
+  color: var(--hd-color-text);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 24px;
+}
