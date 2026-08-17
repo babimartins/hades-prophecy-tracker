@@ -1,13 +1,15 @@
 import { dataset } from '@hades/data'
-import { overallProgress, searchAchievements, type FactMap } from '@hades/engine'
+import { overallProgress, type FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
 import '@hades/ui'
 import { css, html, LitElement } from 'lit'
+import { collectionsWithEntries, visibleAchievements } from '../lib/achievement-filter.js'
 import { ProgressState } from '../state/progress-state.js'
 import { createIndexedDbStore } from '../storage/indexeddb-store.js'
 import type { ProgressStore } from '../storage/progress-store.js'
 import './achievement-detail.js'
 import './achievement-list.js'
+import './collection-filter.js'
 import './next-steps-panel.js'
 import './search-box.js'
 import './transfer-controls.js'
@@ -43,11 +45,15 @@ export class HadesDashboard extends LitElement {
     openId: { state: true },
     saveError: { state: true },
     query: { state: true },
+    selectedCollection: { state: true },
+    collapsedSections: { state: true },
   }
 
   openId: string | undefined
   saveError = ''
   query = ''
+  selectedCollection: string | undefined = undefined
+  collapsedSections: Record<string, boolean> = {}
 
   readonly #controller: StateController
   readonly #factsById: Map<string, Fact> = new Map(
@@ -67,6 +73,16 @@ export class HadesDashboard extends LitElement {
   private onSearch(event: CustomEvent<{ query: string }>): void {
     this.query = event.detail.query
     this.openId = undefined
+  }
+
+  private onCollectionSelect(event: CustomEvent<{ id: string | undefined }>): void {
+    this.selectedCollection = event.detail.id
+    this.openId = undefined
+  }
+
+  private onSectionToggle(event: CustomEvent<{ section: string; open: boolean }>): void {
+    const { section, open } = event.detail
+    this.collapsedSections = { ...this.collapsedSections, [section]: !open }
   }
 
   private async onFactToggle(
@@ -145,11 +161,18 @@ export class HadesDashboard extends LitElement {
             ></achievement-detail>
           `
         : html`
+            <collection-filter
+              .collections=${collectionsWithEntries(dataset)}
+              .selected=${this.selectedCollection}
+              @collection-select=${this.onCollectionSelect}
+            ></collection-filter>
             <search-box .value=${this.query} @search-change=${this.onSearch}></search-box>
             <achievement-list
-              .achievements=${searchAchievements(dataset, this.query)}
+              .achievements=${visibleAchievements(dataset, this.selectedCollection, this.query)}
               .facts=${facts}
+              .collapsedSections=${this.collapsedSections}
               @achievement-open=${this.onOpen}
+              @section-toggle=${this.onSectionToggle}
             ></achievement-list>
           `}
     `
