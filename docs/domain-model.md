@@ -8,6 +8,20 @@ Read this before adding a new collection. It exists to stop the same three
 mistakes: modelling a run-scoped thing as progress, splitting one action into
 several facts, and inventing a system that does not exist.
 
+## 0. Scope rule
+
+Set by the project owner:
+
+> Anything that needs sub-items, or needs actions from the player to achieve,
+> must be listed.
+
+A system is in scope when the player must *do* something to complete it, even
+when no prophecy asks for it. Keepsake ranks, hidden aspect levels and individual
+fish species all qualify. Depth is not optional.
+
+The only thing this rule does not reach is run-scoped state, which is not
+progress at all. That boundary is section 1.
+
 ## 1. The boundary: what is progress
 
 **Only what survives Zagreus's death is progress.**
