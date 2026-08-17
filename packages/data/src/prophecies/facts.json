@@ -62,55 +62,64 @@
   {
     "id": "nectar:zeus",
     "label": "Give Nectar to Zeus",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:poseidon",
     "label": "Give Nectar to Poseidon",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:demeter",
     "label": "Give Nectar to Demeter",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:athena",
     "label": "Give Nectar to Athena",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:aphrodite",
     "label": "Give Nectar to Aphrodite",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:ares",
     "label": "Give Nectar to Ares",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:artemis",
     "label": "Give Nectar to Artemis",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:dionysus",
     "label": "Give Nectar to Dionysus",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:hermes",
     "label": "Give Nectar to Hermes",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 8,
     "collection": "prophecy"
   },
   {
@@ -194,13 +203,15 @@
   {
     "id": "nectar:orpheus",
     "label": "Give Nectar to Orpheus",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 8,
     "collection": "prophecy"
   },
   {
     "id": "nectar:eurydice",
     "label": "Give Nectar to Eurydice",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 7,
     "collection": "prophecy"
   },
   {

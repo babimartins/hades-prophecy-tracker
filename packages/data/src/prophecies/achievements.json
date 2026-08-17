@@ -29,15 +29,51 @@
       "kind": "count",
       "n": 6,
       "of": [
-        "nectar:zeus",
-        "nectar:poseidon",
-        "nectar:demeter",
-        "nectar:athena",
-        "nectar:aphrodite",
-        "nectar:ares",
-        "nectar:artemis",
-        "nectar:dionysus",
-        "nectar:hermes"
+        {
+          "kind": "atLeast",
+          "fact": "nectar:zeus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:poseidon",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:demeter",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:athena",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:aphrodite",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:ares",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:artemis",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:dionysus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hermes",
+          "value": 1
+        }
       ]
     }
   },
@@ -106,8 +142,16 @@
     "requirement": {
       "kind": "all",
       "of": [
-        "nectar:orpheus",
-        "nectar:eurydice",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:orpheus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:eurydice",
+          "value": 1
+        },
         "workorder:singers-gamble",
         "talk:orpheus-after-singers-gamble"
       ]
