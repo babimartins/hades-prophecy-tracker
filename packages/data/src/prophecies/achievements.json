@@ -742,5 +742,121 @@
         "miniboss:dire-satyr-cultist"
       ]
     }
+  },
+  {
+    "id": "prophecy:simple-job",
+    "name": "A Simple Job",
+    "description": "The House Contractor of the House of Hades shall be charged with performing various renovation services.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "contractor:renovation-tasks",
+          "value": 30
+        }
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:chthonic-knowledge",
+    "name": "Chthonic Knowledge",
+    "description": "The son of the god of the dead shall someday reveal a portion of the Underworld Codex entrusted to him.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "codex:sections-revealed",
+          "value": 70
+        }
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:customer-loyalty",
+    "name": "Customer Loyalty",
+    "description": "The son of the god of the dead shall someday purchase each of the various goods sometimes offered in the Well of Charon.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:hydralite",
+        "wellofcharon:eye-of-lamia",
+        "wellofcharon:cyclops-jerky",
+        "wellofcharon:prometheus-stone",
+        "wellofcharon:braid-of-atlas",
+        "wellofcharon:ignited-ichor",
+        "wellofcharon:yarn-of-ariadne",
+        "wellofcharon:touch-of-styx",
+        "wellofcharon:nail-of-talos",
+        "wellofcharon:eris-bangle",
+        "wellofcharon:nemesis-crest",
+        "wellofcharon:chimaera-jerky",
+        "wellofcharon:stygian-shard",
+        "wellofcharon:aether-net",
+        "wellofcharon:light-of-ixion",
+        "wellofcharon:trove-tracker",
+        "wellofcharon:skeletal-lure",
+        "wellofcharon:flame-wheels-release",
+        "wellofcharon:life-essence",
+        "wellofcharon:centaur-soul",
+        "wellofcharon:price-of-midas",
+        "wellofcharon:kiss-of-styx",
+        "wellofcharon:tinge-of-erebus",
+        "wellofcharon:gaeas-treasure",
+        "wellofcharon:night-spindle",
+        "wellofcharon:fateful-twist"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:denizens-of-the-deep",
+    "name": "Denizens of the Deep",
+    "description": "The son of the god of the dead shall someday catch a significant number of river-dwelling denizens, including an unusually rare species, impressing Lord Poseidon.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "fish:caught",
+          "value": 25
+        },
+        "fish:very-rare-caught",
+        "talk:poseidon-after-fishing"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:gift-of-song",
+    "name": "The Gift of Song",
+    "description": "The son of the god of the dead shall someday learn to perform music halfway decently through the teachings of a solemn master of the art.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "lyre:interactions",
+          "value": 210
+        },
+        "talk:orpheus-after-lyre"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:useless-trinket",
+    "name": "The Useless Trinket",
+    "description": "The son of the god of the dead shall someday earn a magnificent tribute after breaking free from the realm in which he was born, despite the Pact of Punishment.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-hades-heat8"
+      ]
+    },
+    "collection": "prophecy"
   }
 ]

@@ -1741,5 +1741,213 @@
     "label": "Slay the Dire Satyr Cultist",
     "kind": "boolean",
     "collection": "prophecy"
+  },
+  {
+    "id": "contractor:renovation-tasks",
+    "label": "Renovation tasks ordered from the House Contractor",
+    "kind": "number",
+    "max": 30,
+    "collection": "prophecy"
+  },
+  {
+    "id": "codex:sections-revealed",
+    "label": "Codex sections revealed",
+    "kind": "number",
+    "max": 70,
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:hydralite",
+    "label": "Purchase HydraLite from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:eye-of-lamia",
+    "label": "Purchase Eye of Lamia from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:cyclops-jerky",
+    "label": "Purchase Cyclops Jerky from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:prometheus-stone",
+    "label": "Purchase Prometheus Stone from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:braid-of-atlas",
+    "label": "Purchase Braid of Atlas from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:ignited-ichor",
+    "label": "Purchase Ignited Ichor from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:yarn-of-ariadne",
+    "label": "Purchase Yarn of Ariadne from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:touch-of-styx",
+    "label": "Purchase Touch of Styx from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:nail-of-talos",
+    "label": "Purchase Nail of Talos from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:eris-bangle",
+    "label": "Purchase Eris Bangle from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:nemesis-crest",
+    "label": "Purchase Nemesis Crest from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:chimaera-jerky",
+    "label": "Purchase Chimaera Jerky from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:stygian-shard",
+    "label": "Purchase Stygian Shard from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:aether-net",
+    "label": "Purchase Aether Net from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:light-of-ixion",
+    "label": "Purchase Light of Ixion from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:trove-tracker",
+    "label": "Purchase Trove Tracker from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:skeletal-lure",
+    "label": "Purchase Skeletal Lure from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:flame-wheels-release",
+    "label": "Purchase Flame Wheels Release from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:life-essence",
+    "label": "Purchase Life Essence from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:centaur-soul",
+    "label": "Purchase Centaur Soul from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:price-of-midas",
+    "label": "Purchase Price of Midas from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:kiss-of-styx",
+    "label": "Purchase Kiss of Styx from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:tinge-of-erebus",
+    "label": "Purchase Tinge of Erebus from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:gaeas-treasure",
+    "label": "Purchase Gaea's Treasure from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:night-spindle",
+    "label": "Purchase Night Spindle from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "wellofcharon:fateful-twist",
+    "label": "Purchase Fateful Twist from the Well of Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "fish:caught",
+    "label": "Fish caught",
+    "kind": "number",
+    "max": 25,
+    "collection": "prophecy"
+  },
+  {
+    "id": "fish:very-rare-caught",
+    "label": "Catch a Very Rare fish",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:poseidon-after-fishing",
+    "label": "Report to Poseidon after fishing",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "lyre:interactions",
+    "label": "Lyre interactions",
+    "kind": "number",
+    "max": 210,
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:orpheus-after-lyre",
+    "label": "Report to Orpheus after learning the Lyre",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:defeat-hades-heat8",
+    "label": "Defeat Hades with at least 8 Heat active",
+    "kind": "boolean",
+    "collection": "prophecy"
   }
 ]
