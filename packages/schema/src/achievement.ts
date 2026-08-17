@@ -8,6 +8,7 @@ export const achievementSchema = z.object({
   description: z.string().min(1),
   collection: collectionIdSchema,
   requirement: requirementSchema,
+  section: collectionIdSchema.optional(),
 })
 
 export type Achievement = z.infer<typeof achievementSchema>
