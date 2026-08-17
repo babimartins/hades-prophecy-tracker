@@ -3,14 +3,15 @@
 Track completion of the Hades (Supergiant Games, 2020) Fated List, down to
 each single action inside each prophecy.
 
-## Status: active construction
+## Status
 
-This project is under active construction. Slice 1 builds the foundation: the
-data model, the engine, browser storage, and a first design system. That work
-is in progress.
+Slice 1 is complete. The data model, the engine, the design system and the
+dashboard are wired together. The dataset holds all 55 prophecies of the
+in-game Fated List. `pnpm build` passes and produces a working application.
 
-There is no running site yet. The application is not wired together. There is
-no deployed URL.
+The site is not live yet. GitHub Pages deployment needs one manual step from a
+repository owner. See "Deployment" below. Once that step runs, the site is at
+https://babimartins.github.io/hades-prophecy-tracker/.
 
 ## Why it exists
 
@@ -50,14 +51,18 @@ This list is verified against the current state of the repository.
 | Package            | Responsibility                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | `packages/schema`  | Data model and Zod validation: facts, requirements, achievements, collections, dataset.                            |
+| `packages/data`    | Curated game data as JSON, plus its integrity test. The source of truth for facts and prophecies. |
 | `packages/engine`  | Pure functions that evaluate requirements against facts (`evaluate`, `achievementProgress`, `overallProgress`, `impact`, `nextSteps`). No DOM, no I/O. |
 | `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, `hd-progress`, and shared design tokens. No game knowledge. |
-| `apps/web`         | Vite application. Holds the IndexedDB progress store, the export/import transfer format, and the progress state. The dashboard UI is not built yet.  |
+| `apps/web`         | Vite application. Holds the dashboard UI, the IndexedDB progress store, and the export/import transfer format. |
 
-The curated game dataset (`packages/data`) is under construction and is not
-part of this branch yet. The in-game Fated List holds 49 prophecies. The
-curated dataset does not cover all of them yet, and the final count is not
-confirmed.
+The in-game Fated List holds 55 prophecies. The curated dataset in
+`packages/data` covers all 55, each broken into its sub-item facts.
+
+The schema also defines a separate `achievement` collection, for platform
+achievements. That collection holds no entries yet. Two sources disagree on
+the achievement count: the Hades Wiki's Achievements page lists 50, and Steam
+shows 49 publicly.
 
 ## Development
 
@@ -74,14 +79,29 @@ pnpm test
 Verified state of each command today:
 
 - `pnpm lint` passes.
-- `pnpm test` passes.
-- `pnpm typecheck` fails. `packages/engine/test/facts.test.ts` passes a
-  `readonly` array literal where the `RequirementChild[]` type expects a
-  mutable array. This is a test-file typing issue, not a fix to the engine
-  logic.
-- `pnpm build` fails. `apps/web/src/main.ts` imports
-  `./components/hades-dashboard.js`, and that file does not exist yet. The
-  dashboard UI is not built, so the web app cannot bundle.
+- `pnpm typecheck` passes.
+- `pnpm build` passes. It produces `apps/web/dist/index.html`.
+- `pnpm test` passes. Browser tests run under Playwright's headless Chromium.
+  Install the browser once with `pnpm --filter @hades/web exec playwright
+  install --with-deps chromium` before the first run.
+
+To run the app locally:
+
+```bash
+pnpm --filter @hades/web dev
+```
+
+## Deployment
+
+`.github/workflows/ci.yml` runs lint, typecheck, build and test on every push
+and pull request.
+
+`.github/workflows/deploy.yml` builds the site and publishes `apps/web/dist`
+to GitHub Pages on every push to `main`. The workflow alone does not make the
+site live. A repository owner must open Settings, then Pages, then set the
+source to "GitHub Actions". This is a one-time step. After that step, the
+next push to `main` deploys the site to
+https://babimartins.github.io/hades-prophecy-tracker/.
 
 ## Licence
 

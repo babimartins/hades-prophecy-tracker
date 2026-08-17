@@ -1,0 +1,9 @@
+# Data licence
+
+The files in `packages/data/src` include information derived from the Hades Wiki
+(https://hades.fandom.com/), used under CC BY-SA 3.0.
+
+These data files are therefore published under CC BY-SA 3.0:
+https://creativecommons.org/licenses/by-sa/3.0/
+
+The rest of the repository uses the MIT licence.
