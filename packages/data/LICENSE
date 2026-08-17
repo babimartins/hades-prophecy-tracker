@@ -1,9 +1,32 @@
 # Data licence
 
-The files in `packages/data/src` include information derived from the Hades Wiki
-(https://hades.fandom.com/), used under CC BY-SA 3.0.
+The files in `packages/data/src` contain information derived from the
+[Hades Wiki](https://hades.fandom.com/).
 
-These data files are therefore published under CC BY-SA 3.0:
-https://creativecommons.org/licenses/by-sa/3.0/
+That wiki states its licence in the footer of every page:
 
-The rest of the repository uses the MIT licence.
+> Community content is available under CC BY-NC-SA unless otherwise noted.
+
+Fandom's default for a community is CC BY-SA 3.0, but individual communities may
+use CC BY-NC or CC BY-NC-SA instead. See https://www.fandom.com/licensing. The
+Hades Wiki is one of the NonCommercial communities.
+
+These data files are therefore published under **CC BY-NC-SA**, with attribution
+to the Hades Wiki. Two consequences follow, and both are binding on anyone who
+reuses this directory:
+
+- **NonCommercial.** You may not use these data files for commercial purposes.
+- **ShareAlike.** If you adapt them, you must distribute your version under the
+  same licence.
+
+The rest of the repository uses the MIT licence. MIT does not, and cannot, apply
+to this directory.
+
+## What is stored here
+
+Entry names, section names, and the decomposition of each requirement into
+single verifiable actions.
+
+Prose from the game itself, such as the text of Codex entries, is not stored
+here. That text belongs to Supergiant Games and is not covered by the wiki's
+licence.

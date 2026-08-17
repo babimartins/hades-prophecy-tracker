@@ -109,9 +109,14 @@ https://babimartins.github.io/hades-prophecy-tracker/.
 
 Code: MIT. See `LICENSE`.
 
-Game data derives from the [Hades Wiki](https://hades.fandom.com/), under CC
-BY-SA 3.0, with attribution. The data licence file arrives with the data
-package, at `packages/data/LICENSE`.
+Game data derives from the [Hades Wiki](https://hades.fandom.com/), which
+licenses its content under **CC BY-NC-SA**. The data in `packages/data` is
+therefore CC BY-NC-SA, not MIT: it may not be used commercially, and an adapted
+version must carry the same licence. See `packages/data/LICENSE`.
+
+The repository stores entry names and requirement decompositions. It does not
+store prose from the game, such as Codex entry text, which belongs to Supergiant
+Games.
 
 ## Disclaimer
 
