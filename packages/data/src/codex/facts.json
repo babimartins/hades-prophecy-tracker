@@ -697,5 +697,221 @@
     "label": "Unlock the Red Onion Codex entry",
     "kind": "boolean",
     "collection": "codex"
+  },
+  {
+    "id": "catch:mati",
+    "label": "Catch a Mati for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:projelly",
+    "label": "Catch a Projelly for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:voidskate",
+    "label": "Catch a Voidskate for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:hellfish",
+    "label": "Catch a Hellfish for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:knucklehead",
+    "label": "Catch a Knucklehead for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:scyllascion",
+    "label": "Catch a Scyllascion for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:slavug",
+    "label": "Catch a Slavug for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:chrustacean",
+    "label": "Catch a Chrustacean for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:flameater",
+    "label": "Catch a Flameater for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:chlam",
+    "label": "Catch a Chlam for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:charp",
+    "label": "Catch a Charp for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:seamare",
+    "label": "Catch a Seamare for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:gupp",
+    "label": "Catch a Gupp for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:scuffer",
+    "label": "Catch a Scuffer for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:stonewhal",
+    "label": "Catch a Stonewhal for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:trout",
+    "label": "Catch a Trout for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:bass",
+    "label": "Catch a Bass for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "catch:sturgeon",
+    "label": "Catch a Sturgeon for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:mati",
+    "label": "Unlock the Mati Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:projelly",
+    "label": "Unlock the Projelly Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:voidskate",
+    "label": "Unlock the Voidskate Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:hellfish",
+    "label": "Unlock the Hellfish Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:knucklehead",
+    "label": "Unlock the Knucklehead Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:scyllascion",
+    "label": "Unlock the Scyllascion Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:slavug",
+    "label": "Unlock the Slavug Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:chrustacean",
+    "label": "Unlock the Chrustacean Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:flameater",
+    "label": "Unlock the Flameater Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:chlam",
+    "label": "Unlock the Chlam Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:charp",
+    "label": "Unlock the Charp Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:seamare",
+    "label": "Unlock the Seamare Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:gupp",
+    "label": "Unlock the Gupp Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:scuffer",
+    "label": "Unlock the Scuffer Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:stonewhal",
+    "label": "Unlock the Stonewhal Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:trout",
+    "label": "Unlock the Trout Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:bass",
+    "label": "Unlock the Bass Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:sturgeon",
+    "label": "Unlock the Sturgeon Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
   }
 ]

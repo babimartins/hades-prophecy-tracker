@@ -1090,5 +1090,257 @@
         "artifact:red-onion"
       ]
     }
+  },
+  {
+    "id": "codex:mati",
+    "name": "Mati",
+    "description": "Catch a Mati, a Common fish found in the Chaos realm.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:mati",
+        "catch:mati"
+      ]
+    }
+  },
+  {
+    "id": "codex:projelly",
+    "name": "Projelly",
+    "description": "Catch a Projelly, a Rare fish found in the Chaos realm.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:projelly",
+        "catch:projelly"
+      ]
+    }
+  },
+  {
+    "id": "codex:voidskate",
+    "name": "Voidskate",
+    "description": "Catch a Voidskate, a Legendary fish found in the Chaos realm.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:voidskate",
+        "catch:voidskate"
+      ]
+    }
+  },
+  {
+    "id": "codex:hellfish",
+    "name": "Hellfish",
+    "description": "Catch a Hellfish, a Common fish found in Tartarus.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:hellfish",
+        "catch:hellfish"
+      ]
+    }
+  },
+  {
+    "id": "codex:knucklehead",
+    "name": "Knucklehead",
+    "description": "Catch a Knucklehead, a Rare fish found in Tartarus.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:knucklehead",
+        "catch:knucklehead"
+      ]
+    }
+  },
+  {
+    "id": "codex:scyllascion",
+    "name": "Scyllascion",
+    "description": "Catch a Scyllascion, a Legendary fish found in Tartarus.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:scyllascion",
+        "catch:scyllascion"
+      ]
+    }
+  },
+  {
+    "id": "codex:slavug",
+    "name": "Slavug",
+    "description": "Catch a Slavug, a Common fish found in Asphodel.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:slavug",
+        "catch:slavug"
+      ]
+    }
+  },
+  {
+    "id": "codex:chrustacean",
+    "name": "Chrustacean",
+    "description": "Catch a Chrustacean, a Rare fish found in Asphodel.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:chrustacean",
+        "catch:chrustacean"
+      ]
+    }
+  },
+  {
+    "id": "codex:flameater",
+    "name": "Flameater",
+    "description": "Catch a Flameater, a Legendary fish found in Asphodel.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:flameater",
+        "catch:flameater"
+      ]
+    }
+  },
+  {
+    "id": "codex:chlam",
+    "name": "Chlam",
+    "description": "Catch a Chlam, a Common fish found in Elysium.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:chlam",
+        "catch:chlam"
+      ]
+    }
+  },
+  {
+    "id": "codex:charp",
+    "name": "Charp",
+    "description": "Catch a Charp, a Rare fish found in Elysium.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:charp",
+        "catch:charp"
+      ]
+    }
+  },
+  {
+    "id": "codex:seamare",
+    "name": "Seamare",
+    "description": "Catch a Seamare, a Legendary fish found in Elysium.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:seamare",
+        "catch:seamare"
+      ]
+    }
+  },
+  {
+    "id": "codex:gupp",
+    "name": "Gupp",
+    "description": "Catch a Gupp, a Common fish found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:gupp",
+        "catch:gupp"
+      ]
+    }
+  },
+  {
+    "id": "codex:scuffer",
+    "name": "Scuffer",
+    "description": "Catch a Scuffer, a Rare fish found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:scuffer",
+        "catch:scuffer"
+      ]
+    }
+  },
+  {
+    "id": "codex:stonewhal",
+    "name": "Stonewhal",
+    "description": "Catch a Stonewhal, a Legendary fish found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:stonewhal",
+        "catch:stonewhal"
+      ]
+    }
+  },
+  {
+    "id": "codex:trout",
+    "name": "Trout",
+    "description": "Catch a Trout, a Common fish found in Greece.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:trout",
+        "catch:trout"
+      ]
+    }
+  },
+  {
+    "id": "codex:bass",
+    "name": "Bass",
+    "description": "Catch a Bass, a Rare fish found in Greece.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:bass",
+        "catch:bass"
+      ]
+    }
+  },
+  {
+    "id": "codex:sturgeon",
+    "name": "Sturgeon",
+    "description": "Catch a Sturgeon, a Legendary fish found in Greece.",
+    "collection": "codex",
+    "section": "river-denizens",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:sturgeon",
+        "catch:sturgeon"
+      ]
+    }
   }
 ]
