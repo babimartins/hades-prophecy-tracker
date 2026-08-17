@@ -582,5 +582,165 @@
         "weapon:adamant-rail"
       ]
     }
+  },
+  {
+    "id": "prophecy:holy-liege",
+    "name": "The Holy Liege",
+    "description": "The Stygian Blade shall someday rise from the Underworld in a form it shall assume again in the hands of a mighty king, whose tale is yet to be spun.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:cerberus-stygius-arthur"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:fated-saint-of-war",
+    "name": "The Fated Saint of War",
+    "description": "The Eternal Spear shall someday rise from the Underworld in a form it shall assume again in the hands of peerless warrior, whose tale is yet to be spun.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:cerberus-varatha-guan-yu"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:preservers-avatar",
+    "name": "The Preserver's Avatar",
+    "description": "The Heart-Seeking Bow shall someday rise from the Underworld in a form it assumed in the hands of a divine archer whose deeds shall forever be remembered.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:cerberus-coronacht-rama"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:dragons-rival",
+    "name": "The Dragon's Rival",
+    "description": "The Shield of Chaos shall someday rise from the Underworld in a form it shall assume again in the hands of a monster-hunting hero, whose tale is yet to be spun.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:cerberus-aegis-beowulf"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:god-like-king",
+    "name": "The God-like King",
+    "description": "The Twin Fists of Malphon shall someday rise from the Underworld in a form it assumed in the hands of a mighty god-king, whose deeds shall forever be remembered.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:cerberus-malphon-gilgamesh"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:dawn-bringer",
+    "name": "The Dawn Bringer",
+    "description": "The Adamant Rail shall someday rise from the Underworld in a form it assumed in the hands of a rebellious servant who railed against his all-powerful lord.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:cerberus-exagryph-lucifer"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:master-of-arms",
+    "name": "Master of Arms",
+    "description": "The son of the god of the dead shall someday break free from the realm in which he was born using each of the Infernal Arms.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "escape:stygian-blade",
+        "escape:eternal-spear",
+        "escape:shield-of-chaos",
+        "escape:heart-seeking-bow",
+        "escape:twin-fists-of-malphon",
+        "escape:adamant-rail"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:harsh-conditions",
+    "name": "Harsh Conditions",
+    "description": "The son of the god of the dead shall someday break free from the realm in which he was born while under the many Conditions of the Pact of Punishment.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "pact:hard-labor",
+        "pact:lasting-consequences",
+        "pact:convenience-fee",
+        "pact:jury-summons",
+        "pact:extreme-measures",
+        "pact:calisthenics-program",
+        "pact:benefits-package",
+        "pact:middle-management",
+        "pact:underworld-customs",
+        "pact:forced-overtime",
+        "pact:heightened-security",
+        "pact:routine-inspection",
+        "pact:damage-control",
+        "pact:approval-process",
+        "pact:tight-deadline"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:slashed-benefits",
+    "name": "Slashed Benefits",
+    "description": "The son of the god of the dead shall someday slay foes with each of the Perks from the Pact of Punishment's 'Benefits Package' Condition.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:shifter",
+        "perk:bruiser",
+        "perk:slugger",
+        "perk:puller",
+        "perk:savior",
+        "perk:speeder",
+        "perk:linker",
+        "perk:cloner",
+        "perk:burner",
+        "perk:seeker",
+        "perk:popper"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:wanton-ransacking",
+    "name": "Wanton Ransacking",
+    "description": "The son of the god of the dead shall someday slay each of the various Wardens guarding key Underworld chambers.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "miniboss:dire-inferno-bomber",
+        "miniboss:doomstone",
+        "miniboss:wretched-sneak",
+        "miniboss:dire-voidstone",
+        "miniboss:megagorgon",
+        "miniboss:dire-skull-crusher",
+        "miniboss:dire-spreader",
+        "miniboss:dire-soul-catcher",
+        "miniboss:dire-bother",
+        "miniboss:dire-snakestone",
+        "miniboss:dire-gigantic-vermin",
+        "miniboss:dire-satyr-cultist"
+      ]
+    }
   }
 ]

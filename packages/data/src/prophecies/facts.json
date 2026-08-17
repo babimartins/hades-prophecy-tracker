@@ -1447,5 +1447,299 @@
     "label": "Acquire the Adamant Rail",
     "kind": "boolean",
     "collection": "prophecy"
+  },
+  {
+    "id": "combat:cerberus-stygius-arthur",
+    "label": "Get past Cerberus at the Temple of Styx while wielding the Stygian Blade with the Aspect of Arthur in effect",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:cerberus-varatha-guan-yu",
+    "label": "Get past Cerberus at the Temple of Styx while wielding the Eternal Spear with the Aspect of Guan Yu in effect",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:cerberus-coronacht-rama",
+    "label": "Get past Cerberus at the Temple of Styx while wielding the Heart-Seeking Bow with the Aspect of Rama in effect",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:cerberus-aegis-beowulf",
+    "label": "Get past Cerberus at the Temple of Styx while wielding the Shield of Chaos with the Aspect of Beowulf in effect",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:cerberus-malphon-gilgamesh",
+    "label": "Get past Cerberus at the Temple of Styx while wielding the Twin Fists of Malphon with the Aspect of Gilgamesh in effect",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:cerberus-exagryph-lucifer",
+    "label": "Get past Cerberus at the Temple of Styx while wielding the Adamant Rail with the Aspect of Lucifer in effect",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "escape:stygian-blade",
+    "label": "Escape the Underworld using the Stygian Blade",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "escape:eternal-spear",
+    "label": "Escape the Underworld using the Eternal Spear",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "escape:shield-of-chaos",
+    "label": "Escape the Underworld using the Shield of Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "escape:heart-seeking-bow",
+    "label": "Escape the Underworld using the Heart-Seeking Bow",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "escape:twin-fists-of-malphon",
+    "label": "Escape the Underworld using the Twin Fists of Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "escape:adamant-rail",
+    "label": "Escape the Underworld using the Adamant Rail",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:hard-labor",
+    "label": "Activate the Hard Labor Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:lasting-consequences",
+    "label": "Activate the Lasting Consequences Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:convenience-fee",
+    "label": "Activate the Convenience Fee Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:jury-summons",
+    "label": "Activate the Jury Summons Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:calisthenics-program",
+    "label": "Activate the Calisthenics Program Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:benefits-package",
+    "label": "Activate the Benefits Package Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:middle-management",
+    "label": "Activate the Middle Management Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:underworld-customs",
+    "label": "Activate the Underworld Customs Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:forced-overtime",
+    "label": "Activate the Forced Overtime Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:heightened-security",
+    "label": "Activate the Heightened Security Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:routine-inspection",
+    "label": "Activate the Routine Inspection Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:damage-control",
+    "label": "Activate the Damage Control Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:approval-process",
+    "label": "Activate the Approval Process Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:tight-deadline",
+    "label": "Activate the Tight Deadline Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:shifter",
+    "label": "Slay a foe with the Shifter Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:bruiser",
+    "label": "Slay a foe with the Bruiser Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:slugger",
+    "label": "Slay a foe with the Slugger Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:puller",
+    "label": "Slay a foe with the Puller Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:savior",
+    "label": "Slay a foe with the Savior Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:speeder",
+    "label": "Slay a foe with the Speeder Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:linker",
+    "label": "Slay a foe with the Linker Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:cloner",
+    "label": "Slay a foe with the Cloner Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:burner",
+    "label": "Slay a foe with the Burner Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:seeker",
+    "label": "Slay a foe with the Seeker Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "perk:popper",
+    "label": "Slay a foe with the Popper Perk active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-inferno-bomber",
+    "label": "Slay the Dire Inferno Bomber",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:doomstone",
+    "label": "Slay the Doomstone",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:wretched-sneak",
+    "label": "Slay the Wretched Sneak",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-voidstone",
+    "label": "Slay the Dire Voidstone",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:megagorgon",
+    "label": "Slay the Megagorgon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-skull-crusher",
+    "label": "Slay the Dire Skull-Crusher",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-spreader",
+    "label": "Slay the Dire Spreader",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-soul-catcher",
+    "label": "Slay the Dire Soul Catcher",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-bother",
+    "label": "Slay the Dire Bother",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-snakestone",
+    "label": "Slay the Dire Snakestone",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-gigantic-vermin",
+    "label": "Slay the Dire Gigantic Vermin",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "miniboss:dire-satyr-cultist",
+    "label": "Slay the Dire Satyr Cultist",
+    "kind": "boolean",
+    "collection": "prophecy"
   }
 ]
