@@ -30,6 +30,19 @@ function mount(store: ProgressStore): HadesDashboard {
   return element
 }
 
+/** Advances past a bounded number of pending microtasks, without a real timer. */
+async function flushMicrotasks(times = 20): Promise<void> {
+  for (let i = 0; i < times; i += 1) await Promise.resolve()
+}
+
+function deferred(): { promise: Promise<void>; resolve: () => void } {
+  let resolve!: () => void
+  const promise = new Promise<void>((res) => {
+    resolve = res
+  })
+  return { promise, resolve }
+}
+
 describe('hades-dashboard save failures', () => {
   beforeEach(() => {
     render(html``, document.body)
@@ -113,5 +126,50 @@ describe('hades-dashboard save failures', () => {
     )
     await vi.waitFor(() => expect(element.shadowRoot!.querySelector('.error')).toBeFalsy())
     expect(saved).toEqual([{ 'nectar:test': true }])
+  })
+
+  it('does not let an earlier, slower success mask a later failure', async () => {
+    const gate = deferred()
+    const store: ProgressStore = {
+      load: async () => ({}),
+      save: async (facts) => {
+        if ('nectar:slow' in facts) await gate.promise
+        if ('nectar:fast' in facts) throw new Error('fast save rejected')
+      },
+    }
+    const element = mount(store)
+    await element.updateComplete
+    await element.updateComplete
+
+    const panel = element.shadowRoot!.querySelector('next-steps-panel')!
+    panel.dispatchEvent(
+      new CustomEvent('fact-toggle', {
+        detail: { id: 'nectar:slow', value: true },
+        bubbles: true,
+        composed: true,
+      }),
+    )
+    panel.dispatchEvent(
+      new CustomEvent('fact-toggle', {
+        detail: { id: 'nectar:fast', value: true },
+        bubbles: true,
+        composed: true,
+      }),
+    )
+
+    // Give the fast (second) toggle every chance to settle and clear before
+    // the slow (first) one's gate opens, the way it could when writes were
+    // not serialized. `vi.waitFor` would stop at the first truthy poll, so
+    // it could catch this transient state and miss a later clear — assert
+    // on the fully settled state instead.
+    await flushMicrotasks()
+    gate.resolve()
+    // Let the slow (first) toggle fully settle now that its gate is open.
+    await flushMicrotasks()
+    await element.updateComplete
+
+    expect(element.shadowRoot!.querySelector('.error')?.textContent).toContain(
+      'fast save rejected',
+    )
   })
 })
