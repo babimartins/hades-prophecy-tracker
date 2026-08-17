@@ -1,9 +1,11 @@
 import { dataset } from '@hades/data'
 import { overallProgress } from '@hades/engine'
+import type { Fact } from '@hades/schema'
 import '@hades/ui'
 import { css, html, LitElement } from 'lit'
 import { ProgressState } from '../state/progress-state.js'
 import { createIndexedDbStore } from '../storage/indexeddb-store.js'
+import './achievement-detail.js'
 import './achievement-list.js'
 import { StateController } from './state-controller.js'
 
@@ -25,7 +27,24 @@ export class HadesDashboard extends LitElement {
     }
   `
 
+  static override readonly properties = {
+    openId: { state: true },
+  }
+
+  openId: string | undefined
+
   readonly #controller = new StateController(this, new ProgressState(createIndexedDbStore()))
+  readonly #factsById: Map<string, Fact> = new Map(
+    dataset.facts.map((fact) => [fact.id, fact]),
+  )
+
+  private onOpen(event: CustomEvent<{ id: string }>): void {
+    this.openId = event.detail.id
+  }
+
+  private onFactToggle(event: CustomEvent<{ id: string; value: boolean | number }>): void {
+    void this.#controller.state.setFact(event.detail.id, event.detail.value)
+  }
 
   override render() {
     const facts = this.#controller.state.facts
@@ -56,7 +75,23 @@ export class HadesDashboard extends LitElement {
           `
         })}
       </div>
-      <achievement-list .achievements=${dataset.achievements} .facts=${facts}></achievement-list>
+      ${this.openId
+        ? html`
+            <achievement-detail
+              .achievement=${dataset.achievements.find((item) => item.id === this.openId)}
+              .facts=${facts}
+              .factsById=${this.#factsById}
+              @fact-toggle=${this.onFactToggle}
+              @detail-close=${() => (this.openId = undefined)}
+            ></achievement-detail>
+          `
+        : html`
+            <achievement-list
+              .achievements=${dataset.achievements}
+              .facts=${facts}
+              @achievement-open=${this.onOpen}
+            ></achievement-list>
+          `}
     `
   }
 }
