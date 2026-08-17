@@ -74,6 +74,16 @@ Use ``render(html``, document.body)`` in `beforeEach`. Setting
 `document.body.innerHTML = ''` corrupts lit-html's render bookkeeping, and the
 next `render()` throws `ChildPart has no parentNode`.
 
+**Name browser tests `*.browser.test.ts`.**
+`apps/web/vitest.config.ts` splits into a `node` and a `browser` project by that
+suffix alone: the browser project includes it and runs under headless Playwright
+chromium, and the node project must keep excluding it. A plain `*.test.ts` runs
+in node and fails the moment it touches the DOM.
+
+**Read text across a shadow boundary with a composed walk, not `textContent`.**
+`Element.textContent` never crosses into a child component's shadow root, so
+asserting on a `hd-progress` caption through it silently reads an empty string.
+
 **Keep `useDefineForClassFields` set to `false`.**
 Lit class fields break when it is true.
 
