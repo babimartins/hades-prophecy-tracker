@@ -867,5 +867,228 @@
         "weapon:adamant-rail"
       ]
     }
+  },
+  {
+    "id": "codex:darkness",
+    "name": "Darkness",
+    "description": "Collect Darkness, a currency used to unlock and upgrade Mirror of Night talents.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:darkness",
+        "artifact:darkness"
+      ]
+    }
+  },
+  {
+    "id": "codex:bloodstones",
+    "name": "Bloodstones",
+    "description": "Unlock the Codex entry for Bloodstones, the ammunition for Zagreus' Cast. Every run starts with one already held, so there is no separate collection action to track.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:bloodstones"
+      ]
+    }
+  },
+  {
+    "id": "codex:infernal-trove",
+    "name": "Infernal Trove",
+    "description": "Open an Infernal Trove, a chest guarded by enemies that must be slain quickly before its reward decays.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:infernal-trove",
+        "artifact:infernal-trove"
+      ]
+    }
+  },
+  {
+    "id": "codex:charons-obol",
+    "name": "Charon's Obol",
+    "description": "Collect a Charon's Obol, a currency spent at Charon's shop or a Well of Charon. Unlike other currencies, it is lost when Zagreus dies.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:charons-obol",
+        "artifact:charons-obol"
+      ]
+    }
+  },
+  {
+    "id": "codex:centaur-heart",
+    "name": "Centaur Heart",
+    "description": "Collect a Centaur Heart, which raises Zagreus' current and maximum health for the current run only.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:centaur-heart",
+        "artifact:centaur-heart"
+      ]
+    }
+  },
+  {
+    "id": "codex:pom-of-power",
+    "name": "Pom of Power",
+    "description": "Receive a Pom of Power, which raises the level of one held boon for the current run.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:pom-of-power",
+        "artifact:pom-of-power"
+      ]
+    }
+  },
+  {
+    "id": "codex:daedalus-hammer",
+    "name": "Daedalus Hammer",
+    "description": "Receive a Daedalus Hammer offer, the run-scoped item that upgrades a weapon's attacks. The enchantments it grants are tracked separately in the Infernal Arms section; this entry is about the delivery item alone.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:daedalus-hammer",
+        "artifact:daedalus-hammer"
+      ]
+    }
+  },
+  {
+    "id": "codex:anvil-of-fates",
+    "name": "Anvil of Fates",
+    "description": "Purchase the Anvil of Fates from Charon in the Temple of Styx, which rerolls and adds a third Daedalus Hammer upgrade for the run. It can only be bought after a Hammer has already been picked up that run.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:anvil-of-fates",
+        "artifact:anvil-of-fates"
+      ]
+    }
+  },
+  {
+    "id": "codex:chthonic-keys",
+    "name": "Chthonic Keys",
+    "description": "Collect a Chthonic Key, spent to unlock additional Infernal Arms and Mirror of Night upgrade slots.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:chthonic-keys",
+        "artifact:chthonic-keys"
+      ]
+    }
+  },
+  {
+    "id": "codex:titan-blood",
+    "name": "Titan Blood",
+    "description": "Collect Titan Blood, spent to unlock and upgrade Weapon Aspects.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:titan-blood",
+        "artifact:titan-blood"
+      ]
+    }
+  },
+  {
+    "id": "codex:gemstones",
+    "name": "Gemstones",
+    "description": "Collect a Gemstone, spent to commission House Contractor upgrades.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:gemstones",
+        "artifact:gemstones"
+      ]
+    }
+  },
+  {
+    "id": "codex:diamond",
+    "name": "Diamond",
+    "description": "Collect a Diamond, spent on higher-tier House Contractor upgrades.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:diamond",
+        "artifact:diamond"
+      ]
+    }
+  },
+  {
+    "id": "codex:nectar",
+    "name": "Nectar",
+    "description": "Collect Nectar, a rare resource given to characters as a gift to raise affinity. Distinct from the per-character `nectar:*` gift facts, which track giving it away rather than finding it.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:nectar",
+        "artifact:nectar"
+      ]
+    }
+  },
+  {
+    "id": "codex:ambrosia",
+    "name": "Ambrosia",
+    "description": "Collect Ambrosia, a resource given to characters who have deepened their bond with Zagreus.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:ambrosia",
+        "artifact:ambrosia"
+      ]
+    }
+  },
+  {
+    "id": "codex:loyalty-card",
+    "name": "Loyalty Card",
+    "description": "Collect a Loyalty Card, which discounts Charon's shop and Well of Charon prices for the run. Like Charon's Obol, it is lost when Zagreus dies.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:loyalty-card",
+        "artifact:loyalty-card"
+      ]
+    }
+  },
+  {
+    "id": "codex:red-onion",
+    "name": "Red Onion",
+    "description": "Receive a Red Onion, the consolation reward given in place of the usual prize when a Perfect Clear challenge in Erebus is failed.",
+    "collection": "codex",
+    "section": "artifacts",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:red-onion",
+        "artifact:red-onion"
+      ]
+    }
   }
 ]

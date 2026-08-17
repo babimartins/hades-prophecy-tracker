@@ -511,5 +511,191 @@
     "label": "Unlock the Adamant Rail Codex entry",
     "kind": "boolean",
     "collection": "codex"
+  },
+  {
+    "id": "artifact:darkness",
+    "label": "Collect Darkness for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:infernal-trove",
+    "label": "Open an Infernal Trove for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:charons-obol",
+    "label": "Collect a Charon's Obol for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:centaur-heart",
+    "label": "Collect a Centaur Heart for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:pom-of-power",
+    "label": "Receive a Pom of Power for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:daedalus-hammer",
+    "label": "Receive a Daedalus Hammer offer for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:anvil-of-fates",
+    "label": "Purchase the Anvil of Fates from Charon in the Temple of Styx, after picking up a Daedalus Hammer that run",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:chthonic-keys",
+    "label": "Collect a Chthonic Key for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:titan-blood",
+    "label": "Collect Titan Blood for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:gemstones",
+    "label": "Collect a Gemstone for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:diamond",
+    "label": "Collect a Diamond for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:nectar",
+    "label": "Collect Nectar for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:ambrosia",
+    "label": "Collect Ambrosia for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:loyalty-card",
+    "label": "Collect a Loyalty Card for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "artifact:red-onion",
+    "label": "Receive a Red Onion for failing a Perfect Clear challenge in Erebus",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:darkness",
+    "label": "Unlock the Darkness Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:bloodstones",
+    "label": "Unlock the Bloodstones Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:infernal-trove",
+    "label": "Unlock the Infernal Trove Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:charons-obol",
+    "label": "Unlock the Charon's Obol Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:centaur-heart",
+    "label": "Unlock the Centaur Heart Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:pom-of-power",
+    "label": "Unlock the Pom of Power Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:daedalus-hammer",
+    "label": "Unlock the Daedalus Hammer Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:anvil-of-fates",
+    "label": "Unlock the Anvil of Fates Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:chthonic-keys",
+    "label": "Unlock the Chthonic Keys Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:titan-blood",
+    "label": "Unlock the Titan Blood Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:gemstones",
+    "label": "Unlock the Gemstones Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:diamond",
+    "label": "Unlock the Diamond Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:nectar",
+    "label": "Unlock the Nectar Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:ambrosia",
+    "label": "Unlock the Ambrosia Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:loyalty-card",
+    "label": "Unlock the Loyalty Card Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:red-onion",
+    "label": "Unlock the Red Onion Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
   }
 ]
