@@ -12,6 +12,7 @@
     "lint": "eslint src test"
   },
   "dependencies": {
+    "@hades/data": "workspace:*",
     "@hades/engine": "workspace:*",
     "@hades/schema": "workspace:*",
     "@hades/ui": "workspace:*",
@@ -19,7 +20,9 @@
     "lit": "^3.2.0"
   },
   "devDependencies": {
+    "@vitest/browser": "^3.0.0",
     "fake-indexeddb": "^6.0.0",
+    "playwright": "^1.48.0",
     "typescript": "^5.6.3",
     "vite": "^6.0.0",
     "vitest": "^3.0.0"
