@@ -71,6 +71,18 @@ pnpm build
 pnpm test
 ```
 
+Verified state of each command today:
+
+- `pnpm lint` passes.
+- `pnpm test` passes.
+- `pnpm typecheck` fails. `packages/engine/test/facts.test.ts` passes a
+  `readonly` array literal where the `RequirementChild[]` type expects a
+  mutable array. This is a test-file typing issue, not a fix to the engine
+  logic.
+- `pnpm build` fails. `apps/web/src/main.ts` imports
+  `./components/hades-dashboard.js`, and that file does not exist yet. The
+  dashboard UI is not built, so the web app cannot bundle.
+
 ## Licence
 
 Code: MIT. See `LICENSE`.
