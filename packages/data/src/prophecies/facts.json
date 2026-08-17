@@ -1949,5 +1949,838 @@
     "label": "Defeat Hades with at least 8 Heat active",
     "kind": "boolean",
     "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:breaching-slash",
+    "label": "Acquire the Breaching Slash Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:cruel-thrust",
+    "label": "Acquire the Cruel Thrust Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:cursed-slash",
+    "label": "Acquire the Cursed Slash Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:dash-nova",
+    "label": "Acquire the Dash Nova Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:double-edge",
+    "label": "Acquire the Double Edge Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:double-nova",
+    "label": "Acquire the Double Nova Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:flurry-slash",
+    "label": "Acquire the Flurry Slash Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:hoarding-slash",
+    "label": "Acquire the Hoarding Slash Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:piercing-wave",
+    "label": "Acquire the Piercing Wave Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:shadow-slash",
+    "label": "Acquire the Shadow Slash Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:super-nova",
+    "label": "Acquire the Super Nova Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:stygius:world-splitter",
+    "label": "Acquire the World Splitter Daedalus upgrade for Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:twin-shot",
+    "label": "Acquire the Twin Shot Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:sniper-shot",
+    "label": "Acquire the Sniper Shot Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:explosive-shot",
+    "label": "Acquire the Explosive Shot Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:flurry-shot",
+    "label": "Acquire the Flurry Shot Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:piercing-volley",
+    "label": "Acquire the Piercing Volley Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:perfect-shot",
+    "label": "Acquire the Perfect Shot Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:relentless-volley",
+    "label": "Acquire the Relentless Volley Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:triple-shot",
+    "label": "Acquire the Triple Shot Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:charged-volley",
+    "label": "Acquire the Charged Volley Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:chain-shot",
+    "label": "Acquire the Chain Shot Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:point-blank-shot",
+    "label": "Acquire the Point-Blank Shot Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:coronacht:concentrated-volley",
+    "label": "Acquire the Concentrated Volley Daedalus upgrade for Coronacht",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:dread-flight",
+    "label": "Acquire the Dread Flight Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:sudden-rush",
+    "label": "Acquire the Sudden Rush Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:pulverizing-blow",
+    "label": "Acquire the Pulverizing Blow Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:dashing-wallop",
+    "label": "Acquire the Dashing Wallop Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:explosive-return",
+    "label": "Acquire the Explosive Return Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:minotaur-rush",
+    "label": "Acquire the Minotaur Rush Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:breaching-rush",
+    "label": "Acquire the Breaching Rush Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:charged-shot",
+    "label": "Acquire the Charged Shot Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:charged-flight",
+    "label": "Acquire the Charged Flight Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:empowering-flight",
+    "label": "Acquire the Empowering Flight Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:dashing-flight",
+    "label": "Acquire the Dashing Flight Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:aegis:ferocious-guard",
+    "label": "Acquire the Ferocious Guard Daedalus upgrade for Aegis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:extending-jab",
+    "label": "Acquire the Extending Jab Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:chain-skewer",
+    "label": "Acquire the Chain Skewer Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:breaching-skewer",
+    "label": "Acquire the Breaching Skewer Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:vicious-skewer",
+    "label": "Acquire the Vicious Skewer Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:exploding-launcher",
+    "label": "Acquire the Exploding Launcher Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:massive-spin",
+    "label": "Acquire the Massive Spin Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:quick-spin",
+    "label": "Acquire the Quick Spin Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:flurry-jab",
+    "label": "Acquire the Flurry Jab Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:charged-skewer",
+    "label": "Acquire the Charged Skewer Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:serrated-point",
+    "label": "Acquire the Serrated Point Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:flaring-spin",
+    "label": "Acquire the Flaring Spin Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:varatha:triple-jab",
+    "label": "Acquire the Triple Jab Daedalus upgrade for Varatha",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:breaching-cross",
+    "label": "Acquire the Breaching Cross Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:rolling-knuckle",
+    "label": "Acquire the Rolling Knuckle Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:long-knuckle",
+    "label": "Acquire the Long Knuckle Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:draining-cutter",
+    "label": "Acquire the Draining Cutter Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:concentrated-knuckle",
+    "label": "Acquire the Concentrated Knuckle Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:explosive-upper",
+    "label": "Acquire the Explosive Upper Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:flying-cutter",
+    "label": "Acquire the Flying Cutter Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:rush-kick",
+    "label": "Acquire the Rush Kick Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:quake-cutter",
+    "label": "Acquire the Quake Cutter Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:kinetic-launcher",
+    "label": "Acquire the Kinetic Launcher Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:heavy-knuckle",
+    "label": "Acquire the Heavy Knuckle Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:malphon:colossus-knuckle",
+    "label": "Acquire the Colossus Knuckle Daedalus upgrade for Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:flurry-fire",
+    "label": "Acquire the Flurry Fire Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:ricochet-fire",
+    "label": "Acquire the Ricochet Fire Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:spread-fire",
+    "label": "Acquire the Spread Fire Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:explosive-fire",
+    "label": "Acquire the Explosive Fire Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:delta-chamber",
+    "label": "Acquire the Delta Chamber Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:piercing-fire",
+    "label": "Acquire the Piercing Fire Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:triple-bomb",
+    "label": "Acquire the Triple Bomb Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:rocket-bomb",
+    "label": "Acquire the Rocket Bomb Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:targeting-system",
+    "label": "Acquire the Targeting System Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:hazard-bomb",
+    "label": "Acquire the Hazard Bomb Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:cluster-bomb",
+    "label": "Acquire the Cluster Bomb Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "daedalus:exagryph:seeking-fire",
+    "label": "Acquire the Seeking Fire Daedalus upgrade for Exagryph",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:stygius:nemesis",
+    "label": "Stygius Aspect of Nemesis level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:stygius:poseidon",
+    "label": "Stygius Aspect of Poseidon level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:coronacht:zagreus",
+    "label": "Coronacht Aspect of Zagreus level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:coronacht:chiron",
+    "label": "Coronacht Aspect of Chiron level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:coronacht:hera",
+    "label": "Coronacht Aspect of Hera level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:aegis:zagreus",
+    "label": "Aegis Aspect of Zagreus level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:aegis:chaos",
+    "label": "Aegis Aspect of Chaos level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:aegis:zeus",
+    "label": "Aegis Aspect of Zeus level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:varatha:zagreus",
+    "label": "Varatha Aspect of Zagreus level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:varatha:achilles",
+    "label": "Varatha Aspect of Achilles level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:varatha:hades",
+    "label": "Varatha Aspect of Hades level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:malphon:zagreus",
+    "label": "Malphon Aspect of Zagreus level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:malphon:talos",
+    "label": "Malphon Aspect of Talos level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:malphon:demeter",
+    "label": "Malphon Aspect of Demeter level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:exagryph:zagreus",
+    "label": "Exagryph Aspect of Zagreus level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:exagryph:eris",
+    "label": "Exagryph Aspect of Eris level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:exagryph:hestia",
+    "label": "Exagryph Aspect of Hestia level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:shadow-presence",
+    "label": "Escape the Underworld with the Shadow Presence talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:fiery-presence",
+    "label": "Escape the Underworld with the Fiery Presence talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:chthonic-vitality",
+    "label": "Escape the Underworld with the Chthonic Vitality talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:dark-regeneration",
+    "label": "Escape the Underworld with the Dark Regeneration talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:death-defiance",
+    "label": "Escape the Underworld with the Death Defiance talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:stubborn-defiance",
+    "label": "Escape the Underworld with the Stubborn Defiance talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:greater-reflex",
+    "label": "Escape the Underworld with the Greater Reflex talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:ruthless-reflex",
+    "label": "Escape the Underworld with the Ruthless Reflex talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:boiling-blood",
+    "label": "Escape the Underworld with the Boiling Blood talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:abyssal-blood",
+    "label": "Escape the Underworld with the Abyssal Blood talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:infernal-soul",
+    "label": "Escape the Underworld with the Infernal Soul talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:stygian-soul",
+    "label": "Escape the Underworld with the Stygian Soul talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:deep-pockets",
+    "label": "Escape the Underworld with the Deep Pockets talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:golden-touch",
+    "label": "Escape the Underworld with the Golden Touch talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:thick-skin",
+    "label": "Escape the Underworld with the Thick Skin talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:high-confidence",
+    "label": "Escape the Underworld with the High Confidence talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:privileged-status",
+    "label": "Escape the Underworld with the Privileged Status talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:family-favorite",
+    "label": "Escape the Underworld with the Family Favorite talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:olympian-favor",
+    "label": "Escape the Underworld with the Olympian Favor talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:dark-foresight",
+    "label": "Escape the Underworld with the Dark Foresight talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:gods-pride",
+    "label": "Escape the Underworld with the Gods' Pride talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:gods-legacy",
+    "label": "Escape the Underworld with the Gods' Legacy talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:fated-authority",
+    "label": "Escape the Underworld with the Fated Authority talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talent:fated-persuasion",
+    "label": "Escape the Underworld with the Fated Persuasion talent active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:old-spiked-collar",
+    "label": "Equip the Old Spiked Collar keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:myrmidon-bracer",
+    "label": "Equip the Myrmidon Bracer keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:black-shawl",
+    "label": "Equip the Black Shawl keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:pierced-butterfly",
+    "label": "Equip the Pierced Butterfly keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:bone-hourglass",
+    "label": "Equip the Bone Hourglass keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:chthonic-coin-purse",
+    "label": "Equip the Chthonic Coin Purse keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:skull-earring",
+    "label": "Equip the Skull Earring keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:distant-memory",
+    "label": "Equip the Distant Memory keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:harpy-feather-duster",
+    "label": "Equip the Harpy Feather Duster keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:lucky-tooth",
+    "label": "Equip the Lucky Tooth keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:thunder-signet",
+    "label": "Equip the Thunder Signet keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:conch-shell",
+    "label": "Equip the Conch Shell keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:owl-pendant",
+    "label": "Equip the Owl Pendant keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:eternal-rose",
+    "label": "Equip the Eternal Rose keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:blood-filled-vial",
+    "label": "Equip the Blood-Filled Vial keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:adamant-arrowhead",
+    "label": "Equip the Adamant Arrowhead keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:overflowing-cup",
+    "label": "Equip the Overflowing Cup keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:lambent-plume",
+    "label": "Equip the Lambent Plume keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:frostbitten-horn",
+    "label": "Equip the Frostbitten Horn keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:cosmic-egg",
+    "label": "Equip the Cosmic Egg keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:shattered-shackle",
+    "label": "Equip the Shattered Shackle keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:evergreen-acorn",
+    "label": "Equip the Evergreen Acorn keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:broken-spearpoint",
+    "label": "Equip the Broken Spearpoint keepsake",
+    "kind": "boolean",
+    "collection": "prophecy"
   }
 ]

@@ -858,5 +858,313 @@
       ]
     },
     "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:stygian-blade",
+    "name": "The Stygian Blade",
+    "description": "The son of the god of the dead shall someday acquire each of the Daedalus enchantments for Stygius.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:breaching-slash",
+        "daedalus:stygius:cruel-thrust",
+        "daedalus:stygius:cursed-slash",
+        "daedalus:stygius:dash-nova",
+        "daedalus:stygius:double-edge",
+        "daedalus:stygius:double-nova",
+        "daedalus:stygius:flurry-slash",
+        "daedalus:stygius:hoarding-slash",
+        "daedalus:stygius:piercing-wave",
+        "daedalus:stygius:shadow-slash",
+        "daedalus:stygius:super-nova",
+        "daedalus:stygius:world-splitter"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:heart-seeking-bow",
+    "name": "The Heart-Seeking Bow",
+    "description": "The son of the god of the dead shall someday acquire each of the Daedalus enchantments for Coronacht.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:twin-shot",
+        "daedalus:coronacht:sniper-shot",
+        "daedalus:coronacht:explosive-shot",
+        "daedalus:coronacht:flurry-shot",
+        "daedalus:coronacht:piercing-volley",
+        "daedalus:coronacht:perfect-shot",
+        "daedalus:coronacht:relentless-volley",
+        "daedalus:coronacht:triple-shot",
+        "daedalus:coronacht:charged-volley",
+        "daedalus:coronacht:chain-shot",
+        "daedalus:coronacht:point-blank-shot",
+        "daedalus:coronacht:concentrated-volley"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:shield-of-chaos",
+    "name": "The Shield of Chaos",
+    "description": "The son of the god of the dead shall someday acquire each of the Daedalus enchantments for Aegis.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:dread-flight",
+        "daedalus:aegis:sudden-rush",
+        "daedalus:aegis:pulverizing-blow",
+        "daedalus:aegis:dashing-wallop",
+        "daedalus:aegis:explosive-return",
+        "daedalus:aegis:minotaur-rush",
+        "daedalus:aegis:breaching-rush",
+        "daedalus:aegis:charged-shot",
+        "daedalus:aegis:charged-flight",
+        "daedalus:aegis:empowering-flight",
+        "daedalus:aegis:dashing-flight",
+        "daedalus:aegis:ferocious-guard"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:eternal-spear",
+    "name": "The Eternal Spear",
+    "description": "The son of the god of the dead shall someday acquire each of the Daedalus enchantments for Varatha.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:extending-jab",
+        "daedalus:varatha:chain-skewer",
+        "daedalus:varatha:breaching-skewer",
+        "daedalus:varatha:vicious-skewer",
+        "daedalus:varatha:exploding-launcher",
+        "daedalus:varatha:massive-spin",
+        "daedalus:varatha:quick-spin",
+        "daedalus:varatha:flurry-jab",
+        "daedalus:varatha:charged-skewer",
+        "daedalus:varatha:serrated-point",
+        "daedalus:varatha:flaring-spin",
+        "daedalus:varatha:triple-jab"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:twin-fists",
+    "name": "The Twin Fists",
+    "description": "The son of the god of the dead shall someday acquire each of the Daedalus enchantments for Malphon.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:breaching-cross",
+        "daedalus:malphon:rolling-knuckle",
+        "daedalus:malphon:long-knuckle",
+        "daedalus:malphon:draining-cutter",
+        "daedalus:malphon:concentrated-knuckle",
+        "daedalus:malphon:explosive-upper",
+        "daedalus:malphon:flying-cutter",
+        "daedalus:malphon:rush-kick",
+        "daedalus:malphon:quake-cutter",
+        "daedalus:malphon:kinetic-launcher",
+        "daedalus:malphon:heavy-knuckle",
+        "daedalus:malphon:colossus-knuckle"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:adamant-rail",
+    "name": "The Adamant Rail",
+    "description": "The son of the god of the dead shall someday acquire each of the Daedalus enchantments for Exagryph.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:flurry-fire",
+        "daedalus:exagryph:ricochet-fire",
+        "daedalus:exagryph:spread-fire",
+        "daedalus:exagryph:explosive-fire",
+        "daedalus:exagryph:delta-chamber",
+        "daedalus:exagryph:piercing-fire",
+        "daedalus:exagryph:triple-bomb",
+        "daedalus:exagryph:rocket-bomb",
+        "daedalus:exagryph:targeting-system",
+        "daedalus:exagryph:hazard-bomb",
+        "daedalus:exagryph:cluster-bomb",
+        "daedalus:exagryph:seeking-fire"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:violent-past",
+    "name": "A Violent Past",
+    "description": "The son of the god of the dead shall someday harness the ancient Aspects of the Infernal Arms.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:nemesis",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:poseidon",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:chiron",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:hera",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:chaos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zeus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:achilles",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:hades",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:talos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:demeter",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:eris",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:hestia",
+          "value": 1
+        }
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:dark-reflections",
+    "name": "Dark Reflections",
+    "description": "The son of the god of the dead shall someday break free from the realm in which he was born while influenced by all the many Talents revealed in him by the Mirror of Night.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:shadow-presence",
+        "talent:fiery-presence",
+        "talent:chthonic-vitality",
+        "talent:dark-regeneration",
+        "talent:death-defiance",
+        "talent:stubborn-defiance",
+        "talent:greater-reflex",
+        "talent:ruthless-reflex",
+        "talent:boiling-blood",
+        "talent:abyssal-blood",
+        "talent:infernal-soul",
+        "talent:stygian-soul",
+        "talent:deep-pockets",
+        "talent:golden-touch",
+        "talent:thick-skin",
+        "talent:high-confidence",
+        "talent:privileged-status",
+        "talent:family-favorite",
+        "talent:olympian-favor",
+        "talent:dark-foresight",
+        "talent:gods-pride",
+        "talent:gods-legacy",
+        "talent:fated-authority",
+        "talent:fated-persuasion"
+      ]
+    },
+    "collection": "prophecy"
+  },
+  {
+    "id": "prophecy:close-at-heart",
+    "name": "Close at Heart",
+    "description": "The son of the god of the dead shall equip various Keepsakes from those who would be closer to him.",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "keepsake:old-spiked-collar",
+        "keepsake:myrmidon-bracer",
+        "keepsake:black-shawl",
+        "keepsake:pierced-butterfly",
+        "keepsake:bone-hourglass",
+        "keepsake:chthonic-coin-purse",
+        "keepsake:skull-earring",
+        "keepsake:distant-memory",
+        "keepsake:harpy-feather-duster",
+        "keepsake:lucky-tooth",
+        "keepsake:thunder-signet",
+        "keepsake:conch-shell",
+        "keepsake:owl-pendant",
+        "keepsake:eternal-rose",
+        "keepsake:blood-filled-vial",
+        "keepsake:adamant-arrowhead",
+        "keepsake:overflowing-cup",
+        "keepsake:lambent-plume",
+        "keepsake:frostbitten-horn",
+        "keepsake:cosmic-egg",
+        "keepsake:shattered-shackle",
+        "keepsake:evergreen-acorn",
+        "keepsake:broken-spearpoint"
+      ]
+    },
+    "collection": "prophecy"
   }
 ]
