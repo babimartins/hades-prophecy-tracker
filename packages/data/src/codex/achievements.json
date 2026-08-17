@@ -180,7 +180,7 @@
   {
     "id": "codex:zeus",
     "name": "Zeus",
-    "description": "Max affinity with Zeus by giving him Nectar, after he reconciles with Hades.",
+    "description": "Max affinity with Zeus by giving him Nectar, after hearing the other Gods' opinions of him and seeing him reconcile with Hades.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -192,6 +192,7 @@
           "fact": "nectar:zeus",
           "value": 7
         },
+        "talk:zeus-hears-other-gods-opinions",
         "talk:zeus-reconciles-with-hades"
       ]
     }

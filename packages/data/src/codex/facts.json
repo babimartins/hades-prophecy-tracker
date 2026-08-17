@@ -80,6 +80,12 @@
     "collection": "codex"
   },
   {
+    "id": "talk:zeus-hears-other-gods-opinions",
+    "label": "Hear the other Gods share their opinions of Zeus",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
     "id": "talk:zeus-reconciles-with-hades",
     "label": "Hear Zeus express a wish to reconcile with Hades, and Hades' response",
     "kind": "boolean",
