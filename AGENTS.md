@@ -141,6 +141,19 @@ The integrity test in `packages/data` rejects duplicate ids, unknown fact
 references, orphan facts, unknown collections, and a number fact with no `max`.
 Run it after every batch of data.
 
+A Codex entry carries a `section` slug naming its in-game table, and its
+requirement is an `all` whose first member is the entry's own `codex:<slug>`
+unlock fact. **Model a compound wiki condition as one fact per action.** "Finish
+the favor and then give Ambrosia" is the favor's steps plus a separate
+`companion:*` fact, never a single fact standing for the pair; the integrity
+test cannot catch a chain collapsed into one node.
+
+**One wiki name can be two subjects in two sections.** Chaos is a deity in
+Chthonic Gods and a realm in The Underworld. Keep the display `name` as the wiki
+writes it and qualify the id instead — `codex:chaos` and `codex:chaos-realm` —
+so the duplicate-id check stays meaningful rather than being satisfied by a
+rename that hides one entry behind the other.
+
 ## Working method
 
 - Write the failing test first. Run it. Watch it fail for the reason you expect.
