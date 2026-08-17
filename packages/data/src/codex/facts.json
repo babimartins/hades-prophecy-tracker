@@ -913,5 +913,161 @@
     "label": "Unlock the Sturgeon Codex entry",
     "kind": "boolean",
     "collection": "codex"
+  },
+  {
+    "id": "encounter:wretched-thug",
+    "label": "Encounter a Wretched Thug for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:wretched-thug",
+    "label": "Unlock the Wretched Thug Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:wretched-witch",
+    "label": "Encounter a Wretched Witch for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:wretched-witch",
+    "label": "Unlock the Wretched Witch Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:wretched-lout",
+    "label": "Encounter a Wretched Lout for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:wretched-lout",
+    "label": "Unlock the Wretched Lout Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:wretched-pest",
+    "label": "Encounter a Wretched Pest for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:wretched-pest",
+    "label": "Unlock the Wretched Pest Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:wretched-sneak",
+    "label": "Encounter a Wretched Sneak for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:wretched-sneak",
+    "label": "Unlock the Wretched Sneak Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:numbskull",
+    "label": "Encounter a Numbskull for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:numbskull",
+    "label": "Unlock the Numbskull Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:skullomat",
+    "label": "Encounter a Skullomat for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:skullomat",
+    "label": "Unlock the Skullomat Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:wringer",
+    "label": "Encounter a Wringer for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:wringer",
+    "label": "Unlock the Wringer Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:brimstone",
+    "label": "Encounter a Brimstone for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:brimstone",
+    "label": "Unlock the Brimstone Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:doomstone",
+    "label": "Encounter a Doomstone for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:doomstone",
+    "label": "Unlock the Doomstone Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:voidstone",
+    "label": "Encounter a Voidstone for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:voidstone",
+    "label": "Unlock the Voidstone Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:bloodless",
+    "label": "Encounter a Bloodless for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:bloodless",
+    "label": "Unlock the Bloodless Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:bone-raker",
+    "label": "Encounter a Bone-Raker for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:bone-raker",
+    "label": "Unlock the Bone-Raker Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
   }
 ]

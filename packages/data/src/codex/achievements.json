@@ -1342,5 +1342,187 @@
         "catch:sturgeon"
       ]
     }
+  },
+  {
+    "id": "codex:wretched-thug",
+    "name": "Wretched Thug",
+    "description": "Encounter a Wretched Thug, an enemy found in Tartarus.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:wretched-thug",
+        "encounter:wretched-thug"
+      ]
+    }
+  },
+  {
+    "id": "codex:wretched-witch",
+    "name": "Wretched Witch",
+    "description": "Encounter a Wretched Witch, an enemy found in Tartarus.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:wretched-witch",
+        "encounter:wretched-witch"
+      ]
+    }
+  },
+  {
+    "id": "codex:wretched-lout",
+    "name": "Wretched Lout",
+    "description": "Encounter a Wretched Lout, an enemy found in Tartarus.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:wretched-lout",
+        "encounter:wretched-lout"
+      ]
+    }
+  },
+  {
+    "id": "codex:wretched-pest",
+    "name": "Wretched Pest",
+    "description": "Encounter a Wretched Pest, an enemy found in Tartarus.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:wretched-pest",
+        "encounter:wretched-pest"
+      ]
+    }
+  },
+  {
+    "id": "codex:wretched-sneak",
+    "name": "Wretched Sneak",
+    "description": "Encounter the Wretched Sneak, a mini-boss found in a unique chamber in Tartarus.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:wretched-sneak",
+        "encounter:wretched-sneak"
+      ]
+    }
+  },
+  {
+    "id": "codex:numbskull",
+    "name": "Numbskull",
+    "description": "Encounter a Numbskull, an enemy found in Tartarus and Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:numbskull",
+        "encounter:numbskull"
+      ]
+    }
+  },
+  {
+    "id": "codex:skullomat",
+    "name": "Skullomat",
+    "description": "Encounter a Skullomat, an enemy found in Tartarus and Asphodel that spawns Numbskulls.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:skullomat",
+        "encounter:skullomat"
+      ]
+    }
+  },
+  {
+    "id": "codex:wringer",
+    "name": "Wringer",
+    "description": "Encounter a Wringer, an enemy found in Tartarus.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:wringer",
+        "encounter:wringer"
+      ]
+    }
+  },
+  {
+    "id": "codex:brimstone",
+    "name": "Brimstone",
+    "description": "Encounter a Brimstone, an enemy found in Tartarus and Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:brimstone",
+        "encounter:brimstone"
+      ]
+    }
+  },
+  {
+    "id": "codex:doomstone",
+    "name": "Doomstone",
+    "description": "Encounter the Doomstone, a mini-boss found in a unique chamber in Tartarus.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:doomstone",
+        "encounter:doomstone"
+      ]
+    }
+  },
+  {
+    "id": "codex:voidstone",
+    "name": "Voidstone",
+    "description": "Encounter a Voidstone, an enemy found in Asphodel and Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:voidstone",
+        "encounter:voidstone"
+      ]
+    }
+  },
+  {
+    "id": "codex:bloodless",
+    "name": "Bloodless",
+    "description": "Encounter a Bloodless, an enemy found in Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:bloodless",
+        "encounter:bloodless"
+      ]
+    }
+  },
+  {
+    "id": "codex:bone-raker",
+    "name": "Bone-Raker",
+    "description": "Encounter a Bone-Raker, an enemy found in Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:bone-raker",
+        "encounter:bone-raker"
+      ]
+    }
   }
 ]
