@@ -47,4 +47,38 @@ describe('ProgressState', () => {
     await state.setFact('a:two', true)
     expect(listener).toHaveBeenCalledTimes(1)
   })
+
+  it('propagates a setFact save failure without updating facts or notifying', async () => {
+    const store: ProgressStore = {
+      load: async () => ({}),
+      save: async () => {
+        throw new Error('disk full')
+      },
+    }
+    const state = new ProgressState(store)
+    await state.ready
+    const listener = vi.fn()
+    state.subscribe(listener)
+
+    await expect(state.setFact('a:one', true)).rejects.toThrow('disk full')
+    expect(state.facts).toEqual({})
+    expect(listener).not.toHaveBeenCalled()
+  })
+
+  it('propagates a replaceAll save failure without updating facts or notifying', async () => {
+    const store: ProgressStore = {
+      load: async () => ({ 'a:one': true }),
+      save: async () => {
+        throw new Error('disk full')
+      },
+    }
+    const state = new ProgressState(store)
+    await state.ready
+    const listener = vi.fn()
+    state.subscribe(listener)
+
+    await expect(state.replaceAll({ 'a:two': true })).rejects.toThrow('disk full')
+    expect(state.facts).toEqual({ 'a:one': true })
+    expect(listener).not.toHaveBeenCalled()
+  })
 })

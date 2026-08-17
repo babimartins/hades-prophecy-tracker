@@ -5,11 +5,17 @@ import '@hades/ui'
 import { css, html, LitElement } from 'lit'
 import { ProgressState } from '../state/progress-state.js'
 import { createIndexedDbStore } from '../storage/indexeddb-store.js'
+import type { ProgressStore } from '../storage/progress-store.js'
 import './achievement-detail.js'
 import './achievement-list.js'
 import './next-steps-panel.js'
 import './transfer-controls.js'
 import { StateController } from './state-controller.js'
+
+function describeSaveFailure(cause: unknown): string {
+  const detail = cause instanceof Error ? cause.message : 'an unknown error'
+  return `Your progress did not save: ${detail}.`
+}
 
 export class HadesDashboard extends LitElement {
   static override readonly styles = css`
@@ -21,6 +27,9 @@ export class HadesDashboard extends LitElement {
     h1 {
       font-size: 1.5rem;
     }
+    .error {
+      color: var(--hd-color-accent, #c8102e);
+    }
     .grid {
       display: grid;
       gap: 16px;
@@ -31,25 +40,45 @@ export class HadesDashboard extends LitElement {
 
   static override readonly properties = {
     openId: { state: true },
+    saveError: { state: true },
   }
 
   openId: string | undefined
+  saveError = ''
 
-  readonly #controller = new StateController(this, new ProgressState(createIndexedDbStore()))
+  readonly #controller: StateController
   readonly #factsById: Map<string, Fact> = new Map(
     dataset.facts.map((fact) => [fact.id, fact]),
   )
+
+  /** `store` is injectable so a test can verify a failed save is never presented as a success. */
+  constructor(store: ProgressStore = createIndexedDbStore()) {
+    super()
+    this.#controller = new StateController(this, new ProgressState(store))
+  }
 
   private onOpen(event: CustomEvent<{ id: string }>): void {
     this.openId = event.detail.id
   }
 
-  private onFactToggle(event: CustomEvent<{ id: string; value: boolean | number }>): void {
-    void this.#controller.state.setFact(event.detail.id, event.detail.value)
+  private async onFactToggle(
+    event: CustomEvent<{ id: string; value: boolean | number }>,
+  ): Promise<void> {
+    try {
+      await this.#controller.state.setFact(event.detail.id, event.detail.value)
+      this.saveError = ''
+    } catch (cause) {
+      this.saveError = describeSaveFailure(cause)
+    }
   }
 
-  private onImport(event: CustomEvent<{ facts: FactMap }>): void {
-    void this.#controller.state.replaceAll(event.detail.facts)
+  private async onImport(event: CustomEvent<{ facts: FactMap }>): Promise<void> {
+    try {
+      await this.#controller.state.replaceAll(event.detail.facts)
+      this.saveError = ''
+    } catch (cause) {
+      this.saveError = describeSaveFailure(cause)
+    }
   }
 
   override render() {
@@ -58,6 +87,7 @@ export class HadesDashboard extends LitElement {
 
     return html`
       <h1>Hades Prophecy Tracker</h1>
+      ${this.saveError ? html`<p class="error">${this.saveError}</p>` : null}
       <div class="grid">
         <hd-card>
           <span slot="header">Overall</span>
