@@ -121,9 +121,9 @@ Games.
 The heading typeface is [Cinzel](https://github.com/NDISCOVER/Cinzel), by The
 Cinzel Project Authors, licensed under the **SIL Open Font License 1.1**. It
 ships through the [`@fontsource/cinzel`](https://www.npmjs.com/package/@fontsource/cinzel)
-npm package (`apps/web/node_modules/@fontsource/cinzel/LICENSE` carries the
-full text), self-hosted from `apps/web/dist` at build time. Only the Latin
-subset, weight 600, is bundled. This is a third licence, distinct from the MIT
+npm package, version 5.3.0 (`apps/web/node_modules/@fontsource/cinzel/LICENSE`
+carries the full text), self-hosted from `apps/web/dist` at build time. Only the
+Latin subset, weight 600, is bundled. This is a third licence, distinct from the MIT
 code and the CC BY-NC-SA data above.
 
 ## Disclaimer

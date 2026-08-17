@@ -57,11 +57,16 @@ pnpm --filter @hades/engine test    # one package
 
 Each of these was a real defect in this repository. Do not reintroduce them.
 
-**Annotate requirement literals. Never use `as const`.**
+**Annotate requirement literals. Never write one with `as const`.**
 `as const` produces readonly tuples, which are not assignable to the mutable
 array inside `RequirementChild`. Write `const node: RequirementChild = {...}`.
 Vitest transpiles without type checking, so the test still runs and the error
 only appears in `pnpm typecheck`.
+
+This rule is about requirement literals only. `as const` elsewhere is fine —
+`packages/ui/src/tokens.css.ts` uses it on the colour map, where no readonly
+array reaches `RequirementChild`. A reviewer read the old wording as a blanket
+ban, which it was never meant to be.
 
 **Rank next steps from `evaluate().missing`, never from a raw fact walk.**
 Walking the tree with `collectFactIds` and filtering with `isSatisfied` looks
@@ -93,6 +98,13 @@ build from a stale snapshot and the second silently drops the first's fact.
 Serializing also settles callers in call order, so a later success cannot clear
 an earlier failure's error before it is shown. Keep new mutators as thin
 wrappers over a private `#apply*` method.
+
+**Read colour tokens with `colorVar`. Never redeclare one on `:host`.**
+`packages/ui/src/tokens.css.ts` holds the only copy of the five hex values; no
+other file writes them. A literal `:host { --hd-color-*: ... }` always beats an
+inherited `:root` value, so it silently breaks a consumer override. `apps/web`
+applies them via `applyDesignTokens`, which appends a `<style>` element —
+an inline style on `documentElement` would block a page-level override too.
 
 **Run `pnpm typecheck` at the root after merging parallel branches.**
 Two branches can each be green alone and red together. That is how the
