@@ -23,7 +23,7 @@ export class TransferControls extends LitElement {
       display: none;
     }
     .error {
-      color: var(--hd-color-accent, #c8102e);
+      color: var(--hd-color-accent, #e35563);
     }
   `
 

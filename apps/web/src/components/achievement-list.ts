@@ -61,11 +61,12 @@ export class AchievementList extends LitElement {
     }
     summary {
       cursor: pointer;
+      font-family: var(--hd-font-display, serif);
       font-weight: 600;
       padding: 8px 0;
     }
     summary:focus-visible {
-      outline: 2px solid var(--hd-color-accent, #c8102e);
+      outline: 2px solid var(--hd-color-accent, #e35563);
     }
     details ul {
       margin-top: 8px;
@@ -83,11 +84,11 @@ export class AchievementList extends LitElement {
       width: 100%;
     }
     button:focus-visible {
-      outline: 2px solid var(--hd-color-accent, #c8102e);
+      outline: 2px solid var(--hd-color-accent, #e35563);
     }
     li[data-status='done'] .name::after {
       content: ' ✓';
-      color: var(--hd-color-done, #2f9e6f);
+      color: var(--hd-color-done, #d8b34a);
     }
     .name {
       font-weight: 600;

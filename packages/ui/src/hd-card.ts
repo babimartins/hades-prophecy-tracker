@@ -1,17 +1,18 @@
 import { css, html, LitElement } from 'lit'
-import { surface } from './tokens.css.js'
+import { colorVar, surface } from './tokens.css.js'
 
 export class HdCard extends LitElement {
   static override readonly styles = [
     surface,
     css`
       section {
-        background: var(--hd-color-surface);
+        background: ${colorVar('--hd-color-surface')};
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: var(--hd-radius);
         padding: var(--hd-gap);
       }
       header {
+        font-family: var(--hd-font-display, inherit);
         font-weight: 600;
         margin-bottom: var(--hd-gap);
       }

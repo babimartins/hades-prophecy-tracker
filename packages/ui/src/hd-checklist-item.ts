@@ -1,5 +1,5 @@
 import { css, html, LitElement } from 'lit'
-import { surface } from './tokens.css.js'
+import { colorVar, surface } from './tokens.css.js'
 
 /** Fires `hd-toggle` with `detail: { checked: boolean }` on user input. */
 export class HdChecklistItem extends LitElement {
@@ -14,12 +14,12 @@ export class HdChecklistItem extends LitElement {
         padding: 6px 0;
       }
       input {
-        accent-color: var(--hd-color-accent);
+        accent-color: ${colorVar('--hd-color-accent')};
         height: 18px;
         width: 18px;
       }
       .badge {
-        color: var(--hd-color-muted);
+        color: ${colorVar('--hd-color-muted')};
         font-size: 0.75rem;
         margin-left: auto;
       }

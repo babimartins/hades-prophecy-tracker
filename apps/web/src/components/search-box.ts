@@ -13,7 +13,7 @@ export class SearchBox extends LitElement {
       width: 100%;
     }
     input:focus-visible {
-      outline: 2px solid var(--hd-color-accent, #c8102e);
+      outline: 2px solid var(--hd-color-accent, #e35563);
     }
   `
 

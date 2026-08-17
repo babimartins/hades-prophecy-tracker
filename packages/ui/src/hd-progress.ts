@@ -1,5 +1,5 @@
 import { css, html, LitElement } from 'lit'
-import { surface } from './tokens.css.js'
+import { colorVar, surface } from './tokens.css.js'
 
 export class HdProgress extends LitElement {
   static override readonly styles = [
@@ -12,15 +12,15 @@ export class HdProgress extends LitElement {
         overflow: hidden;
       }
       .fill {
-        background: var(--hd-color-accent);
+        background: ${colorVar('--hd-color-accent')};
         height: 100%;
         transition: width 160ms ease-out;
       }
       .fill[data-done='true'] {
-        background: var(--hd-color-done);
+        background: ${colorVar('--hd-color-done')};
       }
       .caption {
-        color: var(--hd-color-muted);
+        color: ${colorVar('--hd-color-muted')};
         font-size: 0.8rem;
         margin-top: 4px;
       }

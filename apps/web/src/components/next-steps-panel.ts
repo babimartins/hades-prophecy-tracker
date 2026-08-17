@@ -21,7 +21,7 @@ export class NextStepsPanel extends LitElement {
       width: 4rem;
     }
     .badge {
-      color: var(--hd-color-muted, #a29684);
+      color: var(--hd-color-muted, #b9a98c);
       font-size: 0.75rem;
       margin-left: auto;
     }

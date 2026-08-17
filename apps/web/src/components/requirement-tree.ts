@@ -19,7 +19,7 @@ export class RequirementTree extends LitElement {
       padding-left: 12px;
     }
     .group-label {
-      color: var(--hd-color-muted, #a29684);
+      color: var(--hd-color-muted, #b9a98c);
       font-size: 0.75rem;
       text-transform: uppercase;
     }
@@ -33,7 +33,7 @@ export class RequirementTree extends LitElement {
       width: 4rem;
     }
     .threshold {
-      color: var(--hd-color-muted, #a29684);
+      color: var(--hd-color-muted, #b9a98c);
       font-size: 0.75rem;
     }
   `
