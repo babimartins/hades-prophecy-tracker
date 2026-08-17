@@ -1214,29 +1214,121 @@
     "requirement": {
       "kind": "all",
       "of": [
-        "keepsake:old-spiked-collar",
-        "keepsake:myrmidon-bracer",
-        "keepsake:black-shawl",
-        "keepsake:pierced-butterfly",
-        "keepsake:bone-hourglass",
-        "keepsake:chthonic-coin-purse",
-        "keepsake:skull-earring",
-        "keepsake:distant-memory",
-        "keepsake:harpy-feather-duster",
-        "keepsake:lucky-tooth",
-        "keepsake:thunder-signet",
-        "keepsake:conch-shell",
-        "keepsake:owl-pendant",
-        "keepsake:eternal-rose",
-        "keepsake:blood-filled-vial",
-        "keepsake:adamant-arrowhead",
-        "keepsake:overflowing-cup",
-        "keepsake:lambent-plume",
-        "keepsake:frostbitten-horn",
-        "keepsake:cosmic-egg",
-        "keepsake:shattered-shackle",
-        "keepsake:evergreen-acorn",
-        "keepsake:broken-spearpoint"
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:old-spiked-collar",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:myrmidon-bracer",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:black-shawl",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pierced-butterfly",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:bone-hourglass",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:chthonic-coin-purse",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:skull-earring",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:distant-memory",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:harpy-feather-duster",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lucky-tooth",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:thunder-signet",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:conch-shell",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:owl-pendant",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:eternal-rose",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:blood-filled-vial",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:adamant-arrowhead",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:overflowing-cup",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lambent-plume",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:frostbitten-horn",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:cosmic-egg",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:shattered-shackle",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:evergreen-acorn",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:broken-spearpoint",
+          "value": 1
+        }
       ]
     },
     "collection": "prophecy"

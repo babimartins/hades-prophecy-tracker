@@ -2701,139 +2701,162 @@
   {
     "id": "keepsake:old-spiked-collar",
     "label": "Equip the Old Spiked Collar keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:myrmidon-bracer",
     "label": "Equip the Myrmidon Bracer keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:black-shawl",
     "label": "Equip the Black Shawl keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:pierced-butterfly",
     "label": "Equip the Pierced Butterfly keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:bone-hourglass",
     "label": "Equip the Bone Hourglass keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:chthonic-coin-purse",
     "label": "Equip the Chthonic Coin Purse keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:skull-earring",
     "label": "Equip the Skull Earring keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:distant-memory",
     "label": "Equip the Distant Memory keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:harpy-feather-duster",
     "label": "Equip the Harpy Feather Duster keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:lucky-tooth",
     "label": "Equip the Lucky Tooth keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:thunder-signet",
     "label": "Equip the Thunder Signet keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:conch-shell",
     "label": "Equip the Conch Shell keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:owl-pendant",
     "label": "Equip the Owl Pendant keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:eternal-rose",
     "label": "Equip the Eternal Rose keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:blood-filled-vial",
     "label": "Equip the Blood-Filled Vial keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:adamant-arrowhead",
     "label": "Equip the Adamant Arrowhead keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:overflowing-cup",
     "label": "Equip the Overflowing Cup keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:lambent-plume",
     "label": "Equip the Lambent Plume keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:frostbitten-horn",
     "label": "Equip the Frostbitten Horn keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:cosmic-egg",
     "label": "Equip the Cosmic Egg keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:shattered-shackle",
     "label": "Equip the Shattered Shackle keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:evergreen-acorn",
     "label": "Equip the Evergreen Acorn keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:broken-spearpoint",
     "label": "Equip the Broken Spearpoint keepsake",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   }
 ]

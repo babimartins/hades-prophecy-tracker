@@ -337,7 +337,7 @@
   {
     "id": "codex:hermes",
     "name": "Hermes",
-    "description": "Max affinity with Hermes by giving him Nectar. His final heart also needs his keepsake at rank 3; that gate is wired in a later task.",
+    "description": "Max affinity with Hermes by giving him Nectar. His 7th heart is locked until Zagreus speaks with him with the Lambent Plume keepsake equipped and ranked up to 3.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -348,6 +348,11 @@
           "kind": "atLeast",
           "fact": "nectar:hermes",
           "value": 8
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lambent-plume",
+          "value": 3
         }
       ]
     }
