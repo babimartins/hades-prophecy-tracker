@@ -23,8 +23,8 @@ export class ProgressState {
   #queue: Promise<void> = Promise.resolve()
 
   constructor(private readonly store: ProgressStore) {
-    this.ready = store.load().then((facts) => {
-      this.#facts = facts
+    this.ready = this.#enqueue(async () => {
+      this.#facts = await store.load()
       this.#emit()
     })
   }

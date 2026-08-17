@@ -126,6 +126,25 @@ describe('ProgressState', () => {
     expect(state.facts).toEqual({ 'a:two': true })
   })
 
+  it('does not lose the stored facts when setFact is called before load resolves', async () => {
+    const gate = deferred()
+    const store: ProgressStore = {
+      load: async () => {
+        await gate.promise
+        return { 'a:stored': true }
+      },
+      save: async () => undefined,
+    }
+    const state = new ProgressState(store)
+
+    const write = state.setFact('a:new', true)
+    gate.resolve()
+    await state.ready
+    await write
+
+    expect(state.facts).toEqual({ 'a:stored': true, 'a:new': true })
+  })
+
   it('settles overlapping calls in call order, even when a later write could finish first', async () => {
     const settleOrder: string[] = []
     const gate = deferred()
