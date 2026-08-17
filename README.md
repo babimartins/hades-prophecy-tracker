@@ -25,7 +25,7 @@ every prophecy that needs it advances.
 Progress is a map of facts to values. Nothing else.
 
 ```json
-{ "nectar:dusa": true, "pact:extreme-measures": 4 }
+{ "invite:zeus": true, "aspect:stygius:zagreus": 3 }
 ```
 
 A prophecy holds no progress. It holds an expression over facts. The
@@ -37,6 +37,8 @@ expression is built from four node kinds:
 | `any`     | at least one child node is complete          |
 | `count`   | at least N of the child nodes are complete   |
 | `atLeast` | a numeric fact reaches a threshold value     |
+
+The schema supports `any`. The current dataset uses it zero times.
 
 The engine evaluates the expression against the fact map. It reports what is
 missing.
@@ -59,10 +61,10 @@ This list is verified against the current state of the repository.
 The in-game Fated List holds 55 prophecies. The curated dataset in
 `packages/data` covers all 55, each broken into its sub-item facts.
 
-The schema also defines a separate `achievement` collection, for platform
-achievements. That collection holds no entries yet. Two sources disagree on
-the achievement count: the Hades Wiki's Achievements page lists 50, and Steam
-shows 49 publicly.
+`packages/data/src/collections.json` also defines a separate `achievement`
+collection, for platform achievements. That collection holds no entries yet.
+Two sources disagree on the achievement count: the Hades Wiki's Achievements
+page lists 50, and Steam shows 49 publicly.
 
 ## Development
 

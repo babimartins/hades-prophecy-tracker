@@ -87,6 +87,13 @@ asserting on a `hd-progress` caption through it silently reads an empty string.
 **Keep `useDefineForClassFields` set to `false`.**
 Lit class fields break when it is true.
 
+**Route every `ProgressState` write through the `#enqueue` chain.**
+`#applyFact` copies `#facts` before writing, so two unserialized calls each
+build from a stale snapshot and the second silently drops the first's fact.
+Serializing also settles callers in call order, so a later success cannot clear
+an earlier failure's error before it is shown. Keep new mutators as thin
+wrappers over a private `#apply*` method.
+
 **Run `pnpm typecheck` at the root after merging parallel branches.**
 Two branches can each be green alone and red together. That is how the
 `as const` failure above reached `main`: one branch added the test file, another
@@ -107,8 +114,8 @@ A bad requirement tells a player to do the wrong thing for hours.
   counts. The in-game Fated List holds 55 entries. The wiki's Achievements page
   lists 50, while Steam shows 49 publicly.
 
-Fact ids are namespace first, then target: `nectar:dusa`,
-`aspect:varatha:guan-yu`, `pact:extreme-measures`. Lower case, hyphens inside a
+Fact ids are namespace first, then target: `invite:zeus`,
+`aspect:varatha:zagreus`, `pact:extreme-measures`. Lower case, hyphens inside a
 segment, colons between segments.
 
 One fact means one action in the game. Never one fact standing for a whole
