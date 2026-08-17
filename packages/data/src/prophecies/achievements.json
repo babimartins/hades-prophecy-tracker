@@ -635,6 +635,11 @@
     "requirement": {
       "kind": "all",
       "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:arthur",
+          "value": 1
+        },
         "combat:cerberus-stygius-arthur"
       ]
     }
@@ -647,6 +652,11 @@
     "requirement": {
       "kind": "all",
       "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:guan-yu",
+          "value": 1
+        },
         "combat:cerberus-varatha-guan-yu"
       ]
     }
@@ -659,6 +669,11 @@
     "requirement": {
       "kind": "all",
       "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:rama",
+          "value": 1
+        },
         "combat:cerberus-coronacht-rama"
       ]
     }
@@ -671,6 +686,11 @@
     "requirement": {
       "kind": "all",
       "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:beowulf",
+          "value": 1
+        },
         "combat:cerberus-aegis-beowulf"
       ]
     }
@@ -683,6 +703,11 @@
     "requirement": {
       "kind": "all",
       "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:gilgamesh",
+          "value": 1
+        },
         "combat:cerberus-malphon-gilgamesh"
       ]
     }
@@ -695,6 +720,11 @@
     "requirement": {
       "kind": "all",
       "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:lucifer",
+          "value": 1
+        },
         "combat:cerberus-exagryph-lucifer"
       ]
     }

@@ -2513,6 +2513,48 @@
     "collection": "prophecy"
   },
   {
+    "id": "aspect:stygius:arthur",
+    "label": "Stygius Aspect of Arthur level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:varatha:guan-yu",
+    "label": "Varatha Aspect of Guan Yu level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:coronacht:rama",
+    "label": "Coronacht Aspect of Rama level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:aegis:beowulf",
+    "label": "Aegis Aspect of Beowulf level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:malphon:gilgamesh",
+    "label": "Malphon Aspect of Gilgamesh level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:exagryph:lucifer",
+    "label": "Exagryph Aspect of Lucifer level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
     "id": "talent:shadow-presence",
     "label": "Escape the Underworld with the Shadow Presence talent active",
     "kind": "boolean",
