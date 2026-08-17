@@ -1524,5 +1524,173 @@
         "encounter:bone-raker"
       ]
     }
+  },
+  {
+    "id": "codex:inferno-bomber",
+    "name": "Inferno-Bomber",
+    "description": "Encounter an Inferno-Bomber, an enemy found in Tartarus and Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:inferno-bomber",
+        "encounter:inferno-bomber"
+      ]
+    }
+  },
+  {
+    "id": "codex:slam-dancer",
+    "name": "Slam-Dancer",
+    "description": "Encounter a Slam-Dancer, an enemy found in Tartarus and Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:slam-dancer",
+        "encounter:slam-dancer"
+      ]
+    }
+  },
+  {
+    "id": "codex:burn-flinger",
+    "name": "Burn-Flinger",
+    "description": "Encounter a Burn-Flinger, an enemy found in Tartarus and Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:burn-flinger",
+        "encounter:burn-flinger"
+      ]
+    }
+  },
+  {
+    "id": "codex:wave-maker",
+    "name": "Wave-Maker",
+    "description": "Encounter a Wave-Maker, an enemy found in Tartarus and Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:wave-maker",
+        "encounter:wave-maker"
+      ]
+    }
+  },
+  {
+    "id": "codex:dracon",
+    "name": "Dracon",
+    "description": "Encounter a Dracon, an enemy found in Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:dracon",
+        "encounter:dracon"
+      ]
+    }
+  },
+  {
+    "id": "codex:spreader",
+    "name": "Spreader",
+    "description": "Encounter a Spreader, an enemy found in Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:spreader",
+        "encounter:spreader"
+      ]
+    }
+  },
+  {
+    "id": "codex:gorgon",
+    "name": "Gorgon",
+    "description": "Encounter a Gorgon, an enemy found in Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:gorgon",
+        "encounter:gorgon"
+      ]
+    }
+  },
+  {
+    "id": "codex:skull-crusher",
+    "name": "Skull-Crusher",
+    "description": "Encounter a Skull-Crusher, an enemy found in Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:skull-crusher",
+        "encounter:skull-crusher"
+      ]
+    }
+  },
+  {
+    "id": "codex:megagorgon",
+    "name": "Megagorgon",
+    "description": "Encounter the Megagorgon, the Asphodel mini-boss.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:megagorgon",
+        "encounter:megagorgon"
+      ]
+    }
+  },
+  {
+    "id": "codex:bone-hydra",
+    "name": "Bone Hydra",
+    "description": "Encounter the Bone Hydra, the boss encounter for Asphodel.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:bone-hydra",
+        "encounter:bone-hydra"
+      ]
+    }
+  },
+  {
+    "id": "codex:splitter",
+    "name": "Splitter",
+    "description": "Encounter a Splitter, an enemy found in Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:splitter",
+        "encounter:splitter"
+      ]
+    }
+  },
+  {
+    "id": "codex:nemean-chariot",
+    "name": "Nemean Chariot",
+    "description": "Encounter a Nemean Chariot, an enemy found in Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:nemean-chariot",
+        "encounter:nemean-chariot"
+      ]
+    }
   }
 ]

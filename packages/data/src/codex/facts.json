@@ -1069,5 +1069,149 @@
     "label": "Unlock the Bone-Raker Codex entry",
     "kind": "boolean",
     "collection": "codex"
+  },
+  {
+    "id": "encounter:inferno-bomber",
+    "label": "Encounter a Inferno-Bomber for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:inferno-bomber",
+    "label": "Unlock the Inferno-Bomber Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:slam-dancer",
+    "label": "Encounter a Slam-Dancer for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:slam-dancer",
+    "label": "Unlock the Slam-Dancer Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:burn-flinger",
+    "label": "Encounter a Burn-Flinger for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:burn-flinger",
+    "label": "Unlock the Burn-Flinger Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:wave-maker",
+    "label": "Encounter a Wave-Maker for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:wave-maker",
+    "label": "Unlock the Wave-Maker Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:dracon",
+    "label": "Encounter a Dracon for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:dracon",
+    "label": "Unlock the Dracon Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:spreader",
+    "label": "Encounter a Spreader for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:spreader",
+    "label": "Unlock the Spreader Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:gorgon",
+    "label": "Encounter a Gorgon for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:gorgon",
+    "label": "Unlock the Gorgon Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:skull-crusher",
+    "label": "Encounter a Skull-Crusher for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:skull-crusher",
+    "label": "Unlock the Skull-Crusher Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:megagorgon",
+    "label": "Encounter a Megagorgon for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:megagorgon",
+    "label": "Unlock the Megagorgon Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:bone-hydra",
+    "label": "Encounter a Bone Hydra for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:bone-hydra",
+    "label": "Unlock the Bone Hydra Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:splitter",
+    "label": "Encounter a Splitter for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:splitter",
+    "label": "Unlock the Splitter Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:nemean-chariot",
+    "label": "Encounter a Nemean Chariot for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:nemean-chariot",
+    "label": "Unlock the Nemean Chariot Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
   }
 ]
