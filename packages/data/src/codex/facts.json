@@ -409,5 +409,107 @@
     "label": "Unlock the Companion Antos Codex entry",
     "kind": "boolean",
     "collection": "codex"
+  },
+  {
+    "id": "codex:house-of-hades",
+    "label": "Unlock the House of Hades Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:chaos-realm",
+    "label": "Unlock the Chaos (The Underworld) Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "reach:erebus",
+    "label": "Enter Erebus for the first time, via an Infernal Gate or by defeating Charon",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:erebus",
+    "label": "Unlock the Erebus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:tartarus",
+    "label": "Unlock the Tartarus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "reach:asphodel",
+    "label": "Clear Tartarus to reach Asphodel for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:asphodel",
+    "label": "Unlock the Asphodel Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "reach:elysium",
+    "label": "Clear Asphodel to reach Elysium for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:elysium",
+    "label": "Unlock the Elysium Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "reach:styx",
+    "label": "Clear Elysium to reach the Temple of Styx for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:styx",
+    "label": "Unlock the Styx Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:stygian-blade",
+    "label": "Unlock the Stygian Blade Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:eternal-spear",
+    "label": "Unlock the Eternal Spear Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:heart-seeking-bow",
+    "label": "Unlock the Heart-Seeking Bow Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:shield-of-chaos",
+    "label": "Unlock the Shield of Chaos Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:twin-fists",
+    "label": "Unlock the Twin Fists Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:adamant-rail",
+    "label": "Unlock the Adamant Rail Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
   }
 ]

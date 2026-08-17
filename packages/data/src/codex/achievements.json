@@ -687,5 +687,185 @@
         "companion:antos"
       ]
     }
+  },
+  {
+    "id": "codex:house-of-hades",
+    "name": "House of Hades",
+    "description": "Unlock the Codex entry for the House of Hades, the starting hub of the Underworld.",
+    "collection": "codex",
+    "section": "the-underworld",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:house-of-hades"
+      ]
+    }
+  },
+  {
+    "id": "codex:chaos-realm",
+    "name": "Chaos",
+    "description": "Unlock the Codex entry for Chaos's realm, reached through a Chaos Gate. Distinct from the Chthonic Gods entry for Chaos as a character.",
+    "collection": "codex",
+    "section": "the-underworld",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:chaos-realm",
+        "meet:chaos"
+      ]
+    }
+  },
+  {
+    "id": "codex:erebus",
+    "name": "Erebus",
+    "description": "Unlock the Codex entry for Erebus, entered via an Infernal Gate or by defeating Charon.",
+    "collection": "codex",
+    "section": "the-underworld",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:erebus",
+        "reach:erebus"
+      ]
+    }
+  },
+  {
+    "id": "codex:tartarus",
+    "name": "Tartarus",
+    "description": "Unlock the Codex entry for Tartarus, the first biome of every escape attempt.",
+    "collection": "codex",
+    "section": "the-underworld",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:tartarus"
+      ]
+    }
+  },
+  {
+    "id": "codex:asphodel",
+    "name": "Asphodel",
+    "description": "Unlock the Codex entry for Asphodel, reached by clearing Tartarus.",
+    "collection": "codex",
+    "section": "the-underworld",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:asphodel",
+        "reach:asphodel"
+      ]
+    }
+  },
+  {
+    "id": "codex:elysium",
+    "name": "Elysium",
+    "description": "Unlock the Codex entry for Elysium, reached by clearing Asphodel.",
+    "collection": "codex",
+    "section": "the-underworld",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:elysium",
+        "reach:elysium"
+      ]
+    }
+  },
+  {
+    "id": "codex:styx",
+    "name": "Styx",
+    "description": "Unlock the Codex entry for the Temple of Styx, reached by clearing Elysium.",
+    "collection": "codex",
+    "section": "the-underworld",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:styx",
+        "reach:styx"
+      ]
+    }
+  },
+  {
+    "id": "codex:stygian-blade",
+    "name": "Stygian Blade",
+    "description": "Unlock the Codex entry for the Stygian Blade, Zagreus' starting weapon.",
+    "collection": "codex",
+    "section": "infernal-arms",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:stygian-blade",
+        "weapon:stygian-blade"
+      ]
+    }
+  },
+  {
+    "id": "codex:eternal-spear",
+    "name": "Eternal Spear",
+    "description": "Unlock the Codex entry for the Eternal Spear by acquiring it for 4 Chthonic Keys.",
+    "collection": "codex",
+    "section": "infernal-arms",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:eternal-spear",
+        "weapon:eternal-spear"
+      ]
+    }
+  },
+  {
+    "id": "codex:heart-seeking-bow",
+    "name": "Heart-Seeking Bow",
+    "description": "Unlock the Codex entry for the Heart-Seeking Bow by acquiring it for 1 Chthonic Key.",
+    "collection": "codex",
+    "section": "infernal-arms",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:heart-seeking-bow",
+        "weapon:heart-seeking-bow"
+      ]
+    }
+  },
+  {
+    "id": "codex:shield-of-chaos",
+    "name": "Shield of Chaos",
+    "description": "Unlock the Codex entry for the Shield of Chaos by acquiring it for 3 Chthonic Keys.",
+    "collection": "codex",
+    "section": "infernal-arms",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:shield-of-chaos",
+        "weapon:shield-of-chaos"
+      ]
+    }
+  },
+  {
+    "id": "codex:twin-fists",
+    "name": "Twin Fists",
+    "description": "Unlock the Codex entry for the Twin Fists of Malphon by acquiring them for 8 Chthonic Keys.",
+    "collection": "codex",
+    "section": "infernal-arms",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:twin-fists",
+        "weapon:twin-fists-of-malphon"
+      ]
+    }
+  },
+  {
+    "id": "codex:adamant-rail",
+    "name": "Adamant Rail",
+    "description": "Unlock the Codex entry for the Adamant Rail by acquiring it for 8 Chthonic Keys.",
+    "collection": "codex",
+    "section": "infernal-arms",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:adamant-rail",
+        "weapon:adamant-rail"
+      ]
+    }
   }
 ]
