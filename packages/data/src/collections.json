@@ -1,1 +1,4 @@
-[{ "id": "prophecy", "name": "Fated List of Minor Prophecies" }]
+[
+  { "id": "prophecy", "name": "Fated List of Minor Prophecies" },
+  { "id": "achievement", "name": "Platform Achievements" }
+]
