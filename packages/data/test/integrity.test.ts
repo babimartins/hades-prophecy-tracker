@@ -48,4 +48,46 @@ describe('dataset integrity', () => {
       .map((fact) => fact.id)
     expect(missing).toEqual([])
   })
+
+  it('has no two facts whose labels normalize to the same string', () => {
+    const normalize = (label: string): string => label.toLowerCase().trim().replace(/\s+/g, ' ')
+    const idsByLabel = new Map<string, string[]>()
+    for (const fact of dataset.facts) {
+      const key = normalize(fact.label)
+      const ids = idsByLabel.get(key) ?? []
+      ids.push(fact.id)
+      idsByLabel.set(key, ids)
+    }
+    const duplicates = [...idsByLabel.values()]
+      .filter((ids) => ids.length > 1)
+      .map((ids) => ids.join(' vs. '))
+    expect(duplicates).toEqual([])
+  })
+
+  it('exposes how many achievements reference each fact', () => {
+    const referenceCount = new Map<string, number>()
+    for (const fact of dataset.facts) referenceCount.set(fact.id, 0)
+    for (const achievement of dataset.achievements) {
+      for (const factId of collectFactIds(achievement.requirement)) {
+        referenceCount.set(factId, (referenceCount.get(factId) ?? 0) + 1)
+      }
+    }
+
+    const distribution = new Map<number, number>()
+    for (const count of referenceCount.values()) {
+      distribution.set(count, (distribution.get(count) ?? 0) + 1)
+    }
+
+    // Not an assertion that sharing exists: it may legitimately be zero, as it
+    // was for the first 30 entries. This makes the number visible in test
+    // output instead of it staying unmeasured.
+    console.log(
+      'Fact reference count distribution (referenced-by-N-achievements -> fact count):',
+      Object.fromEntries([...distribution.entries()].sort((a, b) => a[0] - b[0])),
+    )
+
+    // Every fact must be counted exactly once, whatever its share count is.
+    const totalFacts = [...distribution.entries()].reduce((sum, [, facts]) => sum + facts, 0)
+    expect(totalFacts).toBe(dataset.facts.length)
+  })
 })
