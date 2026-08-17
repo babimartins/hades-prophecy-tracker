@@ -60,6 +60,114 @@ describe('hades-dashboard collection cards', () => {
   })
 })
 
+describe('hades-dashboard collection filter', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('does not offer a filter control for a collection with no entries', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const filter = element.shadowRoot!.querySelector('collection-filter')!
+    const labels = [...filter.shadowRoot!.querySelectorAll('label')].map((label) =>
+      label.textContent?.trim(),
+    )
+    expect(labels).not.toContain('Platform Achievements')
+  })
+
+  it('narrows the visible achievements to the selected collection', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const filter = element.shadowRoot!.querySelector('collection-filter')!
+    filter.dispatchEvent(
+      new CustomEvent('collection-select', {
+        detail: { id: 'prophecy' },
+        bubbles: true,
+        composed: true,
+      }),
+    )
+    await element.updateComplete
+
+    const list = element.shadowRoot!.querySelector('achievement-list')!
+    expect(list.achievements.length).toBeGreaterThan(0)
+    expect(list.achievements.every((achievement) => achievement.collection === 'prophecy')).toBe(
+      true,
+    )
+  })
+})
+
+describe('hades-dashboard preserves state across an entry visit', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('keeps the query, the collection filter and the collapse state after opening and closing an entry', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    // Drive every piece of state the way a user would, through the rendered
+    // controls, so the test fails for real when a control is missing or a
+    // handler drops the state — not because a bare field trivially survives.
+    element.shadowRoot!
+      .querySelector('collection-filter')!
+      .dispatchEvent(
+        new CustomEvent('collection-select', {
+          detail: { id: 'prophecy' },
+          bubbles: true,
+          composed: true,
+        }),
+      )
+    element.shadowRoot!
+      .querySelector('search-box')!
+      .dispatchEvent(
+        new CustomEvent('search-change', {
+          detail: { query: 'zeus' },
+          bubbles: true,
+          composed: true,
+        }),
+      )
+    await element.updateComplete
+    element.shadowRoot!
+      .querySelector('achievement-list')!
+      .dispatchEvent(
+        new CustomEvent('section-toggle', {
+          detail: { section: 'chthonic-gods', open: false },
+          bubbles: true,
+          composed: true,
+        }),
+      )
+    await element.updateComplete
+
+    const list = element.shadowRoot!.querySelector('achievement-list')!
+    const firstId = list.achievements[0]!.id
+    list.dispatchEvent(
+      new CustomEvent('achievement-open', {
+        detail: { id: firstId },
+        bubbles: true,
+        composed: true,
+      }),
+    )
+    await element.updateComplete
+    expect(element.shadowRoot!.querySelector('achievement-detail')).toBeTruthy()
+
+    element.shadowRoot!
+      .querySelector('achievement-detail')!
+      .dispatchEvent(new CustomEvent('detail-close', { bubbles: true, composed: true }))
+    await element.updateComplete
+
+    expect(element.shadowRoot!.querySelector('search-box')!.value).toBe('zeus')
+    expect(element.shadowRoot!.querySelector('collection-filter')!.selected).toBe('prophecy')
+    expect(element.shadowRoot!.querySelector('achievement-list')!.collapsedSections).toEqual({
+      'chthonic-gods': true,
+    })
+  })
+})
+
 describe('hades-dashboard save failures', () => {
   beforeEach(() => {
     render(html``, document.body)
