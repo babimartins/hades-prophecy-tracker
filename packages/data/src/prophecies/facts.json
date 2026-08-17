@@ -2858,5 +2858,19 @@
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:pom-blossom",
+    "label": "Equip the Pom Blossom keepsake",
+    "kind": "number",
+    "max": 3,
+    "collection": "prophecy"
+  },
+  {
+    "id": "keepsake:sigil-of-the-dead",
+    "label": "Equip the Sigil of the Dead keepsake",
+    "kind": "number",
+    "max": 3,
+    "collection": "prophecy"
   }
 ]

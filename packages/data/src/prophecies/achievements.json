@@ -1328,6 +1328,16 @@
           "kind": "atLeast",
           "fact": "keepsake:broken-spearpoint",
           "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pom-blossom",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:sigil-of-the-dead",
+          "value": 1
         }
       ]
     },
