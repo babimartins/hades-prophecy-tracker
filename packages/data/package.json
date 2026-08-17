@@ -1,0 +1,21 @@
+{
+  "name": "@hades/data",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b && tsc -p tsconfig.test.json",
+    "test": "vitest run",
+    "lint": "eslint src test"
+  },
+  "dependencies": { "@hades/schema": "workspace:*" },
+  "devDependencies": {
+    "@hades/engine": "workspace:*",
+    "typescript": "^5.6.3",
+    "vitest": "^3.0.0"
+  }
+}

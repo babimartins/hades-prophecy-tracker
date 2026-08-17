@@ -1,0 +1,131 @@
+[
+  {
+    "id": "prophecy:family-reunion",
+    "name": "Family Reunion",
+    "description": "The son of the god of the dead shall someday deliver Queen Persephone's personalized invitations to each Olympian, so they might gather for a significant announcement.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "invite:zeus",
+        "invite:poseidon",
+        "invite:demeter",
+        "invite:athena",
+        "invite:aphrodite",
+        "invite:ares",
+        "invite:artemis",
+        "invite:dionysus",
+        "invite:hermes",
+        "story:family-reunion-report"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:queens-plan",
+    "name": "The Queen's Plan",
+    "description": "The son of the god of the dead shall someday inspire Queen Persephone to develop a plan that might settle the score between the House of Hades and Olympus.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "count",
+      "n": 6,
+      "of": [
+        "nectar:zeus",
+        "nectar:poseidon",
+        "nectar:demeter",
+        "nectar:athena",
+        "nectar:aphrodite",
+        "nectar:ares",
+        "nectar:artemis",
+        "nectar:dionysus",
+        "nectar:hermes"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:is-there-no-escape",
+    "name": "Is There No Escape?",
+    "description": "The son of the god of the dead shall someday break free from the realm in which he was born.",
+    "collection": "prophecy",
+    "requirement": { "kind": "all", "of": ["combat:defeat-hades"] }
+  },
+  {
+    "id": "prophecy:chthonic-colleagues",
+    "name": "Chthonic Colleagues",
+    "description": "The son of the god of the dead shall someday meet the rulers of the Underworld.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "meet:hades",
+        "meet:nyx",
+        "meet:charon",
+        "meet:thanatos",
+        "meet:hypnos",
+        "meet:megaera",
+        "meet:alecto",
+        "meet:tisiphone",
+        "meet:chaos"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:night-and-darkness",
+    "name": "Night and Darkness",
+    "description": "The son of the god of the dead shall make certain attempts to aid our Mother Night, who through course of time has grown far apart from Chaos, her parent and origin of all things.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": ["workorder:eldest-sigil-restoration", "talk:nyx-in-chaos-realm"]
+    }
+  },
+  {
+    "id": "prophecy:reluctant-musician",
+    "name": "The Reluctant Musician",
+    "description": "The son of the god of the dead shall someday commute a master musician's sentence of solitary confinement in Tartarus.",
+    "collection": "prophecy",
+    "requirement": { "kind": "all", "of": ["workorder:court-musicians-sentence"] }
+  },
+  {
+    "id": "prophecy:musician-and-muse",
+    "name": "Musician and Muse",
+    "description": "The son of the god of the dead shall make certain attempts to aid a master musician who once failed to whisk his deceased wife from the Underworld.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": ["nectar:orpheus", "nectar:eurydice", "workorder:singers-gamble", "talk:orpheus-after-singers-gamble"]
+    }
+  },
+  {
+    "id": "prophecy:end-to-torment",
+    "name": "End To Torment",
+    "description": "The son of the god of the dead shall make certain attempts to aid the shade of a crafty king, forced to toil eternally, hefting his boulder in Tartarus.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": ["workorder:knave-kings-sentence", "talk:sisyphus-after-knave-kings-sentence"]
+    }
+  },
+  {
+    "id": "prophecy:divided-by-death",
+    "name": "Divided by Death",
+    "description": "The son of the god of the dead shall make certain attempts to aid a great hero who gave up his exalted place in the Underworld for the one he loves.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": ["workorder:heros-sacrifice", "talk:achilles-after-heros-sacrifice"]
+    }
+  },
+  {
+    "id": "prophecy:eternal-rest",
+    "name": "Eternal Rest",
+    "description": "A stationary animated skeleton shall someday be slain by the blade Stygius, in the fully awakened Aspect of the Prince of the Underworld.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        { "kind": "atLeast", "fact": "aspect:stygius:zagreus", "value": 5 },
+        "combat:slay-skelly-with-stygius"
+      ]
+    }
+  }
+]

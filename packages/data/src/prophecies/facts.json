@@ -1,0 +1,53 @@
+[
+  { "id": "invite:zeus", "label": "Invite Zeus to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "invite:poseidon", "label": "Invite Poseidon to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "invite:demeter", "label": "Invite Demeter to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "invite:athena", "label": "Invite Athena to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "invite:aphrodite", "label": "Invite Aphrodite to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "invite:ares", "label": "Invite Ares to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "invite:artemis", "label": "Invite Artemis to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "invite:dionysus", "label": "Invite Dionysus to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "invite:hermes", "label": "Invite Hermes to the family reunion", "kind": "boolean", "collection": "prophecy" },
+  { "id": "story:family-reunion-report", "label": "Report to Persephone and Hades after inviting all Olympians", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "nectar:zeus", "label": "Give Nectar to Zeus", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:poseidon", "label": "Give Nectar to Poseidon", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:demeter", "label": "Give Nectar to Demeter", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:athena", "label": "Give Nectar to Athena", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:aphrodite", "label": "Give Nectar to Aphrodite", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:ares", "label": "Give Nectar to Ares", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:artemis", "label": "Give Nectar to Artemis", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:dionysus", "label": "Give Nectar to Dionysus", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:hermes", "label": "Give Nectar to Hermes", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "combat:defeat-hades", "label": "Defeat Hades", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "meet:hades", "label": "Meet Hades", "kind": "boolean", "collection": "prophecy" },
+  { "id": "meet:nyx", "label": "Meet Nyx", "kind": "boolean", "collection": "prophecy" },
+  { "id": "meet:charon", "label": "Meet Charon", "kind": "boolean", "collection": "prophecy" },
+  { "id": "meet:thanatos", "label": "Meet Thanatos", "kind": "boolean", "collection": "prophecy" },
+  { "id": "meet:hypnos", "label": "Meet Hypnos", "kind": "boolean", "collection": "prophecy" },
+  { "id": "meet:megaera", "label": "Meet Megaera", "kind": "boolean", "collection": "prophecy" },
+  { "id": "meet:alecto", "label": "Meet Alecto", "kind": "boolean", "collection": "prophecy" },
+  { "id": "meet:tisiphone", "label": "Meet Tisiphone", "kind": "boolean", "collection": "prophecy" },
+  { "id": "meet:chaos", "label": "Meet Chaos", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "workorder:eldest-sigil-restoration", "label": "Complete the Eldest Sigil Restoration Work Order", "kind": "boolean", "collection": "prophecy" },
+  { "id": "talk:nyx-in-chaos-realm", "label": "Speak with Nyx in Chaos's realm", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "workorder:court-musicians-sentence", "label": "Complete the Court Musician's Sentence Work Order", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "nectar:orpheus", "label": "Give Nectar to Orpheus", "kind": "boolean", "collection": "prophecy" },
+  { "id": "nectar:eurydice", "label": "Give Nectar to Eurydice", "kind": "boolean", "collection": "prophecy" },
+  { "id": "workorder:singers-gamble", "label": "Complete the Singer's Gamble Work Order", "kind": "boolean", "collection": "prophecy" },
+  { "id": "talk:orpheus-after-singers-gamble", "label": "Speak with Orpheus after the Singer's Gamble Work Order", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "workorder:knave-kings-sentence", "label": "Complete the Knave-King's Sentence Work Order", "kind": "boolean", "collection": "prophecy" },
+  { "id": "talk:sisyphus-after-knave-kings-sentence", "label": "Speak with Sisyphus after the Knave-King's Sentence Work Order", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "workorder:heros-sacrifice", "label": "Complete the Hero's Sacrifice Work Order", "kind": "boolean", "collection": "prophecy" },
+  { "id": "talk:achilles-after-heros-sacrifice", "label": "Speak with Achilles after the Hero's Sacrifice Work Order", "kind": "boolean", "collection": "prophecy" },
+
+  { "id": "aspect:stygius:zagreus", "label": "Stygius Aspect of Zagreus level", "kind": "number", "max": 5, "collection": "prophecy" },
+  { "id": "combat:slay-skelly-with-stygius", "label": "Slay Skelly using Stygius", "kind": "boolean", "collection": "prophecy" }
+]
