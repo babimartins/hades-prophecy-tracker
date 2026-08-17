@@ -1,0 +1,357 @@
+[
+  {
+    "id": "codex:lord-hades",
+    "name": "Lord Hades",
+    "description": "Max affinity with Hades by giving him Nectar, after Persephone returns to the House of Hades and he responds with gratitude.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:lord-hades",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hades",
+          "value": 5
+        },
+        "talk:persephone-returns-to-house-of-hades"
+      ]
+    }
+  },
+  {
+    "id": "codex:zagreus",
+    "name": "Zagreus",
+    "description": "Unlock the Codex entry for Zagreus. Zagreus has no affinity gauge of his own in this game.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:zagreus"
+      ]
+    }
+  },
+  {
+    "id": "codex:nyx",
+    "name": "Nyx",
+    "description": "Max affinity with Nyx by giving her Nectar, after reuniting her with Chaos.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:nyx",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:nyx",
+          "value": 9
+        },
+        "workorder:eldest-sigil-restoration",
+        "talk:nyx-in-chaos-realm"
+      ]
+    }
+  },
+  {
+    "id": "codex:charon",
+    "name": "Charon",
+    "description": "Max affinity with Charon by giving him Nectar and spending 10,000 total at his shop.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:charon",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:charon",
+          "value": 7
+        },
+        {
+          "kind": "atLeast",
+          "fact": "spend:charons-shop",
+          "value": 10000
+        }
+      ]
+    }
+  },
+  {
+    "id": "codex:hypnos",
+    "name": "Hypnos",
+    "description": "Max affinity with Hypnos by giving him Nectar, after he reconciles with Thanatos.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:hypnos",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hypnos",
+          "value": 8
+        },
+        "talk:hypnos-and-thanatos-reconcile"
+      ]
+    }
+  },
+  {
+    "id": "codex:thanatos",
+    "name": "Thanatos",
+    "description": "Max affinity with Thanatos by giving him Nectar and completing his favor.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:thanatos",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:thanatos",
+          "value": 10
+        },
+        "favor:thanatos"
+      ]
+    }
+  },
+  {
+    "id": "codex:megaera",
+    "name": "Megaera",
+    "description": "Max affinity with Megaera by giving her Nectar and completing her favor.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:megaera",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:megaera",
+          "value": 10
+        },
+        "favor:megaera"
+      ]
+    }
+  },
+  {
+    "id": "codex:alecto",
+    "name": "Alecto",
+    "description": "Unlock the Codex entry for Alecto. Alecto cannot be given Nectar or Ambrosia.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:alecto"
+      ]
+    }
+  },
+  {
+    "id": "codex:tisiphone",
+    "name": "Tisiphone",
+    "description": "Unlock the Codex entry for Tisiphone. Tisiphone cannot be given Nectar or Ambrosia.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:tisiphone"
+      ]
+    }
+  },
+  {
+    "id": "codex:chaos",
+    "name": "Chaos",
+    "description": "Max affinity with Chaos by giving them Nectar, after reuniting them with Nyx.",
+    "collection": "codex",
+    "section": "chthonic-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:chaos",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:chaos",
+          "value": 8
+        },
+        "workorder:eldest-sigil-restoration",
+        "talk:nyx-in-chaos-realm"
+      ]
+    }
+  },
+  {
+    "id": "codex:zeus",
+    "name": "Zeus",
+    "description": "Max affinity with Zeus by giving him Nectar, after he reconciles with Hades.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:zeus",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:zeus",
+          "value": 7
+        },
+        "talk:zeus-reconciles-with-hades"
+      ]
+    }
+  },
+  {
+    "id": "codex:poseidon",
+    "name": "Poseidon",
+    "description": "Max affinity with Poseidon by giving him Nectar and catching 18 fish.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:poseidon",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:poseidon",
+          "value": 7
+        },
+        {
+          "kind": "atLeast",
+          "fact": "fish:caught",
+          "value": 18
+        }
+      ]
+    }
+  },
+  {
+    "id": "codex:athena",
+    "name": "Athena",
+    "description": "Max affinity with Athena by giving her Nectar and hearing her acknowledge Zagreus' strength.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:athena",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:athena",
+          "value": 7
+        },
+        "talk:athena-acknowledges-zagreus-strength"
+      ]
+    }
+  },
+  {
+    "id": "codex:aphrodite",
+    "name": "Aphrodite",
+    "description": "Max affinity with Aphrodite by giving her Nectar. Her final heart also needs bonds forged with Dusa, Thanatos and Megaera; that gate is not yet wired.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:aphrodite",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:aphrodite",
+          "value": 7
+        }
+      ]
+    }
+  },
+  {
+    "id": "codex:artemis",
+    "name": "Artemis",
+    "description": "Max affinity with Artemis by giving her Nectar and hearing her confide about Callisto.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:artemis",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:artemis",
+          "value": 7
+        },
+        "talk:artemis-confides-about-callisto"
+      ]
+    }
+  },
+  {
+    "id": "codex:ares",
+    "name": "Ares",
+    "description": "Max affinity with Ares by giving him Nectar and slaying 10,000 foes.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:ares",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:ares",
+          "value": 7
+        },
+        {
+          "kind": "atLeast",
+          "fact": "combat:foes-slain",
+          "value": 10000
+        },
+        "talk:ares-after-10000-foes"
+      ]
+    }
+  },
+  {
+    "id": "codex:dionysus",
+    "name": "Dionysus",
+    "description": "Max affinity with Dionysus by giving him Nectar. His final heart also needs bonds with 6 different characters; that gate is not yet wired.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:dionysus",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:dionysus",
+          "value": 7
+        }
+      ]
+    }
+  },
+  {
+    "id": "codex:hermes",
+    "name": "Hermes",
+    "description": "Max affinity with Hermes by giving him Nectar. His final heart also needs his keepsake at rank 3; that gate is wired in a later task.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:hermes",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hermes",
+          "value": 8
+        }
+      ]
+    }
+  },
+  {
+    "id": "codex:demeter",
+    "name": "Demeter",
+    "description": "Max affinity with Demeter by giving her Nectar, after completing the Epilogue.",
+    "collection": "codex",
+    "section": "olympian-gods",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:demeter",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:demeter",
+          "value": 7
+        },
+        "talk:demeter-after-epilogue"
+      ]
+    }
+  }
+]

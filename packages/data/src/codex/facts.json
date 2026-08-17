@@ -1,0 +1,220 @@
+[
+  {
+    "id": "nectar:hades",
+    "label": "Give Nectar to Hades",
+    "kind": "number",
+    "max": 5,
+    "collection": "codex"
+  },
+  {
+    "id": "talk:persephone-returns-to-house-of-hades",
+    "label": "See Hades' gratitude after Persephone returns to the House of Hades",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:nyx",
+    "label": "Give Nectar to Nyx",
+    "kind": "number",
+    "max": 9,
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:charon",
+    "label": "Give Nectar to Charon",
+    "kind": "number",
+    "max": 7,
+    "collection": "codex"
+  },
+  {
+    "id": "spend:charons-shop",
+    "label": "Total spent at Charon's shop",
+    "kind": "number",
+    "max": 10000,
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:hypnos",
+    "label": "Give Nectar to Hypnos",
+    "kind": "number",
+    "max": 8,
+    "collection": "codex"
+  },
+  {
+    "id": "talk:hypnos-and-thanatos-reconcile",
+    "label": "Witness Hypnos and Thanatos reconcile as brothers",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:thanatos",
+    "label": "Give Nectar to Thanatos",
+    "kind": "number",
+    "max": 10,
+    "collection": "codex"
+  },
+  {
+    "id": "favor:thanatos",
+    "label": "Complete Thanatos' favor after giving him 6 Nectar",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:megaera",
+    "label": "Give Nectar to Megaera",
+    "kind": "number",
+    "max": 10,
+    "collection": "codex"
+  },
+  {
+    "id": "favor:megaera",
+    "label": "Complete Megaera's favor after giving her 4 Nectar",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:chaos",
+    "label": "Give Nectar to Chaos",
+    "kind": "number",
+    "max": 8,
+    "collection": "codex"
+  },
+  {
+    "id": "talk:zeus-reconciles-with-hades",
+    "label": "Hear Zeus express a wish to reconcile with Hades, and Hades' response",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "talk:athena-acknowledges-zagreus-strength",
+    "label": "Hear Athena's three remarks acknowledging Zagreus' strength after a clear",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "talk:artemis-confides-about-callisto",
+    "label": "Hear Artemis say she can be herself with Zagreus",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "talk:demeter-after-epilogue",
+    "label": "Complete the Epilogue and hear Demeter ask Zagreus to be more candid",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:lord-hades",
+    "label": "Unlock the Lord Hades Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:zagreus",
+    "label": "Unlock the Zagreus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:nyx",
+    "label": "Unlock the Nyx Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:charon",
+    "label": "Unlock the Charon Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:hypnos",
+    "label": "Unlock the Hypnos Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:thanatos",
+    "label": "Unlock the Thanatos Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:megaera",
+    "label": "Unlock the Megaera Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:alecto",
+    "label": "Unlock the Alecto Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:tisiphone",
+    "label": "Unlock the Tisiphone Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:chaos",
+    "label": "Unlock the Chaos Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:zeus",
+    "label": "Unlock the Zeus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:poseidon",
+    "label": "Unlock the Poseidon Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:athena",
+    "label": "Unlock the Athena Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:aphrodite",
+    "label": "Unlock the Aphrodite Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:artemis",
+    "label": "Unlock the Artemis Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:ares",
+    "label": "Unlock the Ares Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:dionysus",
+    "label": "Unlock the Dionysus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:hermes",
+    "label": "Unlock the Hermes Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:demeter",
+    "label": "Unlock the Demeter Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  }
+]

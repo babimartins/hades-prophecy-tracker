@@ -1,4 +1,5 @@
 [
   { "id": "prophecy", "name": "Fated List of Minor Prophecies" },
-  { "id": "achievement", "name": "Platform Achievements" }
+  { "id": "achievement", "name": "Platform Achievements" },
+  { "id": "codex", "name": "Codex" }
 ]
