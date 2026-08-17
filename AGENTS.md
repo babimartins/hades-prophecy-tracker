@@ -99,6 +99,20 @@ Two branches can each be green alone and red together. That is how the
 `as const` failure above reached `main`: one branch added the test file, another
 added the config that first type-checked it.
 
+**Make a fixture's `atLeast` threshold differ from the fact's `max`.**
+A test where the two are equal cannot tell a bound-confusion bug from correct
+code: clamping to either value produces the same result. `aspect:stygius:zagreus`
+has `max: 5` and is used at `atLeast 5` in one prophecy and `atLeast 1` in
+another, and only a fixture with mismatched numbers catches a component that
+clamps to the wrong one.
+
+**Queue the initial load inside `ProgressState`, never run it outside `#enqueue`.**
+A write issued before an unqueued load resolves reads the default empty
+`#facts`, and the write-first save order then persists that one-fact map over
+the stored one, discarding it in both IndexedDB and memory. Make the load
+itself the first operation in the queue, so a first-paint write waits behind
+it instead of racing it.
+
 ## Game data
 
 `packages/data` is the one place where being wrong is worse than being late.
