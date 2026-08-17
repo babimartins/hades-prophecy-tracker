@@ -105,19 +105,21 @@ export class HadesDashboard extends LitElement {
             label="Overall progress"
           ></hd-progress>
         </hd-card>
-        ${dataset.collections.map((collection) => {
-          const bucket = overall.byCollection[collection.id]
-          return html`
-            <hd-card>
-              <span slot="header">${collection.name}</span>
-              <hd-progress
-                .value=${bucket?.done ?? 0}
-                .max=${bucket?.total ?? 0}
-                label=${collection.name}
-              ></hd-progress>
-            </hd-card>
-          `
-        })}
+        ${dataset.collections
+          .filter((collection) => (overall.byCollection[collection.id]?.total ?? 0) > 0)
+          .map((collection) => {
+            const bucket = overall.byCollection[collection.id]
+            return html`
+              <hd-card>
+                <span slot="header">${collection.name}</span>
+                <hd-progress
+                  .value=${bucket?.done ?? 0}
+                  .max=${bucket?.total ?? 0}
+                  label=${collection.name}
+                ></hd-progress>
+              </hd-card>
+            `
+          })}
         <hd-card>
           <span slot="header">Next steps</span>
           <next-steps-panel

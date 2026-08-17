@@ -43,6 +43,23 @@ function deferred(): { promise: Promise<void>; resolve: () => void } {
   return { promise, resolve }
 }
 
+describe('hades-dashboard collection cards', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('does not advertise a collection that holds no entries', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const headers = [...element.shadowRoot!.querySelectorAll('hd-card > [slot="header"]')].map(
+      (node) => node.textContent,
+    )
+    expect(headers).not.toContain('Platform Achievements')
+  })
+})
+
 describe('hades-dashboard save failures', () => {
   beforeEach(() => {
     render(html``, document.body)
