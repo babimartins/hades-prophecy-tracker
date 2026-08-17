@@ -75,8 +75,10 @@ export class RequirementTree extends LitElement {
           min="0"
           max=${max}
           .value=${String(numericValue(id, this.facts))}
-          @change=${(event: Event) =>
-            this.emit(id, Number((event.target as HTMLInputElement).value))}
+          @change=${(event: Event) => {
+            const raw = Number((event.target as HTMLInputElement).value)
+            this.emit(id, Math.min(Math.max(raw, 0), max))
+          }}
         />
         <span>/ ${max}</span>
       </div>

@@ -1,5 +1,5 @@
 import { dataset } from '@hades/data'
-import { overallProgress } from '@hades/engine'
+import { overallProgress, type FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
 import '@hades/ui'
 import { css, html, LitElement } from 'lit'
@@ -7,6 +7,8 @@ import { ProgressState } from '../state/progress-state.js'
 import { createIndexedDbStore } from '../storage/indexeddb-store.js'
 import './achievement-detail.js'
 import './achievement-list.js'
+import './next-steps-panel.js'
+import './transfer-controls.js'
 import { StateController } from './state-controller.js'
 
 export class HadesDashboard extends LitElement {
@@ -46,6 +48,10 @@ export class HadesDashboard extends LitElement {
     void this.#controller.state.setFact(event.detail.id, event.detail.value)
   }
 
+  private onImport(event: CustomEvent<{ facts: FactMap }>): void {
+    void this.#controller.state.replaceAll(event.detail.facts)
+  }
+
   override render() {
     const facts = this.#controller.state.facts
     const overall = overallProgress(dataset, facts)
@@ -74,6 +80,19 @@ export class HadesDashboard extends LitElement {
             </hd-card>
           `
         })}
+        <hd-card>
+          <span slot="header">Next steps</span>
+          <next-steps-panel
+            .catalog=${dataset}
+            .facts=${facts}
+            .limit=${8}
+            @fact-toggle=${this.onFactToggle}
+          ></next-steps-panel>
+        </hd-card>
+        <hd-card>
+          <span slot="header">Backup</span>
+          <transfer-controls .facts=${facts} @facts-import=${this.onImport}></transfer-controls>
+        </hd-card>
       </div>
       ${this.openId
         ? html`

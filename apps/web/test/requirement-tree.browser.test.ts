@@ -60,4 +60,30 @@ describe('requirement-tree', () => {
     item.shadowRoot!.querySelector('input')!.click()
     expect(detail).toEqual([{ id: 'a:one', value: true }])
   })
+
+  it('clamps a value typed past the maximum before emitting it', async () => {
+    const element = mount({ kind: 'atLeast', fact: 'a:rank', value: 4 }, { 'a:rank': 2 })
+    await element.updateComplete
+    const detail: Array<{ id: string; value: boolean | number }> = []
+    element.addEventListener('fact-toggle', (event) => {
+      detail.push((event as CustomEvent<{ id: string; value: boolean | number }>).detail)
+    })
+    const input = element.shadowRoot!.querySelector('input[type="number"]') as HTMLInputElement
+    input.value = '99'
+    input.dispatchEvent(new Event('change'))
+    expect(detail).toEqual([{ id: 'a:rank', value: 4 }])
+  })
+
+  it('clamps a negative value to zero before emitting it', async () => {
+    const element = mount({ kind: 'atLeast', fact: 'a:rank', value: 4 }, { 'a:rank': 2 })
+    await element.updateComplete
+    const detail: Array<{ id: string; value: boolean | number }> = []
+    element.addEventListener('fact-toggle', (event) => {
+      detail.push((event as CustomEvent<{ id: string; value: boolean | number }>).detail)
+    })
+    const input = element.shadowRoot!.querySelector('input[type="number"]') as HTMLInputElement
+    input.value = '-5'
+    input.dispatchEvent(new Event('change'))
+    expect(detail).toEqual([{ id: 'a:rank', value: 0 }])
+  })
 })
