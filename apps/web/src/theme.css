@@ -1,15 +1,18 @@
+/*
+ * The colour custom properties (--hd-color-text, --hd-color-muted,
+ * --hd-color-surface, --hd-color-accent, --hd-color-done) are not declared
+ * here. `@hades/ui` is their single source of truth; `main.ts` applies them
+ * at startup by calling `applyDesignTokens` from `./theme-tokens.js`. See
+ * `packages/ui/src/tokens.css.ts`.
+ */
 :root {
-  --hd-color-text: #f3ead9;
-  --hd-color-muted: #a29684;
-  --hd-color-surface: #1b1420;
-  --hd-color-accent: #c8102e;
-  --hd-color-done: #2f9e6f;
+  --hd-font-display: 'Cinzel', serif;
   color-scheme: dark;
 }
 
 body {
-  background: #120d16;
-  color: var(--hd-color-text);
+  background: #150e19;
+  color: var(--hd-color-text, #f2e7d0);
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 24px;

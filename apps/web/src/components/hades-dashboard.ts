@@ -28,10 +28,12 @@ export class HadesDashboard extends LitElement {
       max-width: 900px;
     }
     h1 {
+      font-family: var(--hd-font-display, serif);
       font-size: 1.5rem;
+      font-weight: 600;
     }
     .error {
-      color: var(--hd-color-accent, #c8102e);
+      color: var(--hd-color-accent, #e35563);
     }
     .grid {
       display: grid;

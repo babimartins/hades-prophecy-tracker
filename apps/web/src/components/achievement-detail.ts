@@ -10,7 +10,7 @@ export class AchievementDetail extends LitElement {
       display: block;
     }
     p.description {
-      color: var(--hd-color-muted, #a29684);
+      color: var(--hd-color-muted, #b9a98c);
     }
     button.back {
       background: none;

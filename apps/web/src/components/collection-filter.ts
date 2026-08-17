@@ -27,7 +27,7 @@ export class CollectionFilter extends LitElement {
       padding: 6px 10px;
     }
     input:focus-visible {
-      outline: 2px solid var(--hd-color-accent, #c8102e);
+      outline: 2px solid var(--hd-color-accent, #e35563);
     }
   `
 
