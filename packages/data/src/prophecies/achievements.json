@@ -46,7 +46,12 @@
     "name": "Is There No Escape?",
     "description": "The son of the god of the dead shall someday break free from the realm in which he was born.",
     "collection": "prophecy",
-    "requirement": { "kind": "all", "of": ["combat:defeat-hades"] }
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-hades"
+      ]
+    }
   },
   {
     "id": "prophecy:chthonic-colleagues",
@@ -75,7 +80,10 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["workorder:eldest-sigil-restoration", "talk:nyx-in-chaos-realm"]
+      "of": [
+        "workorder:eldest-sigil-restoration",
+        "talk:nyx-in-chaos-realm"
+      ]
     }
   },
   {
@@ -83,7 +91,12 @@
     "name": "The Reluctant Musician",
     "description": "The son of the god of the dead shall someday commute a master musician's sentence of solitary confinement in Tartarus.",
     "collection": "prophecy",
-    "requirement": { "kind": "all", "of": ["workorder:court-musicians-sentence"] }
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:court-musicians-sentence"
+      ]
+    }
   },
   {
     "id": "prophecy:musician-and-muse",
@@ -92,7 +105,12 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["nectar:orpheus", "nectar:eurydice", "workorder:singers-gamble", "talk:orpheus-after-singers-gamble"]
+      "of": [
+        "nectar:orpheus",
+        "nectar:eurydice",
+        "workorder:singers-gamble",
+        "talk:orpheus-after-singers-gamble"
+      ]
     }
   },
   {
@@ -102,7 +120,10 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["workorder:knave-kings-sentence", "talk:sisyphus-after-knave-kings-sentence"]
+      "of": [
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence"
+      ]
     }
   },
   {
@@ -112,7 +133,10 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["workorder:heros-sacrifice", "talk:achilles-after-heros-sacrifice"]
+      "of": [
+        "workorder:heros-sacrifice",
+        "talk:achilles-after-heros-sacrifice"
+      ]
     }
   },
   {
@@ -123,7 +147,11 @@
     "requirement": {
       "kind": "all",
       "of": [
-        { "kind": "atLeast", "fact": "aspect:stygius:zagreus", "value": 5 },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:zagreus",
+          "value": 5
+        },
         "combat:slay-skelly-with-stygius"
       ]
     }
@@ -135,7 +163,15 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["meet:zeus", "meet:poseidon", "meet:athena", "meet:dionysus", "meet:aphrodite", "meet:ares", "meet:artemis"]
+      "of": [
+        "meet:zeus",
+        "meet:poseidon",
+        "meet:athena",
+        "meet:dionysus",
+        "meet:aphrodite",
+        "meet:ares",
+        "meet:artemis"
+      ]
     }
   },
   {
@@ -149,7 +185,11 @@
         "lounge:deep-cleaning-service",
         "lounge:detailing-service",
         "lounge:any-rug",
-        { "kind": "atLeast", "fact": "lounge:other-items", "value": 10 },
+        {
+          "kind": "atLeast",
+          "fact": "lounge:other-items",
+          "value": 10
+        },
         "talk:dusa-after-lounge-decor"
       ]
     }
@@ -159,7 +199,12 @@
     "name": "Amusing Chaos",
     "description": "The son of the god of the dead shall someday ovecome his own father while in possession of a gift from our primordial originator, Chaos.",
     "collection": "prophecy",
-    "requirement": { "kind": "all", "of": ["combat:defeat-hades-with-cosmic-egg"] }
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-hades-with-cosmic-egg"
+      ]
+    }
   },
   {
     "id": "prophecy:sea-gods-spite",
@@ -168,7 +213,11 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["pact:extreme-measures", "combat:defeat-theseus-extreme-measures", "talk:poseidon-after-theseus-extreme-measures"]
+      "of": [
+        "pact:extreme-measures",
+        "combat:defeat-theseus-extreme-measures",
+        "talk:poseidon-after-theseus-extreme-measures"
+      ]
     }
   },
   {
@@ -178,7 +227,14 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [{ "kind": "atLeast", "fact": "combat:foes-slain", "value": 10000 }, "talk:ares-after-10000-foes"]
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "combat:foes-slain",
+          "value": 10000
+        },
+        "talk:ares-after-10000-foes"
+      ]
     }
   },
   {
@@ -186,7 +242,12 @@
     "name": "A Friendly Wager",
     "description": "The son of the god of the dead shall someday overcome the Stygian Boatman in two succesive battles against him, at the urging of the god of swiftness.",
     "collection": "prophecy",
-    "requirement": { "kind": "all", "of": ["combat:defeat-charon-twice-consecutive"] }
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-charon-twice-consecutive"
+      ]
+    }
   },
   {
     "id": "prophecy:goddess-of-wisdom",
@@ -279,6 +340,246 @@
         "boon:aphrodite:empty-inside",
         "boon:aphrodite:sweet-surrender",
         "boon:aphrodite:broken-resolve"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:god-of-war",
+    "name": "God of War",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Ares.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:curse-of-agony",
+        "boon:ares:curse-of-pain",
+        "boon:ares:blade-dash",
+        "boon:ares:slicing-shot",
+        "boon:ares:ares-aid",
+        "boon:ares:curse-of-vengeance",
+        "boon:ares:urge-to-kill",
+        "boon:ares:battle-rage",
+        "boon:ares:blood-frenzy",
+        "boon:ares:impending-doom",
+        "boon:ares:dire-misfortune",
+        "boon:ares:black-metal",
+        "boon:ares:engulfing-vortex"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:goddess-of-the-hunt",
+    "name": "Goddess of the Hunt",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Artemis.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:deadly-strike",
+        "boon:artemis:hunter-dash",
+        "boon:artemis:true-shot",
+        "boon:artemis:deadly-flourish",
+        "boon:artemis:artemis-aid",
+        "boon:artemis:pressure-points",
+        "boon:artemis:support-fire",
+        "boon:artemis:hunters-mark",
+        "boon:artemis:clean-kill",
+        "boon:artemis:hide-breaker",
+        "boon:artemis:hunter-instinct",
+        "boon:artemis:exit-wounds"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:god-of-wine",
+    "name": "God of Wine",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Dionysus.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:drunken-strike",
+        "boon:dionysus:drunken-flourish",
+        "boon:dionysus:drunken-dash",
+        "boon:dionysus:trippy-shot",
+        "boon:dionysus:dionysus-aid",
+        "boon:dionysus:after-party",
+        "boon:dionysus:positive-outlook",
+        "boon:dionysus:strong-drink",
+        "boon:dionysus:peer-pressure",
+        "boon:dionysus:numbing-sensation",
+        "boon:dionysus:bad-influence",
+        "boon:dionysus:high-tolerance"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:god-of-swiftness",
+    "name": "God of Swiftness",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Hermes.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:second-wind",
+        "boon:hermes:swift-strike",
+        "boon:hermes:swift-flourish",
+        "boon:hermes:quick-recovery",
+        "boon:hermes:greater-haste",
+        "boon:hermes:hyper-sprint",
+        "boon:hermes:flurry-cast",
+        "boon:hermes:greatest-reflex",
+        "boon:hermes:greater-evasion",
+        "boon:hermes:quick-favor",
+        "boon:hermes:side-hustle",
+        "boon:hermes:quick-reload",
+        "boon:hermes:rush-delivery"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:goddess-of-seasons",
+    "name": "Goddess of Seasons",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Demeter.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:frost-strike",
+        "boon:demeter:mistral-dash",
+        "boon:demeter:crystal-beam",
+        "boon:demeter:frost-flourish",
+        "boon:demeter:demeters-aid",
+        "boon:demeter:snow-burst",
+        "boon:demeter:glacial-glare",
+        "boon:demeter:frozen-touch",
+        "boon:demeter:ravenous-will",
+        "boon:demeter:arctic-blast",
+        "boon:demeter:killing-freeze"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:power-without-equal",
+    "name": "Power Without Equal",
+    "description": "The son of the god of the dead shall someday earn various Legendary Boons offered by the Olympians.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:splitting-bolt",
+        "boon:legendary:second-wave",
+        "boon:legendary:divine-protection",
+        "boon:legendary:vicious-cycle",
+        "boon:legendary:unhealthy-fixation",
+        "boon:legendary:fully-loaded",
+        "boon:legendary:black-out",
+        "boon:legendary:greater-recall",
+        "boon:legendary:bad-news",
+        "boon:legendary:winter-harvest"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:divine-pairings",
+    "name": "Divine Pairings",
+    "description": "The son of the god of the dead shall someday earn each of the various Duo Boons offered by pairs of Olympians.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:scintillating-feast",
+        "boon:duo:vengeful-mood",
+        "boon:duo:sea-storm",
+        "boon:duo:lightning-phalanx",
+        "boon:duo:merciful-end",
+        "boon:duo:calculated-risk",
+        "boon:duo:deadly-reversal",
+        "boon:duo:hunting-blades",
+        "boon:duo:lightning-rod",
+        "boon:duo:heart-rend",
+        "boon:duo:curse-of-longing",
+        "boon:duo:sweet-nectar",
+        "boon:duo:low-tolerance",
+        "boon:duo:exclusive-access",
+        "boon:duo:crystal-clarity",
+        "boon:duo:ice-wine",
+        "boon:duo:blizzard-shot",
+        "boon:duo:cold-fusion",
+        "boon:duo:curse-of-drowning",
+        "boon:duo:mirage-shot",
+        "boon:duo:parting-shot",
+        "boon:duo:curse-of-nausea",
+        "boon:duo:cold-embrace",
+        "boon:duo:freezing-vortex",
+        "boon:duo:stubborn-bolts",
+        "boon:duo:smoldering-air",
+        "boon:duo:unshakable-mettle",
+        "boon:duo:splitting-headache"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:primordial-boons",
+    "name": "Primordial Boons",
+    "description": "The son of the god of the dead shall someday earn each of the various Blessings offered by Primordial Chaos.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:strike",
+        "blessing:chaos:shot",
+        "blessing:chaos:grasp",
+        "blessing:chaos:soul",
+        "blessing:chaos:favor",
+        "blessing:chaos:affluence",
+        "blessing:chaos:eclipse",
+        "blessing:chaos:flourish",
+        "blessing:chaos:lunge",
+        "blessing:chaos:ambush",
+        "blessing:chaos:assault",
+        "blessing:chaos:defiance"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:primordial-banes",
+    "name": "Primordial Banes",
+    "description": "The son of the god of the dead shall someday suffer various Curses inflicted by Primordial Chaos.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:paupers",
+        "curse:chaos:slippery",
+        "curse:chaos:maimed",
+        "curse:chaos:flayed",
+        "curse:chaos:addled",
+        "curse:chaos:caustic",
+        "curse:chaos:enshrouded",
+        "curse:chaos:excruciating",
+        "curse:chaos:abyssal",
+        "curse:chaos:atrophic",
+        "curse:chaos:slothful",
+        "curse:chaos:halting",
+        "curse:chaos:roiling"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:infernal-arms",
+    "name": "Infernal Arms",
+    "description": "The son of the god of the dead shall someday acquire each of the ancient weapons once used to slay the Titans.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "weapon:stygian-blade",
+        "weapon:eternal-spear",
+        "weapon:shield-of-chaos",
+        "weapon:heart-seeking-bow",
+        "weapon:twin-fists-of-malphon",
+        "weapon:adamant-rail"
       ]
     }
   }

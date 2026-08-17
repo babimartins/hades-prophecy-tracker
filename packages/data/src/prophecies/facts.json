@@ -1,132 +1,1451 @@
 [
-  { "id": "invite:zeus", "label": "Invite Zeus to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "invite:poseidon", "label": "Invite Poseidon to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "invite:demeter", "label": "Invite Demeter to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "invite:athena", "label": "Invite Athena to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "invite:aphrodite", "label": "Invite Aphrodite to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "invite:ares", "label": "Invite Ares to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "invite:artemis", "label": "Invite Artemis to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "invite:dionysus", "label": "Invite Dionysus to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "invite:hermes", "label": "Invite Hermes to the family reunion", "kind": "boolean", "collection": "prophecy" },
-  { "id": "story:family-reunion-report", "label": "Report to Persephone and Hades after inviting all Olympians", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "nectar:zeus", "label": "Give Nectar to Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:poseidon", "label": "Give Nectar to Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:demeter", "label": "Give Nectar to Demeter", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:athena", "label": "Give Nectar to Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:aphrodite", "label": "Give Nectar to Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:ares", "label": "Give Nectar to Ares", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:artemis", "label": "Give Nectar to Artemis", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:dionysus", "label": "Give Nectar to Dionysus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:hermes", "label": "Give Nectar to Hermes", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "combat:defeat-hades", "label": "Defeat Hades", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "meet:hades", "label": "Meet Hades", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:nyx", "label": "Meet Nyx", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:charon", "label": "Meet Charon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:thanatos", "label": "Meet Thanatos", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:hypnos", "label": "Meet Hypnos", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:megaera", "label": "Meet Megaera", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:alecto", "label": "Meet Alecto", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:tisiphone", "label": "Meet Tisiphone", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:chaos", "label": "Meet Chaos", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "workorder:eldest-sigil-restoration", "label": "Complete the Eldest Sigil Restoration Work Order", "kind": "boolean", "collection": "prophecy" },
-  { "id": "talk:nyx-in-chaos-realm", "label": "Speak with Nyx in Chaos's realm", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "workorder:court-musicians-sentence", "label": "Complete the Court Musician's Sentence Work Order", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "nectar:orpheus", "label": "Give Nectar to Orpheus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "nectar:eurydice", "label": "Give Nectar to Eurydice", "kind": "boolean", "collection": "prophecy" },
-  { "id": "workorder:singers-gamble", "label": "Complete the Singer's Gamble Work Order", "kind": "boolean", "collection": "prophecy" },
-  { "id": "talk:orpheus-after-singers-gamble", "label": "Speak with Orpheus after the Singer's Gamble Work Order", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "workorder:knave-kings-sentence", "label": "Complete the Knave-King's Sentence Work Order", "kind": "boolean", "collection": "prophecy" },
-  { "id": "talk:sisyphus-after-knave-kings-sentence", "label": "Speak with Sisyphus after the Knave-King's Sentence Work Order", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "workorder:heros-sacrifice", "label": "Complete the Hero's Sacrifice Work Order", "kind": "boolean", "collection": "prophecy" },
-  { "id": "talk:achilles-after-heros-sacrifice", "label": "Speak with Achilles after the Hero's Sacrifice Work Order", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "aspect:stygius:zagreus", "label": "Stygius Aspect of Zagreus level", "kind": "number", "max": 5, "collection": "prophecy" },
-  { "id": "combat:slay-skelly-with-stygius", "label": "Slay Skelly using Stygius", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "meet:zeus", "label": "Meet Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:poseidon", "label": "Meet Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:athena", "label": "Meet Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:dionysus", "label": "Meet Dionysus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:aphrodite", "label": "Meet Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:ares", "label": "Meet Ares", "kind": "boolean", "collection": "prophecy" },
-  { "id": "meet:artemis", "label": "Meet Artemis", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "lounge:deep-cleaning-service", "label": "Purchase the Deep Cleaning lounge service", "kind": "boolean", "collection": "prophecy" },
-  { "id": "lounge:detailing-service", "label": "Purchase the Detailing lounge service", "kind": "boolean", "collection": "prophecy" },
-  { "id": "lounge:any-rug", "label": "Purchase any rug for the Lounge", "kind": "boolean", "collection": "prophecy" },
-  { "id": "lounge:other-items", "label": "Other Lounge items purchased", "kind": "number", "max": 10, "collection": "prophecy" },
-  { "id": "talk:dusa-after-lounge-decor", "label": "Speak with Dusa after decorating the Lounge", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "combat:defeat-hades-with-cosmic-egg", "label": "Defeat Hades with the Cosmic Egg keepsake equipped", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "pact:extreme-measures", "label": "Activate the Extreme Measures Pact of Punishment condition", "kind": "boolean", "collection": "prophecy" },
-  { "id": "combat:defeat-theseus-extreme-measures", "label": "Defeat Theseus while Extreme Measures is active", "kind": "boolean", "collection": "prophecy" },
-  { "id": "talk:poseidon-after-theseus-extreme-measures", "label": "Speak with Poseidon after defeating Extreme Measures Theseus", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "combat:foes-slain", "label": "Foes slain", "kind": "number", "max": 10000, "collection": "prophecy" },
-  { "id": "talk:ares-after-10000-foes", "label": "Speak with Ares after slaying 10,000 foes", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "combat:defeat-charon-twice-consecutive", "label": "Defeat Charon two consecutive times", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "boon:athena:divine-strike", "label": "Earn the Divine Strike boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:divine-flourish", "label": "Earn the Divine Flourish boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:divine-dash", "label": "Earn the Divine Dash boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:phalanx-shot", "label": "Earn the Phalanx Shot boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:athenas-aid", "label": "Earn the Athena's Aid boon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:sure-footing", "label": "Earn the Sure Footing boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:bronze-skin", "label": "Earn the Bronze Skin boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:holy-shield", "label": "Earn the Holy Shield boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:proud-bearing", "label": "Earn the Proud Bearing boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:blinding-flash", "label": "Earn the Blinding Flash boon from Athena", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:athena:brilliant-riposte", "label": "Earn the Brilliant Riposte boon from Athena", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "boon:zeus:lightning-strike", "label": "Earn the Lightning Strike boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:thunder-dash", "label": "Earn the Thunder Dash boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:electric-shot", "label": "Earn the Electric Shot boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:thunder-flourish", "label": "Earn the Thunder Flourish boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:zeus-aid", "label": "Earn the Zeus' Aid boon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:heavens-vengeance", "label": "Earn the Heaven's Vengeance boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:clouded-judgement", "label": "Earn the Clouded Judgement boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:billowing-strength", "label": "Earn the Billowing Strength boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:lightning-reflexes", "label": "Earn the Lightning Reflexes boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:storm-lightning", "label": "Earn the Storm Lightning boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:static-discharge", "label": "Earn the Static Discharge boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:high-voltage", "label": "Earn the High Voltage boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:zeus:double-strike", "label": "Earn the Double Strike boon from Zeus", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "boon:poseidon:tempest-strike", "label": "Earn the Tempest Strike boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:tempest-flourish", "label": "Earn the Tempest Flourish boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:tidal-dash", "label": "Earn the Tidal Dash boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:flood-shot", "label": "Earn the Flood Shot boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:poseidons-aid", "label": "Earn the Poseidon's Aid boon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:hydraulic-might", "label": "Earn the Hydraulic Might boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:oceans-bounty", "label": "Earn the Ocean's Bounty boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:boiling-point", "label": "Earn the Boiling Point boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:rip-current", "label": "Earn the Rip Current boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:typhoons-fury", "label": "Earn the Typhoon's Fury boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:breaking-wave", "label": "Earn the Breaking Wave boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:razor-shoals", "label": "Earn the Razor Shoals boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:poseidon:wave-pounding", "label": "Earn the Wave Pounding boon from Poseidon", "kind": "boolean", "collection": "prophecy" },
-
-  { "id": "boon:aphrodite:heartbreak-strike", "label": "Earn the Heartbreak Strike boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:heartbreak-flourish", "label": "Earn the Heartbreak Flourish boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:passion-dash", "label": "Earn the Passion Dash boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:crush-shot", "label": "Earn the Crush Shot boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:aphrodites-aid", "label": "Earn the Aphrodite's Aid boon", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:blown-kiss", "label": "Earn the Blown Kiss boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:wave-of-despair", "label": "Earn the Wave of Despair boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:dying-lament", "label": "Earn the Dying Lament boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:different-league", "label": "Earn the Different League boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:life-affirmation", "label": "Earn the Life Affirmation boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:empty-inside", "label": "Earn the Empty Inside boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:sweet-surrender", "label": "Earn the Sweet Surrender boon from Aphrodite", "kind": "boolean", "collection": "prophecy" },
-  { "id": "boon:aphrodite:broken-resolve", "label": "Earn the Broken Resolve boon from Aphrodite", "kind": "boolean", "collection": "prophecy" }
+  {
+    "id": "invite:zeus",
+    "label": "Invite Zeus to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "invite:poseidon",
+    "label": "Invite Poseidon to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "invite:demeter",
+    "label": "Invite Demeter to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "invite:athena",
+    "label": "Invite Athena to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "invite:aphrodite",
+    "label": "Invite Aphrodite to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "invite:ares",
+    "label": "Invite Ares to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "invite:artemis",
+    "label": "Invite Artemis to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "invite:dionysus",
+    "label": "Invite Dionysus to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "invite:hermes",
+    "label": "Invite Hermes to the family reunion",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "story:family-reunion-report",
+    "label": "Report to Persephone and Hades after inviting all Olympians",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:zeus",
+    "label": "Give Nectar to Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:poseidon",
+    "label": "Give Nectar to Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:demeter",
+    "label": "Give Nectar to Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:athena",
+    "label": "Give Nectar to Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:aphrodite",
+    "label": "Give Nectar to Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:ares",
+    "label": "Give Nectar to Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:artemis",
+    "label": "Give Nectar to Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:dionysus",
+    "label": "Give Nectar to Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:hermes",
+    "label": "Give Nectar to Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:defeat-hades",
+    "label": "Defeat Hades",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:hades",
+    "label": "Meet Hades",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:nyx",
+    "label": "Meet Nyx",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:charon",
+    "label": "Meet Charon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:thanatos",
+    "label": "Meet Thanatos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:hypnos",
+    "label": "Meet Hypnos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:megaera",
+    "label": "Meet Megaera",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:alecto",
+    "label": "Meet Alecto",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:tisiphone",
+    "label": "Meet Tisiphone",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:chaos",
+    "label": "Meet Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "workorder:eldest-sigil-restoration",
+    "label": "Complete the Eldest Sigil Restoration Work Order",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:nyx-in-chaos-realm",
+    "label": "Speak with Nyx in Chaos's realm",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "workorder:court-musicians-sentence",
+    "label": "Complete the Court Musician's Sentence Work Order",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:orpheus",
+    "label": "Give Nectar to Orpheus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "nectar:eurydice",
+    "label": "Give Nectar to Eurydice",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "workorder:singers-gamble",
+    "label": "Complete the Singer's Gamble Work Order",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:orpheus-after-singers-gamble",
+    "label": "Speak with Orpheus after the Singer's Gamble Work Order",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "workorder:knave-kings-sentence",
+    "label": "Complete the Knave-King's Sentence Work Order",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:sisyphus-after-knave-kings-sentence",
+    "label": "Speak with Sisyphus after the Knave-King's Sentence Work Order",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "workorder:heros-sacrifice",
+    "label": "Complete the Hero's Sacrifice Work Order",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:achilles-after-heros-sacrifice",
+    "label": "Speak with Achilles after the Hero's Sacrifice Work Order",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "aspect:stygius:zagreus",
+    "label": "Stygius Aspect of Zagreus level",
+    "kind": "number",
+    "max": 5,
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:slay-skelly-with-stygius",
+    "label": "Slay Skelly using Stygius",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:zeus",
+    "label": "Meet Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:poseidon",
+    "label": "Meet Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:athena",
+    "label": "Meet Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:dionysus",
+    "label": "Meet Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:aphrodite",
+    "label": "Meet Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:ares",
+    "label": "Meet Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "meet:artemis",
+    "label": "Meet Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "lounge:deep-cleaning-service",
+    "label": "Purchase the Deep Cleaning lounge service",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "lounge:detailing-service",
+    "label": "Purchase the Detailing lounge service",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "lounge:any-rug",
+    "label": "Purchase any rug for the Lounge",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "lounge:other-items",
+    "label": "Other Lounge items purchased",
+    "kind": "number",
+    "max": 10,
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:dusa-after-lounge-decor",
+    "label": "Speak with Dusa after decorating the Lounge",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:defeat-hades-with-cosmic-egg",
+    "label": "Defeat Hades with the Cosmic Egg keepsake equipped",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "pact:extreme-measures",
+    "label": "Activate the Extreme Measures Pact of Punishment condition",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:defeat-theseus-extreme-measures",
+    "label": "Defeat Theseus while Extreme Measures is active",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:poseidon-after-theseus-extreme-measures",
+    "label": "Speak with Poseidon after defeating Extreme Measures Theseus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:foes-slain",
+    "label": "Foes slain",
+    "kind": "number",
+    "max": 10000,
+    "collection": "prophecy"
+  },
+  {
+    "id": "talk:ares-after-10000-foes",
+    "label": "Speak with Ares after slaying 10,000 foes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "combat:defeat-charon-twice-consecutive",
+    "label": "Defeat Charon two consecutive times",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:divine-strike",
+    "label": "Earn the Divine Strike boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:divine-flourish",
+    "label": "Earn the Divine Flourish boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:divine-dash",
+    "label": "Earn the Divine Dash boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:phalanx-shot",
+    "label": "Earn the Phalanx Shot boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:athenas-aid",
+    "label": "Earn the Athena's Aid boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:sure-footing",
+    "label": "Earn the Sure Footing boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:bronze-skin",
+    "label": "Earn the Bronze Skin boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:holy-shield",
+    "label": "Earn the Holy Shield boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:proud-bearing",
+    "label": "Earn the Proud Bearing boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:blinding-flash",
+    "label": "Earn the Blinding Flash boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:athena:brilliant-riposte",
+    "label": "Earn the Brilliant Riposte boon from Athena",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:lightning-strike",
+    "label": "Earn the Lightning Strike boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:thunder-dash",
+    "label": "Earn the Thunder Dash boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:electric-shot",
+    "label": "Earn the Electric Shot boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:thunder-flourish",
+    "label": "Earn the Thunder Flourish boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:zeus-aid",
+    "label": "Earn the Zeus' Aid boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:heavens-vengeance",
+    "label": "Earn the Heaven's Vengeance boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:clouded-judgement",
+    "label": "Earn the Clouded Judgement boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:billowing-strength",
+    "label": "Earn the Billowing Strength boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:lightning-reflexes",
+    "label": "Earn the Lightning Reflexes boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:storm-lightning",
+    "label": "Earn the Storm Lightning boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:static-discharge",
+    "label": "Earn the Static Discharge boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:high-voltage",
+    "label": "Earn the High Voltage boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:zeus:double-strike",
+    "label": "Earn the Double Strike boon from Zeus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:tempest-strike",
+    "label": "Earn the Tempest Strike boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:tempest-flourish",
+    "label": "Earn the Tempest Flourish boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:tidal-dash",
+    "label": "Earn the Tidal Dash boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:flood-shot",
+    "label": "Earn the Flood Shot boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:poseidons-aid",
+    "label": "Earn the Poseidon's Aid boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:hydraulic-might",
+    "label": "Earn the Hydraulic Might boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:oceans-bounty",
+    "label": "Earn the Ocean's Bounty boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:boiling-point",
+    "label": "Earn the Boiling Point boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:rip-current",
+    "label": "Earn the Rip Current boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:typhoons-fury",
+    "label": "Earn the Typhoon's Fury boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:breaking-wave",
+    "label": "Earn the Breaking Wave boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:razor-shoals",
+    "label": "Earn the Razor Shoals boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:poseidon:wave-pounding",
+    "label": "Earn the Wave Pounding boon from Poseidon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:heartbreak-strike",
+    "label": "Earn the Heartbreak Strike boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:heartbreak-flourish",
+    "label": "Earn the Heartbreak Flourish boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:passion-dash",
+    "label": "Earn the Passion Dash boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:crush-shot",
+    "label": "Earn the Crush Shot boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:aphrodites-aid",
+    "label": "Earn the Aphrodite's Aid boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:blown-kiss",
+    "label": "Earn the Blown Kiss boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:wave-of-despair",
+    "label": "Earn the Wave of Despair boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:dying-lament",
+    "label": "Earn the Dying Lament boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:different-league",
+    "label": "Earn the Different League boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:life-affirmation",
+    "label": "Earn the Life Affirmation boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:empty-inside",
+    "label": "Earn the Empty Inside boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:sweet-surrender",
+    "label": "Earn the Sweet Surrender boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:aphrodite:broken-resolve",
+    "label": "Earn the Broken Resolve boon from Aphrodite",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:curse-of-agony",
+    "label": "Earn the Curse of Agony boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:curse-of-pain",
+    "label": "Earn the Curse of Pain boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:blade-dash",
+    "label": "Earn the Blade Dash boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:slicing-shot",
+    "label": "Earn the Slicing Shot boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:ares-aid",
+    "label": "Earn the Ares' Aid boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:curse-of-vengeance",
+    "label": "Earn the Curse of Vengeance boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:urge-to-kill",
+    "label": "Earn the Urge to Kill boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:battle-rage",
+    "label": "Earn the Battle Rage boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:blood-frenzy",
+    "label": "Earn the Blood Frenzy boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:impending-doom",
+    "label": "Earn the Impending Doom boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:dire-misfortune",
+    "label": "Earn the Dire Misfortune boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:black-metal",
+    "label": "Earn the Black Metal boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:ares:engulfing-vortex",
+    "label": "Earn the Engulfing Vortex boon from Ares",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:deadly-strike",
+    "label": "Earn the Deadly Strike boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:hunter-dash",
+    "label": "Earn the Hunter Dash boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:true-shot",
+    "label": "Earn the True Shot boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:deadly-flourish",
+    "label": "Earn the Deadly Flourish boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:artemis-aid",
+    "label": "Earn the Artemis' Aid boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:pressure-points",
+    "label": "Earn the Pressure Points boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:support-fire",
+    "label": "Earn the Support Fire boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:hunters-mark",
+    "label": "Earn the Hunter's Mark boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:clean-kill",
+    "label": "Earn the Clean Kill boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:hide-breaker",
+    "label": "Earn the Hide Breaker boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:hunter-instinct",
+    "label": "Earn the Hunter Instinct boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:artemis:exit-wounds",
+    "label": "Earn the Exit Wounds boon from Artemis",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:drunken-strike",
+    "label": "Earn the Drunken Strike boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:drunken-flourish",
+    "label": "Earn the Drunken Flourish boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:drunken-dash",
+    "label": "Earn the Drunken Dash boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:trippy-shot",
+    "label": "Earn the Trippy Shot boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:dionysus-aid",
+    "label": "Earn the Dionysus' Aid boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:after-party",
+    "label": "Earn the After Party boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:positive-outlook",
+    "label": "Earn the Positive Outlook boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:strong-drink",
+    "label": "Earn the Strong Drink boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:peer-pressure",
+    "label": "Earn the Peer Pressure boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:numbing-sensation",
+    "label": "Earn the Numbing Sensation boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:bad-influence",
+    "label": "Earn the Bad Influence boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:dionysus:high-tolerance",
+    "label": "Earn the High Tolerance boon from Dionysus",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:second-wind",
+    "label": "Earn the Second Wind boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:swift-strike",
+    "label": "Earn the Swift Strike boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:swift-flourish",
+    "label": "Earn the Swift Flourish boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:quick-recovery",
+    "label": "Earn the Quick Recovery boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:greater-haste",
+    "label": "Earn the Greater Haste boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:hyper-sprint",
+    "label": "Earn the Hyper Sprint boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:flurry-cast",
+    "label": "Earn the Flurry Cast boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:greatest-reflex",
+    "label": "Earn the Greatest Reflex boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:greater-evasion",
+    "label": "Earn the Greater Evasion boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:quick-favor",
+    "label": "Earn the Quick Favor boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:side-hustle",
+    "label": "Earn the Side Hustle boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:quick-reload",
+    "label": "Earn the Quick Reload boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:hermes:rush-delivery",
+    "label": "Earn the Rush Delivery boon from Hermes",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:frost-strike",
+    "label": "Earn the Frost Strike boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:mistral-dash",
+    "label": "Earn the Mistral Dash boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:crystal-beam",
+    "label": "Earn the Crystal Beam boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:frost-flourish",
+    "label": "Earn the Frost Flourish boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:demeters-aid",
+    "label": "Earn the Demeter's Aid boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:snow-burst",
+    "label": "Earn the Snow Burst boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:glacial-glare",
+    "label": "Earn the Glacial Glare boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:frozen-touch",
+    "label": "Earn the Frozen Touch boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:ravenous-will",
+    "label": "Earn the Ravenous Will boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:arctic-blast",
+    "label": "Earn the Arctic Blast boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:demeter:killing-freeze",
+    "label": "Earn the Killing Freeze boon from Demeter",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:splitting-bolt",
+    "label": "Earn the Splitting Bolt Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:second-wave",
+    "label": "Earn the Second Wave Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:divine-protection",
+    "label": "Earn the Divine Protection Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:vicious-cycle",
+    "label": "Earn the Vicious Cycle Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:unhealthy-fixation",
+    "label": "Earn the Unhealthy Fixation Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:fully-loaded",
+    "label": "Earn the Fully Loaded Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:black-out",
+    "label": "Earn the Black Out Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:greater-recall",
+    "label": "Earn the Greater Recall Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:bad-news",
+    "label": "Earn the Bad News Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:legendary:winter-harvest",
+    "label": "Earn the Winter Harvest Legendary Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:scintillating-feast",
+    "label": "Earn the Scintillating Feast Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:vengeful-mood",
+    "label": "Earn the Vengeful Mood Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:sea-storm",
+    "label": "Earn the Sea Storm Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:lightning-phalanx",
+    "label": "Earn the Lightning Phalanx Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:merciful-end",
+    "label": "Earn the Merciful End Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:calculated-risk",
+    "label": "Earn the Calculated Risk Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:deadly-reversal",
+    "label": "Earn the Deadly Reversal Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:hunting-blades",
+    "label": "Earn the Hunting Blades Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:lightning-rod",
+    "label": "Earn the Lightning Rod Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:heart-rend",
+    "label": "Earn the Heart Rend Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:curse-of-longing",
+    "label": "Earn the Curse of Longing Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:sweet-nectar",
+    "label": "Earn the Sweet Nectar Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:low-tolerance",
+    "label": "Earn the Low Tolerance Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:exclusive-access",
+    "label": "Earn the Exclusive Access Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:crystal-clarity",
+    "label": "Earn the Crystal Clarity Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:ice-wine",
+    "label": "Earn the Ice Wine Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:blizzard-shot",
+    "label": "Earn the Blizzard Shot Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:cold-fusion",
+    "label": "Earn the Cold Fusion Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:curse-of-drowning",
+    "label": "Earn the Curse of Drowning Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:mirage-shot",
+    "label": "Earn the Mirage Shot Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:parting-shot",
+    "label": "Earn the Parting Shot Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:curse-of-nausea",
+    "label": "Earn the Curse of Nausea Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:cold-embrace",
+    "label": "Earn the Cold Embrace Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:freezing-vortex",
+    "label": "Earn the Freezing Vortex Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:stubborn-bolts",
+    "label": "Earn the Stubborn Bolts Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:smoldering-air",
+    "label": "Earn the Smoldering Air Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:unshakable-mettle",
+    "label": "Earn the Unshakable Mettle Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "boon:duo:splitting-headache",
+    "label": "Earn the Splitting Headache Duo Boon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:strike",
+    "label": "Earn the Strike blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:shot",
+    "label": "Earn the Shot blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:grasp",
+    "label": "Earn the Grasp blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:soul",
+    "label": "Earn the Soul blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:favor",
+    "label": "Earn the Favor blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:affluence",
+    "label": "Earn the Affluence blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:eclipse",
+    "label": "Earn the Eclipse blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:flourish",
+    "label": "Earn the Flourish blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:lunge",
+    "label": "Earn the Lunge blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:ambush",
+    "label": "Earn the Ambush blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:assault",
+    "label": "Earn the Assault blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "blessing:chaos:defiance",
+    "label": "Earn the Defiance blessing from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:paupers",
+    "label": "Suffer the Pauper's curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:slippery",
+    "label": "Suffer the Slippery curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:maimed",
+    "label": "Suffer the Maimed curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:flayed",
+    "label": "Suffer the Flayed curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:addled",
+    "label": "Suffer the Addled curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:caustic",
+    "label": "Suffer the Caustic curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:enshrouded",
+    "label": "Suffer the Enshrouded curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:excruciating",
+    "label": "Suffer the Excruciating curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:abyssal",
+    "label": "Suffer the Abyssal curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:atrophic",
+    "label": "Suffer the Atrophic curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:slothful",
+    "label": "Suffer the Slothful curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:halting",
+    "label": "Suffer the Halting curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "curse:chaos:roiling",
+    "label": "Suffer the Roiling curse from Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "weapon:stygian-blade",
+    "label": "Acquire the Stygian Blade",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "weapon:eternal-spear",
+    "label": "Acquire the Eternal Spear",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "weapon:shield-of-chaos",
+    "label": "Acquire the Shield of Chaos",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "weapon:heart-seeking-bow",
+    "label": "Acquire the Heart-Seeking Bow",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "weapon:twin-fists-of-malphon",
+    "label": "Acquire the Twin Fists of Malphon",
+    "kind": "boolean",
+    "collection": "prophecy"
+  },
+  {
+    "id": "weapon:adamant-rail",
+    "label": "Acquire the Adamant Rail",
+    "kind": "boolean",
+    "collection": "prophecy"
+  }
 ]
