@@ -1692,5 +1692,173 @@
         "encounter:nemean-chariot"
       ]
     }
+  },
+  {
+    "id": "codex:flame-wheel",
+    "name": "Flame Wheel",
+    "description": "Encounter a Flame Wheel, an enemy found in Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:flame-wheel",
+        "encounter:flame-wheel"
+      ]
+    }
+  },
+  {
+    "id": "codex:brightsword",
+    "name": "Brightsword",
+    "description": "Encounter a Brightsword, an enemy found in Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:brightsword",
+        "encounter:brightsword"
+      ]
+    }
+  },
+  {
+    "id": "codex:longspear",
+    "name": "Longspear",
+    "description": "Encounter a Longspear, an enemy found in Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:longspear",
+        "encounter:longspear"
+      ]
+    }
+  },
+  {
+    "id": "codex:strongbow",
+    "name": "Strongbow",
+    "description": "Encounter a Strongbow, an enemy found in Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:strongbow",
+        "encounter:strongbow"
+      ]
+    }
+  },
+  {
+    "id": "codex:greatshield",
+    "name": "Greatshield",
+    "description": "Encounter a Greatshield, an enemy found in Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:greatshield",
+        "encounter:greatshield"
+      ]
+    }
+  },
+  {
+    "id": "codex:soul-catcher",
+    "name": "Soul Catcher",
+    "description": "Encounter a Soul Catcher, an enemy found in Elysium.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:soul-catcher",
+        "encounter:soul-catcher"
+      ]
+    }
+  },
+  {
+    "id": "codex:crawler",
+    "name": "Crawler",
+    "description": "Encounter a Crawler, an enemy found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:crawler",
+        "encounter:crawler"
+      ]
+    }
+  },
+  {
+    "id": "codex:gigantic-vermin",
+    "name": "Gigantic Vermin",
+    "description": "Encounter a Gigantic Vermin, an enemy found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:gigantic-vermin",
+        "encounter:gigantic-vermin"
+      ]
+    }
+  },
+  {
+    "id": "codex:king-vermin",
+    "name": "King Vermin",
+    "description": "Encounter a King Vermin, an enemy found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:king-vermin",
+        "encounter:king-vermin"
+      ]
+    }
+  },
+  {
+    "id": "codex:bother",
+    "name": "Bother",
+    "description": "Encounter a Bother, an enemy found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:bother",
+        "encounter:bother"
+      ]
+    }
+  },
+  {
+    "id": "codex:snakestone",
+    "name": "Snakestone",
+    "description": "Encounter a Snakestone, an enemy found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:snakestone",
+        "encounter:snakestone"
+      ]
+    }
+  },
+  {
+    "id": "codex:satyr-cultist",
+    "name": "Satyr Cultist",
+    "description": "Encounter a Satyr Cultist, an enemy found in the Temple of Styx.",
+    "collection": "codex",
+    "section": "perilous-foes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:satyr-cultist",
+        "encounter:satyr-cultist"
+      ]
+    }
   }
 ]

@@ -1213,5 +1213,149 @@
     "label": "Unlock the Nemean Chariot Codex entry",
     "kind": "boolean",
     "collection": "codex"
+  },
+  {
+    "id": "encounter:flame-wheel",
+    "label": "Encounter a Flame Wheel for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:flame-wheel",
+    "label": "Unlock the Flame Wheel Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:brightsword",
+    "label": "Encounter a Brightsword for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:brightsword",
+    "label": "Unlock the Brightsword Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:longspear",
+    "label": "Encounter a Longspear for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:longspear",
+    "label": "Unlock the Longspear Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:strongbow",
+    "label": "Encounter a Strongbow for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:strongbow",
+    "label": "Unlock the Strongbow Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:greatshield",
+    "label": "Encounter a Greatshield for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:greatshield",
+    "label": "Unlock the Greatshield Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:soul-catcher",
+    "label": "Encounter a Soul Catcher for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:soul-catcher",
+    "label": "Unlock the Soul Catcher Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:crawler",
+    "label": "Encounter a Crawler for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:crawler",
+    "label": "Unlock the Crawler Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:gigantic-vermin",
+    "label": "Encounter a Gigantic Vermin for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:gigantic-vermin",
+    "label": "Unlock the Gigantic Vermin Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:king-vermin",
+    "label": "Encounter a King Vermin for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:king-vermin",
+    "label": "Unlock the King Vermin Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:bother",
+    "label": "Encounter a Bother for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:bother",
+    "label": "Unlock the Bother Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:snakestone",
+    "label": "Encounter a Snakestone for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:snakestone",
+    "label": "Unlock the Snakestone Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "encounter:satyr-cultist",
+    "label": "Encounter a Satyr Cultist for the first time",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:satyr-cultist",
+    "label": "Unlock the Satyr Cultist Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
   }
 ]
