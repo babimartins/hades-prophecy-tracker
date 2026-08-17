@@ -242,7 +242,7 @@
   {
     "id": "codex:aphrodite",
     "name": "Aphrodite",
-    "description": "Max affinity with Aphrodite by giving her Nectar. Her final heart also needs bonds forged with Dusa, Thanatos and Megaera; that gate is not yet wired.",
+    "description": "Max affinity with Aphrodite by giving her Nectar, after forging bonds with Dusa, Thanatos and Megaera and hearing her reaction to it.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -253,7 +253,23 @@
           "kind": "atLeast",
           "fact": "nectar:aphrodite",
           "value": 7
-        }
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:dusa",
+          "value": 10
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:thanatos",
+          "value": 10
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:megaera",
+          "value": 10
+        },
+        "talk:aphrodite-after-bonds-forged"
       ]
     }
   },
@@ -352,6 +368,323 @@
           "value": 7
         },
         "talk:demeter-after-epilogue"
+      ]
+    }
+  },
+  {
+    "id": "codex:achilles",
+    "name": "Achilles",
+    "description": "Max affinity with Achilles by giving him Nectar, after he reunites with Patroclus. That reunion needs Sisyphus's and Orpheus & Eurydice's favors complete first.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:achilles",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:achilles",
+          "value": 9
+        },
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence",
+        "workorder:singers-gamble",
+        "talk:orpheus-after-singers-gamble",
+        "workorder:heros-sacrifice",
+        "talk:achilles-after-heros-sacrifice"
+      ]
+    }
+  },
+  {
+    "id": "codex:orpheus",
+    "name": "Orpheus",
+    "description": "Max affinity with Orpheus by giving him Nectar, after his contract is voided with the Singer's Gamble.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:orpheus",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:orpheus",
+          "value": 8
+        },
+        "workorder:singers-gamble",
+        "talk:orpheus-after-singers-gamble"
+      ]
+    }
+  },
+  {
+    "id": "codex:sisyphus",
+    "name": "Sisyphus",
+    "description": "Max affinity with Sisyphus by giving him Nectar, after his sentence is amended with the Knave-King's Sentence.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:sisyphus",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:sisyphus",
+          "value": 9
+        },
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence"
+      ]
+    }
+  },
+  {
+    "id": "codex:eurydice",
+    "name": "Eurydice",
+    "description": "Max affinity with Eurydice by giving her Nectar, after Orpheus's contract is voided with the Singer's Gamble.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:eurydice",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:eurydice",
+          "value": 7
+        },
+        "workorder:singers-gamble",
+        "talk:orpheus-after-singers-gamble"
+      ]
+    }
+  },
+  {
+    "id": "codex:patroclus",
+    "name": "Patroclus",
+    "description": "Max affinity with Patroclus by giving him Nectar, after he reunites with Achilles. That reunion needs Sisyphus's and Orpheus & Eurydice's favors complete first.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:patroclus",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:patroclus",
+          "value": 8
+        },
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence",
+        "workorder:singers-gamble",
+        "talk:orpheus-after-singers-gamble",
+        "workorder:heros-sacrifice",
+        "talk:achilles-after-heros-sacrifice"
+      ]
+    }
+  },
+  {
+    "id": "codex:theseus",
+    "name": "Theseus",
+    "description": "Unlock the Codex entry for Theseus. Theseus cannot be given Nectar or Ambrosia.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:theseus"
+      ]
+    }
+  },
+  {
+    "id": "codex:asterius",
+    "name": "Asterius",
+    "description": "Unlock the Codex entry for Asterius. Asterius cannot be given Nectar or Ambrosia.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:asterius"
+      ]
+    }
+  },
+  {
+    "id": "codex:cerberus",
+    "name": "Cerberus",
+    "description": "Max affinity with Cerberus by giving him Nectar and petting him 20 times after the favor lock.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:cerberus",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:cerberus",
+          "value": 9
+        },
+        {
+          "kind": "atLeast",
+          "fact": "pet:cerberus",
+          "value": 20
+        }
+      ]
+    }
+  },
+  {
+    "id": "codex:dusa",
+    "name": "Dusa",
+    "description": "Max affinity with Dusa by giving her Nectar, after the Lounge is renovated and she is told about it.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:dusa",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:dusa",
+          "value": 10
+        },
+        "lounge:deep-cleaning-service",
+        "lounge:detailing-service",
+        "lounge:any-rug",
+        {
+          "kind": "atLeast",
+          "fact": "lounge:other-items",
+          "value": 10
+        },
+        "talk:dusa-after-lounge-decor"
+      ]
+    }
+  },
+  {
+    "id": "codex:skelly",
+    "name": "Skelly",
+    "description": "Max affinity with Skelly by giving him Nectar, after slaying him with the Level 5 Aspect of Zagreus on Stygius.",
+    "collection": "codex",
+    "section": "others-of-note",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:skelly",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:skelly",
+          "value": 9
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:zagreus",
+          "value": 5
+        },
+        "combat:slay-skelly-with-stygius"
+      ]
+    }
+  },
+  {
+    "id": "codex:companion-battie",
+    "name": "Companion Battie",
+    "description": "Obtain Companion Battie: give Ambrosia to Megaera for the first time, after her favor is complete.",
+    "collection": "codex",
+    "section": "fables",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:companion-battie",
+        "favor:megaera",
+        "companion:battie"
+      ]
+    }
+  },
+  {
+    "id": "codex:companion-mort",
+    "name": "Companion Mort",
+    "description": "Obtain Companion Mort: give Ambrosia to Thanatos for the first time, after his favor is complete.",
+    "collection": "codex",
+    "section": "fables",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:companion-mort",
+        "favor:thanatos",
+        "companion:mort"
+      ]
+    }
+  },
+  {
+    "id": "codex:companion-fidi",
+    "name": "Companion Fidi",
+    "description": "Obtain Companion Fidi: give Ambrosia to Dusa for the first time, after her Lounge renovation favor is complete.",
+    "collection": "codex",
+    "section": "fables",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:companion-fidi",
+        "lounge:deep-cleaning-service",
+        "lounge:detailing-service",
+        "lounge:any-rug",
+        {
+          "kind": "atLeast",
+          "fact": "lounge:other-items",
+          "value": 10
+        },
+        "talk:dusa-after-lounge-decor",
+        "companion:fidi"
+      ]
+    }
+  },
+  {
+    "id": "codex:companion-shady",
+    "name": "Companion Shady",
+    "description": "Obtain Companion Shady: give Ambrosia to Sisyphus for the first time, after his sentence is amended.",
+    "collection": "codex",
+    "section": "fables",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:companion-shady",
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence",
+        "companion:shady"
+      ]
+    }
+  },
+  {
+    "id": "codex:companion-rib",
+    "name": "Companion Rib",
+    "description": "Obtain Companion Rib: give Ambrosia to Skelly for the first time, after slaying him with the Level 5 Aspect of Zagreus on Stygius.",
+    "collection": "codex",
+    "section": "fables",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:companion-rib",
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:zagreus",
+          "value": 5
+        },
+        "combat:slay-skelly-with-stygius",
+        "companion:rib"
+      ]
+    }
+  },
+  {
+    "id": "codex:companion-antos",
+    "name": "Companion Antos",
+    "description": "Obtain Companion Antos: give Ambrosia to Achilles for the first time, after he reunites with Patroclus. That reunion needs Sisyphus's and Orpheus & Eurydice's favors complete first.",
+    "collection": "codex",
+    "section": "fables",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:companion-antos",
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence",
+        "workorder:singers-gamble",
+        "talk:orpheus-after-singers-gamble",
+        "workorder:heros-sacrifice",
+        "talk:achilles-after-heros-sacrifice",
+        "companion:antos"
       ]
     }
   }

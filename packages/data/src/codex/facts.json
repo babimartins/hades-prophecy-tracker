@@ -222,5 +222,192 @@
     "label": "Unlock the Demeter Codex entry",
     "kind": "boolean",
     "collection": "codex"
+  },
+  {
+    "id": "talk:aphrodite-after-bonds-forged",
+    "label": "Hear Aphrodite's response after forging bonds with Dusa, Thanatos and Megaera",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:achilles",
+    "label": "Give Nectar to Achilles",
+    "kind": "number",
+    "max": 9,
+    "collection": "codex"
+  },
+  {
+    "id": "codex:achilles",
+    "label": "Unlock the Achilles Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:orpheus",
+    "label": "Unlock the Orpheus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:sisyphus",
+    "label": "Give Nectar to Sisyphus",
+    "kind": "number",
+    "max": 9,
+    "collection": "codex"
+  },
+  {
+    "id": "codex:sisyphus",
+    "label": "Unlock the Sisyphus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:eurydice",
+    "label": "Unlock the Eurydice Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:patroclus",
+    "label": "Give Nectar to Patroclus",
+    "kind": "number",
+    "max": 8,
+    "collection": "codex"
+  },
+  {
+    "id": "codex:patroclus",
+    "label": "Unlock the Patroclus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:theseus",
+    "label": "Unlock the Theseus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:asterius",
+    "label": "Unlock the Asterius Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:cerberus",
+    "label": "Give Nectar to Cerberus",
+    "kind": "number",
+    "max": 9,
+    "collection": "codex"
+  },
+  {
+    "id": "pet:cerberus",
+    "label": "Pet Cerberus, counting only pets given after the favor lock was added",
+    "kind": "number",
+    "max": 20,
+    "collection": "codex"
+  },
+  {
+    "id": "codex:cerberus",
+    "label": "Unlock the Cerberus Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:dusa",
+    "label": "Give Nectar to Dusa",
+    "kind": "number",
+    "max": 10,
+    "collection": "codex"
+  },
+  {
+    "id": "codex:dusa",
+    "label": "Unlock the Dusa Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "nectar:skelly",
+    "label": "Give Nectar to Skelly",
+    "kind": "number",
+    "max": 9,
+    "collection": "codex"
+  },
+  {
+    "id": "codex:skelly",
+    "label": "Unlock the Skelly Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "companion:battie",
+    "label": "Give Ambrosia to Megaera for the first time, after her favor is complete, to obtain Companion Battie",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:companion-battie",
+    "label": "Unlock the Companion Battie Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "companion:mort",
+    "label": "Give Ambrosia to Thanatos for the first time, after his favor is complete, to obtain Companion Mort",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:companion-mort",
+    "label": "Unlock the Companion Mort Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "companion:fidi",
+    "label": "Give Ambrosia to Dusa for the first time, after her Lounge renovation favor is complete, to obtain Companion Fidi",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:companion-fidi",
+    "label": "Unlock the Companion Fidi Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "companion:shady",
+    "label": "Give Ambrosia to Sisyphus for the first time, after his sentence is amended, to obtain Companion Shady",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:companion-shady",
+    "label": "Unlock the Companion Shady Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "companion:rib",
+    "label": "Give Ambrosia to Skelly for the first time, after slaying him with the Level 5 Stygius Aspect, to obtain Companion Rib",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:companion-rib",
+    "label": "Unlock the Companion Rib Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "companion:antos",
+    "label": "Give Ambrosia to Achilles for the first time, after he reunites with Patroclus, to obtain Companion Antos",
+    "kind": "boolean",
+    "collection": "codex"
+  },
+  {
+    "id": "codex:companion-antos",
+    "label": "Unlock the Companion Antos Codex entry",
+    "kind": "boolean",
+    "collection": "codex"
   }
 ]
