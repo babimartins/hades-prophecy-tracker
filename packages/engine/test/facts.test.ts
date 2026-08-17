@@ -1,3 +1,4 @@
+import type { RequirementChild } from '@hades/schema'
 import { describe, expect, it } from 'vitest'
 import { collectFactIds } from '../src/index.js'
 
@@ -7,10 +8,10 @@ describe('collectFactIds', () => {
   })
 
   it('returns every fact id of a nested all/any tree, in encounter order', () => {
-    const node = {
+    const node: RequirementChild = {
       kind: 'all',
       of: ['a:one', { kind: 'any', of: ['a:two', 'a:three'] }],
-    } as const
+    }
     expect(collectFactIds(node)).toEqual(['a:one', 'a:two', 'a:three'])
   })
 
@@ -20,26 +21,26 @@ describe('collectFactIds', () => {
   })
 
   it('lists a fact id once even when it appears twice in the tree', () => {
-    const node = { kind: 'all', of: ['a:one', 'a:one'] } as const
+    const node: RequirementChild = { kind: 'all', of: ['a:one', 'a:one'] }
     expect(collectFactIds(node)).toEqual(['a:one'])
   })
 
   it('lists a fact id once even when it appears via different node kinds', () => {
-    const node = {
+    const node: RequirementChild = {
       kind: 'any',
       of: ['a:one', { kind: 'atLeast', fact: 'a:one', value: 2 }],
-    } as const
+    }
     expect(collectFactIds(node)).toEqual(['a:one'])
   })
 
   it('reaches every leaf of a deeply nested mix of node kinds', () => {
-    const node = {
+    const node: RequirementChild = {
       kind: 'all',
       of: [
         { kind: 'any', of: ['a:one', { kind: 'count', of: ['a:two', 'a:three'], n: 1 }] },
         { kind: 'atLeast', fact: 'a:four', value: 3 },
       ],
-    } as const
+    }
     expect(collectFactIds(node)).toEqual(['a:one', 'a:two', 'a:three', 'a:four'])
   })
 })
