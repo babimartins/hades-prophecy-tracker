@@ -1,7 +1,8 @@
-import { impact, nextSteps, type FactMap } from '@hades/engine'
-import type { Dataset } from '@hades/schema'
+import { impact, isSatisfied, nextSteps, numericValue, type FactMap } from '@hades/engine'
+import type { Dataset, Fact } from '@hades/schema'
 import '@hades/ui'
-import { html, LitElement } from 'lit'
+import { css, html, LitElement, type TemplateResult } from 'lit'
+import { repeat } from 'lit/directives/repeat.js'
 
 /**
  * Fires `fact-toggle` with `detail: { id, value }`.
@@ -9,6 +10,23 @@ import { html, LitElement } from 'lit'
  * read-only built-in accessor, and a property of the same name breaks typecheck.
  */
 export class NextStepsPanel extends LitElement {
+  static override readonly styles = css`
+    .rank {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+      padding: 6px 0;
+    }
+    input[type='number'] {
+      width: 4rem;
+    }
+    .badge {
+      color: var(--hd-color-muted, #a29684);
+      font-size: 0.75rem;
+      margin-left: auto;
+    }
+  `
+
   static override readonly properties = {
     catalog: { type: Object },
     facts: { type: Object },
@@ -25,25 +43,70 @@ export class NextStepsPanel extends LitElement {
     )
   }
 
+  private badgeFor(id: string): string {
+    const count = impact(id, this.catalog)
+    return `${count} ${count === 1 ? 'prophecy' : 'prophecies'}`
+  }
+
+  /**
+   * A number fact never renders as a checklist item. `hd-checklist-item`
+   * only ever emits `checked: boolean`, and `numericValue` reads `true` as
+   * `1`: ticking it would silently overwrite a higher stored value.
+   */
+  private renderNumberStep(fact: Fact): TemplateResult {
+    const max = fact.max ?? numericValue(fact.id, this.facts)
+    return html`
+      <div class="rank">
+        <label for=${`next-${fact.id}`}>${fact.label}</label>
+        <input
+          id=${`next-${fact.id}`}
+          type="number"
+          min="0"
+          max=${max}
+          .value=${String(numericValue(fact.id, this.facts))}
+          @change=${(event: Event) => {
+            const raw = Number((event.target as HTMLInputElement).value)
+            this.emit(fact.id, Math.min(Math.max(raw, 0), max))
+          }}
+        />
+        <span>/ ${max}</span>
+        <span class="badge">${this.badgeFor(fact.id)}</span>
+      </div>
+    `
+  }
+
+  private renderBooleanStep(id: string, label: string): TemplateResult {
+    return html`
+      <hd-checklist-item
+        label=${label}
+        badge=${this.badgeFor(id)}
+        ?checked=${isSatisfied(id, this.facts)}
+        @hd-toggle=${(event: CustomEvent<{ checked: boolean }>) => this.emit(id, event.detail.checked)}
+      ></hd-checklist-item>
+    `
+  }
+
   override render() {
     const pending = nextSteps(this.catalog, this.facts).slice(0, this.limit)
     if (pending.length === 0) {
       return html`<p>Nothing left to do. Every prophecy is complete.</p>`
     }
 
-    const labels = new Map(this.catalog.facts.map((fact) => [fact.id, fact.label]))
+    const factsById = new Map(this.catalog.facts.map((fact) => [fact.id, fact]))
+    // Keyed by fact id: as items complete and drop out of `pending`, Lit must
+    // never reuse one row's element for a different fact. An unkeyed list
+    // would, and a `checked` or `.value` left over from the old fact would
+    // stick to the new one at the same position.
     return html`
-      ${pending.map((id) => {
-        const count = impact(id, this.catalog)
-        return html`
-          <hd-checklist-item
-            label=${labels.get(id) ?? id}
-            badge=${`${count} ${count === 1 ? 'prophecy' : 'prophecies'}`}
-            @hd-toggle=${(event: CustomEvent<{ checked: boolean }>) =>
-              this.emit(id, event.detail.checked)}
-          ></hd-checklist-item>
-        `
-      })}
+      ${repeat(
+        pending,
+        (id) => id,
+        (id) => {
+          const fact = factsById.get(id)
+          if (fact?.kind === 'number') return this.renderNumberStep(fact)
+          return this.renderBooleanStep(id, fact?.label ?? id)
+        },
+      )}
     `
   }
 }

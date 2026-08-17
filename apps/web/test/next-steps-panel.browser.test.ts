@@ -66,6 +66,64 @@ describe('next-steps-panel', () => {
     expect(element.shadowRoot!.textContent).toContain('Nothing left')
   })
 
+  it('never lets a single interaction reduce a number fact below its current value', async () => {
+    const numberDataset: Dataset = {
+      collections: [{ id: 'prophecy', name: 'Prophecies' }],
+      facts: [{ id: 'a:rank', label: 'Reach rank', kind: 'number', max: 5, collection: 'prophecy' }],
+      achievements: [
+        {
+          id: 'prophecy:rank',
+          name: 'Rank',
+          description: 'Rank.',
+          collection: 'prophecy',
+          requirement: { kind: 'atLeast', fact: 'a:rank', value: 5 },
+        },
+      ],
+    }
+    render(
+      html`<next-steps-panel
+        .catalog=${numberDataset}
+        .facts=${{ 'a:rank': 3 }}
+        .limit=${5}
+      ></next-steps-panel>`,
+      document.body,
+    )
+    const element = document.querySelector('next-steps-panel')!
+    await element.updateComplete
+
+    expect(element.shadowRoot!.querySelectorAll('hd-checklist-item').length).toBe(0)
+    const input = element.shadowRoot!.querySelector('input[type="number"]') as HTMLInputElement
+    expect(input.value).toBe('3')
+  })
+
+  it('does not leave a stale checked state on the row that reuses a ticked item’s position', async () => {
+    function mount(facts: Record<string, boolean | number>) {
+      render(
+        html`<next-steps-panel .catalog=${dataset} .facts=${facts} .limit=${5}></next-steps-panel>`,
+        document.body,
+      )
+      return document.querySelector('next-steps-panel')!
+    }
+
+    let element = mount({})
+    await element.updateComplete
+
+    // 'a:shared' is first (impact 2). Tick it directly, the way user input would.
+    const firstItem = element.shadowRoot!.querySelectorAll('hd-checklist-item')[0]!
+    await firstItem.updateComplete
+    firstItem.shadowRoot!.querySelector('input')!.click()
+
+    // Simulate the parent applying the write: 'a:shared' is now satisfied and
+    // drops out of the pending list, so 'a:one' shifts into position 0, reusing
+    // the DOM element that just showed 'a:shared' as checked.
+    element = mount({ 'a:shared': true })
+    await element.updateComplete
+
+    const items = element.shadowRoot!.querySelectorAll('hd-checklist-item')
+    expect(items[0]!.getAttribute('label')).toBe('Only step one')
+    expect(items[0]!.hasAttribute('checked')).toBe(false)
+  })
+
   it('fires fact-toggle with the fact id and the checked value', async () => {
     render(
       html`<next-steps-panel .catalog=${dataset} .facts=${{}} .limit=${5}></next-steps-panel>`,
