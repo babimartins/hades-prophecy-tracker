@@ -1,5 +1,5 @@
 import { dataset } from '@hades/data'
-import { overallProgress, type FactMap } from '@hades/engine'
+import { overallProgress, searchAchievements, type FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
 import '@hades/ui'
 import { css, html, LitElement } from 'lit'
@@ -9,6 +9,7 @@ import type { ProgressStore } from '../storage/progress-store.js'
 import './achievement-detail.js'
 import './achievement-list.js'
 import './next-steps-panel.js'
+import './search-box.js'
 import './transfer-controls.js'
 import { StateController } from './state-controller.js'
 
@@ -41,10 +42,12 @@ export class HadesDashboard extends LitElement {
   static override readonly properties = {
     openId: { state: true },
     saveError: { state: true },
+    query: { state: true },
   }
 
   openId: string | undefined
   saveError = ''
+  query = ''
 
   readonly #controller: StateController
   readonly #factsById: Map<string, Fact> = new Map(
@@ -59,6 +62,11 @@ export class HadesDashboard extends LitElement {
 
   private onOpen(event: CustomEvent<{ id: string }>): void {
     this.openId = event.detail.id
+  }
+
+  private onSearch(event: CustomEvent<{ query: string }>): void {
+    this.query = event.detail.query
+    this.openId = undefined
   }
 
   private async onFactToggle(
@@ -135,8 +143,9 @@ export class HadesDashboard extends LitElement {
             ></achievement-detail>
           `
         : html`
+            <search-box .value=${this.query} @search-change=${this.onSearch}></search-box>
             <achievement-list
-              .achievements=${dataset.achievements}
+              .achievements=${searchAchievements(dataset, this.query)}
               .facts=${facts}
               @achievement-open=${this.onOpen}
             ></achievement-list>
