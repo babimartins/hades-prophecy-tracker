@@ -127,5 +127,159 @@
         "combat:slay-skelly-with-stygius"
       ]
     }
+  },
+  {
+    "id": "prophecy:distant-relatives",
+    "name": "Distant Relatives",
+    "description": "The son of the god of the dead shall someday meet some of the rulers of Olympus.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": ["meet:zeus", "meet:poseidon", "meet:athena", "meet:dionysus", "meet:aphrodite", "meet:ares", "meet:artemis"]
+    }
+  },
+  {
+    "id": "prophecy:place-of-revelry",
+    "name": "A Place of Revelry",
+    "description": "The son of the god of the dead shall make certain attempts to aid a tireless gorgon, assigned to bring part of the House to the height of splendor.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "lounge:deep-cleaning-service",
+        "lounge:detailing-service",
+        "lounge:any-rug",
+        { "kind": "atLeast", "fact": "lounge:other-items", "value": 10 },
+        "talk:dusa-after-lounge-decor"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:amusing-chaos",
+    "name": "Amusing Chaos",
+    "description": "The son of the god of the dead shall someday ovecome his own father while in possession of a gift from our primordial originator, Chaos.",
+    "collection": "prophecy",
+    "requirement": { "kind": "all", "of": ["combat:defeat-hades-with-cosmic-egg"] }
+  },
+  {
+    "id": "prophecy:sea-gods-spite",
+    "name": "Sea-God's Spite",
+    "description": "The son of the god of the dead shall someday overcome the Hero of Athens under the effect of Pact's 'Extreme Measures' Condition, until the spurned god of the sea is aware.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": ["pact:extreme-measures", "combat:defeat-theseus-extreme-measures", "talk:poseidon-after-theseus-extreme-measures"]
+    }
+  },
+  {
+    "id": "prophecy:war-gods-bloodlust",
+    "name": "War-God's Bloodlust",
+    "description": "The son of the god of the dead shall someday single-handedly vanquish entire legions of the dead, such that even the god of war cannot help but be impressed.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [{ "kind": "atLeast", "fact": "combat:foes-slain", "value": 10000 }, "talk:ares-after-10000-foes"]
+    }
+  },
+  {
+    "id": "prophecy:friendly-wager",
+    "name": "A Friendly Wager",
+    "description": "The son of the god of the dead shall someday overcome the Stygian Boatman in two succesive battles against him, at the urging of the god of swiftness.",
+    "collection": "prophecy",
+    "requirement": { "kind": "all", "of": ["combat:defeat-charon-twice-consecutive"] }
+  },
+  {
+    "id": "prophecy:goddess-of-wisdom",
+    "name": "Goddess of Wisdom",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Athena.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:divine-strike",
+        "boon:athena:divine-flourish",
+        "boon:athena:divine-dash",
+        "boon:athena:phalanx-shot",
+        "boon:athena:athenas-aid",
+        "boon:athena:sure-footing",
+        "boon:athena:bronze-skin",
+        "boon:athena:holy-shield",
+        "boon:athena:proud-bearing",
+        "boon:athena:blinding-flash",
+        "boon:athena:brilliant-riposte"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:god-of-the-heavens",
+    "name": "God of the Heavens",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Zeus.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:lightning-strike",
+        "boon:zeus:thunder-dash",
+        "boon:zeus:electric-shot",
+        "boon:zeus:thunder-flourish",
+        "boon:zeus:zeus-aid",
+        "boon:zeus:heavens-vengeance",
+        "boon:zeus:clouded-judgement",
+        "boon:zeus:billowing-strength",
+        "boon:zeus:lightning-reflexes",
+        "boon:zeus:storm-lightning",
+        "boon:zeus:static-discharge",
+        "boon:zeus:high-voltage",
+        "boon:zeus:double-strike"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:god-of-the-sea",
+    "name": "God of the Sea",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Poseidon.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:tempest-strike",
+        "boon:poseidon:tempest-flourish",
+        "boon:poseidon:tidal-dash",
+        "boon:poseidon:flood-shot",
+        "boon:poseidon:poseidons-aid",
+        "boon:poseidon:hydraulic-might",
+        "boon:poseidon:oceans-bounty",
+        "boon:poseidon:boiling-point",
+        "boon:poseidon:rip-current",
+        "boon:poseidon:typhoons-fury",
+        "boon:poseidon:breaking-wave",
+        "boon:poseidon:razor-shoals",
+        "boon:poseidon:wave-pounding"
+      ]
+    }
+  },
+  {
+    "id": "prophecy:goddess-of-love",
+    "name": "Goddess of Love",
+    "description": "The son of the god of the dead shall someday earn each of the Boons of Aphrodite.",
+    "collection": "prophecy",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:heartbreak-strike",
+        "boon:aphrodite:heartbreak-flourish",
+        "boon:aphrodite:passion-dash",
+        "boon:aphrodite:crush-shot",
+        "boon:aphrodite:aphrodites-aid",
+        "boon:aphrodite:blown-kiss",
+        "boon:aphrodite:wave-of-despair",
+        "boon:aphrodite:dying-lament",
+        "boon:aphrodite:different-league",
+        "boon:aphrodite:life-affirmation",
+        "boon:aphrodite:empty-inside",
+        "boon:aphrodite:sweet-surrender",
+        "boon:aphrodite:broken-resolve"
+      ]
+    }
   }
 ]
