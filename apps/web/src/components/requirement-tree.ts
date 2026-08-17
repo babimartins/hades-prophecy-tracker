@@ -32,6 +32,10 @@ export class RequirementTree extends LitElement {
     input[type='number'] {
       width: 4rem;
     }
+    .threshold {
+      color: var(--hd-color-muted, #a29684);
+      font-size: 0.75rem;
+    }
   `
 
   static override readonly properties = {
@@ -65,7 +69,14 @@ export class RequirementTree extends LitElement {
     `
   }
 
-  private renderRank(id: string, max: number): TemplateResult {
+  /**
+   * Bounds and clamps by the fact's own `max`, never by `threshold`.
+   * `threshold` is this one node's `atLeast` requirement. The same fact can
+   * back another node with a different, lower threshold: clamping the input
+   * to `threshold` would cap the fact below what that other node needs.
+   */
+  private renderRank(id: string, threshold: number): TemplateResult {
+    const max = this.factsById.get(id)?.max ?? threshold
     return html`
       <div class="rank">
         <label for=${`rank-${id}`}>${this.labelFor(id)}</label>
@@ -81,6 +92,7 @@ export class RequirementTree extends LitElement {
           }}
         />
         <span>/ ${max}</span>
+        <span class="threshold">this entry needs ${threshold}</span>
       </div>
     `
   }

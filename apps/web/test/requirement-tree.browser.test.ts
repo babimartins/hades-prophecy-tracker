@@ -7,6 +7,10 @@ const facts: Fact[] = [
   { id: 'a:one', label: 'Do the first thing', kind: 'boolean', collection: 'prophecy' },
   { id: 'a:two', label: 'Do the second thing', kind: 'boolean', collection: 'prophecy' },
   { id: 'a:rank', label: 'Reach rank', kind: 'number', max: 4, collection: 'prophecy' },
+  // Fact max deliberately differs from the atLeast threshold used below, the
+  // way `aspect:stygius:zagreus` (max 5) differs between `prophecy:eternal-rest`
+  // (atLeast 5) and `prophecy:violent-past` (atLeast 1).
+  { id: 'a:shared-rank', label: 'Reach shared rank', kind: 'number', max: 5, collection: 'prophecy' },
 ]
 const factsById = new Map(facts.map((fact) => [fact.id, fact]))
 
@@ -59,6 +63,38 @@ describe('requirement-tree', () => {
     await item.updateComplete
     item.shadowRoot!.querySelector('input')!.click()
     expect(detail).toEqual([{ id: 'a:one', value: true }])
+  })
+
+  it('bounds and clamps by the fact maximum, not by a lower node threshold', async () => {
+    const element = mount(
+      { kind: 'atLeast', fact: 'a:shared-rank', value: 1 },
+      { 'a:shared-rank': 5 },
+    )
+    await element.updateComplete
+    const detail: Array<{ id: string; value: boolean | number }> = []
+    element.addEventListener('fact-toggle', (event) => {
+      detail.push((event as CustomEvent<{ id: string; value: boolean | number }>).detail)
+    })
+    const input = element.shadowRoot!.querySelector('input[type="number"]') as HTMLInputElement
+
+    // The fact is already at its own max (5), which is well past this node's
+    // threshold (1). The input must reflect and clamp to the fact's max, not
+    // silently cap the player's progress at the threshold of this one entry.
+    expect(input.value).toBe('5')
+    expect(input.max).toBe('5')
+
+    input.value = '99'
+    input.dispatchEvent(new Event('change'))
+    expect(detail).toEqual([{ id: 'a:shared-rank', value: 5 }])
+  })
+
+  it('shows the node threshold as text, separate from the fact-maximum input bound', async () => {
+    const element = mount(
+      { kind: 'atLeast', fact: 'a:shared-rank', value: 1 },
+      { 'a:shared-rank': 5 },
+    )
+    await element.updateComplete
+    expect(element.shadowRoot!.textContent).toContain('1')
   })
 
   it('clamps a value typed past the maximum before emitting it', async () => {
