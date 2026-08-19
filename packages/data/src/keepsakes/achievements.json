@@ -1,0 +1,277 @@
+[
+  {
+    "id": "keepsake:old-spiked-collar",
+    "name": "Old Spiked Collar",
+    "description": "Equip the Old Spiked Collar keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:old-spiked-collar",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:myrmidon-bracer",
+    "name": "Myrmidon Bracer",
+    "description": "Equip the Myrmidon Bracer keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:myrmidon-bracer",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:black-shawl",
+    "name": "Black Shawl",
+    "description": "Equip the Black Shawl keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:black-shawl",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:pierced-butterfly",
+    "name": "Pierced Butterfly",
+    "description": "Equip the Pierced Butterfly keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:pierced-butterfly",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:bone-hourglass",
+    "name": "Bone Hourglass",
+    "description": "Equip the Bone Hourglass keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:bone-hourglass",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:chthonic-coin-purse",
+    "name": "Chthonic Coin Purse",
+    "description": "Equip the Chthonic Coin Purse keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:chthonic-coin-purse",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:skull-earring",
+    "name": "Skull Earring",
+    "description": "Equip the Skull Earring keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:skull-earring",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:distant-memory",
+    "name": "Distant Memory",
+    "description": "Equip the Distant Memory keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:distant-memory",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:harpy-feather-duster",
+    "name": "Harpy Feather Duster",
+    "description": "Equip the Harpy Feather Duster keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:harpy-feather-duster",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:lucky-tooth",
+    "name": "Lucky Tooth",
+    "description": "Equip the Lucky Tooth keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:lucky-tooth",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:thunder-signet",
+    "name": "Thunder Signet",
+    "description": "Equip the Thunder Signet keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:thunder-signet",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:conch-shell",
+    "name": "Conch Shell",
+    "description": "Equip the Conch Shell keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:conch-shell",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:owl-pendant",
+    "name": "Owl Pendant",
+    "description": "Equip the Owl Pendant keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:owl-pendant",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:eternal-rose",
+    "name": "Eternal Rose",
+    "description": "Equip the Eternal Rose keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:eternal-rose",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:blood-filled-vial",
+    "name": "Blood-Filled Vial",
+    "description": "Equip the Blood-Filled Vial keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:blood-filled-vial",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:adamant-arrowhead",
+    "name": "Adamant Arrowhead",
+    "description": "Equip the Adamant Arrowhead keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:adamant-arrowhead",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:overflowing-cup",
+    "name": "Overflowing Cup",
+    "description": "Equip the Overflowing Cup keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:overflowing-cup",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:lambent-plume",
+    "name": "Lambent Plume",
+    "description": "Equip the Lambent Plume keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:lambent-plume",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:frostbitten-horn",
+    "name": "Frostbitten Horn",
+    "description": "Equip the Frostbitten Horn keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:frostbitten-horn",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:cosmic-egg",
+    "name": "Cosmic Egg",
+    "description": "Equip the Cosmic Egg keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:cosmic-egg",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:shattered-shackle",
+    "name": "Shattered Shackle",
+    "description": "Equip the Shattered Shackle keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:shattered-shackle",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:evergreen-acorn",
+    "name": "Evergreen Acorn",
+    "description": "Equip the Evergreen Acorn keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:evergreen-acorn",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:broken-spearpoint",
+    "name": "Broken Spearpoint",
+    "description": "Equip the Broken Spearpoint keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:broken-spearpoint",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:pom-blossom",
+    "name": "Pom Blossom",
+    "description": "Equip the Pom Blossom keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:pom-blossom",
+      "value": 3
+    }
+  },
+  {
+    "id": "keepsake:sigil-of-the-dead",
+    "name": "Sigil of the Dead",
+    "description": "Equip the Sigil of the Dead keepsake until it reaches its maximum rank (Rank 3).",
+    "collection": "keepsake",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "keepsake:sigil-of-the-dead",
+      "value": 3
+    }
+  }
+]
