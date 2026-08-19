@@ -1,0 +1,290 @@
+[
+  {
+    "id": "aspect:stygius:zagreus",
+    "name": "Aspect of Zagreus (Stygian Blade)",
+    "description": "Unlock the Stygian Blade's Aspect of Zagreus and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "stygius",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:stygius:zagreus",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:stygius:nemesis",
+    "name": "Aspect of Nemesis (Stygian Blade)",
+    "description": "Unlock the Stygian Blade's Aspect of Nemesis and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "stygius",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:stygius:nemesis",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:stygius:poseidon",
+    "name": "Aspect of Poseidon (Stygian Blade)",
+    "description": "Unlock the Stygian Blade's Aspect of Poseidon and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "stygius",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:stygius:poseidon",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:stygius:arthur",
+    "name": "Aspect of Arthur (Stygian Blade)",
+    "description": "Unlock the Stygian Blade's Aspect of Arthur and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "stygius",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:stygius:arthur",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:varatha:zagreus",
+    "name": "Aspect of Zagreus (Eternal Spear)",
+    "description": "Unlock the Eternal Spear's Aspect of Zagreus and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "varatha",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:varatha:zagreus",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:varatha:achilles",
+    "name": "Aspect of Achilles (Eternal Spear)",
+    "description": "Unlock the Eternal Spear's Aspect of Achilles and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "varatha",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:varatha:achilles",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:varatha:hades",
+    "name": "Aspect of Hades (Eternal Spear)",
+    "description": "Unlock the Eternal Spear's Aspect of Hades and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "varatha",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:varatha:hades",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:varatha:guan-yu",
+    "name": "Aspect of Guan Yu (Eternal Spear)",
+    "description": "Unlock the Eternal Spear's Aspect of Guan Yu and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "varatha",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:varatha:guan-yu",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:coronacht:zagreus",
+    "name": "Aspect of Zagreus (Heart-Seeking Bow)",
+    "description": "Unlock the Heart-Seeking Bow's Aspect of Zagreus and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:coronacht:zagreus",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:coronacht:chiron",
+    "name": "Aspect of Chiron (Heart-Seeking Bow)",
+    "description": "Unlock the Heart-Seeking Bow's Aspect of Chiron and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:coronacht:chiron",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:coronacht:hera",
+    "name": "Aspect of Hera (Heart-Seeking Bow)",
+    "description": "Unlock the Heart-Seeking Bow's Aspect of Hera and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:coronacht:hera",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:coronacht:rama",
+    "name": "Aspect of Rama (Heart-Seeking Bow)",
+    "description": "Unlock the Heart-Seeking Bow's Aspect of Rama and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:coronacht:rama",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:aegis:zagreus",
+    "name": "Aspect of Zagreus (Shield of Chaos)",
+    "description": "Unlock the Shield of Chaos's Aspect of Zagreus and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "aegis",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:aegis:zagreus",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:aegis:chaos",
+    "name": "Aspect of Chaos (Shield of Chaos)",
+    "description": "Unlock the Shield of Chaos's Aspect of Chaos and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "aegis",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:aegis:chaos",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:aegis:zeus",
+    "name": "Aspect of Zeus (Shield of Chaos)",
+    "description": "Unlock the Shield of Chaos's Aspect of Zeus and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "aegis",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:aegis:zeus",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:aegis:beowulf",
+    "name": "Aspect of Beowulf (Shield of Chaos)",
+    "description": "Unlock the Shield of Chaos's Aspect of Beowulf and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "aegis",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:aegis:beowulf",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:malphon:zagreus",
+    "name": "Aspect of Zagreus (Twin Fists)",
+    "description": "Unlock the Twin Fists's Aspect of Zagreus and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "malphon",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:malphon:zagreus",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:malphon:talos",
+    "name": "Aspect of Talos (Twin Fists)",
+    "description": "Unlock the Twin Fists's Aspect of Talos and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "malphon",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:malphon:talos",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:malphon:demeter",
+    "name": "Aspect of Demeter (Twin Fists)",
+    "description": "Unlock the Twin Fists's Aspect of Demeter and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "malphon",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:malphon:demeter",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:malphon:gilgamesh",
+    "name": "Aspect of Gilgamesh (Twin Fists)",
+    "description": "Unlock the Twin Fists's Aspect of Gilgamesh and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "malphon",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:malphon:gilgamesh",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:exagryph:zagreus",
+    "name": "Aspect of Zagreus (Adamant Rail)",
+    "description": "Unlock the Adamant Rail's Aspect of Zagreus and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:exagryph:zagreus",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:exagryph:eris",
+    "name": "Aspect of Eris (Adamant Rail)",
+    "description": "Unlock the Adamant Rail's Aspect of Eris and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:exagryph:eris",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:exagryph:hestia",
+    "name": "Aspect of Hestia (Adamant Rail)",
+    "description": "Unlock the Adamant Rail's Aspect of Hestia and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:exagryph:hestia",
+      "value": 5
+    }
+  },
+  {
+    "id": "aspect:exagryph:lucifer",
+    "name": "Aspect of Lucifer (Adamant Rail)",
+    "description": "Unlock the Adamant Rail's Aspect of Lucifer and raise it to its maximum level (5).",
+    "collection": "aspect",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "aspect:exagryph:lucifer",
+      "value": 5
+    }
+  }
+]
