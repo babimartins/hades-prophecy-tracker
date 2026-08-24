@@ -164,7 +164,19 @@ These need someone with the game open.
 4. Whether the Skelly statues are per save or per weapon.
 5. Whether Dionysus' "6 different characters" is the same counter as The Queen's
    Plan's "6 of the 9 Olympians".
-6. Whether Hades accepts Ambrosia. The Ambrosia page excludes him; his own page
-   describes a second-heart gift.
+6. ~~Whether Hades accepts Ambrosia.~~ Settled: no. The Ambrosia wiki page
+   states "there are a few who cannot [receive Ambrosia]: Bouldy, Hades, and
+   those unable to be gifted Nectar". Hades' `nectar:hades` fact stays a
+   pure Nectar counter; the other 23 affinity facts are currency-neutral
+   because every other character can receive both.
 7. Asphodel's enemy table says a Voidstone is never an Elite, while the Fated
    List names a "Dire Voidstone".
+
+### Settled
+
+- **Does Persephone have a Codex entry?** No, and this is a genuine wiki
+  inconsistency, not a gap in our data. Persephone's own wiki page shows a
+  Codex entry section, but the Codex page itself lists her in neither its
+  nine section tables nor its "Not in the Codex" exclusion list. Our 119
+  entries follow the Codex page, so Persephone is correctly absent. Do not
+  add her on the strength of her own page alone.
