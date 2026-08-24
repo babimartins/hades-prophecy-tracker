@@ -166,6 +166,14 @@ writes it and qualify the id instead — `codex:chaos` and `codex:chaos-realm` �
 so the duplicate-id check stays meaningful rather than being satisfied by a
 rename that hides one entry behind the other.
 
+**A new collection is wired in three places.** Register it in
+`collections.json`, then spread both its `facts.json` and its
+`achievements.json` into `dataset` in `packages/data/src/index.ts`. A collection
+that adds no facts still ships an empty `facts.json` and still gets spread —
+`aspect` does, because all 24 entries reuse existing `aspect:<weapon>:<name>`
+facts at a second threshold. Nothing fails loudly if you spread the facts and
+forget the achievements.
+
 ## Working method
 
 - Write the failing test first. Run it. Watch it fail for the reason you expect.
