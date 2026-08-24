@@ -5,9 +5,14 @@ each single action inside each prophecy.
 
 ## Status
 
-Slice 1 is complete. The data model, the engine, the design system and the
-dashboard are wired together. The dataset holds all 55 prophecies of the
-in-game Fated List. `pnpm build` passes and produces a working application.
+Slice 2 is complete. The dataset now covers four collections: the 55
+prophecies of the in-game Fated List, all 119 Codex entries, all 25
+keepsakes, and all 24 weapon aspect thresholds — 223 achievements in total,
+backed by 692 facts. A fifth collection, platform achievements, is
+registered but holds no entries yet. The dashboard offers a collection
+filter, search, and collapsible section grouping for collections (the
+Codex, the weapon aspects) whose in-game tables have sections. `pnpm build`
+passes and produces a working application.
 
 The site is not live yet. GitHub Pages deployment needs one manual step from a
 repository owner. See "Deployment" below. Once that step runs, the site is at
@@ -43,6 +48,13 @@ The schema supports `any`. The current dataset uses it zero times.
 The engine evaluates the expression against the fact map. It reports what is
 missing.
 
+Every achievement belongs to one collection — prophecies, Codex entries,
+keepsakes, weapon aspects, or (once populated) platform achievements. A
+Codex or weapon-aspect achievement also carries a `section`, naming its
+in-game table or weapon. The dashboard groups achievements by section, with
+each section collapsible, and offers a collection filter and a text search
+across names, descriptions and fact labels.
+
 Progress stays in the browser, in IndexedDB. There is no account and no
 server.
 
@@ -53,13 +65,25 @@ This list is verified against the current state of the repository.
 | Package            | Responsibility                                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | `packages/schema`  | Data model and Zod validation: facts, requirements, achievements, collections, dataset.                            |
-| `packages/data`    | Curated game data as JSON, plus its integrity test. The source of truth for facts and prophecies. |
-| `packages/engine`  | Pure functions that evaluate requirements against facts (`evaluate`, `achievementProgress`, `overallProgress`, `impact`, `nextSteps`). No DOM, no I/O. |
-| `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, `hd-progress`, and shared design tokens. No game knowledge. |
-| `apps/web`         | Vite application. Holds the dashboard UI, the IndexedDB progress store, and the export/import transfer format. |
+| `packages/data`    | Curated game data as JSON, plus its integrity test. The source of truth for facts and achievements, across every collection. |
+| `packages/engine`  | Pure functions that evaluate requirements against facts (`evaluate`, `achievementProgress`, `overallProgress`, `impact`, `nextSteps`, `searchAchievements`). No DOM, no I/O. |
+| `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, `hd-progress`, and shared design tokens (`colorVar`, `colorTokens`). No game knowledge. |
+| `apps/web`         | Vite application. Holds the dashboard UI — collection filter, search, section grouping — the IndexedDB progress store, and the export/import transfer format. |
 
-The in-game Fated List holds 55 prophecies. The curated dataset in
-`packages/data` covers all 55, each broken into its sub-item facts.
+The curated dataset in `packages/data` holds 223 achievements across four
+populated collections, each broken into its sub-item facts:
+
+| Collection                          | Entries | Notes                                             |
+| ------------------------------------ | ------- | -------------------------------------------------- |
+| Fated List of Minor Prophecies       | 55      | The full in-game Fated List.                       |
+| Codex                                | 119     | Every entry, across the Codex's 9 in-game sections. |
+| Keepsakes                            | 25      | Every keepsake at max rank (`atLeast 3`). The same facts back the Fated List's "Close at Heart" at `atLeast 1`. |
+| Weapon Aspects                       | 24      | Every aspect threshold, across the 6 weapons.       |
+
+692 facts back these 223 achievements. Some are shared across collections —
+for example, `aspect:stygius:zagreus` backs an achievement in the weapon
+aspects collection, two in the Fated List, and two in the Codex — so marking
+one action can advance entries in more than one collection at once.
 
 `packages/data/src/collections.json` also defines a separate `achievement`
 collection, for platform achievements. That collection holds no entries yet.
@@ -82,10 +106,12 @@ Verified state of each command today:
 
 - `pnpm lint` passes.
 - `pnpm typecheck` passes.
+- `pnpm test` passes: 128 tests across 5 packages.
 - `pnpm build` passes. It produces `apps/web/dist/index.html`.
-- `pnpm test` passes. Browser tests run under Playwright's headless Chromium.
-  Install the browser once with `pnpm --filter @hades/web exec playwright
-  install --with-deps chromium` before the first run.
+
+Browser tests run under Playwright's headless Chromium. Install the browser
+once with `pnpm --filter @hades/web exec playwright install --with-deps
+chromium` before the first run.
 
 To run the app locally:
 
