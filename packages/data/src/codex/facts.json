@@ -14,14 +14,14 @@
   },
   {
     "id": "nectar:nyx",
-    "label": "Give Nectar to Nyx",
+    "label": "Affinity with Nyx",
     "kind": "number",
     "max": 9,
     "collection": "codex"
   },
   {
     "id": "nectar:charon",
-    "label": "Give Nectar to Charon",
+    "label": "Affinity with Charon",
     "kind": "number",
     "max": 7,
     "collection": "codex"
@@ -35,7 +35,7 @@
   },
   {
     "id": "nectar:hypnos",
-    "label": "Give Nectar to Hypnos",
+    "label": "Affinity with Hypnos",
     "kind": "number",
     "max": 8,
     "collection": "codex"
@@ -48,7 +48,7 @@
   },
   {
     "id": "nectar:thanatos",
-    "label": "Give Nectar to Thanatos",
+    "label": "Affinity with Thanatos",
     "kind": "number",
     "max": 10,
     "collection": "codex"
@@ -61,7 +61,7 @@
   },
   {
     "id": "nectar:megaera",
-    "label": "Give Nectar to Megaera",
+    "label": "Affinity with Megaera",
     "kind": "number",
     "max": 10,
     "collection": "codex"
@@ -74,7 +74,7 @@
   },
   {
     "id": "nectar:chaos",
-    "label": "Give Nectar to Chaos",
+    "label": "Affinity with Chaos",
     "kind": "number",
     "max": 8,
     "collection": "codex"
@@ -231,7 +231,7 @@
   },
   {
     "id": "nectar:achilles",
-    "label": "Give Nectar to Achilles",
+    "label": "Affinity with Achilles",
     "kind": "number",
     "max": 9,
     "collection": "codex"
@@ -250,7 +250,7 @@
   },
   {
     "id": "nectar:sisyphus",
-    "label": "Give Nectar to Sisyphus",
+    "label": "Affinity with Sisyphus",
     "kind": "number",
     "max": 9,
     "collection": "codex"
@@ -269,7 +269,7 @@
   },
   {
     "id": "nectar:patroclus",
-    "label": "Give Nectar to Patroclus",
+    "label": "Affinity with Patroclus",
     "kind": "number",
     "max": 8,
     "collection": "codex"
@@ -294,7 +294,7 @@
   },
   {
     "id": "nectar:cerberus",
-    "label": "Give Nectar to Cerberus",
+    "label": "Affinity with Cerberus",
     "kind": "number",
     "max": 9,
     "collection": "codex"
@@ -314,7 +314,7 @@
   },
   {
     "id": "nectar:dusa",
-    "label": "Give Nectar to Dusa",
+    "label": "Affinity with Dusa",
     "kind": "number",
     "max": 10,
     "collection": "codex"
@@ -327,7 +327,7 @@
   },
   {
     "id": "nectar:skelly",
-    "label": "Give Nectar to Skelly",
+    "label": "Affinity with Skelly",
     "kind": "number",
     "max": 9,
     "collection": "codex"
@@ -1072,7 +1072,7 @@
   },
   {
     "id": "encounter:inferno-bomber",
-    "label": "Encounter a Inferno-Bomber for the first time",
+    "label": "Encounter an Inferno-Bomber for the first time",
     "kind": "boolean",
     "collection": "codex"
   },

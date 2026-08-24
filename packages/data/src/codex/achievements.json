@@ -34,7 +34,7 @@
   {
     "id": "codex:nyx",
     "name": "Nyx",
-    "description": "Max affinity with Nyx by giving her Nectar, after reuniting her with Chaos.",
+    "description": "Max affinity with Nyx through gifts, after reuniting her with Chaos.",
     "collection": "codex",
     "section": "chthonic-gods",
     "requirement": {
@@ -54,7 +54,7 @@
   {
     "id": "codex:charon",
     "name": "Charon",
-    "description": "Max affinity with Charon by giving him Nectar and spending 10,000 total at his shop.",
+    "description": "Max affinity with Charon through gifts and spending 10,000 total at his shop.",
     "collection": "codex",
     "section": "chthonic-gods",
     "requirement": {
@@ -77,7 +77,7 @@
   {
     "id": "codex:hypnos",
     "name": "Hypnos",
-    "description": "Max affinity with Hypnos by giving him Nectar, after he reconciles with Thanatos.",
+    "description": "Max affinity with Hypnos through gifts, after he reconciles with Thanatos.",
     "collection": "codex",
     "section": "chthonic-gods",
     "requirement": {
@@ -96,7 +96,7 @@
   {
     "id": "codex:thanatos",
     "name": "Thanatos",
-    "description": "Max affinity with Thanatos by giving him Nectar and completing his favor.",
+    "description": "Max affinity with Thanatos through gifts and completing his favor.",
     "collection": "codex",
     "section": "chthonic-gods",
     "requirement": {
@@ -115,7 +115,7 @@
   {
     "id": "codex:megaera",
     "name": "Megaera",
-    "description": "Max affinity with Megaera by giving her Nectar and completing her favor.",
+    "description": "Max affinity with Megaera through gifts and completing her favor.",
     "collection": "codex",
     "section": "chthonic-gods",
     "requirement": {
@@ -160,7 +160,7 @@
   {
     "id": "codex:chaos",
     "name": "Chaos",
-    "description": "Max affinity with Chaos by giving them Nectar, after reuniting them with Nyx.",
+    "description": "Max affinity with Chaos through gifts, after reuniting them with Nyx.",
     "collection": "codex",
     "section": "chthonic-gods",
     "requirement": {
@@ -180,7 +180,7 @@
   {
     "id": "codex:zeus",
     "name": "Zeus",
-    "description": "Max affinity with Zeus by giving him Nectar, after hearing the other Gods' opinions of him and seeing him reconcile with Hades.",
+    "description": "Max affinity with Zeus through gifts, after hearing the other Gods' opinions of him and seeing him reconcile with Hades.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -200,7 +200,7 @@
   {
     "id": "codex:poseidon",
     "name": "Poseidon",
-    "description": "Max affinity with Poseidon by giving him Nectar and catching 18 fish.",
+    "description": "Max affinity with Poseidon through gifts and catching 18 fish.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -223,7 +223,7 @@
   {
     "id": "codex:athena",
     "name": "Athena",
-    "description": "Max affinity with Athena by giving her Nectar and hearing her acknowledge Zagreus' strength.",
+    "description": "Max affinity with Athena through gifts and hearing her acknowledge Zagreus' strength.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -242,7 +242,7 @@
   {
     "id": "codex:aphrodite",
     "name": "Aphrodite",
-    "description": "Max affinity with Aphrodite by giving her Nectar, after forging bonds with Dusa, Thanatos and Megaera and hearing her reaction to it.",
+    "description": "Max affinity with Aphrodite through gifts, after forging bonds with Dusa, Thanatos and Megaera and hearing her reaction to it.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -276,7 +276,7 @@
   {
     "id": "codex:artemis",
     "name": "Artemis",
-    "description": "Max affinity with Artemis by giving her Nectar and hearing her confide about Callisto.",
+    "description": "Max affinity with Artemis through gifts and hearing her confide about Callisto.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -295,7 +295,7 @@
   {
     "id": "codex:ares",
     "name": "Ares",
-    "description": "Max affinity with Ares by giving him Nectar and slaying 10,000 foes.",
+    "description": "Max affinity with Ares through gifts and slaying 10,000 foes.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -319,7 +319,7 @@
   {
     "id": "codex:dionysus",
     "name": "Dionysus",
-    "description": "Max affinity with Dionysus by giving him Nectar. His final heart also needs bonds with 6 different characters; that gate is not yet wired.",
+    "description": "Max affinity with Dionysus through gifts. His final heart also needs bonds with 6 different characters; that gate is not yet wired.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -337,7 +337,7 @@
   {
     "id": "codex:hermes",
     "name": "Hermes",
-    "description": "Max affinity with Hermes by giving him Nectar. His 7th heart is locked until Zagreus speaks with him with the Lambent Plume keepsake equipped and ranked up to 3.",
+    "description": "Max affinity with Hermes through gifts. His 7th heart is locked until Zagreus speaks with him with the Lambent Plume keepsake equipped and ranked up to 3.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -360,7 +360,7 @@
   {
     "id": "codex:demeter",
     "name": "Demeter",
-    "description": "Max affinity with Demeter by giving her Nectar, after completing the Epilogue.",
+    "description": "Max affinity with Demeter through gifts, after completing the Epilogue.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -379,7 +379,7 @@
   {
     "id": "codex:achilles",
     "name": "Achilles",
-    "description": "Max affinity with Achilles by giving him Nectar, after he reunites with Patroclus. That reunion needs Sisyphus's and Orpheus & Eurydice's favors complete first.",
+    "description": "Max affinity with Achilles through gifts, after he reunites with Patroclus. That reunion needs Sisyphus's and Orpheus & Eurydice's favors complete first.",
     "collection": "codex",
     "section": "others-of-note",
     "requirement": {
@@ -403,7 +403,7 @@
   {
     "id": "codex:orpheus",
     "name": "Orpheus",
-    "description": "Max affinity with Orpheus by giving him Nectar, after his contract is voided with the Singer's Gamble.",
+    "description": "Max affinity with Orpheus through gifts, after his contract is voided with the Singer's Gamble.",
     "collection": "codex",
     "section": "others-of-note",
     "requirement": {
@@ -423,7 +423,7 @@
   {
     "id": "codex:sisyphus",
     "name": "Sisyphus",
-    "description": "Max affinity with Sisyphus by giving him Nectar, after his sentence is amended with the Knave-King's Sentence.",
+    "description": "Max affinity with Sisyphus through gifts, after his sentence is amended with the Knave-King's Sentence.",
     "collection": "codex",
     "section": "others-of-note",
     "requirement": {
@@ -443,7 +443,7 @@
   {
     "id": "codex:eurydice",
     "name": "Eurydice",
-    "description": "Max affinity with Eurydice by giving her Nectar, after Orpheus's contract is voided with the Singer's Gamble.",
+    "description": "Max affinity with Eurydice through gifts, after Orpheus's contract is voided with the Singer's Gamble.",
     "collection": "codex",
     "section": "others-of-note",
     "requirement": {
@@ -463,7 +463,7 @@
   {
     "id": "codex:patroclus",
     "name": "Patroclus",
-    "description": "Max affinity with Patroclus by giving him Nectar, after he reunites with Achilles. That reunion needs Sisyphus's and Orpheus & Eurydice's favors complete first.",
+    "description": "Max affinity with Patroclus through gifts, after he reunites with Achilles. That reunion needs Sisyphus's and Orpheus & Eurydice's favors complete first.",
     "collection": "codex",
     "section": "others-of-note",
     "requirement": {
@@ -513,7 +513,7 @@
   {
     "id": "codex:cerberus",
     "name": "Cerberus",
-    "description": "Max affinity with Cerberus by giving him Nectar and petting him 20 times after the favor lock.",
+    "description": "Max affinity with Cerberus through gifts and petting him 20 times after the favor lock.",
     "collection": "codex",
     "section": "others-of-note",
     "requirement": {
@@ -536,7 +536,7 @@
   {
     "id": "codex:dusa",
     "name": "Dusa",
-    "description": "Max affinity with Dusa by giving her Nectar, after the Lounge is renovated and she is told about it.",
+    "description": "Max affinity with Dusa through gifts, after the Lounge is renovated and she is told about it.",
     "collection": "codex",
     "section": "others-of-note",
     "requirement": {
@@ -563,7 +563,7 @@
   {
     "id": "codex:skelly",
     "name": "Skelly",
-    "description": "Max affinity with Skelly by giving him Nectar, after slaying him with the Level 5 Aspect of Zagreus on Stygius.",
+    "description": "Max affinity with Skelly through gifts, after slaying him with the Level 5 Aspect of Zagreus on Stygius.",
     "collection": "codex",
     "section": "others-of-note",
     "requirement": {
@@ -1043,7 +1043,7 @@
   {
     "id": "codex:nectar",
     "name": "Nectar",
-    "description": "Collect Nectar, a rare resource given to characters as a gift to raise affinity. Distinct from the per-character `nectar:*` gift facts, which track giving it away rather than finding it.",
+    "description": "Collect Nectar, a rare resource given to characters as a gift to raise affinity. This tracks finding Nectar, not giving it away.",
     "collection": "codex",
     "section": "artifacts",
     "requirement": {

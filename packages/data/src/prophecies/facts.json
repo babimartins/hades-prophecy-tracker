@@ -61,63 +61,63 @@
   },
   {
     "id": "nectar:zeus",
-    "label": "Give Nectar to Zeus",
+    "label": "Affinity with Zeus",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:poseidon",
-    "label": "Give Nectar to Poseidon",
+    "label": "Affinity with Poseidon",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:demeter",
-    "label": "Give Nectar to Demeter",
+    "label": "Affinity with Demeter",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:athena",
-    "label": "Give Nectar to Athena",
+    "label": "Affinity with Athena",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:aphrodite",
-    "label": "Give Nectar to Aphrodite",
+    "label": "Affinity with Aphrodite",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:ares",
-    "label": "Give Nectar to Ares",
+    "label": "Affinity with Ares",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:artemis",
-    "label": "Give Nectar to Artemis",
+    "label": "Affinity with Artemis",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:dionysus",
-    "label": "Give Nectar to Dionysus",
+    "label": "Affinity with Dionysus",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
   },
   {
     "id": "nectar:hermes",
-    "label": "Give Nectar to Hermes",
+    "label": "Affinity with Hermes",
     "kind": "number",
     "max": 8,
     "collection": "prophecy"
@@ -202,14 +202,14 @@
   },
   {
     "id": "nectar:orpheus",
-    "label": "Give Nectar to Orpheus",
+    "label": "Affinity with Orpheus",
     "kind": "number",
     "max": 8,
     "collection": "prophecy"
   },
   {
     "id": "nectar:eurydice",
-    "label": "Give Nectar to Eurydice",
+    "label": "Affinity with Eurydice",
     "kind": "number",
     "max": 7,
     "collection": "prophecy"
@@ -2700,175 +2700,175 @@
   },
   {
     "id": "keepsake:old-spiked-collar",
-    "label": "Equip the Old Spiked Collar keepsake",
+    "label": "Old Spiked Collar keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:myrmidon-bracer",
-    "label": "Equip the Myrmidon Bracer keepsake",
+    "label": "Myrmidon Bracer keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:black-shawl",
-    "label": "Equip the Black Shawl keepsake",
+    "label": "Black Shawl keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:pierced-butterfly",
-    "label": "Equip the Pierced Butterfly keepsake",
+    "label": "Pierced Butterfly keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:bone-hourglass",
-    "label": "Equip the Bone Hourglass keepsake",
+    "label": "Bone Hourglass keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:chthonic-coin-purse",
-    "label": "Equip the Chthonic Coin Purse keepsake",
+    "label": "Chthonic Coin Purse keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:skull-earring",
-    "label": "Equip the Skull Earring keepsake",
+    "label": "Skull Earring keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:distant-memory",
-    "label": "Equip the Distant Memory keepsake",
+    "label": "Distant Memory keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:harpy-feather-duster",
-    "label": "Equip the Harpy Feather Duster keepsake",
+    "label": "Harpy Feather Duster keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:lucky-tooth",
-    "label": "Equip the Lucky Tooth keepsake",
+    "label": "Lucky Tooth keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:thunder-signet",
-    "label": "Equip the Thunder Signet keepsake",
+    "label": "Thunder Signet keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:conch-shell",
-    "label": "Equip the Conch Shell keepsake",
+    "label": "Conch Shell keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:owl-pendant",
-    "label": "Equip the Owl Pendant keepsake",
+    "label": "Owl Pendant keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:eternal-rose",
-    "label": "Equip the Eternal Rose keepsake",
+    "label": "Eternal Rose keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:blood-filled-vial",
-    "label": "Equip the Blood-Filled Vial keepsake",
+    "label": "Blood-Filled Vial keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:adamant-arrowhead",
-    "label": "Equip the Adamant Arrowhead keepsake",
+    "label": "Adamant Arrowhead keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:overflowing-cup",
-    "label": "Equip the Overflowing Cup keepsake",
+    "label": "Overflowing Cup keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:lambent-plume",
-    "label": "Equip the Lambent Plume keepsake",
+    "label": "Lambent Plume keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:frostbitten-horn",
-    "label": "Equip the Frostbitten Horn keepsake",
+    "label": "Frostbitten Horn keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:cosmic-egg",
-    "label": "Equip the Cosmic Egg keepsake",
+    "label": "Cosmic Egg keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:shattered-shackle",
-    "label": "Equip the Shattered Shackle keepsake",
+    "label": "Shattered Shackle keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:evergreen-acorn",
-    "label": "Equip the Evergreen Acorn keepsake",
+    "label": "Evergreen Acorn keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:broken-spearpoint",
-    "label": "Equip the Broken Spearpoint keepsake",
+    "label": "Broken Spearpoint keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:pom-blossom",
-    "label": "Equip the Pom Blossom keepsake",
+    "label": "Pom Blossom keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "keepsake:sigil-of-the-dead",
-    "label": "Equip the Sigil of the Dead keepsake",
+    "label": "Sigil of the Dead keepsake rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
