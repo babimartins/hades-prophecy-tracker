@@ -1,4 +1,5 @@
 import type { FactMap } from '@hades/engine'
+import { colorVar } from '@hades/ui'
 import { css, html, LitElement } from 'lit'
 import { parseTransfer, toTransfer } from '../storage/transfer.js'
 
@@ -23,7 +24,7 @@ export class TransferControls extends LitElement {
       display: none;
     }
     .error {
-      color: var(--hd-color-accent, #e35563);
+      color: ${colorVar('--hd-color-accent')};
     }
   `
 

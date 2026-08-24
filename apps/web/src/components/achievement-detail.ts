@@ -1,6 +1,6 @@
 import { achievementProgress, type FactMap } from '@hades/engine'
 import type { Achievement, Fact } from '@hades/schema'
-import '@hades/ui'
+import { colorVar } from '@hades/ui'
 import { css, html, LitElement } from 'lit'
 import './requirement-tree.js'
 
@@ -10,7 +10,7 @@ export class AchievementDetail extends LitElement {
       display: block;
     }
     p.description {
-      color: var(--hd-color-muted, #b9a98c);
+      color: ${colorVar('--hd-color-muted')};
     }
     button.back {
       background: none;

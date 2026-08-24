@@ -99,12 +99,22 @@ Serializing also settles callers in call order, so a later success cannot clear
 an earlier failure's error before it is shown. Keep new mutators as thin
 wrappers over a private `#apply*` method.
 
-**Read colour tokens with `colorVar`. Never redeclare one on `:host`.**
-`packages/ui/src/tokens.css.ts` holds the only copy of the five hex values; no
-other file writes them. A literal `:host { --hd-color-*: ... }` always beats an
-inherited `:root` value, so it silently breaks a consumer override. `apps/web`
-applies them via `applyDesignTokens`, which appends a `<style>` element —
-an inline style on `documentElement` would block a page-level override too.
+**Read colour tokens with `colorVar`, imported from `@hades/ui`. Never
+type a `var(--hd-color-*, #hex)` fallback by hand, and never redeclare one on
+`:host`.** `packages/ui/src/tokens.css.ts` holds the only hand-typed copy of
+the five hex values. Every other consumer — inside `@hades/ui` and inside
+`apps/web` alike — calls `colorVar('--hd-color-name')` instead of retyping
+`var(--hd-color-name, #hex)`, so a value change in `tokens.css.ts` reaches
+every consumer without a matching hand-edit anywhere else. A design pass
+that hand-edits a dozen files in lockstep to change one colour is the exact
+failure this rule exists to prevent; if `colorVar` cannot reach a file — it
+is plain CSS, not a Lit `css` template — say so in a comment next to the
+literal instead of leaving the drift unexplained. `apps/web/src/theme.css`
+is the one such file today. A literal `:host { --hd-color-*: ... }` always
+beats an inherited `:root` value, so it silently breaks a consumer override.
+`apps/web` applies the tokens via `applyDesignTokens`, which appends a
+`<style>` element — an inline style on `documentElement` would block a
+page-level override too.
 
 **Run `pnpm typecheck` at the root after merging parallel branches.**
 Two branches can each be green alone and red together. That is how the

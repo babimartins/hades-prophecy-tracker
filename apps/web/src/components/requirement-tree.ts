@@ -1,7 +1,7 @@
 import { isSatisfied, numericValue, type FactMap } from '@hades/engine'
 import type { Fact, RequirementChild } from '@hades/schema'
 import { isFactChild } from '@hades/schema'
-import '@hades/ui'
+import { colorVar } from '@hades/ui'
 import { css, html, LitElement, type TemplateResult } from 'lit'
 
 const GROUP_LABEL = {
@@ -19,7 +19,7 @@ export class RequirementTree extends LitElement {
       padding-left: 12px;
     }
     .group-label {
-      color: var(--hd-color-muted, #b9a98c);
+      color: ${colorVar('--hd-color-muted')};
       font-size: 0.75rem;
       text-transform: uppercase;
     }
@@ -33,7 +33,7 @@ export class RequirementTree extends LitElement {
       width: 4rem;
     }
     .threshold {
-      color: var(--hd-color-muted, #b9a98c);
+      color: ${colorVar('--hd-color-muted')};
       font-size: 0.75rem;
     }
   `

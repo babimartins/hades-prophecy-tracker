@@ -4,6 +4,14 @@
  * here. `@hades/ui` is their single source of truth; `main.ts` applies them
  * at startup by calling `applyDesignTokens` from `./theme-tokens.js`. See
  * `packages/ui/src/tokens.css.ts`.
+ *
+ * The one exception is the `#f2e7d0` fallback below. Every component in
+ * `apps/web` reads its colours through `colorVar` from `@hades/ui`, which
+ * builds its `var(--token, fallback)` fallback from `colorTokens` at import
+ * time — no hand-typed hex literal to fall out of sync. Plain CSS cannot
+ * call `colorVar`, so this one file keeps a literal, hand-matched to
+ * `--hd-color-text` in `packages/ui/src/tokens.css.ts`. Update both if that
+ * token's value ever changes.
  */
 :root {
   --hd-font-display: 'Cinzel', serif;

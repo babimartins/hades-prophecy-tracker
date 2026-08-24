@@ -1,4 +1,5 @@
 import type { Collection } from '@hades/schema'
+import { colorVar } from '@hades/ui'
 import { css, html, LitElement } from 'lit'
 
 /**
@@ -27,7 +28,7 @@ export class CollectionFilter extends LitElement {
       padding: 6px 10px;
     }
     input:focus-visible {
-      outline: 2px solid var(--hd-color-accent, #e35563);
+      outline: 2px solid ${colorVar('--hd-color-accent')};
     }
   `
 

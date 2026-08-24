@@ -1,6 +1,6 @@
 import { impact, isSatisfied, nextSteps, numericValue, type FactMap } from '@hades/engine'
 import type { Dataset, Fact } from '@hades/schema'
-import '@hades/ui'
+import { colorVar } from '@hades/ui'
 import { css, html, LitElement, type TemplateResult } from 'lit'
 import { repeat } from 'lit/directives/repeat.js'
 
@@ -21,7 +21,7 @@ export class NextStepsPanel extends LitElement {
       width: 4rem;
     }
     .badge {
-      color: var(--hd-color-muted, #b9a98c);
+      color: ${colorVar('--hd-color-muted')};
       font-size: 0.75rem;
       margin-left: auto;
     }

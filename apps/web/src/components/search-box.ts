@@ -1,3 +1,4 @@
+import { colorVar } from '@hades/ui'
 import { css, html, LitElement } from 'lit'
 
 /** Fires `search-change` with `detail: { query }` on every keystroke. */
@@ -13,7 +14,7 @@ export class SearchBox extends LitElement {
       width: 100%;
     }
     input:focus-visible {
-      outline: 2px solid var(--hd-color-accent, #e35563);
+      outline: 2px solid ${colorVar('--hd-color-accent')};
     }
   `
 
