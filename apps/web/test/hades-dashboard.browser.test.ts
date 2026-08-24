@@ -136,7 +136,7 @@ describe('hades-dashboard preserves state across an entry visit', () => {
       .querySelector('achievement-list')!
       .dispatchEvent(
         new CustomEvent('section-toggle', {
-          detail: { section: 'chthonic-gods', open: false },
+          detail: { collection: 'codex', section: 'chthonic-gods', open: false },
           bubbles: true,
           composed: true,
         }),
@@ -163,7 +163,7 @@ describe('hades-dashboard preserves state across an entry visit', () => {
     expect(element.shadowRoot!.querySelector('search-box')!.value).toBe('zeus')
     expect(element.shadowRoot!.querySelector('collection-filter')!.selected).toBe('prophecy')
     expect(element.shadowRoot!.querySelector('achievement-list')!.collapsedSections).toEqual({
-      'chthonic-gods': true,
+      'codex:chthonic-gods': true,
     })
   })
 })

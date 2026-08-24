@@ -1,7 +1,7 @@
 import { dataset } from '@hades/data'
 import { overallProgress, type FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
-import '@hades/ui'
+import { colorVar } from '@hades/ui'
 import { css, html, LitElement } from 'lit'
 import { collectionsWithEntries, visibleAchievements } from '../lib/achievement-filter.js'
 import { ProgressState } from '../state/progress-state.js'
@@ -33,7 +33,7 @@ export class HadesDashboard extends LitElement {
       font-weight: 600;
     }
     .error {
-      color: var(--hd-color-accent, #e35563);
+      color: ${colorVar('--hd-color-accent')};
     }
     .grid {
       display: grid;
@@ -82,9 +82,12 @@ export class HadesDashboard extends LitElement {
     this.openId = undefined
   }
 
-  private onSectionToggle(event: CustomEvent<{ section: string; open: boolean }>): void {
-    const { section, open } = event.detail
-    this.collapsedSections = { ...this.collapsedSections, [section]: !open }
+  private onSectionToggle(
+    event: CustomEvent<{ collection: string; section: string; open: boolean }>,
+  ): void {
+    const { collection, section, open } = event.detail
+    const key = `${collection}:${section}`
+    this.collapsedSections = { ...this.collapsedSections, [key]: !open }
   }
 
   private async onFactToggle(
@@ -171,6 +174,7 @@ export class HadesDashboard extends LitElement {
             <search-box .value=${this.query} @search-change=${this.onSearch}></search-box>
             <achievement-list
               .achievements=${visibleAchievements(dataset, this.selectedCollection, this.query)}
+              .collections=${collectionsWithEntries(dataset)}
               .facts=${facts}
               .collapsedSections=${this.collapsedSections}
               @achievement-open=${this.onOpen}

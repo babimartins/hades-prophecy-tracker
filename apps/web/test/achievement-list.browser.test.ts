@@ -47,6 +47,67 @@ const sectioned: Achievement[] = [
   },
 ]
 
+const collectionsMeta = [
+  { id: 'prophecy', name: 'Fated List of Minor Prophecies' },
+  { id: 'codex', name: 'Codex' },
+  { id: 'aspect', name: 'Weapon Aspects' },
+]
+
+/**
+ * One unsectioned collection (prophecy) followed by one sectioned collection
+ * (codex) — the shape the real, finished dataset produces in the default
+ * "All" view, and the shape none of the fixtures above cover.
+ */
+const mixedCollections: Achievement[] = [
+  {
+    id: 'prophecy:first',
+    name: 'First',
+    description: 'First prophecy.',
+    collection: 'prophecy',
+    requirement: { kind: 'all', of: ['a:one'] },
+  },
+  {
+    id: 'prophecy:second',
+    name: 'Second',
+    description: 'Second prophecy.',
+    collection: 'prophecy',
+    requirement: { kind: 'all', of: ['a:two'] },
+  },
+  {
+    id: 'codex:alpha',
+    name: 'Alpha',
+    description: 'Alpha entry.',
+    collection: 'codex',
+    requirement: { kind: 'all', of: ['a:alpha'] },
+    section: 'chthonic-gods',
+  },
+]
+
+/**
+ * Two different collections that both use a section slug of `shared-slug`.
+ * Real data has no such collision today, but nothing stops one, so the
+ * grouping and the collapse-state keying must not assume section slugs are
+ * unique across collections.
+ */
+const sameSlugAcrossCollections: Achievement[] = [
+  {
+    id: 'codex:alpha',
+    name: 'Alpha',
+    description: 'Alpha entry.',
+    collection: 'codex',
+    requirement: { kind: 'all', of: ['a:alpha'] },
+    section: 'shared-slug',
+  },
+  {
+    id: 'aspect:beta',
+    name: 'Beta',
+    description: 'Beta entry.',
+    collection: 'aspect',
+    requirement: { kind: 'all', of: ['a:beta'] },
+    section: 'shared-slug',
+  },
+]
+
 /**
  * Text content across shadow boundaries. `hd-progress` renders its caption
  * inside its own shadow root, which plain `textContent` never reaches.
@@ -146,7 +207,7 @@ describe('achievement-list', () => {
       html`<achievement-list
         .achievements=${sectioned}
         .facts=${{}}
-        .collapsedSections=${{ 'chthonic-gods': true }}
+        .collapsedSections=${{ 'codex:chthonic-gods': true }}
       ></achievement-list>`,
       document.body,
     )
@@ -169,20 +230,101 @@ describe('achievement-list', () => {
     expect((summary as HTMLElement).tabIndex).not.toBe(-1)
   })
 
-  it('fires section-toggle, naming only the section that changed, when a heading is activated', async () => {
+  it('fires section-toggle, naming the collection and the section that changed, when a heading is activated', async () => {
     render(
       html`<achievement-list .achievements=${sectioned} .facts=${{}}></achievement-list>`,
       document.body,
     )
     const element = document.querySelector('achievement-list')!
     await element.updateComplete
-    const events: { section: string; open: boolean }[] = []
+    const events: { collection: string; section: string; open: boolean }[] = []
     element.addEventListener('section-toggle', (event) => {
-      events.push((event as CustomEvent<{ section: string; open: boolean }>).detail)
+      events.push(
+        (event as CustomEvent<{ collection: string; section: string; open: boolean }>).detail,
+      )
     })
     const summary = element.shadowRoot!.querySelector('details summary') as HTMLElement
     summary.click()
     await vi.waitFor(() => expect(events.length).toBe(1))
-    expect(events).toEqual([{ section: 'chthonic-gods', open: false }])
+    expect(events).toEqual([{ collection: 'codex', section: 'chthonic-gods', open: false }])
+  })
+})
+
+describe('achievement-list across more than one collection', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('renders a collection heading above each group when the list holds more than one collection', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${mixedCollections}
+        .facts=${{}}
+        .collections=${collectionsMeta}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const headings = [...element.shadowRoot!.querySelectorAll('.collection-heading')].map(
+      (heading) => heading.textContent?.trim(),
+    )
+    expect(headings).toEqual(['Fated List of Minor Prophecies', 'Codex'])
+  })
+
+  it('does not render a collection heading when every achievement is from one collection', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${achievements}
+        .facts=${{}}
+        .collections=${collectionsMeta}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    expect(element.shadowRoot!.querySelectorAll('.collection-heading').length).toBe(0)
+  })
+
+  it('keeps the two collections in separate unlabelled-vs-sectioned groups, not one merged block', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${mixedCollections}
+        .facts=${{}}
+        .collections=${collectionsMeta}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    // The prophecy rows sit in a flat <ul>, not inside the codex's <details>.
+    const lists = [...element.shadowRoot!.querySelectorAll('ul')].filter(
+      (list) => list.closest('details') === null,
+    )
+    expect(lists.length).toBe(1)
+    expect(lists[0]!.querySelectorAll('li').length).toBe(2)
+    const details = element.shadowRoot!.querySelectorAll('details')
+    expect(details.length).toBe(1)
+    expect(details[0]!.querySelectorAll('li').length).toBe(1)
+  })
+
+  it('does not leak collapse state between two collections that share a section slug', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${sameSlugAcrossCollections}
+        .facts=${{}}
+        .collections=${collectionsMeta}
+        .collapsedSections=${{ 'codex:shared-slug': true }}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups.length).toBe(2)
+    const codexGroup = groups.find((group) => group.textContent?.includes('Alpha'))!
+    const aspectGroup = groups.find((group) => group.textContent?.includes('Beta'))!
+    expect(codexGroup.open).toBe(false)
+    expect(aspectGroup.open).toBe(true)
   })
 })
