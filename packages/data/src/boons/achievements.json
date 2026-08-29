@@ -492,5 +492,447 @@
         "boon:artemis:exit-wounds"
       ]
     }
+  },
+  {
+    "id": "boon:athena:divine-strike",
+    "name": "Divine Strike",
+    "description": "Earn the Divine Strike boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:divine-strike"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:divine-flourish",
+    "name": "Divine Flourish",
+    "description": "Earn the Divine Flourish boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:divine-flourish"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:divine-dash",
+    "name": "Divine Dash",
+    "description": "Earn the Divine Dash boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:divine-dash"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:phalanx-shot",
+    "name": "Phalanx Shot",
+    "description": "Earn the Phalanx Shot boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:phalanx-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:athenas-aid",
+    "name": "Athena's Aid",
+    "description": "Earn the Athena's Aid boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:athenas-aid"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:sure-footing",
+    "name": "Sure Footing",
+    "description": "Earn the Sure Footing boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:sure-footing"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:bronze-skin",
+    "name": "Bronze Skin",
+    "description": "Earn the Bronze Skin boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:bronze-skin"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:holy-shield",
+    "name": "Holy Shield",
+    "description": "Earn the Holy Shield boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:holy-shield"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:proud-bearing",
+    "name": "Proud Bearing",
+    "description": "Earn the Proud Bearing boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:proud-bearing"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:blinding-flash",
+    "name": "Blinding Flash",
+    "description": "Earn the Blinding Flash boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:blinding-flash"
+      ]
+    }
+  },
+  {
+    "id": "boon:athena:brilliant-riposte",
+    "name": "Brilliant Riposte",
+    "description": "Earn the Brilliant Riposte boon from Athena.",
+    "collection": "boon",
+    "section": "athena",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:athena:brilliant-riposte"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:frost-strike",
+    "name": "Frost Strike",
+    "description": "Earn the Frost Strike boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:frost-strike"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:mistral-dash",
+    "name": "Mistral Dash",
+    "description": "Earn the Mistral Dash boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:mistral-dash"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:crystal-beam",
+    "name": "Crystal Beam",
+    "description": "Earn the Crystal Beam boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:crystal-beam"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:frost-flourish",
+    "name": "Frost Flourish",
+    "description": "Earn the Frost Flourish boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:frost-flourish"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:demeters-aid",
+    "name": "Demeter's Aid",
+    "description": "Earn the Demeter's Aid boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:demeters-aid"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:snow-burst",
+    "name": "Snow Burst",
+    "description": "Earn the Snow Burst boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:snow-burst"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:glacial-glare",
+    "name": "Glacial Glare",
+    "description": "Earn the Glacial Glare boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:glacial-glare"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:frozen-touch",
+    "name": "Frozen Touch",
+    "description": "Earn the Frozen Touch boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:frozen-touch"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:ravenous-will",
+    "name": "Ravenous Will",
+    "description": "Earn the Ravenous Will boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:ravenous-will"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:arctic-blast",
+    "name": "Arctic Blast",
+    "description": "Earn the Arctic Blast boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:arctic-blast"
+      ]
+    }
+  },
+  {
+    "id": "boon:demeter:killing-freeze",
+    "name": "Killing Freeze",
+    "description": "Earn the Killing Freeze boon from Demeter.",
+    "collection": "boon",
+    "section": "demeter",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:demeter:killing-freeze"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:drunken-strike",
+    "name": "Drunken Strike",
+    "description": "Earn the Drunken Strike boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:drunken-strike"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:drunken-flourish",
+    "name": "Drunken Flourish",
+    "description": "Earn the Drunken Flourish boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:drunken-flourish"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:drunken-dash",
+    "name": "Drunken Dash",
+    "description": "Earn the Drunken Dash boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:drunken-dash"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:trippy-shot",
+    "name": "Trippy Shot",
+    "description": "Earn the Trippy Shot boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:trippy-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:dionysus-aid",
+    "name": "Dionysus' Aid",
+    "description": "Earn the Dionysus' Aid boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:dionysus-aid"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:after-party",
+    "name": "After Party",
+    "description": "Earn the After Party boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:after-party"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:positive-outlook",
+    "name": "Positive Outlook",
+    "description": "Earn the Positive Outlook boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:positive-outlook"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:strong-drink",
+    "name": "Strong Drink",
+    "description": "Earn the Strong Drink boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:strong-drink"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:peer-pressure",
+    "name": "Peer Pressure",
+    "description": "Earn the Peer Pressure boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:peer-pressure"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:numbing-sensation",
+    "name": "Numbing Sensation",
+    "description": "Earn the Numbing Sensation boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:numbing-sensation"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:bad-influence",
+    "name": "Bad Influence",
+    "description": "Earn the Bad Influence boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:bad-influence"
+      ]
+    }
+  },
+  {
+    "id": "boon:dionysus:high-tolerance",
+    "name": "High Tolerance",
+    "description": "Earn the High Tolerance boon from Dionysus.",
+    "collection": "boon",
+    "section": "dionysus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:dionysus:high-tolerance"
+      ]
+    }
   }
 ]
