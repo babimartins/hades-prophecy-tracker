@@ -163,6 +163,13 @@ The integrity test in `packages/data` rejects duplicate ids, unknown fact
 references, orphan facts, unknown collections, and a number fact with no `max`.
 Run it after every batch of data.
 
+**A label-derived check cannot prove a name was verified.** When entry names are
+built from facts that already exist, comparing the entry name against the fact
+label always agrees — that is equally what careful sourcing and silent
+label-stripping produce. The comparison is worth running, but only a direct
+check against the page distinguishes the two. Spot-check a handful against the
+source and say which ones.
+
 A Codex entry carries a `section` slug naming its in-game table, and its
 requirement is an `all` whose first member is the entry's own `codex:<slug>`
 unlock fact. **Model a compound wiki condition as one fact per action.** "Finish
@@ -175,6 +182,11 @@ Chthonic Gods and a realm in The Underworld. Keep the display `name` as the wiki
 writes it and qualify the id instead — `codex:chaos` and `codex:chaos-realm` —
 so the duplicate-id check stays meaningful rather than being satisfied by a
 rename that hides one entry behind the other.
+
+**When two wiki pages disagree on a name, the subject's own page wins.** A god's
+boon page beats the Fated List, which is an aggregating checklist. Fix the
+`label` and leave the fact id alone — ids key stored user progress, so a
+`stubborn-bolts` id keeping a "Stubborn Roots" label is correct, not a mistake.
 
 **A new collection is wired in three places.** Register it in
 `collections.json`, then spread both its `facts.json` and its
