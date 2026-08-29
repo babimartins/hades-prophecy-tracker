@@ -1,0 +1,496 @@
+[
+  {
+    "id": "boon:aphrodite:heartbreak-strike",
+    "name": "Heartbreak Strike",
+    "description": "Earn the Heartbreak Strike boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:heartbreak-strike"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:heartbreak-flourish",
+    "name": "Heartbreak Flourish",
+    "description": "Earn the Heartbreak Flourish boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:heartbreak-flourish"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:passion-dash",
+    "name": "Passion Dash",
+    "description": "Earn the Passion Dash boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:passion-dash"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:crush-shot",
+    "name": "Crush Shot",
+    "description": "Earn the Crush Shot boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:crush-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:aphrodites-aid",
+    "name": "Aphrodite's Aid",
+    "description": "Earn the Aphrodite's Aid boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:aphrodites-aid"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:blown-kiss",
+    "name": "Blown Kiss",
+    "description": "Earn the Blown Kiss boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:blown-kiss"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:wave-of-despair",
+    "name": "Wave of Despair",
+    "description": "Earn the Wave of Despair boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:wave-of-despair"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:dying-lament",
+    "name": "Dying Lament",
+    "description": "Earn the Dying Lament boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:dying-lament"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:different-league",
+    "name": "Different League",
+    "description": "Earn the Different League boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:different-league"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:life-affirmation",
+    "name": "Life Affirmation",
+    "description": "Earn the Life Affirmation boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:life-affirmation"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:empty-inside",
+    "name": "Empty Inside",
+    "description": "Earn the Empty Inside boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:empty-inside"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:sweet-surrender",
+    "name": "Sweet Surrender",
+    "description": "Earn the Sweet Surrender boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:sweet-surrender"
+      ]
+    }
+  },
+  {
+    "id": "boon:aphrodite:broken-resolve",
+    "name": "Broken Resolve",
+    "description": "Earn the Broken Resolve boon from Aphrodite.",
+    "collection": "boon",
+    "section": "aphrodite",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:aphrodite:broken-resolve"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:curse-of-agony",
+    "name": "Curse of Agony",
+    "description": "Earn the Curse of Agony boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:curse-of-agony"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:curse-of-pain",
+    "name": "Curse of Pain",
+    "description": "Earn the Curse of Pain boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:curse-of-pain"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:blade-dash",
+    "name": "Blade Dash",
+    "description": "Earn the Blade Dash boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:blade-dash"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:slicing-shot",
+    "name": "Slicing Shot",
+    "description": "Earn the Slicing Shot boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:slicing-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:ares-aid",
+    "name": "Ares' Aid",
+    "description": "Earn the Ares' Aid boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:ares-aid"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:curse-of-vengeance",
+    "name": "Curse of Vengeance",
+    "description": "Earn the Curse of Vengeance boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:curse-of-vengeance"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:urge-to-kill",
+    "name": "Urge to Kill",
+    "description": "Earn the Urge to Kill boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:urge-to-kill"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:battle-rage",
+    "name": "Battle Rage",
+    "description": "Earn the Battle Rage boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:battle-rage"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:blood-frenzy",
+    "name": "Blood Frenzy",
+    "description": "Earn the Blood Frenzy boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:blood-frenzy"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:impending-doom",
+    "name": "Impending Doom",
+    "description": "Earn the Impending Doom boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:impending-doom"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:dire-misfortune",
+    "name": "Dire Misfortune",
+    "description": "Earn the Dire Misfortune boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:dire-misfortune"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:black-metal",
+    "name": "Black Metal",
+    "description": "Earn the Black Metal boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:black-metal"
+      ]
+    }
+  },
+  {
+    "id": "boon:ares:engulfing-vortex",
+    "name": "Engulfing Vortex",
+    "description": "Earn the Engulfing Vortex boon from Ares.",
+    "collection": "boon",
+    "section": "ares",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:ares:engulfing-vortex"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:deadly-strike",
+    "name": "Deadly Strike",
+    "description": "Earn the Deadly Strike boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:deadly-strike"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:hunter-dash",
+    "name": "Hunter Dash",
+    "description": "Earn the Hunter Dash boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:hunter-dash"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:true-shot",
+    "name": "True Shot",
+    "description": "Earn the True Shot boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:true-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:deadly-flourish",
+    "name": "Deadly Flourish",
+    "description": "Earn the Deadly Flourish boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:deadly-flourish"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:artemis-aid",
+    "name": "Artemis' Aid",
+    "description": "Earn the Artemis' Aid boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:artemis-aid"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:pressure-points",
+    "name": "Pressure Points",
+    "description": "Earn the Pressure Points boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:pressure-points"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:support-fire",
+    "name": "Support Fire",
+    "description": "Earn the Support Fire boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:support-fire"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:hunters-mark",
+    "name": "Hunter's Mark",
+    "description": "Earn the Hunter's Mark boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:hunters-mark"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:clean-kill",
+    "name": "Clean Kill",
+    "description": "Earn the Clean Kill boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:clean-kill"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:hide-breaker",
+    "name": "Hide Breaker",
+    "description": "Earn the Hide Breaker boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:hide-breaker"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:hunter-instinct",
+    "name": "Hunter Instinct",
+    "description": "Earn the Hunter Instinct boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:hunter-instinct"
+      ]
+    }
+  },
+  {
+    "id": "boon:artemis:exit-wounds",
+    "name": "Exit Wounds",
+    "description": "Earn the Exit Wounds boon from Artemis.",
+    "collection": "boon",
+    "section": "artemis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:artemis:exit-wounds"
+      ]
+    }
+  }
+]

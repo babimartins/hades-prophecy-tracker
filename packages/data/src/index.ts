@@ -1,6 +1,8 @@
 import { validateDataset, type Dataset } from '@hades/schema'
 import aspectAchievements from './aspects/achievements.json'
 import aspectFacts from './aspects/facts.json'
+import boonAchievements from './boons/achievements.json'
+import boonFacts from './boons/facts.json'
 import codexAchievements from './codex/achievements.json'
 import codexFacts from './codex/facts.json'
 import collections from './collections.json'
@@ -12,6 +14,12 @@ import prophecyFacts from './prophecies/facts.json'
 /** The curated dataset. Validation runs at import time, so bad data fails fast. */
 export const dataset: Dataset = validateDataset({
   collections,
-  facts: [...prophecyFacts, ...codexFacts, ...keepsakeFacts, ...aspectFacts],
-  achievements: [...prophecyAchievements, ...codexAchievements, ...keepsakeAchievements, ...aspectAchievements],
+  facts: [...prophecyFacts, ...codexFacts, ...keepsakeFacts, ...aspectFacts, ...boonFacts],
+  achievements: [
+    ...prophecyAchievements,
+    ...codexAchievements,
+    ...keepsakeAchievements,
+    ...aspectAchievements,
+    ...boonAchievements,
+  ],
 })

@@ -3,5 +3,6 @@
   { "id": "achievement", "name": "Platform Achievements" },
   { "id": "codex", "name": "Codex" },
   { "id": "keepsake", "name": "Keepsakes" },
-  { "id": "aspect", "name": "Weapon Aspects" }
+  { "id": "aspect", "name": "Weapon Aspects" },
+  { "id": "boon", "name": "Boons" }
 ]
