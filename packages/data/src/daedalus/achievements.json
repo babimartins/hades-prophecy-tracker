@@ -622,5 +622,161 @@
         "daedalus:varatha:triple-jab"
       ]
     }
+  },
+  {
+    "id": "daedalus:malphon:breaching-cross",
+    "name": "Breaching Cross",
+    "description": "Take the Breaching Cross Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:breaching-cross"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:rolling-knuckle",
+    "name": "Rolling Knuckle",
+    "description": "Take the Rolling Knuckle Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:rolling-knuckle"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:long-knuckle",
+    "name": "Long Knuckle",
+    "description": "Take the Long Knuckle Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:long-knuckle"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:draining-cutter",
+    "name": "Draining Cutter",
+    "description": "Take the Draining Cutter Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:draining-cutter"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:concentrated-knuckle",
+    "name": "Concentrated Knuckle",
+    "description": "Take the Concentrated Knuckle Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:concentrated-knuckle"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:explosive-upper",
+    "name": "Explosive Upper",
+    "description": "Take the Explosive Upper Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:explosive-upper"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:flying-cutter",
+    "name": "Flying Cutter",
+    "description": "Take the Flying Cutter Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:flying-cutter"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:rush-kick",
+    "name": "Rush Kick",
+    "description": "Take the Rush Kick Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:rush-kick"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:quake-cutter",
+    "name": "Quake Cutter",
+    "description": "Take the Quake Cutter Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:quake-cutter"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:kinetic-launcher",
+    "name": "Kinetic Launcher",
+    "description": "Take the Kinetic Launcher Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:kinetic-launcher"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:heavy-knuckle",
+    "name": "Heavy Knuckle",
+    "description": "Take the Heavy Knuckle Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:heavy-knuckle"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:malphon:colossus-knuckle",
+    "name": "Colossus Knuckle",
+    "description": "Take the Colossus Knuckle Daedalus enchantment for Malphon.",
+    "collection": "daedalus",
+    "section": "malphon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:malphon:colossus-knuckle"
+      ]
+    }
   }
 ]
