@@ -8,5 +8,6 @@
   { "id": "daedalus", "name": "Daedalus" },
   { "id": "mirror", "name": "Mirror of Night" },
   { "id": "pact", "name": "Pact of Punishment" },
-  { "id": "perk", "name": "Perks" }
+  { "id": "perk", "name": "Perks" },
+  { "id": "well-of-charon", "name": "Well of Charon" }
 ]

@@ -18,6 +18,8 @@ import perkAchievements from './perk/achievements.json'
 import perkFacts from './perk/facts.json'
 import prophecyAchievements from './prophecies/achievements.json'
 import prophecyFacts from './prophecies/facts.json'
+import wellOfCharonAchievements from './well-of-charon/achievements.json'
+import wellOfCharonFacts from './well-of-charon/facts.json'
 
 /** The curated dataset. Validation runs at import time, so bad data fails fast. */
 export const dataset: Dataset = validateDataset({
@@ -32,6 +34,7 @@ export const dataset: Dataset = validateDataset({
     ...mirrorFacts,
     ...pactFacts,
     ...perkFacts,
+    ...wellOfCharonFacts,
   ],
   achievements: [
     ...prophecyAchievements,
@@ -43,5 +46,6 @@ export const dataset: Dataset = validateDataset({
     ...mirrorAchievements,
     ...pactAchievements,
     ...perkAchievements,
+    ...wellOfCharonAchievements,
   ],
 })

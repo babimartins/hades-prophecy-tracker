@@ -1,0 +1,314 @@
+[
+  {
+    "id": "wellofcharon:aether-net",
+    "name": "Aether Net",
+    "description": "Purchase Aether Net from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:aether-net"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:braid-of-atlas",
+    "name": "Braid of Atlas",
+    "description": "Purchase Braid of Atlas from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:braid-of-atlas"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:centaur-soul",
+    "name": "Centaur Soul",
+    "description": "Purchase Centaur Soul from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:centaur-soul"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:chimaera-jerky",
+    "name": "Chimaera Jerky",
+    "description": "Purchase Chimaera Jerky from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:chimaera-jerky"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:cyclops-jerky",
+    "name": "Cyclops Jerky",
+    "description": "Purchase Cyclops Jerky from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:cyclops-jerky"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:eris-bangle",
+    "name": "Eris Bangle",
+    "description": "Purchase Eris Bangle from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:eris-bangle"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:eye-of-lamia",
+    "name": "Eye of Lamia",
+    "description": "Purchase Eye of Lamia from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:eye-of-lamia"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:fateful-twist",
+    "name": "Fateful Twist",
+    "description": "Purchase Fateful Twist from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:fateful-twist"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:flame-wheels-release",
+    "name": "Flame Wheels Release",
+    "description": "Purchase Flame Wheels Release from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:flame-wheels-release"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:gaeas-treasure",
+    "name": "Gaea's Treasure",
+    "description": "Purchase Gaea's Treasure from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:gaeas-treasure"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:hydralite",
+    "name": "HydraLite",
+    "description": "Purchase HydraLite from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:hydralite"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:ignited-ichor",
+    "name": "Ignited Ichor",
+    "description": "Purchase Ignited Ichor from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:ignited-ichor"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:kiss-of-styx",
+    "name": "Kiss of Styx",
+    "description": "Purchase Kiss of Styx from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:kiss-of-styx"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:life-essence",
+    "name": "Life Essence",
+    "description": "Purchase Life Essence from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:life-essence"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:light-of-ixion",
+    "name": "Light of Ixion",
+    "description": "Purchase Light of Ixion from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:light-of-ixion"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:nail-of-talos",
+    "name": "Nail of Talos",
+    "description": "Purchase Nail of Talos from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:nail-of-talos"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:nemesis-crest",
+    "name": "Nemesis Crest",
+    "description": "Purchase Nemesis Crest from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:nemesis-crest"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:night-spindle",
+    "name": "Night Spindle",
+    "description": "Purchase Night Spindle from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:night-spindle"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:price-of-midas",
+    "name": "Price of Midas",
+    "description": "Purchase Price of Midas from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:price-of-midas"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:prometheus-stone",
+    "name": "Prometheus Stone",
+    "description": "Purchase Prometheus Stone from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:prometheus-stone"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:skeletal-lure",
+    "name": "Skeletal Lure",
+    "description": "Purchase Skeletal Lure from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:skeletal-lure"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:stygian-shard",
+    "name": "Stygian Shard",
+    "description": "Purchase Stygian Shard from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:stygian-shard"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:tinge-of-erebus",
+    "name": "Tinge of Erebus",
+    "description": "Purchase Tinge of Erebus from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:tinge-of-erebus"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:touch-of-styx",
+    "name": "Touch of Styx",
+    "description": "Purchase Touch of Styx from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:touch-of-styx"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:trove-tracker",
+    "name": "Trove Tracker",
+    "description": "Purchase Trove Tracker from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:trove-tracker"
+      ]
+    }
+  },
+  {
+    "id": "wellofcharon:yarn-of-ariadne",
+    "name": "Yarn of Ariadne",
+    "description": "Purchase Yarn of Ariadne from the Well of Charon.",
+    "collection": "well-of-charon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "wellofcharon:yarn-of-ariadne"
+      ]
+    }
+  }
+]
