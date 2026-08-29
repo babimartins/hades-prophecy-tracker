@@ -87,7 +87,9 @@ export class RequirementTree extends LitElement {
    * threshold to show, unlike `renderRank`. The prophecy's own semantics are
    * activation (rank >= 1), but the control still exposes the fact's full
    * range and current value, so no interaction here can lower a rank the
-   * player set through a different view.
+   * player set through a different view. The hint tells the player they do
+   * not need to fill the bar, unlike this same fact's `atLeast` view
+   * elsewhere, which can demand its maximum.
    */
   private renderNumberFact(id: string, fact: Fact): TemplateResult {
     const max = fact.max ?? numericValue(id, this.facts)
@@ -106,6 +108,7 @@ export class RequirementTree extends LitElement {
           }}
         />
         <span>/ ${max}</span>
+        <span class="threshold">this entry only needs it active</span>
       </div>
     `
   }

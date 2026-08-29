@@ -199,5 +199,18 @@ describe('requirement-tree', () => {
       expect(input.value).toBe('5')
       expect(input.max).toBe('5') // 'a:shared-rank' fixture max is 5
     })
+
+    it('hints that any value above zero satisfies the entry, unlike the atLeast threshold hint', async () => {
+      const element = mount('a:shared-rank', { 'a:shared-rank': 0 })
+      await element.updateComplete
+      expect(element.shadowRoot!.textContent).toContain('this entry only needs it active')
+    })
+
+    it('does not show the plain-child activation hint on an atLeast node, which keeps its own threshold hint', async () => {
+      const element = mount({ kind: 'atLeast', fact: 'a:shared-rank', value: 5 }, { 'a:shared-rank': 0 })
+      await element.updateComplete
+      expect(element.shadowRoot!.textContent).not.toContain('this entry only needs it active')
+      expect(element.shadowRoot!.textContent).toContain('this entry needs 5')
+    })
   })
 })
