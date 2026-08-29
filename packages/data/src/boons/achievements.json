@@ -1805,5 +1805,460 @@
         "boon:duo:splitting-headache"
       ]
     }
+  },
+  {
+    "id": "boon:legendary:splitting-bolt",
+    "name": "Splitting Bolt",
+    "description": "Earn the Splitting Bolt Legendary Boon from Zeus.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:splitting-bolt"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:second-wave",
+    "name": "Second Wave",
+    "description": "Earn the Second Wave Legendary Boon from Poseidon.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:second-wave"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:divine-protection",
+    "name": "Divine Protection",
+    "description": "Earn the Divine Protection Legendary Boon from Athena.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:divine-protection"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:vicious-cycle",
+    "name": "Vicious Cycle",
+    "description": "Earn the Vicious Cycle Legendary Boon from Ares.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:vicious-cycle"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:unhealthy-fixation",
+    "name": "Unhealthy Fixation",
+    "description": "Earn the Unhealthy Fixation Legendary Boon from Aphrodite.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:unhealthy-fixation"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:fully-loaded",
+    "name": "Fully Loaded",
+    "description": "Earn the Fully Loaded Legendary Boon from Artemis.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:fully-loaded"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:black-out",
+    "name": "Black Out",
+    "description": "Earn the Black Out Legendary Boon from Dionysus.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:black-out"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:greater-recall",
+    "name": "Greater Recall",
+    "description": "Earn the Greater Recall Legendary Boon from Hermes.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:greater-recall"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:bad-news",
+    "name": "Bad News",
+    "description": "Earn the Bad News Legendary Boon from Hermes.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:bad-news"
+      ]
+    }
+  },
+  {
+    "id": "boon:legendary:winter-harvest",
+    "name": "Winter Harvest",
+    "description": "Earn the Winter Harvest Legendary Boon from Demeter.",
+    "collection": "boon",
+    "section": "legendary",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:legendary:winter-harvest"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:strike",
+    "name": "Strike",
+    "description": "Earn the Strike blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:strike"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:shot",
+    "name": "Shot",
+    "description": "Earn the Shot blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:shot"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:grasp",
+    "name": "Grasp",
+    "description": "Earn the Grasp blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:grasp"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:soul",
+    "name": "Soul",
+    "description": "Earn the Soul blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:soul"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:favor",
+    "name": "Favor",
+    "description": "Earn the Favor blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:favor"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:affluence",
+    "name": "Affluence",
+    "description": "Earn the Affluence blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:affluence"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:eclipse",
+    "name": "Eclipse",
+    "description": "Earn the Eclipse blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:eclipse"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:flourish",
+    "name": "Flourish",
+    "description": "Earn the Flourish blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:flourish"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:lunge",
+    "name": "Lunge",
+    "description": "Earn the Lunge blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:lunge"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:ambush",
+    "name": "Ambush",
+    "description": "Earn the Ambush blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:ambush"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:assault",
+    "name": "Assault",
+    "description": "Earn the Assault blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:assault"
+      ]
+    }
+  },
+  {
+    "id": "blessing:chaos:defiance",
+    "name": "Defiance",
+    "description": "Earn the Defiance blessing from Chaos.",
+    "collection": "boon",
+    "section": "chaos-blessings",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "blessing:chaos:defiance"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:paupers",
+    "name": "Pauper's",
+    "description": "Suffer the Pauper's curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:paupers"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:slippery",
+    "name": "Slippery",
+    "description": "Suffer the Slippery curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:slippery"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:maimed",
+    "name": "Maimed",
+    "description": "Suffer the Maimed curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:maimed"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:flayed",
+    "name": "Flayed",
+    "description": "Suffer the Flayed curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:flayed"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:addled",
+    "name": "Addled",
+    "description": "Suffer the Addled curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:addled"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:caustic",
+    "name": "Caustic",
+    "description": "Suffer the Caustic curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:caustic"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:enshrouded",
+    "name": "Enshrouded",
+    "description": "Suffer the Enshrouded curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:enshrouded"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:excruciating",
+    "name": "Excruciating",
+    "description": "Suffer the Excruciating curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:excruciating"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:abyssal",
+    "name": "Abyssal",
+    "description": "Suffer the Abyssal curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:abyssal"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:atrophic",
+    "name": "Atrophic",
+    "description": "Suffer the Atrophic curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:atrophic"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:slothful",
+    "name": "Slothful",
+    "description": "Suffer the Slothful curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:slothful"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:halting",
+    "name": "Halting",
+    "description": "Suffer the Halting curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:halting"
+      ]
+    }
+  },
+  {
+    "id": "curse:chaos:roiling",
+    "name": "Roiling",
+    "description": "Suffer the Roiling curse from Chaos.",
+    "collection": "boon",
+    "section": "chaos-curses",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "curse:chaos:roiling"
+      ]
+    }
   }
 ]
