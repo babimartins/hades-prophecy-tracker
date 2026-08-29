@@ -155,8 +155,14 @@ Verified during research. Where two wiki pages disagree, both numbers appear.
 
 These need someone with the game open.
 
-1. The Athena and Demeter duo boon is "Stubborn Bolts" on the Fated List page and
-   "Stubborn Roots" on the Duo Boons page. The dataset uses the Fated List name.
+1. ~~The Athena and Demeter duo boon is "Stubborn Bolts" on the Fated List
+   page and "Stubborn Roots" on the Duo Boons page.~~ Settled: "Stubborn
+   Roots". A god's own boon page is the primary source for a boon's name; the
+   Fated List is an aggregating checklist. Both gods' own pages agree:
+   https://hades.fandom.com/wiki/Athena/Boons_(Hades) and
+   https://hades.fandom.com/wiki/Demeter/Boons_(Hades). The `boon:duo:stubborn-bolts`
+   fact keeps its id for progress stability; its label now reads "Stubborn
+   Roots" to match.
 2. The Codex prophecy counts to 70. The Codex holds 119 entries and 9 sections,
    so 70 counts something else. The current fact is labelled "Codex sections
    revealed", which is probably wrong.

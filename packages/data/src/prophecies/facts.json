@@ -483,7 +483,7 @@
   },
   {
     "id": "boon:zeus:clouded-judgement",
-    "label": "Earn the Clouded Judgement boon from Zeus",
+    "label": "Earn the Clouded Judgment boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy"
   },
@@ -1251,7 +1251,7 @@
   },
   {
     "id": "boon:duo:stubborn-bolts",
-    "label": "Earn the Stubborn Bolts Duo Boon",
+    "label": "Earn the Stubborn Roots Duo Boon",
     "kind": "boolean",
     "collection": "prophecy"
   },
