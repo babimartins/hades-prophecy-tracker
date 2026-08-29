@@ -156,6 +156,162 @@
     }
   },
   {
+    "id": "daedalus:varatha:extending-jab",
+    "name": "Extending Jab",
+    "description": "Take the Extending Jab Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:extending-jab"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:chain-skewer",
+    "name": "Chain Skewer",
+    "description": "Take the Chain Skewer Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:chain-skewer"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:breaching-skewer",
+    "name": "Breaching Skewer",
+    "description": "Take the Breaching Skewer Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:breaching-skewer"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:vicious-skewer",
+    "name": "Vicious Skewer",
+    "description": "Take the Vicious Skewer Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:vicious-skewer"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:exploding-launcher",
+    "name": "Exploding Launcher",
+    "description": "Take the Exploding Launcher Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:exploding-launcher"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:massive-spin",
+    "name": "Massive Spin",
+    "description": "Take the Massive Spin Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:massive-spin"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:quick-spin",
+    "name": "Quick Spin",
+    "description": "Take the Quick Spin Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:quick-spin"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:flurry-jab",
+    "name": "Flurry Jab",
+    "description": "Take the Flurry Jab Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:flurry-jab"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:charged-skewer",
+    "name": "Charged Skewer",
+    "description": "Take the Charged Skewer Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:charged-skewer"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:serrated-point",
+    "name": "Serrated Point",
+    "description": "Take the Serrated Point Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:serrated-point"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:flaring-spin",
+    "name": "Flaring Spin",
+    "description": "Take the Flaring Spin Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:flaring-spin"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:varatha:triple-jab",
+    "name": "Triple Jab",
+    "description": "Take the Triple Jab Daedalus enchantment for Varatha.",
+    "collection": "daedalus",
+    "section": "varatha",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:varatha:triple-jab"
+      ]
+    }
+  },
+  {
     "id": "daedalus:coronacht:twin-shot",
     "name": "Twin Shot",
     "description": "Take the Twin Shot Daedalus enchantment for Coronacht.",
@@ -464,162 +620,6 @@
       "kind": "all",
       "of": [
         "daedalus:aegis:ferocious-guard"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:extending-jab",
-    "name": "Extending Jab",
-    "description": "Take the Extending Jab Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:extending-jab"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:chain-skewer",
-    "name": "Chain Skewer",
-    "description": "Take the Chain Skewer Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:chain-skewer"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:breaching-skewer",
-    "name": "Breaching Skewer",
-    "description": "Take the Breaching Skewer Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:breaching-skewer"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:vicious-skewer",
-    "name": "Vicious Skewer",
-    "description": "Take the Vicious Skewer Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:vicious-skewer"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:exploding-launcher",
-    "name": "Exploding Launcher",
-    "description": "Take the Exploding Launcher Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:exploding-launcher"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:massive-spin",
-    "name": "Massive Spin",
-    "description": "Take the Massive Spin Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:massive-spin"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:quick-spin",
-    "name": "Quick Spin",
-    "description": "Take the Quick Spin Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:quick-spin"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:flurry-jab",
-    "name": "Flurry Jab",
-    "description": "Take the Flurry Jab Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:flurry-jab"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:charged-skewer",
-    "name": "Charged Skewer",
-    "description": "Take the Charged Skewer Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:charged-skewer"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:serrated-point",
-    "name": "Serrated Point",
-    "description": "Take the Serrated Point Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:serrated-point"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:flaring-spin",
-    "name": "Flaring Spin",
-    "description": "Take the Flaring Spin Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:flaring-spin"
-      ]
-    }
-  },
-  {
-    "id": "daedalus:varatha:triple-jab",
-    "name": "Triple Jab",
-    "description": "Take the Triple Jab Daedalus enchantment for Varatha.",
-    "collection": "daedalus",
-    "section": "varatha",
-    "requirement": {
-      "kind": "all",
-      "of": [
-        "daedalus:varatha:triple-jab"
       ]
     }
   },

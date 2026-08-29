@@ -344,7 +344,7 @@
   },
   {
     "id": "pact:extreme-measures",
-    "label": "Activate the Extreme Measures Pact of Punishment condition",
+    "label": "Extreme Measures Pact of Punishment condition rank",
     "kind": "number",
     "max": 4,
     "collection": "prophecy"
@@ -1534,98 +1534,98 @@
   },
   {
     "id": "pact:hard-labor",
-    "label": "Activate the Hard Labor Pact of Punishment condition",
+    "label": "Hard Labor Pact of Punishment condition rank",
     "kind": "number",
     "max": 5,
     "collection": "prophecy"
   },
   {
     "id": "pact:lasting-consequences",
-    "label": "Activate the Lasting Consequences Pact of Punishment condition",
+    "label": "Lasting Consequences Pact of Punishment condition rank",
     "kind": "number",
     "max": 4,
     "collection": "prophecy"
   },
   {
     "id": "pact:convenience-fee",
-    "label": "Activate the Convenience Fee Pact of Punishment condition",
+    "label": "Convenience Fee Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:jury-summons",
-    "label": "Activate the Jury Summons Pact of Punishment condition",
+    "label": "Jury Summons Pact of Punishment condition rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "pact:calisthenics-program",
-    "label": "Activate the Calisthenics Program Pact of Punishment condition",
+    "label": "Calisthenics Program Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:benefits-package",
-    "label": "Activate the Benefits Package Pact of Punishment condition",
+    "label": "Benefits Package Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:middle-management",
-    "label": "Activate the Middle Management Pact of Punishment condition",
+    "label": "Middle Management Pact of Punishment condition rank",
     "kind": "number",
     "max": 1,
     "collection": "prophecy"
   },
   {
     "id": "pact:underworld-customs",
-    "label": "Activate the Underworld Customs Pact of Punishment condition",
+    "label": "Underworld Customs Pact of Punishment condition rank",
     "kind": "number",
     "max": 1,
     "collection": "prophecy"
   },
   {
     "id": "pact:forced-overtime",
-    "label": "Activate the Forced Overtime Pact of Punishment condition",
+    "label": "Forced Overtime Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:heightened-security",
-    "label": "Activate the Heightened Security Pact of Punishment condition",
+    "label": "Heightened Security Pact of Punishment condition rank",
     "kind": "number",
     "max": 1,
     "collection": "prophecy"
   },
   {
     "id": "pact:routine-inspection",
-    "label": "Activate the Routine Inspection Pact of Punishment condition",
+    "label": "Routine Inspection Pact of Punishment condition rank",
     "kind": "number",
     "max": 4,
     "collection": "prophecy"
   },
   {
     "id": "pact:damage-control",
-    "label": "Activate the Damage Control Pact of Punishment condition",
+    "label": "Damage Control Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:approval-process",
-    "label": "Activate the Approval Process Pact of Punishment condition",
+    "label": "Approval Process Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:tight-deadline",
-    "label": "Activate the Tight Deadline Pact of Punishment condition",
+    "label": "Tight Deadline Pact of Punishment condition rank",
     "kind": "number",
     "max": 3,
     "collection": "prophecy"
@@ -1978,433 +1978,433 @@
   },
   {
     "id": "daedalus:stygius:breaching-slash",
-    "label": "Acquire the Breaching Slash Daedalus upgrade for Stygius",
+    "label": "Take the Breaching Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:cruel-thrust",
-    "label": "Acquire the Cruel Thrust Daedalus upgrade for Stygius",
+    "label": "Take the Cruel Thrust Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:cursed-slash",
-    "label": "Acquire the Cursed Slash Daedalus upgrade for Stygius",
+    "label": "Take the Cursed Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:dash-nova",
-    "label": "Acquire the Dash Nova Daedalus upgrade for Stygius",
+    "label": "Take the Dash Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:double-edge",
-    "label": "Acquire the Double Edge Daedalus upgrade for Stygius",
+    "label": "Take the Double Edge Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:double-nova",
-    "label": "Acquire the Double Nova Daedalus upgrade for Stygius",
+    "label": "Take the Double Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:flurry-slash",
-    "label": "Acquire the Flurry Slash Daedalus upgrade for Stygius",
+    "label": "Take the Flurry Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:hoarding-slash",
-    "label": "Acquire the Hoarding Slash Daedalus upgrade for Stygius",
+    "label": "Take the Hoarding Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:piercing-wave",
-    "label": "Acquire the Piercing Wave Daedalus upgrade for Stygius",
+    "label": "Take the Piercing Wave Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:shadow-slash",
-    "label": "Acquire the Shadow Slash Daedalus upgrade for Stygius",
+    "label": "Take the Shadow Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:super-nova",
-    "label": "Acquire the Super Nova Daedalus upgrade for Stygius",
+    "label": "Take the Super Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:stygius:world-splitter",
-    "label": "Acquire the World Splitter Daedalus upgrade for Stygius",
+    "label": "Take the World Splitter Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:twin-shot",
-    "label": "Acquire the Twin Shot Daedalus upgrade for Coronacht",
+    "label": "Take the Twin Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:sniper-shot",
-    "label": "Acquire the Sniper Shot Daedalus upgrade for Coronacht",
+    "label": "Take the Sniper Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:explosive-shot",
-    "label": "Acquire the Explosive Shot Daedalus upgrade for Coronacht",
+    "label": "Take the Explosive Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:flurry-shot",
-    "label": "Acquire the Flurry Shot Daedalus upgrade for Coronacht",
+    "label": "Take the Flurry Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:piercing-volley",
-    "label": "Acquire the Piercing Volley Daedalus upgrade for Coronacht",
+    "label": "Take the Piercing Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:perfect-shot",
-    "label": "Acquire the Perfect Shot Daedalus upgrade for Coronacht",
+    "label": "Take the Perfect Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:relentless-volley",
-    "label": "Acquire the Relentless Volley Daedalus upgrade for Coronacht",
+    "label": "Take the Relentless Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:triple-shot",
-    "label": "Acquire the Triple Shot Daedalus upgrade for Coronacht",
+    "label": "Take the Triple Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:charged-volley",
-    "label": "Acquire the Charged Volley Daedalus upgrade for Coronacht",
+    "label": "Take the Charged Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:chain-shot",
-    "label": "Acquire the Chain Shot Daedalus upgrade for Coronacht",
+    "label": "Take the Chain Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:point-blank-shot",
-    "label": "Acquire the Point-Blank Shot Daedalus upgrade for Coronacht",
+    "label": "Take the Point-Blank Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:coronacht:concentrated-volley",
-    "label": "Acquire the Concentrated Volley Daedalus upgrade for Coronacht",
+    "label": "Take the Concentrated Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:dread-flight",
-    "label": "Acquire the Dread Flight Daedalus upgrade for Aegis",
+    "label": "Take the Dread Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:sudden-rush",
-    "label": "Acquire the Sudden Rush Daedalus upgrade for Aegis",
+    "label": "Take the Sudden Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:pulverizing-blow",
-    "label": "Acquire the Pulverizing Blow Daedalus upgrade for Aegis",
+    "label": "Take the Pulverizing Blow Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:dashing-wallop",
-    "label": "Acquire the Dashing Wallop Daedalus upgrade for Aegis",
+    "label": "Take the Dashing Wallop Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:explosive-return",
-    "label": "Acquire the Explosive Return Daedalus upgrade for Aegis",
+    "label": "Take the Explosive Return Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:minotaur-rush",
-    "label": "Acquire the Minotaur Rush Daedalus upgrade for Aegis",
+    "label": "Take the Minotaur Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:breaching-rush",
-    "label": "Acquire the Breaching Rush Daedalus upgrade for Aegis",
+    "label": "Take the Breaching Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:charged-shot",
-    "label": "Acquire the Charged Shot Daedalus upgrade for Aegis",
+    "label": "Take the Charged Shot Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:charged-flight",
-    "label": "Acquire the Charged Flight Daedalus upgrade for Aegis",
+    "label": "Take the Charged Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:empowering-flight",
-    "label": "Acquire the Empowering Flight Daedalus upgrade for Aegis",
+    "label": "Take the Empowering Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:dashing-flight",
-    "label": "Acquire the Dashing Flight Daedalus upgrade for Aegis",
+    "label": "Take the Dashing Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:aegis:ferocious-guard",
-    "label": "Acquire the Ferocious Guard Daedalus upgrade for Aegis",
+    "label": "Take the Ferocious Guard Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:extending-jab",
-    "label": "Acquire the Extending Jab Daedalus upgrade for Varatha",
+    "label": "Take the Extending Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:chain-skewer",
-    "label": "Acquire the Chain Skewer Daedalus upgrade for Varatha",
+    "label": "Take the Chain Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:breaching-skewer",
-    "label": "Acquire the Breaching Skewer Daedalus upgrade for Varatha",
+    "label": "Take the Breaching Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:vicious-skewer",
-    "label": "Acquire the Vicious Skewer Daedalus upgrade for Varatha",
+    "label": "Take the Vicious Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:exploding-launcher",
-    "label": "Acquire the Exploding Launcher Daedalus upgrade for Varatha",
+    "label": "Take the Exploding Launcher Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:massive-spin",
-    "label": "Acquire the Massive Spin Daedalus upgrade for Varatha",
+    "label": "Take the Massive Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:quick-spin",
-    "label": "Acquire the Quick Spin Daedalus upgrade for Varatha",
+    "label": "Take the Quick Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:flurry-jab",
-    "label": "Acquire the Flurry Jab Daedalus upgrade for Varatha",
+    "label": "Take the Flurry Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:charged-skewer",
-    "label": "Acquire the Charged Skewer Daedalus upgrade for Varatha",
+    "label": "Take the Charged Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:serrated-point",
-    "label": "Acquire the Serrated Point Daedalus upgrade for Varatha",
+    "label": "Take the Serrated Point Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:flaring-spin",
-    "label": "Acquire the Flaring Spin Daedalus upgrade for Varatha",
+    "label": "Take the Flaring Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:varatha:triple-jab",
-    "label": "Acquire the Triple Jab Daedalus upgrade for Varatha",
+    "label": "Take the Triple Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:breaching-cross",
-    "label": "Acquire the Breaching Cross Daedalus upgrade for Malphon",
+    "label": "Take the Breaching Cross Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:rolling-knuckle",
-    "label": "Acquire the Rolling Knuckle Daedalus upgrade for Malphon",
+    "label": "Take the Rolling Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:long-knuckle",
-    "label": "Acquire the Long Knuckle Daedalus upgrade for Malphon",
+    "label": "Take the Long Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:draining-cutter",
-    "label": "Acquire the Draining Cutter Daedalus upgrade for Malphon",
+    "label": "Take the Draining Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:concentrated-knuckle",
-    "label": "Acquire the Concentrated Knuckle Daedalus upgrade for Malphon",
+    "label": "Take the Concentrated Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:explosive-upper",
-    "label": "Acquire the Explosive Upper Daedalus upgrade for Malphon",
+    "label": "Take the Explosive Upper Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:flying-cutter",
-    "label": "Acquire the Flying Cutter Daedalus upgrade for Malphon",
+    "label": "Take the Flying Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:rush-kick",
-    "label": "Acquire the Rush Kick Daedalus upgrade for Malphon",
+    "label": "Take the Rush Kick Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:quake-cutter",
-    "label": "Acquire the Quake Cutter Daedalus upgrade for Malphon",
+    "label": "Take the Quake Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:kinetic-launcher",
-    "label": "Acquire the Kinetic Launcher Daedalus upgrade for Malphon",
+    "label": "Take the Kinetic Launcher Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:heavy-knuckle",
-    "label": "Acquire the Heavy Knuckle Daedalus upgrade for Malphon",
+    "label": "Take the Heavy Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:malphon:colossus-knuckle",
-    "label": "Acquire the Colossus Knuckle Daedalus upgrade for Malphon",
+    "label": "Take the Colossus Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:flurry-fire",
-    "label": "Acquire the Flurry Fire Daedalus upgrade for Exagryph",
+    "label": "Take the Flurry Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:ricochet-fire",
-    "label": "Acquire the Ricochet Fire Daedalus upgrade for Exagryph",
+    "label": "Take the Ricochet Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:spread-fire",
-    "label": "Acquire the Spread Fire Daedalus upgrade for Exagryph",
+    "label": "Take the Spread Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:explosive-fire",
-    "label": "Acquire the Explosive Fire Daedalus upgrade for Exagryph",
+    "label": "Take the Explosive Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:delta-chamber",
-    "label": "Acquire the Delta Chamber Daedalus upgrade for Exagryph",
+    "label": "Take the Delta Chamber Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:piercing-fire",
-    "label": "Acquire the Piercing Fire Daedalus upgrade for Exagryph",
+    "label": "Take the Piercing Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:triple-bomb",
-    "label": "Acquire the Triple Bomb Daedalus upgrade for Exagryph",
+    "label": "Take the Triple Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:rocket-bomb",
-    "label": "Acquire the Rocket Bomb Daedalus upgrade for Exagryph",
+    "label": "Take the Rocket Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:targeting-system",
-    "label": "Acquire the Targeting System Daedalus upgrade for Exagryph",
+    "label": "Take the Targeting System Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:hazard-bomb",
-    "label": "Acquire the Hazard Bomb Daedalus upgrade for Exagryph",
+    "label": "Take the Hazard Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:cluster-bomb",
-    "label": "Acquire the Cluster Bomb Daedalus upgrade for Exagryph",
+    "label": "Take the Cluster Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
   {
     "id": "daedalus:exagryph:seeking-fire",
-    "label": "Acquire the Seeking Fire Daedalus upgrade for Exagryph",
+    "label": "Take the Seeking Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy"
   },
