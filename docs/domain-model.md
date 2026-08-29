@@ -69,7 +69,11 @@ condition in the label:
 - state plus action in the same moment, such as slaying Skelly with Stygius while
   its Zagreus aspect is at level 5
 - clearing a region while wielding a specific weapon and aspect
-- coverage across many runs, such as the 15 Pact conditions at maximum rank
+- coverage across many runs, such as escaping once under each of the 15 Pact
+  conditions. Note the requirement is to have the condition *active*, not to max
+  it: the Fated List says "Even a single point in a Condition will check it off
+  on the list", and the Pact page agrees. An earlier version of this line said
+  "at maximum rank" and was wrong.
 
 ## 4. Shared actions
 
