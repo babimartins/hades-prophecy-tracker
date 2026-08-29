@@ -47,6 +47,20 @@ const sectioned: Achievement[] = [
   },
 ]
 
+/**
+ * 41 achievements across two sections (above `LARGE_LIST_ROW_THRESHOLD`),
+ * the shape of a large single collection filtered alone (Boons, Codex,
+ * Daedalus) or the unfiltered "All" view.
+ */
+const large: Achievement[] = Array.from({ length: 41 }, (_, index) => ({
+  id: `codex:entry-${index}`,
+  name: `Entry ${index}`,
+  description: `Entry ${index}.`,
+  collection: 'codex',
+  requirement: { kind: 'all', of: [`a:fact-${index}`] },
+  section: index < 21 ? 'chthonic-gods' : 'olympian-gods',
+}))
+
 const collectionsMeta = [
   { id: 'prophecy', name: 'Fated List of Minor Prophecies' },
   { id: 'codex', name: 'Codex' },
@@ -200,6 +214,31 @@ describe('achievement-list', () => {
     await element.updateComplete
     const groups = [...element.shadowRoot!.querySelectorAll('details')]
     expect(groups.every((group) => group.open)).toBe(true)
+  })
+
+  it('collapses every section by default once the list is large', async () => {
+    render(html`<achievement-list .achievements=${large} .facts=${{}}></achievement-list>`, document.body)
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups.length).toBe(2)
+    expect(groups.every((group) => group.open)).toBe(false)
+  })
+
+  it('lets an explicit collapse-state entry force a section open even on a large list', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${large}
+        .facts=${{}}
+        .collapsedSections=${{ 'codex:chthonic-gods': false }}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups[0]!.open).toBe(true)
+    expect(groups[1]!.open).toBe(false)
   })
 
   it('honours a caller-supplied collapse state, one section at a time', async () => {

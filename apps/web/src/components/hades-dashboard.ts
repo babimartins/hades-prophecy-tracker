@@ -117,7 +117,7 @@ export class HadesDashboard extends LitElement {
     return html`
       <h1>Hades Prophecy Tracker</h1>
       ${this.saveError ? html`<p class="error">${this.saveError}</p>` : null}
-      <div class="grid">
+      <div class="grid top-row">
         <hd-card>
           <span slot="header">Overall</span>
           <hd-progress
@@ -126,6 +126,21 @@ export class HadesDashboard extends LitElement {
             label="Overall progress"
           ></hd-progress>
         </hd-card>
+        <hd-card>
+          <span slot="header">Next steps</span>
+          <next-steps-panel
+            .catalog=${dataset}
+            .facts=${facts}
+            .limit=${8}
+            @fact-toggle=${this.onFactToggle}
+          ></next-steps-panel>
+        </hd-card>
+        <hd-card>
+          <span slot="header">Backup</span>
+          <transfer-controls .facts=${facts} @facts-import=${this.onImport}></transfer-controls>
+        </hd-card>
+      </div>
+      <div class="grid collections-grid">
         ${dataset.collections
           .filter((collection) => (overall.byCollection[collection.id]?.total ?? 0) > 0)
           .map((collection) => {
@@ -141,19 +156,6 @@ export class HadesDashboard extends LitElement {
               </hd-card>
             `
           })}
-        <hd-card>
-          <span slot="header">Next steps</span>
-          <next-steps-panel
-            .catalog=${dataset}
-            .facts=${facts}
-            .limit=${8}
-            @fact-toggle=${this.onFactToggle}
-          ></next-steps-panel>
-        </hd-card>
-        <hd-card>
-          <span slot="header">Backup</span>
-          <transfer-controls .facts=${facts} @facts-import=${this.onImport}></transfer-controls>
-        </hd-card>
       </div>
       ${this.openId
         ? html`

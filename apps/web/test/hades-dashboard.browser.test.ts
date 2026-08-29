@@ -60,6 +60,32 @@ describe('hades-dashboard collection cards', () => {
   })
 })
 
+describe('hades-dashboard layout', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('keeps Overall, Next steps and Backup in one row above the per-collection grid', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const topRow = element.shadowRoot!.querySelector('.top-row')!
+    const topRowHeaders = [...topRow.querySelectorAll('hd-card > [slot="header"]')].map(
+      (node) => node.textContent,
+    )
+    expect(topRowHeaders).toEqual(['Overall', 'Next steps', 'Backup'])
+
+    // The per-collection cards render in a separate grid, after the top row,
+    // so the player never scrolls past them to reach Next steps or Backup.
+    const collectionsGrid = element.shadowRoot!.querySelector('.collections-grid')!
+    expect(collectionsGrid.querySelector('hd-card')).toBeTruthy()
+    expect(topRow.compareDocumentPosition(collectionsGrid) & Node.DOCUMENT_POSITION_FOLLOWING).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING,
+    )
+  })
+})
+
 describe('hades-dashboard collection filter', () => {
   beforeEach(() => {
     render(html``, document.body)

@@ -20,6 +20,19 @@ function sectionKey(collection: string, section: string): string {
 }
 
 /**
+ * A view at or below this many rows defaults every section open, matching
+ * the behaviour from before sections could collapse. Above it, a section
+ * defaults closed unless the caller says otherwise. Chosen so a filtered,
+ * short view stays exactly as before (Weapon Aspects and Mirror of Night
+ * are 24 rows each, filtered alone) while the unfiltered "All" view (545
+ * rows) and a large single collection filtered alone (Boons 174, Codex
+ * 119, Daedalus 72) default closed. A single collapsed section is worse
+ * than an open one, so this only ever closes a section nobody asked to
+ * keep open.
+ */
+const LARGE_LIST_ROW_THRESHOLD = 40
+
+/**
  * Groups achievements by collection, then by section within each collection,
  * preserving first-appearance order at both levels. A collection's
  * achievements with no section collect into one group keyed by `undefined`,
@@ -93,6 +106,10 @@ function sectionHeading(section: string): string {
  * detail view) must keep `collapsedSections` itself to preserve it. It is
  * keyed by `${collection}:${section}`, not by the bare section slug, so two
  * collections that happen to share a section slug collapse independently.
+ *
+ * A section with no explicit entry in `collapsedSections` defaults open on a
+ * short list and closed on a long one — see `LARGE_LIST_ROW_THRESHOLD`. An
+ * explicit entry always wins over the default, in either direction.
  */
 export class AchievementList extends LitElement {
   static override readonly styles = css`
@@ -226,7 +243,9 @@ export class AchievementList extends LitElement {
     const collection = group.collection
     const section = group.section
     const key = sectionKey(collection, section)
-    const open = !this.collapsedSections[key]
+    const explicit = this.collapsedSections[key]
+    const defaultOpen = this.achievements.length <= LARGE_LIST_ROW_THRESHOLD
+    const open = explicit === undefined ? defaultOpen : !explicit
     return html`
       <details ?open=${open}>
         <summary
