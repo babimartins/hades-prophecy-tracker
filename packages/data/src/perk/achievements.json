@@ -1,0 +1,134 @@
+[
+  {
+    "id": "perk:shifter",
+    "name": "Shifter",
+    "description": "Slay a foe with the Shifter Perk active (the foe teleports randomly).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:shifter"
+      ]
+    }
+  },
+  {
+    "id": "perk:bruiser",
+    "name": "Bruiser",
+    "description": "Slay a foe with the Bruiser Perk active (the foe gains greatly increased health and size).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:bruiser"
+      ]
+    }
+  },
+  {
+    "id": "perk:slugger",
+    "name": "Slugger",
+    "description": "Slay a foe with the Slugger Perk active (the foe deals more damage).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:slugger"
+      ]
+    }
+  },
+  {
+    "id": "perk:puller",
+    "name": "Puller",
+    "description": "Slay a foe with the Puller Perk active (the foe pulls you toward it with a field you must dash to escape).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:puller"
+      ]
+    }
+  },
+  {
+    "id": "perk:savior",
+    "name": "Savior",
+    "description": "Slay a foe with the Savior Perk active (the foe periodically shields nearby foes).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:savior"
+      ]
+    }
+  },
+  {
+    "id": "perk:speeder",
+    "name": "Speeder",
+    "description": "Slay a foe with the Speeder Perk active (the foe attacks and moves faster).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:speeder"
+      ]
+    }
+  },
+  {
+    "id": "perk:linker",
+    "name": "Linker",
+    "description": "Slay a foe with the Linker Perk active (the foe links to another foe with a damaging laser).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:linker"
+      ]
+    }
+  },
+  {
+    "id": "perk:cloner",
+    "name": "Cloner",
+    "description": "Slay a foe with the Cloner Perk active (the foe spawns fake one-hp clones, Tartarus only).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:cloner"
+      ]
+    }
+  },
+  {
+    "id": "perk:burner",
+    "name": "Burner",
+    "description": "Slay a foe with the Burner Perk active (the foe constantly creates fire traps, Asphodel only).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:burner"
+      ]
+    }
+  },
+  {
+    "id": "perk:seeker",
+    "name": "Seeker",
+    "description": "Slay a foe with the Seeker Perk active (the foe's projectiles home in on you).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:seeker"
+      ]
+    }
+  },
+  {
+    "id": "perk:popper",
+    "name": "Popper",
+    "description": "Slay a foe with the Popper Perk active (the foe drops exploding fake souls alongside the real one, Elysium only).",
+    "collection": "perk",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:popper"
+      ]
+    }
+  }
+]
