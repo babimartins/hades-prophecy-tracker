@@ -778,5 +778,161 @@
         "daedalus:malphon:colossus-knuckle"
       ]
     }
+  },
+  {
+    "id": "daedalus:exagryph:flurry-fire",
+    "name": "Flurry Fire",
+    "description": "Take the Flurry Fire Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:flurry-fire"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:ricochet-fire",
+    "name": "Ricochet Fire",
+    "description": "Take the Ricochet Fire Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:ricochet-fire"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:spread-fire",
+    "name": "Spread Fire",
+    "description": "Take the Spread Fire Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:spread-fire"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:explosive-fire",
+    "name": "Explosive Fire",
+    "description": "Take the Explosive Fire Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:explosive-fire"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:delta-chamber",
+    "name": "Delta Chamber",
+    "description": "Take the Delta Chamber Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:delta-chamber"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:piercing-fire",
+    "name": "Piercing Fire",
+    "description": "Take the Piercing Fire Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:piercing-fire"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:triple-bomb",
+    "name": "Triple Bomb",
+    "description": "Take the Triple Bomb Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:triple-bomb"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:rocket-bomb",
+    "name": "Rocket Bomb",
+    "description": "Take the Rocket Bomb Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:rocket-bomb"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:targeting-system",
+    "name": "Targeting System",
+    "description": "Take the Targeting System Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:targeting-system"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:hazard-bomb",
+    "name": "Hazard Bomb",
+    "description": "Take the Hazard Bomb Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:hazard-bomb"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:cluster-bomb",
+    "name": "Cluster Bomb",
+    "description": "Take the Cluster Bomb Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:cluster-bomb"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:exagryph:seeking-fire",
+    "name": "Seeking Fire",
+    "description": "Take the Seeking Fire Daedalus enchantment for Exagryph.",
+    "collection": "daedalus",
+    "section": "exagryph",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:exagryph:seeking-fire"
+      ]
+    }
   }
 ]
