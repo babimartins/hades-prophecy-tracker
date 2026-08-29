@@ -1,4 +1,5 @@
 import { collectFactIds } from '@hades/engine'
+import type { RequirementChild } from '@hades/schema'
 import { describe, expect, it } from 'vitest'
 import { dataset } from '../src/index.js'
 
@@ -53,7 +54,7 @@ describe('dataset integrity', () => {
     const factsById = new Map(dataset.facts.map((fact) => [fact.id, fact]))
     const violations: string[] = []
 
-    function walk(achievementId: string, node: (typeof dataset.achievements)[number]['requirement']): void {
+    function walk(achievementId: string, node: RequirementChild): void {
       if (typeof node === 'string') return
       if (node.kind === 'atLeast') {
         const fact = factsById.get(node.fact)
@@ -88,7 +89,7 @@ describe('dataset integrity', () => {
     const plainNumberFactIds = new Set<string>()
     let referenceCount = 0
 
-    function walk(node: (typeof dataset.achievements)[number]['requirement']): void {
+    function walk(node: RequirementChild): void {
       if (typeof node === 'string') {
         const fact = factsById.get(node)
         if (fact?.kind === 'number') {
