@@ -1,0 +1,314 @@
+[
+  {
+    "id": "talent:shadow-presence",
+    "name": "Shadow Presence",
+    "description": "Escape the Underworld with the Shadow Presence talent active (it gives Attack and Special +10% damage per rank when striking foes from behind).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:shadow-presence"
+      ]
+    }
+  },
+  {
+    "id": "talent:fiery-presence",
+    "name": "Fiery Presence",
+    "description": "Escape the Underworld with the Fiery Presence talent active (it gives Attack and Special +15% damage per rank when striking undamaged foes).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:fiery-presence"
+      ]
+    }
+  },
+  {
+    "id": "talent:chthonic-vitality",
+    "name": "Chthonic Vitality",
+    "description": "Escape the Underworld with the Chthonic Vitality talent active (each rank restores 1 Health when you exit a chamber).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:chthonic-vitality"
+      ]
+    }
+  },
+  {
+    "id": "talent:dark-regeneration",
+    "name": "Dark Regeneration",
+    "description": "Escape the Underworld with the Dark Regeneration talent active (each rank makes +30% of any Darkness you collect restore your Health by that much).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:dark-regeneration"
+      ]
+    }
+  },
+  {
+    "id": "talent:death-defiance",
+    "name": "Death Defiance",
+    "description": "Escape the Underworld with the Death Defiance talent active (each rank restores you for 50% Health, once, when your Life Total is depleted).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:death-defiance"
+      ]
+    }
+  },
+  {
+    "id": "talent:stubborn-defiance",
+    "name": "Stubborn Defiance",
+    "description": "Escape the Underworld with the Stubborn Defiance talent active (it restores you to 30% Health, once per chamber, when your Life Total is depleted).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:stubborn-defiance"
+      ]
+    }
+  },
+  {
+    "id": "talent:greater-reflex",
+    "name": "Greater Reflex",
+    "description": "Escape the Underworld with the Greater Reflex talent active (each rank lets you chain one extra Dash before briefly recovering).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:greater-reflex"
+      ]
+    }
+  },
+  {
+    "id": "talent:ruthless-reflex",
+    "name": "Ruthless Reflex",
+    "description": "Escape the Underworld with the Ruthless Reflex talent active (dashing just before getting hit gives +50% damage and dodge chance for 2 seconds).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:ruthless-reflex"
+      ]
+    }
+  },
+  {
+    "id": "talent:boiling-blood",
+    "name": "Boiling Blood",
+    "description": "Escape the Underworld with the Boiling Blood talent active (each rank gives +10% Attack and Special damage to foes carrying your Cast Ammo).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:boiling-blood"
+      ]
+    }
+  },
+  {
+    "id": "talent:abyssal-blood",
+    "name": "Abyssal Blood",
+    "description": "Escape the Underworld with the Abyssal Blood talent active (each rank reduces the speed and damage of foes carrying your Cast Ammo by -6%).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:abyssal-blood"
+      ]
+    }
+  },
+  {
+    "id": "talent:infernal-soul",
+    "name": "Infernal Soul",
+    "description": "Escape the Underworld with the Infernal Soul talent active (each rank gives +1 Cast Ammo for your Cast).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:infernal-soul"
+      ]
+    }
+  },
+  {
+    "id": "talent:stygian-soul",
+    "name": "Stygian Soul",
+    "description": "Escape the Underworld with the Stygian Soul talent active (your Cast Ammo regenerates instead of dropping, 1 second faster per rank).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:stygian-soul"
+      ]
+    }
+  },
+  {
+    "id": "talent:deep-pockets",
+    "name": "Deep Pockets",
+    "description": "Escape the Underworld with the Deep Pockets talent active (each rank grants 10 Obols at the start of each escape from the House of Hades).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:deep-pockets"
+      ]
+    }
+  },
+  {
+    "id": "talent:golden-touch",
+    "name": "Golden Touch",
+    "description": "Escape the Underworld with the Golden Touch talent active (each rank grants +5% of your Obols total each time you clear an Underworld region).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:golden-touch"
+      ]
+    }
+  },
+  {
+    "id": "talent:thick-skin",
+    "name": "Thick Skin",
+    "description": "Escape the Underworld with the Thick Skin talent active (each rank adds +5 Health to your Life Total).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:thick-skin"
+      ]
+    }
+  },
+  {
+    "id": "talent:high-confidence",
+    "name": "High Confidence",
+    "description": "Escape the Underworld with the High Confidence talent active (each rank gives +5% damage while you have 80% Health or greater).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:high-confidence"
+      ]
+    }
+  },
+  {
+    "id": "talent:privileged-status",
+    "name": "Privileged Status",
+    "description": "Escape the Underworld with the Privileged Status talent active (each rank gives +20% damage against foes afflicted by at least two Status Curse effects).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:privileged-status"
+      ]
+    }
+  },
+  {
+    "id": "talent:family-favorite",
+    "name": "Family Favorite",
+    "description": "Escape the Underworld with the Family Favorite talent active (each rank gives +2.5% damage for each different Olympian whose Boons you hold).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:family-favorite"
+      ]
+    }
+  },
+  {
+    "id": "talent:olympian-favor",
+    "name": "Olympian Favor",
+    "description": "Escape the Underworld with the Olympian Favor talent active (each rank adds a 1% bonus chance for a Boon to be Rare).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:olympian-favor"
+      ]
+    }
+  },
+  {
+    "id": "talent:dark-foresight",
+    "name": "Dark Foresight",
+    "description": "Escape the Underworld with the Dark Foresight talent active (each rank gives +2% greater chance for Gold Laurel rewards).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:dark-foresight"
+      ]
+    }
+  },
+  {
+    "id": "talent:gods-pride",
+    "name": "Gods' Pride",
+    "description": "Escape the Underworld with the Gods' Pride talent active (each rank adds a 1% bonus chance for a Boon to be Epic).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:gods-pride"
+      ]
+    }
+  },
+  {
+    "id": "talent:gods-legacy",
+    "name": "Gods' Legacy",
+    "description": "Escape the Underworld with the Gods' Legacy talent active (each rank gives +1% greater chance for a Boon to be Legendary or a Duo).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:gods-legacy"
+      ]
+    }
+  },
+  {
+    "id": "talent:fated-authority",
+    "name": "Fated Authority",
+    "description": "Escape the Underworld with the Fated Authority talent active (each rank gives one die, used to alter the reward for the next chamber).",
+    "collection": "mirror",
+    "section": "red",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:fated-authority"
+      ]
+    }
+  },
+  {
+    "id": "talent:fated-persuasion",
+    "name": "Fated Persuasion",
+    "description": "Escape the Underworld with the Fated Persuasion talent active (each rank gives one die, used to alter Boon and Well of Charon choices).",
+    "collection": "mirror",
+    "section": "green",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:fated-persuasion"
+      ]
+    }
+  }
+]

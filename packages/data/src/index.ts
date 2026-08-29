@@ -10,13 +10,23 @@ import daedalusAchievements from './daedalus/achievements.json'
 import daedalusFacts from './daedalus/facts.json'
 import keepsakeAchievements from './keepsakes/achievements.json'
 import keepsakeFacts from './keepsakes/facts.json'
+import mirrorAchievements from './mirror/achievements.json'
+import mirrorFacts from './mirror/facts.json'
 import prophecyAchievements from './prophecies/achievements.json'
 import prophecyFacts from './prophecies/facts.json'
 
 /** The curated dataset. Validation runs at import time, so bad data fails fast. */
 export const dataset: Dataset = validateDataset({
   collections,
-  facts: [...prophecyFacts, ...codexFacts, ...keepsakeFacts, ...aspectFacts, ...boonFacts, ...daedalusFacts],
+  facts: [
+    ...prophecyFacts,
+    ...codexFacts,
+    ...keepsakeFacts,
+    ...aspectFacts,
+    ...boonFacts,
+    ...daedalusFacts,
+    ...mirrorFacts,
+  ],
   achievements: [
     ...prophecyAchievements,
     ...codexAchievements,
@@ -24,5 +34,6 @@ export const dataset: Dataset = validateDataset({
     ...aspectAchievements,
     ...boonAchievements,
     ...daedalusAchievements,
+    ...mirrorAchievements,
   ],
 })
