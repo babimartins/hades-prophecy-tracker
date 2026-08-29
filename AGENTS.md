@@ -135,6 +135,14 @@ the stored one, discarding it in both IndexedDB and memory. Make the load
 itself the first operation in the queue, so a first-paint write waits behind
 it instead of racing it.
 
+**Dispatch a requirement control on the fact's own `kind`, never on the node shape.**
+The same fact appears as an `atLeast` node in one tree and a plain child in
+another, so shape-based dispatch renders a `number` fact as `hd-checklist-item`,
+which can only emit a boolean — and `#applyFact` reads `false` as delete and
+`true` as 1, silently destroying a stored rank. `requirement-tree.ts` and
+`next-steps-panel.ts` both need this guard; adding a control to one means
+checking the other.
+
 ## Game data
 
 `packages/data` is the one place where being wrong is worse than being late.
