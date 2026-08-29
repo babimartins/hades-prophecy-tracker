@@ -45,7 +45,7 @@ export class NextStepsPanel extends LitElement {
 
   private badgeFor(id: string): string {
     const count = impact(id, this.catalog)
-    return `${count} ${count === 1 ? 'prophecy' : 'prophecies'}`
+    return `${count} ${count === 1 ? 'entry' : 'entries'}`
   }
 
   /**
@@ -89,7 +89,7 @@ export class NextStepsPanel extends LitElement {
   override render() {
     const pending = nextSteps(this.catalog, this.facts).slice(0, this.limit)
     if (pending.length === 0) {
-      return html`<p>Nothing left to do. Every prophecy is complete.</p>`
+      return html`<p>Nothing left to do. Every entry is complete.</p>`
     }
 
     const factsById = new Map(this.catalog.facts.map((fact) => [fact.id, fact]))

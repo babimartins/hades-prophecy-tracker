@@ -36,8 +36,8 @@ export class SearchBox extends LitElement {
     return html`
       <input
         type="search"
-        aria-label="Search prophecies"
-        placeholder="Search a prophecy or a step"
+        aria-label="Search entries"
+        placeholder="Search an entry or a step"
         .value=${this.value}
         @input=${this.onInput}
       />

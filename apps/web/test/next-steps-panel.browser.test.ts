@@ -42,7 +42,7 @@ describe('next-steps-panel', () => {
     await element.updateComplete
     const items = element.shadowRoot!.querySelectorAll('hd-checklist-item')
     expect(items[0]!.getAttribute('label')).toBe('Shared step')
-    expect(items[0]!.getAttribute('badge')).toBe('2 prophecies')
+    expect(items[0]!.getAttribute('badge')).toBe('2 entries')
   })
 
   it('respects the limit', async () => {

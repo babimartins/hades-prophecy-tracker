@@ -13,7 +13,7 @@ describe('search-box', () => {
     await element.updateComplete
     const input = element.shadowRoot!.querySelector('input')!
     expect(input.type).toBe('search')
-    expect(input.getAttribute('aria-label')).toBe('Search prophecies')
+    expect(input.getAttribute('aria-label')).toBe('Search entries')
   })
 
   it('fires search-change with the typed query', async () => {

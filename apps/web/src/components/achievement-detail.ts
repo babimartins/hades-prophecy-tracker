@@ -36,7 +36,7 @@ export class AchievementDetail extends LitElement {
 
   override render() {
     const achievement = this.achievement
-    if (!achievement) return html`<p>Select a prophecy.</p>`
+    if (!achievement) return html`<p>Select an entry.</p>`
     const progress = achievementProgress(achievement, this.facts)
 
     return html`
