@@ -196,6 +196,12 @@ that adds no facts still ships an empty `facts.json` and still gets spread —
 facts at a second threshold. Nothing fails loudly if you spread the facts and
 forget the achievements.
 
+**A collection id need not match its fact namespace, and must not be "fixed" to.**
+`well-of-charon` is the collection, `wellofcharon:*` the facts; `workorder:*` is
+the same shape. The hyphen rule above governs new ids only — these predate it and
+key stored user progress, so renaming them to agree silently discards a player's
+saved checkboxes.
+
 ## Working method
 
 - Write the failing test first. Run it. Watch it fail for the reason you expect.
