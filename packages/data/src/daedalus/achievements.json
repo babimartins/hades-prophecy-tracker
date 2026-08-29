@@ -310,5 +310,161 @@
         "daedalus:coronacht:concentrated-volley"
       ]
     }
+  },
+  {
+    "id": "daedalus:aegis:dread-flight",
+    "name": "Dread Flight",
+    "description": "Take the Dread Flight Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:dread-flight"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:sudden-rush",
+    "name": "Sudden Rush",
+    "description": "Take the Sudden Rush Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:sudden-rush"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:pulverizing-blow",
+    "name": "Pulverizing Blow",
+    "description": "Take the Pulverizing Blow Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:pulverizing-blow"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:dashing-wallop",
+    "name": "Dashing Wallop",
+    "description": "Take the Dashing Wallop Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:dashing-wallop"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:explosive-return",
+    "name": "Explosive Return",
+    "description": "Take the Explosive Return Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:explosive-return"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:minotaur-rush",
+    "name": "Minotaur Rush",
+    "description": "Take the Minotaur Rush Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:minotaur-rush"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:breaching-rush",
+    "name": "Breaching Rush",
+    "description": "Take the Breaching Rush Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:breaching-rush"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:charged-shot",
+    "name": "Charged Shot",
+    "description": "Take the Charged Shot Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:charged-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:charged-flight",
+    "name": "Charged Flight",
+    "description": "Take the Charged Flight Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:charged-flight"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:empowering-flight",
+    "name": "Empowering Flight",
+    "description": "Take the Empowering Flight Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:empowering-flight"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:dashing-flight",
+    "name": "Dashing Flight",
+    "description": "Take the Dashing Flight Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:dashing-flight"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:aegis:ferocious-guard",
+    "name": "Ferocious Guard",
+    "description": "Take the Ferocious Guard Daedalus enchantment for Aegis.",
+    "collection": "daedalus",
+    "section": "aegis",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:aegis:ferocious-guard"
+      ]
+    }
   }
 ]
