@@ -934,5 +934,512 @@
         "boon:dionysus:high-tolerance"
       ]
     }
+  },
+  {
+    "id": "boon:hermes:second-wind",
+    "name": "Second Wind",
+    "description": "Earn the Second Wind boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:second-wind"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:swift-strike",
+    "name": "Swift Strike",
+    "description": "Earn the Swift Strike boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:swift-strike"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:swift-flourish",
+    "name": "Swift Flourish",
+    "description": "Earn the Swift Flourish boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:swift-flourish"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:quick-recovery",
+    "name": "Quick Recovery",
+    "description": "Earn the Quick Recovery boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:quick-recovery"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:greater-haste",
+    "name": "Greater Haste",
+    "description": "Earn the Greater Haste boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:greater-haste"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:hyper-sprint",
+    "name": "Hyper Sprint",
+    "description": "Earn the Hyper Sprint boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:hyper-sprint"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:flurry-cast",
+    "name": "Flurry Cast",
+    "description": "Earn the Flurry Cast boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:flurry-cast"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:greatest-reflex",
+    "name": "Greatest Reflex",
+    "description": "Earn the Greatest Reflex boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:greatest-reflex"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:greater-evasion",
+    "name": "Greater Evasion",
+    "description": "Earn the Greater Evasion boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:greater-evasion"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:quick-favor",
+    "name": "Quick Favor",
+    "description": "Earn the Quick Favor boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:quick-favor"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:side-hustle",
+    "name": "Side Hustle",
+    "description": "Earn the Side Hustle boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:side-hustle"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:quick-reload",
+    "name": "Quick Reload",
+    "description": "Earn the Quick Reload boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:quick-reload"
+      ]
+    }
+  },
+  {
+    "id": "boon:hermes:rush-delivery",
+    "name": "Rush Delivery",
+    "description": "Earn the Rush Delivery boon from Hermes.",
+    "collection": "boon",
+    "section": "hermes",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:hermes:rush-delivery"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:tempest-strike",
+    "name": "Tempest Strike",
+    "description": "Earn the Tempest Strike boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:tempest-strike"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:tempest-flourish",
+    "name": "Tempest Flourish",
+    "description": "Earn the Tempest Flourish boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:tempest-flourish"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:tidal-dash",
+    "name": "Tidal Dash",
+    "description": "Earn the Tidal Dash boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:tidal-dash"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:flood-shot",
+    "name": "Flood Shot",
+    "description": "Earn the Flood Shot boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:flood-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:poseidons-aid",
+    "name": "Poseidon's Aid",
+    "description": "Earn the Poseidon's Aid boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:poseidons-aid"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:hydraulic-might",
+    "name": "Hydraulic Might",
+    "description": "Earn the Hydraulic Might boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:hydraulic-might"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:oceans-bounty",
+    "name": "Ocean's Bounty",
+    "description": "Earn the Ocean's Bounty boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:oceans-bounty"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:boiling-point",
+    "name": "Boiling Point",
+    "description": "Earn the Boiling Point boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:boiling-point"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:rip-current",
+    "name": "Rip Current",
+    "description": "Earn the Rip Current boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:rip-current"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:typhoons-fury",
+    "name": "Typhoon's Fury",
+    "description": "Earn the Typhoon's Fury boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:typhoons-fury"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:breaking-wave",
+    "name": "Breaking Wave",
+    "description": "Earn the Breaking Wave boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:breaking-wave"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:razor-shoals",
+    "name": "Razor Shoals",
+    "description": "Earn the Razor Shoals boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:razor-shoals"
+      ]
+    }
+  },
+  {
+    "id": "boon:poseidon:wave-pounding",
+    "name": "Wave Pounding",
+    "description": "Earn the Wave Pounding boon from Poseidon.",
+    "collection": "boon",
+    "section": "poseidon",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:poseidon:wave-pounding"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:lightning-strike",
+    "name": "Lightning Strike",
+    "description": "Earn the Lightning Strike boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:lightning-strike"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:thunder-dash",
+    "name": "Thunder Dash",
+    "description": "Earn the Thunder Dash boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:thunder-dash"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:electric-shot",
+    "name": "Electric Shot",
+    "description": "Earn the Electric Shot boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:electric-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:thunder-flourish",
+    "name": "Thunder Flourish",
+    "description": "Earn the Thunder Flourish boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:thunder-flourish"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:zeus-aid",
+    "name": "Zeus' Aid",
+    "description": "Earn the Zeus' Aid boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:zeus-aid"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:heavens-vengeance",
+    "name": "Heaven's Vengeance",
+    "description": "Earn the Heaven's Vengeance boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:heavens-vengeance"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:clouded-judgement",
+    "name": "Clouded Judgment",
+    "description": "Earn the Clouded Judgment boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:clouded-judgement"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:billowing-strength",
+    "name": "Billowing Strength",
+    "description": "Earn the Billowing Strength boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:billowing-strength"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:lightning-reflexes",
+    "name": "Lightning Reflexes",
+    "description": "Earn the Lightning Reflexes boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:lightning-reflexes"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:storm-lightning",
+    "name": "Storm Lightning",
+    "description": "Earn the Storm Lightning boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:storm-lightning"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:static-discharge",
+    "name": "Static Discharge",
+    "description": "Earn the Static Discharge boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:static-discharge"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:high-voltage",
+    "name": "High Voltage",
+    "description": "Earn the High Voltage boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:high-voltage"
+      ]
+    }
+  },
+  {
+    "id": "boon:zeus:double-strike",
+    "name": "Double Strike",
+    "description": "Earn the Double Strike boon from Zeus.",
+    "collection": "boon",
+    "section": "zeus",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:zeus:double-strike"
+      ]
+    }
   }
 ]
