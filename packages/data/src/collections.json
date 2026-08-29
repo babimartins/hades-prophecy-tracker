@@ -6,5 +6,6 @@
   { "id": "aspect", "name": "Weapon Aspects" },
   { "id": "boon", "name": "Boons" },
   { "id": "daedalus", "name": "Daedalus" },
-  { "id": "mirror", "name": "Mirror of Night" }
+  { "id": "mirror", "name": "Mirror of Night" },
+  { "id": "pact", "name": "Pact of Punishment" }
 ]

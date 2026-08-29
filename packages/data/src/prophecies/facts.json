@@ -345,7 +345,8 @@
   {
     "id": "pact:extreme-measures",
     "label": "Activate the Extreme Measures Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 4,
     "collection": "prophecy"
   },
   {
@@ -1534,85 +1535,99 @@
   {
     "id": "pact:hard-labor",
     "label": "Activate the Hard Labor Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 5,
     "collection": "prophecy"
   },
   {
     "id": "pact:lasting-consequences",
     "label": "Activate the Lasting Consequences Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 4,
     "collection": "prophecy"
   },
   {
     "id": "pact:convenience-fee",
     "label": "Activate the Convenience Fee Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:jury-summons",
     "label": "Activate the Jury Summons Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {
     "id": "pact:calisthenics-program",
     "label": "Activate the Calisthenics Program Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:benefits-package",
     "label": "Activate the Benefits Package Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:middle-management",
     "label": "Activate the Middle Management Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 1,
     "collection": "prophecy"
   },
   {
     "id": "pact:underworld-customs",
     "label": "Activate the Underworld Customs Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 1,
     "collection": "prophecy"
   },
   {
     "id": "pact:forced-overtime",
     "label": "Activate the Forced Overtime Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:heightened-security",
     "label": "Activate the Heightened Security Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 1,
     "collection": "prophecy"
   },
   {
     "id": "pact:routine-inspection",
     "label": "Activate the Routine Inspection Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 4,
     "collection": "prophecy"
   },
   {
     "id": "pact:damage-control",
     "label": "Activate the Damage Control Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:approval-process",
     "label": "Activate the Approval Process Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 2,
     "collection": "prophecy"
   },
   {
     "id": "pact:tight-deadline",
     "label": "Activate the Tight Deadline Pact of Punishment condition",
-    "kind": "boolean",
+    "kind": "number",
+    "max": 3,
     "collection": "prophecy"
   },
   {

@@ -1,0 +1,167 @@
+[
+  {
+    "id": "pact:hard-labor",
+    "name": "Hard Labor",
+    "description": "Raise the Hard Labor Pact of Punishment condition to its maximum rank (5).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:hard-labor",
+      "value": 5
+    }
+  },
+  {
+    "id": "pact:lasting-consequences",
+    "name": "Lasting Consequences",
+    "description": "Raise the Lasting Consequences Pact of Punishment condition to its maximum rank (4).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:lasting-consequences",
+      "value": 4
+    }
+  },
+  {
+    "id": "pact:convenience-fee",
+    "name": "Convenience Fee",
+    "description": "Raise the Convenience Fee Pact of Punishment condition to its maximum rank (2).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:convenience-fee",
+      "value": 2
+    }
+  },
+  {
+    "id": "pact:jury-summons",
+    "name": "Jury Summons",
+    "description": "Raise the Jury Summons Pact of Punishment condition to its maximum rank (3).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:jury-summons",
+      "value": 3
+    }
+  },
+  {
+    "id": "pact:extreme-measures",
+    "name": "Extreme Measures",
+    "description": "Raise the Extreme Measures Pact of Punishment condition to its maximum rank (4).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:extreme-measures",
+      "value": 4
+    }
+  },
+  {
+    "id": "pact:calisthenics-program",
+    "name": "Calisthenics Program",
+    "description": "Raise the Calisthenics Program Pact of Punishment condition to its maximum rank (2).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:calisthenics-program",
+      "value": 2
+    }
+  },
+  {
+    "id": "pact:benefits-package",
+    "name": "Benefits Package",
+    "description": "Raise the Benefits Package Pact of Punishment condition to its maximum rank (2).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:benefits-package",
+      "value": 2
+    }
+  },
+  {
+    "id": "pact:middle-management",
+    "name": "Middle Management",
+    "description": "Raise the Middle Management Pact of Punishment condition to its maximum rank (1).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:middle-management",
+      "value": 1
+    }
+  },
+  {
+    "id": "pact:underworld-customs",
+    "name": "Underworld Customs",
+    "description": "Raise the Underworld Customs Pact of Punishment condition to its maximum rank (1).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:underworld-customs",
+      "value": 1
+    }
+  },
+  {
+    "id": "pact:forced-overtime",
+    "name": "Forced Overtime",
+    "description": "Raise the Forced Overtime Pact of Punishment condition to its maximum rank (2).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:forced-overtime",
+      "value": 2
+    }
+  },
+  {
+    "id": "pact:heightened-security",
+    "name": "Heightened Security",
+    "description": "Raise the Heightened Security Pact of Punishment condition to its maximum rank (1).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:heightened-security",
+      "value": 1
+    }
+  },
+  {
+    "id": "pact:routine-inspection",
+    "name": "Routine Inspection",
+    "description": "Raise the Routine Inspection Pact of Punishment condition to its maximum rank (4).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:routine-inspection",
+      "value": 4
+    }
+  },
+  {
+    "id": "pact:damage-control",
+    "name": "Damage Control",
+    "description": "Raise the Damage Control Pact of Punishment condition to its maximum rank (2).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:damage-control",
+      "value": 2
+    }
+  },
+  {
+    "id": "pact:approval-process",
+    "name": "Approval Process",
+    "description": "Raise the Approval Process Pact of Punishment condition to its maximum rank (2).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:approval-process",
+      "value": 2
+    }
+  },
+  {
+    "id": "pact:tight-deadline",
+    "name": "Tight Deadline",
+    "description": "Raise the Tight Deadline Pact of Punishment condition to its maximum rank (3).",
+    "collection": "pact",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "pact:tight-deadline",
+      "value": 3
+    }
+  }
+]

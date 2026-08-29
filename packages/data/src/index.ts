@@ -12,6 +12,8 @@ import keepsakeAchievements from './keepsakes/achievements.json'
 import keepsakeFacts from './keepsakes/facts.json'
 import mirrorAchievements from './mirror/achievements.json'
 import mirrorFacts from './mirror/facts.json'
+import pactAchievements from './pact/achievements.json'
+import pactFacts from './pact/facts.json'
 import prophecyAchievements from './prophecies/achievements.json'
 import prophecyFacts from './prophecies/facts.json'
 
@@ -26,6 +28,7 @@ export const dataset: Dataset = validateDataset({
     ...boonFacts,
     ...daedalusFacts,
     ...mirrorFacts,
+    ...pactFacts,
   ],
   achievements: [
     ...prophecyAchievements,
@@ -35,5 +38,6 @@ export const dataset: Dataset = validateDataset({
     ...boonAchievements,
     ...daedalusAchievements,
     ...mirrorAchievements,
+    ...pactAchievements,
   ],
 })
