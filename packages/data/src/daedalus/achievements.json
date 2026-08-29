@@ -1,0 +1,158 @@
+[
+  {
+    "id": "daedalus:stygius:breaching-slash",
+    "name": "Breaching Slash",
+    "description": "Take the Breaching Slash Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:breaching-slash"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:cruel-thrust",
+    "name": "Cruel Thrust",
+    "description": "Take the Cruel Thrust Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:cruel-thrust"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:cursed-slash",
+    "name": "Cursed Slash",
+    "description": "Take the Cursed Slash Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:cursed-slash"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:dash-nova",
+    "name": "Dash Nova",
+    "description": "Take the Dash Nova Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:dash-nova"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:double-edge",
+    "name": "Double Edge",
+    "description": "Take the Double Edge Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:double-edge"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:double-nova",
+    "name": "Double Nova",
+    "description": "Take the Double Nova Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:double-nova"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:flurry-slash",
+    "name": "Flurry Slash",
+    "description": "Take the Flurry Slash Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:flurry-slash"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:hoarding-slash",
+    "name": "Hoarding Slash",
+    "description": "Take the Hoarding Slash Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:hoarding-slash"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:piercing-wave",
+    "name": "Piercing Wave",
+    "description": "Take the Piercing Wave Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:piercing-wave"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:shadow-slash",
+    "name": "Shadow Slash",
+    "description": "Take the Shadow Slash Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:shadow-slash"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:super-nova",
+    "name": "Super Nova",
+    "description": "Take the Super Nova Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:super-nova"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:stygius:world-splitter",
+    "name": "World Splitter",
+    "description": "Take the World Splitter Daedalus enchantment for Stygius.",
+    "collection": "daedalus",
+    "section": "stygius",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:stygius:world-splitter"
+      ]
+    }
+  }
+]

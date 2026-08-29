@@ -4,5 +4,6 @@
   { "id": "codex", "name": "Codex" },
   { "id": "keepsake", "name": "Keepsakes" },
   { "id": "aspect", "name": "Weapon Aspects" },
-  { "id": "boon", "name": "Boons" }
+  { "id": "boon", "name": "Boons" },
+  { "id": "daedalus", "name": "Daedalus" }
 ]
