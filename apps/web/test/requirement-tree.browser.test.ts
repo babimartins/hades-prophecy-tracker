@@ -122,4 +122,82 @@ describe('requirement-tree', () => {
     input.dispatchEvent(new Event('change'))
     expect(detail).toEqual([{ id: 'a:rank', value: 0 }])
   })
+
+  describe('a number fact reached as a plain requirement child', () => {
+    // `pact:hard-labor` is a number fact (max 5). One achievement (the Pact
+    // collection entry) references it through an `atLeast` node. A different
+    // achievement (`prophecy:harsh-conditions`) references the very same fact
+    // as a plain child, because the prophecy only needs the condition
+    // active, not maxed. `requirement-tree` must render both safely: it must
+    // never let the plain-child view emit a boolean for a number fact, because
+    // `ProgressState#applyFact` treats `false` as "delete the fact" and `true`
+    // as "set it to 1", which silently destroys a higher stored rank.
+    function applySetFact(
+      facts: Record<string, boolean | number>,
+      id: string,
+      value: boolean | number,
+    ): Record<string, boolean | number> {
+      const next = { ...facts }
+      if (value === false || value === 0) delete next[id]
+      else next[id] = value
+      return next
+    }
+
+    it('never lets an untick-retick in the prophecy view destroy a rank set in the Pact view', async () => {
+      let facts: Record<string, boolean | number> = {}
+
+      // Step 1: the Pact collection view sets the condition to rank 5 through
+      // its `atLeast` node. Fact max is 5, mirroring `pact:hard-labor`.
+      let element = mount({ kind: 'atLeast', fact: 'a:shared-rank', value: 1 }, facts)
+      await element.updateComplete
+      let detail: Array<{ id: string; value: boolean | number }> = []
+      element.addEventListener('fact-toggle', (event) => {
+        detail.push((event as CustomEvent<{ id: string; value: boolean | number }>).detail)
+      })
+      let input = element.shadowRoot!.querySelector('input[type="number"]') as HTMLInputElement
+      input.value = '5'
+      input.dispatchEvent(new Event('change'))
+      facts = applySetFact(facts, detail[0]!.id, detail[0]!.value)
+      expect(facts['a:shared-rank']).toBe(5)
+
+      // Step 2: the prophecy view reaches the same fact as a plain child.
+      // Whatever control it renders, driving its normal interaction once
+      // must never emit a value that reduces the stored rank.
+      element = mount('a:shared-rank', facts)
+      await element.updateComplete
+      detail = []
+      element.addEventListener('fact-toggle', (event) => {
+        detail.push((event as CustomEvent<{ id: string; value: boolean | number }>).detail)
+      })
+
+      const checkbox = element.shadowRoot!.querySelector('hd-checklist-item')
+      if (checkbox) {
+        // Pre-fix shape: a lossy checkbox. Untick it, then re-tick it.
+        await (checkbox as HTMLElement & { updateComplete: Promise<boolean> }).updateComplete
+        const box = checkbox.shadowRoot!.querySelector('input')!
+        box.click() // untick
+        box.click() // re-tick
+      } else {
+        // Post-fix shape: a bounded numeric control, already showing 5.
+        input = element.shadowRoot!.querySelector('input[type="number"]') as HTMLInputElement
+        expect(input.value).toBe('5')
+      }
+
+      for (const event of detail) facts = applySetFact(facts, event.id, event.value)
+
+      // The invariant: a single interaction sequence in the prophecy view
+      // must never turn a stored 5 into a 1 (or delete it).
+      expect(facts['a:shared-rank']).toBe(5)
+    })
+
+    it('renders a bounded numeric control, not a checkbox, for a number fact used as a plain child', async () => {
+      const element = mount('a:shared-rank', { 'a:shared-rank': 5 })
+      await element.updateComplete
+      expect(element.shadowRoot!.querySelector('hd-checklist-item')).toBeNull()
+      const input = element.shadowRoot!.querySelector('input[type="number"]') as HTMLInputElement
+      expect(input).not.toBeNull()
+      expect(input.value).toBe('5')
+      expect(input.max).toBe('5') // 'a:shared-rank' fixture max is 5
+    })
+  })
 })

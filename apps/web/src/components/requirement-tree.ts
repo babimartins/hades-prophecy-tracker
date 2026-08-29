@@ -58,7 +58,20 @@ export class RequirementTree extends LitElement {
     return this.factsById.get(id)?.label ?? id
   }
 
+  /**
+   * Dispatches on the fact's own `kind`, never on the requirement node shape.
+   * A plain fact child of a `number` fact (for example a Pact condition
+   * referenced by a prophecy for its activation, not its rank) must render
+   * the same bounded stepper as an `atLeast` node. `hd-checklist-item` can
+   * only emit `checked: boolean`, and `ProgressState#applyFact` treats
+   * `false` as "delete the fact" and `true` as "set it to 1" — ticking or
+   * unticking a checkbox bound to a number fact would silently destroy any
+   * stored rank above 1. See `next-steps-panel.ts`, which guards the same
+   * hazard by checking `fact.kind === 'number'`.
+   */
   private renderFact(id: string): TemplateResult {
+    const fact = this.factsById.get(id)
+    if (fact?.kind === 'number') return this.renderNumberFact(id, fact)
     return html`
       <hd-checklist-item
         label=${this.labelFor(id)}
@@ -66,6 +79,34 @@ export class RequirementTree extends LitElement {
         @hd-toggle=${(event: CustomEvent<{ checked: boolean }>) =>
           this.emit(id, event.detail.checked)}
       ></hd-checklist-item>
+    `
+  }
+
+  /**
+   * A number fact reached as a plain child has no node-level `atLeast`
+   * threshold to show, unlike `renderRank`. The prophecy's own semantics are
+   * activation (rank >= 1), but the control still exposes the fact's full
+   * range and current value, so no interaction here can lower a rank the
+   * player set through a different view.
+   */
+  private renderNumberFact(id: string, fact: Fact): TemplateResult {
+    const max = fact.max ?? numericValue(id, this.facts)
+    return html`
+      <div class="rank">
+        <label for=${`rank-${id}`}>${this.labelFor(id)}</label>
+        <input
+          id=${`rank-${id}`}
+          type="number"
+          min="0"
+          max=${max}
+          .value=${String(numericValue(id, this.facts))}
+          @change=${(event: Event) => {
+            const raw = Number((event.target as HTMLInputElement).value)
+            this.emit(id, Math.min(Math.max(raw, 0), max))
+          }}
+        />
+        <span>/ ${max}</span>
+      </div>
     `
   }
 

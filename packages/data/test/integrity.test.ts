@@ -49,6 +49,64 @@ describe('dataset integrity', () => {
     expect(missing).toEqual([])
   })
 
+  it('never asks an atLeast node for more than the fact allows', () => {
+    const factsById = new Map(dataset.facts.map((fact) => [fact.id, fact]))
+    const violations: string[] = []
+
+    function walk(achievementId: string, node: (typeof dataset.achievements)[number]['requirement']): void {
+      if (typeof node === 'string') return
+      if (node.kind === 'atLeast') {
+        const fact = factsById.get(node.fact)
+        if (fact?.max !== undefined && node.value > fact.max) {
+          violations.push(`${achievementId} -> ${node.fact} (atLeast ${node.value} > max ${fact.max})`)
+        }
+        return
+      }
+      for (const child of node.of) walk(achievementId, child)
+    }
+
+    for (const achievement of dataset.achievements) walk(achievement.id, achievement.requirement)
+    expect(violations).toEqual([])
+  })
+
+  it('documents every number fact used as a plain (non-atLeast) requirement child', () => {
+    // Before the Critical-1 fix, `requirement-tree` dispatched on the
+    // requirement node shape, not on the fact's own `kind`: a number fact
+    // reached as a plain child rendered as a lossy boolean checkbox that
+    // could silently destroy a stored rank (untick, then re-tick, and a
+    // stored 5 becomes a 1). The fix makes `requirement-tree` check
+    // `fact.kind` for every plain child and render the same bounded numeric
+    // control as an `atLeast` node whenever it is `number`
+    // (apps/web/src/components/requirement-tree.ts,
+    // apps/web/test/requirement-tree.browser.test.ts), so this pattern is
+    // now safe by construction rather than forbidden.
+    //
+    // This test is a canary, not a ban: it pins the current, known-safe
+    // shape so a change to it is a deliberate, reviewed edit, not a silent
+    // one.
+    const factsById = new Map(dataset.facts.map((fact) => [fact.id, fact]))
+    const plainNumberFactIds = new Set<string>()
+    let referenceCount = 0
+
+    function walk(node: (typeof dataset.achievements)[number]['requirement']): void {
+      if (typeof node === 'string') {
+        const fact = factsById.get(node)
+        if (fact?.kind === 'number') {
+          plainNumberFactIds.add(node)
+          referenceCount += 1
+        }
+        return
+      }
+      if (node.kind === 'atLeast') return
+      for (const child of node.of) walk(child)
+    }
+
+    for (const achievement of dataset.achievements) walk(achievement.requirement)
+
+    expect(referenceCount).toBe(16)
+    expect(plainNumberFactIds.size).toBe(15)
+  })
+
   it('has no two facts whose labels normalize to the same string', () => {
     const normalize = (label: string): string => label.toLowerCase().trim().replace(/\s+/g, ' ')
     const idsByLabel = new Map<string, string[]>()
