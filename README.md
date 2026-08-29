@@ -118,7 +118,7 @@ Verified state of each command today:
 
 - `pnpm lint` passes.
 - `pnpm typecheck` passes.
-- `pnpm test` passes: 132 tests across 5 packages.
+- `pnpm test` passes: 135 tests across 5 packages.
 - `pnpm build` passes. It produces `apps/web/dist/index.html`.
 
 Browser tests run under Playwright's headless Chromium. Install the browser
