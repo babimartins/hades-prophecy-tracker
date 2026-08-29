@@ -5,14 +5,17 @@ each single action inside each prophecy.
 
 ## Status
 
-Slice 2 is complete. The dataset now covers four collections: the 55
-prophecies of the in-game Fated List, all 119 Codex entries, all 25
-keepsakes, and all 24 weapon aspect thresholds — 223 achievements in total,
-backed by 692 facts. A fifth collection, platform achievements, is
-registered but holds no entries yet. The dashboard offers a collection
-filter, search, and collapsible section grouping for collections (the
-Codex, the weapon aspects) whose in-game tables have sections. `pnpm build`
-passes and produces a working application.
+Slice 3 is complete. The dataset now covers 10 populated collections: the
+55 prophecies of the in-game Fated List, all 119 Codex entries, all 174
+boons, all 72 Daedalus enchantments, all 26 Well of Charon purchases, all
+25 keepsakes, all 24 weapon aspect thresholds, all 24 Mirror of Night
+talents, all 15 Pact of Punishment conditions, and all 11 perks — 545
+achievements in total, backed by 692 facts. An 11th collection, platform
+achievements, is registered but holds no entries yet. The dashboard offers
+a collection filter, search, and collapsible section grouping for the five
+collections (Codex, weapon aspects, boons, Daedalus, Mirror of Night)
+whose in-game tables have sections. `pnpm build` passes and produces a
+working application.
 
 The site is not live yet. GitHub Pages deployment needs one manual step from a
 repository owner. See "Deployment" below. Once that step runs, the site is at
@@ -49,11 +52,13 @@ The engine evaluates the expression against the fact map. It reports what is
 missing.
 
 Every achievement belongs to one collection — prophecies, Codex entries,
-keepsakes, weapon aspects, or (once populated) platform achievements. A
-Codex or weapon-aspect achievement also carries a `section`, naming its
-in-game table or weapon. The dashboard groups achievements by section, with
-each section collapsible, and offers a collection filter and a text search
-across names, descriptions and fact labels.
+keepsakes, weapon aspects, boons, Daedalus enchantments, Mirror of Night
+talents, Pact of Punishment conditions, perks, Well of Charon purchases, or
+(once populated) platform achievements. A Codex, weapon-aspect, boon,
+Daedalus or Mirror of Night achievement also carries a `section`, naming
+its in-game table, weapon or side. The dashboard groups achievements by
+section, with each section collapsible, and offers a collection filter and
+a text search across names, descriptions and fact labels.
 
 Progress stays in the browser, in IndexedDB. There is no account and no
 server.
@@ -70,24 +75,31 @@ This list is verified against the current state of the repository.
 | `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, `hd-progress`, and shared design tokens (`colorVar`, `colorTokens`). No game knowledge. |
 | `apps/web`         | Vite application. Holds the dashboard UI — collection filter, search, section grouping — the IndexedDB progress store, and the export/import transfer format. |
 
-The curated dataset in `packages/data` holds 223 achievements across four
+The curated dataset in `packages/data` holds 545 achievements across 10
 populated collections, each broken into its sub-item facts:
 
 | Collection                          | Entries | Notes                                             |
 | ------------------------------------ | ------- | -------------------------------------------------- |
-| Fated List of Minor Prophecies       | 55      | The full in-game Fated List.                       |
+| Boons                                | 174     | 111 standard boons across 9 gods, 28 duo boons, the 10 legendary boons the Fated List asks for, and 25 Chaos blessings and curses. |
 | Codex                                | 119     | Every entry, across the Codex's 9 in-game sections. |
+| Daedalus                             | 72      | 12 enchantments tracked per weapon, across the 6 weapons. |
+| Fated List of Minor Prophecies       | 55      | The full in-game Fated List.                       |
+| Well of Charon                       | 26      | Every purchasable item, tracked as ever bought.     |
 | Keepsakes                            | 25      | Every keepsake at max rank (`atLeast 3`). The same facts back the Fated List's "Close at Heart" at `atLeast 1`. |
 | Weapon Aspects                       | 24      | Every aspect threshold, across the 6 weapons.       |
+| Mirror of Night                      | 24      | 12 talent pairs, red and green side, per pair.      |
+| Pact of Punishment                   | 15      | Every condition, tracked as active (`atLeast 1`), not maxed. |
+| Perks                                | 11      | Every named perk from the Benefits Package condition. |
 
-692 facts back these 223 achievements. Some are shared across collections —
+692 facts back these 545 achievements. Some are shared across collections —
 for example, `aspect:stygius:zagreus` backs an achievement in the weapon
 aspects collection, two in the Fated List, and two in the Codex — so marking
 one action can advance entries in more than one collection at once.
 
 `packages/data/src/collections.json` also defines a separate `achievement`
-collection, for platform achievements. That collection holds no entries yet.
-Two sources disagree on the achievement count: the Hades Wiki's Achievements
+collection, for platform achievements. That collection holds no entries yet,
+which is why the dataset covers 10 of its 11 registered collections. Two
+sources disagree on the achievement count: the Hades Wiki's Achievements
 page lists 50, and Steam shows 49 publicly.
 
 ## Development
@@ -106,7 +118,7 @@ Verified state of each command today:
 
 - `pnpm lint` passes.
 - `pnpm typecheck` passes.
-- `pnpm test` passes: 128 tests across 5 packages.
+- `pnpm test` passes: 132 tests across 5 packages.
 - `pnpm build` passes. It produces `apps/web/dist/index.html`.
 
 Browser tests run under Playwright's headless Chromium. Install the browser
