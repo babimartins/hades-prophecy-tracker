@@ -154,5 +154,161 @@
         "daedalus:stygius:world-splitter"
       ]
     }
+  },
+  {
+    "id": "daedalus:coronacht:twin-shot",
+    "name": "Twin Shot",
+    "description": "Take the Twin Shot Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:twin-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:sniper-shot",
+    "name": "Sniper Shot",
+    "description": "Take the Sniper Shot Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:sniper-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:explosive-shot",
+    "name": "Explosive Shot",
+    "description": "Take the Explosive Shot Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:explosive-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:flurry-shot",
+    "name": "Flurry Shot",
+    "description": "Take the Flurry Shot Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:flurry-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:piercing-volley",
+    "name": "Piercing Volley",
+    "description": "Take the Piercing Volley Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:piercing-volley"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:perfect-shot",
+    "name": "Perfect Shot",
+    "description": "Take the Perfect Shot Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:perfect-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:relentless-volley",
+    "name": "Relentless Volley",
+    "description": "Take the Relentless Volley Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:relentless-volley"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:triple-shot",
+    "name": "Triple Shot",
+    "description": "Take the Triple Shot Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:triple-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:charged-volley",
+    "name": "Charged Volley",
+    "description": "Take the Charged Volley Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:charged-volley"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:chain-shot",
+    "name": "Chain Shot",
+    "description": "Take the Chain Shot Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:chain-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:point-blank-shot",
+    "name": "Point-Blank Shot",
+    "description": "Take the Point-Blank Shot Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:point-blank-shot"
+      ]
+    }
+  },
+  {
+    "id": "daedalus:coronacht:concentrated-volley",
+    "name": "Concentrated Volley",
+    "description": "Take the Concentrated Volley Daedalus enchantment for Coronacht.",
+    "collection": "daedalus",
+    "section": "coronacht",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "daedalus:coronacht:concentrated-volley"
+      ]
+    }
   }
 ]
