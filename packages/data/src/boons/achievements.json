@@ -1441,5 +1441,369 @@
         "boon:zeus:double-strike"
       ]
     }
+  },
+  {
+    "id": "boon:duo:scintillating-feast",
+    "name": "Scintillating Feast",
+    "description": "Earn the Scintillating Feast Duo Boon from Dionysus and Zeus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:scintillating-feast"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:vengeful-mood",
+    "name": "Vengeful Mood",
+    "description": "Earn the Vengeful Mood Duo Boon from Ares and Zeus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:vengeful-mood"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:sea-storm",
+    "name": "Sea Storm",
+    "description": "Earn the Sea Storm Duo Boon from Poseidon and Zeus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:sea-storm"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:lightning-phalanx",
+    "name": "Lightning Phalanx",
+    "description": "Earn the Lightning Phalanx Duo Boon from Athena and Zeus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:lightning-phalanx"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:merciful-end",
+    "name": "Merciful End",
+    "description": "Earn the Merciful End Duo Boon from Ares and Athena.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:merciful-end"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:calculated-risk",
+    "name": "Calculated Risk",
+    "description": "Earn the Calculated Risk Duo Boon from Athena and Dionysus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:calculated-risk"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:deadly-reversal",
+    "name": "Deadly Reversal",
+    "description": "Earn the Deadly Reversal Duo Boon from Artemis and Athena.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:deadly-reversal"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:hunting-blades",
+    "name": "Hunting Blades",
+    "description": "Earn the Hunting Blades Duo Boon from Ares and Artemis.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:hunting-blades"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:lightning-rod",
+    "name": "Lightning Rod",
+    "description": "Earn the Lightning Rod Duo Boon from Artemis and Zeus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:lightning-rod"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:heart-rend",
+    "name": "Heart Rend",
+    "description": "Earn the Heart Rend Duo Boon from Aphrodite and Artemis.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:heart-rend"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:curse-of-longing",
+    "name": "Curse of Longing",
+    "description": "Earn the Curse of Longing Duo Boon from Aphrodite and Ares.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:curse-of-longing"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:sweet-nectar",
+    "name": "Sweet Nectar",
+    "description": "Earn the Sweet Nectar Duo Boon from Aphrodite and Poseidon.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:sweet-nectar"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:low-tolerance",
+    "name": "Low Tolerance",
+    "description": "Earn the Low Tolerance Duo Boon from Aphrodite and Dionysus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:low-tolerance"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:exclusive-access",
+    "name": "Exclusive Access",
+    "description": "Earn the Exclusive Access Duo Boon from Dionysus and Poseidon.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:exclusive-access"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:crystal-clarity",
+    "name": "Crystal Clarity",
+    "description": "Earn the Crystal Clarity Duo Boon from Artemis and Demeter.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:crystal-clarity"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:ice-wine",
+    "name": "Ice Wine",
+    "description": "Earn the Ice Wine Duo Boon from Demeter and Dionysus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:ice-wine"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:blizzard-shot",
+    "name": "Blizzard Shot",
+    "description": "Earn the Blizzard Shot Duo Boon from Demeter and Poseidon.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:blizzard-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:cold-fusion",
+    "name": "Cold Fusion",
+    "description": "Earn the Cold Fusion Duo Boon from Demeter and Zeus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:cold-fusion"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:curse-of-drowning",
+    "name": "Curse of Drowning",
+    "description": "Earn the Curse of Drowning Duo Boon from Ares and Poseidon.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:curse-of-drowning"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:mirage-shot",
+    "name": "Mirage Shot",
+    "description": "Earn the Mirage Shot Duo Boon from Artemis and Poseidon.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:mirage-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:parting-shot",
+    "name": "Parting Shot",
+    "description": "Earn the Parting Shot Duo Boon from Aphrodite and Athena.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:parting-shot"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:curse-of-nausea",
+    "name": "Curse of Nausea",
+    "description": "Earn the Curse of Nausea Duo Boon from Ares and Dionysus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:curse-of-nausea"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:cold-embrace",
+    "name": "Cold Embrace",
+    "description": "Earn the Cold Embrace Duo Boon from Aphrodite and Demeter.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:cold-embrace"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:freezing-vortex",
+    "name": "Freezing Vortex",
+    "description": "Earn the Freezing Vortex Duo Boon from Ares and Demeter.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:freezing-vortex"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:stubborn-bolts",
+    "name": "Stubborn Roots",
+    "description": "Earn the Stubborn Roots Duo Boon from Athena and Demeter.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:stubborn-bolts"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:smoldering-air",
+    "name": "Smoldering Air",
+    "description": "Earn the Smoldering Air Duo Boon from Aphrodite and Zeus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:smoldering-air"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:unshakable-mettle",
+    "name": "Unshakable Mettle",
+    "description": "Earn the Unshakable Mettle Duo Boon from Athena and Poseidon.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:unshakable-mettle"
+      ]
+    }
+  },
+  {
+    "id": "boon:duo:splitting-headache",
+    "name": "Splitting Headache",
+    "description": "Earn the Splitting Headache Duo Boon from Artemis and Dionysus.",
+    "collection": "boon",
+    "section": "duo",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "boon:duo:splitting-headache"
+      ]
+    }
   }
 ]
