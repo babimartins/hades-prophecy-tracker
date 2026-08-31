@@ -152,51 +152,102 @@ describe('a subject page', () => {
     expect(events).toEqual([{ id: 'boon:zeus:lightning-strike', value: true }])
   })
 
-  it('gives a number fact a bounded stepper, never a checkbox', async () => {
+  it('gives a number fact a bounded control, never a checkbox', async () => {
     // 96 of 692 facts are ranks. As a checkbox a rank can only be 0 or max, so
     // four of seven Nectar reads as untouched and the next tick overwrites the
     // stored 4. AGENTS.md records that defect; a first pass reintroduced it.
+    //
+    // A rank of 10 or less is pips now, so this reads the pips. The guarantee
+    // is unchanged: a rank never renders as a checkbox and always shows its
+    // real value.
     await mount('zeus', { 'nectar:zeus': 4 })
     const shadow = rowShadow('nectar:zeus')
-    const input = shadow.querySelector<HTMLInputElement>('input[type="number"]')
-    expect(input).not.toBeNull()
-    expect(input!.value).toBe('4')
-    expect(input!.max).toBe('7')
     expect(shadow.querySelector('hd-checklist-item')).toBeNull()
+    const pips = shadow.querySelector('.pips')
+    expect(pips).not.toBeNull()
+    expect(pips!.querySelectorAll('.pip')).toHaveLength(7)
+    expect(pips!.querySelectorAll('.pip.on')).toHaveLength(4)
+    expect(pips!.getAttribute('aria-valuenow')).toBe('4')
+    expect(pips!.getAttribute('aria-valuemax')).toBe('7')
 
     const events: { id: string; value: unknown }[] = []
     page().addEventListener('set-fact', (event) => {
       events.push((event as CustomEvent<{ id: string; value: unknown }>).detail)
     })
-    input!.value = '5'
-    input!.dispatchEvent(new Event('change', { bubbles: true }))
+    shadow.querySelectorAll<HTMLElement>('.pip')[4]!.click()
     expect(events).toEqual([{ id: 'nectar:zeus', value: 5 }])
   })
 
-  it('clamps a rank to the fact max, so no view can push it past the game', async () => {
+  it('exposes the pips as one slider, not as seven tab stops', async () => {
+    // A group of buttons would add up to ten tab stops per row, and a nested
+    // button is what swallowed the Space key on the Characters table once.
     await mount('zeus', { 'nectar:zeus': 4 })
+    const pips = rowShadow('nectar:zeus').querySelector('.pips')!
+    expect(pips.getAttribute('role')).toBe('slider')
+    expect(pips.getAttribute('tabindex')).toBe('0')
+    expect(pips.querySelectorAll('button')).toHaveLength(0)
+    expect(pips.getAttribute('aria-valuetext')).toBe('4 of 7')
+  })
+
+  it('moves the rank with the arrow keys, and stops at both ends', async () => {
+    const press = async (key: string, from: number): Promise<unknown[]> => {
+      await mount('zeus', { 'nectar:zeus': from })
+      const events: unknown[] = []
+      page().addEventListener('set-fact', (event) => {
+        events.push((event as CustomEvent<{ value: unknown }>).detail.value)
+      })
+      rowShadow('nectar:zeus')
+        .querySelector('.pips')!
+        .dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true }))
+      return events
+    }
+    expect(await press('ArrowRight', 4)).toEqual([5])
+    expect(await press('ArrowLeft', 4)).toEqual([3])
+    expect(await press('End', 4)).toEqual([7])
+    expect(await press('Home', 4)).toEqual([0])
+    // No view may push a rank past what the game allows, from either end.
+    expect(await press('ArrowRight', 7)).toEqual([7])
+    expect(await press('ArrowLeft', 0)).toEqual([0])
+  })
+
+  it('clears the rank when you click the pip that already marks it', async () => {
+    // Without this there is no way back to zero with the mouse.
+    await mount('zeus', { 'nectar:zeus': 4 })
+    const events: unknown[] = []
+    page().addEventListener('set-fact', (event) => {
+      events.push((event as CustomEvent<{ value: unknown }>).detail.value)
+    })
+    rowShadow('nectar:zeus').querySelectorAll<HTMLElement>('.pip')[3]!.click()
+    expect(events).toEqual([0])
+  })
+
+  it('clamps a typed rank to the fact max, so no view can push it past the game', async () => {
+    // Above ten pips a row takes a typed field, which is the only control that
+    // can be handed a number out of range. pet:cerberus stops at 20.
+    await mount('cerberus', { 'pet:cerberus': 4 })
     const events: { id: string; value: unknown }[] = []
     page().addEventListener('set-fact', (event) => {
       events.push((event as CustomEvent<{ id: string; value: unknown }>).detail)
     })
-    const input = rowShadow('nectar:zeus').querySelector<HTMLInputElement>('input[type="number"]')
+    const input = rowShadow('pet:cerberus').querySelector<HTMLInputElement>('input[type="number"]')
+    expect(input).not.toBeNull()
     input!.value = '99'
     input!.dispatchEvent(new Event('change', { bubbles: true }))
-    expect(events).toEqual([{ id: 'nectar:zeus', value: 7 }])
+    expect(events).toEqual([{ id: 'pet:cerberus', value: 20 }])
 
     // and the field must not go on showing what was rejected. A property
     // binding dirty-checks against the last committed value, so when the clamp
     // lands on the value already stored the DOM keeps the invalid text.
-    await mount('zeus', { 'nectar:zeus': 7 })
-    const shown = rowShadow('nectar:zeus').querySelector<HTMLInputElement>('input[type="number"]')
+    await mount('cerberus', { 'pet:cerberus': 20 })
+    const shown = rowShadow('pet:cerberus').querySelector<HTMLInputElement>('input[type="number"]')
     shown!.value = '99'
     shown!.dispatchEvent(new Event('change', { bubbles: true }))
-    await (root().querySelector('li[data-fact="nectar:zeus"] fact-row') as HTMLElement & {
+    await (root().querySelector('li[data-fact="pet:cerberus"] fact-row') as HTMLElement & {
       updateComplete: Promise<unknown>
     }).updateComplete
     expect(
-      rowShadow('nectar:zeus').querySelector<HTMLInputElement>('input[type="number"]')!.value,
-    ).toBe('7')
+      rowShadow('pet:cerberus').querySelector<HTMLInputElement>('input[type="number"]')!.value,
+    ).toBe('20')
   })
 
   it('agrees with the Characters index about a partly filled rank', async () => {
@@ -245,16 +296,29 @@ describe('the control a fact gets', () => {
 
   it('refuses a fractional rank, which is not a count of anything', async () => {
     // The clamp bounded the range but never rounded, so 2.7 reached the store
-    // and the index drew three pips beside it.
-    await mount('zeus', { 'nectar:zeus': 2 })
+    // and the index drew three pips beside it. Only the typed field can carry
+    // a fraction at all; pips emit whole ranks by construction.
+    await mount('cerberus', { 'pet:cerberus': 2 })
     const events: { id: string; value: unknown }[] = []
     page().addEventListener('set-fact', (event) => {
       events.push((event as CustomEvent<{ id: string; value: unknown }>).detail)
     })
-    const input = rowShadow('nectar:zeus').querySelector<HTMLInputElement>('input[type="number"]')
+    const input = rowShadow('pet:cerberus').querySelector<HTMLInputElement>('input[type="number"]')
     expect(input!.step).toBe('1')
     input!.value = '2.7'
     input!.dispatchEvent(new Event('change', { bubbles: true }))
-    expect(events).toEqual([{ id: 'nectar:zeus', value: 3 }])
+    expect(events).toEqual([{ id: 'pet:cerberus', value: 3 }])
+  })
+
+  it('draws pips up to ten and a field above, because ten is the readable limit', async () => {
+    // 94 of the 103 counted facts stop at 10. The nine above are 15, 20, 25,
+    // 30, 70, 210 and two at 10000, where a row of pips is unclickable.
+    await mount('zeus', {})
+    expect(rowShadow('nectar:zeus').querySelectorAll('.pip')).toHaveLength(7)
+    expect(rowShadow('nectar:zeus').querySelector('input[type="number"]')).toBeNull()
+
+    await mount('cerberus', {})
+    expect(rowShadow('pet:cerberus').querySelector('.pips')).toBeNull()
+    expect(rowShadow('pet:cerberus').querySelector('input[type="number"]')).not.toBeNull()
   })
 })

@@ -359,3 +359,18 @@ The rule now: quiet colours take the background's hue, loud ones stay warm.
 Secondary text sits within 30 degrees of the surface and more than 90 from the
 accent and the gold. The accent and the gold stay within 30 of each other,
 because they are one scale. `packages/ui/test/tokens.test.ts` pins all of it.
+
+### A rank is pips up to ten, and one slider, not ten buttons
+
+`fact-row` draws a rank of ten or less as clickable pips and anything larger as
+a typed field. `PIP_LIMIT` holds the boundary; 94 of the 103 counted facts sit
+below it.
+
+The pip group carries `role="slider"` with `aria-valuenow`, and the pips
+themselves are spans. **Do not make them buttons.** Ten buttons per row is ten
+tab stops per row, and a button nested inside a control is what swallowed the
+Space key on the Characters table once already.
+
+Any test that reaches for `input[type="number"]` now needs to know which
+control the fact gets. `pet:cerberus` stops at 20 and keeps the field, so the
+clamp and rounding guards live there.

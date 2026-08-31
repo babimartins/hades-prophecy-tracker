@@ -383,15 +383,16 @@ describe('what an entry asks of a fact, rather than what the fact holds', () => 
     expect(row?.className).toBe('partial')
   })
 
-  it('keeps showing the real rank, never the target, in the number', async () => {
-    // The owner's rule for this: the number is always the rank you actually
-    // hold. Only the tick changes with the entry.
+  it('keeps showing the real rank, never the target, in the control', async () => {
+    // The owner's rule for this: the control always shows the rank you
+    // actually hold, out of the gauge's own size. Only the tick changes with
+    // the entry. A keepsake stops at 3, so that is one filled pip of three.
     const row = await trophyRow('achievement:something-from-everyone')
-    const input = row
-      ?.querySelector('fact-row')
-      ?.shadowRoot?.querySelector<HTMLInputElement>('input[type="number"]')
-    expect(input?.value).toBe('1')
-    expect(input?.max).toBe('3')
+    const pips = row?.querySelector('fact-row')?.shadowRoot?.querySelector('.pips')
+    expect(pips?.getAttribute('aria-valuenow')).toBe('1')
+    expect(pips?.getAttribute('aria-valuemax')).toBe('3')
+    expect(pips?.querySelectorAll('.pip.on')).toHaveLength(1)
+    expect(pips?.querySelectorAll('.pip')).toHaveLength(3)
   })
 
   it('names a target only where it is neither 1 nor the max', async () => {

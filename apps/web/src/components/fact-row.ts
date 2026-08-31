@@ -7,6 +7,16 @@ import { live } from 'lit/directives/live.js'
 export type FactState = 'todo' | 'partial' | 'done'
 
 /**
+ * The largest rank drawn as pips. Above this the row takes a typed field.
+ *
+ * 94 of the 103 counted facts stop at 10 or below, so nearly all of them get
+ * the pips the Characters and Weapons tables already use. The nine above are
+ * 15, 20, 25, 30, 70, 210 and two at 10000, where a row of pips would be
+ * unreadable and unclickable.
+ */
+const PIP_LIMIT = 10
+
+/**
  * A number fact is done at its target, partial in between, todo at zero.
  *
  * The target is the fact's own `max` on a subject page, where the question is
@@ -60,14 +70,62 @@ export class FactRow extends LitElement {
       min-width: 0;
     }
 
+    /* Narrow, centred, no spinner arrows. The browser default was 4.2rem wide
+       and left-aligned for a number that is nearly always one digit, and it
+       pushed a long label onto a second line. Only nine facts reach this
+       control at all; the rest are pips. */
     input[type='number'] {
+      appearance: textfield;
       background: ${colorVar('--hd-color-surface')};
-      border: 1px solid ${colorVar('--hd-color-muted')};
-      border-radius: 6px;
+      border: 1px solid transparent;
+      border-bottom: 1px solid ${colorVar('--hd-color-muted')};
+      border-radius: 4px 4px 0 0;
       color: inherit;
       font: inherit;
-      padding: 3px 6px;
-      width: 4.2rem;
+      font-variant-numeric: tabular-nums;
+      padding: 2px 4px;
+      text-align: center;
+      width: 3.4rem;
+    }
+
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    input[type='number']:focus-visible {
+      border-bottom-color: ${colorVar('--hd-color-accent')};
+      outline: none;
+    }
+
+    .pips {
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      gap: 4px;
+      padding: 2px;
+    }
+
+    .pips:focus-visible {
+      outline: 2px solid ${colorVar('--hd-color-accent')};
+      outline-offset: 1px;
+    }
+
+    .pip {
+      background: ${colorVar('--hd-color-surface')};
+      border-radius: 3px;
+      height: 13px;
+      width: 13px;
+    }
+
+    .pip.on {
+      background: ${colorVar('--hd-color-accent')};
+    }
+
+    /* Full turns gold, the same warm scale the bars use. */
+    .pips.full .pip.on {
+      background: ${colorVar('--hd-color-done')};
     }
 
     .of {
@@ -134,6 +192,67 @@ export class FactRow extends LitElement {
     )
   }
 
+  /**
+   * A rank as pips you click, with the semantics of a slider.
+   *
+   * One tab stop, arrow keys to change, Home and End for the ends. The pips
+   * themselves are spans, not buttons: a group of ten buttons per row would
+   * add ten tab stops each, and nesting buttons inside the control is what
+   * swallowed the Space key on the Characters table once already. `AGENTS.md`
+   * records that.
+   *
+   * Clicking pip N sets N. Clicking the pip that already marks the current
+   * value clears to 0, the way a star rating does, so there is a way back to
+   * nothing without reaching for the keyboard.
+   */
+  #pips(max: number, value: number, label: string): TemplateResult {
+    const set = (next: number): void => {
+      this.#emit(Math.min(Math.max(next, 0), max))
+    }
+    return html`
+      <span
+        class="pips ${value >= max ? 'full' : ''}"
+        role="slider"
+        tabindex="0"
+        aria-label=${label}
+        aria-valuemin="0"
+        aria-valuemax=${max}
+        aria-valuenow=${value}
+        aria-valuetext=${`${value} of ${max}`}
+        @keydown=${(event: KeyboardEvent) => {
+          const step =
+            event.key === 'ArrowRight' || event.key === 'ArrowUp'
+              ? value + 1
+              : event.key === 'ArrowLeft' || event.key === 'ArrowDown'
+                ? value - 1
+                : event.key === 'Home'
+                  ? 0
+                  : event.key === 'End'
+                    ? max
+                    : undefined
+          if (step === undefined) return
+          event.preventDefault()
+          set(step)
+        }}
+      >
+        ${Array.from({ length: max }, (_unused, index) => index + 1).map(
+          (rank) => html`
+            <span
+              class=${rank <= value ? 'pip on' : 'pip'}
+              data-rank=${rank}
+              @click=${(event: Event) => {
+                // The row this sits in may itself be clickable.
+                event.stopPropagation()
+                set(rank === value ? 0 : rank)
+              }}
+            ></span>
+          `,
+        )}
+      </span>
+      <span class="of">${value}/${max}</span>
+    `
+  }
+
   override render(): TemplateResult {
     const fact = this.fact
     const hidden = fact.spoiler === true && !this.revealed
@@ -158,8 +277,12 @@ export class FactRow extends LitElement {
     // A rank whose max is 1 has one step, so a checkbox reads better than a
     // spinner that can only be 0 or 1. Three Pact conditions are like this.
     const stepped = fact.kind === 'number' && fact.max !== undefined && fact.max > 1
+    const max = fact.max ?? 0
+    const value = factValue(fact, this.facts)
     const control =
-      stepped
+      stepped && max <= PIP_LIMIT
+        ? this.#pips(max, value, label)
+        : stepped
         ? html`
             <input
               id=${`rank-${fact.id}`}

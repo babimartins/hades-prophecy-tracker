@@ -831,3 +831,30 @@ they are one scale. The old tan fails it, and so does a neutral grey.
 because plain CSS cannot call `colorVar`. Its own comment says to update both.
 A test now checks it, because changing the token and forgetting the file leaves
 the old cream as the fallback and nothing else would notice.
+
+## 58. A rank is pips up to ten, and a typed field above
+
+The number fields were the browser's own: 4.2rem wide and left-aligned for a
+value that is nearly always one digit, with spinner arrows on hover. They took
+more room than the number needed and pushed long labels onto a second line.
+
+The ranks are mostly small. 68 of the 103 counted facts stop at 5 and 94 stop
+at 10. The nine above are 15, 20, 25, 30, 70, 210 and two at 10000, where a row
+of pips would be unreadable and unclickable.
+
+So a rank of ten or less is **pips you click**, the same pips the Characters and
+Weapons tables already show, and full turns gold like every other bar. Above
+ten the row keeps a field, now narrow, centred, tabular and without spinners.
+
+**The pip group is one `role="slider"`, not a row of buttons.** Ten buttons per
+row would add ten tab stops each, and a button nested inside a control is what
+swallowed the Space key on the Characters table once already. The pips are
+spans; the group takes the focus, and the arrow keys, Home and End move the
+value. Clicking the pip that already marks the value clears it to zero, the way
+a star rating does, so there is a way back to nothing without the keyboard.
+
+Five tests assumed every rank rendered an `input[type=number]`. They are the
+ones guarding the worst defect this project had, so each was rewritten to cover
+whichever control the fact now gets rather than relaxed. The clamp and the
+rounding tests moved to `pet:cerberus`, which stops at 20 and so keeps the
+field.

@@ -128,8 +128,9 @@ describe('the Next Steps page', () => {
     expect(keepsake).toBeDefined()
     const row = keepsake!.querySelector('fact-row') as HTMLElement & { target?: number }
     expect(row.target).toBe(3)
-    const input = row.shadowRoot?.querySelector<HTMLInputElement>('input[type="number"]')
-    expect(input?.max).toBe('3')
+    // A keepsake stops at 3, so it draws pips rather than a typed field.
+    const pips = row.shadowRoot?.querySelector('.pips')
+    expect(pips?.getAttribute('aria-valuemax')).toBe('3')
   })
 
   it('drops an action down the list as entries stop needing it', async () => {

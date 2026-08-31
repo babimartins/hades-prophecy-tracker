@@ -198,6 +198,17 @@ states. Lilac and teal cleared the first easily and failed the second, at 1.10
 and 1.01. Bronze sits at 4.97, 4.52 and 1.90. `packages/ui/test/tokens.test.ts`
 holds those floors.
 
+## 8b. The control a rank gets
+
+A rank of ten or less is pips you click; above ten it is a narrow typed field.
+94 of the 103 counted facts stop at ten.
+
+- The pip group is one `role="slider"` with arrow keys, Home and End. The pips
+  are spans, not buttons: ten buttons per row would be ten tab stops each.
+- Clicking the pip that already marks the value clears it to zero.
+- A full set turns gold, the same warm scale as every bar.
+- The field is centred, tabular and has no spinner arrows.
+
 ## 9. What the engine already answers
 
 No new engine work is expected. Phase 1 built these.
