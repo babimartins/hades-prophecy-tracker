@@ -104,7 +104,14 @@ describe('dataset integrity', () => {
 
     for (const achievement of dataset.achievements) walk(achievement.requirement)
 
-    expect(referenceCount).toBe(16)
+    // 80, not the 16 this pinned before the platform trophies arrived. Two
+    // causes, both benign. God of Blood is "Earn all other Trophies", so the
+    // other 49 requirements are nested inside it and every plain number fact
+    // they reach is counted twice. The four derived trophies each spread a
+    // count node over a whole collection, which sweeps that collection's facts
+    // in as plain children. The distinct set is the half that matters, and it
+    // stays at 15: no new number fact reaches a plain child.
+    expect(referenceCount).toBe(78)
     expect(plainNumberFactIds.size).toBe(15)
   })
 
@@ -218,8 +225,8 @@ describe('facts tagged with a subject', () => {
     // The two buckets partition the same array, so their sum is the total by
     // construction. The pinned numbers are what this test actually checks.
     expect(tagged).toHaveLength(611)
-    expect(systemFacts).toHaveLength(245)
-    expect(dataset.facts).toHaveLength(856)
+    expect(systemFacts).toHaveLength(267)
+    expect(dataset.facts).toHaveLength(878)
   })
 
   it('gives a system fact an empty list, never a missing key and never a subject', () => {
@@ -268,6 +275,10 @@ describe('fact descriptions', () => {
       byNamespace[namespace] = (byNamespace[namespace] ?? 0) + 1
     }
     expect(byNamespace).toEqual({
+      // The 119 real Codex facts carry none: "Unlock the Zeus Codex entry" is
+      // its own explanation. The one here is `codex:sections-revealed`, the
+      // prophecy's 0-70 counter, where "section" needed saying.
+      codex: 1,
       boon: 149,
       daedalus: 72,
       encounter: 37,
@@ -284,7 +295,7 @@ describe('fact descriptions', () => {
       miniboss: 11,
       contractor: 164,
     })
-    expect(described).toHaveLength(616)
+    expect(described).toHaveLength(617)
   })
 
   it('never stores a wiki cross-reference in place of an answer', () => {
@@ -519,5 +530,126 @@ describe('the House Contractor stock', () => {
     const earthy = dataset.facts.filter((fact) => fact.id.endsWith(':rug-earthy'))
     expect(earthy).toHaveLength(2)
     expect(new Set(earthy.map((fact) => fact.label)).size).toBe(2)
+  })
+})
+
+
+describe('the platform trophies', () => {
+  const trophies = dataset.achievements.filter((a) => a.collection === 'achievement')
+
+  it('holds all 50, including the hidden one for earning the other 49', () => {
+    expect(trophies).toHaveLength(50)
+    const god = trophies.find((t) => t.id === 'achievement:god-of-blood')
+    expect(god?.description).toContain('all other Trophies')
+  })
+
+  it('makes God of Blood the other 49, rather than a checkbox of its own', () => {
+    // A fact standing for a whole achievement is what AGENTS.md forbids. This
+    // one is derived: its requirement is the other 49 requirements, nested.
+    const god = trophies.find((t) => t.id === 'achievement:god-of-blood')!
+    expect(typeof god.requirement === 'string').toBe(false)
+    const req = god.requirement as { kind: string; of: unknown[] }
+    expect(req.kind).toBe('all')
+    expect(req.of).toHaveLength(49)
+    expect(dataset.facts.some((f) => f.id === 'achievement:god-of-blood')).toBe(false)
+  })
+
+  it('adds no second checkbox for a trophy that restates a prophecy', () => {
+    // Thirteen trophies are "Fulfill the X Prophecy". They take that
+    // prophecy's own requirement, so the same actions satisfy both.
+    const pairs: [string, string][] = [
+      ['achievement:night-and-darkness', 'prophecy:night-and-darkness'],
+      ['achievement:harsh-conditions', 'prophecy:harsh-conditions'],
+      ['achievement:master-of-arms', 'prophecy:master-of-arms'],
+      ['achievement:arms-collector', 'prophecy:infernal-arms'],
+    ]
+    for (const [trophyId, prophecyId] of pairs) {
+      const trophy = dataset.achievements.find((a) => a.id === trophyId)
+      const prophecy = dataset.achievements.find((a) => a.id === prophecyId)
+      expect([trophyId, collectFactIds(trophy!.requirement).sort()]).toEqual([
+        trophyId,
+        collectFactIds(prophecy!.requirement).sort(),
+      ])
+    }
+  })
+
+  it('uses the any node, which the dataset had never used', () => {
+    // "Catch a fish from each region" is six regions, any one fish each. The
+    // schema has supported `any` since slice 1 and nothing had needed it.
+    const anyNodes: unknown[] = []
+    function walk(node: unknown): void {
+      if (typeof node === 'string' || node === null) return
+      const n = node as { kind?: string; of?: unknown[] }
+      if (n.kind === 'any') anyNodes.push(n)
+      for (const child of n.of ?? []) walk(child)
+    }
+    for (const achievement of dataset.achievements) walk(achievement.requirement)
+    expect(anyNodes.length).toBeGreaterThan(0)
+    const fish = dataset.achievements.find((a) => a.id === 'achievement:river-denizens')!
+    const req = fish.requirement as { of: { kind: string; of: string[] }[] }
+    expect(req.of).toHaveLength(6)
+    expect(req.of.every((group) => group.kind === 'any' && group.of.length === 3)).toBe(true)
+  })
+
+  it('needs a new fact only where no existing action covers the trophy', () => {
+    const own = dataset.facts.filter((fact) => fact.id.startsWith('achievement:'))
+    expect(own).toHaveLength(22)
+    // 28 of the 50 are covered by prophecies or by facts that already exist
+    expect(50 - own.length).toBe(28)
+  })
+
+  it('counts, rather than hiding a count behind one checkbox', () => {
+    // "Slay Skelly 15 times" and "Trade 20 times" are counts. As booleans they
+    // would read as untouched at 14, and the next tick would overwrite the
+    // stored value. AGENTS.md records that defect; this pins the fix.
+    const counted = dataset.facts.filter(
+      (fact) => fact.id.startsWith('achievement:') && fact.kind === 'number',
+    )
+    expect(counted.map((fact) => [fact.id, fact.max])).toEqual([
+      ['achievement:day-or-night-trader', 20],
+      ['achievement:skelly-slayer', 15],
+    ])
+  })
+
+  it('derives a trophy from the sub-items the dataset already holds', () => {
+    // The owner's rule: anything needing sub-items must list them. Four
+    // trophies are a threshold over facts that already exist, so they get a
+    // count node over those facts, not an opaque checkbox of their own.
+    const cases: [string, number, string][] = [
+      ['achievement:blessed-by-the-gods', 100, 'boon:'],
+      ['achievement:tools-of-the-architect', 50, 'daedalus:'],
+      ['achievement:home-makeover', 50, 'contractor:'],
+    ]
+    for (const [id, n, namespace] of cases) {
+      const requirement = dataset.achievements.find((a) => a.id === id)!.requirement as {
+        kind: string
+        n: number
+        of: string[]
+      }
+      // By collection, not by id prefix. `contractor:renovation-tasks` carries
+      // the prefix but is the prophecy's 0-30 counter, not one of the 164 jobs
+      // you buy. Counting it as one job understates it by 29.
+      const pool = dataset.facts.filter(
+        (fact) => fact.id.startsWith(namespace) && fact.kind === 'boolean',
+      ).length
+      expect([id, requirement.kind, requirement.n, requirement.of.length]).toEqual([
+        id,
+        'count',
+        n,
+        pool,
+      ])
+      expect(dataset.facts.some((fact) => fact.id === id)).toBe(false)
+    }
+  })
+
+  it('makes Had To Happen any 15 of the 55 prophecies', () => {
+    const requirement = dataset.achievements.find((a) => a.id === 'achievement:had-to-happen')!
+      .requirement as { kind: string; n: number; of: unknown[] }
+    const prophecies = dataset.achievements.filter((a) => a.collection === 'prophecy')
+    expect([requirement.kind, requirement.n, requirement.of.length]).toEqual([
+      'count',
+      15,
+      prophecies.length,
+    ])
   })
 })

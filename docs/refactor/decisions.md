@@ -494,3 +494,89 @@ of six and the deferral was never the owner's.
 
 The one out-of-scope claim that survives audit is the timestamp: she said
 "vamo deixar o quando pra la, so valores ta bom".
+
+## 38. The 50 platform trophies are data, not a placeholder
+
+The owner said in this conversation that there are 50 trophies: 49 plus one for
+completing the other 49. I wrote the number into three files and registered the
+`achievement` collection with zero entries. That is the same mistake as the
+House Contractor: an answer she gave me, filed as trivia instead of as work.
+
+Harvested from `hades.fandom.com/wiki/Achievements`.
+
+- 13 trophies restate a prophecy. Each takes that prophecy's own requirement,
+  so the same actions satisfy both and there is no second checkbox.
+- 10 more are expressed over facts that already exist.
+- 26 need a new fact, in the `achievement:` namespace.
+- 1 is God of Blood, which is the other 49.
+
+Name collision caught during the work: the trophy `arms-collector` maps to
+`prophecy:infernal-arms`, while the trophy *named* `infernal-arms` is about
+aspects.
+
+## 39. `achievement` is a namespace without a capability
+
+A trophy is awarded by the platform. It belongs to no character, weapon,
+collectible or region, so it joins `pact`, `talent`, `contractor` and `fish` in
+`NAMESPACES_WITHOUT_CAPABILITY`.
+
+## 40. God of Blood counts trophies, and reads last
+
+Its requirement is the other 49 requirements, so `evaluate` sums every unit
+inside them and returns 10283. The number is true and useless. The view counts
+the trophies earned instead, and shows 0/49.
+
+It also does not repeat its 207 distinct facts, because every one of them is
+already listed under the trophy it belongs to. It shows one line saying where
+its actions live.
+
+The wiki lists it first. There its roll-up looks like the section total rather
+than one more trophy, so the view sorts it last.
+
+## 41. The trophies rail item counts a different unit, and says so
+
+Every other rail item counts facts. This one counts trophies earned, because
+that is what the player is asking. `rail-view` now prints the unit under the
+bar whenever an item declares one, so two different units never look alike.
+
+## 42. Four more trophies are derived, not new checkboxes
+
+The first pass gave 26 trophies a fact of their own. A review of my own work
+found five wrong.
+
+- `blessed-by-the-gods` is 100 of the 149 boon facts.
+- `tools-of-the-architect` is 50 of the 72 Daedalus facts.
+- `home-makeover` is 50 of the 164 Contractor jobs.
+- `had-to-happen` is any 15 of the 55 prophecies.
+
+Each became a `count` node. Each was an opaque checkbox hiding work the
+dataset already held, which is what the owner's rule forbids: anything that
+needs sub-items must list them.
+
+`skelly-slayer` ("Slay Skelly 15 times") and `day-or-night-trader` ("Trade 20
+times") were booleans. Both are counts, so both became `number` facts with a
+`max`. As booleans they read as untouched at 14, and the next tick would
+overwrite the stored value. `AGENTS.md` records that defect.
+
+22 trophies now have a fact of their own, not 26.
+
+## 43. The Contractor pool is built by collection, not by id prefix
+
+`contractor:renovation-tasks` carries the `contractor:` prefix but is the
+prophecy's 0-30 counter, not one of the 164 jobs you buy. A prefix filter swept
+it into `home-makeover`, where it would have counted as one job instead of 30.
+Found by a canary that pins how many number facts reach a plain requirement
+child: it moved from 15 to 16.
+
+## 44. A trophy over a pool the app already lists says where the pool is
+
+`had-to-happen` drew all 55 prophecies as 460 rows. With `home-makeover` (164),
+`blessed-by-the-gods` (149) and `tools-of-the-architect` (72), one pane ran to
+1129 rows.
+
+Every one of those actions is already reachable: the Contractor rooms, the
+Boons collection, the weapon pages, the Fated List. A second copy adds nothing.
+Each of the five now shows its roll-up and one line naming where its items
+live. The roll-up is the part that exists nowhere else: 0/50 of the 164 jobs.
+
+The pane is 284 rows, and the largest single block is 25.

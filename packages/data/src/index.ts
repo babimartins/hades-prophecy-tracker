@@ -1,4 +1,6 @@
 import { validateDataset, type Dataset } from '@hades/schema'
+import trophyAchievements from './achievements/achievements.json'
+import trophyFacts from './achievements/facts.json'
 import aspectAchievements from './aspects/achievements.json'
 import aspectFacts from './aspects/facts.json'
 import boonAchievements from './boons/achievements.json'
@@ -29,6 +31,7 @@ export const dataset: Dataset = validateDataset({
   collections,
   facts: [
     ...prophecyFacts,
+    ...trophyFacts,
     ...codexFacts,
     ...contractorFacts,
     ...keepsakeFacts,
@@ -43,6 +46,7 @@ export const dataset: Dataset = validateDataset({
   subjects,
   achievements: [
     ...prophecyAchievements,
+    ...trophyAchievements,
     ...codexAchievements,
     ...contractorAchievements,
     ...keepsakeAchievements,

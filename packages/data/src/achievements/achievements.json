@@ -1,0 +1,5347 @@
+[
+  {
+    "id": "achievement:god-of-blood",
+    "name": "God of Blood",
+    "description": "Earn all other Trophies.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "all",
+          "of": [
+            "achievement:escaped-tartarus"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:escaped-asphodel"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:escaped-elysium"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:champion-of-elysium"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:hold-the-onions"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:defeat-hades"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:weapon-of-fate"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:to-charons-credit"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:defeat-hades-heat8"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:skellys-last-lamentations"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:adamant-arrowhead",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:black-shawl",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:blood-filled-vial",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:bone-hourglass",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:broken-spearpoint",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:chthonic-coin-purse",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:conch-shell",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:cosmic-egg",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:distant-memory",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:eternal-rose",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:evergreen-acorn",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:frostbitten-horn",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:harpy-feather-duster",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lambent-plume",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lucky-tooth",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:myrmidon-bracer",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:old-spiked-collar",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:overflowing-cup",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:owl-pendant",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pierced-butterfly",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pom-blossom",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:shattered-shackle",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:sigil-of-the-dead",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:skull-earring",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:thunder-signet",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:adamant-arrowhead",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:black-shawl",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:blood-filled-vial",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:bone-hourglass",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:broken-spearpoint",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:chthonic-coin-purse",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:conch-shell",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:cosmic-egg",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:distant-memory",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:eternal-rose",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:evergreen-acorn",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:frostbitten-horn",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:harpy-feather-duster",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lambent-plume",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lucky-tooth",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:myrmidon-bracer",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:old-spiked-collar",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:overflowing-cup",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:owl-pendant",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pierced-butterfly",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pom-blossom",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:shattered-shackle",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:sigil-of-the-dead",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:skull-earring",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:thunder-signet",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "companion:antos",
+            "companion:battie",
+            "companion:fidi",
+            "companion:mort",
+            "companion:rib",
+            "companion:shady"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "companion:antos",
+            "companion:battie",
+            "companion:fidi",
+            "companion:mort",
+            "companion:rib",
+            "companion:shady"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:beowulf",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:chaos",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zeus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:chiron",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:hera",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:rama",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:eris",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:hestia",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:lucifer",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:demeter",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:gilgamesh",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:talos",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:arthur",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:nemesis",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:poseidon",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:achilles",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:guan-yu",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:hades",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:zagreus",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:beowulf",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:chaos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zeus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:chiron",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:hera",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:rama",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:eris",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:hestia",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:lucifer",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:demeter",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:gilgamesh",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:talos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:arthur",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:nemesis",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:poseidon",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:achilles",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:guan-yu",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:hades",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:zagreus",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "count",
+          "n": 100,
+          "of": [
+            "boon:aphrodite:aphrodites-aid",
+            "boon:aphrodite:blown-kiss",
+            "boon:aphrodite:broken-resolve",
+            "boon:aphrodite:crush-shot",
+            "boon:aphrodite:different-league",
+            "boon:aphrodite:dying-lament",
+            "boon:aphrodite:empty-inside",
+            "boon:aphrodite:heartbreak-flourish",
+            "boon:aphrodite:heartbreak-strike",
+            "boon:aphrodite:life-affirmation",
+            "boon:aphrodite:passion-dash",
+            "boon:aphrodite:sweet-surrender",
+            "boon:aphrodite:wave-of-despair",
+            "boon:ares:ares-aid",
+            "boon:ares:battle-rage",
+            "boon:ares:black-metal",
+            "boon:ares:blade-dash",
+            "boon:ares:blood-frenzy",
+            "boon:ares:curse-of-agony",
+            "boon:ares:curse-of-pain",
+            "boon:ares:curse-of-vengeance",
+            "boon:ares:dire-misfortune",
+            "boon:ares:engulfing-vortex",
+            "boon:ares:impending-doom",
+            "boon:ares:slicing-shot",
+            "boon:ares:urge-to-kill",
+            "boon:artemis:artemis-aid",
+            "boon:artemis:clean-kill",
+            "boon:artemis:deadly-flourish",
+            "boon:artemis:deadly-strike",
+            "boon:artemis:exit-wounds",
+            "boon:artemis:hide-breaker",
+            "boon:artemis:hunter-dash",
+            "boon:artemis:hunter-instinct",
+            "boon:artemis:hunters-mark",
+            "boon:artemis:pressure-points",
+            "boon:artemis:support-fire",
+            "boon:artemis:true-shot",
+            "boon:athena:athenas-aid",
+            "boon:athena:blinding-flash",
+            "boon:athena:brilliant-riposte",
+            "boon:athena:bronze-skin",
+            "boon:athena:divine-dash",
+            "boon:athena:divine-flourish",
+            "boon:athena:divine-strike",
+            "boon:athena:holy-shield",
+            "boon:athena:phalanx-shot",
+            "boon:athena:proud-bearing",
+            "boon:athena:sure-footing",
+            "boon:demeter:arctic-blast",
+            "boon:demeter:crystal-beam",
+            "boon:demeter:demeters-aid",
+            "boon:demeter:frost-flourish",
+            "boon:demeter:frost-strike",
+            "boon:demeter:frozen-touch",
+            "boon:demeter:glacial-glare",
+            "boon:demeter:killing-freeze",
+            "boon:demeter:mistral-dash",
+            "boon:demeter:ravenous-will",
+            "boon:demeter:snow-burst",
+            "boon:dionysus:after-party",
+            "boon:dionysus:bad-influence",
+            "boon:dionysus:dionysus-aid",
+            "boon:dionysus:drunken-dash",
+            "boon:dionysus:drunken-flourish",
+            "boon:dionysus:drunken-strike",
+            "boon:dionysus:high-tolerance",
+            "boon:dionysus:numbing-sensation",
+            "boon:dionysus:peer-pressure",
+            "boon:dionysus:positive-outlook",
+            "boon:dionysus:strong-drink",
+            "boon:dionysus:trippy-shot",
+            "boon:duo:blizzard-shot",
+            "boon:duo:calculated-risk",
+            "boon:duo:cold-embrace",
+            "boon:duo:cold-fusion",
+            "boon:duo:crystal-clarity",
+            "boon:duo:curse-of-drowning",
+            "boon:duo:curse-of-longing",
+            "boon:duo:curse-of-nausea",
+            "boon:duo:deadly-reversal",
+            "boon:duo:exclusive-access",
+            "boon:duo:freezing-vortex",
+            "boon:duo:heart-rend",
+            "boon:duo:hunting-blades",
+            "boon:duo:ice-wine",
+            "boon:duo:lightning-phalanx",
+            "boon:duo:lightning-rod",
+            "boon:duo:low-tolerance",
+            "boon:duo:merciful-end",
+            "boon:duo:mirage-shot",
+            "boon:duo:parting-shot",
+            "boon:duo:scintillating-feast",
+            "boon:duo:sea-storm",
+            "boon:duo:smoldering-air",
+            "boon:duo:splitting-headache",
+            "boon:duo:stubborn-roots",
+            "boon:duo:sweet-nectar",
+            "boon:duo:unshakable-mettle",
+            "boon:duo:vengeful-mood",
+            "boon:hermes:flurry-cast",
+            "boon:hermes:greater-evasion",
+            "boon:hermes:greater-haste",
+            "boon:hermes:greatest-reflex",
+            "boon:hermes:hyper-sprint",
+            "boon:hermes:quick-favor",
+            "boon:hermes:quick-recovery",
+            "boon:hermes:quick-reload",
+            "boon:hermes:rush-delivery",
+            "boon:hermes:second-wind",
+            "boon:hermes:side-hustle",
+            "boon:hermes:swift-flourish",
+            "boon:hermes:swift-strike",
+            "boon:legendary:bad-news",
+            "boon:legendary:black-out",
+            "boon:legendary:divine-protection",
+            "boon:legendary:fully-loaded",
+            "boon:legendary:greater-recall",
+            "boon:legendary:second-wave",
+            "boon:legendary:splitting-bolt",
+            "boon:legendary:unhealthy-fixation",
+            "boon:legendary:vicious-cycle",
+            "boon:legendary:winter-harvest",
+            "boon:poseidon:boiling-point",
+            "boon:poseidon:breaking-wave",
+            "boon:poseidon:flood-shot",
+            "boon:poseidon:hydraulic-might",
+            "boon:poseidon:oceans-bounty",
+            "boon:poseidon:poseidons-aid",
+            "boon:poseidon:razor-shoals",
+            "boon:poseidon:rip-current",
+            "boon:poseidon:tempest-flourish",
+            "boon:poseidon:tempest-strike",
+            "boon:poseidon:tidal-dash",
+            "boon:poseidon:typhoons-fury",
+            "boon:poseidon:wave-pounding",
+            "boon:zeus:billowing-strength",
+            "boon:zeus:clouded-judgement",
+            "boon:zeus:double-strike",
+            "boon:zeus:electric-shot",
+            "boon:zeus:heavens-vengeance",
+            "boon:zeus:high-voltage",
+            "boon:zeus:lightning-reflexes",
+            "boon:zeus:lightning-strike",
+            "boon:zeus:static-discharge",
+            "boon:zeus:storm-lightning",
+            "boon:zeus:thunder-dash",
+            "boon:zeus:thunder-flourish",
+            "boon:zeus:zeus-aid"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:thanks-but-no-thanks"
+          ]
+        },
+        {
+          "kind": "count",
+          "n": 50,
+          "of": [
+            "daedalus:aegis:breaching-rush",
+            "daedalus:aegis:charged-flight",
+            "daedalus:aegis:charged-shot",
+            "daedalus:aegis:dashing-flight",
+            "daedalus:aegis:dashing-wallop",
+            "daedalus:aegis:dread-flight",
+            "daedalus:aegis:empowering-flight",
+            "daedalus:aegis:explosive-return",
+            "daedalus:aegis:ferocious-guard",
+            "daedalus:aegis:minotaur-rush",
+            "daedalus:aegis:pulverizing-blow",
+            "daedalus:aegis:sudden-rush",
+            "daedalus:coronacht:chain-shot",
+            "daedalus:coronacht:charged-volley",
+            "daedalus:coronacht:concentrated-volley",
+            "daedalus:coronacht:explosive-shot",
+            "daedalus:coronacht:flurry-shot",
+            "daedalus:coronacht:perfect-shot",
+            "daedalus:coronacht:piercing-volley",
+            "daedalus:coronacht:point-blank-shot",
+            "daedalus:coronacht:relentless-volley",
+            "daedalus:coronacht:sniper-shot",
+            "daedalus:coronacht:triple-shot",
+            "daedalus:coronacht:twin-shot",
+            "daedalus:exagryph:cluster-bomb",
+            "daedalus:exagryph:delta-chamber",
+            "daedalus:exagryph:explosive-fire",
+            "daedalus:exagryph:flurry-fire",
+            "daedalus:exagryph:hazard-bomb",
+            "daedalus:exagryph:piercing-fire",
+            "daedalus:exagryph:ricochet-fire",
+            "daedalus:exagryph:rocket-bomb",
+            "daedalus:exagryph:seeking-fire",
+            "daedalus:exagryph:spread-fire",
+            "daedalus:exagryph:targeting-system",
+            "daedalus:exagryph:triple-bomb",
+            "daedalus:malphon:breaching-cross",
+            "daedalus:malphon:colossus-knuckle",
+            "daedalus:malphon:concentrated-knuckle",
+            "daedalus:malphon:draining-cutter",
+            "daedalus:malphon:explosive-upper",
+            "daedalus:malphon:flying-cutter",
+            "daedalus:malphon:heavy-knuckle",
+            "daedalus:malphon:kinetic-launcher",
+            "daedalus:malphon:long-knuckle",
+            "daedalus:malphon:quake-cutter",
+            "daedalus:malphon:rolling-knuckle",
+            "daedalus:malphon:rush-kick",
+            "daedalus:stygius:breaching-slash",
+            "daedalus:stygius:cruel-thrust",
+            "daedalus:stygius:cursed-slash",
+            "daedalus:stygius:dash-nova",
+            "daedalus:stygius:double-edge",
+            "daedalus:stygius:double-nova",
+            "daedalus:stygius:flurry-slash",
+            "daedalus:stygius:hoarding-slash",
+            "daedalus:stygius:piercing-wave",
+            "daedalus:stygius:shadow-slash",
+            "daedalus:stygius:super-nova",
+            "daedalus:stygius:world-splitter",
+            "daedalus:varatha:breaching-skewer",
+            "daedalus:varatha:chain-skewer",
+            "daedalus:varatha:charged-skewer",
+            "daedalus:varatha:exploding-launcher",
+            "daedalus:varatha:extending-jab",
+            "daedalus:varatha:flaring-spin",
+            "daedalus:varatha:flurry-jab",
+            "daedalus:varatha:massive-spin",
+            "daedalus:varatha:quick-spin",
+            "daedalus:varatha:serrated-point",
+            "daedalus:varatha:triple-jab",
+            "daedalus:varatha:vicious-skewer"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "weapon:stygian-blade",
+            "weapon:eternal-spear",
+            "weapon:shield-of-chaos",
+            "weapon:heart-seeking-bow",
+            "weapon:twin-fists-of-malphon",
+            "weapon:adamant-rail"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "nectar:achilles",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:aphrodite",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:ares",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:artemis",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:athena",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:cerberus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:chaos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:charon",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:demeter",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:dionysus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:dusa",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:eurydice",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hades",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hermes",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hypnos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:megaera",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:nyx",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:orpheus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:patroclus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:poseidon",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:sisyphus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:skelly",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:thanatos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:zeus",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:well-versed"
+          ]
+        },
+        {
+          "kind": "atLeast",
+          "fact": "achievement:day-or-night-trader",
+          "value": 20
+        },
+        {
+          "kind": "count",
+          "n": 50,
+          "of": [
+            "contractor:bedchambers:arms-assorted",
+            "contractor:bedchambers:bedding-chthonic",
+            "contractor:bedchambers:lyre-splendid",
+            "contractor:bedchambers:pool-scrying",
+            "contractor:bedchambers:recliner-fancy",
+            "contractor:bedchambers:rug-stately",
+            "contractor:bedchambers:table-entertainment",
+            "contractor:bedchambers:wall-scroll-achilles",
+            "contractor:bedchambers:wall-scroll-aphrodite",
+            "contractor:bedchambers:wall-scroll-dionysus",
+            "contractor:bedchambers:weights-massive",
+            "contractor:court-music:death-and-i",
+            "contractor:court-music:final-expense",
+            "contractor:court-music:final-expense-payback",
+            "contractor:court-music:from-olympus",
+            "contractor:court-music:gates-of-hell",
+            "contractor:court-music:god-of-the-dead",
+            "contractor:court-music:good-riddance",
+            "contractor:court-music:hymn-to-zagreus",
+            "contractor:court-music:in-the-blood",
+            "contractor:court-music:lament-of-orpheus",
+            "contractor:court-music:last-words",
+            "contractor:court-music:mouth-of-styx",
+            "contractor:court-music:on-the-coast",
+            "contractor:court-music:out-of-tartarus",
+            "contractor:court-music:primordial-chaos",
+            "contractor:court-music:river-of-flame",
+            "contractor:court-music:scourge-of-the-furies",
+            "contractor:court-music:the-bloodless",
+            "contractor:court-music:the-exalted",
+            "contractor:court-music:the-king-and-the-bull",
+            "contractor:court-music:the-painful-way",
+            "contractor:court-music:the-unseen-ones",
+            "contractor:court-music:through-asphodel",
+            "contractor:court-music:wretched-shades",
+            "contractor:great-hall:bedding-fancy",
+            "contractor:great-hall:bedding-quilted",
+            "contractor:great-hall:bonework-ominous",
+            "contractor:great-hall:chaise-divine",
+            "contractor:great-hall:columns-divine",
+            "contractor:great-hall:columns-jeweled",
+            "contractor:great-hall:columns-ominous",
+            "contractor:great-hall:decorative-arms-bident",
+            "contractor:great-hall:decorative-arms-labrys",
+            "contractor:great-hall:decorative-arms-xiphos",
+            "contractor:great-hall:drapery-azure",
+            "contractor:great-hall:drapery-bone",
+            "contractor:great-hall:drapery-crimson",
+            "contractor:great-hall:drapery-olive",
+            "contractor:great-hall:east-wing-fountain",
+            "contractor:great-hall:fireplace-infernal",
+            "contractor:great-hall:fireplace-nocturnal",
+            "contractor:great-hall:flames-promethean",
+            "contractor:great-hall:flower-vase-lilac",
+            "contractor:great-hall:flower-vase-rose",
+            "contractor:great-hall:insignia-fated-order",
+            "contractor:great-hall:laurels-cobalt",
+            "contractor:great-hall:laurels-crimson",
+            "contractor:great-hall:laurels-deathly",
+            "contractor:great-hall:lighting-dual-stick",
+            "contractor:great-hall:lighting-wax-pillar",
+            "contractor:great-hall:mosaic-chthonic",
+            "contractor:great-hall:mosaic-minoan",
+            "contractor:great-hall:petals-ever-falling",
+            "contractor:great-hall:petals-scattered",
+            "contractor:great-hall:petals-shade-strewn",
+            "contractor:great-hall:plaything-plush",
+            "contractor:great-hall:plaything-round",
+            "contractor:great-hall:throne-hell-hound",
+            "contractor:great-hall:tiling-skull",
+            "contractor:great-hall:tombs-royal",
+            "contractor:great-hall:towel-rack-stygian",
+            "contractor:great-hall:treasures-boatman-s",
+            "contractor:great-hall:trim-ash-gray",
+            "contractor:great-hall:trim-blood-red",
+            "contractor:great-hall:trim-burnished-gold",
+            "contractor:great-hall:trim-chthonic-purple",
+            "contractor:lounge:aquarium-cubical",
+            "contractor:lounge:bat-cage-all-seeing",
+            "contractor:lounge:cauldron-fiery",
+            "contractor:lounge:cutlery-kitchenette",
+            "contractor:lounge:delicacy-ambrosial",
+            "contractor:lounge:fire-pit-wood-burning",
+            "contractor:lounge:fireplace-burial",
+            "contractor:lounge:jar-treat-filled",
+            "contractor:lounge:kitchenette-expanded",
+            "contractor:lounge:meats-cured",
+            "contractor:lounge:oven-kitchenette",
+            "contractor:lounge:painting-skeletal",
+            "contractor:lounge:prism-sphere-revolting",
+            "contractor:lounge:prism-sphere-revolving",
+            "contractor:lounge:rug-chthonic",
+            "contractor:lounge:rug-earthy",
+            "contractor:lounge:rug-elysian",
+            "contractor:lounge:rug-sanguine",
+            "contractor:lounge:rug-welcome",
+            "contractor:lounge:seating-covered",
+            "contractor:lounge:seating-olive",
+            "contractor:lounge:seating-red-hide",
+            "contractor:lounge:shelf-vintage",
+            "contractor:lounge:shortcut-great-hall",
+            "contractor:lounge:spice-rack-kitchenette",
+            "contractor:lounge:tables-serpentine",
+            "contractor:west-hall:bust-old-man",
+            "contractor:west-hall:chair-deathlike",
+            "contractor:west-hall:contraption-intricate",
+            "contractor:west-hall:flames-deathlike",
+            "contractor:west-hall:landscape-asphodel",
+            "contractor:west-hall:landscape-elysium",
+            "contractor:west-hall:landscape-tartarus",
+            "contractor:west-hall:mirror-guardpost",
+            "contractor:west-hall:painting-fury-sisters",
+            "contractor:west-hall:painting-god-of-the-dead",
+            "contractor:west-hall:painting-night",
+            "contractor:west-hall:painting-prince",
+            "contractor:west-hall:pedestals-gilded",
+            "contractor:west-hall:portrait-cerberus",
+            "contractor:west-hall:portrait-exalted-hero",
+            "contractor:west-hall:portrait-princess",
+            "contractor:west-hall:recliner-deathlike",
+            "contractor:west-hall:rug-chthonic",
+            "contractor:west-hall:rug-deathlike",
+            "contractor:west-hall:rug-earthy",
+            "contractor:west-hall:rug-elysian",
+            "contractor:west-hall:rug-guardpost",
+            "contractor:west-hall:rug-sanguine",
+            "contractor:west-hall:sculpture-bloodless",
+            "contractor:west-hall:sculpture-heroic",
+            "contractor:west-hall:seating-luxurious",
+            "contractor:west-hall:sundial-imported",
+            "contractor:west-hall:table-deathlike",
+            "contractor:west-hall:west-hall-fountain",
+            "contractor:work-orders:administrative-privilege",
+            "contractor:work-orders:brilliant-gemstones",
+            "contractor:work-orders:codex-index",
+            "contractor:work-orders:contractor-s-desk-deluxe",
+            "contractor:work-orders:court-music-stand",
+            "contractor:work-orders:darker-thirst",
+            "contractor:work-orders:extremer-measures",
+            "contractor:work-orders:fated-keys",
+            "contractor:work-orders:fated-list-of-minor-prophecies",
+            "contractor:work-orders:fountain-chamber-asphodel",
+            "contractor:work-orders:fountain-chamber-elysium",
+            "contractor:work-orders:fountain-chamber-tartarus",
+            "contractor:work-orders:gateways-erebus",
+            "contractor:work-orders:keepsake-collection-regional",
+            "contractor:work-orders:pitch-black-darkness",
+            "contractor:work-orders:plunder-greater",
+            "contractor:work-orders:plunder-lesser",
+            "contractor:work-orders:plunder-superior",
+            "contractor:work-orders:rod-of-fishing",
+            "contractor:work-orders:theme-chthonic",
+            "contractor:work-orders:theme-infernal",
+            "contractor:work-orders:theme-lovely",
+            "contractor:work-orders:theme-princely",
+            "contractor:work-orders:theme-sonorous",
+            "contractor:work-orders:theme-woodland",
+            "contractor:work-orders:underworld-fountains-holy",
+            "contractor:work-orders:underworld-fountains-purified",
+            "contractor:work-orders:urns-of-wealth-greater",
+            "contractor:work-orders:urns-of-wealth-lesser",
+            "contractor:work-orders:urns-of-wealth-superior",
+            "contractor:work-orders:vanquisher-s-keep",
+            "contractor:work-orders:vintage-nectar"
+          ]
+        },
+        {
+          "kind": "count",
+          "n": 15,
+          "of": [
+            {
+              "kind": "all",
+              "of": [
+                "daedalus:exagryph:flurry-fire",
+                "daedalus:exagryph:ricochet-fire",
+                "daedalus:exagryph:spread-fire",
+                "daedalus:exagryph:explosive-fire",
+                "daedalus:exagryph:delta-chamber",
+                "daedalus:exagryph:piercing-fire",
+                "daedalus:exagryph:triple-bomb",
+                "daedalus:exagryph:rocket-bomb",
+                "daedalus:exagryph:targeting-system",
+                "daedalus:exagryph:hazard-bomb",
+                "daedalus:exagryph:cluster-bomb",
+                "daedalus:exagryph:seeking-fire"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:defeat-hades-with-cosmic-egg"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "meet:hades",
+                "meet:nyx",
+                "meet:charon",
+                "meet:thanatos",
+                "meet:hypnos",
+                "meet:megaera",
+                "meet:alecto",
+                "meet:tisiphone",
+                "meet:chaos"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "codex:sections-revealed",
+                  "value": 70
+                }
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:old-spiked-collar",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:myrmidon-bracer",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:black-shawl",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:pierced-butterfly",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:bone-hourglass",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:chthonic-coin-purse",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:skull-earring",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:distant-memory",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:harpy-feather-duster",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:lucky-tooth",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:thunder-signet",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:conch-shell",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:owl-pendant",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:eternal-rose",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:blood-filled-vial",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:adamant-arrowhead",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:overflowing-cup",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:lambent-plume",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:frostbitten-horn",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:cosmic-egg",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:shattered-shackle",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:evergreen-acorn",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "keepsake:broken-spearpoint",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "wellofcharon:hydralite",
+                "wellofcharon:eye-of-lamia",
+                "wellofcharon:cyclops-jerky",
+                "wellofcharon:prometheus-stone",
+                "wellofcharon:braid-of-atlas",
+                "wellofcharon:ignited-ichor",
+                "wellofcharon:yarn-of-ariadne",
+                "wellofcharon:touch-of-styx",
+                "wellofcharon:nail-of-talos",
+                "wellofcharon:eris-bangle",
+                "wellofcharon:nemesis-crest",
+                "wellofcharon:chimaera-jerky",
+                "wellofcharon:stygian-shard",
+                "wellofcharon:aether-net",
+                "wellofcharon:light-of-ixion",
+                "wellofcharon:trove-tracker",
+                "wellofcharon:skeletal-lure",
+                "wellofcharon:flame-wheels-release",
+                "wellofcharon:life-essence",
+                "wellofcharon:centaur-soul",
+                "wellofcharon:price-of-midas",
+                "wellofcharon:kiss-of-styx",
+                "wellofcharon:tinge-of-erebus",
+                "wellofcharon:gaeas-treasure",
+                "wellofcharon:night-spindle",
+                "wellofcharon:fateful-twist"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "talent:shadow-presence",
+                "talent:fiery-presence",
+                "talent:chthonic-vitality",
+                "talent:dark-regeneration",
+                "talent:death-defiance",
+                "talent:stubborn-defiance",
+                "talent:greater-reflex",
+                "talent:ruthless-reflex",
+                "talent:boiling-blood",
+                "talent:abyssal-blood",
+                "talent:infernal-soul",
+                "talent:stygian-soul",
+                "talent:deep-pockets",
+                "talent:golden-touch",
+                "talent:thick-skin",
+                "talent:high-confidence",
+                "talent:privileged-status",
+                "talent:family-favorite",
+                "talent:olympian-favor",
+                "talent:dark-foresight",
+                "talent:gods-pride",
+                "talent:gods-legacy",
+                "talent:fated-authority",
+                "talent:fated-persuasion"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:cerberus-exagryph-lucifer"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "fish:caught",
+                  "value": 25
+                },
+                "fish:very-rare-caught",
+                "talk:poseidon-after-fishing"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "meet:zeus",
+                "meet:poseidon",
+                "meet:athena",
+                "meet:dionysus",
+                "meet:aphrodite",
+                "meet:ares",
+                "meet:artemis"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "workorder:heros-sacrifice",
+                "talk:achilles-after-heros-sacrifice"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:duo:scintillating-feast",
+                "boon:duo:vengeful-mood",
+                "boon:duo:sea-storm",
+                "boon:duo:lightning-phalanx",
+                "boon:duo:merciful-end",
+                "boon:duo:calculated-risk",
+                "boon:duo:deadly-reversal",
+                "boon:duo:hunting-blades",
+                "boon:duo:lightning-rod",
+                "boon:duo:heart-rend",
+                "boon:duo:curse-of-longing",
+                "boon:duo:sweet-nectar",
+                "boon:duo:low-tolerance",
+                "boon:duo:exclusive-access",
+                "boon:duo:crystal-clarity",
+                "boon:duo:ice-wine",
+                "boon:duo:blizzard-shot",
+                "boon:duo:cold-fusion",
+                "boon:duo:curse-of-drowning",
+                "boon:duo:mirage-shot",
+                "boon:duo:parting-shot",
+                "boon:duo:curse-of-nausea",
+                "boon:duo:cold-embrace",
+                "boon:duo:freezing-vortex",
+                "boon:duo:stubborn-roots",
+                "boon:duo:smoldering-air",
+                "boon:duo:unshakable-mettle",
+                "boon:duo:splitting-headache"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:cerberus-aegis-beowulf"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "workorder:knave-kings-sentence",
+                "talk:sisyphus-after-knave-kings-sentence"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:stygius:zagreus",
+                  "value": 5
+                },
+                "combat:slay-skelly-with-stygius"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "daedalus:varatha:extending-jab",
+                "daedalus:varatha:chain-skewer",
+                "daedalus:varatha:breaching-skewer",
+                "daedalus:varatha:vicious-skewer",
+                "daedalus:varatha:exploding-launcher",
+                "daedalus:varatha:massive-spin",
+                "daedalus:varatha:quick-spin",
+                "daedalus:varatha:flurry-jab",
+                "daedalus:varatha:charged-skewer",
+                "daedalus:varatha:serrated-point",
+                "daedalus:varatha:flaring-spin",
+                "daedalus:varatha:triple-jab"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "invite:zeus",
+                "invite:poseidon",
+                "invite:demeter",
+                "invite:athena",
+                "invite:aphrodite",
+                "invite:ares",
+                "invite:artemis",
+                "invite:dionysus",
+                "invite:hermes",
+                "talk:persephone-and-hades-after-family-reunion"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:cerberus-varatha-guan-yu"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:defeat-charon-twice-consecutive"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "lyre:interactions",
+                  "value": 210
+                },
+                "talk:orpheus-after-lyre"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:cerberus-malphon-gilgamesh"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:hermes:second-wind",
+                "boon:hermes:swift-strike",
+                "boon:hermes:swift-flourish",
+                "boon:hermes:quick-recovery",
+                "boon:hermes:greater-haste",
+                "boon:hermes:hyper-sprint",
+                "boon:hermes:flurry-cast",
+                "boon:hermes:greatest-reflex",
+                "boon:hermes:greater-evasion",
+                "boon:hermes:quick-favor",
+                "boon:hermes:side-hustle",
+                "boon:hermes:quick-reload",
+                "boon:hermes:rush-delivery"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:zeus:lightning-strike",
+                "boon:zeus:thunder-dash",
+                "boon:zeus:electric-shot",
+                "boon:zeus:thunder-flourish",
+                "boon:zeus:zeus-aid",
+                "boon:zeus:heavens-vengeance",
+                "boon:zeus:clouded-judgement",
+                "boon:zeus:billowing-strength",
+                "boon:zeus:lightning-reflexes",
+                "boon:zeus:storm-lightning",
+                "boon:zeus:static-discharge",
+                "boon:zeus:high-voltage",
+                "boon:zeus:double-strike"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:poseidon:tempest-strike",
+                "boon:poseidon:tempest-flourish",
+                "boon:poseidon:tidal-dash",
+                "boon:poseidon:flood-shot",
+                "boon:poseidon:poseidons-aid",
+                "boon:poseidon:hydraulic-might",
+                "boon:poseidon:oceans-bounty",
+                "boon:poseidon:boiling-point",
+                "boon:poseidon:rip-current",
+                "boon:poseidon:typhoons-fury",
+                "boon:poseidon:breaking-wave",
+                "boon:poseidon:razor-shoals",
+                "boon:poseidon:wave-pounding"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:ares:curse-of-agony",
+                "boon:ares:curse-of-pain",
+                "boon:ares:blade-dash",
+                "boon:ares:slicing-shot",
+                "boon:ares:ares-aid",
+                "boon:ares:curse-of-vengeance",
+                "boon:ares:urge-to-kill",
+                "boon:ares:battle-rage",
+                "boon:ares:blood-frenzy",
+                "boon:ares:impending-doom",
+                "boon:ares:dire-misfortune",
+                "boon:ares:black-metal",
+                "boon:ares:engulfing-vortex"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:dionysus:drunken-strike",
+                "boon:dionysus:drunken-flourish",
+                "boon:dionysus:drunken-dash",
+                "boon:dionysus:trippy-shot",
+                "boon:dionysus:dionysus-aid",
+                "boon:dionysus:after-party",
+                "boon:dionysus:positive-outlook",
+                "boon:dionysus:strong-drink",
+                "boon:dionysus:peer-pressure",
+                "boon:dionysus:numbing-sensation",
+                "boon:dionysus:bad-influence",
+                "boon:dionysus:high-tolerance"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:aphrodite:heartbreak-strike",
+                "boon:aphrodite:heartbreak-flourish",
+                "boon:aphrodite:passion-dash",
+                "boon:aphrodite:crush-shot",
+                "boon:aphrodite:aphrodites-aid",
+                "boon:aphrodite:blown-kiss",
+                "boon:aphrodite:wave-of-despair",
+                "boon:aphrodite:dying-lament",
+                "boon:aphrodite:different-league",
+                "boon:aphrodite:life-affirmation",
+                "boon:aphrodite:empty-inside",
+                "boon:aphrodite:sweet-surrender",
+                "boon:aphrodite:broken-resolve"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:demeter:frost-strike",
+                "boon:demeter:mistral-dash",
+                "boon:demeter:crystal-beam",
+                "boon:demeter:frost-flourish",
+                "boon:demeter:demeters-aid",
+                "boon:demeter:snow-burst",
+                "boon:demeter:glacial-glare",
+                "boon:demeter:frozen-touch",
+                "boon:demeter:ravenous-will",
+                "boon:demeter:arctic-blast",
+                "boon:demeter:killing-freeze"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:artemis:deadly-strike",
+                "boon:artemis:hunter-dash",
+                "boon:artemis:true-shot",
+                "boon:artemis:deadly-flourish",
+                "boon:artemis:artemis-aid",
+                "boon:artemis:pressure-points",
+                "boon:artemis:support-fire",
+                "boon:artemis:hunters-mark",
+                "boon:artemis:clean-kill",
+                "boon:artemis:hide-breaker",
+                "boon:artemis:hunter-instinct",
+                "boon:artemis:exit-wounds"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:athena:divine-strike",
+                "boon:athena:divine-flourish",
+                "boon:athena:divine-dash",
+                "boon:athena:phalanx-shot",
+                "boon:athena:athenas-aid",
+                "boon:athena:sure-footing",
+                "boon:athena:bronze-skin",
+                "boon:athena:holy-shield",
+                "boon:athena:proud-bearing",
+                "boon:athena:blinding-flash",
+                "boon:athena:brilliant-riposte"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "pact:hard-labor",
+                "pact:lasting-consequences",
+                "pact:convenience-fee",
+                "pact:jury-summons",
+                "pact:extreme-measures",
+                "pact:calisthenics-program",
+                "pact:benefits-package",
+                "pact:middle-management",
+                "pact:underworld-customs",
+                "pact:forced-overtime",
+                "pact:heightened-security",
+                "pact:routine-inspection",
+                "pact:damage-control",
+                "pact:approval-process",
+                "pact:tight-deadline"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "daedalus:coronacht:twin-shot",
+                "daedalus:coronacht:sniper-shot",
+                "daedalus:coronacht:explosive-shot",
+                "daedalus:coronacht:flurry-shot",
+                "daedalus:coronacht:piercing-volley",
+                "daedalus:coronacht:perfect-shot",
+                "daedalus:coronacht:relentless-volley",
+                "daedalus:coronacht:triple-shot",
+                "daedalus:coronacht:charged-volley",
+                "daedalus:coronacht:chain-shot",
+                "daedalus:coronacht:point-blank-shot",
+                "daedalus:coronacht:concentrated-volley"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:cerberus-stygius-arthur"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "weapon:stygian-blade",
+                "weapon:eternal-spear",
+                "weapon:shield-of-chaos",
+                "weapon:heart-seeking-bow",
+                "weapon:twin-fists-of-malphon",
+                "weapon:adamant-rail"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:defeat-hades"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "escape:stygian-blade",
+                "escape:eternal-spear",
+                "escape:shield-of-chaos",
+                "escape:heart-seeking-bow",
+                "escape:twin-fists-of-malphon",
+                "escape:adamant-rail"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:orpheus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:eurydice",
+                  "value": 1
+                },
+                "workorder:singers-gamble",
+                "talk:orpheus-after-singers-gamble"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "workorder:eldest-sigil-restoration",
+                "talk:nyx-in-chaos-realm"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "lounge:deep-cleaning-service",
+                "lounge:detailing-service",
+                "lounge:any-rug",
+                {
+                  "kind": "atLeast",
+                  "fact": "lounge:other-items",
+                  "value": 10
+                },
+                "talk:dusa-after-lounge-decor"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "boon:legendary:splitting-bolt",
+                "boon:legendary:second-wave",
+                "boon:legendary:divine-protection",
+                "boon:legendary:vicious-cycle",
+                "boon:legendary:unhealthy-fixation",
+                "boon:legendary:fully-loaded",
+                "boon:legendary:black-out",
+                "boon:legendary:greater-recall",
+                "boon:legendary:bad-news",
+                "boon:legendary:winter-harvest"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:cerberus-coronacht-rama"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "curse:chaos:paupers",
+                "curse:chaos:slippery",
+                "curse:chaos:maimed",
+                "curse:chaos:flayed",
+                "curse:chaos:addled",
+                "curse:chaos:caustic",
+                "curse:chaos:enshrouded",
+                "curse:chaos:excruciating",
+                "curse:chaos:abyssal",
+                "curse:chaos:atrophic",
+                "curse:chaos:slothful",
+                "curse:chaos:halting",
+                "curse:chaos:roiling"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "blessing:chaos:strike",
+                "blessing:chaos:shot",
+                "blessing:chaos:grasp",
+                "blessing:chaos:soul",
+                "blessing:chaos:favor",
+                "blessing:chaos:affluence",
+                "blessing:chaos:eclipse",
+                "blessing:chaos:flourish",
+                "blessing:chaos:lunge",
+                "blessing:chaos:ambush",
+                "blessing:chaos:assault",
+                "blessing:chaos:defiance"
+              ]
+            },
+            {
+              "kind": "count",
+              "n": 6,
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:zeus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:poseidon",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:demeter",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:athena",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:aphrodite",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:ares",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:artemis",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:dionysus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "nectar:hermes",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "workorder:court-musicians-sentence"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "pact:extreme-measures",
+                "combat:defeat-theseus-extreme-measures",
+                "talk:poseidon-after-theseus-extreme-measures"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "daedalus:aegis:dread-flight",
+                "daedalus:aegis:sudden-rush",
+                "daedalus:aegis:pulverizing-blow",
+                "daedalus:aegis:dashing-wallop",
+                "daedalus:aegis:explosive-return",
+                "daedalus:aegis:minotaur-rush",
+                "daedalus:aegis:breaching-rush",
+                "daedalus:aegis:charged-shot",
+                "daedalus:aegis:charged-flight",
+                "daedalus:aegis:empowering-flight",
+                "daedalus:aegis:dashing-flight",
+                "daedalus:aegis:ferocious-guard"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "contractor:renovation-tasks",
+                  "value": 30
+                }
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "perk:shifter",
+                "perk:bruiser",
+                "perk:slugger",
+                "perk:puller",
+                "perk:savior",
+                "perk:speeder",
+                "perk:linker",
+                "perk:cloner",
+                "perk:burner",
+                "perk:seeker",
+                "perk:popper"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "daedalus:stygius:breaching-slash",
+                "daedalus:stygius:cruel-thrust",
+                "daedalus:stygius:cursed-slash",
+                "daedalus:stygius:dash-nova",
+                "daedalus:stygius:double-edge",
+                "daedalus:stygius:double-nova",
+                "daedalus:stygius:flurry-slash",
+                "daedalus:stygius:hoarding-slash",
+                "daedalus:stygius:piercing-wave",
+                "daedalus:stygius:shadow-slash",
+                "daedalus:stygius:super-nova",
+                "daedalus:stygius:world-splitter"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "daedalus:malphon:breaching-cross",
+                "daedalus:malphon:rolling-knuckle",
+                "daedalus:malphon:long-knuckle",
+                "daedalus:malphon:draining-cutter",
+                "daedalus:malphon:concentrated-knuckle",
+                "daedalus:malphon:explosive-upper",
+                "daedalus:malphon:flying-cutter",
+                "daedalus:malphon:rush-kick",
+                "daedalus:malphon:quake-cutter",
+                "daedalus:malphon:kinetic-launcher",
+                "daedalus:malphon:heavy-knuckle",
+                "daedalus:malphon:colossus-knuckle"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "combat:defeat-hades-heat8"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:stygius:zagreus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:stygius:nemesis",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:stygius:poseidon",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:coronacht:zagreus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:coronacht:chiron",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:coronacht:hera",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:aegis:zagreus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:aegis:chaos",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:aegis:zeus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:varatha:zagreus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:varatha:achilles",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:varatha:hades",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:malphon:zagreus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:malphon:talos",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:malphon:demeter",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:exagryph:zagreus",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:exagryph:eris",
+                  "value": 1
+                },
+                {
+                  "kind": "atLeast",
+                  "fact": "aspect:exagryph:hestia",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                "miniboss:dire-inferno-bomber",
+                "miniboss:doomstone",
+                "miniboss:wretched-sneak",
+                "miniboss:dire-voidstone",
+                "miniboss:megagorgon",
+                "miniboss:dire-skull-crusher",
+                "miniboss:dire-spreader",
+                "miniboss:dire-soul-catcher",
+                "miniboss:dire-bother",
+                "miniboss:dire-snakestone",
+                "miniboss:dire-gigantic-vermin",
+                "miniboss:dire-satyr-cultist"
+              ]
+            },
+            {
+              "kind": "all",
+              "of": [
+                {
+                  "kind": "atLeast",
+                  "fact": "combat:foes-slain",
+                  "value": 10000
+                },
+                "talk:ares-after-10000-foes"
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "any",
+              "of": [
+                "catch:mati",
+                "catch:projelly",
+                "catch:voidskate"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:hellfish",
+                "catch:knucklehead",
+                "catch:scyllascion"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:slavug",
+                "catch:chrustacean",
+                "catch:flameater"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:chlam",
+                "catch:charp",
+                "catch:seamare"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:gupp",
+                "catch:scuffer",
+                "catch:stonewhal"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:trout",
+                "catch:bass",
+                "catch:sturgeon"
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:urge-to-sing"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "talent:abyssal-blood",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:boiling-blood",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:chthonic-vitality",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:dark-foresight",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:dark-regeneration",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:death-defiance",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:deep-pockets",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:family-favorite",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:fated-authority",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:fated-persuasion",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:fiery-presence",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:gods-legacy",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:gods-pride",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:golden-touch",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:greater-reflex",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:high-confidence",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:infernal-soul",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:olympian-favor",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:privileged-status",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:ruthless-reflex",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:shadow-presence",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:stubborn-defiance",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:stygian-soul",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:thick-skin",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:eldest-sigil-restoration",
+            "talk:nyx-in-chaos-realm"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "meet:hades",
+            "meet:nyx",
+            "meet:charon",
+            "meet:thanatos",
+            "meet:hypnos",
+            "meet:megaera",
+            "meet:alecto",
+            "meet:tisiphone",
+            "meet:chaos"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "combat:foes-slain",
+              "value": 10000
+            },
+            "talk:ares-after-10000-foes"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:knave-kings-sentence",
+            "talk:sisyphus-after-knave-kings-sentence"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "nectar:orpheus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:eurydice",
+              "value": 1
+            },
+            "workorder:singers-gamble",
+            "talk:orpheus-after-singers-gamble"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:heros-sacrifice",
+            "talk:achilles-after-heros-sacrifice"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "talent:shadow-presence",
+            "talent:fiery-presence",
+            "talent:chthonic-vitality",
+            "talent:dark-regeneration",
+            "talent:death-defiance",
+            "talent:stubborn-defiance",
+            "talent:greater-reflex",
+            "talent:ruthless-reflex",
+            "talent:boiling-blood",
+            "talent:abyssal-blood",
+            "talent:infernal-soul",
+            "talent:stygian-soul",
+            "talent:deep-pockets",
+            "talent:golden-touch",
+            "talent:thick-skin",
+            "talent:high-confidence",
+            "talent:privileged-status",
+            "talent:family-favorite",
+            "talent:olympian-favor",
+            "talent:dark-foresight",
+            "talent:gods-pride",
+            "talent:gods-legacy",
+            "talent:fated-authority",
+            "talent:fated-persuasion"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "pact:hard-labor",
+            "pact:lasting-consequences",
+            "pact:convenience-fee",
+            "pact:jury-summons",
+            "pact:extreme-measures",
+            "pact:calisthenics-program",
+            "pact:benefits-package",
+            "pact:middle-management",
+            "pact:underworld-customs",
+            "pact:forced-overtime",
+            "pact:heightened-security",
+            "pact:routine-inspection",
+            "pact:damage-control",
+            "pact:approval-process",
+            "pact:tight-deadline"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "escape:stygian-blade",
+            "escape:eternal-spear",
+            "escape:shield-of-chaos",
+            "escape:heart-seeking-bow",
+            "escape:twin-fists-of-malphon",
+            "escape:adamant-rail"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "perk:shifter",
+            "perk:bruiser",
+            "perk:slugger",
+            "perk:puller",
+            "perk:savior",
+            "perk:speeder",
+            "perk:linker",
+            "perk:cloner",
+            "perk:burner",
+            "perk:seeker",
+            "perk:popper"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:back-to-work"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:the-family-secret"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:one-for-the-ages"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:well-stocked"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:thorn-of-thanatos"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:haste-of-hermes"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:death-dealer"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:friends-in-high-places"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:bad-call"
+          ]
+        },
+        {
+          "kind": "atLeast",
+          "fact": "achievement:skelly-slayer",
+          "value": 15
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "pet:cerberus",
+              "value": 10
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:escaped-tartarus",
+    "name": "Escaped Tartarus",
+    "description": "Clear Tartarus.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:escaped-tartarus"
+      ]
+    }
+  },
+  {
+    "id": "achievement:escaped-asphodel",
+    "name": "Escaped Asphodel",
+    "description": "Clear Asphodel.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:escaped-asphodel"
+      ]
+    }
+  },
+  {
+    "id": "achievement:escaped-elysium",
+    "name": "Escaped Elysium",
+    "description": "Clear Elysium.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:escaped-elysium"
+      ]
+    }
+  },
+  {
+    "id": "achievement:champion-of-elysium",
+    "name": "Champion of Elysium",
+    "description": "Clear Elysium with the 'Extreme Measures' Condition.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:champion-of-elysium"
+      ]
+    }
+  },
+  {
+    "id": "achievement:hold-the-onions",
+    "name": "Hold the Onions",
+    "description": "Clear an Infernal Gate without taking damage.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:hold-the-onions"
+      ]
+    }
+  },
+  {
+    "id": "achievement:is-there-no-escape",
+    "name": "Is There No Escape?",
+    "description": "Clear an escape attempt.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-hades"
+      ]
+    }
+  },
+  {
+    "id": "achievement:weapon-of-fate",
+    "name": "Weapon of Fate",
+    "description": "Clear an escape attempt with a hidden Weapon Aspect.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:weapon-of-fate"
+      ]
+    }
+  },
+  {
+    "id": "achievement:to-charons-credit",
+    "name": "To Charon's Credit",
+    "description": "Earn a Loyalty Card.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:to-charons-credit"
+      ]
+    }
+  },
+  {
+    "id": "achievement:the-useless-trinket",
+    "name": "The Useless Trinket",
+    "description": "Earn the first of Skelly's prizes.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-hades-heat8"
+      ]
+    }
+  },
+  {
+    "id": "achievement:skellys-last-lamentations",
+    "name": "Skelly's Last Lamentations",
+    "description": "Earn the second of Skelly's prizes.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:skellys-last-lamentations"
+      ]
+    }
+  },
+  {
+    "id": "achievement:something-from-everyone",
+    "name": "Something From Everyone",
+    "description": "Unlock each standard Keepsake.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:adamant-arrowhead",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:black-shawl",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:blood-filled-vial",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:bone-hourglass",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:broken-spearpoint",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:chthonic-coin-purse",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:conch-shell",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:cosmic-egg",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:distant-memory",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:eternal-rose",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:evergreen-acorn",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:frostbitten-horn",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:harpy-feather-duster",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lambent-plume",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lucky-tooth",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:myrmidon-bracer",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:old-spiked-collar",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:overflowing-cup",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:owl-pendant",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pierced-butterfly",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pom-blossom",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:shattered-shackle",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:sigil-of-the-dead",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:skull-earring",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:thunder-signet",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:friends-forever",
+    "name": "Friends Forever",
+    "description": "Max-rank each standard Keepsake.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:adamant-arrowhead",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:black-shawl",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:blood-filled-vial",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:bone-hourglass",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:broken-spearpoint",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:chthonic-coin-purse",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:conch-shell",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:cosmic-egg",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:distant-memory",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:eternal-rose",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:evergreen-acorn",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:frostbitten-horn",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:harpy-feather-duster",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lambent-plume",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lucky-tooth",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:myrmidon-bracer",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:old-spiked-collar",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:overflowing-cup",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:owl-pendant",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pierced-butterfly",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pom-blossom",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:shattered-shackle",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:sigil-of-the-dead",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:skull-earring",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:thunder-signet",
+          "value": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:rare-collectable",
+    "name": "Rare Collectible",
+    "description": "Equip a Chthonic Companion.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "any",
+      "of": [
+        "companion:antos",
+        "companion:battie",
+        "companion:fidi",
+        "companion:mort",
+        "companion:rib",
+        "companion:shady"
+      ]
+    }
+  },
+  {
+    "id": "achievement:complete-set",
+    "name": "Complete Set",
+    "description": "Earn all Chthonic Companions.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "companion:antos",
+        "companion:battie",
+        "companion:fidi",
+        "companion:mort",
+        "companion:rib",
+        "companion:shady"
+      ]
+    }
+  },
+  {
+    "id": "achievement:blood-bound",
+    "name": "Blood Bound",
+    "description": "Max any Weapon Aspect.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "any",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:beowulf",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:chaos",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zeus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:chiron",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:hera",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:rama",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:eris",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:hestia",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:lucifer",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:demeter",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:gilgamesh",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:talos",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:arthur",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:nemesis",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:poseidon",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:achilles",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:guan-yu",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:hades",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:zagreus",
+          "value": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:infernal-arms",
+    "name": "Infernal Arms",
+    "description": "Unlock all weapon aspects.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:beowulf",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:chaos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zeus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:chiron",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:hera",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:rama",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:eris",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:hestia",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:lucifer",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:demeter",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:gilgamesh",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:talos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:arthur",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:nemesis",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:poseidon",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:achilles",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:guan-yu",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:hades",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:zagreus",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:blessed-by-the-gods",
+    "name": "Blessed by the Gods",
+    "description": "Choose 100 different Olympian Boon effects.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "count",
+      "n": 100,
+      "of": [
+        "boon:aphrodite:aphrodites-aid",
+        "boon:aphrodite:blown-kiss",
+        "boon:aphrodite:broken-resolve",
+        "boon:aphrodite:crush-shot",
+        "boon:aphrodite:different-league",
+        "boon:aphrodite:dying-lament",
+        "boon:aphrodite:empty-inside",
+        "boon:aphrodite:heartbreak-flourish",
+        "boon:aphrodite:heartbreak-strike",
+        "boon:aphrodite:life-affirmation",
+        "boon:aphrodite:passion-dash",
+        "boon:aphrodite:sweet-surrender",
+        "boon:aphrodite:wave-of-despair",
+        "boon:ares:ares-aid",
+        "boon:ares:battle-rage",
+        "boon:ares:black-metal",
+        "boon:ares:blade-dash",
+        "boon:ares:blood-frenzy",
+        "boon:ares:curse-of-agony",
+        "boon:ares:curse-of-pain",
+        "boon:ares:curse-of-vengeance",
+        "boon:ares:dire-misfortune",
+        "boon:ares:engulfing-vortex",
+        "boon:ares:impending-doom",
+        "boon:ares:slicing-shot",
+        "boon:ares:urge-to-kill",
+        "boon:artemis:artemis-aid",
+        "boon:artemis:clean-kill",
+        "boon:artemis:deadly-flourish",
+        "boon:artemis:deadly-strike",
+        "boon:artemis:exit-wounds",
+        "boon:artemis:hide-breaker",
+        "boon:artemis:hunter-dash",
+        "boon:artemis:hunter-instinct",
+        "boon:artemis:hunters-mark",
+        "boon:artemis:pressure-points",
+        "boon:artemis:support-fire",
+        "boon:artemis:true-shot",
+        "boon:athena:athenas-aid",
+        "boon:athena:blinding-flash",
+        "boon:athena:brilliant-riposte",
+        "boon:athena:bronze-skin",
+        "boon:athena:divine-dash",
+        "boon:athena:divine-flourish",
+        "boon:athena:divine-strike",
+        "boon:athena:holy-shield",
+        "boon:athena:phalanx-shot",
+        "boon:athena:proud-bearing",
+        "boon:athena:sure-footing",
+        "boon:demeter:arctic-blast",
+        "boon:demeter:crystal-beam",
+        "boon:demeter:demeters-aid",
+        "boon:demeter:frost-flourish",
+        "boon:demeter:frost-strike",
+        "boon:demeter:frozen-touch",
+        "boon:demeter:glacial-glare",
+        "boon:demeter:killing-freeze",
+        "boon:demeter:mistral-dash",
+        "boon:demeter:ravenous-will",
+        "boon:demeter:snow-burst",
+        "boon:dionysus:after-party",
+        "boon:dionysus:bad-influence",
+        "boon:dionysus:dionysus-aid",
+        "boon:dionysus:drunken-dash",
+        "boon:dionysus:drunken-flourish",
+        "boon:dionysus:drunken-strike",
+        "boon:dionysus:high-tolerance",
+        "boon:dionysus:numbing-sensation",
+        "boon:dionysus:peer-pressure",
+        "boon:dionysus:positive-outlook",
+        "boon:dionysus:strong-drink",
+        "boon:dionysus:trippy-shot",
+        "boon:duo:blizzard-shot",
+        "boon:duo:calculated-risk",
+        "boon:duo:cold-embrace",
+        "boon:duo:cold-fusion",
+        "boon:duo:crystal-clarity",
+        "boon:duo:curse-of-drowning",
+        "boon:duo:curse-of-longing",
+        "boon:duo:curse-of-nausea",
+        "boon:duo:deadly-reversal",
+        "boon:duo:exclusive-access",
+        "boon:duo:freezing-vortex",
+        "boon:duo:heart-rend",
+        "boon:duo:hunting-blades",
+        "boon:duo:ice-wine",
+        "boon:duo:lightning-phalanx",
+        "boon:duo:lightning-rod",
+        "boon:duo:low-tolerance",
+        "boon:duo:merciful-end",
+        "boon:duo:mirage-shot",
+        "boon:duo:parting-shot",
+        "boon:duo:scintillating-feast",
+        "boon:duo:sea-storm",
+        "boon:duo:smoldering-air",
+        "boon:duo:splitting-headache",
+        "boon:duo:stubborn-roots",
+        "boon:duo:sweet-nectar",
+        "boon:duo:unshakable-mettle",
+        "boon:duo:vengeful-mood",
+        "boon:hermes:flurry-cast",
+        "boon:hermes:greater-evasion",
+        "boon:hermes:greater-haste",
+        "boon:hermes:greatest-reflex",
+        "boon:hermes:hyper-sprint",
+        "boon:hermes:quick-favor",
+        "boon:hermes:quick-recovery",
+        "boon:hermes:quick-reload",
+        "boon:hermes:rush-delivery",
+        "boon:hermes:second-wind",
+        "boon:hermes:side-hustle",
+        "boon:hermes:swift-flourish",
+        "boon:hermes:swift-strike",
+        "boon:legendary:bad-news",
+        "boon:legendary:black-out",
+        "boon:legendary:divine-protection",
+        "boon:legendary:fully-loaded",
+        "boon:legendary:greater-recall",
+        "boon:legendary:second-wave",
+        "boon:legendary:splitting-bolt",
+        "boon:legendary:unhealthy-fixation",
+        "boon:legendary:vicious-cycle",
+        "boon:legendary:winter-harvest",
+        "boon:poseidon:boiling-point",
+        "boon:poseidon:breaking-wave",
+        "boon:poseidon:flood-shot",
+        "boon:poseidon:hydraulic-might",
+        "boon:poseidon:oceans-bounty",
+        "boon:poseidon:poseidons-aid",
+        "boon:poseidon:razor-shoals",
+        "boon:poseidon:rip-current",
+        "boon:poseidon:tempest-flourish",
+        "boon:poseidon:tempest-strike",
+        "boon:poseidon:tidal-dash",
+        "boon:poseidon:typhoons-fury",
+        "boon:poseidon:wave-pounding",
+        "boon:zeus:billowing-strength",
+        "boon:zeus:clouded-judgement",
+        "boon:zeus:double-strike",
+        "boon:zeus:electric-shot",
+        "boon:zeus:heavens-vengeance",
+        "boon:zeus:high-voltage",
+        "boon:zeus:lightning-reflexes",
+        "boon:zeus:lightning-strike",
+        "boon:zeus:static-discharge",
+        "boon:zeus:storm-lightning",
+        "boon:zeus:thunder-dash",
+        "boon:zeus:thunder-flourish",
+        "boon:zeus:zeus-aid"
+      ]
+    }
+  },
+  {
+    "id": "achievement:thanks-but-no-thanks",
+    "name": "Thanks, But No Thanks",
+    "description": "Purge a Legendary Boon.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:thanks-but-no-thanks"
+      ]
+    }
+  },
+  {
+    "id": "achievement:tools-of-the-architect",
+    "name": "Tools of the Architect",
+    "description": "Choose 50 different Daedalus Hammer enchantments.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "count",
+      "n": 50,
+      "of": [
+        "daedalus:aegis:breaching-rush",
+        "daedalus:aegis:charged-flight",
+        "daedalus:aegis:charged-shot",
+        "daedalus:aegis:dashing-flight",
+        "daedalus:aegis:dashing-wallop",
+        "daedalus:aegis:dread-flight",
+        "daedalus:aegis:empowering-flight",
+        "daedalus:aegis:explosive-return",
+        "daedalus:aegis:ferocious-guard",
+        "daedalus:aegis:minotaur-rush",
+        "daedalus:aegis:pulverizing-blow",
+        "daedalus:aegis:sudden-rush",
+        "daedalus:coronacht:chain-shot",
+        "daedalus:coronacht:charged-volley",
+        "daedalus:coronacht:concentrated-volley",
+        "daedalus:coronacht:explosive-shot",
+        "daedalus:coronacht:flurry-shot",
+        "daedalus:coronacht:perfect-shot",
+        "daedalus:coronacht:piercing-volley",
+        "daedalus:coronacht:point-blank-shot",
+        "daedalus:coronacht:relentless-volley",
+        "daedalus:coronacht:sniper-shot",
+        "daedalus:coronacht:triple-shot",
+        "daedalus:coronacht:twin-shot",
+        "daedalus:exagryph:cluster-bomb",
+        "daedalus:exagryph:delta-chamber",
+        "daedalus:exagryph:explosive-fire",
+        "daedalus:exagryph:flurry-fire",
+        "daedalus:exagryph:hazard-bomb",
+        "daedalus:exagryph:piercing-fire",
+        "daedalus:exagryph:ricochet-fire",
+        "daedalus:exagryph:rocket-bomb",
+        "daedalus:exagryph:seeking-fire",
+        "daedalus:exagryph:spread-fire",
+        "daedalus:exagryph:targeting-system",
+        "daedalus:exagryph:triple-bomb",
+        "daedalus:malphon:breaching-cross",
+        "daedalus:malphon:colossus-knuckle",
+        "daedalus:malphon:concentrated-knuckle",
+        "daedalus:malphon:draining-cutter",
+        "daedalus:malphon:explosive-upper",
+        "daedalus:malphon:flying-cutter",
+        "daedalus:malphon:heavy-knuckle",
+        "daedalus:malphon:kinetic-launcher",
+        "daedalus:malphon:long-knuckle",
+        "daedalus:malphon:quake-cutter",
+        "daedalus:malphon:rolling-knuckle",
+        "daedalus:malphon:rush-kick",
+        "daedalus:stygius:breaching-slash",
+        "daedalus:stygius:cruel-thrust",
+        "daedalus:stygius:cursed-slash",
+        "daedalus:stygius:dash-nova",
+        "daedalus:stygius:double-edge",
+        "daedalus:stygius:double-nova",
+        "daedalus:stygius:flurry-slash",
+        "daedalus:stygius:hoarding-slash",
+        "daedalus:stygius:piercing-wave",
+        "daedalus:stygius:shadow-slash",
+        "daedalus:stygius:super-nova",
+        "daedalus:stygius:world-splitter",
+        "daedalus:varatha:breaching-skewer",
+        "daedalus:varatha:chain-skewer",
+        "daedalus:varatha:charged-skewer",
+        "daedalus:varatha:exploding-launcher",
+        "daedalus:varatha:extending-jab",
+        "daedalus:varatha:flaring-spin",
+        "daedalus:varatha:flurry-jab",
+        "daedalus:varatha:massive-spin",
+        "daedalus:varatha:quick-spin",
+        "daedalus:varatha:serrated-point",
+        "daedalus:varatha:triple-jab",
+        "daedalus:varatha:vicious-skewer"
+      ]
+    }
+  },
+  {
+    "id": "achievement:arms-collector",
+    "name": "Arms Collector",
+    "description": "Unlock each of the Infernal Arms.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "weapon:stygian-blade",
+        "weapon:eternal-spear",
+        "weapon:shield-of-chaos",
+        "weapon:heart-seeking-bow",
+        "weapon:twin-fists-of-malphon",
+        "weapon:adamant-rail"
+      ]
+    }
+  },
+  {
+    "id": "achievement:grown-close",
+    "name": "Grown Close",
+    "description": "Forge a bond with any character.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "any",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "nectar:achilles",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:aphrodite",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:ares",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:artemis",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:athena",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:cerberus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:chaos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:charon",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:demeter",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:dionysus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:dusa",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:eurydice",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hades",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hermes",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hypnos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:megaera",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:nyx",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:orpheus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:patroclus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:poseidon",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:sisyphus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:skelly",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:thanatos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:zeus",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:well-versed",
+    "name": "Well Versed",
+    "description": "Fully Unlock the Olympians' Codex entries.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:well-versed"
+      ]
+    }
+  },
+  {
+    "id": "achievement:day-or-night-trader",
+    "name": "Day-or-Night Trader",
+    "description": "Trade 20 times with the Wretched Broker.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "achievement:day-or-night-trader",
+      "value": 20
+    }
+  },
+  {
+    "id": "achievement:home-makeover",
+    "name": "Home Makeover",
+    "description": "Pay for 50 jobs from the House Contractor.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "count",
+      "n": 50,
+      "of": [
+        "contractor:bedchambers:arms-assorted",
+        "contractor:bedchambers:bedding-chthonic",
+        "contractor:bedchambers:lyre-splendid",
+        "contractor:bedchambers:pool-scrying",
+        "contractor:bedchambers:recliner-fancy",
+        "contractor:bedchambers:rug-stately",
+        "contractor:bedchambers:table-entertainment",
+        "contractor:bedchambers:wall-scroll-achilles",
+        "contractor:bedchambers:wall-scroll-aphrodite",
+        "contractor:bedchambers:wall-scroll-dionysus",
+        "contractor:bedchambers:weights-massive",
+        "contractor:court-music:death-and-i",
+        "contractor:court-music:final-expense",
+        "contractor:court-music:final-expense-payback",
+        "contractor:court-music:from-olympus",
+        "contractor:court-music:gates-of-hell",
+        "contractor:court-music:god-of-the-dead",
+        "contractor:court-music:good-riddance",
+        "contractor:court-music:hymn-to-zagreus",
+        "contractor:court-music:in-the-blood",
+        "contractor:court-music:lament-of-orpheus",
+        "contractor:court-music:last-words",
+        "contractor:court-music:mouth-of-styx",
+        "contractor:court-music:on-the-coast",
+        "contractor:court-music:out-of-tartarus",
+        "contractor:court-music:primordial-chaos",
+        "contractor:court-music:river-of-flame",
+        "contractor:court-music:scourge-of-the-furies",
+        "contractor:court-music:the-bloodless",
+        "contractor:court-music:the-exalted",
+        "contractor:court-music:the-king-and-the-bull",
+        "contractor:court-music:the-painful-way",
+        "contractor:court-music:the-unseen-ones",
+        "contractor:court-music:through-asphodel",
+        "contractor:court-music:wretched-shades",
+        "contractor:great-hall:bedding-fancy",
+        "contractor:great-hall:bedding-quilted",
+        "contractor:great-hall:bonework-ominous",
+        "contractor:great-hall:chaise-divine",
+        "contractor:great-hall:columns-divine",
+        "contractor:great-hall:columns-jeweled",
+        "contractor:great-hall:columns-ominous",
+        "contractor:great-hall:decorative-arms-bident",
+        "contractor:great-hall:decorative-arms-labrys",
+        "contractor:great-hall:decorative-arms-xiphos",
+        "contractor:great-hall:drapery-azure",
+        "contractor:great-hall:drapery-bone",
+        "contractor:great-hall:drapery-crimson",
+        "contractor:great-hall:drapery-olive",
+        "contractor:great-hall:east-wing-fountain",
+        "contractor:great-hall:fireplace-infernal",
+        "contractor:great-hall:fireplace-nocturnal",
+        "contractor:great-hall:flames-promethean",
+        "contractor:great-hall:flower-vase-lilac",
+        "contractor:great-hall:flower-vase-rose",
+        "contractor:great-hall:insignia-fated-order",
+        "contractor:great-hall:laurels-cobalt",
+        "contractor:great-hall:laurels-crimson",
+        "contractor:great-hall:laurels-deathly",
+        "contractor:great-hall:lighting-dual-stick",
+        "contractor:great-hall:lighting-wax-pillar",
+        "contractor:great-hall:mosaic-chthonic",
+        "contractor:great-hall:mosaic-minoan",
+        "contractor:great-hall:petals-ever-falling",
+        "contractor:great-hall:petals-scattered",
+        "contractor:great-hall:petals-shade-strewn",
+        "contractor:great-hall:plaything-plush",
+        "contractor:great-hall:plaything-round",
+        "contractor:great-hall:throne-hell-hound",
+        "contractor:great-hall:tiling-skull",
+        "contractor:great-hall:tombs-royal",
+        "contractor:great-hall:towel-rack-stygian",
+        "contractor:great-hall:treasures-boatman-s",
+        "contractor:great-hall:trim-ash-gray",
+        "contractor:great-hall:trim-blood-red",
+        "contractor:great-hall:trim-burnished-gold",
+        "contractor:great-hall:trim-chthonic-purple",
+        "contractor:lounge:aquarium-cubical",
+        "contractor:lounge:bat-cage-all-seeing",
+        "contractor:lounge:cauldron-fiery",
+        "contractor:lounge:cutlery-kitchenette",
+        "contractor:lounge:delicacy-ambrosial",
+        "contractor:lounge:fire-pit-wood-burning",
+        "contractor:lounge:fireplace-burial",
+        "contractor:lounge:jar-treat-filled",
+        "contractor:lounge:kitchenette-expanded",
+        "contractor:lounge:meats-cured",
+        "contractor:lounge:oven-kitchenette",
+        "contractor:lounge:painting-skeletal",
+        "contractor:lounge:prism-sphere-revolting",
+        "contractor:lounge:prism-sphere-revolving",
+        "contractor:lounge:rug-chthonic",
+        "contractor:lounge:rug-earthy",
+        "contractor:lounge:rug-elysian",
+        "contractor:lounge:rug-sanguine",
+        "contractor:lounge:rug-welcome",
+        "contractor:lounge:seating-covered",
+        "contractor:lounge:seating-olive",
+        "contractor:lounge:seating-red-hide",
+        "contractor:lounge:shelf-vintage",
+        "contractor:lounge:shortcut-great-hall",
+        "contractor:lounge:spice-rack-kitchenette",
+        "contractor:lounge:tables-serpentine",
+        "contractor:west-hall:bust-old-man",
+        "contractor:west-hall:chair-deathlike",
+        "contractor:west-hall:contraption-intricate",
+        "contractor:west-hall:flames-deathlike",
+        "contractor:west-hall:landscape-asphodel",
+        "contractor:west-hall:landscape-elysium",
+        "contractor:west-hall:landscape-tartarus",
+        "contractor:west-hall:mirror-guardpost",
+        "contractor:west-hall:painting-fury-sisters",
+        "contractor:west-hall:painting-god-of-the-dead",
+        "contractor:west-hall:painting-night",
+        "contractor:west-hall:painting-prince",
+        "contractor:west-hall:pedestals-gilded",
+        "contractor:west-hall:portrait-cerberus",
+        "contractor:west-hall:portrait-exalted-hero",
+        "contractor:west-hall:portrait-princess",
+        "contractor:west-hall:recliner-deathlike",
+        "contractor:west-hall:rug-chthonic",
+        "contractor:west-hall:rug-deathlike",
+        "contractor:west-hall:rug-earthy",
+        "contractor:west-hall:rug-elysian",
+        "contractor:west-hall:rug-guardpost",
+        "contractor:west-hall:rug-sanguine",
+        "contractor:west-hall:sculpture-bloodless",
+        "contractor:west-hall:sculpture-heroic",
+        "contractor:west-hall:seating-luxurious",
+        "contractor:west-hall:sundial-imported",
+        "contractor:west-hall:table-deathlike",
+        "contractor:west-hall:west-hall-fountain",
+        "contractor:work-orders:administrative-privilege",
+        "contractor:work-orders:brilliant-gemstones",
+        "contractor:work-orders:codex-index",
+        "contractor:work-orders:contractor-s-desk-deluxe",
+        "contractor:work-orders:court-music-stand",
+        "contractor:work-orders:darker-thirst",
+        "contractor:work-orders:extremer-measures",
+        "contractor:work-orders:fated-keys",
+        "contractor:work-orders:fated-list-of-minor-prophecies",
+        "contractor:work-orders:fountain-chamber-asphodel",
+        "contractor:work-orders:fountain-chamber-elysium",
+        "contractor:work-orders:fountain-chamber-tartarus",
+        "contractor:work-orders:gateways-erebus",
+        "contractor:work-orders:keepsake-collection-regional",
+        "contractor:work-orders:pitch-black-darkness",
+        "contractor:work-orders:plunder-greater",
+        "contractor:work-orders:plunder-lesser",
+        "contractor:work-orders:plunder-superior",
+        "contractor:work-orders:rod-of-fishing",
+        "contractor:work-orders:theme-chthonic",
+        "contractor:work-orders:theme-infernal",
+        "contractor:work-orders:theme-lovely",
+        "contractor:work-orders:theme-princely",
+        "contractor:work-orders:theme-sonorous",
+        "contractor:work-orders:theme-woodland",
+        "contractor:work-orders:underworld-fountains-holy",
+        "contractor:work-orders:underworld-fountains-purified",
+        "contractor:work-orders:urns-of-wealth-greater",
+        "contractor:work-orders:urns-of-wealth-lesser",
+        "contractor:work-orders:urns-of-wealth-superior",
+        "contractor:work-orders:vanquisher-s-keep",
+        "contractor:work-orders:vintage-nectar"
+      ]
+    }
+  },
+  {
+    "id": "achievement:had-to-happen",
+    "name": "Had to Happen",
+    "description": "Fulfill any 15 Prophecies.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "count",
+      "n": 15,
+      "of": [
+        {
+          "kind": "all",
+          "of": [
+            "daedalus:exagryph:flurry-fire",
+            "daedalus:exagryph:ricochet-fire",
+            "daedalus:exagryph:spread-fire",
+            "daedalus:exagryph:explosive-fire",
+            "daedalus:exagryph:delta-chamber",
+            "daedalus:exagryph:piercing-fire",
+            "daedalus:exagryph:triple-bomb",
+            "daedalus:exagryph:rocket-bomb",
+            "daedalus:exagryph:targeting-system",
+            "daedalus:exagryph:hazard-bomb",
+            "daedalus:exagryph:cluster-bomb",
+            "daedalus:exagryph:seeking-fire"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:defeat-hades-with-cosmic-egg"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "meet:hades",
+            "meet:nyx",
+            "meet:charon",
+            "meet:thanatos",
+            "meet:hypnos",
+            "meet:megaera",
+            "meet:alecto",
+            "meet:tisiphone",
+            "meet:chaos"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "codex:sections-revealed",
+              "value": 70
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:old-spiked-collar",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:myrmidon-bracer",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:black-shawl",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pierced-butterfly",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:bone-hourglass",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:chthonic-coin-purse",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:skull-earring",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:distant-memory",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:harpy-feather-duster",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lucky-tooth",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:thunder-signet",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:conch-shell",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:owl-pendant",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:eternal-rose",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:blood-filled-vial",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:adamant-arrowhead",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:overflowing-cup",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lambent-plume",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:frostbitten-horn",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:cosmic-egg",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:shattered-shackle",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:evergreen-acorn",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:broken-spearpoint",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "wellofcharon:hydralite",
+            "wellofcharon:eye-of-lamia",
+            "wellofcharon:cyclops-jerky",
+            "wellofcharon:prometheus-stone",
+            "wellofcharon:braid-of-atlas",
+            "wellofcharon:ignited-ichor",
+            "wellofcharon:yarn-of-ariadne",
+            "wellofcharon:touch-of-styx",
+            "wellofcharon:nail-of-talos",
+            "wellofcharon:eris-bangle",
+            "wellofcharon:nemesis-crest",
+            "wellofcharon:chimaera-jerky",
+            "wellofcharon:stygian-shard",
+            "wellofcharon:aether-net",
+            "wellofcharon:light-of-ixion",
+            "wellofcharon:trove-tracker",
+            "wellofcharon:skeletal-lure",
+            "wellofcharon:flame-wheels-release",
+            "wellofcharon:life-essence",
+            "wellofcharon:centaur-soul",
+            "wellofcharon:price-of-midas",
+            "wellofcharon:kiss-of-styx",
+            "wellofcharon:tinge-of-erebus",
+            "wellofcharon:gaeas-treasure",
+            "wellofcharon:night-spindle",
+            "wellofcharon:fateful-twist"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "talent:shadow-presence",
+            "talent:fiery-presence",
+            "talent:chthonic-vitality",
+            "talent:dark-regeneration",
+            "talent:death-defiance",
+            "talent:stubborn-defiance",
+            "talent:greater-reflex",
+            "talent:ruthless-reflex",
+            "talent:boiling-blood",
+            "talent:abyssal-blood",
+            "talent:infernal-soul",
+            "talent:stygian-soul",
+            "talent:deep-pockets",
+            "talent:golden-touch",
+            "talent:thick-skin",
+            "talent:high-confidence",
+            "talent:privileged-status",
+            "talent:family-favorite",
+            "talent:olympian-favor",
+            "talent:dark-foresight",
+            "talent:gods-pride",
+            "talent:gods-legacy",
+            "talent:fated-authority",
+            "talent:fated-persuasion"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:cerberus-exagryph-lucifer"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "fish:caught",
+              "value": 25
+            },
+            "fish:very-rare-caught",
+            "talk:poseidon-after-fishing"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "meet:zeus",
+            "meet:poseidon",
+            "meet:athena",
+            "meet:dionysus",
+            "meet:aphrodite",
+            "meet:ares",
+            "meet:artemis"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:heros-sacrifice",
+            "talk:achilles-after-heros-sacrifice"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:duo:scintillating-feast",
+            "boon:duo:vengeful-mood",
+            "boon:duo:sea-storm",
+            "boon:duo:lightning-phalanx",
+            "boon:duo:merciful-end",
+            "boon:duo:calculated-risk",
+            "boon:duo:deadly-reversal",
+            "boon:duo:hunting-blades",
+            "boon:duo:lightning-rod",
+            "boon:duo:heart-rend",
+            "boon:duo:curse-of-longing",
+            "boon:duo:sweet-nectar",
+            "boon:duo:low-tolerance",
+            "boon:duo:exclusive-access",
+            "boon:duo:crystal-clarity",
+            "boon:duo:ice-wine",
+            "boon:duo:blizzard-shot",
+            "boon:duo:cold-fusion",
+            "boon:duo:curse-of-drowning",
+            "boon:duo:mirage-shot",
+            "boon:duo:parting-shot",
+            "boon:duo:curse-of-nausea",
+            "boon:duo:cold-embrace",
+            "boon:duo:freezing-vortex",
+            "boon:duo:stubborn-roots",
+            "boon:duo:smoldering-air",
+            "boon:duo:unshakable-mettle",
+            "boon:duo:splitting-headache"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:cerberus-aegis-beowulf"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:knave-kings-sentence",
+            "talk:sisyphus-after-knave-kings-sentence"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:zagreus",
+              "value": 5
+            },
+            "combat:slay-skelly-with-stygius"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "daedalus:varatha:extending-jab",
+            "daedalus:varatha:chain-skewer",
+            "daedalus:varatha:breaching-skewer",
+            "daedalus:varatha:vicious-skewer",
+            "daedalus:varatha:exploding-launcher",
+            "daedalus:varatha:massive-spin",
+            "daedalus:varatha:quick-spin",
+            "daedalus:varatha:flurry-jab",
+            "daedalus:varatha:charged-skewer",
+            "daedalus:varatha:serrated-point",
+            "daedalus:varatha:flaring-spin",
+            "daedalus:varatha:triple-jab"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "invite:zeus",
+            "invite:poseidon",
+            "invite:demeter",
+            "invite:athena",
+            "invite:aphrodite",
+            "invite:ares",
+            "invite:artemis",
+            "invite:dionysus",
+            "invite:hermes",
+            "talk:persephone-and-hades-after-family-reunion"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:cerberus-varatha-guan-yu"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:defeat-charon-twice-consecutive"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "lyre:interactions",
+              "value": 210
+            },
+            "talk:orpheus-after-lyre"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:cerberus-malphon-gilgamesh"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:hermes:second-wind",
+            "boon:hermes:swift-strike",
+            "boon:hermes:swift-flourish",
+            "boon:hermes:quick-recovery",
+            "boon:hermes:greater-haste",
+            "boon:hermes:hyper-sprint",
+            "boon:hermes:flurry-cast",
+            "boon:hermes:greatest-reflex",
+            "boon:hermes:greater-evasion",
+            "boon:hermes:quick-favor",
+            "boon:hermes:side-hustle",
+            "boon:hermes:quick-reload",
+            "boon:hermes:rush-delivery"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:zeus:lightning-strike",
+            "boon:zeus:thunder-dash",
+            "boon:zeus:electric-shot",
+            "boon:zeus:thunder-flourish",
+            "boon:zeus:zeus-aid",
+            "boon:zeus:heavens-vengeance",
+            "boon:zeus:clouded-judgement",
+            "boon:zeus:billowing-strength",
+            "boon:zeus:lightning-reflexes",
+            "boon:zeus:storm-lightning",
+            "boon:zeus:static-discharge",
+            "boon:zeus:high-voltage",
+            "boon:zeus:double-strike"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:poseidon:tempest-strike",
+            "boon:poseidon:tempest-flourish",
+            "boon:poseidon:tidal-dash",
+            "boon:poseidon:flood-shot",
+            "boon:poseidon:poseidons-aid",
+            "boon:poseidon:hydraulic-might",
+            "boon:poseidon:oceans-bounty",
+            "boon:poseidon:boiling-point",
+            "boon:poseidon:rip-current",
+            "boon:poseidon:typhoons-fury",
+            "boon:poseidon:breaking-wave",
+            "boon:poseidon:razor-shoals",
+            "boon:poseidon:wave-pounding"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:ares:curse-of-agony",
+            "boon:ares:curse-of-pain",
+            "boon:ares:blade-dash",
+            "boon:ares:slicing-shot",
+            "boon:ares:ares-aid",
+            "boon:ares:curse-of-vengeance",
+            "boon:ares:urge-to-kill",
+            "boon:ares:battle-rage",
+            "boon:ares:blood-frenzy",
+            "boon:ares:impending-doom",
+            "boon:ares:dire-misfortune",
+            "boon:ares:black-metal",
+            "boon:ares:engulfing-vortex"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:dionysus:drunken-strike",
+            "boon:dionysus:drunken-flourish",
+            "boon:dionysus:drunken-dash",
+            "boon:dionysus:trippy-shot",
+            "boon:dionysus:dionysus-aid",
+            "boon:dionysus:after-party",
+            "boon:dionysus:positive-outlook",
+            "boon:dionysus:strong-drink",
+            "boon:dionysus:peer-pressure",
+            "boon:dionysus:numbing-sensation",
+            "boon:dionysus:bad-influence",
+            "boon:dionysus:high-tolerance"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:aphrodite:heartbreak-strike",
+            "boon:aphrodite:heartbreak-flourish",
+            "boon:aphrodite:passion-dash",
+            "boon:aphrodite:crush-shot",
+            "boon:aphrodite:aphrodites-aid",
+            "boon:aphrodite:blown-kiss",
+            "boon:aphrodite:wave-of-despair",
+            "boon:aphrodite:dying-lament",
+            "boon:aphrodite:different-league",
+            "boon:aphrodite:life-affirmation",
+            "boon:aphrodite:empty-inside",
+            "boon:aphrodite:sweet-surrender",
+            "boon:aphrodite:broken-resolve"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:demeter:frost-strike",
+            "boon:demeter:mistral-dash",
+            "boon:demeter:crystal-beam",
+            "boon:demeter:frost-flourish",
+            "boon:demeter:demeters-aid",
+            "boon:demeter:snow-burst",
+            "boon:demeter:glacial-glare",
+            "boon:demeter:frozen-touch",
+            "boon:demeter:ravenous-will",
+            "boon:demeter:arctic-blast",
+            "boon:demeter:killing-freeze"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:artemis:deadly-strike",
+            "boon:artemis:hunter-dash",
+            "boon:artemis:true-shot",
+            "boon:artemis:deadly-flourish",
+            "boon:artemis:artemis-aid",
+            "boon:artemis:pressure-points",
+            "boon:artemis:support-fire",
+            "boon:artemis:hunters-mark",
+            "boon:artemis:clean-kill",
+            "boon:artemis:hide-breaker",
+            "boon:artemis:hunter-instinct",
+            "boon:artemis:exit-wounds"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:athena:divine-strike",
+            "boon:athena:divine-flourish",
+            "boon:athena:divine-dash",
+            "boon:athena:phalanx-shot",
+            "boon:athena:athenas-aid",
+            "boon:athena:sure-footing",
+            "boon:athena:bronze-skin",
+            "boon:athena:holy-shield",
+            "boon:athena:proud-bearing",
+            "boon:athena:blinding-flash",
+            "boon:athena:brilliant-riposte"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "pact:hard-labor",
+            "pact:lasting-consequences",
+            "pact:convenience-fee",
+            "pact:jury-summons",
+            "pact:extreme-measures",
+            "pact:calisthenics-program",
+            "pact:benefits-package",
+            "pact:middle-management",
+            "pact:underworld-customs",
+            "pact:forced-overtime",
+            "pact:heightened-security",
+            "pact:routine-inspection",
+            "pact:damage-control",
+            "pact:approval-process",
+            "pact:tight-deadline"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "daedalus:coronacht:twin-shot",
+            "daedalus:coronacht:sniper-shot",
+            "daedalus:coronacht:explosive-shot",
+            "daedalus:coronacht:flurry-shot",
+            "daedalus:coronacht:piercing-volley",
+            "daedalus:coronacht:perfect-shot",
+            "daedalus:coronacht:relentless-volley",
+            "daedalus:coronacht:triple-shot",
+            "daedalus:coronacht:charged-volley",
+            "daedalus:coronacht:chain-shot",
+            "daedalus:coronacht:point-blank-shot",
+            "daedalus:coronacht:concentrated-volley"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:cerberus-stygius-arthur"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "weapon:stygian-blade",
+            "weapon:eternal-spear",
+            "weapon:shield-of-chaos",
+            "weapon:heart-seeking-bow",
+            "weapon:twin-fists-of-malphon",
+            "weapon:adamant-rail"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:defeat-hades"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "escape:stygian-blade",
+            "escape:eternal-spear",
+            "escape:shield-of-chaos",
+            "escape:heart-seeking-bow",
+            "escape:twin-fists-of-malphon",
+            "escape:adamant-rail"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "nectar:orpheus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:eurydice",
+              "value": 1
+            },
+            "workorder:singers-gamble",
+            "talk:orpheus-after-singers-gamble"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:eldest-sigil-restoration",
+            "talk:nyx-in-chaos-realm"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "lounge:deep-cleaning-service",
+            "lounge:detailing-service",
+            "lounge:any-rug",
+            {
+              "kind": "atLeast",
+              "fact": "lounge:other-items",
+              "value": 10
+            },
+            "talk:dusa-after-lounge-decor"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "boon:legendary:splitting-bolt",
+            "boon:legendary:second-wave",
+            "boon:legendary:divine-protection",
+            "boon:legendary:vicious-cycle",
+            "boon:legendary:unhealthy-fixation",
+            "boon:legendary:fully-loaded",
+            "boon:legendary:black-out",
+            "boon:legendary:greater-recall",
+            "boon:legendary:bad-news",
+            "boon:legendary:winter-harvest"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:cerberus-coronacht-rama"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "curse:chaos:paupers",
+            "curse:chaos:slippery",
+            "curse:chaos:maimed",
+            "curse:chaos:flayed",
+            "curse:chaos:addled",
+            "curse:chaos:caustic",
+            "curse:chaos:enshrouded",
+            "curse:chaos:excruciating",
+            "curse:chaos:abyssal",
+            "curse:chaos:atrophic",
+            "curse:chaos:slothful",
+            "curse:chaos:halting",
+            "curse:chaos:roiling"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "blessing:chaos:strike",
+            "blessing:chaos:shot",
+            "blessing:chaos:grasp",
+            "blessing:chaos:soul",
+            "blessing:chaos:favor",
+            "blessing:chaos:affluence",
+            "blessing:chaos:eclipse",
+            "blessing:chaos:flourish",
+            "blessing:chaos:lunge",
+            "blessing:chaos:ambush",
+            "blessing:chaos:assault",
+            "blessing:chaos:defiance"
+          ]
+        },
+        {
+          "kind": "count",
+          "n": 6,
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "nectar:zeus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:poseidon",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:demeter",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:athena",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:aphrodite",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:ares",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:artemis",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:dionysus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hermes",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:court-musicians-sentence"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "pact:extreme-measures",
+            "combat:defeat-theseus-extreme-measures",
+            "talk:poseidon-after-theseus-extreme-measures"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "daedalus:aegis:dread-flight",
+            "daedalus:aegis:sudden-rush",
+            "daedalus:aegis:pulverizing-blow",
+            "daedalus:aegis:dashing-wallop",
+            "daedalus:aegis:explosive-return",
+            "daedalus:aegis:minotaur-rush",
+            "daedalus:aegis:breaching-rush",
+            "daedalus:aegis:charged-shot",
+            "daedalus:aegis:charged-flight",
+            "daedalus:aegis:empowering-flight",
+            "daedalus:aegis:dashing-flight",
+            "daedalus:aegis:ferocious-guard"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "contractor:renovation-tasks",
+              "value": 30
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "perk:shifter",
+            "perk:bruiser",
+            "perk:slugger",
+            "perk:puller",
+            "perk:savior",
+            "perk:speeder",
+            "perk:linker",
+            "perk:cloner",
+            "perk:burner",
+            "perk:seeker",
+            "perk:popper"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "daedalus:stygius:breaching-slash",
+            "daedalus:stygius:cruel-thrust",
+            "daedalus:stygius:cursed-slash",
+            "daedalus:stygius:dash-nova",
+            "daedalus:stygius:double-edge",
+            "daedalus:stygius:double-nova",
+            "daedalus:stygius:flurry-slash",
+            "daedalus:stygius:hoarding-slash",
+            "daedalus:stygius:piercing-wave",
+            "daedalus:stygius:shadow-slash",
+            "daedalus:stygius:super-nova",
+            "daedalus:stygius:world-splitter"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "daedalus:malphon:breaching-cross",
+            "daedalus:malphon:rolling-knuckle",
+            "daedalus:malphon:long-knuckle",
+            "daedalus:malphon:draining-cutter",
+            "daedalus:malphon:concentrated-knuckle",
+            "daedalus:malphon:explosive-upper",
+            "daedalus:malphon:flying-cutter",
+            "daedalus:malphon:rush-kick",
+            "daedalus:malphon:quake-cutter",
+            "daedalus:malphon:kinetic-launcher",
+            "daedalus:malphon:heavy-knuckle",
+            "daedalus:malphon:colossus-knuckle"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:defeat-hades-heat8"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:nemesis",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:poseidon",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:chiron",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:hera",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:chaos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zeus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:achilles",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:hades",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:talos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:demeter",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:eris",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:hestia",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "miniboss:dire-inferno-bomber",
+            "miniboss:doomstone",
+            "miniboss:wretched-sneak",
+            "miniboss:dire-voidstone",
+            "miniboss:megagorgon",
+            "miniboss:dire-skull-crusher",
+            "miniboss:dire-spreader",
+            "miniboss:dire-soul-catcher",
+            "miniboss:dire-bother",
+            "miniboss:dire-snakestone",
+            "miniboss:dire-gigantic-vermin",
+            "miniboss:dire-satyr-cultist"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "combat:foes-slain",
+              "value": 10000
+            },
+            "talk:ares-after-10000-foes"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:river-denizens",
+    "name": "River Denizens",
+    "description": "Catch a fish from each region.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "any",
+          "of": [
+            "catch:mati",
+            "catch:projelly",
+            "catch:voidskate"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:hellfish",
+            "catch:knucklehead",
+            "catch:scyllascion"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:slavug",
+            "catch:chrustacean",
+            "catch:flameater"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:chlam",
+            "catch:charp",
+            "catch:seamare"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:gupp",
+            "catch:scuffer",
+            "catch:stonewhal"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:trout",
+            "catch:bass",
+            "catch:sturgeon"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:urge-to-sing",
+    "name": "Urge to Sing",
+    "description": "Compel Orpheus to sing again.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:urge-to-sing"
+      ]
+    }
+  },
+  {
+    "id": "achievement:nyxs-mirror",
+    "name": "Nyx's Mirror",
+    "description": "Have at least one rank in each Mirror of Night Talent.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "talent:abyssal-blood",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:boiling-blood",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:chthonic-vitality",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:dark-foresight",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:dark-regeneration",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:death-defiance",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:deep-pockets",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:family-favorite",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:fated-authority",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:fated-persuasion",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:fiery-presence",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:gods-legacy",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:gods-pride",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:golden-touch",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:greater-reflex",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:high-confidence",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:infernal-soul",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:olympian-favor",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:privileged-status",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:ruthless-reflex",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:shadow-presence",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:stubborn-defiance",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:stygian-soul",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:thick-skin",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:night-and-darkness",
+    "name": "Night and Darkness",
+    "description": "Fulfill the 'Night and Darkness' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:eldest-sigil-restoration",
+        "talk:nyx-in-chaos-realm"
+      ]
+    }
+  },
+  {
+    "id": "achievement:chthonic-colleagues",
+    "name": "Chthonic Colleagues",
+    "description": "Fulfill the 'Chthonic Colleagues' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "meet:hades",
+        "meet:nyx",
+        "meet:charon",
+        "meet:thanatos",
+        "meet:hypnos",
+        "meet:megaera",
+        "meet:alecto",
+        "meet:tisiphone",
+        "meet:chaos"
+      ]
+    }
+  },
+  {
+    "id": "achievement:war-gods-bloodlust",
+    "name": "War-God's Bloodlust",
+    "description": "Fulfill the 'War-God's Bloodlust' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "combat:foes-slain",
+          "value": 10000
+        },
+        "talk:ares-after-10000-foes"
+      ]
+    }
+  },
+  {
+    "id": "achievement:end-to-torment",
+    "name": "End to Torment",
+    "description": "Fulfill the 'End to Torment' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence"
+      ]
+    }
+  },
+  {
+    "id": "achievement:musician-and-muse",
+    "name": "Musician and Muse",
+    "description": "Fulfill the 'Musician and Muse' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "nectar:orpheus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:eurydice",
+          "value": 1
+        },
+        "workorder:singers-gamble",
+        "talk:orpheus-after-singers-gamble"
+      ]
+    }
+  },
+  {
+    "id": "achievement:divided-by-death",
+    "name": "Divided by Death",
+    "description": "Fulfill the 'Divided by Death' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:heros-sacrifice",
+        "talk:achilles-after-heros-sacrifice"
+      ]
+    }
+  },
+  {
+    "id": "achievement:dark-reflections",
+    "name": "Dark Reflections",
+    "description": "Fulfill the 'Dark Reflections' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:shadow-presence",
+        "talent:fiery-presence",
+        "talent:chthonic-vitality",
+        "talent:dark-regeneration",
+        "talent:death-defiance",
+        "talent:stubborn-defiance",
+        "talent:greater-reflex",
+        "talent:ruthless-reflex",
+        "talent:boiling-blood",
+        "talent:abyssal-blood",
+        "talent:infernal-soul",
+        "talent:stygian-soul",
+        "talent:deep-pockets",
+        "talent:golden-touch",
+        "talent:thick-skin",
+        "talent:high-confidence",
+        "talent:privileged-status",
+        "talent:family-favorite",
+        "talent:olympian-favor",
+        "talent:dark-foresight",
+        "talent:gods-pride",
+        "talent:gods-legacy",
+        "talent:fated-authority",
+        "talent:fated-persuasion"
+      ]
+    }
+  },
+  {
+    "id": "achievement:harsh-conditions",
+    "name": "Harsh Conditions",
+    "description": "Fulfill the 'Harsh Conditions' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "pact:hard-labor",
+        "pact:lasting-consequences",
+        "pact:convenience-fee",
+        "pact:jury-summons",
+        "pact:extreme-measures",
+        "pact:calisthenics-program",
+        "pact:benefits-package",
+        "pact:middle-management",
+        "pact:underworld-customs",
+        "pact:forced-overtime",
+        "pact:heightened-security",
+        "pact:routine-inspection",
+        "pact:damage-control",
+        "pact:approval-process",
+        "pact:tight-deadline"
+      ]
+    }
+  },
+  {
+    "id": "achievement:master-of-arms",
+    "name": "Master of Arms",
+    "description": "Fulfill the 'Master of Arms' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "escape:stygian-blade",
+        "escape:eternal-spear",
+        "escape:shield-of-chaos",
+        "escape:heart-seeking-bow",
+        "escape:twin-fists-of-malphon",
+        "escape:adamant-rail"
+      ]
+    }
+  },
+  {
+    "id": "achievement:slashed-benefits",
+    "name": "Slashed Benefits",
+    "description": "Fulfill the 'Slashed Benefits' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:shifter",
+        "perk:bruiser",
+        "perk:slugger",
+        "perk:puller",
+        "perk:savior",
+        "perk:speeder",
+        "perk:linker",
+        "perk:cloner",
+        "perk:burner",
+        "perk:seeker",
+        "perk:popper"
+      ]
+    }
+  },
+  {
+    "id": "achievement:back-to-work",
+    "name": "Back to Work",
+    "description": "Earn access to and enter the Administrative Chamber.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:back-to-work"
+      ]
+    }
+  },
+  {
+    "id": "achievement:the-family-secret",
+    "name": "The Family Secret",
+    "description": "Complete the main quest in the story.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:the-family-secret"
+      ]
+    }
+  },
+  {
+    "id": "achievement:one-for-the-ages",
+    "name": "One for the Ages",
+    "description": "Reach the epilogue of the story.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:one-for-the-ages"
+      ]
+    }
+  },
+  {
+    "id": "achievement:well-stocked",
+    "name": "Well Stocked",
+    "description": "Buy 9 'Well of Charon' items in one escape attempt.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:well-stocked"
+      ]
+    }
+  },
+  {
+    "id": "achievement:thorn-of-thanatos",
+    "name": "Thorn of Thanatos",
+    "description": "Get 30% bonus damage with the Pierced Butterfly.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:thorn-of-thanatos"
+      ]
+    }
+  },
+  {
+    "id": "achievement:haste-of-hermes",
+    "name": "Haste of Hermes",
+    "description": "Get 20% dodge chance with the Lambent Plume.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:haste-of-hermes"
+      ]
+    }
+  },
+  {
+    "id": "achievement:death-dealer",
+    "name": "Death Dealer",
+    "description": "Beat Thanatos by 15 kills or more.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:death-dealer"
+      ]
+    }
+  },
+  {
+    "id": "achievement:friends-in-high-places",
+    "name": "Friends in High Places",
+    "description": "Use Greater Call to invoke an Olympian's aid.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:friends-in-high-places"
+      ]
+    }
+  },
+  {
+    "id": "achievement:bad-call",
+    "name": "Bad Call",
+    "description": "Use an Olympian's Greater Call against them in a Trial.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:bad-call"
+      ]
+    }
+  },
+  {
+    "id": "achievement:skelly-slayer",
+    "name": "Skelly Slayer",
+    "description": "Slay Skelly 15 times.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "atLeast",
+      "fact": "achievement:skelly-slayer",
+      "value": 15
+    }
+  },
+  {
+    "id": "achievement:three-headed-boy",
+    "name": "Three-Headed Boy",
+    "description": "Pet Cerberus 10 times.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "pet:cerberus",
+          "value": 10
+        }
+      ]
+    }
+  }
+]

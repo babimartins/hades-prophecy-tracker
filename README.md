@@ -8,7 +8,7 @@ each single action inside each prophecy.
 The site is live at https://babimartins.github.io/hades-prophecy-tracker/.
 
 Three phases rebuilt the project around **subjects** rather than collections.
-The dataset holds 120 subjects, 856 facts and 716 achievements; 616 facts carry
+The dataset holds 120 subjects, 878 facts and 766 achievements; 617 facts carry
 a description of what the thing does, and every fact names the subjects it
 belongs to. 187 of them carry a price, in the currency the shop asks for.
 
@@ -47,7 +47,8 @@ expression is built from four node kinds:
 | `count`   | at least N of the child nodes are complete   |
 | `atLeast` | a numeric fact reaches a threshold value     |
 
-The schema supports `any`. The current dataset uses it zero times.
+`any` is used six times, all inside River Denizens: catch a fish from each
+region, where any one of that region's three species satisfies it.
 
 The engine evaluates the expression against the fact map. It reports what is
 missing.
@@ -76,33 +77,35 @@ This list is verified against the current state of the repository.
 | `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, `hd-progress`, and shared design tokens (`colorVar`, `colorTokens`). No game knowledge. |
 | `apps/web`         | Vite application. Holds the dashboard UI — collection filter, search, section grouping — the IndexedDB progress store, and the export/import transfer format. |
 
-The curated dataset in `packages/data` holds 545 achievements across 10
+The curated dataset in `packages/data` holds 766 achievements across 12
 populated collections, each broken into its sub-item facts:
 
-| Collection                          | Entries | Notes                                             |
-| ------------------------------------ | ------- | -------------------------------------------------- |
-| Boons                                | 174     | 111 standard boons across 9 gods, 28 duo boons, the 10 legendary boons the Fated List asks for, and 25 Chaos blessings and curses. |
-| Codex                                | 119     | Every entry, across the Codex's 9 in-game sections. |
-| Daedalus                             | 72      | 12 enchantments tracked per weapon, across the 6 weapons. |
-| Fated List of Minor Prophecies       | 55      | The full in-game Fated List.                       |
-| Well of Charon                       | 26      | Every purchasable item, tracked as ever bought.     |
-| Keepsakes                            | 25      | Every keepsake at max rank (`atLeast 3`). The same facts back the Fated List's "Close at Heart" at `atLeast 1`. |
-| Weapon Aspects                       | 24      | Every aspect threshold, across the 6 weapons.       |
-| Mirror of Night                      | 24      | 12 talent pairs, red and green side, per pair.      |
-| Pact of Punishment                   | 15      | Every condition, tracked as active (`atLeast 1`), not maxed. |
-| Perks                                | 11      | Every named perk from the Benefits Package condition. |
+| Collection                     | Entries | Notes                                                |
+| ------------------------------ | ------- | ---------------------------------------------------- |
+| Boons                          | 174     | 111 standard boons across 9 gods, 28 duo boons, the 10 legendary boons the Fated List asks for, and 25 Chaos blessings and curses. |
+| House Contractor               | 171     | Every job, in the six rooms the game sells them from. 164 carry a price. |
+| Codex                          | 119     | Every entry, across the Codex's 9 in-game sections.  |
+| Daedalus                       | 72      | 12 enchantments tracked per weapon, across the 6 weapons. |
+| Fated List of Minor Prophecies | 55      | The full in-game Fated List.                         |
+| Platform Achievements          | 50      | Every trophy, including the hidden one for earning the other 49. |
+| Well of Charon                 | 26      | Every purchasable item, tracked as ever bought.      |
+| Keepsakes                      | 25      | Every keepsake at max rank (`atLeast 3`). The same facts back the Fated List's "Close at Heart" at `atLeast 1`. |
+| Weapon Aspects                 | 24      | Every aspect threshold, across the 6 weapons.        |
+| Mirror of Night                | 24      | 12 talent pairs, red and green side, per pair.       |
+| Pact of Punishment             | 15      | Every condition, tracked as active (`atLeast 1`), not maxed. |
+| Perks                          | 11      | Every named perk from the Benefits Package condition. |
 
-692 facts back these 545 achievements. Some are shared across collections —
+878 facts back these 766 achievements. Some are shared across collections —
 for example, `aspect:stygius:zagreus` backs an achievement in the weapon
 aspects collection, two in the Fated List, and two in the Codex — so marking
 one action can advance entries in more than one collection at once.
 
-`packages/data/src/collections.json` also defines a separate `achievement`
-collection, for platform achievements. That collection holds no entries yet,
-which is why the dataset covers 10 of its 11 registered collections. There
-are 50 platform achievements: 49 ordinary ones, plus a 50th earned by
-completing the other 49. Steam lists only 49 publicly because the 50th is
-hidden.
+The 50 platform achievements are mostly not new work. 13 restate a prophecy
+and take its requirement. 14 more are expressed over facts that already exist,
+including 4 that are a threshold over a whole pool: 100 of the 149 boons, 50 of
+the 72 Daedalus enchantments, 50 of the 164 Contractor jobs, any 15 of the 55
+prophecies. Only 22 need a fact of their own. The 50th, God of Blood, is the
+other 49. Steam lists only 49 publicly because that one is hidden.
 
 ## Development
 
