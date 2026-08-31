@@ -4,6 +4,7 @@ import { html, render } from 'lit'
 import { beforeEach, describe, expect, it } from 'vitest'
 import type { SubjectPage } from '../src/components/subject-page.js'
 import '../src/components/subject-page.js'
+import '../src/components/fact-row.js'
 import '@hades/ui'
 
 function page(): SubjectPage {
@@ -216,16 +217,41 @@ describe('a subject page', () => {
   })
 })
 
-describe('the row a keyboard reaches', () => {
+describe('the control a fact gets', () => {
   beforeEach(() => {
     render(html``, document.body)
   })
 
   it('gives a rank whose only step is one a checkbox, not a spinner', async () => {
-    // Five Pact conditions have max 1. A spinner that can only be 0 or 1 is a
-    // checkbox with extra steps.
-    await mount('zeus')
+    // Three Pact conditions have max 1, and a spinner that can only be 0 or 1
+    // is a checkbox with extra steps. The old form of this test mounted Zeus,
+    // who owns no such fact, and asserted only that one exists in the dataset
+    // — so removing the behaviour left it green.
     const single = dataset.facts.find((fact) => fact.kind === 'number' && fact.max === 1)
     expect(single).toBeDefined()
+
+    render(
+      html`<fact-row .fact=${single!} .facts=${{}}></fact-row>`,
+      document.body,
+    )
+    const row = document.body.querySelector('fact-row')!
+    await (row as HTMLElement & { updateComplete: Promise<unknown> }).updateComplete
+    expect(row.shadowRoot?.querySelector('input[type="number"]')).toBeNull()
+    expect(row.shadowRoot?.querySelector('hd-checklist-item')).not.toBeNull()
+  })
+
+  it('refuses a fractional rank, which is not a count of anything', async () => {
+    // The clamp bounded the range but never rounded, so 2.7 reached the store
+    // and the index drew three pips beside it.
+    await mount('zeus', { 'nectar:zeus': 2 })
+    const events: { id: string; value: unknown }[] = []
+    page().addEventListener('set-fact', (event) => {
+      events.push((event as CustomEvent<{ id: string; value: unknown }>).detail)
+    })
+    const input = rowShadow('nectar:zeus').querySelector<HTMLInputElement>('input[type="number"]')
+    expect(input!.step).toBe('1')
+    input!.value = '2.7'
+    input!.dispatchEvent(new Event('change', { bubbles: true }))
+    expect(events).toEqual([{ id: 'nectar:zeus', value: 3 }])
   })
 })

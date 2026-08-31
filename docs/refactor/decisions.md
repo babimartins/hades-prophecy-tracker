@@ -369,3 +369,26 @@ against the DOM. Typing 99 into a rank stored at 7 clamps to 7, which is what
 was already there, so `facts` never changes, nothing re-renders, and the field
 goes on reading "99 / 7". `live()` compares against the live DOM — but only if
 an update runs, which is why both are needed.
+
+## 28. A rank is rounded as well as clamped
+
+**Chosen:** `step="1"` on the input and `Math.round` before the clamp.
+
+**Why:** the clamp bounded the range and never touched precision, so `2.7`
+passed straight through to IndexedDB and into the export file. The index then
+drew three filled pips beside a stored 2.7 — the store and the view disagreeing
+again, which is the class of defect this whole phase kept producing. A rank
+counts gifts or levels; 2.7 is not a smaller 3, it is not a value.
+
+The browser already knew: `validity.valid` was false the whole time. Nothing
+was asking it.
+
+## 29. The row is not a focus stop; the name cell is
+
+**Chosen:** `<tr>` keeps its click handler for the mouse and nothing else. The
+button in the name cell is the only focus stop in a row.
+
+**Why:** leaving `tabindex="0"` on the row after the button took over the job
+made every row two stops — 68 in the Characters table — and one of them was a
+focusable element with no role and no accessible name, which announces nothing
+when it receives focus.

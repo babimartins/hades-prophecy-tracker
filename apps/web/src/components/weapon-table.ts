@@ -302,17 +302,7 @@ export class WeaponTable extends LitElement {
               return html`
                 <tr
                   data-weapon=${row.subject.id}
-                  tabindex="0"
                   @click=${() => this.#open(row)}
-                  @keydown=${(event: KeyboardEvent) => {
-                    // Only when the row itself has focus: Space is the native
-                    // activation key for the tick buttons inside it, and a row
-                    // handler would swallow it and navigate instead.
-                    if (event.target !== event.currentTarget) return
-                    if (event.key !== 'Enter') return
-                    event.preventDefault()
-                    this.#open(row)
-                  }}
                 >
                   <td class="name">
                     <button

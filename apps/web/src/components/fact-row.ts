@@ -127,7 +127,7 @@ export class FactRow extends LitElement {
     }
 
     // A rank whose max is 1 has one step, so a checkbox reads better than a
-    // spinner that can only be 0 or 1.
+    // spinner that can only be 0 or 1. Three Pact conditions are like this.
     const stepped = fact.kind === 'number' && fact.max !== undefined && fact.max > 1
     const control =
       stepped
@@ -136,12 +136,15 @@ export class FactRow extends LitElement {
               id=${`rank-${fact.id}`}
               type="number"
               min="0"
+              step="1"
               max=${fact.max}
               .value=${live(String(factValue(fact, this.facts)))}
               @change=${(event: Event) => {
-                const raw = Number((event.target as HTMLInputElement).value)
-                // Clamp by the fact's own max, so no view can push it past
-                // what the game allows or below zero.
+                // Round as well as clamp. A rank is a count of gifts or of
+                // levels, so 2.7 is not a smaller 3 — it is not a value. The
+                // browser marks it invalid and nothing was checking, so 2.7
+                // reached IndexedDB and the index drew three pips beside it.
+                const raw = Math.round(Number((event.target as HTMLInputElement).value))
                 this.#emit(Math.min(Math.max(raw, 0), fact.max ?? 0))
                 // When the clamp lands on the value already stored, `facts`
                 // does not change and nothing would re-render, leaving the

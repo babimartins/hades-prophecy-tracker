@@ -90,8 +90,9 @@ describe('the Weapons index', () => {
     // role="link" on a <tr> orphans its cells and takes its name from
     // aria-label, so the six values are never announced and the comparison
     // table stops being one.
-    const row = root().querySelector('tr[data-weapon="stygius"]')
+    const row = root().querySelector<HTMLElement>('tr[data-weapon="stygius"]')
     expect(row?.getAttribute('role')).toBeNull()
+    expect(row?.tabIndex).toBe(-1)
     expect(row?.querySelectorAll('td')).toHaveLength(6)
     expect(row?.querySelector('td.name .open')).not.toBeNull()
   })

@@ -9,7 +9,7 @@ import {
 import type { Subject } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
-import { markersFor, sectionOf } from '../lib/subject-labels.js'
+import { CODEX_SECTION_LABEL, markersFor, sectionOf } from '../lib/subject-labels.js'
 
 export type SortKey = 'name' | 'hearts' | 'keepsake' | 'boons' | 'favor'
 
@@ -34,7 +34,7 @@ export function buildRows(facts: FactMap): CharacterRow[] {
 
     return {
       subject,
-      section: sectionOf(subject) || subject.type,
+      section: sectionOf(subject) || CODEX_SECTION_LABEL[subject.type] || '',
       hearts: affinity
         ? { done: numeric(facts[affinity.id]), max: affinity.max ?? 1 }
         : null,
@@ -370,17 +370,7 @@ export class CharacterTable extends LitElement {
               (row) => html`
                 <tr
                   data-subject=${row.subject.id}
-                  tabindex="0"
                   @click=${() => this.#open(row)}
-                  @keydown=${(event: KeyboardEvent) => {
-                    // Only when the row itself has focus: Space is the native
-                    // activation key for the tick buttons inside it, and a row
-                    // handler would swallow it and navigate instead.
-                    if (event.target !== event.currentTarget) return
-                    if (event.key !== 'Enter') return
-                    event.preventDefault()
-                    this.#open(row)
-                  }}
                 >
                   <td class="name">
                     <button

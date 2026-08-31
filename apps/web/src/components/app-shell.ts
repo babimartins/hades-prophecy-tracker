@@ -1,5 +1,5 @@
 import { dataset } from '@hades/data'
-import { subjectsOfType } from '@hades/engine'
+import { achievementProgress, isComplete, subjectsOfType } from '@hades/engine'
 import type { FactMap } from '@hades/engine'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
@@ -7,6 +7,7 @@ import { ProgressState } from '../state/progress-state.js'
 import { createIndexedDbStore } from '../storage/indexeddb-store.js'
 import type { ProgressStore } from '../storage/progress-store.js'
 import { StateController } from './state-controller.js'
+import { buildRows, isFoe } from './character-table.js'
 import './character-table.js'
 import './rail-section.js'
 import './subject-page.js'
@@ -15,9 +16,6 @@ import './weapon-table.js'
 
 export type SectionId = 'characters' | 'weapons' | 'fated' | 'house' | 'collections'
 
-function subjectName(id: string): string {
-  return dataset.subjects.find((subject) => subject.id === id)?.name ?? id
-}
 
 interface Section {
   id: SectionId
@@ -250,13 +248,21 @@ export class AppShell extends LitElement {
       dataset.facts.filter((fact) => fact.id.startsWith(`${namespace}:`)).length
     switch (section) {
       case 'characters': {
-        const characters = subjectsOfType(dataset, 'character')
-        return `${characters.length} characters · ${facts('nectar')} with affinity`
+        // The default view hides the bare foes, so the heading counts what the
+        // table shows. A heading that said 73 above 34 rows contradicts them.
+        const shown = buildRows({}).filter((row) => !isFoe(row)).length
+        const total = subjectsOfType(dataset, 'character').length
+        return `${shown} of ${total} characters · ${facts('nectar')} with affinity`
       }
       case 'weapons':
         return `${subjectsOfType(dataset, 'weapon').length} weapons · ${facts('aspect')} aspects · ${facts('daedalus')} enchantments`
-      case 'fated':
-        return `${dataset.achievements.filter((a) => a.collection === 'prophecy').length} minor prophecies`
+      case 'fated': {
+        const prophecies = dataset.achievements.filter((a) => a.collection === 'prophecy')
+        const complete = prophecies.filter((a) =>
+          isComplete(achievementProgress(a, this.facts)),
+        ).length
+        return `${prophecies.length} minor prophecies · ${complete} complete`
+      }
       case 'house':
         return 'what you buy and what you configure'
       case 'collections':
@@ -323,12 +329,14 @@ export class AppShell extends LitElement {
             <div data-page=${section.id} ?hidden=${this.section !== section.id}>
               ${this.section === section.id
                 ? html`
-                    <div class="phead">
-                      <h2>${this.subject ? subjectName(this.subject) : section.label}</h2>
-                      ${this.subject
-                        ? nothing
-                        : html`<span class="count">${this.#summary(section.id)}</span>`}
-                    </div>
+                    ${this.subject
+                      ? nothing
+                      : html`
+                          <div class="phead">
+                            <h2>${section.label}</h2>
+                            <span class="count">${this.#summary(section.id)}</span>
+                          </div>
+                        `}
                     ${this.#body(section.id)}
                   `
                 : nothing}

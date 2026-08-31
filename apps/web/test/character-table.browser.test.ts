@@ -175,6 +175,11 @@ describe('what the Characters index must get right', () => {
     await mount()
   })
 
+  it('labels a subject with no Codex entry, rather than printing its raw type', () => {
+    const persephone = buildRows({}).find((row) => row.subject.id === 'persephone')
+    expect(persephone?.section).toBe('Character')
+  })
+
   it('names the Codex section in English, not as a slug', () => {
     const sections = [...root().querySelectorAll('td.name small')].map((s) => s.textContent ?? '')
     expect(sections).toContain('Olympian Gods')
@@ -188,18 +193,22 @@ describe('what the Characters index must get right', () => {
     expect(row?.textContent).toBe('Chthonic Gods')
   })
 
-  it('opens a character from the keyboard', async () => {
+  it('opens a character from the keyboard, through the name cell', async () => {
     let opened: string | undefined
     table().addEventListener('open-subject', (event) => {
       opened = (event as CustomEvent<{ id: string }>).detail.id
     })
     const row = root().querySelector<HTMLElement>('tr[data-subject="zeus"]')
-    expect(row?.tabIndex).toBe(0)
+    // The row is not a focus stop: it was one, which made every row two stops
+    // and put a focusable element with no accessible name in the traversal.
+    expect(row?.tabIndex).toBe(-1)
     expect(row?.getAttribute('role')).toBeNull()
-    row?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }))
-    expect(opened).toBe('zeus')
-    // the name cell carries the affordance, so the row keeps its six values
     expect(root().querySelectorAll('tr[data-subject="zeus"] td')).toHaveLength(6)
+
+    const open = root().querySelector<HTMLButtonElement>('tr[data-subject="zeus"] .open')
+    expect(open).not.toBeNull()
+    open!.click()
+    expect(opened).toBe('zeus')
   })
 
   it('does not claim a reversal the Character column never performs', async () => {
