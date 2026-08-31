@@ -1199,229 +1199,267 @@
     "id": "boon:legendary:splitting-bolt",
     "label": "Earn the Splitting Bolt Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:legendary:second-wave",
     "label": "Earn the Second Wave Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:legendary:divine-protection",
     "label": "Earn the Divine Protection Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:legendary:vicious-cycle",
     "label": "Earn the Vicious Cycle Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:legendary:unhealthy-fixation",
     "label": "Earn the Unhealthy Fixation Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:legendary:fully-loaded",
     "label": "Earn the Fully Loaded Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:legendary:black-out",
     "label": "Earn the Black Out Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:legendary:greater-recall",
     "label": "Earn the Greater Recall Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:legendary:bad-news",
     "label": "Earn the Bad News Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:legendary:winter-harvest",
     "label": "Earn the Winter Harvest Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:duo:scintillating-feast",
     "label": "Earn the Scintillating Feast Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus", "zeus"]
   },
   {
     "id": "boon:duo:vengeful-mood",
     "label": "Earn the Vengeful Mood Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "zeus"]
   },
   {
     "id": "boon:duo:sea-storm",
     "label": "Earn the Sea Storm Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon", "zeus"]
   },
   {
     "id": "boon:duo:lightning-phalanx",
     "label": "Earn the Lightning Phalanx Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena", "zeus"]
   },
   {
     "id": "boon:duo:merciful-end",
     "label": "Earn the Merciful End Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "athena"]
   },
   {
     "id": "boon:duo:calculated-risk",
     "label": "Earn the Calculated Risk Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena", "dionysus"]
   },
   {
     "id": "boon:duo:deadly-reversal",
     "label": "Earn the Deadly Reversal Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "athena"]
   },
   {
     "id": "boon:duo:hunting-blades",
     "label": "Earn the Hunting Blades Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "artemis"]
   },
   {
     "id": "boon:duo:lightning-rod",
     "label": "Earn the Lightning Rod Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "zeus"]
   },
   {
     "id": "boon:duo:heart-rend",
     "label": "Earn the Heart Rend Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "artemis"]
   },
   {
     "id": "boon:duo:curse-of-longing",
     "label": "Earn the Curse of Longing Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "ares"]
   },
   {
     "id": "boon:duo:sweet-nectar",
     "label": "Earn the Sweet Nectar Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "poseidon"]
   },
   {
     "id": "boon:duo:low-tolerance",
     "label": "Earn the Low Tolerance Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "dionysus"]
   },
   {
     "id": "boon:duo:exclusive-access",
     "label": "Earn the Exclusive Access Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus", "poseidon"]
   },
   {
     "id": "boon:duo:crystal-clarity",
     "label": "Earn the Crystal Clarity Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "demeter"]
   },
   {
     "id": "boon:duo:ice-wine",
     "label": "Earn the Ice Wine Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter", "dionysus"]
   },
   {
     "id": "boon:duo:blizzard-shot",
     "label": "Earn the Blizzard Shot Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter", "poseidon"]
   },
   {
     "id": "boon:duo:cold-fusion",
     "label": "Earn the Cold Fusion Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter", "zeus"]
   },
   {
     "id": "boon:duo:curse-of-drowning",
     "label": "Earn the Curse of Drowning Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "poseidon"]
   },
   {
     "id": "boon:duo:mirage-shot",
     "label": "Earn the Mirage Shot Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "poseidon"]
   },
   {
     "id": "boon:duo:parting-shot",
     "label": "Earn the Parting Shot Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "athena"]
   },
   {
     "id": "boon:duo:curse-of-nausea",
     "label": "Earn the Curse of Nausea Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "dionysus"]
   },
   {
     "id": "boon:duo:cold-embrace",
     "label": "Earn the Cold Embrace Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "demeter"]
   },
   {
     "id": "boon:duo:freezing-vortex",
     "label": "Earn the Freezing Vortex Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "demeter"]
   },
   {
     "id": "boon:duo:stubborn-roots",
     "label": "Earn the Stubborn Roots Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena", "demeter"]
   },
   {
     "id": "boon:duo:smoldering-air",
     "label": "Earn the Smoldering Air Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "zeus"]
   },
   {
     "id": "boon:duo:unshakable-mettle",
     "label": "Earn the Unshakable Mettle Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena", "poseidon"]
   },
   {
     "id": "boon:duo:splitting-headache",
     "label": "Earn the Splitting Headache Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "dionysus"]
   },
   {
     "id": "blessing:chaos:strike",

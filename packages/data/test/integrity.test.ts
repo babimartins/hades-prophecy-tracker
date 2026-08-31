@@ -217,9 +217,9 @@ describe('facts tagged with a subject', () => {
   })
 
   it('splits into tagged, deliberately empty, and not yet established', () => {
-    expect(tagged).toHaveLength(532)
+    expect(tagged).toHaveLength(570)
     expect(systemFacts).toHaveLength(80)
-    expect(untagged).toHaveLength(80)
+    expect(untagged).toHaveLength(42)
     expect(tagged.length + systemFacts.length + untagged.length).toBe(dataset.facts.length)
   })
 
@@ -255,7 +255,6 @@ describe('facts tagged with a subject', () => {
       byNamespace[namespace] = (byNamespace[namespace] ?? 0) + 1
     }
     expect(byNamespace).toEqual({
-      boon: 38,
       talk: 18,
       combat: 13,
       workorder: 5,
