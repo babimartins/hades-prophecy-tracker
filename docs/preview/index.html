@@ -746,21 +746,19 @@ const RAILS = {
                li('+ 8 more',0)])) +
          blk('Heat','highest cleared','12', list([li('Reach Heat 16',0)]))},
 
-      {n:'House Contractor', s:'shop · ~28 items still missing', p:[2,12],
+      {n:'House Contractor', s:'shop · 171 purchases in six rooms', p:[2,171],
        body: about('The House Contractor takes Gemstones and turns them into renovations: new rooms, decorations, and the Work Orders that unlock other characters&rsquo; story steps. Everything he sells is permanent.') +
          blk('Work orders','5 facts, all owned by a character','1/5',
          list([li('Eldest Sigil Restoration',1,'→ Nyx'),li('+ 4 orders',0,'→ their characters')])) +
          blk('Lounge items','4 facts, all owned by Dusa','0/4',
          list([li('Deep Cleaning service',0,'→ Dusa'),li('Detailing service',0,'→ Dusa'),li('Any rug',0,'→ Dusa'),li('Other Lounge items 0/10',0,'→ Dusa')])) +
-         blk('Renovation tasks','the only fact the shop owns','1/1', list([li('Renovation tasks completed',1)])) +
-         blk('Not mapped yet','deferred on purpose','~28 items',
-         list([li('Remaining Contractor stock',0,'names and prices to gather'),li('Cost metadata in the schema',0,'multi-currency')]))},
+         blk('Renovation tasks','the only fact the shop owns','1/1', list([li('Renovation tasks completed',1)]))},
 
       {n:'Well of Charon', s:'26 purchasable items', p:[9,26],
        body: rule('Ticked the first time you buy each item. What you buy is spent when the run ends, so only ever-bought is progress. Charon’s other shop, the one he stands in, is not tracked: its stock is random.') +
          blk('Bought','','9/26',
          list([li('Chaos Cutter',1),li('Bloodstone',1),li('+ 7 bought',1),li('+ 17 never bought',0)])) +
-         blk('Prices','deferred','pending', list([li('Obol cost per item',0,'schema change needed')]))},
+         blk('Prices','stored','180 priced', list([li('Amount and currency per purchase',1,'Fact.cost')]))},
 
       {n:'Wretched Broker', s:'11 named perks', p:[4,11],
        body: about("These are the abilities foes gain when the Benefits Package Pact condition is active. Each one changes how a foe behaves, and the Fated List asks you to slay a foe carrying each. The Wretched Broker is a different character, who trades resources.") +

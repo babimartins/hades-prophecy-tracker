@@ -2,8 +2,8 @@
 
 > **Done, 2026-08-31.** All 692 facts name their subjects. 452 carry a
 > description. 11 collections carry one, and 15 entries are spoiler-flagged. The one
-> outstanding item is the Contractor stock and its prices, which the owner
-> deferred.
+> outstanding item was the Contractor stock and its prices, which phase 2b
+> then gathered: 171 purchases across six rooms, with a cost each.
 
 **Goal:** every fact names its subject, and every item a reader cannot work out
 from its label carries a description. No interface work.

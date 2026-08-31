@@ -81,15 +81,38 @@ describe('The House', () => {
     await mount('house')
   })
 
-  it('lists the six systems, with the shops among them', () => {
+  it('lists the systems, with the Contractor split by room', () => {
+    // The Contractor sells from six separate lists and the wiki groups them
+    // that way. One 171-line pane would bury the Work Orders, which are the
+    // only purchases that unlock a character's story.
     expect(railLabels()).toEqual([
       'Mirror of Night',
       'Pact of Punishment',
-      'House Contractor',
+      'Contractor · Work Orders',
+      'Contractor · Great Hall',
+      'Contractor · West Hall',
+      'Contractor · Lounge',
+      'Contractor · Bedchambers',
+      'Contractor · Court Music',
       'Well of Charon',
       'Wretched Broker',
       'Platform achievements',
     ])
+  })
+
+  it('shows every purchase in a room, with the Work Orders kept apart', async () => {
+    railRoot()
+      .querySelector<HTMLButtonElement>('button[data-item="contractor-court-music"]')
+      ?.click()
+    await section().updateComplete
+    expect(root().querySelectorAll('li')).toHaveLength(24)
+
+    railRoot()
+      .querySelector<HTMLButtonElement>('button[data-item="contractor-work-orders"]')
+      ?.click()
+    await section().updateComplete
+    expect(root().querySelectorAll('li')).toHaveLength(37)
+    expect(root().querySelector('.rule')?.textContent).toContain('story steps')
   })
 
   it('explains a system the player may never have met', async () => {
@@ -197,5 +220,32 @@ describe('what the rail pane must not lose', () => {
     await section().updateComplete
     expect(root().querySelector('.rule')).not.toBeNull()
     expect(root().querySelector('.about')).toBeNull()
+  })
+})
+
+describe('a shop shows its prices', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('puts the price beside the purchase, with the currency it asks for', async () => {
+    await mount('house')
+    railRoot()
+      .querySelector<HTMLButtonElement>('button[data-item="contractor-court-music"]')
+      ?.click()
+    await section().updateComplete
+    const cost = root().querySelector('li fact-row')?.shadowRoot?.querySelector('.cost')
+    expect(cost?.textContent?.trim()).toMatch(/^\d+ (Diamond|Gemstones|Obol)$/)
+  })
+
+  it('shows the Well of Charon in Obols', async () => {
+    await mount('house')
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="well-of-charon"]')?.click()
+    await section().updateComplete
+    const costs = [...root().querySelectorAll('li fact-row')]
+      .map((row) => row.shadowRoot?.querySelector('.cost')?.textContent?.trim())
+      .filter(Boolean)
+    expect(costs).toHaveLength(22)
+    expect(costs.every((text) => text!.endsWith('Obol'))).toBe(true)
   })
 })

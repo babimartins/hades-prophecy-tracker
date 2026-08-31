@@ -76,8 +76,7 @@ function groupsFor(section: RailSectionId): Group[] {
       { id: 'mirror', label: 'Mirror of Night', facts: factsIn(['talent']), achievements: [],
         rule: 'Both sides of a pair count separately.' },
       house('pact', 'Pact of Punishment', ['pact'], 'A single point in a Condition ticks it off.'),
-      house('contractor', 'House Contractor', ['workorder', 'lounge', 'contractor'],
-        'A shop, not a subject: eleven of its twelve facts belong to a character.'),
+      ...contractorRooms(),
       { id: 'well-of-charon', label: 'Well of Charon', facts: factsIn(['wellofcharon']),
         achievements: [], rule: 'Ticked the first time you buy each ware.' },
       house('perk', 'Wretched Broker', ['perk']),
@@ -101,6 +100,42 @@ function groupsFor(section: RailSectionId): Group[] {
     { id: 'companions', label: 'Companions', facts: factsIn(['companion']), achievements: [],
       rule: 'Each needs a completed favor and one Ambrosia.' },
   ]
+}
+
+const ROOM_LABEL: Readonly<Record<string, string>> = {
+  'work-orders': 'Contractor · Work Orders',
+  'great-hall': 'Contractor · Great Hall',
+  'west-hall': 'Contractor · West Hall',
+  lounge: 'Contractor · Lounge',
+  'court-music': 'Contractor · Court Music',
+  bedchambers: 'Contractor · Bedchambers',
+}
+
+/**
+ * The Contractor sells from six separate lists, one per room, and the wiki
+ * groups them that way. Flattening them into one 171-line pane would bury the
+ * Work Orders, which are the only ones that unlock a character's story.
+ */
+function contractorRooms(): Group[] {
+  const byRoom = new Map<string, Fact[]>()
+  for (const achievement of dataset.achievements) {
+    if (achievement.collection !== 'contractor') continue
+    const room = achievement.section ?? ''
+    const owned = byRoom.get(room) ?? []
+    for (const fact of factsOf(achievement)) if (!owned.includes(fact)) owned.push(fact)
+    byRoom.set(room, owned)
+  }
+  return [...byRoom.entries()].map(([room, facts], index) => ({
+    id: `contractor-${room}`,
+    label: ROOM_LABEL[room] ?? room,
+    about: index === 0 ? collectionDescription.get('contractor') : undefined,
+    rule:
+      room === 'work-orders'
+        ? 'These are the purchases that unlock a character’s story steps.'
+        : undefined,
+    facts,
+    achievements: [],
+  }))
 }
 
 function house(id: string, label: string, namespaces: string[], rule?: string): Group {

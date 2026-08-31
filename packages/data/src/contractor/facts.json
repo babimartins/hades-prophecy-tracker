@@ -1,0 +1,1946 @@
+[
+  {
+    "id": "contractor:work-orders:fountain-chamber-tartarus",
+    "label": "Purchase Fountain Chamber, Tartarus as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Added Chamber: Restore some Heart amidst the gloom. (Adds the Fountain Chamber to Tartarus.)",
+    "cost": {
+      "amount": 0,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:underworld-fountains-purified",
+    "label": "Purchase Underworld Fountains, Purified as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Fountains provide +10% more Healing than usual.",
+    "cost": {
+      "amount": 20,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:underworld-fountains-holy",
+    "label": "Purchase Underworld Fountains, Holy as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Fountains provide +20% more Healing than usual.",
+    "cost": {
+      "amount": 40,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:fountain-chamber-asphodel",
+    "label": "Purchase Fountain Chamber, Asphodel as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Added Chamber: Restore some Heart amid the searing heat. (Adds the Fountain Chamber to Asphodel.)",
+    "cost": {
+      "amount": 20,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:fountain-chamber-elysium",
+    "label": "Purchase Fountain Chamber, Elysium as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Added Chamber: Restore some Heart amid the lush environs. (Adds the Fountain Chamber to Elysium.)",
+    "cost": {
+      "amount": 40,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:plunder-lesser",
+    "label": "Purchase Plunder, Lesser as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Chambers may contain an Infernal Trove. Trove rewards: 100 Obol / 100 Heart / 50 Darkness / 25 Gemstones",
+    "cost": {
+      "amount": 10,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:plunder-greater",
+    "label": "Purchase Plunder, Greater as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Each Infernal Trove contains more. Trove rewards: 125 Obol / 125 Heart / 100 Darkness / 50 Gemstones",
+    "cost": {
+      "amount": 150,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:plunder-superior",
+    "label": "Purchase Plunder, Superior as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Each Infernal Trove contains even more. Trove rewards: 150 Obol / 150 Heart / 150 Darkness / 75 Gemstones",
+    "cost": {
+      "amount": 500,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:urns-of-wealth-lesser",
+    "label": "Purchase Urns of Wealth, Lesser as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Chambers may contain urns with 5 Obol.",
+    "cost": {
+      "amount": 40,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:urns-of-wealth-greater",
+    "label": "Purchase Urns of Wealth, Greater as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Chambers may contain urns with 10 Obol.",
+    "cost": {
+      "amount": 80,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:urns-of-wealth-superior",
+    "label": "Purchase Urns of Wealth, Superior as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Chambers may contain urns with 15 Obol.",
+    "cost": {
+      "amount": 120,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:keepsake-collection-regional",
+    "label": "Purchase Keepsake Collection, Regional as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Switch Keepsakes between Underworld regions.",
+    "cost": {
+      "amount": 10,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:fated-list-of-minor-prophecies",
+    "label": "Purchase Fated List of Minor Prophecies as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Special Item: The Fates reward whomever moves things along...",
+    "cost": {
+      "amount": 20,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:codex-index",
+    "label": "Purchase Codex Index as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Special Item: Update the Codex with a handy list of Boons for each Olympian.",
+    "cost": {
+      "amount": 50,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:extremer-measures",
+    "label": "Purchase Extremer Measures as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Pact Stipulation: Unlocks the final rank of Extreme Measures ... if you dare.",
+    "cost": {
+      "amount": 100,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:work-orders:contractor-s-desk-deluxe",
+    "label": "Purchase Contractor's Desk, Deluxe as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Special Item: Give the House Contractor a break (and new jobs...)",
+    "cost": {
+      "amount": 2,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:pitch-black-darkness",
+    "label": "Purchase Pitch-Black Darkness as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Claiming Darkness chamber rewards gives you +5 HealthUp.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:fated-keys",
+    "label": "Purchase Fated Keys as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Claiming Chthonic Key chamber rewards gives you +1 Fated Authority / Fated Persuasion.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:brilliant-gemstones",
+    "label": "Purchase Brilliant Gemstones as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Claiming Gemstones chamber rewards gives you +20 Obol.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:vintage-nectar",
+    "label": "Purchase Vintage Nectar as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Claiming Nectar chamber rewards a random Boon +1 Lv.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:darker-thirst",
+    "label": "Purchase Darker Thirst as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Your weapons' Dark Thirst also gives +20% Gemstones",
+    "cost": {
+      "amount": 2,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:vanquisher-s-keep",
+    "label": "Purchase Vanquisher's Keep as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Awards bonus Gemstones after vanquishing Underworld Bosses.",
+    "cost": {
+      "amount": 4,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:gateways-erebus",
+    "label": "Purchase Gateways, Erebus as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Underworld Renovation: Chambers may contain an Infernal Gate.",
+    "cost": {
+      "amount": 5,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:rod-of-fishing",
+    "label": "Purchase Rod of Fishing as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Special Item: Scoop creatures from the Underworld's rivers...",
+    "cost": {
+      "amount": 1,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:court-music-stand",
+    "label": "Purchase Court Music Stand as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Authorizes playback of music pieces from the vault.",
+    "cost": {
+      "amount": 1,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:administrative-privilege",
+    "label": "Purchase Administrative Privilege as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Special Item: (Re)authorizes entry into the administrative chamber.",
+    "cost": {
+      "amount": 2,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-infernal",
+    "label": "Purchase Theme, Infernal as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Decorative Theme: Evokes infernal might and unbearable heat.",
+    "cost": {
+      "amount": 10,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-sonorous",
+    "label": "Purchase Theme, Sonorous as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Decorative Theme: Evokes soaring harmonies and inspiration.",
+    "cost": {
+      "amount": 10,
+      "currency": "Ambrosia"
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-lovely",
+    "label": "Purchase Theme, Lovely as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Decorative Theme: Evokes certain descriptions of joy and levity.",
+    "cost": {
+      "amount": 15,
+      "currency": "Ambrosia"
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-woodland",
+    "label": "Purchase Theme, Woodland as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Decorative Theme: Evokes greenery found only on the surface.",
+    "cost": {
+      "amount": 100,
+      "currency": "Nectar"
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-chthonic",
+    "label": "Purchase Theme, Chthonic as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Decorative Theme: Evokes night, darkness and the Underworld.",
+    "cost": {
+      "amount": 200,
+      "currency": "Chthonic Key"
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-princely",
+    "label": "Purchase Theme, Princely as a Work Order",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Decorative Theme: Evokes the clean utility of the house of Hades."
+  },
+  {
+    "id": "contractor:great-hall:drapery-azure",
+    "label": "Purchase Drapery, Azure for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Gives the drapery a hue reminiscent of the sea.",
+    "cost": {
+      "amount": 15,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:drapery-olive",
+    "label": "Purchase Drapery, Olive for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Gives the drapery a hue similar to a small, bitter fruit.",
+    "cost": {
+      "amount": 15,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:drapery-bone",
+    "label": "Purchase Drapery, Bone for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Gives the drapery a look reminiscent of decay.",
+    "cost": {
+      "amount": 15,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:drapery-crimson",
+    "label": "Purchase Drapery, Crimson for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Restores the original drapery color."
+  },
+  {
+    "id": "contractor:great-hall:trim-ash-gray",
+    "label": "Purchase Trim, Ash Gray for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Embellishes the East Hall flooring in gray.",
+    "cost": {
+      "amount": 5,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:trim-chthonic-purple",
+    "label": "Purchase Trim, Chthonic Purple for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Embellishes the East Hall flooring in purple.",
+    "cost": {
+      "amount": 10,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:trim-blood-red",
+    "label": "Purchase Trim, Blood-Red for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Embellishes the East Hall flooring in red.",
+    "cost": {
+      "amount": 10,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:trim-burnished-gold",
+    "label": "Purchase Trim, Burnished Gold for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Embellishes the East Hall flooring in gold."
+  },
+  {
+    "id": "contractor:great-hall:flower-vase-lilac",
+    "label": "Purchase Flower Vase, Lilac for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a splash of color to the East Wing of the House.",
+    "cost": {
+      "amount": 15,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:flower-vase-rose",
+    "label": "Purchase Flower Vase, Rose for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a bit of mystique to the East Wing of the House.",
+    "cost": {
+      "amount": 20,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:lighting-wax-pillar",
+    "label": "Purchase Lighting, Wax Pillar for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Illuminates the pillar-tops with long-burning flames.",
+    "cost": {
+      "amount": 25,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:lighting-dual-stick",
+    "label": "Purchase Lighting, Dual Stick for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Illuminates the pillar-tops with slender candlesticks."
+  },
+  {
+    "id": "contractor:great-hall:laurels-cobalt",
+    "label": "Purchase Laurels, Cobalt for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Decorate the East Hall walls in blue.",
+    "cost": {
+      "amount": 30,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:laurels-deathly",
+    "label": "Purchase Laurels, Deathly for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Decorate the East Hall walls in bone.",
+    "cost": {
+      "amount": 35,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:laurels-crimson",
+    "label": "Purchase Laurels, Crimson for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Decorate the East Hall walls in red."
+  },
+  {
+    "id": "contractor:great-hall:bedding-quilted",
+    "label": "Purchase Bedding, Quilted for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Provides elegant comfort for large hounds.",
+    "cost": {
+      "amount": 50,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:bedding-fancy",
+    "label": "Purchase Bedding, Fancy for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Provides luxurious comfort for large hounds.",
+    "cost": {
+      "amount": 55,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:tiling-skull",
+    "label": "Purchase Tiling, Skull for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Gives the East Wing a sense of foreboding.",
+    "cost": {
+      "amount": 85,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:towel-rack-stygian",
+    "label": "Purchase Towel Rack, Stygian for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Dries those who enter the House the painful way.",
+    "cost": {
+      "amount": 30,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:plaything-round",
+    "label": "Purchase Plaything, Round for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Enjoyed by some hounds with one or more heads.",
+    "cost": {
+      "amount": 60,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:plaything-plush",
+    "label": "Purchase Plaything, Plush for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Chewed by some hounds with one or more heads.",
+    "cost": {
+      "amount": 65,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:flames-promethean",
+    "label": "Purchase Flames, Promethean for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Gives off an infernal glow near the Pool of Styx.",
+    "cost": {
+      "amount": 95,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:decorative-arms-xiphos",
+    "label": "Purchase Decorative Arms, Xiphos for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Accents the East Wing walls with double-edged swords.",
+    "cost": {
+      "amount": 130,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:decorative-arms-labrys",
+    "label": "Purchase Decorative Arms, Labrys for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Accents the East Wing walls with twin-bladed axes.",
+    "cost": {
+      "amount": 140,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:decorative-arms-bident",
+    "label": "Purchase Decorative Arms, Bident for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Accents the East Wing walls with two-pronged spears."
+  },
+  {
+    "id": "contractor:great-hall:petals-scattered",
+    "label": "Purchase Petals, Scattered for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Enhances the ambiance near the Pool of Styx.",
+    "cost": {
+      "amount": 70,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:petals-shade-strewn",
+    "label": "Purchase Petals, Shade-Strewn for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adorns the area about the Pool of Styx.",
+    "cost": {
+      "amount": 70,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:bonework-ominous",
+    "label": "Purchase Bonework, Ominous for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Unnerves shades waiting for something in the House.",
+    "cost": {
+      "amount": 75,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:chaise-divine",
+    "label": "Purchase Chaise, Divine for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Deepens the oblivion of sleep.",
+    "cost": {
+      "amount": 160,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:mosaic-chthonic",
+    "label": "Purchase Mosaic, Chthonic for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Gives the Prince's chambers a homely atmosphere.",
+    "cost": {
+      "amount": 250,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:mosaic-minoan",
+    "label": "Purchase Mosaic, Minoan for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Gives the Prince's chambers an exotic atmosphere.",
+    "cost": {
+      "amount": 325,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:petals-ever-falling",
+    "label": "Purchase Petals, Ever-Falling for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds drama while rising defiantly from the Pool of Styx.",
+    "cost": {
+      "amount": 500,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:tombs-royal",
+    "label": "Purchase Tombs, Royal for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Exposes mausoleums of ancient kings slain in war.",
+    "cost": {
+      "amount": 530,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:columns-divine",
+    "label": "Purchase Columns, Divine for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Makes the columns similar to those on Olympus.",
+    "cost": {
+      "amount": 800,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:columns-jeweled",
+    "label": "Purchase Columns, Jeweled for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Encrusts stodgy stone columns with shiny gemstones.",
+    "cost": {
+      "amount": 800,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:columns-ominous",
+    "label": "Purchase Columns, Ominous for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Sets fearsome skeletal carvings into the scenery.",
+    "cost": {
+      "amount": 800,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:fireplace-infernal",
+    "label": "Purchase Fireplace, Infernal for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a hellish flame-wall by the Pool of Styx.",
+    "cost": {
+      "amount": 850,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:insignia-fated-order",
+    "label": "Purchase Insignia, Fated Order for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adorns the Great Hall with the Master's mark.",
+    "cost": {
+      "amount": 950,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:fireplace-nocturnal",
+    "label": "Purchase Fireplace, Nocturnal for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a resplendent flame-wall by the Pool of Styx.",
+    "cost": {
+      "amount": 1120,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:treasures-boatman-s",
+    "label": "Purchase Treasures, Boatman's for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Sets brilliant golden urns near the Pool of Styx.",
+    "cost": {
+      "amount": 1410,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:throne-hell-hound",
+    "label": "Purchase Throne, Hell-Hound for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Alters the Great Throne with a hound motif.",
+    "cost": {
+      "amount": 2000,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:great-hall:east-wing-fountain",
+    "label": "Purchase East Wing Fountain for the Great Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Enhances atmosphere in an otherwise-dismal corner.",
+    "cost": {
+      "amount": 1500,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:seating-luxurious",
+    "label": "Purchase Seating, Luxurious for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Enhances the viewing area near the West Hall.",
+    "cost": {
+      "amount": 25,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-earthy",
+    "label": "Purchase Rug, Earthy for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a touch of grit to the West Hall.",
+    "cost": {
+      "amount": 80,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-chthonic",
+    "label": "Purchase Rug, Chthonic for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a touch of comfort to the West Hall.",
+    "cost": {
+      "amount": 95,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-elysian",
+    "label": "Purchase Rug, Elysian for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds some regal flair to the West Hall.",
+    "cost": {
+      "amount": 90,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-sanguine",
+    "label": "Purchase Rug, Sanguine for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a touch of melancholy to the West Hall.",
+    "cost": {
+      "amount": 85,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-guardpost",
+    "label": "Purchase Rug, Guardpost for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds supple flooring at the East Wing intersection.",
+    "cost": {
+      "amount": 145,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:pedestals-gilded",
+    "label": "Purchase Pedestals, Gilded for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Makes display-pedestals display-worthy themselves.",
+    "cost": {
+      "amount": 160,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:mirror-guardpost",
+    "label": "Purchase Mirror, Guardpost for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Makes the path across the House look twice as long.",
+    "cost": {
+      "amount": 140,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:sculpture-bloodless",
+    "label": "Purchase Sculpture, Bloodless for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Looks fearsome without attacking on sight.",
+    "cost": {
+      "amount": 140,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:contraption-intricate",
+    "label": "Purchase Contraption, Intricate for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Supposedly measures infinitesimal distances.",
+    "cost": {
+      "amount": 300,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:landscape-tartarus",
+    "label": "Purchase Landscape, Tartarus for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the lowest reaches of the Underworld.",
+    "cost": {
+      "amount": 325,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:landscape-asphodel",
+    "label": "Purchase Landscape, Asphodel for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the fiery River Phlegethon.",
+    "cost": {
+      "amount": 330,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:landscape-elysium",
+    "label": "Purchase Landscape, Elysium for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the fields reserved for the greatest souls.",
+    "cost": {
+      "amount": 335,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:sundial-imported",
+    "label": "Purchase Sundial, Imported for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Tells time using Helios' flaming chariot (not included).",
+    "cost": {
+      "amount": 590,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:portrait-cerberus",
+    "label": "Purchase Portrait, Cerberus for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the three-headed monster in his prime.",
+    "cost": {
+      "amount": 725,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:portrait-exalted-hero",
+    "label": "Purchase Portrait, Exalted Hero for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the likeness of the champion of Elysium.",
+    "cost": {
+      "amount": 750,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:portrait-princess",
+    "label": "Purchase Portrait, Princess for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the likeness of a Cretan princess.",
+    "cost": {
+      "amount": 775,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:bust-old-man",
+    "label": "Purchase Bust, Old Man for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Renders in lifelike marble a distinguished poet.",
+    "cost": {
+      "amount": 800,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:painting-night",
+    "label": "Purchase Painting, Night for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts Nyx, Night Incarnate.",
+    "cost": {
+      "amount": 1100,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:painting-prince",
+    "label": "Purchase Painting, Prince for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the likeness of the son of the god of the dead.",
+    "cost": {
+      "amount": 2,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:west-hall:painting-fury-sisters",
+    "label": "Purchase Painting, Fury Sisters for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the Erinyes in a rare simultaneous appearance.",
+    "cost": {
+      "amount": 4,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:west-hall:painting-god-of-the-dead",
+    "label": "Purchase Painting, God of the Dead for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts the likeness of Lord Hades.",
+    "cost": {
+      "amount": 5,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:west-hall:west-hall-fountain",
+    "label": "Purchase West Hall Fountain for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Bubbles ceaselessly, soothing those within earshot.",
+    "cost": {
+      "amount": 3000,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:chair-deathlike",
+    "label": "Purchase Chair, Deathlike for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds seating near the southwest balcony.",
+    "cost": {
+      "amount": 210,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:recliner-deathlike",
+    "label": "Purchase Recliner, Deathlike for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds plush comfort near the southwest balcony.",
+    "cost": {
+      "amount": 220,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-deathlike",
+    "label": "Purchase Rug, Deathlike for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds melancholy flooring near the southwest balcony.",
+    "cost": {
+      "amount": 240,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:table-deathlike",
+    "label": "Purchase Table, Deathlike for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a small utility space near the southwest balcony.",
+    "cost": {
+      "amount": 250,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:flames-deathlike",
+    "label": "Purchase Flames, Deathlike for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds moody lighting near the southwest balcony.",
+    "cost": {
+      "amount": 260,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:west-hall:sculpture-heroic",
+    "label": "Purchase Sculpture, Heroic for the West Hall",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Impresses, even inspires onlookers.",
+    "cost": {
+      "amount": 1500,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-welcome",
+    "label": "Purchase Rug, Welcome for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Softens the surface leading to the lounge.",
+    "cost": {
+      "amount": 30,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:seating-covered",
+    "label": "Purchase Seating, Covered for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Cushions the posterior while waiting eternally.",
+    "cost": {
+      "amount": 60,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:seating-olive",
+    "label": "Purchase Seating, Olive for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Installs green sitting-stools in the lounge.",
+    "cost": {
+      "amount": 70,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:tables-serpentine",
+    "label": "Purchase Tables, Serpentine for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Sets up lounge tables with a snake-like theme.",
+    "cost": {
+      "amount": 80,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:seating-red-hide",
+    "label": "Purchase Seating, Red Hide for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Provides more places to sit and while away the time.",
+    "cost": {
+      "amount": 35,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-earthy",
+    "label": "Purchase Rug, Earthy for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a touch of grit to the lounge.",
+    "cost": {
+      "amount": 40,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-chthonic",
+    "label": "Purchase Rug, Chthonic for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a touch of comfort to the lounge.",
+    "cost": {
+      "amount": 45,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-elysian",
+    "label": "Purchase Rug, Elysian for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds some regal flair to the lounge.",
+    "cost": {
+      "amount": 45,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-sanguine",
+    "label": "Purchase Rug, Sanguine for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a touch of melancholy to the lounge.",
+    "cost": {
+      "amount": 55,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:jar-treat-filled",
+    "label": "Purchase Jar, Treat-Filled for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Contains unappetizing bits of sustenance.",
+    "cost": {
+      "amount": 55,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:meats-cured",
+    "label": "Purchase Meats, Cured for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Displays meats cured of the disease of the living.",
+    "cost": {
+      "amount": 65,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:delicacy-ambrosial",
+    "label": "Purchase Delicacy, Ambrosial for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Preserves a rare treat for a truly special occasion.",
+    "cost": {
+      "amount": 75,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:oven-kitchenette",
+    "label": "Purchase Oven, Kitchenette for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Cooks various foods to perfection (or anything really).",
+    "cost": {
+      "amount": 150,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:fire-pit-wood-burning",
+    "label": "Purchase Fire Pit, Wood-Burning for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Gives the lounge a sense of homely decency.",
+    "cost": {
+      "amount": 180,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:cauldron-fiery",
+    "label": "Purchase Cauldron, Fiery for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Conversation-starter for shades milling in the lounge.",
+    "cost": {
+      "amount": 220,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:kitchenette-expanded",
+    "label": "Purchase Kitchenette, Expanded for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Makes the kitchen appear to serve superior cuisine.",
+    "cost": {
+      "amount": 130,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:spice-rack-kitchenette",
+    "label": "Purchase Spice Rack, Kitchenette for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Seasons dishes so even the dead can taste them.",
+    "cost": {
+      "amount": 60,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:cutlery-kitchenette",
+    "label": "Purchase Cutlery, Kitchenette for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Slice through pomegranates with disturbing ease.",
+    "cost": {
+      "amount": 70,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:aquarium-cubical",
+    "label": "Purchase Aquarium, Cubical for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: For river denizens transplanted from the Underworld.",
+    "cost": {
+      "amount": 330,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:painting-skeletal",
+    "label": "Purchase Painting, Skeletal for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Depicts a skeleton enjoying the afterlife.",
+    "cost": {
+      "amount": 460,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:fireplace-burial",
+    "label": "Purchase Fireplace, Burial for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Sets a flame-wall for all to see in the lounge.",
+    "cost": {
+      "amount": 790,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:lounge:bat-cage-all-seeing",
+    "label": "Purchase Bat Cage, All-Seeing for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Houses an obedient colony of surveillance-bats.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:lounge:shortcut-great-hall",
+    "label": "Purchase Shortcut, Great Hall for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Adds a discreet, new western entrance to the lounge.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:lounge:prism-sphere-revolving",
+    "label": "Purchase Prism-Sphere, Revolving for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Reflects light in a vividly hypnotic pattern.",
+    "cost": {
+      "amount": 5,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:lounge:prism-sphere-revolting",
+    "label": "Purchase Prism-Sphere, Revolting for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Reflects light in a frankly upsetting pattern.",
+    "cost": {
+      "amount": 5,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:lounge:shelf-vintage",
+    "label": "Purchase Shelf, Vintage for the Lounge",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "House Decor: Reinforcements for the long-depleted honor bar.",
+    "cost": {
+      "amount": 1500,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:pool-scrying",
+    "label": "Purchase Pool, Scrying for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Contains faint traces of the past if you look closely.",
+    "cost": {
+      "amount": 10,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:wall-scroll-achilles",
+    "label": "Purchase Wall-Scroll, Achilles for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Features a likeness of the greatest of the Greeks.",
+    "cost": {
+      "amount": 60,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:wall-scroll-dionysus",
+    "label": "Purchase Wall-Scroll, Dionysus for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Features the jubilant and carefree god of wine.",
+    "cost": {
+      "amount": 80,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:rug-stately",
+    "label": "Purchase Rug, Stately for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Gives more of a grown-up look to any bedchamber.",
+    "cost": {
+      "amount": 20,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:recliner-fancy",
+    "label": "Purchase Recliner, Fancy for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Seats one or more individuals (if they can sit).",
+    "cost": {
+      "amount": 40,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:wall-scroll-aphrodite",
+    "label": "Purchase Wall-Scroll, Aphrodite for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Features the goddess of love and beauty herself.",
+    "cost": {
+      "amount": 90,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:arms-assorted",
+    "label": "Purchase Arms, Assorted for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Showcases broken weapons from a historic siege.",
+    "cost": {
+      "amount": 200,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:table-entertainment",
+    "label": "Purchase Table, Entertainment for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Contains a variety of frankly unplayable games.",
+    "cost": {
+      "amount": 430,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:weights-massive",
+    "label": "Purchase Weights, Massive for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Remains firmly rooted, no matter one's strength.",
+    "cost": {
+      "amount": 300,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:bedding-chthonic",
+    "label": "Purchase Bedding, Chthonic for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Updates the bedchamber's namesake with a deathly motif.",
+    "cost": {
+      "amount": 150,
+      "currency": "Gemstones"
+    }
+  },
+  {
+    "id": "contractor:bedchambers:lyre-splendid",
+    "label": "Purchase Lyre, Splendid for the Bedchambers",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Bedroom Decor: Creates beautiful music, if you know how...",
+    "cost": {
+      "amount": 1,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:final-expense",
+    "label": "Purchase Final Expense as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Commissioned expressly for the Stygian boatman.",
+    "cost": {
+      "amount": 1,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:death-and-i",
+    "label": "Purchase Death and I as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: A brief and frankly unhappy piece Lord Hades enjoys.",
+    "cost": {
+      "amount": 1,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:wretched-shades",
+    "label": "Purchase Wretched Shades as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: In memory of lives snuffed out and sent to this realm.",
+    "cost": {
+      "amount": 1,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:the-bloodless",
+    "label": "Purchase The Bloodless as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: In testament to the wrathful souls serving Lord Hades.",
+    "cost": {
+      "amount": 1,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:the-painful-way",
+    "label": "Purchase The Painful Way as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: About a quick turbulent trip down the River Styx.",
+    "cost": {
+      "amount": 2,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:mouth-of-styx",
+    "label": "Purchase Mouth of Styx as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: The hideous gloom of Tartarus in musical form.",
+    "cost": {
+      "amount": 2,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:out-of-tartarus",
+    "label": "Purchase Out of Tartarus as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Were there a way out, this piece would be about it.",
+    "cost": {
+      "amount": 2,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:scourge-of-the-furies",
+    "label": "Purchase Scourge of the Furies as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: In tribute to the well-feared Erinyes.",
+    "cost": {
+      "amount": 2,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:primordial-chaos",
+    "label": "Purchase Primordial Chaos as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Ode to the oft-forgotten originator of all things.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:final-expense-payback",
+    "label": "Purchase Final Expense (Payback) as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Commissioned expressly for the Stygian boatman. (Unlocked after a particularly sour encounter with the boatman)",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:through-asphodel",
+    "label": "Purchase Through Asphodel as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: About a once-lush meadows now awash in flame.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:good-riddance",
+    "label": "Purchase Good Riddance as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: A rousing celebration of the afterlife. (Must first be requested from its original composer)",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:river-of-flame",
+    "label": "Purchase River of Flame as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: The feared River Phlegethon inspired this piece.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:the-king-and-the-bull",
+    "label": "Purchase The King and the Bull as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Dedicated to the King of Athens and the Minoan Bull.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:the-exalted",
+    "label": "Purchase The Exalted as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Tribute to the mighty heroes of Elysium.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:from-olympus",
+    "label": "Purchase From Olympus as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Solemn piece reflecting the divide between realms.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:gates-of-hell",
+    "label": "Purchase Gates of Hell as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Dedicated to those trespassing in the Temple of Styx.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:lament-of-orpheus",
+    "label": "Purchase Lament of Orpheus as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: The court-musician's regrets captured in song form. (Must first be sung by Orpheus after gaining Affinity)",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:last-words",
+    "label": "Purchase Last Words as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Heralds the arrival of Thanatos, incarnate of death.",
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:god-of-the-dead",
+    "label": "Purchase God of the Dead as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Commissioned long ago in honor of Lord Hades.",
+    "cost": {
+      "amount": 4,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:hymn-to-zagreus",
+    "label": "Purchase Hymn to Zagreus as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Ballad of the Prince of the Underworld's exploits. (Must be composed by Orpheus after specific dialogue with Dionysus)",
+    "cost": {
+      "amount": 4,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:on-the-coast",
+    "label": "Purchase On the Coast as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Exotic piece uses instruments from the surface world.",
+    "cost": {
+      "amount": 4,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:in-the-blood",
+    "label": "Purchase In the Blood as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Popular duet reflects on home and family.",
+    "cost": {
+      "amount": 5,
+      "currency": "Diamond"
+    }
+  },
+  {
+    "id": "contractor:court-music:the-unseen-ones",
+    "label": "Purchase The Unseen Ones as Court Music",
+    "kind": "boolean",
+    "collection": "contractor",
+    "subjects": [],
+    "description": "Sheet Music: Banned for containing too many music notes per second. (Requires fighting Hades with the Extremer Measures [Extreme Measures rank 4] condition active in the Pact of Punishment at least once, but not necessarily winning against him)",
+    "cost": {
+      "amount": 5,
+      "currency": "Diamond"
+    }
+  }
+]

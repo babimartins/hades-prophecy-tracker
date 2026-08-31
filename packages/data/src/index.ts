@@ -4,6 +4,8 @@ import aspectFacts from './aspects/facts.json'
 import boonAchievements from './boons/achievements.json'
 import boonFacts from './boons/facts.json'
 import codexAchievements from './codex/achievements.json'
+import contractorAchievements from './contractor/achievements.json'
+import contractorFacts from './contractor/facts.json'
 import codexFacts from './codex/facts.json'
 import collections from './collections.json'
 import daedalusAchievements from './daedalus/achievements.json'
@@ -28,6 +30,7 @@ export const dataset: Dataset = validateDataset({
   facts: [
     ...prophecyFacts,
     ...codexFacts,
+    ...contractorFacts,
     ...keepsakeFacts,
     ...aspectFacts,
     ...boonFacts,
@@ -41,6 +44,7 @@ export const dataset: Dataset = validateDataset({
   achievements: [
     ...prophecyAchievements,
     ...codexAchievements,
+    ...contractorAchievements,
     ...keepsakeAchievements,
     ...aspectAchievements,
     ...boonAchievements,
