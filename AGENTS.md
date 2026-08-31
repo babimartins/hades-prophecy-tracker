@@ -299,3 +299,21 @@ saved checkboxes.
 - Tests assert real behaviour. A test that cannot fail is not coverage.
 - Keep commits scoped to one change, with an English message.
 - Match the surrounding code. Do not restructure code outside your task.
+
+### A trophy that is a threshold over a pool is a `count` node
+
+Four platform trophies read as one action and are not: "Choose 100 different
+Olympian Boon effects", "Choose 50 different Daedalus Hammer enchantments",
+"Pay for 50 jobs from the House Contractor", "Fulfill any 15 Prophecies". The
+first pass gave each a fact of its own. Each was an opaque checkbox hiding work
+the dataset already held.
+
+Build the pool **by collection, not by id prefix**.
+`contractor:renovation-tasks` carries the `contractor:` prefix and is the
+prophecy's 0-30 counter, not one of the 164 jobs. A prefix filter counted it as
+one job instead of 30. The canary that pins how many number facts reach a plain
+requirement child caught it, by moving from 15 to 16.
+
+A trophy whose pool the interface already lists in full shows its roll-up and
+one line naming where the items live. Printing the pool twice cost 845 rows in
+one pane and told the player nothing new.

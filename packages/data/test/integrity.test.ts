@@ -275,6 +275,10 @@ describe('fact descriptions', () => {
       byNamespace[namespace] = (byNamespace[namespace] ?? 0) + 1
     }
     expect(byNamespace).toEqual({
+      // The 119 real Codex facts carry none: "Unlock the Zeus Codex entry" is
+      // its own explanation. The one here is `codex:sections-revealed`, the
+      // prophecy's 0-70 counter, where "section" needed saying.
+      codex: 1,
       boon: 149,
       daedalus: 72,
       encounter: 37,
@@ -291,7 +295,7 @@ describe('fact descriptions', () => {
       miniboss: 11,
       contractor: 164,
     })
-    expect(described).toHaveLength(616)
+    expect(described).toHaveLength(617)
   })
 
   it('never stores a wiki cross-reference in place of an answer', () => {

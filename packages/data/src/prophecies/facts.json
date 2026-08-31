@@ -2877,7 +2877,8 @@
     "kind": "number",
     "max": 70,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "A section is a part of one Codex entry, not one of the Codex's nine groupings. An entry gains sections as you meet, gather from, talk to or slay its subject."
   },
   {
     "id": "wellofcharon:hydralite",

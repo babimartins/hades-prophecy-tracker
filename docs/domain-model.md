@@ -157,7 +157,8 @@ Verified during research. Where two wiki pages disagree, both numbers appear.
 
 ## 8. Open questions that reading cannot settle
 
-These need someone with the game open.
+Three of the seven still need someone with the game open: 3, 4 and 5. The
+other four are settled from sources.
 
 1. ~~The Athena and Demeter duo boon is "Stubborn Bolts" on the Fated List
    page and "Stubborn Roots" on the Duo Boons page.~~ Settled: "Stubborn
@@ -167,9 +168,14 @@ These need someone with the game open.
    https://hades.fandom.com/wiki/Demeter/Boons_(Hades). The `boon:duo:stubborn-bolts`
    fact keeps its id for progress stability; its label now reads "Stubborn
    Roots" to match.
-2. The Codex prophecy counts to 70. The Codex holds 119 entries and 9 sections,
-   so 70 counts something else. The current fact is labelled "Codex sections
-   revealed", which is probably wrong.
+2. ~~The Codex prophecy counts to 70.~~ Settled: the label is right and the
+   word means something other than the nine groupings. The Fated List page
+   gives the goal as "Reveal 70 sections in the Codex", so "Codex sections
+   revealed" is the wiki's own wording. The Codex page explains what a section
+   is: "As Zagreus encounters, gathers, speaks to, or slays the subjects of the
+   Codex, he is able to access Achilles' knowledge more deeply, and the entries
+   become more complete." A section is a part of one entry, not one of the nine
+   groupings. The fact now carries that as its description.
 3. Whether clearing at a given Heat is recorded per weapon or globally.
 4. Whether the Skelly statues are per save or per weapon.
 5. Whether Dionysus' "6 different characters" is the same counter as The Queen's
@@ -179,8 +185,12 @@ These need someone with the game open.
    those unable to be gifted Nectar". Hades' `nectar:hades` fact stays a
    pure Nectar counter; the other 23 affinity facts are currency-neutral
    because every other character can receive both.
-7. Asphodel's enemy table says a Voidstone is never an Elite, while the Fated
-   List names a "Dire Voidstone".
+7. ~~Asphodel's enemy table says a Voidstone is never an Elite, while the Fated
+   List names a "Dire Voidstone".~~ Settled: both are right, and the Voidstone
+   page says so directly. The Voidstones on the Barge of Death in Asphodel
+   "are considered Dire Voidstones by the Fated List of Minor Prophecies", yet
+   "have no special qualities to them, not even armor". The Fated List counts
+   them as Dire; the enemy table describes what they can do. No data change.
 
 ### Settled
 
