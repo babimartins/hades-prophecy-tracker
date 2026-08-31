@@ -874,3 +874,14 @@ actions where a block held 12.
 The rail bar counts **every fact that belongs to a place**, not the rows on
 show. "During a run" holds 610 unfinished actions; a bar reading 0/25 would say
 the place was nearly finished. The pane is the front of the queue and says so.
+
+## 60. The Next Steps rail was 119px, because a parent set `display` on it
+
+`rail-view` declares its own layout: `:host { display: grid;
+grid-template-columns: 290px minmax(0, 1fr) }`. `next-steps-page` styled the
+element from outside with `display: flex`, and an outer rule beats a `:host`
+rule, so the grid never applied. The rail shrank to its three short labels:
+119px, against the 290px the other three sections get.
+
+The parent now sets only the properties it owns, the flex-child ones. A test
+pins the rendered width, and `AGENTS.md` carries the rule.

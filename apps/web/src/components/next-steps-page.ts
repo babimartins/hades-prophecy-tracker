@@ -69,8 +69,11 @@ export class NextStepsPage extends LitElement {
       max-width: 62ch;
     }
 
+    /* No display here. rail-view sets its own host to a grid with a 290px
+       rail, and an outer rule beats a host rule, so display: flex silently
+       killed the column and the rail shrank to 119px against the Fated List's
+       290. Only the flex-child properties belong here. */
     rail-view {
-      display: flex;
       flex: 1;
       min-height: 0;
     }

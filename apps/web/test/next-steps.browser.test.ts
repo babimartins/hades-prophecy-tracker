@@ -194,3 +194,15 @@ describe('the Next Steps page', () => {
     expect((await block('run')).querySelectorAll('li')).toHaveLength(25)
   })
 })
+
+describe('the rail keeps the width the component gives it', () => {
+  it('is as wide here as on every other rail section', async () => {
+    // `rail-view` sets `:host { display: grid; grid-template-columns: 290px …}`.
+    // An outer rule beats `:host`, so a `display: flex` written on the host
+    // from the parent killed the column and the rail shrank to its content.
+    render(html``, document.body)
+    await mount()
+    const rail = railRoot().querySelector('.rail')!
+    expect(Math.round(rail.getBoundingClientRect().width)).toBeGreaterThan(240)
+  })
+})

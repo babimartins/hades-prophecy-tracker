@@ -374,3 +374,17 @@ Space key on the Characters table once already.
 Any test that reaches for `input[type="number"]` now needs to know which
 control the fact gets. `pet:cerberus` stops at 20 and keeps the field, so the
 clamp and rounding guards live there.
+
+### No backticks inside a `css` template literal
+
+A backtick in a comment ends the template. It has broken the build twice, both
+times in a comment quoting a CSS selector. Write the selector plain.
+
+### Never set `display` on another component's host from outside
+
+An outer rule beats the component's own `:host`. `rail-view` declares
+`:host { display: grid; grid-template-columns: 290px minmax(0, 1fr) }`, and a
+`display: flex` written on `rail-view` from a parent silently deleted the
+column: the rail rendered 119px wide against the 290px every other section
+gets. Set only the properties the parent owns, which are the flex or grid child
+properties, never the child's own layout mode.
