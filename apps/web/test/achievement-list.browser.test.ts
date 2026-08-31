@@ -289,6 +289,33 @@ describe('achievement-list', () => {
   })
 })
 
+describe('achievement-list row height', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * `achievements[0]` needs two facts (a bar can say something); `[1]` needs
+   * one (the bar can only ever read 0% or 100%). A 174-entry collection at
+   * the old 81px row is roughly 14,000px — tightening the row, and giving
+   * the single-sub-item row a lighter compact status instead of the full
+   * bar, is what makes a long list scannable.
+   */
+  it('renders a visibly shorter row for a single-sub-item entry than for a multi-sub-item entry', async () => {
+    render(
+      html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const rows = element.shadowRoot!.querySelectorAll('li')
+    const barRowHeight = rows[0]!.getBoundingClientRect().height
+    const compactRowHeight = rows[1]!.getBoundingClientRect().height
+    expect(compactRowHeight).toBeLessThan(barRowHeight)
+    expect(compactRowHeight).toBeLessThan(50)
+  })
+})
+
 describe('achievement-list across more than one collection', () => {
   beforeEach(() => {
     render(html``, document.body)

@@ -143,9 +143,26 @@ export class AchievementList extends LitElement {
       display: grid;
       font: inherit;
       gap: 4px;
-      padding: 8px;
+      padding: 6px 8px;
       text-align: left;
       width: 100%;
+    }
+    /**
+     * A single-sub-item row shows the compact hd-progress status, not a
+     * bar, so name and status fit on one line instead of stacking. See
+     * hd-progress: it renders that compact status whenever max <= 1.
+     */
+    button[data-compact] {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+    }
+    button[data-compact] .name {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     button:focus-visible {
       outline: 2px solid ${colorVar('--hd-color-accent')};
@@ -222,7 +239,11 @@ export class AchievementList extends LitElement {
     const progress = achievementProgress(achievement, this.facts)
     return html`
       <li data-status=${progress.status}>
-        <button type="button" @click=${() => this.open(achievement.id)}>
+        <button
+          type="button"
+          ?data-compact=${progress.total <= 1}
+          @click=${() => this.open(achievement.id)}
+        >
           <span class="name">${achievement.name}</span>
           <hd-progress
             .value=${progress.done}
