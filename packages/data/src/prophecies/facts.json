@@ -67,7 +67,8 @@
     "label": "Report to Persephone and Hades after inviting all Olympians",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["persephone", "hades"]
+    "subjects": ["persephone", "hades"],
+    "spoiler": true
   },
   {
     "id": "nectar:zeus",

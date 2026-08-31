@@ -12,7 +12,8 @@
     "label": "See Hades' gratitude after Persephone returns to the House of Hades",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hades", "persephone"]
+    "subjects": ["hades", "persephone"],
+    "spoiler": true
   },
   {
     "id": "nectar:nyx",
@@ -124,7 +125,8 @@
     "label": "Complete the Epilogue and hear Demeter ask Zagreus to be more candid",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "spoiler": true
   },
   {
     "id": "codex:hades",

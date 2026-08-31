@@ -312,3 +312,43 @@ describe('fact descriptions', () => {
     expect(odd).toEqual([])
   })
 })
+
+describe('what a system is, and what the player should not read yet', () => {
+  it('describes every collection', () => {
+    const undescribed = dataset.collections.filter((c) => c.description === undefined)
+    expect(undescribed.map((c) => c.id)).toEqual([])
+    expect(dataset.collections).toHaveLength(11)
+  })
+
+  it('flags the entries whose text states an outcome the player may not have reached', () => {
+    const flagged = dataset.achievements.filter((a) => a.spoiler === true).map((a) => a.id)
+    expect(flagged.sort()).toEqual([
+      'codex:achilles',
+      'codex:chaos',
+      'codex:companion-antos',
+      'codex:companion-shady',
+      'codex:demeter',
+      'codex:hades',
+      'codex:nyx',
+      'codex:patroclus',
+      'codex:sisyphus',
+    ])
+  })
+
+  it('flags the three facts whose own label states a story outcome', () => {
+    const flagged = dataset.facts.filter((f) => f.spoiler === true).map((f) => f.id)
+    expect(flagged.sort()).toEqual([
+      'talk:demeter-after-epilogue',
+      'talk:persephone-and-hades-after-family-reunion',
+      'talk:persephone-returns-to-house-of-hades',
+    ])
+  })
+
+  it('leaves the 55 Fated List texts unflagged, because the game prints them', () => {
+    // The rule: a description may repeat what the game has already shown the
+    // player. It must not state an outcome the player has not reached.
+    const prophecies = dataset.achievements.filter((a) => a.collection === 'prophecy')
+    expect(prophecies).toHaveLength(55)
+    expect(prophecies.filter((a) => a.spoiler === true)).toEqual([])
+  })
+})

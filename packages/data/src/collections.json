@@ -1,13 +1,57 @@
 [
-  { "id": "prophecy", "name": "Fated List of Minor Prophecies" },
-  { "id": "achievement", "name": "Platform Achievements" },
-  { "id": "codex", "name": "Codex" },
-  { "id": "keepsake", "name": "Keepsakes" },
-  { "id": "aspect", "name": "Weapon Aspects" },
-  { "id": "boon", "name": "Boons" },
-  { "id": "daedalus", "name": "Daedalus" },
-  { "id": "mirror", "name": "Mirror of Night" },
-  { "id": "pact", "name": "Pact of Punishment" },
-  { "id": "perk", "name": "Perks" },
-  { "id": "well-of-charon", "name": "Well of Charon" }
+  {
+    "id": "prophecy",
+    "name": "Fated List of Minor Prophecies",
+    "description": "The Fated List of Minor Prophecies is the in-game checklist on the Fates' loom in the House. It names 55 goals and rewards each one, but it never shows how much of a goal is left."
+  },
+  {
+    "id": "achievement",
+    "name": "Platform Achievements",
+    "description": "Platform achievements, awarded by Steam and the other stores. There are 50: 49 ordinary ones plus a 50th for earning the other 49, which is why Steam lists only 49 publicly."
+  },
+  {
+    "id": "codex",
+    "name": "Codex",
+    "description": "The Codex is the book Achilles gives you. It catalogues every character, weapon, foe, artifact, fish and region you meet, and a character's entry fills with hearts as your affinity grows."
+  },
+  {
+    "id": "keepsake",
+    "name": "Keepsakes",
+    "description": "A keepsake is an item a character gives you after your first gift of Nectar. You equip one per run for its benefit, and it ranks up to 3 as you carry it through encounters."
+  },
+  {
+    "id": "aspect",
+    "name": "Weapon Aspects",
+    "description": "An Aspect is an alternate form of a weapon, bought with Titan Blood at the weapon rack. Every weapon has four, and each levels from 1 to 5. An Aspect changes how the weapon plays, not only its numbers."
+  },
+  {
+    "id": "boon",
+    "name": "Boons",
+    "description": "A boon is a power an Olympian offers during a run. You lose the ones you hold when you die, but the tracker records every one you have ever been offered and taken."
+  },
+  {
+    "id": "daedalus",
+    "name": "Daedalus",
+    "description": "A Daedalus enchantment comes from a Daedalus Hammer found during a run and upgrades your weapon for that run only. What is permanent is having taken it once, so the tracker counts 12 per weapon."
+  },
+  {
+    "id": "mirror",
+    "name": "Mirror of Night",
+    "description": "The Mirror of Night sits in your bedroom. You spend Darkness on permanent upgrades that apply to every future run. Each of the 12 talents has a red side and a green side, and only one is active at a time."
+  },
+  {
+    "id": "pact",
+    "name": "Pact of Punishment",
+    "description": "The Pact of Punishment is the difficulty menu at the door out of the House. Switching a Condition on makes the run harder and raises your Heat, which unlocks better rewards."
+  },
+  {
+    "id": "perk",
+    "name": "Perks",
+    "description": "These are the abilities foes gain when the Benefits Package Pact condition is active. Each one changes how a foe behaves, and the Fated List asks you to slay a foe carrying each."
+  },
+  {
+    "id": "well-of-charon",
+    "name": "Well of Charon",
+    "description": "The Well of Charon is the vending machine that appears in a chamber during a run. You pay Obols for an item that lasts that run only, so what the tracker records is having ever bought each one."
+  }
 ]
