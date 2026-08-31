@@ -7,9 +7,9 @@ const dataset: Dataset = {
   collections: [{ id: 'prophecy', name: 'Prophecies' }],
   subjects: [],
   facts: [
-    { id: 'a:shared', label: 'Shared step', kind: 'boolean', collection: 'prophecy' },
-    { id: 'a:one', label: 'Only step one', kind: 'boolean', collection: 'prophecy' },
-    { id: 'a:two', label: 'Only step two', kind: 'boolean', collection: 'prophecy' },
+    { id: 'a:shared', label: 'Shared step', kind: 'boolean', collection: 'prophecy', subjects: [] },
+    { id: 'a:one', label: 'Only step one', kind: 'boolean', collection: 'prophecy', subjects: [] },
+    { id: 'a:two', label: 'Only step two', kind: 'boolean', collection: 'prophecy', subjects: [] },
   ],
   achievements: [
     {
@@ -78,6 +78,7 @@ describe('next-steps-panel', () => {
           kind: 'number',
           max: 5,
           collection: 'prophecy',
+          subjects: [],
         },
       ],
       achievements: [
@@ -116,7 +117,7 @@ describe('next-steps-panel', () => {
     const numberDataset: Dataset = {
       collections: [{ id: 'prophecy', name: 'Prophecies' }],
       subjects: [],
-      facts: [{ id: 'a:rank', label: 'Reach rank', kind: 'number', max: 5, collection: 'prophecy' }],
+      facts: [{ id: 'a:rank', label: 'Reach rank', kind: 'number', max: 5, collection: 'prophecy', subjects: [] }],
       achievements: [
         {
           id: 'prophecy:rank',

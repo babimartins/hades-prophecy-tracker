@@ -17,9 +17,9 @@ const dataset: Dataset = {
   ],
   subjects: [],
   facts: [
-    { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy' },
-    { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy' },
-    { id: 'b:one', label: 'Three', kind: 'boolean', collection: 'codex' },
+    { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy', subjects: [] },
+    { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy', subjects: [] },
+    { id: 'b:one', label: 'Three', kind: 'boolean', collection: 'codex', subjects: [] },
   ],
   achievements: [
     achievement,

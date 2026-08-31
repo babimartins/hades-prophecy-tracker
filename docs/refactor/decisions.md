@@ -163,3 +163,45 @@ all 545 achievements, which is not slow today.
 a list of 545 on a phone. The repository already uses the map idiom in its own
 integrity test. A `WeakMap` keyed on the dataset keeps the function pure from
 the caller's point of view and lets the entry be collected with the dataset.
+
+## 13. `subjects` is required now that nothing is unresolved
+
+**Chosen:** make the field required on `Fact` once all 692 were resolved, and
+retire the absent-key state.
+
+**Alternative:** keep it optional, since the integrity test already asserts
+that nothing is missing.
+
+**Why:** the optional key carried a meaning — "nobody has established this
+yet" — and that meaning is spent. Leaving it optional would let a new fact
+ship with no subjects and no failure, and would keep every consumer handling an
+`undefined` that cannot occur. The cost is one `subjects: []` on each test
+fixture, paid once.
+
+An empty list keeps its meaning: 81 facts belong to no subject on purpose.
+
+## 14. `combat:foes-slain` is an aggregate, like the fish counters
+
+**Chosen:** empty subject list.
+
+**Alternative:** tag it to every foe, or leave it for someone to decide later.
+
+**Why:** it counts every kill in the game rather than naming a foe. Tagging it
+to 37 foes would put "slay 10,000 foes" on 37 subject pages as if each one
+owned it. It is the same shape as `fish:caught`, which already takes an empty
+list. Its namespace stays a capability namespace, because the other 12
+`combat:*` facts do name subjects.
+
+## 15. A weapon is a subject of its Cerberus milestone; a keepsake is not
+
+**Chosen:** `combat:cerberus-coronacht-rama` takes `["cerberus", "coronacht"]`.
+`combat:defeat-hades-with-cosmic-egg` takes `["hades"]` only.
+
+**Why:** the first names two things the player acts on — a foe to get past and
+a weapon to wield, and the weapon page should list it as a milestone. The
+second names one, plus an instrument. The Cosmic Egg is how you do it, not what
+you do it to, and putting it on Chaos's page would tell a reader that Chaos has
+a combat milestone.
+
+The same rule keeps `talk:nyx-in-chaos-realm` on Nyx alone. Chaos's realm is
+where the conversation happens, not a participant.

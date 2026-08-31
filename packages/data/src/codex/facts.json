@@ -11,7 +11,8 @@
     "id": "talk:persephone-returns-to-house-of-hades",
     "label": "See Hades' gratitude after Persephone returns to the House of Hades",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["hades", "persephone"]
   },
   {
     "id": "nectar:nyx",
@@ -34,7 +35,8 @@
     "label": "Total spent at Charon's shop",
     "kind": "number",
     "max": 10000,
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["charon"]
   },
   {
     "id": "nectar:hypnos",
@@ -48,7 +50,8 @@
     "id": "talk:hypnos-and-thanatos-reconcile",
     "label": "Witness Hypnos and Thanatos reconcile as brothers",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["hypnos", "thanatos"]
   },
   {
     "id": "nectar:thanatos",
@@ -92,31 +95,36 @@
     "id": "talk:zeus-hears-other-gods-opinions",
     "label": "Hear the other Gods share their opinions of Zeus",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["zeus"]
   },
   {
     "id": "talk:zeus-reconciles-with-hades",
     "label": "Hear Zeus express a wish to reconcile with Hades, and Hades' response",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["zeus", "hades"]
   },
   {
     "id": "talk:athena-acknowledges-zagreus-strength",
     "label": "Hear Athena's three remarks acknowledging Zagreus' strength after a clear",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["athena"]
   },
   {
     "id": "talk:artemis-confides-about-callisto",
     "label": "Hear Artemis say she can be herself with Zagreus",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["artemis"]
   },
   {
     "id": "talk:demeter-after-epilogue",
     "label": "Complete the Epilogue and hear Demeter ask Zagreus to be more candid",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["demeter"]
   },
   {
     "id": "codex:hades",
@@ -255,7 +263,8 @@
     "id": "talk:aphrodite-after-bonds-forged",
     "label": "Hear Aphrodite's response after forging bonds with Dusa, Thanatos and Megaera",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["aphrodite", "dusa", "thanatos", "megaera"]
   },
   {
     "id": "nectar:achilles",

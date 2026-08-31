@@ -24,7 +24,7 @@ const dataset: Dataset = {
     { id: 'boon:duo:lightning-phalanx', label: 'Lightning Phalanx', kind: 'boolean', collection: 'codex', subjects: ['zeus', 'athena'] },
     { id: 'aspect:stygius:zagreus', label: 'Aspect of Zagreus', kind: 'number', max: 5, collection: 'codex', subjects: ['stygius'] },
     { id: 'pact:hard-labor', label: 'Hard Labor', kind: 'number', max: 5, collection: 'codex', subjects: [] },
-    { id: 'keepsake:thunder-signet', label: 'Thunder Signet rank', kind: 'number', max: 3, collection: 'codex' },
+    { id: 'keepsake:thunder-signet', label: 'Thunder Signet rank', kind: 'number', max: 3, collection: 'codex', subjects: [] },
   ],
   achievements: [
     {

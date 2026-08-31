@@ -10,24 +10,29 @@ import { describe, expect, it } from 'vitest'
 import { dataset } from '../src/index.js'
 
 describe('the subject axis against the real dataset', () => {
-  it('gives every weapon the same five capabilities', () => {
-    const expected = ['acquire', 'aspect', 'codex', 'enchant', 'escape']
+  it('gives every weapon the same six capabilities', () => {
+    // `combat` joined the set: each weapon has a Cerberus milestone naming it.
+    const expected = ['acquire', 'aspect', 'codex', 'combat', 'enchant', 'escape']
     for (const weapon of subjectsOfType(dataset, 'weapon')) {
       expect([weapon.id, subjectCapabilities(dataset, weapon.id).sort()]).toEqual([
         weapon.id,
         expected,
       ])
-      expect(subjectFacts(dataset, weapon.id)).toHaveLength(19)
+      // Stygius owns one more than the others: Skelly is slain with it.
+      const expectedFacts = weapon.id === 'stygius' ? 21 : 20
+      expect([weapon.id, subjectFacts(dataset, weapon.id).length]).toEqual([
+        weapon.id,
+        expectedFacts,
+      ])
     }
   })
 
-  it('gives Zeus the capabilities his tagged facts imply', () => {
-    // `dialogue` is absent because the 18 `talk:` facts are among the 42 that
-    // phase 2 still has to source. It appears once they carry a subject.
+  it('gives Zeus every capability his facts imply, dialogue included', () => {
     expect(subjectCapabilities(dataset, 'zeus').sort()).toEqual([
       'affinity',
       'boons',
       'codex',
+      'dialogue',
       'introduction',
       'invite',
       'keepsake',
@@ -133,14 +138,15 @@ describe('the subject axis against the real dataset', () => {
     // This is what the array was for. Every pair of the 8 boon-granting gods
     // has exactly one duo boon, so 28 facts carry two subjects and the pairs
     // must cover all 28 combinations without repeating one.
-    const shared = dataset.facts.filter((fact) => (fact.subjects?.length ?? 0) > 1)
+    const shared = dataset.facts
+      .filter((fact) => fact.subjects.length > 1)
+      .filter((fact) => fact.id.startsWith('boon:duo:'))
     expect(shared).toHaveLength(28)
-    expect(shared.every((fact) => fact.id.startsWith('boon:duo:'))).toBe(true)
 
-    const pairs = shared.map((fact) => [...fact.subjects!].sort().join('|'))
+    const pairs = shared.map((fact) => [...fact.subjects].sort().join('|'))
     expect(new Set(pairs).size).toBe(28)
 
-    const gods = [...new Set(shared.flatMap((fact) => fact.subjects!))].sort()
+    const gods = [...new Set(shared.flatMap((fact) => fact.subjects))].sort()
     expect(gods).toEqual([
       'aphrodite',
       'ares',
@@ -162,10 +168,10 @@ describe('the subject axis against the real dataset', () => {
       (running, subject) => running + subjectFacts(dataset, subject.id).length,
       0,
     )
-    const tagged = dataset.facts.filter((fact) => (fact.subjects?.length ?? 0) > 0)
-    const tagInstances = tagged.reduce((running, fact) => running + fact.subjects!.length, 0)
-    expect(tagged).toHaveLength(570)
+    const tagged = dataset.facts.filter((fact) => fact.subjects.length > 0)
+    const tagInstances = tagged.reduce((running, fact) => running + fact.subjects.length, 0)
+    expect(tagged).toHaveLength(611)
     expect(summed).toBe(tagInstances)
-    expect(summed).toBe(570 + 28)
+    expect(tagInstances).toBe(655)
   })
 })

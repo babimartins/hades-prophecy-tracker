@@ -155,7 +155,8 @@ datasetSchema     += { subjects: Subject[] }
 Every field is optional. The 545 achievements and 692 facts keep validating
 while phase 2 fills the gaps, so every commit in between stays green.
 
-`subjects` becomes required when the 105 are sourced. Not before.
+`subjects` became required once all 105 were sourced. Every fact now names its
+subjects or declares an empty list.
 
 ## 7. New engine functions
 

@@ -6,9 +6,9 @@ const dataset: Dataset = {
   collections: [{ id: 'prophecy', name: 'Prophecies' }],
   subjects: [],
   facts: [
-    { id: 'a:shared', label: 'Shared', kind: 'boolean', collection: 'prophecy' },
-    { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy' },
-    { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy' },
+    { id: 'a:shared', label: 'Shared', kind: 'boolean', collection: 'prophecy', subjects: [] },
+    { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy', subjects: [] },
+    { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy', subjects: [] },
   ],
   achievements: [
     {
@@ -58,7 +58,7 @@ describe('nextSteps', () => {
     const atLeastDataset: Dataset = {
       collections: [{ id: 'prophecy', name: 'Prophecies' }],
       subjects: [],
-      facts: [{ id: 'a:threshold', label: 'Threshold', kind: 'number', collection: 'prophecy' }],
+      facts: [{ id: 'a:threshold', label: 'Threshold', kind: 'number', collection: 'prophecy', subjects: [] }],
       achievements: [
         {
           id: 'prophecy:threshold',
@@ -77,9 +77,9 @@ describe('nextSteps', () => {
       collections: [{ id: 'prophecy', name: 'Prophecies' }],
       subjects: [],
       facts: [
-        { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy' },
-        { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy' },
-        { id: 'a:three', label: 'Three', kind: 'boolean', collection: 'prophecy' },
+        { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy', subjects: [] },
+        { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy', subjects: [] },
+        { id: 'a:three', label: 'Three', kind: 'boolean', collection: 'prophecy', subjects: [] },
       ],
       achievements: [
         {

@@ -5,13 +5,14 @@ import { validateDataset } from '../src/index.js'
 const validDataset: Dataset = {
   collections: [{ id: 'prophecy', name: 'Fated List of Minor Prophecies' }],
   facts: [
-    { id: 'nectar:dusa', label: 'Give Nectar to Dusa', kind: 'boolean', collection: 'prophecy' },
+    { id: 'nectar:dusa', label: 'Give Nectar to Dusa', kind: 'boolean', collection: 'prophecy', subjects: [] },
     {
       id: 'pact:extreme-measures',
       label: 'Extreme Measures',
       kind: 'number',
       max: 4,
       collection: 'prophecy',
+      subjects: [],
     },
   ],
   subjects: [{ id: 'dusa', name: 'Dusa', type: 'character' }],
@@ -132,19 +133,18 @@ describe('the optional fields the subject axis adds', () => {
     expect(validateDataset(data).facts[0]?.subjects).toEqual(['athena', 'demeter'])
   })
 
-  it('tells an empty subject list apart from an absent key', () => {
-    // The real dataset omits the key entirely; it never sets it to undefined.
-    // Deleting it is the only way to test the shape the data actually has, and
-    // a stray `.default([])` on the fact schema would turn the absent key into
-    // an empty array and fail here.
+  it('requires the subject list, and rejects a fact without one', () => {
+    // Optional while phase 2 ran, so a missing key could mean "not established
+    // yet". Every fact is resolved now, so a missing key would only ever be an
+    // oversight. An empty list still means "belongs to no subject on purpose".
     const data: { facts: Record<string, unknown>[] } & Record<string, unknown> =
       structuredClone(validDataset)
-    data.facts[0]!.subjects = []
     delete data.facts[1]!.subjects
-    const parsed = validateDataset(data)
-    expect(parsed.facts).toHaveLength(2)
-    expect(parsed.facts[0]!.subjects).toEqual([])
-    expect('subjects' in parsed.facts[1]!).toBe(false)
+    expect(() => validateDataset(data)).toThrow()
+
+    const kept = structuredClone(validDataset)
+    kept.facts[0]!.subjects = []
+    expect(validateDataset(kept).facts[0]!.subjects).toEqual([])
   })
 
   it('rejects a subject id with a bad shape inside a fact', () => {

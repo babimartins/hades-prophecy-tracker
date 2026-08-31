@@ -66,7 +66,8 @@
     "id": "talk:persephone-and-hades-after-family-reunion",
     "label": "Report to Persephone and Hades after inviting all Olympians",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["persephone", "hades"]
   },
   {
     "id": "nectar:zeus",
@@ -144,7 +145,8 @@
     "id": "combat:defeat-hades",
     "label": "Defeat Hades",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"]
   },
   {
     "id": "meet:hades",
@@ -213,19 +215,22 @@
     "id": "workorder:eldest-sigil-restoration",
     "label": "Complete the Eldest Sigil Restoration Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["nyx"]
   },
   {
     "id": "talk:nyx-in-chaos-realm",
     "label": "Speak with Nyx in Chaos's realm",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["nyx"]
   },
   {
     "id": "workorder:court-musicians-sentence",
     "label": "Complete the Court Musician's Sentence Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "nectar:orpheus",
@@ -247,37 +252,43 @@
     "id": "workorder:singers-gamble",
     "label": "Complete the Singer's Gamble Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus", "eurydice"]
   },
   {
     "id": "talk:orpheus-after-singers-gamble",
     "label": "Speak with Orpheus after the Singer's Gamble Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "workorder:knave-kings-sentence",
     "label": "Complete the Knave-King's Sentence Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["sisyphus"]
   },
   {
     "id": "talk:sisyphus-after-knave-kings-sentence",
     "label": "Speak with Sisyphus after the Knave-King's Sentence Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["sisyphus"]
   },
   {
     "id": "workorder:heros-sacrifice",
     "label": "Complete the Hero's Sacrifice Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["achilles"]
   },
   {
     "id": "talk:achilles-after-heros-sacrifice",
     "label": "Speak with Achilles after the Hero's Sacrifice Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["achilles"]
   },
   {
     "id": "aspect:stygius:zagreus",
@@ -291,7 +302,8 @@
     "id": "combat:slay-skelly-with-stygius",
     "label": "Slay Skelly using Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["skelly", "stygius"]
   },
   {
     "id": "meet:zeus",
@@ -346,38 +358,44 @@
     "id": "lounge:deep-cleaning-service",
     "label": "Purchase the Deep Cleaning lounge service",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "lounge:detailing-service",
     "label": "Purchase the Detailing lounge service",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "lounge:any-rug",
     "label": "Purchase any rug for the Lounge",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "lounge:other-items",
     "label": "Other Lounge items purchased",
     "kind": "number",
     "max": 10,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "talk:dusa-after-lounge-decor",
     "label": "Speak with Dusa after decorating the Lounge",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "combat:defeat-hades-with-cosmic-egg",
     "label": "Defeat Hades with the Cosmic Egg keepsake equipped",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"]
   },
   {
     "id": "pact:extreme-measures",
@@ -391,32 +409,37 @@
     "id": "combat:defeat-theseus-extreme-measures",
     "label": "Defeat Theseus while Extreme Measures is active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["theseus"]
   },
   {
     "id": "talk:poseidon-after-theseus-extreme-measures",
     "label": "Speak with Poseidon after defeating Extreme Measures Theseus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon", "theseus"]
   },
   {
     "id": "combat:foes-slain",
     "label": "Foes slain",
     "kind": "number",
     "max": 10000,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talk:ares-after-10000-foes",
     "label": "Speak with Ares after slaying 10,000 foes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "combat:defeat-charon-twice-consecutive",
     "label": "Defeat Charon two consecutive times",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["charon"]
   },
   {
     "id": "boon:athena:divine-strike",
@@ -1682,37 +1705,43 @@
     "id": "combat:cerberus-stygius-arthur",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Stygian Blade with the Aspect of Arthur in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "stygius"]
   },
   {
     "id": "combat:cerberus-varatha-guan-yu",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Eternal Spear with the Aspect of Guan Yu in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "varatha"]
   },
   {
     "id": "combat:cerberus-coronacht-rama",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Heart-Seeking Bow with the Aspect of Rama in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "coronacht"]
   },
   {
     "id": "combat:cerberus-aegis-beowulf",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Shield of Chaos with the Aspect of Beowulf in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "aegis"]
   },
   {
     "id": "combat:cerberus-malphon-gilgamesh",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Twin Fists of Malphon with the Aspect of Gilgamesh in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "malphon"]
   },
   {
     "id": "combat:cerberus-exagryph-lucifer",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Adamant Rail with the Aspect of Lucifer in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "exagryph"]
   },
   {
     "id": "escape:stygian-blade",
@@ -2246,26 +2275,30 @@
     "id": "talk:poseidon-after-fishing",
     "label": "Report to Poseidon after fishing",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "lyre:interactions",
     "label": "Lyre interactions",
     "kind": "number",
     "max": 210,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "talk:orpheus-after-lyre",
     "label": "Report to Orpheus after learning the Lyre",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "combat:defeat-hades-heat8",
     "label": "Defeat Hades with at least 8 Heat active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"]
   },
   {
     "id": "daedalus:stygius:breaching-slash",
