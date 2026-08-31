@@ -1,0 +1,380 @@
+import { dataset } from '@hades/data'
+import {
+  subjectCapabilities,
+  subjectFacts,
+  subjectProgress,
+  subjectsOfType,
+  type FactMap,
+} from '@hades/engine'
+import type { Subject } from '@hades/schema'
+import { colorVar } from '@hades/ui'
+import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
+
+export type SortKey = 'name' | 'hearts' | 'keepsake' | 'boons' | 'favor'
+
+export interface CharacterRow {
+  subject: Subject
+  section: string
+  hearts: { done: number; max: number } | null
+  keepsake: { done: number; max: number } | null
+  boons: { done: number; total: number } | null
+  favor: { done: number; total: number } | null
+  markers: string[]
+}
+
+/** A marker earns its place only if it varies. Codex, Affinity and Keepsake do not. */
+const MARKER_LABEL: Readonly<Record<string, string>> = {
+  olympian: 'Olympian',
+  grants: 'Grants boons',
+  fightable: 'Fightable',
+  favor: 'Favor',
+  companion: 'Companion',
+}
+
+const OLYMPIANS = new Set([
+  'zeus',
+  'poseidon',
+  'athena',
+  'aphrodite',
+  'ares',
+  'artemis',
+  'dionysus',
+  'demeter',
+  'hermes',
+])
+
+export function buildRows(facts: FactMap): CharacterRow[] {
+  const sections = new Map(
+    dataset.achievements
+      .filter((achievement) => achievement.collection === 'codex')
+      .map((achievement) => [achievement.name, achievement.section ?? '']),
+  )
+
+  return subjectsOfType(dataset, 'character').map((subject) => {
+    const owned = subjectFacts(dataset, subject.id)
+    const progress = subjectProgress(dataset, subject.id, facts)
+    const capabilities = subjectCapabilities(dataset, subject.id)
+
+    const affinity = owned.find((fact) => fact.id.startsWith('nectar:'))
+    const keepsake = owned.find((fact) => fact.id.startsWith('keepsake:'))
+
+    const markers: string[] = []
+    if (OLYMPIANS.has(subject.id)) markers.push('olympian')
+    else if (capabilities.includes('boons')) markers.push('grants')
+    if (capabilities.includes('combat')) markers.push('fightable')
+    if (capabilities.includes('quest')) markers.push('favor')
+    if (capabilities.includes('companion')) markers.push('companion')
+
+    return {
+      subject,
+      section: sections.get(subject.name) ?? '',
+      hearts: affinity
+        ? { done: numeric(facts[affinity.id]), max: affinity.max ?? 1 }
+        : null,
+      keepsake: keepsake ? { done: numeric(facts[keepsake.id]), max: keepsake.max ?? 3 } : null,
+      boons: progress.byCapability.boons
+        ? { done: progress.byCapability.boons.done, total: progress.byCapability.boons.total }
+        : null,
+      favor: progress.byCapability.quest
+        ? { done: progress.byCapability.quest.done, total: progress.byCapability.quest.total }
+        : null,
+      markers,
+    }
+  })
+}
+
+function numeric(value: boolean | number | undefined): number {
+  if (typeof value === 'number') return value
+  return value === true ? 1 : 0
+}
+
+export type FilterId = 'all' | 'olympian' | 'affinity' | 'fightable' | 'favor' | 'companion' | 'foes'
+
+/**
+ * A foe is a character whose only capabilities are `codex` and `combat`. The
+ * taxonomy research established that "foe" is not a type: it is the shape a
+ * character takes when nothing else is filled in. The default view hides them,
+ * because 44 of the 73 characters would otherwise bury the 29 with content.
+ */
+export function isFoe(row: CharacterRow): boolean {
+  const capabilities = subjectCapabilities(dataset, row.subject.id)
+  return capabilities.every((capability) => capability === 'codex' || capability === 'combat')
+}
+
+const FILTERS: readonly { id: FilterId; label: string; match: (row: CharacterRow) => boolean }[] = [
+  { id: 'all', label: 'All', match: (row) => !isFoe(row) },
+  { id: 'olympian', label: 'Olympians', match: (row) => row.markers.includes('olympian') },
+  { id: 'affinity', label: 'With affinity', match: (row) => row.hearts !== null },
+  { id: 'fightable', label: 'Fightable', match: (row) => row.markers.includes('fightable') },
+  { id: 'favor', label: 'With a favor', match: (row) => row.markers.includes('favor') },
+  { id: 'companion', label: 'Companion', match: (row) => row.markers.includes('companion') },
+  { id: 'foes', label: 'Foes', match: (row) => isFoe(row) },
+]
+
+export class CharacterTable extends LitElement {
+  static override readonly styles = css`
+    :host {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 14px;
+    }
+
+    .chip {
+      background: none;
+      border: 1px solid ${colorVar('--hd-color-muted')};
+      border-radius: 20px;
+      color: ${colorVar('--hd-color-muted')};
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.75rem;
+      padding: 5px 12px;
+    }
+
+    .chip[aria-pressed='true'] {
+      border-color: ${colorVar('--hd-color-accent')};
+      color: ${colorVar('--hd-color-accent')};
+    }
+
+    /* The table body is the scroll region: the page height stays frozen. */
+    .table {
+      border: 1px solid ${colorVar('--hd-color-muted')};
+      border-radius: 12px;
+      flex: 1;
+      margin-bottom: 14px;
+      min-height: 0;
+      overflow: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      min-width: 720px;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid ${colorVar('--hd-color-muted')};
+      padding: 9px 14px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    thead th {
+      background: ${colorVar('--hd-color-surface')};
+      font-size: 0.68rem;
+      letter-spacing: 0.07em;
+      position: sticky;
+      text-transform: uppercase;
+      top: 0;
+      white-space: nowrap;
+      z-index: 1;
+    }
+
+    thead button {
+      background: none;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      padding: 0;
+    }
+
+    tbody tr {
+      cursor: pointer;
+    }
+
+    td.name {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    td.name small {
+      color: ${colorVar('--hd-color-muted')};
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 400;
+    }
+
+    .pips {
+      display: inline-flex;
+      gap: 3px;
+      vertical-align: middle;
+    }
+
+    .pips i {
+      background: ${colorVar('--hd-color-muted')};
+      border-radius: 50%;
+      display: block;
+      height: 9px;
+      width: 9px;
+    }
+
+    .pips i.on {
+      background: ${colorVar('--hd-color-accent')};
+    }
+
+    .count {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.72rem;
+      font-variant-numeric: tabular-nums;
+      margin-left: 6px;
+    }
+
+    .tag {
+      border: 1px solid ${colorVar('--hd-color-muted')};
+      border-radius: 20px;
+      display: inline-block;
+      font-size: 0.68rem;
+      margin-right: 4px;
+      padding: 2px 8px;
+      white-space: nowrap;
+    }
+
+    .empty {
+      color: ${colorVar('--hd-color-muted')};
+    }
+  `
+
+  static override readonly properties = {
+    facts: { attribute: false },
+    sort: { type: String },
+    ascending: { type: Boolean },
+    filter: { type: String },
+  }
+
+  facts: FactMap = {}
+  sort: SortKey = 'name'
+  ascending = true
+  filter: FilterId = 'all'
+
+  get rows(): CharacterRow[] {
+    const match = FILTERS.find((entry) => entry.id === this.filter)?.match ?? (() => true)
+    const rows = buildRows(this.facts).filter(match)
+    const direction = this.ascending ? 1 : -1
+    return rows.sort((a, b) => direction * (rank(a, this.sort) - rank(b, this.sort)) || a.subject.name.localeCompare(b.subject.name))
+  }
+
+  #sortBy(key: SortKey): void {
+    if (this.sort === key) this.ascending = !this.ascending
+    else {
+      this.sort = key
+      this.ascending = true
+    }
+  }
+
+  #open(row: CharacterRow): void {
+    this.dispatchEvent(
+      new CustomEvent('open-subject', { detail: { id: row.subject.id }, bubbles: true, composed: true }),
+    )
+  }
+
+  #header(key: SortKey, label: string): TemplateResult {
+    const active = this.sort === key
+    return html`
+      <th aria-sort=${active ? (this.ascending ? 'ascending' : 'descending') : 'none'}>
+        <button @click=${() => this.#sortBy(key)}>${label}${active ? (this.ascending ? ' ↑' : ' ↓') : ''}</button>
+      </th>
+    `
+  }
+
+  #pips(value: { done: number; max: number } | null): TemplateResult {
+    if (!value) return html`<span class="empty">—</span>`
+    return html`
+      <span class="pips" role="img" aria-label=${`${value.done} of ${value.max}`}>
+        ${Array.from({ length: value.max }, (_, index) => html`<i class=${index < value.done ? 'on' : ''}></i>`)}
+      </span>
+      <span class="count">${value.done}/${value.max}</span>
+    `
+  }
+
+  #ratio(value: { done: number; total: number } | null): TemplateResult {
+    if (!value) return html`<span class="empty">—</span>`
+    return html`<span class="count">${value.done}/${value.total}</span>`
+  }
+
+  override render(): TemplateResult {
+    const all = buildRows(this.facts)
+    const rows = this.rows
+    return html`
+      <div class="filters">
+        ${FILTERS.map(
+          (entry) => html`
+            <button
+              class="chip"
+              data-filter=${entry.id}
+              aria-pressed=${this.filter === entry.id}
+              @click=${() => {
+                this.filter = entry.id
+              }}
+            >
+              ${entry.label} · ${all.filter(entry.match).length}
+            </button>
+          `,
+        )}
+      </div>
+
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              ${this.#header('name', 'Character')} ${this.#header('hearts', 'Hearts')}
+              ${this.#header('keepsake', 'Keepsake')} ${this.#header('boons', 'Boons')}
+              ${this.#header('favor', 'Favor')}
+              <th>Markers</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map(
+              (row) => html`
+                <tr data-subject=${row.subject.id} @click=${() => this.#open(row)}>
+                  <td class="name">${row.subject.name}<small>${row.section}</small></td>
+                  <td>${this.#pips(row.hearts)}</td>
+                  <td>${this.#pips(row.keepsake)}</td>
+                  <td>${this.#ratio(row.boons)}</td>
+                  <td>${this.#ratio(row.favor)}</td>
+                  <td>
+                    ${row.markers.length
+                      ? row.markers.map((marker) => html`<span class="tag">${MARKER_LABEL[marker]}</span>`)
+                      : html`<span class="empty">—</span>`}
+                  </td>
+                </tr>
+              `,
+            )}
+          </tbody>
+        </table>
+      </div>
+      ${rows.length === 0 ? html`<p class="empty">No character matches that filter.</p>` : nothing}
+    `
+  }
+}
+
+function rank(row: CharacterRow, key: SortKey): number {
+  switch (key) {
+    case 'name':
+      return 0
+    case 'hearts':
+      return row.hearts ? row.hearts.done : -1
+    case 'keepsake':
+      return row.keepsake ? row.keepsake.done : -1
+    case 'boons':
+      return row.boons ? row.boons.done : -1
+    case 'favor':
+      return row.favor ? row.favor.done : -1
+  }
+}
+
+customElements.define('character-table', CharacterTable)
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'character-table': CharacterTable
+  }
+}
