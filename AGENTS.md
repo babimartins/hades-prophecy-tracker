@@ -192,6 +192,13 @@ A bad requirement tells a player to do the wrong thing for hours.
 - Every entry traces to a page fetched in the same session.
 - `hades.fandom.com` returns HTTP 402 to automated fetchers. That is anti-bot
   blocking, not an outage. Read the pages through the real browser instead.
+- **Read the wiki as wikitext, with `?action=raw`.** The rendered page hides its
+  tables behind JavaScript tabs, so they extract as empty text. Append
+  `?action=raw` to any wiki URL and the browser returns the source, complete and
+  untabbed. Verified working on 2026-08-31.
+- **`{{CustomTabs|tab1 = Hades|tab2 = Hades II}}` at the top of the wikitext means
+  the page carries both games.** Take only the Hades I section. The River
+  Denizens page already put three Hades II fish into this dataset once.
 - If a requirement is ambiguous, leave the entry out and say so. A missing
   entry is cheap.
 - Prophecies and platform achievements are separate collections with separate
@@ -211,6 +218,40 @@ lets one checkbox advance several entries at once.
 The integrity test in `packages/data` rejects duplicate ids, unknown fact
 references, orphan facts, unknown collections, and a number fact with no `max`.
 Run it after every batch of data.
+
+**A subject id may carry its namespace, so `<namespace>-<segment>` is a real
+resolution rule.** A companion's Codex entry is "Companion Battie", so its
+subject id is `companion-battie` while its fact id is `companion:battie`.
+Resolving only the second segment leaves the fact untagged, which makes the
+`companion` capability unreachable and reports the companion as complete from
+its Codex entry alone. Six facts need this rule and nothing else does.
+
+**Name every fact namespace in either `CAPABILITY_BY_NAMESPACE` or
+`NAMESPACES_WITHOUT_CAPABILITY`.** `subjectProgress` counts a fact in `total`
+and skips its capability bucket when the namespace is in neither, so the
+per-capability breakdown silently stops summing to the whole. Two tests guard
+this: the sum over all 119 real subjects, and the namespace-to-capability map
+pinned entry by entry. Membership alone is not enough — re-pointing `catch` to
+`collect` keeps every sum valid while a fish reads "Collect".
+
+**A test over the real dataset can collapse into a tautology.** "Counts each
+fact once per subject" was `summed === tagged`, true by construction while no
+fact carries two subjects. Cover the behaviour in a fixture that has the shape,
+and let the dataset test assert only what the dataset can prove.
+
+**`Number.isFinite` on a guarded ratio cannot fail**, and neither can a
+divide-by-zero test where no input reaches zero. `ratioOf` guards
+`total === 0`, and every real subject owns at least one fact, so only the
+engine fixture can cover that path. Assert the invariant that could break.
+
+**Deleting a key is not the same as setting it to `undefined`.** The dataset
+omits `subjects` entirely on an unresolved fact. A test that writes
+`fact.subjects = undefined` creates the key and never covers the real shape.
+
+**Read the file back after a scripted edit.** A patch script that throws part
+way writes nothing, and an earlier success line says nothing about the final
+state. Two claimed test rewrites reached a commit message without reaching the
+file. Grep for the new text, or run the mutation that should now fail.
 
 **A label-derived check cannot prove a name was verified.** When entry names are
 built from facts that already exist, comparing the entry name against the fact
