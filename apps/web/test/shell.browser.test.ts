@@ -2,7 +2,7 @@ import { html, render } from 'lit'
 import { beforeEach, describe, expect, it } from 'vitest'
 import '../src/components/app-shell.js'
 
-const SECTIONS = ['characters', 'weapons', 'fated', 'house', 'collections']
+const SECTIONS = ['next', 'characters', 'weapons', 'fated', 'house', 'collections']
 
 function shell(): Element {
   const element = document.body.querySelector('app-shell')
@@ -38,8 +38,12 @@ describe('the shell', () => {
     await mount()
   })
 
-  it('offers the five sections, in the order the owner approved', () => {
+  it('offers the six sections, in the order the owner approved', () => {
+    // Next Steps came later and leads: it answers the question she opens the
+    // app with. The other five keep the order she walked through, Collections
+    // last.
     expect(tabs().map((tab) => tab.textContent?.trim())).toEqual([
+      'Next Steps',
       'Characters',
       'Weapons',
       'Fated List',
@@ -51,11 +55,11 @@ describe('the shell', () => {
   it('exposes the current section to assistive technology, not by colour alone', () => {
     const current = tabs().filter((tab) => tab.getAttribute('aria-current') === 'page')
     expect(current).toHaveLength(1)
-    expect(current[0]?.textContent?.trim()).toBe('Characters')
+    expect(current[0]?.textContent?.trim()).toBe('Next Steps')
   })
 
   it('moves the current section when a tab is pressed', async () => {
-    tabs()[2]?.click()
+    tabs()[3]?.click()
     await (shell() as HTMLElement & { updateComplete: Promise<unknown> }).updateComplete
     const current = tabs().find((tab) => tab.getAttribute('aria-current') === 'page')
     expect(current?.textContent?.trim()).toBe('Fated List')
