@@ -352,3 +352,61 @@ describe('a shop shows its prices', () => {
     expect(costs.every((text) => text!.endsWith('Obol'))).toBe(true)
   })
 })
+
+
+describe('what an entry asks of a fact, rather than what the fact holds', () => {
+  // 301 requirement nodes ask for less than the fact's own max, and 297 ask
+  // for exactly 1. Reading the max there showed a keepsake you already own as
+  // partly done, with 1/3 beside it as though two ranks were still owed.
+  //
+  // The same 25 keepsakes back two trophies at two targets: Something From
+  // Everyone at 1, Friends Forever at 3. One rank tells them apart.
+  const OWNED: FactMap = { 'keepsake:adamant-arrowhead': 1 }
+
+  async function trophyRow(trophyId: string): Promise<Element | null> {
+    render(html``, document.body)
+    await mount('house', OWNED)
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="achievement"]')?.click()
+    await section().updateComplete
+    return root().querySelector(
+      `[data-achievement="${trophyId}"] li[data-fact="keepsake:adamant-arrowhead"]`,
+    )
+  }
+
+  it('marks a keepsake done where owning it is the whole ask', async () => {
+    const row = await trophyRow('achievement:something-from-everyone')
+    expect(row?.className).toBe('done')
+  })
+
+  it('leaves the same keepsake partial where the entry asks for rank 3', async () => {
+    const row = await trophyRow('achievement:friends-forever')
+    expect(row?.className).toBe('partial')
+  })
+
+  it('keeps showing the real rank, never the target, in the number', async () => {
+    // The owner's rule for this: the number is always the rank you actually
+    // hold. Only the tick changes with the entry.
+    const row = await trophyRow('achievement:something-from-everyone')
+    const input = row
+      ?.querySelector('fact-row')
+      ?.shadowRoot?.querySelector<HTMLInputElement>('input[type="number"]')
+    expect(input?.value).toBe('1')
+    expect(input?.max).toBe('3')
+  })
+
+  it('names a target only where it is neither 1 nor the max', async () => {
+    // Three rows in the whole app: Cerberus at 10 of 20 pets, 18 of the 25
+    // fish, and Demeter at 6 of her 7 hearts. Everywhere else the tick says it.
+    const row = await trophyRow('achievement:something-from-everyone')
+    expect(row?.querySelector('fact-row')?.shadowRoot?.querySelector('.target')).toBeNull()
+
+    render(html``, document.body)
+    await mount('house', {})
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="achievement"]')?.click()
+    await section().updateComplete
+    const cerberus = root().querySelector(
+      '[data-achievement="achievement:three-headed-boy"] li[data-fact="pet:cerberus"] fact-row',
+    )
+    expect(cerberus?.shadowRoot?.querySelector('.target')?.textContent?.trim()).toBe('target 10')
+  })
+})

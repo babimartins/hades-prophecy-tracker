@@ -1,6 +1,6 @@
 import type { RequirementChild } from '@hades/schema'
 import { describe, expect, it } from 'vitest'
-import { collectFactIds } from '../src/index.js'
+import { collectFactIds, factTargets } from '../src/index.js'
 
 describe('collectFactIds', () => {
   it('returns the single id of a bare fact id child', () => {
@@ -42,5 +42,48 @@ describe('collectFactIds', () => {
       ],
     }
     expect(collectFactIds(node)).toEqual(['a:one', 'a:two', 'a:three', 'a:four'])
+  })
+})
+
+
+describe('factTargets', () => {
+  it('reads a plain child as 1, however large its gauge is', () => {
+    // `isSatisfied` counts a number fact above zero, so a plain child asks for
+    // one, not for the max. Reading the max marked 297 finished rows partial.
+    expect(factTargets('keepsake:cosmic-egg')).toEqual({ 'keepsake:cosmic-egg': 1 })
+  })
+
+  it('reads an atLeast node as the value it names', () => {
+    const node: RequirementChild = { kind: 'atLeast', fact: 'nectar:demeter', value: 6 }
+    expect(factTargets(node)).toEqual({ 'nectar:demeter': 6 })
+  })
+
+  it('takes the most demanding target when a fact is reached twice', () => {
+    // God of Blood nests the other 49, and reaches pet:cerberus at 1 through
+    // one of them and at 10 through Three-Headed Boy.
+    //
+    // Both orders, because keeping whichever came last gives 10 for one of
+    // them and would pass a test that only tried that one.
+    const demandingLast: RequirementChild = {
+      kind: 'all',
+      of: ['pet:cerberus', { kind: 'atLeast', fact: 'pet:cerberus', value: 10 }],
+    }
+    const demandingFirst: RequirementChild = {
+      kind: 'all',
+      of: [{ kind: 'atLeast', fact: 'pet:cerberus', value: 10 }, 'pet:cerberus'],
+    }
+    expect(factTargets(demandingLast)).toEqual({ 'pet:cerberus': 10 })
+    expect(factTargets(demandingFirst)).toEqual({ 'pet:cerberus': 10 })
+  })
+
+  it('walks every branch of a nested tree', () => {
+    const node: RequirementChild = {
+      kind: 'all',
+      of: [
+        { kind: 'count', n: 2, of: [{ kind: 'atLeast', fact: 'nectar:zeus', value: 7 }] },
+        { kind: 'any', of: ['catch:hellfish'] },
+      ],
+    }
+    expect(factTargets(node)).toEqual({ 'nectar:zeus': 7, 'catch:hellfish': 1 })
   })
 })

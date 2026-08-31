@@ -1,5 +1,11 @@
 import { dataset } from '@hades/data'
-import { achievementProgress, collectFactIds, isComplete, type FactMap } from '@hades/engine'
+import {
+  achievementProgress,
+  collectFactIds,
+  factTargets,
+  isComplete,
+  type FactMap,
+} from '@hades/engine'
 import type { Achievement, Fact, RequirementChild } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
@@ -19,6 +25,12 @@ const RAIL_LABEL: Readonly<Record<RailSectionId, string>> = {
 interface Group {
   id: string
   label: string
+  /**
+   * What each fact must reach inside this group, when the group speaks for an
+   * entry. A rail item built from a whole namespace has no entry and no
+   * targets, so each row falls back to the fact's own max.
+   */
+  targets?: Readonly<Record<string, number>> | undefined
   /** What this system is, for a reader who may never have met it. */
   about?: string | undefined
   /** How the tracker counts it, when the game is familiar but our rule is not. */
@@ -59,6 +71,11 @@ const collectionDescription = new Map(
   dataset.collections.map((collection) => [collection.id, collection.description]),
 )
 
+function targetsOf(achievements: Achievement[]): Readonly<Record<string, number>> | undefined {
+  if (achievements.length !== 1) return undefined
+  return factTargets(achievements[0]!.requirement)
+}
+
 function factsOf(achievement: Achievement): Fact[] {
   return collectFactIds(achievement.requirement)
     .map((id) => factById.get(id))
@@ -92,6 +109,7 @@ function groupsFor(section: RailSectionId): Group[] {
         label: achievement.name,
         prose: achievement.description,
         facts: factsOf(achievement),
+        targets: factTargets(achievement.requirement),
         achievements: [achievement],
       }))
   }
@@ -110,6 +128,7 @@ function groupsFor(section: RailSectionId): Group[] {
         label: 'Skelly’s Challenge Statues',
         about: collectionDescription.get('statue'),
         facts: STATUE_FACTS.map((id) => factById.get(id)).filter((f): f is Fact => f !== undefined),
+        targets: targetsOf(dataset.achievements.filter((a) => a.collection === 'statue')),
         achievements: dataset.achievements.filter((a) => a.collection === 'statue'),
       },
       {
@@ -402,8 +421,8 @@ export class RailSection extends LitElement {
     return groupsFor(this.section)
   }
 
-  #isDone(fact: Fact): boolean {
-    return factState(fact, this.facts) === 'done'
+  #isDone(fact: Fact, targets?: Readonly<Record<string, number>> | undefined): boolean {
+    return factState(fact, this.facts, targets?.[fact.id]) === 'done'
   }
 
   #items(): RailItem[] {
@@ -430,7 +449,7 @@ export class RailSection extends LitElement {
       const item: RailItem = {
         id: group.id,
         label: group.label,
-        done: group.facts.filter((fact) => this.#isDone(fact)).length,
+        done: group.facts.filter((fact) => this.#isDone(fact, group.targets)).length,
         total: group.facts.length,
       }
       if (group.facts.length === 0) item.sub = 'none yet'
@@ -498,8 +517,15 @@ export class RailSection extends LitElement {
             <ul>
               ${group.facts.map(
                 (fact) => html`
-                  <li data-fact=${fact.id} class=${factState(fact, this.facts)}>
-                    <fact-row .fact=${fact} .facts=${this.facts}></fact-row>
+                  <li
+                    data-fact=${fact.id}
+                    class=${factState(fact, this.facts, group.targets?.[fact.id])}
+                  >
+                    <fact-row
+                      .fact=${fact}
+                      .facts=${this.facts}
+                      .target=${group.targets?.[fact.id]}
+                    ></fact-row>
                   </li>
                 `,
               )}
@@ -532,6 +558,7 @@ export class RailSection extends LitElement {
         }
       : achievementProgress(trophy, this.facts)
     const facts = derivedFrom === undefined ? factsOf(trophy) : []
+    const targets = factTargets(trophy.requirement)
     return html`
       <li class="trophy" data-achievement=${trophy.id}>
         <div class="thead">
@@ -547,8 +574,12 @@ export class RailSection extends LitElement {
               <ul class="tfacts">
                 ${facts.map(
                   (fact) => html`
-                    <li data-fact=${fact.id} class=${factState(fact, this.facts)}>
-                      <fact-row .fact=${fact} .facts=${this.facts}></fact-row>
+                    <li data-fact=${fact.id} class=${factState(fact, this.facts, targets[fact.id])}>
+                      <fact-row
+                        .fact=${fact}
+                        .facts=${this.facts}
+                        .target=${targets[fact.id]}
+                      ></fact-row>
                     </li>
                   `,
                 )}
