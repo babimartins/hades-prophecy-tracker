@@ -87,7 +87,7 @@ in node and fails the moment it touches the DOM.
 
 **Read text across a shadow boundary with a composed walk, not `textContent`.**
 `Element.textContent` never crosses into a child component's shadow root, so
-asserting on a `hd-progress` caption through it silently reads an empty string.
+asserting on a `fact-row` label through it silently reads an empty string.
 
 **Keep `useDefineForClassFields` set to `false`.**
 Lit class fields break when it is true.
@@ -341,8 +341,8 @@ tab, the selected rail item, a price, an "unlocks N" count.
 The two are one warm scale. **A bar that reaches its total must carry the done
 colour**, or a finished entry and a nearly finished one look identical and only
 the number tells them apart. That was true of the whole app until it was
-noticed on screen, because the only component that painted the full state,
-`hd-progress`, has not been used since phase 3.
+noticed on screen: the only component that painted the full state was
+`hd-progress`, which nothing had used since phase 3 and which is now deleted.
 
 A new accent must clear 4.5:1 on both `#150e19` and `#241627` **and** stay at
 least 1.8 from the gold. Those pull against each other: the brighter, calmer
