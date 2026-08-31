@@ -6,6 +6,11 @@ import { ProgressState } from '../state/progress-state.js'
 import { createIndexedDbStore } from '../storage/indexeddb-store.js'
 import type { ProgressStore } from '../storage/progress-store.js'
 import { StateController } from './state-controller.js'
+import './character-table.js'
+import './rail-section.js'
+import './subject-page.js'
+import './transfer-controls.js'
+import './weapon-table.js'
 
 export type SectionId = 'characters' | 'weapons' | 'fated' | 'house' | 'collections'
 
@@ -151,18 +156,27 @@ export class AppShell extends LitElement {
       padding: 10px 0;
     }
 
-    .placeholder {
-      color: ${colorVar('--hd-color-muted')};
-      padding: 24px 0;
+    .error {
+      color: ${colorVar('--hd-color-accent')};
+    }
+
+    footer {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
     }
   `
 
   static override readonly properties = {
     section: { type: String },
+    subject: { type: String },
     error: { type: String },
   }
 
   section: SectionId = 'characters'
+  /** The open subject, or empty for the section's index. Not a sixth tab. */
+  subject = ''
   error = ''
 
   #state = new ProgressState(this.#createStore())
@@ -193,6 +207,33 @@ export class AppShell extends LitElement {
 
   #select(section: SectionId): void {
     this.section = section
+    this.subject = ''
+  }
+
+  async #setFact(event: CustomEvent<{ id: string; value: boolean | number }>): Promise<void> {
+    try {
+      await this.#controller.state.setFact(event.detail.id, event.detail.value)
+      this.error = ''
+    } catch (cause) {
+      const detail = cause instanceof Error ? cause.message : 'an unknown error'
+      this.error = `Your progress did not save: ${detail}.`
+    }
+  }
+
+  #body(section: SectionId): TemplateResult {
+    if (this.subject) {
+      return html`<subject-page .subjectId=${this.subject} .facts=${this.facts}></subject-page>`
+    }
+    switch (section) {
+      case 'characters':
+        return html`<character-table .facts=${this.facts}></character-table>`
+      case 'weapons':
+        return html`<weapon-table .facts=${this.facts}></weapon-table>`
+      case 'fated':
+      case 'house':
+      case 'collections':
+        return html`<rail-section .section=${section} .facts=${this.facts}></rail-section>`
+    }
   }
 
   override render(): TemplateResult {
@@ -222,18 +263,35 @@ export class AppShell extends LitElement {
         </div>
       </header>
 
-      <main class="wrap">
+      <main
+        class="wrap"
+        @open-subject=${(event: CustomEvent<{ id: string }>) => {
+          this.subject = event.detail.id
+        }}
+        @close-subject=${() => {
+          this.subject = ''
+        }}
+        @set-fact=${(event: CustomEvent<{ id: string; value: boolean | number }>) =>
+          void this.#setFact(event)}
+      >
         ${SECTIONS.map(
           (section) => html`
             <div data-page=${section.id} ?hidden=${this.section !== section.id}>
-              <p class="placeholder">${section.label}</p>
+              ${this.section === section.id ? this.#body(section.id) : nothing}
             </div>
           `,
         )}
       </main>
 
       <footer class="wrap">
-        Progress stays in this browser. Export it from The House to keep a copy.
+        ${this.error
+          ? html`<span class="error" role="alert">${this.error}</span>`
+          : html`Progress stays in this browser. Use Backup to keep a copy.`}
+        <transfer-controls
+          .facts=${this.facts}
+          @facts-import=${(event: CustomEvent<{ facts: FactMap }>) =>
+            void this.#controller.state.replaceAll(event.detail.facts)}
+        ></transfer-controls>
       </footer>
     `
   }

@@ -241,3 +241,34 @@ exists to prevent.
 **Why:** not a preference. A backtick closes the tagged template, and the file
 fails to transform with `Syntax error "d"` pointing at the middle of a comment.
 It cost a build cycle on the first component of this phase.
+
+## 19. No search box, because the approved design has none
+
+**Chosen:** drop `search-box` with the rest of the collection-axis components.
+
+**Alternative:** carry it over and make it narrow the current index.
+
+**Why:** the plan listed search as task 7, carried over from the old
+application. The preview the owner walked through and approved has no search
+box anywhere. The indexes sort and filter, and the rail lists every item at
+once, which is what the structure was designed to make possible. Adding a
+control she did not ask for and did not see would be scope, not fidelity.
+
+The engine's `searchAchievements` stays, untouched and tested, for whenever a
+view wants it.
+
+## 20. Six components deleted rather than adapted
+
+**Chosen:** delete `hades-dashboard`, `achievement-list`, `collection-filter`,
+`achievement-detail`, `search-box`, `next-steps-panel` and
+`lib/achievement-filter`.
+
+**Alternative:** keep them behind the new shell.
+
+**Why:** each is built on the collection axis — its props, its grouping and its
+state are "which collection, which section". The new structure asks "which
+subject, which capability". Keeping them would leave two answers to the same
+question in one application, and the tests would go on asserting the old one.
+
+`requirement-tree`, `transfer-controls`, `state-controller`, the store and
+`@hades/ui` all carried over unchanged.
