@@ -43,13 +43,18 @@ describe('the subject axis against the real dataset', () => {
     expect(shared).toEqual([])
   })
 
-  it('counts each tagged fact once per subject it names', () => {
+  it('reaches every tagged fact from exactly one subject, for now', () => {
+    // While no fact carries two subjects, summing per subject equals the tagged
+    // count. Once phase 2 tags the 28 duo boons, `summed` becomes 28 higher and
+    // this assertion must change with it. The per-subject counting behaviour
+    // itself is covered by the fixture in packages/engine, which does have a
+    // two-subject fact.
     const summed = dataset.subjects.reduce(
       (running, subject) => running + subjectFacts(dataset, subject.id).length,
       0,
     )
-    const tagged = dataset.facts.filter((fact) => (fact.subjects?.length ?? 0) > 0).length
-    expect(tagged).toBe(501)
-    expect(summed).toBe(501)
+    const tagged = dataset.facts.filter((fact) => (fact.subjects?.length ?? 0) > 0)
+    expect(tagged).toHaveLength(507)
+    expect(summed).toBe(tagged.length)
   })
 })

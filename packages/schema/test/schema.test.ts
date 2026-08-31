@@ -132,13 +132,19 @@ describe('the optional fields the subject axis adds', () => {
     expect(validateDataset(data).facts[0]?.subjects).toEqual(['athena', 'demeter'])
   })
 
-  it('tells an empty subject list apart from a missing one', () => {
-    const data = structuredClone(validDataset)
+  it('tells an empty subject list apart from an absent key', () => {
+    // The real dataset omits the key entirely; it never sets it to undefined.
+    // Deleting it is the only way to test the shape the data actually has, and
+    // a stray `.default([])` on the fact schema would turn the absent key into
+    // an empty array and fail here.
+    const data: { facts: Record<string, unknown>[] } & Record<string, unknown> =
+      structuredClone(validDataset)
     data.facts[0]!.subjects = []
-    data.facts[1]!.subjects = undefined
+    delete data.facts[1]!.subjects
     const parsed = validateDataset(data)
-    expect(parsed.facts[0]?.subjects).toEqual([])
-    expect(parsed.facts[1]?.subjects).toBeUndefined()
+    expect(parsed.facts).toHaveLength(2)
+    expect(parsed.facts[0]!.subjects).toEqual([])
+    expect('subjects' in parsed.facts[1]!).toBe(false)
   })
 
   it('rejects a subject id with a bad shape inside a fact', () => {

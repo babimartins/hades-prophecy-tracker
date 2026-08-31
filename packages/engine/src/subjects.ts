@@ -40,6 +40,24 @@ export const CAPABILITY_BY_NAMESPACE: Readonly<Record<string, string>> = {
   spend: 'shop',
 }
 
+/**
+ * Namespaces that name a game system or an aggregate counter rather than
+ * something a subject owns. Their facts carry an empty `subjects` list, so
+ * they never reach a subject page, and they have no capability by design.
+ *
+ * Listed rather than left implicit: `subjectProgress` counts a fact in `total`
+ * and skips its capability bucket when the namespace is unmapped, which would
+ * make the breakdown quietly stop summing to the whole.
+ */
+export const NAMESPACES_WITHOUT_CAPABILITY: readonly string[] = [
+  'pact',
+  'talent',
+  'perk',
+  'wellofcharon',
+  'contractor',
+  'fish',
+]
+
 export function capabilityOf(factId: string): string | undefined {
   return CAPABILITY_BY_NAMESPACE[factId.split(':')[0] ?? '']
 }
@@ -123,22 +141,52 @@ export function subjectProgress(
   return { done, partial, total, ratio: ratioOf(done, total), byCapability }
 }
 
-/** The subjects an achievement's facts name, without repeats, in first-seen order. */
+/**
+ * The subjects an achievement's facts name, without repeats, in first-seen order.
+ *
+ * Both indexes are memoised per dataset. A list view calls this once per row,
+ * and rebuilding a 692-entry map on every call turns a phone render into a
+ * scan of hundreds of thousands of comparisons.
+ */
 export function subjectsOfAchievement(dataset: Dataset, achievement: Achievement): Subject[] {
-  const byId = new Map(dataset.subjects.map((subject) => [subject.id, subject]))
+  const { factById, subjectById } = indexesFor(dataset)
   const found: Subject[] = []
   for (const factId of collectFactIds(achievement.requirement)) {
-    const fact = dataset.facts.find((candidate) => candidate.id === factId)
-    for (const id of fact?.subjects ?? []) {
-      const subject = byId.get(id)
+    for (const id of factById.get(factId)?.subjects ?? []) {
+      const subject = subjectById.get(id)
       if (subject && !found.includes(subject)) found.push(subject)
     }
   }
   return found
 }
 
+interface DatasetIndexes {
+  factById: Map<string, Fact>
+  subjectById: Map<SubjectId, Subject>
+}
+
+const indexCache = new WeakMap<Dataset, DatasetIndexes>()
+
+function indexesFor(dataset: Dataset): DatasetIndexes {
+  const cached = indexCache.get(dataset)
+  if (cached) return cached
+  const built: DatasetIndexes = {
+    factById: new Map(dataset.facts.map((fact) => [fact.id, fact])),
+    subjectById: new Map(dataset.subjects.map((subject) => [subject.id, subject])),
+  }
+  indexCache.set(dataset, built)
+  return built
+}
+
 type FactState = 'todo' | 'partial' | 'done'
 
+/**
+ * A number fact with no `max` has no completion threshold, so any positive
+ * value reads as done, matching `isSatisfied` and the rest of the engine.
+ * `partial` is unreachable for such a fact, on purpose. The data package
+ * rejects a number fact with no `max`, so this only reaches a hand-written
+ * fixture, and the test suite pins the behaviour so it cannot drift silently.
+ */
 function factState(fact: Fact, facts: FactMap): FactState {
   if (fact.kind === 'number' && fact.max !== undefined) {
     const value = numericValue(fact.id, facts)

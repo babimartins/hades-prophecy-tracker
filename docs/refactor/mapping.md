@@ -55,28 +55,34 @@ which is false.
 three differ only by which Codex section files them, so the schema keeps one
 type and lets the capabilities distinguish them.
 
-## 4. Fact to subject: 501 of 692 are provable from the id
+## 4. Fact to subject: 507 of 692 are provable from the id
 
 A fact carries **an array** of subject ids, not one. 28 duo boons belong to two
 gods each, and several conversations name three or more people.
 
 | Group | Facts | Rule |
 | --- | ---: | --- |
-| Provable from the id | 501 | the second segment names a subject |
-| A system, so deliberately empty | 78 | `pact`, `talent`, `perk`, `wellofcharon`, `contractor`, and `codex:sections-revealed` |
-| Needs a source | 113 | the id names the thing, not its owner |
+| Provable from the id | 507 | the second segment names a subject |
+| A system or an aggregate, so deliberately empty | 80 | `pact`, `talent`, `perk`, `wellofcharon`, `contractor`, `fish`, and `codex:sections-revealed` |
+| Needs a source | 105 | the id names the thing, not its owner |
 
-Three mechanical rules beyond a plain split, each of them provable:
+Four mechanical rules beyond a plain split, each of them provable:
 
 - **Weapon alias.** The Codex writes the display name, the facts write the true
   name: `stygian-blade` is `stygius`, `twin-fists` is `malphon`. Six weapons,
   and `weapon:twin-fists-of-malphon` uses a third spelling.
 - **Elite prefix.** `miniboss:dire-inferno-bomber` is the Elite form of
   `inferno-bomber`. Strip `dire-`.
-- **System facts.** Five namespaces name a game system, not a subject. Their
-  subject list is empty on purpose, and the integrity test must allow that.
+- **Namespace prefix.** A companion's own Codex entry is "Companion Battie", so
+  its roster id is `companion-battie` while its fact id is `companion:battie`.
+  Six facts resolve as `<namespace>-<segment>`, and nothing else in the dataset
+  does. Missing this made the `companion` capability unreachable and reported
+  Battie as complete for a player who had only unlocked her Codex entry.
+- **System and aggregate facts.** Six namespaces name a game system or a
+  lifetime counter, not a subject. Their subject list is empty on purpose, and
+  the integrity test asserts it is empty rather than merely present.
 
-### The 113 that phase 2 must source
+### The 105 that phase 2 must source
 
 | Namespace | Facts | What the id hides |
 | --- | ---: | --- |
@@ -84,11 +90,13 @@ Three mechanical rules beyond a plain split, each of them provable:
 | `keepsake` | 25 | the giver, not the item |
 | `talk` | 18 | who takes part |
 | `combat` | 13 | which foe or which weapon |
-| `companion` | 6 | the giver |
 | `workorder` | 5 | the beneficiary |
 | `lounge` | 4 | Dusa, named nowhere in the id |
-| `fish` | 2 | an aggregate counter |
 | `spend`, `lyre` | 2 | Charon, Orpheus |
+
+The six `companion:*` facts also gain their **giver** in phase 2, on top of the
+companion they already name. They are the second place, after the duo boons,
+where one fact carries two subjects.
 
 The research file holds a candidate for every one of these. It is analysis, not
 sourced per entry, so phase 2 re-reads the page instead of copying it.
@@ -140,7 +148,7 @@ datasetSchema     += { subjects: Subject[] }
 Every field is optional. The 545 achievements and 692 facts keep validating
 while phase 2 fills the gaps, so every commit in between stays green.
 
-`subjects` becomes required when the 113 are sourced. Not before.
+`subjects` becomes required when the 105 are sourced. Not before.
 
 ## 7. New engine functions
 

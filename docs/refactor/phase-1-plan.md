@@ -63,7 +63,7 @@ disagree with what is already committed.
 the source of truth. Do not commit a generator that could later overwrite a
 hand-verified entry.
 
-## Task 4: tag the 501 provable facts
+## Task 4: tag the 507 provable facts
 
 **Files:** modify every `packages/data/src/*/facts.json`; same test file.
 
@@ -72,12 +72,12 @@ gets **no** `subjects` key, so the gap stays visible.
 
 - [ ] Resolve the second segment against the roster.
 - [ ] Apply the weapon alias, the `dire-` strip, and the system-namespace rule.
-- [ ] Leave the 113 untagged. Do not guess.
+- [ ] Leave the 105 untagged. Do not guess.
 - [ ] Add integrity tests: every id inside a `subjects` array exists in the
-      roster; the 78 system facts carry an empty array, not a missing key, so
-      "no subject on purpose" and "not done yet" stay distinguishable; exactly
-      113 facts carry no `subjects` key; every one of the 119 subjects is named
-      by at least one fact.
+      roster; the 80 system facts carry an **empty** array, not merely a
+      present one, so "no subject on purpose" and "not done yet" stay
+      distinguishable; exactly 105 facts carry no `subjects` key; every one of
+      the 119 subjects is named by at least one fact.
 - [ ] Run the data tests. Report the counts, then commit.
 
 ## Task 5: capabilities and subject queries
@@ -107,7 +107,7 @@ gets **no** `subjects` key, so the gap stays visible.
 ## Done when
 
 - [ ] The four checks pass on a forced run.
-- [ ] 119 subjects, 501 tagged facts, 78 empty, 113 untagged, and the integrity
+- [ ] 119 subjects, 507 tagged facts, 80 empty, 105 untagged, and the integrity
       test asserts each number.
 - [ ] `apps/web` differs from `main` by one line only.
 - [ ] Every count in this plan matches what the test asserts. A number that

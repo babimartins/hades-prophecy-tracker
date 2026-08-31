@@ -2,6 +2,7 @@ import type { Dataset } from '@hades/schema'
 import { describe, expect, it } from 'vitest'
 import {
   CAPABILITY_BY_NAMESPACE,
+  NAMESPACES_WITHOUT_CAPABILITY,
   subjectCapabilities,
   subjectFacts,
   subjectProgress,
@@ -33,11 +34,13 @@ const dataset: Dataset = {
       collection: 'codex',
       requirement: {
         kind: 'all',
-        of: [{ kind: 'atLeast', fact: 'nectar:zeus', value: 7 }, 'boon:duo:lightning-phalanx'],
+        of: [{ kind: 'atLeast', fact: 'nectar:zeus', value: 5 }, 'boon:duo:lightning-phalanx'],
       },
     },
   ],
 }
+
+const FIXTURE_NAMESPACES = dataset.facts.map((fact) => fact.id.split(':')[0]!)
 
 describe('subjectsOfType', () => {
   it('returns only the subjects of that type', () => {
@@ -85,10 +88,32 @@ describe('subjectCapabilities', () => {
     expect(subjectCapabilities(dataset, 'zeus')).toEqual(['affinity', 'boons'])
   })
 
-  it('folds the three boon namespaces into one capability', () => {
-    expect(CAPABILITY_BY_NAMESPACE.boon).toBe('boons')
-    expect(CAPABILITY_BY_NAMESPACE.blessing).toBe('boons')
-    expect(CAPABILITY_BY_NAMESPACE.curse).toBe('boons')
+  it('reports boons once for a subject holding a boon, a blessing and a curse', () => {
+    const withChaos: Dataset = {
+      ...dataset,
+      subjects: [...dataset.subjects, { id: 'chaos', name: 'Chaos', type: 'character' }],
+      facts: [
+        ...dataset.facts,
+        { id: 'boon:chaos:one', label: 'One', kind: 'boolean', collection: 'codex', subjects: ['chaos'] },
+        { id: 'blessing:chaos:two', label: 'Two', kind: 'boolean', collection: 'codex', subjects: ['chaos'] },
+        { id: 'curse:chaos:three', label: 'Three', kind: 'boolean', collection: 'codex', subjects: ['chaos'] },
+      ],
+    }
+    expect(subjectCapabilities(withChaos, 'chaos')).toEqual(['boons'])
+    expect(subjectProgress(withChaos, 'chaos', {}).byCapability.boons?.total).toBe(3)
+  })
+
+  it('names every namespace, so no capability bucket goes missing', () => {
+    // subjectProgress counts a fact in `total` and skips its bucket when the
+    // namespace is unmapped, which would make the breakdown stop summing to
+    // the whole without any error. Every namespace is either a capability or
+    // declared to have none.
+    const namespaces = new Set(FIXTURE_NAMESPACES)
+    for (const namespace of namespaces) {
+      const known =
+        namespace in CAPABILITY_BY_NAMESPACE || NAMESPACES_WITHOUT_CAPABILITY.includes(namespace)
+      expect([namespace, known]).toEqual([namespace, true])
+    }
   })
 
   it('reports none for a subject with no facts', () => {
@@ -136,6 +161,40 @@ describe('subjectProgress', () => {
   it('reports zero for a subject with no facts, without dividing by zero', () => {
     const result = subjectProgress(dataset, 'tartarus', {})
     expect(result).toMatchObject({ done: 0, total: 0, ratio: 0 })
+  })
+})
+
+describe('the capability breakdown', () => {
+  it('sums to the subject total, for every subject', () => {
+    for (const subject of dataset.subjects) {
+      const progress = subjectProgress(dataset, subject.id, { 'nectar:zeus': 4 })
+      const summed = Object.values(progress.byCapability).reduce((n, b) => n + b.total, 0)
+      expect([subject.id, summed]).toEqual([subject.id, progress.total])
+    }
+  })
+
+  it('counts a fact tagged with two subjects once under each of them', () => {
+    const zeus = subjectProgress(dataset, 'zeus', { 'boon:duo:lightning-phalanx': true })
+    const athena = subjectProgress(dataset, 'athena', { 'boon:duo:lightning-phalanx': true })
+    expect(zeus.byCapability.boons).toEqual({ done: 1, partial: 0, total: 2, ratio: 0.5 })
+    expect(athena.byCapability.boons).toEqual({ done: 1, partial: 0, total: 1, ratio: 1 })
+  })
+})
+
+describe('a number fact with no max', () => {
+  it('reads any positive value as done, never as partial', () => {
+    // Pinned on purpose. Such a fact has no completion threshold, so it
+    // inherits the boolean rule. packages/data rejects one, so this only
+    // reaches a hand-written fixture.
+    const noMax: Dataset = {
+      ...dataset,
+      facts: [
+        ...dataset.facts,
+        { id: 'combat:foes-slain', label: 'Foes slain', kind: 'number', collection: 'codex', subjects: ['zeus'] },
+      ],
+    }
+    const progress = subjectProgress(noMax, 'zeus', { 'combat:foes-slain': 1 })
+    expect(progress.byCapability.combat).toEqual({ done: 1, partial: 0, total: 1, ratio: 1 })
   })
 })
 

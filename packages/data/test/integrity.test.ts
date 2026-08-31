@@ -1,4 +1,4 @@
-import { collectFactIds } from '@hades/engine'
+import { collectFactIds, NAMESPACES_WITHOUT_CAPABILITY } from '@hades/engine'
 import type { RequirementChild } from '@hades/schema'
 import { describe, expect, it } from 'vitest'
 import { dataset } from '../src/index.js'
@@ -207,21 +207,29 @@ describe('facts tagged with a subject', () => {
   })
 
   it('splits into tagged, deliberately empty, and not yet established', () => {
-    expect(tagged).toHaveLength(501)
-    expect(systemFacts).toHaveLength(78)
-    expect(untagged).toHaveLength(113)
+    expect(tagged).toHaveLength(507)
+    expect(systemFacts).toHaveLength(80)
+    expect(untagged).toHaveLength(105)
     expect(tagged.length + systemFacts.length + untagged.length).toBe(dataset.facts.length)
   })
 
-  it('gives a game system an empty list, never a missing key', () => {
+  it('gives a system fact an empty list, never a missing key and never a subject', () => {
     // The two states mean different things. An empty list says "this names no
     // subject on purpose". A missing key says "nobody has established it yet".
-    const systemNamespaces = ['pact', 'talent', 'perk', 'wellofcharon', 'contractor']
-    const wrong = dataset.facts.filter(
-      (fact) =>
-        systemNamespaces.includes(fact.id.split(':')[0]!) && fact.subjects === undefined,
-    )
+    // Asserting only that the key exists would let a `pact:*` fact tagged
+    // ["zeus"] through, so this asserts the list is actually empty.
+    const wrong = dataset.facts
+      .filter((fact) => NAMESPACES_WITHOUT_CAPABILITY.includes(fact.id.split(':')[0]!))
+      .filter((fact) => fact.subjects?.length !== 0)
+      .map((fact) => `${fact.id} -> ${JSON.stringify(fact.subjects)}`)
     expect(wrong).toEqual([])
+  })
+
+  it('covers the aggregate facts that name no namespace of their own', () => {
+    // `codex:sections-revealed` counts Codex sections. It sits in a namespace
+    // that is otherwise a subject, so the namespace rule cannot reach it.
+    const aggregate = dataset.facts.find((fact) => fact.id === 'codex:sections-revealed')
+    expect(aggregate?.subjects).toEqual([])
   })
 
   it('leaves every subject named by at least one fact', () => {
@@ -241,10 +249,8 @@ describe('facts tagged with a subject', () => {
       keepsake: 25,
       talk: 18,
       combat: 13,
-      companion: 6,
       workorder: 5,
       lounge: 4,
-      fish: 2,
       spend: 1,
       lyre: 1,
     })

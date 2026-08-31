@@ -100,3 +100,65 @@ dataset. That is a permanent cost paid to keep one mechanical line out of one
 diff. The phase-1 constraint means "do not migrate the interface", not "change
 zero characters", so the verification step now asserts that `apps/web` changes
 by exactly one line and no component behaviour changes.
+
+## 9. The `<namespace>-<segment>` rule, added after review
+
+**Chosen:** resolve `companion:battie` to the subject `companion-battie`.
+
+**Alternative:** leave the six companion facts for phase 2, as the first pass
+did.
+
+**Why:** a review found this and it was a real defect, not a preference. The
+companion's own Codex entry is "Companion Battie", so the roster id carries the
+namespace. Leaving the fact untagged made two things wrong at once: the
+`companion` capability was unreachable for every subject, so it was dead code
+in the engine; and `companion-battie` owned one fact, its Codex entry, so a
+player who had merely unlocked that entry read as **100% complete** on a
+subject page. It now reads 1 of 2.
+
+Six facts resolve this way and nothing else in the dataset does. Checked by
+scanning all 113 previously untagged facts against every roster id in both the
+plain and the prefixed form.
+
+## 10. The two `fish:*` facts are aggregates, not subject facts
+
+**Chosen:** `fish:caught` (a lifetime counter to 25) and `fish:very-rare-caught`
+take an empty subject list, alongside the five system namespaces.
+
+**Alternative:** leave them for phase 2 to assign to a subject.
+
+**Why:** they count across every species rather than naming one, which is the
+same shape as `codex:sections-revealed`. There is no subject to find, so
+leaving them in the "needs a source" pile would have sent phase 2 looking for
+an answer that does not exist.
+
+`NAMESPACES_WITHOUT_CAPABILITY` now lists them explicitly. `subjectProgress`
+counts a fact in `total` and skips its capability bucket when the namespace is
+unmapped, so an unlisted namespace would make the breakdown quietly stop
+summing to the whole. A test now asserts the sum for every subject.
+
+## 11. A number fact with no `max` reads as done, and that is now pinned
+
+**Chosen:** keep the behaviour, document it, and add a test that fixes it in
+place.
+
+**Alternative:** throw, or report `partial` for any positive value.
+
+**Why:** such a fact has no completion threshold, so any positive value has to
+mean something, and `isSatisfied` already answers "done" everywhere else in the
+engine. Reporting `partial` instead would make the fact impossible to complete,
+which is worse. Throwing would fail on a fixture rather than on the data. The
+data package already rejects a number fact with no `max`, so only a
+hand-written fixture reaches this, and the test now stops it drifting silently.
+
+## 12. `subjectsOfAchievement` memoises its indexes per dataset
+
+**Chosen:** a `WeakMap` from dataset to `{ factById, subjectById }`.
+
+**Alternative:** leave the linear `find` inside the loop. Measured at 6.4ms for
+all 545 achievements, which is not slow today.
+
+**Why:** the measurement is on a laptop, and phase 3 calls this once per row in
+a list of 545 on a phone. The repository already uses the map idiom in its own
+integrity test. A `WeakMap` keyed on the dataset keeps the function pure from
+the caller's point of view and lets the entry be collected with the dataset.

@@ -387,7 +387,8 @@
     "id": "companion:battie",
     "label": "Give Ambrosia to Megaera for the first time, after her favor is complete, to obtain Companion Battie",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["companion-battie"]
   },
   {
     "id": "codex:companion-battie",
@@ -400,7 +401,8 @@
     "id": "companion:mort",
     "label": "Give Ambrosia to Thanatos for the first time, after his favor is complete, to obtain Companion Mort",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["companion-mort"]
   },
   {
     "id": "codex:companion-mort",
@@ -413,7 +415,8 @@
     "id": "companion:fidi",
     "label": "Give Ambrosia to Dusa for the first time, after her Lounge renovation favor is complete, to obtain Companion Fidi",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["companion-fidi"]
   },
   {
     "id": "codex:companion-fidi",
@@ -426,7 +429,8 @@
     "id": "companion:shady",
     "label": "Give Ambrosia to Sisyphus for the first time, after his sentence is amended, to obtain Companion Shady",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["companion-shady"]
   },
   {
     "id": "codex:companion-shady",
@@ -439,7 +443,8 @@
     "id": "companion:rib",
     "label": "Give Ambrosia to Skelly for the first time, after slaying him with the Level 5 Stygius Aspect, to obtain Companion Rib",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["companion-rib"]
   },
   {
     "id": "codex:companion-rib",
@@ -452,7 +457,8 @@
     "id": "companion:antos",
     "label": "Give Ambrosia to Achilles for the first time, after he reunites with Patroclus, to obtain Companion Antos",
     "kind": "boolean",
-    "collection": "codex"
+    "collection": "codex",
+    "subjects": ["companion-antos"]
   },
   {
     "id": "codex:companion-antos",

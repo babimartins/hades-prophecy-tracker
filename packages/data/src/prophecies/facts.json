@@ -2194,13 +2194,15 @@
     "label": "Fish caught",
     "kind": "number",
     "max": 25,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "fish:very-rare-caught",
     "label": "Catch a Very Rare fish",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talk:poseidon-after-fishing",
