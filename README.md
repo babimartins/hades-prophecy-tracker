@@ -98,9 +98,10 @@ one action can advance entries in more than one collection at once.
 
 `packages/data/src/collections.json` also defines a separate `achievement`
 collection, for platform achievements. That collection holds no entries yet,
-which is why the dataset covers 10 of its 11 registered collections. Two
-sources disagree on the achievement count: the Hades Wiki's Achievements
-page lists 50, and Steam shows 49 publicly.
+which is why the dataset covers 10 of its 11 registered collections. There
+are 50 platform achievements: 49 ordinary ones, plus a 50th earned by
+completing the other 49. Steam lists only 49 publicly because the 50th is
+hidden.
 
 ## Development
 

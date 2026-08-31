@@ -195,8 +195,9 @@ A bad requirement tells a player to do the wrong thing for hours.
 - If a requirement is ambiguous, leave the entry out and say so. A missing
   entry is cheap.
 - Prophecies and platform achievements are separate collections with separate
-  counts. The in-game Fated List holds 55 entries. The wiki's Achievements page
-  lists 50, while Steam shows 49 publicly.
+  counts. The in-game Fated List holds 55 entries. There are 50 platform
+  achievements: 49 ordinary ones, plus a 50th for earning all 49. Steam shows
+  only 49 publicly because the 50th is hidden. The two sources never disagreed.
 
 Fact ids are namespace first, then target: `invite:zeus`,
 `aspect:varatha:zagreus`, `pact:extreme-measures`. Lower case, hyphens inside a
