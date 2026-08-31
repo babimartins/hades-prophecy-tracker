@@ -267,6 +267,9 @@ describe('hades-dashboard scrolls the active view into place', () => {
         }),
       )
       await element.updateComplete
+      // The scroll waits a frame for the newly opened view's own async
+      // render to settle before it runs — see #scrollActiveViewIntoPlace.
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
 
       const detail = element.shadowRoot!.querySelector('achievement-detail')!
       expect(calls).toContain(detail)
@@ -274,12 +277,72 @@ describe('hades-dashboard scrolls the active view into place', () => {
       calls.length = 0
       detail.dispatchEvent(new CustomEvent('detail-close', { bubbles: true, composed: true }))
       await element.updateComplete
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
 
       const filter = element.shadowRoot!.querySelector('collection-filter')!
       expect(calls).toContain(filter)
     } finally {
       Element.prototype.scrollIntoView = original
     }
+  })
+
+  /**
+   * `rect.top < innerHeight` is true even for a 24px sliver poking up from
+   * the very bottom edge of the viewport — technically "in the viewport",
+   * and not what a player means by "the thing I opened is what I'm looking
+   * at". This is the assertion that let a near-invisible scroll through:
+   * the opened entry's own heading must land at (or a hair below) the very
+   * top of the viewport, with the dashboard scrolled off above it.
+   */
+  async function opensToTheTopOfTheViewport(width: number, height: number): Promise<void> {
+    await page.viewport(width, height)
+    try {
+      const element = mount({ load: async () => ({}), save: async () => undefined })
+      await element.updateComplete
+      await element.updateComplete
+
+      const list = element.shadowRoot!.querySelector('achievement-list')!
+      const firstId = list.achievements[0]!.id
+      list.dispatchEvent(
+        new CustomEvent('achievement-open', {
+          detail: { id: firstId },
+          bubbles: true,
+          composed: true,
+        }),
+      )
+      await element.updateComplete
+      // Let the internal rAF-scheduled scroll (hades-dashboard.ts) run: it
+      // deliberately waits a frame for achievement-detail's own async
+      // render, and any components it mounts, to settle their real height
+      // before scrolling against it.
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+
+      const detail = element.shadowRoot!.querySelector('achievement-detail')!
+      const detailTop = detail.getBoundingClientRect().top
+      expect(detailTop).toBeGreaterThanOrEqual(-2)
+      expect(detailTop).toBeLessThan(16)
+
+      detail.dispatchEvent(new CustomEvent('detail-close', { bubbles: true, composed: true }))
+      await element.updateComplete
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+
+      const filter = element.shadowRoot!.querySelector('collection-filter')!
+      const filterTop = filter.getBoundingClientRect().top
+      expect(filterTop).toBeGreaterThanOrEqual(-2)
+      expect(filterTop).toBeLessThan(16)
+    } finally {
+      await page.viewport(414, 896)
+    }
+  }
+
+  it('puts the opened entry — and the list on return — at the very top of the viewport at 1590px wide', async () => {
+    await opensToTheTopOfTheViewport(1590, 900)
+  })
+
+  it('does the same at a narrow width, where the row is taller and the sliver-at-the-bottom bug was worse', async () => {
+    await opensToTheTopOfTheViewport(390, 844)
   })
 })
 

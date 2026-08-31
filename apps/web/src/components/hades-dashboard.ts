@@ -40,6 +40,24 @@ export class HadesDashboard extends LitElement {
       font-size: 0.8rem;
       margin: 6px 0 0;
     }
+    /*
+     * Whichever view is active (the detail, or the filter/search/list
+     * group) is the last thing in the document, with nothing after it. A
+     * short achievement-detail -- one prophecy, a handful of steps -- can
+     * be shorter than the viewport, and a browser cannot scroll an
+     * element's top flush with the viewport top when there is not enough
+     * document left below it: it scrolls as far as the document's natural
+     * end allows and stops there, leaving the opened entry sitting low in
+     * the viewport instead of at its top. A guaranteed minimum height
+     * gives the scrollIntoView call in scrollActiveViewIntoPlace enough
+     * room below the target to always reach the top, whatever the entry's
+     * own length. 100dvh accounts for a mobile browser's address bar;
+     * 100vh is the fallback where dvh is unsupported.
+     */
+    .active-view {
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
     .grid {
       display: grid;
       gap: 16px;
@@ -111,9 +129,27 @@ export class HadesDashboard extends LitElement {
    * header cards. Without a scroll, the viewport never moves, so the click
    * looks like it did nothing. Puts whichever view just appeared in view,
    * without a router and without touching browser history.
+   *
+   * `scrollIntoView` fires the instant this element's own render lands, but
+   * `achievement-detail` (and the components it mounts — hd-progress,
+   * requirement-tree) render themselves a moment later, each on its own
+   * microtask. Scrolling before that leaves the browser measuring a
+   * near-empty element: the scroll lands short of the true top, and once
+   * the content grows in underneath it, scroll anchoring "corrects" the
+   * position again — undoing most of the scroll and leaving only a sliver
+   * of the opened entry on screen. Waiting one animation frame runs after
+   * every microtask-scheduled child update has settled, so the target's
+   * real height and position are in place before `start` is measured
+   * against them. `body { overflow-anchor: none }` (theme.css) is a second
+   * line of defence against the same class of bug.
    */
   protected override updated(changedProperties: PropertyValues<this>): void {
     if (!changedProperties.has('openId')) return
+    void this.#scrollActiveViewIntoPlace()
+  }
+
+  async #scrollActiveViewIntoPlace(): Promise<void> {
+    await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
     const target = this.openId
       ? this.shadowRoot?.querySelector('achievement-detail')
       : this.shadowRoot?.querySelector('collection-filter')
@@ -215,29 +251,33 @@ export class HadesDashboard extends LitElement {
       </div>
       ${this.openId
         ? html`
-            <achievement-detail
-              .achievement=${dataset.achievements.find((item) => item.id === this.openId)}
-              .facts=${facts}
-              .factsById=${this.#factsById}
-              @fact-toggle=${this.onFactToggle}
-              @detail-close=${() => (this.openId = undefined)}
-            ></achievement-detail>
+            <div class="active-view">
+              <achievement-detail
+                .achievement=${dataset.achievements.find((item) => item.id === this.openId)}
+                .facts=${facts}
+                .factsById=${this.#factsById}
+                @fact-toggle=${this.onFactToggle}
+                @detail-close=${() => (this.openId = undefined)}
+              ></achievement-detail>
+            </div>
           `
         : html`
-            <collection-filter
-              .collections=${collectionsWithEntries(dataset)}
-              .selected=${this.selectedCollection}
-              @collection-select=${this.onCollectionSelect}
-            ></collection-filter>
-            <search-box .value=${this.query} @search-change=${this.onSearch}></search-box>
-            <achievement-list
-              .achievements=${visibleAchievements(dataset, this.selectedCollection, this.query)}
-              .collections=${collectionsWithEntries(dataset)}
-              .facts=${facts}
-              .collapsedSections=${this.collapsedSections}
-              @achievement-open=${this.onOpen}
-              @section-toggle=${this.onSectionToggle}
-            ></achievement-list>
+            <div class="active-view">
+              <collection-filter
+                .collections=${collectionsWithEntries(dataset)}
+                .selected=${this.selectedCollection}
+                @collection-select=${this.onCollectionSelect}
+              ></collection-filter>
+              <search-box .value=${this.query} @search-change=${this.onSearch}></search-box>
+              <achievement-list
+                .achievements=${visibleAchievements(dataset, this.selectedCollection, this.query)}
+                .collections=${collectionsWithEntries(dataset)}
+                .facts=${facts}
+                .collapsedSections=${this.collapsedSections}
+                @achievement-open=${this.onOpen}
+                @section-toggle=${this.onSectionToggle}
+              ></achievement-list>
+            </div>
           `}
     `
   }
