@@ -10,6 +10,12 @@ import './rail-view.js'
 
 export type RailSectionId = 'fated' | 'house' | 'collections'
 
+const RAIL_LABEL: Readonly<Record<RailSectionId, string>> = {
+  fated: 'Prophecies',
+  house: 'House systems',
+  collections: 'Collections',
+}
+
 interface Group {
   id: string
   label: string
@@ -271,7 +277,7 @@ export class RailSection extends LitElement {
       <rail-view
         .items=${this.#items()}
         .selected=${current?.id ?? ''}
-        .label=${this.section}
+        .label=${RAIL_LABEL[this.section]}
         @rail-select=${(event: CustomEvent<{ id: string }>) => {
           this.selected = event.detail.id
         }}

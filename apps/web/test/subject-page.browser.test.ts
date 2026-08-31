@@ -80,9 +80,10 @@ describe('a subject page', () => {
     for (const id of ['zeus', 'dusa', 'theseus', 'stygius', 'mati']) {
       await mount(id)
       const capabilities = new Set(subjectCapabilities(dataset, id))
+      // `.length` is always a number, so asserting that proved nothing.
       const rendered = blocks().length
-      expect([id, rendered]).toEqual([id, expect.any(Number)])
       expect([id, rendered > 0]).toEqual([id, capabilities.size > 0])
+      expect([id, rendered]).toEqual([id, new Set(blocks()).size])
       // every rendered block holds at least one of the subject's own facts
       const rows = [...root().querySelectorAll('li[data-fact]')].map(
         (li) => (li as HTMLElement).dataset.fact,
@@ -181,6 +182,20 @@ describe('a subject page', () => {
     input!.value = '99'
     input!.dispatchEvent(new Event('change', { bubbles: true }))
     expect(events).toEqual([{ id: 'nectar:zeus', value: 7 }])
+
+    // and the field must not go on showing what was rejected. A property
+    // binding dirty-checks against the last committed value, so when the clamp
+    // lands on the value already stored the DOM keeps the invalid text.
+    await mount('zeus', { 'nectar:zeus': 7 })
+    const shown = rowShadow('nectar:zeus').querySelector<HTMLInputElement>('input[type="number"]')
+    shown!.value = '99'
+    shown!.dispatchEvent(new Event('change', { bubbles: true }))
+    await (root().querySelector('li[data-fact="nectar:zeus"] fact-row') as HTMLElement & {
+      updateComplete: Promise<unknown>
+    }).updateComplete
+    expect(
+      rowShadow('nectar:zeus').querySelector<HTMLInputElement>('input[type="number"]')!.value,
+    ).toBe('7')
   })
 
   it('agrees with the Characters index about a partly filled rank', async () => {
@@ -198,5 +213,19 @@ describe('a subject page', () => {
     await mount('zeus')
     const scroller = root().querySelector('.blocks')
     expect(getComputedStyle(scroller!).overflowY).toBe('auto')
+  })
+})
+
+describe('the row a keyboard reaches', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('gives a rank whose only step is one a checkbox, not a spinner', async () => {
+    // Five Pact conditions have max 1. A spinner that can only be 0 or 1 is a
+    // checkbox with extra steps.
+    await mount('zeus')
+    const single = dataset.facts.find((fact) => fact.kind === 'number' && fact.max === 1)
+    expect(single).toBeDefined()
   })
 })

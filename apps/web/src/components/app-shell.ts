@@ -1,4 +1,5 @@
 import { dataset } from '@hades/data'
+import { subjectsOfType } from '@hades/engine'
 import type { FactMap } from '@hades/engine'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
@@ -13,6 +14,10 @@ import './transfer-controls.js'
 import './weapon-table.js'
 
 export type SectionId = 'characters' | 'weapons' | 'fated' | 'house' | 'collections'
+
+function subjectName(id: string): string {
+  return dataset.subjects.find((subject) => subject.id === id)?.name ?? id
+}
 
 interface Section {
   id: SectionId
@@ -137,6 +142,25 @@ export class AppShell extends LitElement {
       padding-top: 22px;
     }
 
+    .phead {
+      align-items: baseline;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 12px;
+    }
+
+    .phead h2 {
+      font-family: var(--hd-font-display, serif);
+      font-size: 1.35rem;
+      margin: 0;
+    }
+
+    .phead .count {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.78rem;
+    }
+
     [data-page] {
       display: flex;
       flex: 1;
@@ -220,6 +244,26 @@ export class AppShell extends LitElement {
     }
   }
 
+  /** The counts under a section heading, computed rather than written down. */
+  #summary(section: SectionId): string {
+    const facts = (namespace: string): number =>
+      dataset.facts.filter((fact) => fact.id.startsWith(`${namespace}:`)).length
+    switch (section) {
+      case 'characters': {
+        const characters = subjectsOfType(dataset, 'character')
+        return `${characters.length} characters · ${facts('nectar')} with affinity`
+      }
+      case 'weapons':
+        return `${subjectsOfType(dataset, 'weapon').length} weapons · ${facts('aspect')} aspects · ${facts('daedalus')} enchantments`
+      case 'fated':
+        return `${dataset.achievements.filter((a) => a.collection === 'prophecy').length} minor prophecies`
+      case 'house':
+        return 'what you buy and what you configure'
+      case 'collections':
+        return 'closed lists with no other owner'
+    }
+  }
+
   #body(section: SectionId): TemplateResult {
     if (this.subject) {
       return html`<subject-page .subjectId=${this.subject} .facts=${this.facts}></subject-page>`
@@ -277,7 +321,17 @@ export class AppShell extends LitElement {
         ${SECTIONS.map(
           (section) => html`
             <div data-page=${section.id} ?hidden=${this.section !== section.id}>
-              ${this.section === section.id ? this.#body(section.id) : nothing}
+              ${this.section === section.id
+                ? html`
+                    <div class="phead">
+                      <h2>${this.subject ? subjectName(this.subject) : section.label}</h2>
+                      ${this.subject
+                        ? nothing
+                        : html`<span class="count">${this.#summary(section.id)}</span>`}
+                    </div>
+                    ${this.#body(section.id)}
+                  `
+                : nothing}
             </div>
           `,
         )}

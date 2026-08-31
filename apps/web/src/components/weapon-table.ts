@@ -98,6 +98,21 @@ export class WeaponTable extends LitElement {
       z-index: 2;
     }
 
+    td.name .open {
+      background: none;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 600;
+      padding: 0;
+      text-align: left;
+    }
+
+    td.name .open:hover {
+      text-decoration: underline;
+    }
+
     td.name {
       font-weight: 600;
       white-space: nowrap;
@@ -288,17 +303,30 @@ export class WeaponTable extends LitElement {
                 <tr
                   data-weapon=${row.subject.id}
                   tabindex="0"
-                  role="link"
-                  aria-label=${`Open ${row.display}`}
                   @click=${() => this.#open(row)}
                   @keydown=${(event: KeyboardEvent) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault()
-                      this.#open(row)
-                    }
+                    // Only when the row itself has focus: Space is the native
+                    // activation key for the tick buttons inside it, and a row
+                    // handler would swallow it and navigate instead.
+                    if (event.target !== event.currentTarget) return
+                    if (event.key !== 'Enter') return
+                    event.preventDefault()
+                    this.#open(row)
                   }}
                 >
-                  <td class="name">${displayId(row.subject)}<small>${row.display}</small></td>
+                  <td class="name">
+                    <button
+                      class="open"
+                      aria-label=${`Open ${row.display}`}
+                      @click=${(event: Event) => {
+                        event.stopPropagation()
+                        this.#open(row)
+                      }}
+                    >
+                      ${displayId(row.subject)}
+                    </button>
+                    <small>${row.display}</small>
+                  </td>
                   <td>${this.#tick(row.unlocked, `${row.display} unlocked`)}</td>
                   <td>${this.#tick(row.escaped, `Escaped with ${row.display}`)}</td>
                   <td>

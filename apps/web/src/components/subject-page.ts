@@ -264,7 +264,9 @@ export class SubjectPage extends LitElement {
     })
 
     return html`
-      <button class="back" @click=${this.#back}>← Back</button>
+      <button class="back" @click=${this.#back}>
+        ← ${subject.type === 'weapon' ? 'Weapons' : 'Characters'}
+      </button>
       <div class="head">
         <div>
           <h2>${subject.name}</h2>

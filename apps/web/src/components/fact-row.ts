@@ -2,6 +2,7 @@ import { capabilityOf, type FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
+import { live } from 'lit/directives/live.js'
 
 export type FactState = 'todo' | 'partial' | 'done'
 
@@ -125,20 +126,28 @@ export class FactRow extends LitElement {
       `
     }
 
+    // A rank whose max is 1 has one step, so a checkbox reads better than a
+    // spinner that can only be 0 or 1.
+    const stepped = fact.kind === 'number' && fact.max !== undefined && fact.max > 1
     const control =
-      fact.kind === 'number' && fact.max !== undefined
+      stepped
         ? html`
             <input
               id=${`rank-${fact.id}`}
               type="number"
               min="0"
               max=${fact.max}
-              .value=${String(factValue(fact, this.facts))}
+              .value=${live(String(factValue(fact, this.facts)))}
               @change=${(event: Event) => {
                 const raw = Number((event.target as HTMLInputElement).value)
                 // Clamp by the fact's own max, so no view can push it past
                 // what the game allows or below zero.
                 this.#emit(Math.min(Math.max(raw, 0), fact.max ?? 0))
+                // When the clamp lands on the value already stored, `facts`
+                // does not change and nothing would re-render, leaving the
+                // rejected text on screen. `live()` re-commits against the DOM,
+                // but only if an update runs at all.
+                this.requestUpdate()
               }}
             />
             <span class="of">/ ${fact.max}</span>
@@ -154,9 +163,7 @@ export class FactRow extends LitElement {
 
     return html`
       <div class="row">
-        ${fact.kind === 'number' && fact.max !== undefined
-          ? html`<label for=${`rank-${fact.id}`}>${label}</label>`
-          : nothing}
+        ${stepped ? html`<label for=${`rank-${fact.id}`}>${label}</label>` : nothing}
         ${control}
         ${fact.description ? html`<span class="desc">${fact.description}</span>` : nothing}
       </div>

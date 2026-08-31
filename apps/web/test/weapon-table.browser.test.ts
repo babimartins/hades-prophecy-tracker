@@ -30,10 +30,12 @@ describe('the Weapons index', () => {
     expect(root().querySelectorAll('tbody tr')).toHaveLength(6)
   })
 
-  it('draws one pip per level the fact allows, not a fixed five', async () => {
-    // Comparing `aspect.max` with `aspect.fact.max` compares a value with its
-    // own source, and every aspect happens to have max 5, so a hard-coded 5
-    // would pass too. Count the pips the DOM actually draws instead.
+  it('draws as many pips as the label promises', async () => {
+    // This cannot prove "never a hard-coded five": every aspect really has
+    // max 5, so no weapon fixture can distinguish the two. What it does prove
+    // is that the pips and the accessible label agree. The max-is-read-from-
+    // the-fact property is carried where the maxima genuinely differ, by the
+    // Hearts assertion in character-table.browser.test.ts (Hades 5, Dusa 10).
     const rows = buildWeaponRows({})
     for (const row of rows) {
       expect([row.subject.id, row.aspects.length]).toEqual([row.subject.id, 4])
@@ -60,6 +62,38 @@ describe('the Weapons index', () => {
     })
     root().querySelector<HTMLElement>('tr[data-weapon="stygius"]')?.click()
     expect(opened).toBe('stygius')
+  })
+
+  it('records a tick from the keyboard, rather than navigating away', async () => {
+    // A row-level Space handler swallowed the native activation key of the
+    // tick buttons inside it, so a keyboard user navigated instead of
+    // recording — the original complaint, in the one place it can be recorded.
+    const set: { id: string; value: unknown }[] = []
+    let opened = false
+    table().addEventListener('set-fact', (event) => {
+      set.push((event as CustomEvent<{ id: string; value: unknown }>).detail)
+    })
+    table().addEventListener('open-subject', () => {
+      opened = true
+    })
+    const tick = root().querySelector<HTMLButtonElement>(
+      'tr[data-weapon="stygius"] td:nth-child(3) .check',
+    )
+    tick!.focus()
+    tick!.dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true, composed: true }))
+    tick!.click()
+    expect(opened).toBe(false)
+    expect(set).toHaveLength(1)
+  })
+
+  it('keeps the row a row for assistive technology, not a link', async () => {
+    // role="link" on a <tr> orphans its cells and takes its name from
+    // aria-label, so the six values are never announced and the comparison
+    // table stops being one.
+    const row = root().querySelector('tr[data-weapon="stygius"]')
+    expect(row?.getAttribute('role')).toBeNull()
+    expect(row?.querySelectorAll('td')).toHaveLength(6)
+    expect(row?.querySelector('td.name .open')).not.toBeNull()
   })
 
   it('ticks in place, and the tick does not open the weapon', async () => {

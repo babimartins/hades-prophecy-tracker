@@ -195,8 +195,11 @@ describe('what the Characters index must get right', () => {
     })
     const row = root().querySelector<HTMLElement>('tr[data-subject="zeus"]')
     expect(row?.tabIndex).toBe(0)
+    expect(row?.getAttribute('role')).toBeNull()
     row?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }))
     expect(opened).toBe('zeus')
+    // the name cell carries the affordance, so the row keeps its six values
+    expect(root().querySelectorAll('tr[data-subject="zeus"] td')).toHaveLength(6)
   })
 
   it('does not claim a reversal the Character column never performs', async () => {

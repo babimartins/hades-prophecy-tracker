@@ -128,6 +128,34 @@ export class RailView extends LitElement {
   selected = ''
   label = 'Items'
 
+  /**
+   * A tab list takes one Tab stop, and the arrows move within it. Without
+   * this, 55 prophecies are 55 Tab stops before the pane.
+   */
+  #move(event: KeyboardEvent, id: string): void {
+    const keys = ['ArrowDown', 'ArrowUp', 'Home', 'End']
+    if (!keys.includes(event.key)) return
+    event.preventDefault()
+    const index = this.items.findIndex((item) => item.id === id)
+    const last = this.items.length - 1
+    const next =
+      event.key === 'Home'
+        ? 0
+        : event.key === 'End'
+          ? last
+          : event.key === 'ArrowDown'
+            ? Math.min(index + 1, last)
+            : Math.max(index - 1, 0)
+    const target = this.items[next]
+    if (!target) return
+    this.#select(target.id)
+    void this.updateComplete.then(() => {
+      this.shadowRoot
+        ?.querySelector<HTMLButtonElement>(`button[data-item="${target.id}"]`)
+        ?.focus()
+    })
+  }
+
   #select(id: string): void {
     this.selected = id
     this.dispatchEvent(
@@ -145,6 +173,9 @@ export class RailView extends LitElement {
               role="tab"
               data-item=${item.id}
               aria-selected=${current === item.id}
+              aria-controls="rail-pane"
+              tabindex=${current === item.id ? 0 : -1}
+              @keydown=${(event: KeyboardEvent) => this.#move(event, item.id)}
               @click=${() => this.#select(item.id)}
             >
               <span class="name">${item.label}</span>
@@ -162,7 +193,7 @@ export class RailView extends LitElement {
           `,
         )}
       </div>
-      <div class="pane" role="tabpanel">
+      <div class="pane" id="rail-pane" role="tabpanel" tabindex="0">
         <slot></slot>
       </div>
       ${this.items.length === 0 ? html`<p>Nothing here yet.</p>` : nothing}

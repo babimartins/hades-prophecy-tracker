@@ -323,3 +323,49 @@ god was filed as a realm. `AGENTS.md` records this trap by name.
 **Why:** counting across all 73 characters gave "Fightable · 42" beside
 "All · 34", and clicking it surfaced 37 bare foes the default view hides on
 purpose. A count larger than the whole is a count of something else.
+
+## 25. The Weapons table does not sort, and that is deliberate
+
+**Chosen:** no sort controls on the six weapon rows.
+
+**Alternative:** mark Aspects and Daedalus sortable, as the preview does.
+
+**Why:** sorting earns its place when a list is too long to scan and the order
+answers a question. The spec names that question for Characters — Hearts
+ascending is the Ambrosia queue — and names none for Weapons. Six rows are on
+screen at once with no scrolling, so the eye does the sort. The preview marked
+those headers sortable while demonstrating the table pattern; it is not one of
+the owner's decisions.
+
+The two headers carry `cursor: help` and a dotted underline, so they read as
+"explain", not "click to sort". No false affordance.
+
+## 26. A row is a row, and the name cell carries the affordance
+
+**Chosen:** `<tr tabindex="0">` with a `<button>` in the name cell, and Enter
+on the row when the row itself has focus.
+
+**Alternative:** the first pass, `<tr role="link" aria-label="Open Zeus">`.
+
+**Why:** a review found both halves of that wrong. `role="link"` overrides the
+implicit `role="row"`, which orphans the six cells, and a link takes its name
+from `aria-label`, so the row announced "Open Zeus, link" and the Hearts,
+Keepsake, Boons and Favor values were never read. The comparison table stopped
+being one for exactly the reader who most needs it to be.
+
+And the row's `keydown` treated Space as activation, which is the native
+activation key of the tick buttons inside the row. A keyboard user pressing
+Space on Escaped navigated to the weapon page and recorded nothing — the
+owner's original complaint, reproduced by the fix meant to make rows reachable.
+The handler now ignores any event that did not start on the row itself.
+
+## 27. A rejected entry must not stay on screen
+
+**Chosen:** `live()` on the stepper's value, plus a `requestUpdate()` after
+emitting.
+
+**Why:** a property binding dirty-checks against the last committed value, not
+against the DOM. Typing 99 into a rank stored at 7 clamps to 7, which is what
+was already there, so `facts` never changes, nothing re-renders, and the field
+goes on reading "99 / 7". `live()` compares against the live DOM — but only if
+an update runs, which is why both are needed.

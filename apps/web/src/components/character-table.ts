@@ -34,7 +34,7 @@ export function buildRows(facts: FactMap): CharacterRow[] {
 
     return {
       subject,
-      section: sectionOf(subject),
+      section: sectionOf(subject) || subject.type,
       hearts: affinity
         ? { done: numeric(facts[affinity.id]), max: affinity.max ?? 1 }
         : null,
@@ -163,6 +163,21 @@ export class CharacterTable extends LitElement {
 
     tbody tr {
       cursor: pointer;
+    }
+
+    td.name .open {
+      background: none;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 600;
+      padding: 0;
+      text-align: left;
+    }
+
+    td.name .open:hover {
+      text-decoration: underline;
     }
 
     td.name {
@@ -356,17 +371,30 @@ export class CharacterTable extends LitElement {
                 <tr
                   data-subject=${row.subject.id}
                   tabindex="0"
-                  role="link"
-                  aria-label=${`Open ${row.subject.name}`}
                   @click=${() => this.#open(row)}
                   @keydown=${(event: KeyboardEvent) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault()
-                      this.#open(row)
-                    }
+                    // Only when the row itself has focus: Space is the native
+                    // activation key for the tick buttons inside it, and a row
+                    // handler would swallow it and navigate instead.
+                    if (event.target !== event.currentTarget) return
+                    if (event.key !== 'Enter') return
+                    event.preventDefault()
+                    this.#open(row)
                   }}
                 >
-                  <td class="name">${row.subject.name}<small>${row.section}</small></td>
+                  <td class="name">
+                    <button
+                      class="open"
+                      aria-label=${`Open ${row.subject.name}`}
+                      @click=${(event: Event) => {
+                        event.stopPropagation()
+                        this.#open(row)
+                      }}
+                    >
+                      ${row.subject.name}
+                    </button>
+                    <small>${row.section}</small>
+                  </td>
                   <td>${this.#pips(row.hearts)}</td>
                   <td>${this.#pips(row.keepsake)}</td>
                   <td>${this.#ratio(row.boons)}</td>

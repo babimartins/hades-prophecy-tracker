@@ -76,7 +76,10 @@ one.
 - Shared: Affinity, Keepsake, Codex.
 - Conditional: Boons (Olympians and Chaos), Favor, Companion, Combat,
   Conversations, Invite.
-- Affinity shows the hearts already given and what each remaining heart needs.
+- Affinity shows the hearts already given, as a bounded stepper. **What each
+  remaining heart needs is not shown**: the dataset holds no per-heart gate, so
+  the preview's "Heart 6 — locked until the Lounge favor is done" is mockup
+  text. Data-blocked, not overlooked.
 - The roll-up in the header counts **facts**, not achievements.
 
 ## 4. Weapons
@@ -111,7 +114,14 @@ A tag earns its place only if it varies across the index.
 - Affinity, Keepsake and Codex hold for 23 or 24 of 29 named characters, so they
   are baseline and the blocks below already show them.
 - Invite belongs to exactly the nine Olympians, so it repeats Olympian.
-- What is left: **Olympian, Grants boons, Fightable, Favor, Companion.**
+- What is left: **Olympian, Grants boons, Fightable, Favor, Companion, Gives a
+  companion.**
+
+`companion` means two opposite things: a companion **is** one, its giver
+**gives** one. The engine's own comment says the interface must read the
+subject's other capabilities to choose the word, so the tag splits in two. Both
+halves vary, so both earn their place. The preview showed one because it had no
+companion subjects in view.
 
 ## 6. The rail pages
 
