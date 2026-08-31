@@ -96,3 +96,30 @@ describe('the rail', () => {
     expect(root().querySelector('.meta')?.textContent).toContain('none yet')
   })
 })
+
+describe('a full bar reads as done, not as nearly done', () => {
+  // The accent and the gold are one warm scale: a bar fills bronze and turns
+  // gold when it completes. Before this, a prophecy at 1/1 and one at 5/6 drew
+  // the same colour, and only the number told them apart.
+  it('paints a finished bar in the done colour and an unfinished one in the accent', async () => {
+    render(html``, document.body)
+    render(
+      html`<rail-view
+        .items=${[
+          { id: 'full', label: 'Full', done: 4, total: 4 },
+          { id: 'nearly', label: 'Nearly', done: 3, total: 4 },
+        ]}
+        .selected=${'full'}
+        .label=${'Test'}
+      ></rail-view>`,
+      document.body,
+    )
+    const view = document.body.querySelector('rail-view')!
+    await (view as HTMLElement & { updateComplete: Promise<unknown> }).updateComplete
+    const shadow = view.shadowRoot!
+    const fill = (id: string): Element | null =>
+      shadow.querySelector(`button[data-item="${id}"] .bar i`)
+    expect(fill('full')?.className).toBe('done')
+    expect(fill('nearly')?.className).toBe('')
+  })
+})

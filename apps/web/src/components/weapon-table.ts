@@ -184,6 +184,13 @@ export class WeaponTable extends LitElement {
       height: 100%;
     }
 
+    /* A bar fills in the accent and turns gold when it is full: one warm
+       scale, which is what the owner chose the bronze for. Without this a
+       finished bar and a nearly finished one are the same colour. */
+    .bar i.done {
+      background: ${colorVar('--hd-color-done')};
+    }
+
     .count {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.72rem;
@@ -342,6 +349,9 @@ export class WeaponTable extends LitElement {
                       <span class="count">${row.daedalus.done}/${row.daedalus.total}</span>
                       <span class="bar"
                         ><i
+                          class=${row.daedalus.total > 0 && row.daedalus.done >= row.daedalus.total
+                            ? 'done'
+                            : ''}
                           style=${`width:${
                             row.daedalus.total === 0
                               ? 0

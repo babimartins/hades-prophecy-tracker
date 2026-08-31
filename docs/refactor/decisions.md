@@ -754,3 +754,47 @@ Three things the ranking needed before it was worth showing.
 
 `nextSteps` takes the entries to ignore as an argument rather than knowing them.
 Which entries are roll-ups is game knowledge, and the engine holds none.
+
+## 55. The accent is bronze, and a full bar turns gold
+
+The accent was `#e35563`, a red. The owner said it read as an error on things
+that are only progress and selection, which is the same objection she made to
+green reading as success.
+
+The replacement had two floors, and they pull against each other. It carries
+small text, so it needs 4.5:1 on both the page background and the surface. It
+also has to stay apart from the gold, because one bar shows both states.
+
+Measured against `#150e19` and `#241627`:
+
+| candidate | on page | on surface | against gold |
+| --------- | ------- | ---------- | ------------ |
+| red, the old one | 5.18 | 4.71 | 1.82 |
+| lilac | 8.61 | 7.83 | 1.10 |
+| teal | 9.56 | 8.70 | 1.01 |
+| bronze `#a86a2e` | 4.30 | 3.91 | 2.20 |
+| **bronze `#b57433`** | **4.97** | **4.52** | **1.90** |
+
+Lilac and teal read beautifully and would have made a finished bar and a
+half-finished one nearly the same weight. The first bronze failed the text
+floor. `#b57433` clears every one.
+
+No text is ever drawn on the accent: every accent background in the app is a
+pip or a bar fill, so the 3.11 against the cream text does not apply.
+
+**The scale was not implemented.** The owner chose bronze because it makes one
+warm scale with the gold, a bar filling bronze and turning gold when it
+completes. Only `hd-progress` ever did that, and nothing has used `hd-progress`
+since phase 3. A prophecy at 1/1 and one at 5/6 drew the same colour, and only
+the number told them apart. The rail, the Characters table and the Weapons
+table now paint a full bar in the done colour.
+
+`packages/ui/test/tokens.test.ts` holds the floors, so the next colour change
+cannot pass in silence. Swapping the accent for any of the four candidates
+above fails it.
+
+## 56. The spec's colour section described a palette that never existed
+
+It said green meant done and gold meant progress. The code has never had a
+green, and used red for progress and gold for done. Corrected in
+`docs/refactor/phase-3-spec.md` §8 to what is actually built.

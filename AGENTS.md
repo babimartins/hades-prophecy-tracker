@@ -331,3 +331,20 @@ one stored rank of 1 must render differently under each.
 The displayed number is always the real rank out of the gauge's own size. Never
 substitute the target for it. Print the target only when it is neither 1 nor
 the max, which is true of three rows in the whole dataset.
+
+### Bronze is progress, gold is done, and a full bar must turn gold
+
+`--hd-color-accent` is bronze `#b57433`: the bar fill, the pips, the active
+tab, the selected rail item, a price, an "unlocks N" count.
+`--hd-color-done` is gold `#d8b34a`, and nothing else uses it.
+
+The two are one warm scale. **A bar that reaches its total must carry the done
+colour**, or a finished entry and a nearly finished one look identical and only
+the number tells them apart. That was true of the whole app until it was
+noticed on screen, because the only component that painted the full state,
+`hd-progress`, has not been used since phase 3.
+
+A new accent must clear 4.5:1 on both `#150e19` and `#241627` **and** stay at
+least 1.8 from the gold. Those pull against each other: the brighter, calmer
+candidates all sit near the gold's luminance. `packages/ui/test/tokens.test.ts`
+holds the floors.

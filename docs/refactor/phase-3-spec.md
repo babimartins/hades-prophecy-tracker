@@ -171,11 +171,25 @@ the name in the game's own interface.
 
 ## 8. Colour
 
-- **Green means done.** Nothing else uses it.
-- Gold is progress and selection.
+This section described a palette that was never built. It said green meant done
+and gold meant progress; the code has had no green at all, and used red for
+progress and gold for done. Corrected here to what exists.
+
+- **Gold `#d8b34a` means done.** Nothing else uses it.
+- **Bronze `#b57433` is progress and selection**: the bar fill, the pips, the
+  active tab, the selected rail item, a price, an "unlocks N" count.
+- The two make one warm scale. A bar fills bronze and turns gold when it
+  completes.
 - An informational block is neutral, on the plain surface colour. Green read as
   success on something merely informative, which is why it is not used there.
 - Read every colour through `colorVar`, per `AGENTS.md`.
+
+The accent was `#e35563`, a red, until the owner said it read as an error on
+things that are only progress. The replacement had to clear 4.5:1 on both
+backgrounds **and** stay apart from the gold, because one bar shows both
+states. Lilac and teal cleared the first easily and failed the second, at 1.10
+and 1.01. Bronze sits at 4.97, 4.52 and 1.90. `packages/ui/test/tokens.test.ts`
+holds those floors.
 
 ## 9. What the engine already answers
 

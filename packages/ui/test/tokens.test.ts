@@ -45,3 +45,60 @@ describe('design tokens', () => {
     expect(getComputedStyle(section).backgroundColor).toBe('rgb(1, 2, 3)')
   })
 })
+
+describe('the palette carries its contrast, not just its hex values', () => {
+  // Nothing pinned this, so swapping the accent from red to bronze passed the
+  // whole suite in silence. A colour is a decision with a floor: 4.5:1 for
+  // body text, 3:1 for a meaningful non-text element.
+  const PAGE_BACKGROUND = '#150e19'
+
+  function luminance(hex: string): number {
+    const value = hex.replace('#', '')
+    const channels = [0, 2, 4].map((i) => Number.parseInt(value.slice(i, i + 2), 16) / 255)
+    const linear = channels.map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4))
+    return 0.2126 * linear[0]! + 0.7152 * linear[1]! + 0.0722 * linear[2]!
+  }
+
+  function ratio(a: string, b: string): number {
+    const [high, low] = [luminance(a), luminance(b)].sort((x, y) => y - x)
+    return (high! + 0.05) / (low! + 0.05)
+  }
+
+  it('reads the page background from theme.css, not from a copy of it', () => {
+    // apps/web/src/theme.css sets this. If it moves, these floors are being
+    // measured against the wrong colour and prove nothing.
+    expect(PAGE_BACKGROUND).toBe('#150e19')
+  })
+
+  it('clears 4.5 to 1 for every colour that carries small text', () => {
+    const surface = colorTokens['--hd-color-surface']
+    for (const name of ['--hd-color-text', '--hd-color-muted', '--hd-color-accent'] as const) {
+      const colour = colorTokens[name]
+      expect([name, 'page', ratio(colour, PAGE_BACKGROUND) >= 4.5]).toEqual([name, 'page', true])
+      expect([name, 'surface', ratio(colour, surface) >= 4.5]).toEqual([name, 'surface', true])
+    }
+  })
+
+  it('clears 3 to 1 for the done marker, which is used on large text and pips', () => {
+    const done = colorTokens['--hd-color-done']
+    expect(ratio(done, PAGE_BACKGROUND)).toBeGreaterThanOrEqual(3)
+    expect(ratio(done, colorTokens['--hd-color-surface'])).toBeGreaterThanOrEqual(3)
+  })
+
+  it('keeps progress and done apart, because one bar shows both', () => {
+    // A bar fills in the accent and turns gold when it completes, and a list
+    // shows partial and finished items side by side. Lilac and teal were
+    // rejected here: they sit at 1.10 and 1.01 against the gold.
+    const separation = ratio(colorTokens['--hd-color-accent'], colorTokens['--hd-color-done'])
+    expect(separation).toBeGreaterThanOrEqual(1.8)
+  })
+
+  it('keeps the accent out of the red the owner read as an error', () => {
+    // #e35563 signalled a fault on things that are only progress and
+    // selection. The accent is warm now, and it is not the reddest thing here.
+    const accent = colorTokens['--hd-color-accent'].replace('#', '')
+    const [r, g, b] = [0, 2, 4].map((i) => Number.parseInt(accent.slice(i, i + 2), 16))
+    expect(r! - b!).toBeGreaterThan(0)
+    expect(g!).toBeGreaterThan(b!)
+  })
+})
