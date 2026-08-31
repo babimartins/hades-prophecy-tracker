@@ -194,6 +194,55 @@ describe('hades-dashboard preserves state across an entry visit', () => {
   })
 })
 
+describe('hades-dashboard scrolls the active view into place', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * The detail view renders in the same DOM position the list occupied,
+   * well below the 13 header cards. A click that opens it must not leave
+   * the viewport exactly where it was, or the click reads as doing nothing.
+   * Returning to the list must put it back in view for the same reason.
+   */
+  it('scrolls the detail view into place on open, and the list back into place on close', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const calls: Element[] = []
+    const original = Element.prototype.scrollIntoView
+    Element.prototype.scrollIntoView = function (this: Element): void {
+      calls.push(this)
+    }
+
+    try {
+      const list = element.shadowRoot!.querySelector('achievement-list')!
+      const firstId = list.achievements[0]!.id
+      list.dispatchEvent(
+        new CustomEvent('achievement-open', {
+          detail: { id: firstId },
+          bubbles: true,
+          composed: true,
+        }),
+      )
+      await element.updateComplete
+
+      const detail = element.shadowRoot!.querySelector('achievement-detail')!
+      expect(calls).toContain(detail)
+
+      calls.length = 0
+      detail.dispatchEvent(new CustomEvent('detail-close', { bubbles: true, composed: true }))
+      await element.updateComplete
+
+      const filter = element.shadowRoot!.querySelector('collection-filter')!
+      expect(calls).toContain(filter)
+    } finally {
+      Element.prototype.scrollIntoView = original
+    }
+  })
+})
+
 describe('hades-dashboard save failures', () => {
   beforeEach(() => {
     render(html``, document.body)

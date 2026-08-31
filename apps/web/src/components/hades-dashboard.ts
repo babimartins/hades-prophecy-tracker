@@ -2,7 +2,7 @@ import { dataset } from '@hades/data'
 import { overallProgress, type FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
 import { colorVar } from '@hades/ui'
-import { css, html, LitElement } from 'lit'
+import { css, html, LitElement, type PropertyValues } from 'lit'
 import { collectionsWithEntries, visibleAchievements } from '../lib/achievement-filter.js'
 import { ProgressState } from '../state/progress-state.js'
 import { createIndexedDbStore } from '../storage/indexeddb-store.js'
@@ -70,6 +70,21 @@ export class HadesDashboard extends LitElement {
 
   private onOpen(event: CustomEvent<{ id: string }>): void {
     this.openId = event.detail.id
+  }
+
+  /**
+   * Opening an entry, or returning from it, renders the new content at the
+   * same place in the DOM the old content occupied — well below the 13
+   * header cards. Without a scroll, the viewport never moves, so the click
+   * looks like it did nothing. Puts whichever view just appeared in view,
+   * without a router and without touching browser history.
+   */
+  protected override updated(changedProperties: PropertyValues<this>): void {
+    if (!changedProperties.has('openId')) return
+    const target = this.openId
+      ? this.shadowRoot?.querySelector('achievement-detail')
+      : this.shadowRoot?.querySelector('collection-filter')
+    target?.scrollIntoView({ block: 'start' })
   }
 
   private onSearch(event: CustomEvent<{ query: string }>): void {
