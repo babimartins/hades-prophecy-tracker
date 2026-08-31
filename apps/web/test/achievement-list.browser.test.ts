@@ -61,6 +61,21 @@ const large: Achievement[] = Array.from({ length: 41 }, (_, index) => ({
   section: index < 21 ? 'chthonic-gods' : 'olympian-gods',
 }))
 
+/**
+ * 41 unsectioned achievements in one collection — the shape of the real
+ * 55-entry Fated List of Minor Prophecies, which carries no section at all.
+ * Above `LARGE_LIST_ROW_THRESHOLD`, this must collapse by default exactly
+ * like a large sectioned collection does: the same list must not behave two
+ * different ways depending only on whether it happens to carry a section.
+ */
+const largeUnsectioned: Achievement[] = Array.from({ length: 41 }, (_, index) => ({
+  id: `prophecy:entry-${index}`,
+  name: `Entry ${index}`,
+  description: `Entry ${index}.`,
+  collection: 'prophecy',
+  requirement: { kind: 'all', of: [`a:fact-${index}`] },
+}))
+
 const collectionsMeta = [
   { id: 'prophecy', name: 'Fated List of Minor Prophecies' },
   { id: 'codex', name: 'Codex' },
@@ -157,7 +172,10 @@ describe('achievement-list', () => {
 
   it('marks a completed achievement as done', async () => {
     render(
-      html`<achievement-list .achievements=${achievements} .facts=${{ 'a:three': true }}></achievement-list>`,
+      html`<achievement-list
+        .achievements=${achievements}
+        .facts=${{ 'a:three': true }}
+      ></achievement-list>`,
       document.body,
     )
     const element = document.querySelector('achievement-list')!
@@ -168,7 +186,10 @@ describe('achievement-list', () => {
   })
 
   it('fires achievement-open on a row click', async () => {
-    render(html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`, document.body)
+    render(
+      html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
     const element = document.querySelector('achievement-list')!
     await element.updateComplete
     const ids: string[] = []
@@ -200,7 +221,9 @@ describe('achievement-list', () => {
     const groups = element.shadowRoot!.querySelectorAll('details')
     expect(groups.length).toBe(2)
     const headings = [...groups].map((group) => group.querySelector('summary')!.textContent?.trim())
-    expect(headings).toEqual(['Chthonic Gods', 'Olympian Gods'])
+    // Every heading carries its own row count now (finding: no result
+    // count anywhere).
+    expect(headings).toEqual(['Chthonic Gods (2 entries)', 'Olympian Gods (1 entry)'])
     expect(groups[0]!.querySelectorAll('li').length).toBe(2)
     expect(groups[1]!.querySelectorAll('li').length).toBe(1)
   })
@@ -217,7 +240,10 @@ describe('achievement-list', () => {
   })
 
   it('collapses every section by default once the list is large', async () => {
-    render(html`<achievement-list .achievements=${large} .facts=${{}}></achievement-list>`, document.body)
+    render(
+      html`<achievement-list .achievements=${large} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
     const element = document.querySelector('achievement-list')!
     await element.updateComplete
     const groups = [...element.shadowRoot!.querySelectorAll('details')]
@@ -257,6 +283,21 @@ describe('achievement-list', () => {
     expect(groups[1]!.open).toBe(true)
   })
 
+  it('looks like a control: a section heading has a visible surface, a border and a real hit area', async () => {
+    render(
+      html`<achievement-list .achievements=${sectioned} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const summary = element.shadowRoot!.querySelector('details summary')!
+    const style = getComputedStyle(summary)
+    expect(style.backgroundColor).not.toBe('rgba(0, 0, 0, 0)')
+    expect(Number.parseFloat(style.borderTopWidth)).toBeGreaterThan(0)
+    // A comfortable hit area, not text sitting flush against its neighbours.
+    expect(Number.parseFloat(style.paddingTop)).toBeGreaterThanOrEqual(8)
+  })
+
   it('is keyboard-operable: the section heading is a native, focusable summary control', async () => {
     render(
       html`<achievement-list .achievements=${sectioned} .facts=${{}}></achievement-list>`,
@@ -286,6 +327,244 @@ describe('achievement-list', () => {
     summary.click()
     await vi.waitFor(() => expect(events.length).toBe(1))
     expect(events).toEqual([{ collection: 'codex', section: 'chthonic-gods', open: false }])
+  })
+})
+
+describe('achievement-list does not repeat a collection name in its own summary', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * Prophecies, keepsakes, Pact, perks and Well of Charon are all
+   * unsectioned. Once one of them is large enough to collapse (finding 9)
+   * and appears alongside another collection — the unfiltered "All" view,
+   * 545 rows — its own `<h2>` and its collapsed group's `<summary>` both
+   * showed the same collection name, back to back: the first thing a
+   * player's eye lands on, reading as a bug.
+   */
+  it('shows the row count, not the collection name a second time, when a block heading already names it', async () => {
+    const largePropheciesAlongsideCodex: Achievement[] = [
+      ...Array.from({ length: 41 }, (_, index) => ({
+        id: `prophecy:entry-${index}`,
+        name: `Entry ${index}`,
+        description: `Entry ${index}.`,
+        collection: 'prophecy',
+        requirement: { kind: 'all' as const, of: [`a:fact-${index}`] },
+      })),
+      {
+        id: 'codex:alpha',
+        name: 'Alpha',
+        description: 'Alpha entry.',
+        collection: 'codex',
+        requirement: { kind: 'all' as const, of: ['a:alpha'] },
+        section: 'chthonic-gods',
+      },
+    ]
+    render(
+      html`<achievement-list
+        .achievements=${largePropheciesAlongsideCodex}
+        .facts=${{}}
+        .collections=${collectionsMeta}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+
+    const h2 = element.shadowRoot!.querySelector('.collection-heading')!
+    expect(h2.textContent?.trim()).toBe('Fated List of Minor Prophecies')
+
+    const propheciesSummary = [
+      ...element.shadowRoot!.querySelectorAll('details summary'),
+    ].find((summary) => summary.closest('details')!.querySelectorAll('li').length === 41)!
+    expect(propheciesSummary.textContent?.trim()).toBe('41 entries')
+    expect(propheciesSummary.textContent).not.toContain('Fated List of Minor Prophecies')
+  })
+
+  it('still names the collection in the summary when no block heading names it first', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${largeUnsectioned}
+        .facts=${{}}
+        .collections=${collectionsMeta}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    expect(element.shadowRoot!.querySelectorAll('.collection-heading').length).toBe(0)
+    const summary = element.shadowRoot!.querySelector('details summary')!
+    expect(summary.textContent?.trim()).toBe('Fated List of Minor Prophecies (41 entries)')
+  })
+})
+
+describe('achievement-list shows a result count', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('shows the total row count above the list', async () => {
+    render(
+      html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const count = element.shadowRoot!.querySelector('.result-count')!
+    expect(count.textContent?.trim()).toBe('2 entries')
+  })
+})
+
+describe('achievement-list opens a narrowed view regardless of its row count', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * A search or a filter is an explicit request to see rows. The row-count
+   * threshold that collapses a large unfiltered view must not also
+   * collapse a narrowed one and answer that request with zero visible rows.
+   */
+  it('opens every section by default when narrowed, even above the row-count threshold', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${large}
+        .facts=${{}}
+        .narrowed=${true}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups.length).toBe(2)
+    expect(groups.every((group) => group.open)).toBe(true)
+  })
+
+  it('opens a large unsectioned collection by default when narrowed', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${largeUnsectioned}
+        .facts=${{}}
+        .narrowed=${true}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    // Narrowed and small enough to stay open renders flat, with no
+    // <details> control at all — better than one forced open, since there
+    // is nothing left to collapse away.
+    expect(element.shadowRoot!.querySelectorAll('details').length).toBe(0)
+    expect(element.shadowRoot!.querySelectorAll('ul > li').length).toBe(41)
+  })
+
+  it('still collapses a large unfiltered view — the threshold applies to the unfiltered "All" view only', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${large}
+        .facts=${{}}
+        .narrowed=${false}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups.every((group) => group.open)).toBe(false)
+  })
+})
+
+describe('achievement-list treats a large unsectioned collection like a large sectioned one', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('collapses it behind a details control by default, the same as a large sectioned collection', async () => {
+    render(
+      html`<achievement-list .achievements=${largeUnsectioned} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups.length).toBe(1)
+    expect(groups[0]!.open).toBe(false)
+    expect(groups[0]!.querySelectorAll('li').length).toBe(41)
+  })
+
+  it('still renders a small unsectioned collection flat and open, unchanged', async () => {
+    render(
+      html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    expect(element.shadowRoot!.querySelectorAll('details').length).toBe(0)
+    expect(element.shadowRoot!.querySelectorAll('ul > li').length).toBe(2)
+  })
+
+  it('lets an explicit collapse-state entry force it open, the same as a sectioned collection', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${largeUnsectioned}
+        .facts=${{}}
+        .collapsedSections=${{ 'prophecy:': false }}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const details = element.shadowRoot!.querySelector('details')!
+    expect(details.open).toBe(true)
+  })
+
+  it('fires section-toggle naming the collection when its heading is activated', async () => {
+    render(
+      html`<achievement-list .achievements=${largeUnsectioned} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const events: { collection: string; section: string; open: boolean }[] = []
+    element.addEventListener('section-toggle', (event) => {
+      events.push(
+        (event as CustomEvent<{ collection: string; section: string; open: boolean }>).detail,
+      )
+    })
+    const summary = element.shadowRoot!.querySelector('details summary') as HTMLElement
+    summary.click()
+    await vi.waitFor(() => expect(events.length).toBe(1))
+    expect(events[0]!.collection).toBe('prophecy')
+    expect(events[0]!.open).toBe(true)
+  })
+})
+
+describe('achievement-list row height', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * `achievements[0]` needs two facts (a bar can say something); `[1]` needs
+   * one (the bar can only ever read 0% or 100%). A 174-entry collection at
+   * the old 81px row is roughly 14,000px — tightening the row, and giving
+   * the single-sub-item row a lighter compact status instead of the full
+   * bar, is what makes a long list scannable.
+   */
+  it('renders a visibly shorter row for a single-sub-item entry than for a multi-sub-item entry', async () => {
+    render(
+      html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const rows = element.shadowRoot!.querySelectorAll('li')
+    const barRowHeight = rows[0]!.getBoundingClientRect().height
+    const compactRowHeight = rows[1]!.getBoundingClientRect().height
+    expect(compactRowHeight).toBeLessThan(barRowHeight)
+    expect(compactRowHeight).toBeLessThan(50)
   })
 })
 

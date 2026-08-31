@@ -20,8 +20,8 @@ export class RequirementTree extends LitElement {
     }
     .group-label {
       color: ${colorVar('--hd-color-muted')};
-      font-size: 0.75rem;
-      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-style: italic;
     }
     .rank {
       align-items: center;
@@ -144,6 +144,16 @@ export class RequirementTree extends LitElement {
   private renderNode(node: RequirementChild): TemplateResult {
     if (isFactChild(node)) return this.renderFact(node)
     if (node.kind === 'atLeast') return this.renderRank(node.fact, node.value)
+
+    // A flat `all` group of nothing but steps needs no label: "you must do
+    // these things" is the only reading a checklist can have. An `any` or a
+    // `count` group states real OR-or-threshold logic the player cannot
+    // infer from the list alone, and a nested `all` needs the label to show
+    // where the flat run of steps ends and the nested group begins.
+    const isFlatStepList = node.kind === 'all' && node.of.every(isFactChild)
+    if (isFlatStepList) {
+      return html`<div class="group">${node.of.map((child) => this.renderNode(child))}</div>`
+    }
 
     const label = node.kind === 'count' ? `${GROUP_LABEL.count} ${node.n} of` : GROUP_LABEL[node.kind]
     return html`

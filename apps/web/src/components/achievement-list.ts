@@ -21,14 +21,12 @@ function sectionKey(collection: string, section: string): string {
 
 /**
  * A view at or below this many rows defaults every section open, matching
- * the behaviour from before sections could collapse. Above it, a section
- * defaults closed unless the caller says otherwise. Chosen so a filtered,
- * short view stays exactly as before (Weapon Aspects and Mirror of Night
- * are 24 rows each, filtered alone) while the unfiltered "All" view (545
- * rows) and a large single collection filtered alone (Boons 174, Codex
- * 119, Daedalus 72) default closed. A single collapsed section is worse
- * than an open one, so this only ever closes a section nobody asked to
- * keep open.
+ * the behaviour from before sections could collapse. This threshold only
+ * ever governs the unfiltered "All" view (545 rows): see `narrowed` on the
+ * `defaultOpen` it feeds. A search or a filter is an explicit request to
+ * see rows, and always opens regardless of how many rows match -- a
+ * collapsed bar repeating the collection the player just chose, showing
+ * zero rows, answers that request with the one thing it did not ask for.
  */
 const LARGE_LIST_ROW_THRESHOLD = 40
 
@@ -113,6 +111,11 @@ function sectionHeading(section: string): string {
  */
 export class AchievementList extends LitElement {
   static override readonly styles = css`
+    .result-count {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.8rem;
+      margin: 0 0 12px;
+    }
     ul {
       display: grid;
       gap: 8px;
@@ -123,17 +126,59 @@ export class AchievementList extends LitElement {
     details {
       margin-bottom: 12px;
     }
+    /**
+     * A section heading is a real control, not decorative small-caps text:
+     * a visible surface, a border, and a hit area worth tapping. Border and
+     * background come from colorVar, not a hand-typed rgba: a translucent
+     * white overlay measured 1.12:1 (fill) and 1.47:1 (border) against the
+     * page, well under the 3:1 WCAG 1.4.11 wants for a control's boundary.
+     * --hd-color-muted (solid, no alpha needed) clears 3:1 on its own. The
+     * native disclosure marker is replaced by ::before so its rotation on
+     * open matches the surface treatment, instead of a bare triangle glyph
+     * with no background of its own.
+     */
     summary {
+      align-items: center;
+      background: ${colorVar('--hd-color-surface')};
+      border: 1px solid ${colorVar('--hd-color-muted')};
+      border-radius: 8px;
       cursor: pointer;
+      display: flex;
       font-family: var(--hd-font-display, serif);
       font-weight: 600;
-      padding: 8px 0;
+      gap: 10px;
+      list-style: none;
+      padding: 10px 14px;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::before {
+      content: '▸';
+      display: inline-block;
+      transition: transform 120ms ease-out;
+    }
+    details[open] > summary::before {
+      transform: rotate(90deg);
+    }
+    summary:hover {
+      border-color: ${colorVar('--hd-color-accent')};
     }
     summary:focus-visible {
       outline: 2px solid ${colorVar('--hd-color-accent')};
+      outline-offset: 2px;
     }
     details ul {
       margin-top: 8px;
+    }
+    /**
+     * A row surface, not a bare hairline: with the bar gone from most rows
+     * (finding 2), adjacent rows were bare text at two different heights
+     * with nothing marking where one ends and the next begins.
+     */
+    li {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 6px;
     }
     button {
       background: none;
@@ -143,9 +188,26 @@ export class AchievementList extends LitElement {
       display: grid;
       font: inherit;
       gap: 4px;
-      padding: 8px;
+      padding: 6px 8px;
       text-align: left;
       width: 100%;
+    }
+    /**
+     * A single-sub-item row shows the compact hd-progress status, not a
+     * bar, so name and status fit on one line instead of stacking. See
+     * hd-progress: it renders that compact status whenever max <= 1.
+     */
+    button[data-compact] {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+    }
+    button[data-compact] .name {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     button:focus-visible {
       outline: 2px solid ${colorVar('--hd-color-accent')};
@@ -173,6 +235,7 @@ export class AchievementList extends LitElement {
     collections: { type: Array },
     facts: { type: Object },
     collapsedSections: { type: Object },
+    narrowed: { type: Boolean },
   }
 
   achievements: Achievement[] = []
@@ -180,6 +243,15 @@ export class AchievementList extends LitElement {
   collections: Collection[] = []
   facts: FactMap = {}
   collapsedSections: Record<string, boolean> = {}
+  /**
+   * True while the caller has an explicit search query or collection
+   * filter active. A narrowed view always defaults every section open,
+   * whatever `LARGE_LIST_ROW_THRESHOLD` would otherwise say: searching or
+   * filtering is an explicit request to see rows, and the row-count
+   * threshold exists to tame the unfiltered "All" view, not to answer a
+   * deliberate request with a collapsed bar and zero visible rows.
+   */
+  narrowed = false
 
   private open(id: string): void {
     this.dispatchEvent(
@@ -222,7 +294,11 @@ export class AchievementList extends LitElement {
     const progress = achievementProgress(achievement, this.facts)
     return html`
       <li data-status=${progress.status}>
-        <button type="button" @click=${() => this.open(achievement.id)}>
+        <button
+          type="button"
+          ?data-compact=${progress.total <= 1}
+          @click=${() => this.open(achievement.id)}
+        >
           <span class="name">${achievement.name}</span>
           <hd-progress
             .value=${progress.done}
@@ -234,24 +310,62 @@ export class AchievementList extends LitElement {
     `
   }
 
-  private renderGroup(group: SectionGroup): TemplateResult {
-    if (group.section === undefined) {
+  /**
+   * Text for a group's `<summary>`, always carrying its own row count
+   * (finding: no result count on a collapsed section). A sectioned group
+   * always names its section. An unsectioned group names its collection —
+   * unless an `<h2>` already does, right above it in the same block; a
+   * collection block heading and an unsectioned group's own summary used
+   * to both show the collection's name, back to back, the first thing a
+   * player's eye landed on reading as a bug. The count alone is still a
+   * real, distinct label in that case, not a repeat of the h2 above it.
+   */
+  private groupHeading(group: SectionGroup, alreadyNamedByBlockHeading: boolean): string {
+    const count = group.items.length
+    const countSuffix = `${count} ${count === 1 ? 'entry' : 'entries'}`
+    if (group.section !== undefined) return `${sectionHeading(group.section)} (${countSuffix})`
+    if (alreadyNamedByBlockHeading) return countSuffix
+    return `${this.collectionName(group.collection)} (${countSuffix})`
+  }
+
+  /**
+   * A collection with no section used to always render flat and open,
+   * whatever its size, while a sectioned collection collapsed above
+   * `LARGE_LIST_ROW_THRESHOLD` rows — the same list behaving two different
+   * ways for no reason the player could see. `''` stands in for "no
+   * section" as the collapse-state key, so a large unsectioned collection
+   * (the 55-entry Fated List, once part of a large "All" view) collapses
+   * behind the same kind of control a large sectioned collection gets. A
+   * small unsectioned collection still renders flat with no control at
+   * all, exactly as before sections existed.
+   *
+   * `this.narrowed` always wins over the row-count threshold: a search or
+   * a filter is an explicit request to see rows, at any match count, and
+   * must never answer with a collapsed section showing none.
+   */
+  private renderGroup(group: SectionGroup, alreadyNamedByBlockHeading: boolean): TemplateResult {
+    const section = group.section ?? ''
+    const defaultOpen = this.narrowed || this.achievements.length <= LARGE_LIST_ROW_THRESHOLD
+    if (
+      group.section === undefined &&
+      this.collapsedSections[sectionKey(group.collection, section)] === undefined &&
+      defaultOpen
+    ) {
       return html`<ul>
         ${group.items.map((achievement) => this.renderRow(achievement))}
       </ul>`
     }
     const collection = group.collection
-    const section = group.section
     const key = sectionKey(collection, section)
     const explicit = this.collapsedSections[key]
-    const defaultOpen = this.achievements.length <= LARGE_LIST_ROW_THRESHOLD
     const open = explicit === undefined ? defaultOpen : !explicit
+    const heading = this.groupHeading(group, alreadyNamedByBlockHeading)
     return html`
       <details ?open=${open}>
         <summary
           @click=${(event: MouseEvent) => this.onSummaryClick(collection, section, open, event)}
         >
-          ${sectionHeading(section)}
+          ${heading}
         </summary>
         <ul>
           ${group.items.map((achievement) => this.renderRow(achievement))}
@@ -262,17 +376,23 @@ export class AchievementList extends LitElement {
 
   private renderCollectionBlock(block: CollectionBlock, showHeading: boolean): TemplateResult {
     return html`
-      ${showHeading
-        ? html`<h2 class="collection-heading">${this.collectionName(block.collection)}</h2>`
-        : null}
-      ${block.groups.map((group) => this.renderGroup(group))}
+      ${
+        showHeading
+          ? html`<h2 class="collection-heading">${this.collectionName(block.collection)}</h2>`
+          : null
+      }
+      ${block.groups.map((group) => this.renderGroup(group, showHeading))}
     `
   }
 
   override render() {
     const blocks = groupByCollectionAndSection(this.achievements)
     const showHeadings = blocks.length > 1
-    return html`${blocks.map((block) => this.renderCollectionBlock(block, showHeadings))}`
+    const total = this.achievements.length
+    return html`
+      <p class="result-count">${total} ${total === 1 ? 'entry' : 'entries'}</p>
+      ${blocks.map((block) => this.renderCollectionBlock(block, showHeadings))}
+    `
   }
 }
 

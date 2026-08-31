@@ -66,6 +66,50 @@ describe('next-steps-panel', () => {
     expect(element.shadowRoot!.textContent).toContain('Nothing left')
   })
 
+  it('lines a number-fact row up with the checkbox rows above it, and keeps its label and badge on one line', async () => {
+    const numberDataset: Dataset = {
+      collections: [{ id: 'prophecy', name: 'Prophecies' }],
+      facts: [
+        {
+          id: 'a:rank',
+          label: 'A label long enough to have wrapped across three lines in the old layout',
+          kind: 'number',
+          max: 5,
+          collection: 'prophecy',
+        },
+      ],
+      achievements: [
+        {
+          id: 'prophecy:rank',
+          name: 'Rank',
+          description: 'Rank.',
+          collection: 'prophecy',
+          requirement: { kind: 'atLeast', fact: 'a:rank', value: 5 },
+        },
+      ],
+    }
+    render(
+      html`<next-steps-panel .catalog=${numberDataset} .facts=${{}} .limit=${5}></next-steps-panel>`,
+      document.body,
+    )
+    const element = document.querySelector('next-steps-panel')!
+    await element.updateComplete
+
+    const row = element.shadowRoot!.querySelector('.rank')!
+    const spacer = row.querySelector('.spacer') as HTMLElement
+    const label = row.querySelector('.label') as HTMLElement
+    const badge = row.querySelector('.badge') as HTMLElement
+
+    // Same width as the checkbox in hd-checklist-item, so the label column
+    // of a number row lines up with the label column of a checkbox row.
+    expect(getComputedStyle(spacer).width).toBe('18px')
+    // Wraps rather than truncates: a version that set white-space: nowrap
+    // here, with no min-width: 0 on the surrounding grid track, was what
+    // scrolled the whole page sideways on a phone.
+    expect(getComputedStyle(label).whiteSpace).not.toBe('nowrap')
+    expect(getComputedStyle(badge).whiteSpace).toBe('nowrap')
+  })
+
   it('never lets a single interaction reduce a number fact below its current value', async () => {
     const numberDataset: Dataset = {
       collections: [{ id: 'prophecy', name: 'Prophecies' }],

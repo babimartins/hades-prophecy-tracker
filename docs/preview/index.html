@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hades Tracker — structure preview</title>
+<style>
+:root{
+  --bg:#12101a; --bg2:#1a1726; --bg3:#221e31; --line:#332c47;
+  --ink:#e9e4f5; --dim:#9b93b3; --dimmer:#6f6885;
+  --gold:#e0b355; --red:#d4483f; --teal:#4fb3a6; --violet:#8f7ad6;
+  --ok:#5fc27e;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{
+  background:var(--bg); color:var(--ink);
+  font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  height:100%; overflow:hidden;
+  display:flex; flex-direction:column;
+}
+h1,h2,h3,h4{font-family:"Cinzel",Georgia,serif;font-weight:600;letter-spacing:.02em;margin:0}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ---------- top bar ---------- */
+header{flex:none;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;gap:16px;padding:14px 0 0}
+.brand{font-family:"Cinzel",Georgia,serif;font-size:17px;color:var(--gold)}
+.brand small{display:block;font-family:inherit;font-size:11px;color:var(--dimmer);letter-spacing:.08em;text-transform:uppercase}
+.globalbar{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:13px;color:var(--dim)}
+.gpct{color:var(--gold);font-variant-numeric:tabular-nums}
+nav{display:flex;gap:2px;margin-top:12px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{padding:9px 15px;border-radius:8px 8px 0 0;color:var(--dim);white-space:nowrap;border-bottom:2px solid transparent}
+nav button:hover{color:var(--ink);background:var(--bg2)}
+nav button[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold);background:var(--bg2)}
+
+/* ---------- page ---------- */
+/* main carries .wrap, whose `margin:0 auto` would stop a flex item from stretching.
+   width:100% restores the full track so max-width can cap it and the auto margins centre it. */
+main{flex:1;min-height:0;width:100%;display:flex;flex-direction:column;padding:22px 0 0;overflow:hidden}
+.page{display:none}
+.page.on{display:flex;flex-direction:column;flex:1;min-height:0;overflow-y:auto;padding-bottom:20px}
+/* a page whose main content is a table or a rail does not scroll itself:
+   the table body or the detail pane is the scroll region instead */
+.page.on:has(.tablewrap),.page.on:has(.split){overflow:hidden;padding-bottom:0}
+.phead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.phead h1{font-size:26px}
+.phead .count{color:var(--dimmer);font-size:13px}
+.lede{color:var(--dim);max-width:66ch;margin:0 0 22px}
+
+/* ---------- generic bits ---------- */
+.bar{position:relative;height:5px;border-radius:3px;background:#2c2740;overflow:hidden;min-width:54px}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--gold);border-radius:3px}
+.bar.teal i{background:var(--teal)} .bar.red i{background:var(--red)}
+.pips{display:inline-flex;gap:3px;vertical-align:middle}
+.pips b{width:9px;height:9px;border-radius:50%;background:#332c47;display:block}
+.pips b.f{background:var(--red)}
+.pips.gold b.f{background:var(--gold)}
+.pipset{display:inline-flex;gap:16px;align-items:center}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid var(--line);color:var(--dim);white-space:nowrap}
+.tag.oly,.tag.grants{border-color:#5a4a86;color:#b4a2ec;background:#241f38}
+.tag.fight{border-color:#7a3a35;color:#e79289;background:#2c1c1e}
+.tag.quest{border-color:#7a6430;color:var(--gold);background:#2a2418}
+.tag.comp{border-color:#356b62;color:var(--teal);background:#152927}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- comparison table ---------- */
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--bg2);flex:1;min-height:0;margin-bottom:14px}
+table{border-collapse:collapse;width:100%;min-width:780px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+thead th{position:sticky;top:0;background:var(--bg3);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--dim);font-weight:600;white-space:nowrap}
+thead th.sortable::after{content:" ↕";color:var(--dimmer)}
+thead th.on::after{content:" ↑";color:var(--gold)}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:#1f1b2e;cursor:pointer}
+td.name{font-weight:600;white-space:nowrap}
+td.name small{display:block;font-weight:400;color:var(--dimmer);font-size:11px}
+.cellnum{display:flex;align-items:center;gap:8px}
+.check{width:18px;height:18px;border-radius:5px;border:1.5px solid #443b5e;background:none;display:block;
+  position:relative;transition:background .1s,border-color .1s}
+.check:hover{border-color:var(--gold)}
+.check[aria-checked="true"]{background:var(--ok);border-color:var(--ok)}
+.check[aria-checked="true"]::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;
+  border:solid #10231a;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.cellnum span{font-size:12px;color:var(--dim);min-width:38px}
+.muted{color:var(--dimmer)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chip{font-size:12px;padding:5px 12px;border-radius:20px;border:1px solid var(--line);color:var(--dim)}
+.chip.on{border-color:var(--gold);color:var(--gold);background:#241f10}
+
+/* ---------- detail ---------- */
+.back{font-size:13px;color:var(--dim);margin-bottom:14px;display:inline-block}
+.back:hover{color:var(--gold)}
+.dhead{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.dhead .who h1{font-size:28px}
+.dhead .who .sub{color:var(--dimmer);font-size:13px;margin-top:2px}
+.dhead .caps{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.dhead .rollup{margin-left:auto;text-align:right;min-width:150px}
+.dhead .rollup .big{font-family:"Cinzel",Georgia,serif;font-size:28px;color:var(--gold)}
+.dhead .rollup .lbl{font-size:11px;color:var(--dimmer);text-transform:uppercase;letter-spacing:.07em}
+
+section.blk{border:1px solid var(--line);border-radius:12px;background:var(--bg2);margin-bottom:16px}
+.blkhead{display:flex;align-items:center;gap:12px;padding:13px 16px;background:var(--bg3);border-bottom:1px solid var(--line);border-radius:11px 11px 0 0}
+.blkhead h3{font-size:14px;letter-spacing:.05em;text-transform:uppercase}
+.blkhead .why{font-size:11px;color:var(--dimmer)}
+.blkhead .st{margin-left:auto;font-size:12px;color:var(--dim);display:flex;align-items:center;gap:8px}
+.blkbody{padding:6px 16px 12px}
+
+ul.items{list-style:none;margin:0;padding:0}
+ul.items li{display:flex;align-items:center;gap:11px;padding:8px 0;border-bottom:1px solid #262138}
+ul.items li:last-child{border-bottom:0}
+ul.items li .box{width:16px;height:16px;border-radius:4px;border:1.5px solid #443b5e;flex:none}
+ul.items li.done .box{background:var(--ok);border-color:var(--ok)}
+ul.items li.done .t{color:var(--dimmer);text-decoration:line-through}
+ul.items li .t{flex:1}
+ul.items li .meta{font-size:12px;color:var(--dimmer);white-space:nowrap}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 26px}
+.rank{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #262138}
+.rank:last-child{border-bottom:0}
+.rank .t{flex:1}
+
+
+/* ---------- fated list ---------- */
+.prophecy{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin-bottom:10px;overflow:hidden}
+.prophecy>summary{list-style:none;padding:13px 16px;display:flex;align-items:center;gap:12px;cursor:pointer}
+.prophecy>summary::-webkit-details-marker{display:none}
+.prophecy>summary .t{flex:1;font-weight:600}
+.prophecy>summary .t small{display:block;font-weight:400;color:var(--dimmer);font-size:12px}
+.prophecy[open]>summary{border-bottom:1px solid var(--line);background:var(--bg3)}
+.prophecy .body{padding:6px 16px 12px}
+.oneline{display:flex;align-items:center;gap:12px;padding:11px 16px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin-bottom:8px}
+.oneline .box{width:16px;height:16px;border-radius:4px;border:1.5px solid #443b5e;flex:none}
+.oneline.done .box{background:var(--ok);border-color:var(--ok)}
+.oneline .t{flex:1}
+.oneline .src{font-size:11px;color:var(--dimmer)}
+
+/* ---------- master-detail rail ---------- */
+.split{display:grid;grid-template-columns:290px minmax(0,1fr);gap:18px;align-items:stretch;flex:1;min-height:0;padding-bottom:14px}
+.rail{border:1px solid var(--line);border-radius:12px;background:var(--bg2);overflow-y:auto;min-height:0;scrollbar-width:thin}
+.rail button{display:block;width:100%;text-align:left;padding:10px 14px;border-bottom:1px solid #262138;border-left:2px solid transparent}
+.rail button:last-child{border-bottom:0}
+.rail button:hover{background:#1f1b2e}
+.rail button[aria-selected="true"]{background:#241f10;border-left-color:var(--gold)}
+.rail button[aria-selected="true"] .rn{color:var(--gold)}
+.rail .rn{font-weight:600;font-size:14px;display:block}
+.rail .rm{font-size:11px;color:var(--dimmer);display:flex;align-items:center;gap:8px;margin-top:4px}
+.rail .rm .bar{flex:1;min-width:0}
+.pane{min-width:0;overflow-y:auto;min-height:0;padding-right:4px;scrollbar-width:thin}
+.panehead{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.panehead h2{font-size:20px}
+.panehead .psub{color:var(--dimmer);font-size:13px;margin-top:3px;max-width:60ch}
+.panehead .pnum{margin-left:auto;text-align:right}
+.panehead .pnum .big{font-family:"Cinzel",Georgia,serif;font-size:22px;color:var(--gold)}
+.panehead .pnum .lbl{font-size:11px;color:var(--dimmer);text-transform:uppercase;letter-spacing:.07em}
+@media(max-width:860px){
+  .split{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}
+  .rail{max-height:200px}
+}
+
+.foot{color:var(--dim);font-size:13px;margin:14px 0 0}
+.rule{color:var(--dim);font-size:13px;margin:0 0 14px;display:flex;gap:8px;align-items:baseline}
+.rule::before{content:"How this counts";flex:none;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--dimmer)}
+
+/* ---------- descriptions and tooltips ---------- */
+.about{border:1px solid var(--line);background:var(--bg3);border-radius:10px;padding:13px 16px;margin:0 0 16px}
+.about .ah{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+.about p{margin:0;color:var(--ink);font-size:14px}
+.about p + p{margin-top:9px}
+.about .src{display:block;margin-top:8px;font-size:11px;color:var(--dimmer)}
+
+.tip{border-bottom:1px dotted #5c5478;cursor:help;position:relative;outline:none}
+.tip:hover,.tip:focus-visible{border-bottom-color:var(--gold)}
+.tip .tipbox{position:absolute;left:0;bottom:calc(100% + 8px);z-index:40;width:max-content;max-width:320px;
+  background:#2a2440;border:1px solid #473d68;border-radius:8px;padding:9px 12px;font-size:12.5px;line-height:1.5;
+  color:var(--ink);box-shadow:0 10px 28px rgba(0,0,0,.55);opacity:0;visibility:hidden;transition:opacity .12s;
+  white-space:normal;font-weight:400;text-decoration:none}
+.tip .tipbox b{display:block;color:var(--gold);font-family:"Cinzel",Georgia,serif;font-size:12px;margin-bottom:3px}
+.tip:hover .tipbox,.tip:focus-visible .tipbox{opacity:1;visibility:visible}
+.tip.below .tipbox{top:calc(100% + 8px);bottom:auto}
+thead .tip{text-transform:none;letter-spacing:normal}
+ul.items li.done .tip .tipbox{text-decoration:none}
+ul.items li .t{overflow:visible}
+
+/* ---------- cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:16px}
+.card h3{font-size:15px;margin-bottom:4px}
+.card p{margin:0 0 12px;font-size:13px;color:var(--dim)}
+.card .k{font-size:12px;color:var(--dimmer);display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-top:1px solid #262138}
+.cost{color:var(--gold);font-variant-numeric:tabular-nums;white-space:nowrap}
+.todo{border-style:dashed;opacity:.8}
+.todo h3{color:var(--dim)}
+
+footer{flex:none;border-top:1px solid var(--line);padding:12px 0;color:var(--dimmer);font-size:12px}
+@media(max-width:640px){
+  .dhead .rollup{margin-left:0;text-align:left}
+  .phead h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">Hades Tracker <small>structure preview</small></div>
+      <div class="globalbar">
+        <span>Overall <b class="gpct">38%</b></span>
+      </div>
+    </div>
+    <nav id="nav">
+      <button data-go="characters" aria-current="page">Characters</button>
+      <button data-go="weapons">Weapons</button>
+      <button data-go="fated">Fated List</button>
+      <button data-go="house">The House</button>
+      <button data-go="collections">Collections</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ PEOPLE ============ -->
+<div class="page on" id="p-characters">
+  <div class="phead"><h1>Characters</h1><span class="count">29 characters · 24 with affinity · 9 Olympians</span></div>
+  <div class="filters">
+    <button class="chip on">All · 29</button>
+    <button class="chip">Olympians · 9</button>
+    <button class="chip">With affinity · 24</button>
+    <button class="chip">Fightable · 7</button>
+    <button class="chip">With a favor · 7</button>
+    <button class="chip">Companion · 6</button>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>Character</th>
+        <th class="sortable on">Hearts</th>
+        <th class="sortable">Keepsake</th>
+        <th class="sortable">Boons</th>
+        <th>Favor</th>
+        <th>Markers</th>
+      </tr></thead>
+      <tbody id="characterRows"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============ CHARACTER: ZEUS ============ -->
+<div class="page" id="p-zeus">
+  <a class="back" href="#" data-go="characters">← Characters</a>
+  <div class="dhead">
+    <div class="who">
+      <h1>Zeus</h1>
+      <div class="sub">Olympian Gods</div>
+      <div class="caps">
+        <span class="tag oly">Olympian</span>
+      </div>
+    </div>
+    <div class="rollup"><div class="big">14/28</div><div class="lbl">actions done</div></div>
+  </div>
+
+
+  <section class="blk">
+    <div class="blkhead"><h3>Affinity</h3><span class="why">Nectar and Ambrosia</span>
+      <span class="st"><span class="pips" data-pips="4/7"></span> 4/7 hearts</span></div>
+    <div class="blkbody">
+      <ul class="items">
+        <li class="done"><span class="box"></span><span class="t">Give Nectar to Zeus for the first time</span><span class="meta">unlocks the keepsake</span></li>
+        <li class="done"><span class="box"></span><span class="t">Hearts 2 to 4</span><span class="meta">3 gifts</span></li>
+        <li><span class="box"></span><span class="t">Hearts 5 to 7</span><span class="meta">3 gifts left</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Boons</h3><span class="why">only for those who grant them</span>
+      <span class="st">9/22 <span class="bar" style="width:80px"><i style="width:41%"></i></span></span></div>
+    <div class="blkbody">
+      <div class="grid2">
+        <ul class="items">
+          <li class="done"><span class="box"></span><span class="t">Lightning Strike</span><span class="meta">attack</span></li>
+          <li class="done"><span class="box"></span><span class="t">Thunder Dash</span><span class="meta">dash</span></li>
+          <li class="done"><span class="box"></span><span class="t">Electric Shot</span><span class="meta">cast</span></li>
+          <li><span class="box"></span><span class="t">Thunder Flourish</span><span class="meta">special</span></li>
+          <li><span class="box"></span><span class="t">Zeus' Aid</span><span class="meta">call</span></li>
+          <li><span class="box"></span><span class="t">Heaven's Vengeance</span><span class="meta">passive</span></li>
+          <li class="done"><span class="box"></span><span class="t">Storm Lightning</span><span class="meta">passive</span></li>
+        </ul>
+        <ul class="items">
+          <li><span class="box"></span><span class="t">Splitting Bolt</span><span class="meta">legendary</span></li>
+          <li class="done"><span class="box"></span><span class="t">Sea Storm</span><span class="meta">duo · Poseidon</span></li>
+          <li><span class="box"></span><span class="t">Lightning Phalanx</span><span class="meta">duo · Athena</span></li>
+          <li><span class="box"></span><span class="t">Cold Fusion</span><span class="meta">duo · Demeter</span></li>
+          <li><span class="box"></span><span class="t">Vengeful Mood</span><span class="meta">duo · Ares</span></li>
+          <li><span class="box"></span><span class="t">Smoldering Air</span><span class="meta">duo · Aphrodite</span></li>
+          <li><span class="box"></span><span class="t">+ 7 remaining</span><span class="meta">duos and commons</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Keepsake</h3><span class="why">Thunder Signet</span>
+      <span class="st"><span class="pips gold" data-pips="2/3"></span> rank 2/3</span></div>
+    <div class="blkbody">
+      <div class="rank"><span class="t">Obtain the Thunder Signet</span><span class="meta muted">Nectar given ✓</span></div>
+      <div class="rank"><span class="t">Rank 2 — 25 encounters equipped</span><span class="meta muted">done</span></div>
+      <div class="rank"><span class="t">Rank 3 — 50 encounters equipped</span><span class="meta muted">missing</span></div>
+      <div class="rank"><span class="t">Equip it at least once</span><span class="meta muted">→ prophecy “Close at Heart”</span></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Conversations and invite</h3><span class="why">quest content</span><span class="st">1/3</span></div>
+    <div class="blkbody">
+      <ul class="items">
+        <li class="done"><span class="box"></span><span class="t">Meet Zeus</span></li>
+        <li><span class="box"></span><span class="t">Invite Zeus to the family reunion</span><span class="meta">→ “The Queen's Plan”</span></li>
+        <li><span class="box"></span><span class="t">Hear Zeus wish to reconcile with Hades</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Codex</h3><span class="why">dissolved into this page</span><span class="st">unlocked</span></div>
+    <div class="blkbody">
+      <ul class="items"><li class="done"><span class="box"></span><span class="t">Codex entry unlocked</span><span class="meta">Olympian Gods</span></li></ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CHARACTER: DUSA ============ -->
+<div class="page" id="p-dusa">
+  <a class="back" href="#" data-go="characters">← Characters</a>
+  <div class="dhead">
+    <div class="who">
+      <h1>Dusa</h1>
+      <div class="sub">House of Hades</div>
+      <div class="caps">
+        <span class="tag quest">Favor</span><span class="tag comp">Companion</span>
+      </div>
+    </div>
+    <div class="rollup"><div class="big">3/10</div><div class="lbl">actions done</div></div>
+  </div>
+
+
+  <section class="blk">
+    <div class="blkhead"><h3>Affinity</h3><span class="why">Nectar and Ambrosia</span>
+      <span class="st"><span class="pips" data-pips="3/10"></span> 3/10 hearts</span></div>
+    <div class="blkbody">
+      <ul class="items">
+        <li class="done"><span class="box"></span><span class="t">Give Nectar to Dusa for the first time</span><span class="meta">unlocks the keepsake</span></li>
+        <li class="done"><span class="box"></span><span class="t">Hearts 2 and 3</span></li>
+        <li><span class="box"></span><span class="t">Hearts 4 and 5</span><span class="meta">2 gifts left</span></li>
+        <li><span class="box"></span><span class="t">Heart 6</span><span class="meta">locked until the Lounge favor is done</span></li>
+        <li><span class="box"></span><span class="t">Hearts 7 to 10</span><span class="meta">Ambrosia</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Favor — Lounge renovation</h3><span class="why">quest content, not a capability</span><span class="st">0/5</span></div>
+    <div class="blkbody">
+      <ul class="items">
+        <li><span class="box"></span><span class="t">Buy the Deep Cleaning lounge service</span><span class="meta">House Contractor · <span class="cost">price pending</span></span></li>
+        <li><span class="box"></span><span class="t">Buy the Detailing lounge service</span><span class="meta">House Contractor</span></li>
+        <li><span class="box"></span><span class="t">Buy any rug for the Lounge</span><span class="meta">House Contractor</span></li>
+        <li><span class="box"></span><span class="t">Other Lounge items purchased</span><span class="meta">0/10</span></li>
+        <li><span class="box"></span><span class="t">Speak with Dusa after decorating the Lounge</span><span class="meta">→ opens the 6th heart</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Keepsake</h3><span class="why">Harpy Feather Duster</span>
+      <span class="st"><span class="pips gold" data-pips="1/3"></span> rank 1/3</span></div>
+    <div class="blkbody">
+      <div class="rank"><span class="t">Obtain the Harpy Feather Duster</span><span class="meta muted">Nectar given ✓</span></div>
+      <div class="rank"><span class="t">Rank 2 — 25 encounters equipped</span><span class="meta muted">missing</span></div>
+      <div class="rank"><span class="t">Rank 3 — 50 encounters equipped</span><span class="meta muted">missing</span></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Companion — Fidi</h3><span class="why">Ambrosia after the favor</span><span class="st">locked</span></div>
+    <div class="blkbody">
+      <ul class="items">
+        <li><span class="box"></span><span class="t">Finish the Lounge renovation</span><span class="meta muted">prerequisite</span></li>
+        <li><span class="box"></span><span class="t">Give Ambrosia to Dusa for the first time</span><span class="meta">→ obtain Fidi</span></li>
+        <li><span class="box"></span><span class="t">Fidi's own Codex entry</span><span class="meta muted">Fables</span></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PERSON: THESEUS ============ -->
+<div class="page" id="p-theseus">
+  <a class="back" href="#" data-go="characters">← Characters</a>
+  <div class="dhead">
+    <div class="who">
+      <h1>Theseus</h1>
+      <div class="sub">Elysium</div>
+      <div class="caps"><span class="tag fight">Fightable</span></div>
+    </div>
+    <div class="rollup"><div class="big">1/3</div><div class="lbl">actions done</div></div>
+  </div>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Combat</h3><span class="st">0/1</span></div>
+    <div class="blkbody">
+      <ul class="items">
+        <li><span class="box"></span><span class="t">Defeat Theseus while Extreme Measures is active</span><span class="meta">→ Pact · Elysium</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Linked to</h3><span class="why">cross references</span></div>
+    <div class="blkbody">
+      <ul class="items">
+        <li><span class="box"></span><span class="t">Speak with Poseidon after defeating Extreme Measures Theseus</span><span class="meta muted">Poseidon's page</span></li>
+        <li class="done"><span class="box"></span><span class="t">Codex entry unlocked</span><span class="meta muted">Others of Note</span></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ WEAPONS ============ -->
+<div class="page" id="p-weapons">
+  <div class="phead"><h1>Weapons</h1><span class="count">6 weapons · 24 aspects · 72 enchantments</span></div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>Weapon</th><th>Unlocked</th><th>Escaped</th>
+        <th class="sortable"><span class="tip below" tabindex="0">Aspects<span class="tipbox"><b>Aspect</b>An alternate form of the weapon, bought with Titan Blood at the weapon rack. Every weapon has four, and each levels from 1 to 5. An Aspect changes how the weapon plays, not just its numbers.</span></span></th><th class="sortable on"><span class="tip below" tabindex="0">Daedalus<span class="tipbox"><b>Daedalus enchantment</b>An upgrade offered by a Daedalus Hammer during a run. It lasts only that run; what is permanent is having taken it once. 12 per weapon.</span></span></th><th>Aspect levels</th>
+      </tr></thead>
+      <tbody id="weaponRows"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============ WEAPON: CORONACHT ============ -->
+<div class="page" id="p-coronacht">
+  <a class="back" href="#" data-go="weapons">← Weapons</a>
+  <div class="dhead">
+    <div class="who">
+      <h1>Coronacht</h1>
+      <div class="sub">Heart-Seeking Bow</div>
+    </div>
+    <div class="rollup"><div class="big">11/19</div><div class="lbl">actions done</div></div>
+  </div>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Milestones</h3><span class="why">escape, Cerberus, Codex</span><span class="st">2/3</span></div>
+    <div class="blkbody">
+      <ul class="items">
+        <li class="done"><span class="box"></span><span class="t"><span class="tip" tabindex="0">Obtain Coronacht<span class="tipbox"><b>How you get it</b>Buy it from the weapon rack with Chthonic Keys. Each weapon after the first costs more keys than the last.</span></span></span></li>
+        <li class="done"><span class="box"></span><span class="t"><span class="tip" tabindex="0">Escape the Underworld with Coronacht<span class="tipbox"><b>How you get it</b>Start a run with this weapon and reach the surface without dying. It counts once per weapon, so six escapes cover the whole prophecy.</span></span></span><span class="meta">→ “Chthonic Colleagues”</span></li>
+        <li><span class="box"></span><span class="t"><span class="tip" tabindex="0">Get past Cerberus with the Aspect of Rama in effect<span class="tipbox"><b>How you get it</b>Cerberus blocks a chamber in the Temple of Styx. You must be carrying Coronacht with the Aspect of Rama equipped when you pass him, so the Aspect has to be unlocked first.</span></span></span><span class="meta">→ Temple of Styx</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Aspects</h3><span class="why">Titan Blood</span><span class="st">9/20 levels</span></div>
+    <div class="blkbody">
+      <div class="rank"><span class="t"><span class="tip" tabindex="0">Aspect of Zagreus<span class="tipbox"><b>Aspect of Zagreus</b>The plain form of the bow, available from the start. Levelling it costs Titan Blood and raises its base damage.</span></span></span><span class="pips gold" data-pips="5/5"></span><span class="meta muted num">5/5</span></div>
+      <div class="rank"><span class="t"><span class="tip" tabindex="0">Aspect of Chiron<span class="tipbox"><b>Aspect of Chiron</b>Named after the centaur who taught Achilles. Changes how the Special behaves.</span></span></span><span class="pips gold" data-pips="3/5"></span><span class="meta muted num">3/5</span></div>
+      <div class="rank"><span class="t"><span class="tip" tabindex="0">Aspect of Hera<span class="tipbox"><b>Aspect of Hera</b>Named after the queen of the Olympians. Changes how the Cast behaves.</span></span></span><span class="pips gold" data-pips="1/5"></span><span class="meta muted num">1/5</span></div>
+      <div class="rank"><span class="t"><span class="tip" tabindex="0">Aspect of Rama<span class="tipbox"><b>Aspect of Rama</b>The hidden Aspect of this weapon. It only becomes available late in the game, which is why it shows as locked.</span></span></span><span class="pips gold" data-pips="0/5"></span><span class="meta muted num">locked</span></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="blkhead"><h3>Daedalus enchantments</h3><span class="why">taking it once is enough</span><span class="st">5/12 <span class="bar" style="width:80px"><i style="width:42%"></i></span></span></div>
+    <div class="blkbody">
+      <div class="grid2">
+        <ul class="items">
+          <li class="done"><span class="box"></span><span class="t">Twin Shot</span></li>
+          <li class="done"><span class="box"></span><span class="t">Sniper Shot</span></li>
+          <li class="done"><span class="box"></span><span class="t">Explosive Shot</span></li>
+          <li class="done"><span class="box"></span><span class="t">Flurry Shot</span></li>
+          <li class="done"><span class="box"></span><span class="t">Piercing Volley</span></li>
+          <li><span class="box"></span><span class="t">Perfect Shot</span></li>
+        </ul>
+        <ul class="items">
+          <li><span class="box"></span><span class="t">Relentless Volley</span></li>
+          <li><span class="box"></span><span class="t">Triple Shot</span></li>
+          <li><span class="box"></span><span class="t">Charged Volley</span></li>
+          <li><span class="box"></span><span class="t">Chain Shot</span></li>
+          <li><span class="box"></span><span class="t">Point-Blank Shot</span></li>
+          <li><span class="box"></span><span class="t">Concentrated Volley</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ FATED LIST ============ -->
+<div class="page" id="p-fated">
+  <div class="phead"><h1>Fated List</h1><span class="count">55 minor prophecies · 12 complete</span></div>
+  <div class="split">
+    <div class="rail" role="tablist" aria-label="Prophecies" data-rail="fated"></div>
+    <div class="pane" id="pane-fated" role="tabpanel"></div>
+  </div>
+</div>
+
+<!-- ============ COLLECTIONS ============ -->
+<div class="page" id="p-collections">
+  <div class="phead"><h1>Collections</h1><span class="count">closed lists with no other owner</span></div>
+  <div class="split">
+    <div class="rail" role="tablist" aria-label="Collections" data-rail="collections"></div>
+    <div class="pane" id="pane-collections" role="tabpanel"></div>
+  </div>
+</div>
+
+<!-- ============ THE HOUSE ============ -->
+<div class="page" id="p-house">
+  <div class="phead"><h1>The House</h1><span class="count">what you buy and what you configure</span></div>
+  <div class="split">
+    <div class="rail" role="tablist" aria-label="House systems" data-rail="house"></div>
+    <div class="pane" id="pane-house" role="tabpanel"></div>
+  </div>
+</div>
+
+</main>
+
+<footer class="wrap">
+  Static preview. Example data, invented progress — walk the structure, do not check numbers against it.
+</footer>
+
+<script>
+const CHARACTERS = [
+  {id:'zeus',    n:'Zeus',      s:'Olympian Gods',        h:[4,7],  k:[2,3], b:[9,22],  q:null,  t:['oly']},
+  {id:null,      n:'Poseidon',  s:'Olympian Gods',        h:[7,7],  k:[3,3], b:[12,22], q:null,  t:['oly']},
+  {id:null,      n:'Athena',    s:'Olympian Gods',        h:[2,7],  k:[1,3], b:[4,20],  q:null,  t:['oly']},
+  {id:null,      n:'Artemis',   s:'Olympian Gods',        h:[5,7],  k:[2,3], b:[5,21],  q:null,  t:['oly']},
+  {id:null,      n:'Demeter',   s:'Olympian Gods',        h:[0,7],  k:[0,3], b:[0,20],  q:null,  t:['oly']},
+  {id:null,      n:'Chaos',     s:'Chthonic Gods',        h:[1,8],  k:[1,3], b:[6,25],  q:null,  t:['grants']},
+  {id:null,      n:'Nyx',       s:'House of Hades',       h:[6,9],  k:[2,3], b:null,    q:[1,2], t:['quest']},
+  {id:null,      n:'Megaera',   s:'House of Hades · Fury',h:[4,10], k:[1,3], b:null,    q:[0,1], t:['fight','quest','comp']},
+  {id:null,      n:'Thanatos',  s:'House of Hades',       h:[3,10], k:[1,3], b:null,    q:[0,1], t:['quest','comp']},
+  {id:'dusa',    n:'Dusa',      s:'House of Hades',       h:[3,10], k:[1,3], b:null,    q:[0,5], t:['quest','comp']},
+  {id:null,      n:'Achilles',  s:'House of Hades',       h:[5,9],  k:[2,3], b:null,    q:[0,1], t:['quest','comp']},
+  {id:null,      n:'Sisyphus',  s:'Asphodel',             h:[2,9],  k:[0,3], b:null,    q:[0,1], t:['quest','comp']},
+  {id:null,      n:'Skelly',    s:'House of Hades',       h:[4,9],  k:[3,3], b:null,    q:null,  t:['fight','comp']},
+  {id:null,      n:'Charon',    s:'in-run shop',          h:[1,7],  k:[0,3], b:null,    q:null,  t:['fight']},
+  {id:null,      n:'Cerberus',  s:'House of Hades',       h:[2,9],  k:[1,3], b:null,    q:null,  t:['fight']},
+  {id:null,      n:'Hades',     s:'final boss',           h:[1,5],  k:[0,3], b:null,    q:null,  t:['fight']},
+  {id:'theseus', n:'Theseus',   s:'Elysium',              h:null,   k:null,  b:null,    q:null,  t:['fight']},
+  {id:null,      n:'Asterius',  s:'Elysium',              h:null,   k:null,  b:null,    q:null,  t:['fight']},
+  {id:null,      n:'Zagreus',   s:'you',                  h:null,   k:null,  b:null,    q:null,  t:[]},
+];
+const TAGLABEL = {oly:'Olympian', grants:'Grants boons', fight:'Fightable', quest:'Favor', comp:'Companion'};
+
+const WEAPONS = [
+  {id:'coronacht', n:'Coronacht', s:'Heart-Seeking Bow',   own:1, esc:1, asp:[5,3,1,0], dae:[5,12]},
+  {id:null, n:'Stygius',          s:'Stygian Blade',       own:1, esc:1, asp:[5,5,2,0], dae:[9,12]},
+  {id:null, n:'Varatha',          s:'Eternal Spear',       own:1, esc:1, asp:[3,0,0,0], dae:[4,12]},
+  {id:null, n:'Aegis',            s:'Shield of Chaos',     own:1, esc:0, asp:[2,0,0,0], dae:[3,12]},
+  {id:null, n:'Malphon',          s:'Twin Fists',          own:1, esc:0, asp:[1,0,0,0], dae:[1,12]},
+  {id:null, n:'Exagryph',         s:'Adamant Rail',        own:0, esc:0, asp:[0,0,0,0], dae:[0,12]},
+];
+
+function pips(f,t,cls){
+  let s = `<span class="pips ${cls||''}">`;
+  for(let i=0;i<t;i++) s += `<b class="${i<f?'f':''}"></b>`;
+  return s+'</span>';
+}
+function cell(pair, cls){
+  if(!pair) return '<span class="muted">—</span>';
+  const [f,t]=pair, pc=t?Math.round(f/t*100):0;
+  return `<div class="cellnum"><span class="num">${f}/${t}</span><span class="bar ${cls||''}" style="width:70px"><i style="width:${pc}%"></i></span></div>`;
+}
+
+document.getElementById('characterRows').innerHTML = CHARACTERS.map(p=>`
+  <tr ${p.id?`data-go="${p.id}"`:''}>
+    <td class="name">${p.n}<small>${p.s}</small></td>
+    <td>${p.h?`${pips(p.h[0],p.h[1])} <span class="muted num" style="font-size:12px">${p.h[0]}/${p.h[1]}</span>`:'<span class="muted">—</span>'}</td>
+    <td>${p.k?pips(p.k[0],p.k[1],'gold'):'<span class="muted">—</span>'}</td>
+    <td>${cell(p.b)}</td>
+    <td>${p.q?cell(p.q,'teal'):'<span class="muted">—</span>'}</td>
+    <td>${p.t.map(t=>`<span class="tag ${t}">${TAGLABEL[t]}</span>`).join(' ')||'<span class="muted">—</span>'}</td>
+  </tr>`).join('');
+
+document.getElementById('weaponRows').innerHTML = WEAPONS.map(w=>{
+  const lvl = w.asp.reduce((a,b)=>a+b,0);
+  return `<tr ${w.id?`data-go="${w.id}"`:''}>
+    <td class="name">${w.n}<small>${w.s}</small></td>
+    <td><button class="check" role="checkbox" aria-checked="${!!w.own}" aria-label="${w.n} unlocked"></button></td>
+    <td><button class="check" role="checkbox" aria-checked="${!!w.esc}" aria-label="Escaped with ${w.n}"></button></td>
+    <td><span class="pipset">${w.asp.map(a=>pips(a,5,'gold')).join('')}</span></td>
+    <td>${cell(w.dae)}</td>
+    <td><span class="num muted">${lvl}/20</span></td>
+  </tr>`;
+}).join('');
+
+document.querySelectorAll('.pips[data-pips]').forEach(el=>{
+  const [f,t]=el.dataset.pips.split('/').map(Number);
+  el.innerHTML = pips(f,t).replace(/^<span[^>]*>|<\/span>$/g,'');
+});
+
+/* ---------- master-detail rails ---------- */
+// li(text, done, meta)
+function tip(label, title, text){
+  return `<span class="tip" tabindex="0">${label}<span class="tipbox"><b>${title}</b>${text}</span></span>`;
+}
+function rule(text){ return `<p class="rule"><span>${text}</span></p>`; }
+function about(text, src){
+  return `<div class="about"><div class="ah">What this is</div><p>${text}</p>${src?`<span class="src">${src}</span>`:''}</div>`;
+}
+function li(t,d,m){ return `<li class="${d?'done':''}"><span class="box"></span><span class="t">${t}</span>${m?`<span class="meta">${m}</span>`:''}</li>`; }
+function list(rows){ return `<ul class="items">${rows.join('')}</ul>`; }
+function blk(title,why,st,body){
+  return `<section class="blk"><div class="blkhead"><h3>${title}</h3>${why?`<span class="why">${why}</span>`:''}${st?`<span class="st">${st}</span>`:''}</div><div class="blkbody">${body}</div></section>`;
+}
+
+const RAILS = {
+  fated: {
+    footnote: 'Showing 13 of 55. The rail holds all 55, sorted by whatever column you pick.',
+    items: [
+      {n:'God of the Heavens', s:'Earn each of the Boons of Zeus', p:[9,13],
+       body: blk('Boons of Zeus','13 common boons','9/13',
+         list([li('Lightning Strike',1),li('Thunder Dash',1),li('Electric Shot',1),li('Storm Lightning',1),
+               li('Thunder Flourish',0),li("Zeus' Aid",0),li("Heaven's Vengeance",0),li('Clouded Judgment',0),
+               li('+ 5 more',0,'shared with Zeus’s own page')]))
+         + `<p class="foot">Ticking a boon here ticks it on Zeus’s page too. One fact per action, never a copy.</p>`},
+
+      {n:'Goddess of Wisdom', s:'Earn each of the Boons of Athena', p:[4,11],
+       body: blk('Boons of Athena','11 common boons','4/11',
+         list([li('Divine Strike',1),li('Divine Dash',1),li('Phalanx Shot',1),li('Divine Flourish',1),
+               li("Athena's Aid",0),li('Bronze Skin',0),li('Deathless Stand',0),li('+ 4 more',0)]))},
+
+      {n:'Divine Pairings', s:'Earn each Duo Boon', p:[3,28],
+       body: blk('Duo Boons','one per pair of eligible gods','3/28',
+         list([li('Sea Storm',1,'Zeus · Poseidon'),li('Merciful End',1,'Ares · Athena'),li('Ice Wine',1,'Demeter · Dionysus'),
+               li('Lightning Phalanx',0,'Zeus · Athena'),li('Cold Fusion',0,'Zeus · Demeter'),li('Hunting Blades',0,'Ares · Artemis'),
+               li('+ 22 more',0,'each one shows on both gods’ pages')]))},
+
+      {n:'Power Without Equal', s:'Earn 10 Legendary Boons', p:[1,10],
+       body: blk('Legendary Boons','the Fated List asks for 10 of the 12','1/10',
+         list([li('Splitting Bolt',1,'Zeus'),li('Divine Protection',0,'Athena'),li('Second Wave',0,'Poseidon'),
+               li('Vicious Cycle',0,'Ares'),li('Fully Loaded',0,'Artemis'),li('+ 5 more',0)]))},
+
+      {n:'Close at Heart', s:'Equip each Keepsake at least once', p:[11,25],
+       body: blk('Keepsakes equipped','equipping, not obtaining','11/25',
+         list([li('Thunder Signet',1,'Zeus'),li('Harpy Feather Duster',1,'Dusa'),li('Conch Shell',1,'Poseidon'),
+               li('Lucky Tooth',0,'Skelly'),li('Cosmic Egg',0,'Chaos'),li('+ 20 more',0)]))
+         + `<p class="foot">Obtaining a keepsake and equipping it are separate facts. Nectar gets you the keepsake; this prophecy wants it equipped.</p>`},
+
+      {n:"The Queen's Plan", s:'Invite 6 of the 9 Olympians', p:[2,6],
+       body: `<p class="lede" style="margin:0 0 14px">A <b>count</b> node: any 6 of the 9 satisfy it.</p>` +
+         blk('Invitations','6 of 9 needed','2/6',
+         list([li('Invite Poseidon',1),li('Invite Artemis',1),li('Invite Zeus',0),li('Invite Athena',0),
+               li('Invite Ares',0),li('Invite Aphrodite',0),li('+ 3 more available',0)]))},
+
+      {n:'Chthonic Colleagues', s:'Escape with each of the 6 weapons', p:[6,6],
+       body: blk('Escapes by weapon','one escape each','6/6',
+         list([li('Stygius',1),li('Coronacht',1),li('Varatha',1),li('Aegis',1),li('Malphon',1),li('Exagryph',1)]))},
+
+      {n:'Master of Arms', s:'Unlock every weapon Aspect', p:[9,24],
+       body: blk('Aspects by weapon','4 per weapon','9/24',
+         list([li('Stygius — 3 of 4',0,'→ weapon page'),li('Coronacht — 3 of 4',0,'→ weapon page'),
+               li('Varatha — 1 of 4',0),li('Aegis — 1 of 4',0),li('Malphon — 1 of 4',0),li('Exagryph — 0 of 4',0)]))},
+
+      {n:'The Heart-Seeking Bow', s:'Take every Daedalus enchantment for Coronacht', p:[5,12],
+       body: blk('Daedalus enchantments','Coronacht','5/12',
+         list([li('Twin Shot',1),li('Sniper Shot',1),li('Explosive Shot',1),li('Flurry Shot',1),li('Piercing Volley',1),
+               li('Perfect Shot',0),li('+ 6 more',0,'→ Coronacht page')]))},
+
+      {n:'Harsh Conditions', s:'Escape with each Pact condition active', p:[6,15],
+       body: blk('Pact of Punishment','a single point ticks one off','6/15',
+         list([li('Hard Labor',1),li('Lasting Consequences',1),li('Convenience Fee',1),li('Jury Summons',1),
+               li('Extreme Measures',1),li('Calisthenics Program',1),li('+ 9 more',0)]))},
+
+      {n:'Denizens of the Deep', s:'Catch every fish', p:[3,18],
+       body: blk('Fish by biome','18 species','3/18',
+         list([li('Mati',1,'Chaos'),li('Hellfish',1,'Tartarus'),li('Knucklehead',1,'Tartarus'),
+               li('Projelly',0,'Chaos'),li('Voidskate',0,'Chaos'),li('+ 13 more',0,'→ Collections')]))},
+
+      {n:'Eternal Rest', s:'Slay Skelly with the Aspect of Zagreus at level 5', p:[0,1],
+       body: blk('Single action','state and action in the same moment','0/1',
+         list([li('Slay Skelly with Stygius while its Aspect of Zagreus is at level 5',0,'→ Skelly · Stygius')]))},
+
+      {n:'Is There No Escape?', s:'Escape the Underworld for the first time', p:[1,1],
+       body: blk('Single action','','1/1', list([li('Escape the Underworld',1,'→ 12 more prophecies open up')]))},
+    ]
+  },
+
+  collections: {
+    items: [
+      {n:'Fish', s:'18 species · 6 biomes', p:[3,18],
+       body: rule('Ticked the first time you land each species. Poseidon’s last heart is gated at 18.') +
+         blk('Chaos','','1/3', list([li('Mati',1),li('Projelly',0),li('Voidskate',0)])) +
+         blk('Tartarus','','2/3', list([li('Hellfish',1),li('Knucklehead',1),li('Scyllascion',0)])) +
+         blk('Asphodel','','0/3', list([li('Slavug',0),li('Chrustacean',0),li('Flameater',0)])) +
+         blk('Elysium · Temple of Styx · Greece','9 species','0/9', list([li('Chlam, Charp, Seamare',0,'Elysium'),li('Gupp, Scuffer, Stonewhal',0,'Temple of Styx'),li('Trout, Bass, Sturgeon',0,'Greece')]))},
+
+      {n:'Artifacts', s:'16 resources', p:[11,16],
+       body: blk('Collected','ticked the first time each appears','11/16',
+         list([li('Chthonic Keys',1),li('Darkness',1),li('Gemstones',1),li('Nectar',1),li('Ambrosia',1),li('Titan Blood',1),
+               li('Diamonds',1),li('Pom of Power',1),li("Charon's Obol",1),li('Centaur Heart',1),li('Daedalus Hammer',1),
+               li('+ 5 more',0)]))},
+
+      {n:'Boons by type', s:'202 boons, cross-section', p:[44,202],
+       body: `<p class="foot" style="margin:0 0 14px">These are the same 202 boons listed on each god’s page, grouped by type instead of by giver.</p>` +
+         blk('Common','111 across 9 gods','34/111', list([li('Zeus — 9 of 13',0),li('Poseidon — 7 of 13',0),li('Athena — 4 of 11',0),li('+ 6 gods',0)])) +
+         blk('Duo','28 pairs','3/28', list([li('Sea Storm',1),li('Merciful End',1),li('Ice Wine',1),li('+ 25 missing',0)])) +
+         blk('Legendary','10 asked for','1/10', list([li('Splitting Bolt',1),li('+ 9 missing',0)])) +
+         blk('Chaos','11 blessings · 13 curses · 1 legendary','6/25', list([li('6 taken',1),li('19 missing',0)]))},
+
+      {n:'Companions', s:'6 legendary keepsakes', p:[0,6],
+       body: `<p class="lede" style="margin:0 0 14px">Each one needs a completed favor plus one Ambrosia. The steps live on the giver’s page.</p>` +
+         blk('Companions','giver · gate','0/6',
+         list([li('Battie',0,'Megaera · favor'),li('Mort',0,'Thanatos · favor'),li('Fidi',0,'Dusa · Lounge'),
+               li('Shady',0,'Sisyphus · sentence'),li('Rib',0,'Skelly · Aspect lvl 5'),li('Antos',0,'Achilles · reunion')]))},
+    ]
+  },
+
+  house: {
+    items: [
+      {n:'Mirror of Night', s:'12 talent pairs', p:[9,24],
+       body: rule('Each of the 12 talents has a red side and a green side. Only one is active at a time, and switching is free, so both sides count separately.') +
+         blk('Red side','','7/12', list([li('Shadow Presence',1),li('Fiery Presence',1),li('Death Defiance',1),li('+ 4 taken, 5 missing',0)])) +
+         blk('Green side','','2/12', list([li('Greater Reflex',1),li('Boiling Blood',1),li('+ 10 missing',0)])) +
+         blk('Darkness','spent so far','18,400', list([li('Next talent',0,'cost pending')]))},
+
+      {n:'Pact of Punishment', s:'15 conditions · Heat', p:[6,15],
+       body: about('The Pact of Punishment is the difficulty menu at the door out of the House. You switch on Conditions that make the run harder — tougher foes, less healing, a time limit — and each point you add raises your <b>Heat</b>. Higher Heat unlocks better rewards and is the only way to keep farming a region you have already cleared. You choose the Conditions before each run and can change them freely.',
+         'Draft. Verify against hades.fandom.com/wiki/Pact_of_Punishment before this ships.') +
+         `<p class="lede" style="margin:0 0 14px">The Fated List only needs a single point in a Condition. The 15 entries below track raising each one to its own maximum.</p>` +
+         blk('Conditions activated','','6/15',
+         list([li(tip('Hard Labor','Hard Labor · max rank 5','Foes deal more damage. Raise it to rank 5 for this entry; the Fated List only needs rank 1.'),1),
+               li(tip('Lasting Consequences','Lasting Consequences · max rank 4','Zagreus no longer heals from the fountains between chambers. Rank 4 for this entry.'),1),
+               li(tip('Convenience Fee','Convenience Fee · max rank 2','Everything on sale costs more Obols. Rank 2 for this entry.'),1),
+               li(tip('Jury Summons','Jury Summons · max rank 3','Extra foes join each encounter. Rank 3 for this entry.'),1),
+               li(tip('Extreme Measures','Extreme Measures · max rank 4','Each region boss gains a new, harder phase. Rank 4 covers all four bosses.'),1,'→ Theseus, Hades'),
+               li(tip('Calisthenics Program','Calisthenics Program · max rank 2','Foes have more health. Rank 2 for this entry.'),1),
+               li(tip('Benefits Package','Benefits Package · max rank 2','Foes gain a random Perk, such as teleporting or splitting in two.'),0,'→ Wretched Broker perks'),
+               li('+ 8 more',0)])) +
+         blk('Heat','highest cleared','12', list([li('Reach Heat 16',0)]))},
+
+      {n:'House Contractor', s:'shop · ~28 items still missing', p:[2,12],
+       body: about('The House Contractor takes <b>Gemstones</b> and turns them into renovations: new rooms, decorations, fountains, and the Work Orders that unlock other characters\u2019 story steps. Everything he sells is permanent. He is the reason several favors can be finished at all.',
+         'Draft. Verify against hades.fandom.com/wiki/House_Contractor before this ships.') +
+         blk('Work orders','5 facts, all owned by a character','1/5',
+         list([li('Eldest Sigil Restoration',1,'→ Nyx'),li('+ 4 orders',0,'→ their characters')])) +
+         blk('Lounge items','4 facts, all owned by Dusa','0/4',
+         list([li('Deep Cleaning service',0,'→ Dusa'),li('Detailing service',0,'→ Dusa'),li('Any rug',0,'→ Dusa'),li('Other Lounge items 0/10',0,'→ Dusa')])) +
+         blk('Renovation tasks','the only fact the shop owns','1/1', list([li('Renovation tasks completed',1)])) +
+         blk('Not mapped yet','deferred on purpose','~28 items',
+         list([li('Remaining Contractor stock',0,'names and prices to gather'),li('Cost metadata in the schema',0,'multi-currency')]))},
+
+      {n:'Well of Charon', s:'26 purchasable items', p:[9,26],
+       body: rule('Ticked the first time you buy each item. What you buy is spent when the run ends, so only ever-bought is progress. Charon’s other shop, the one he stands in, is not tracked: its stock is random.') +
+         blk('Bought','','9/26',
+         list([li('Chaos Cutter',1),li('Bloodstone',1),li('+ 7 bought',1),li('+ 17 never bought',0)])) +
+         blk('Prices','deferred','pending', list([li('Obol cost per item',0,'schema change needed')]))},
+
+      {n:'Wretched Broker', s:'11 named perks', p:[4,11],
+       body: about('These 11 Perks are the extra abilities foes gain when the <b>Benefits Package</b> Pact condition is switched on. Each one changes how a foe behaves, and the Fated List asks you to slay a foe carrying each Perk at least once. The Wretched Broker is a separate character who trades resources; the Perks are named after his benefits, which is why they sit together.',
+         'Draft. The 11 Perk descriptions we already store are sourced; this framing paragraph is not. Verify before it ships.') +
+         blk('Perks','from the Benefits Package condition','4/11',
+         list([li('Chthonic Key exchange',1),li('Darkness exchange',1),li('Gemstone exchange',1),li('Nectar exchange',1),li('+ 7 missing',0)]))},
+
+      {n:'Platform achievements', s:'49 + 1 for earning all 49', p:[0,50],
+       body: about('There are 50 platform achievements: 49 ordinary ones, plus a 50th earned by completing the other 49. Steam lists only 49 publicly because the 50th is hidden. None of them is in the tracker yet.') +
+         blk('Entries','','0', list([li('To gather',0,'49 + 1 completionist')]))},
+    ]
+  }
+};
+
+function railBar(p){
+  if(!p || !p[1]) return '<span class="muted">—</span>';
+  const pc = Math.round(p[0]/p[1]*100);
+  return `<span class="num">${p[0]}/${p[1]}</span><span class="bar"><i style="width:${pc}%"></i></span>`;
+}
+function mountRail(key){
+  const rail = document.querySelector(`[data-rail="${key}"]`);
+  const pane = document.getElementById('pane-'+key);
+  const cfg = RAILS[key];
+  rail.innerHTML = cfg.items.map((it,i)=>`
+    <button role="tab" data-i="${i}" aria-selected="${i===0}">
+      <span class="rn">${it.n}</span>
+      <span class="rm">${railBar(it.p)}</span>
+    </button>`).join('') +
+    (cfg.footnote?`<div style="padding:10px 14px;font-size:11px;color:var(--dimmer)">${cfg.footnote}</div>`:'');
+  function show(i){
+    const it = cfg.items[i];
+    rail.querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected', String(+b.dataset.i===i)));
+    pane.innerHTML = `<div class="panehead"><div><h2>${it.n}</h2><div class="psub">${it.s}</div></div>
+      <div class="pnum"><div class="big">${it.p[1]?it.p[0]+'/'+it.p[1]:'—'}</div><div class="lbl">done</div></div></div>${it.body}`;
+  }
+  rail.addEventListener('click', e=>{
+    const b = e.target.closest('button[data-i]');
+    if(b) show(+b.dataset.i);
+  });
+  show(0);
+}
+['fated','collections','house'].forEach(mountRail);
+
+const NAVPAGES = ['characters','weapons','fated','house','collections'];
+const PARENT = {zeus:'characters', dusa:'characters', theseus:'characters', coronacht:'weapons'};
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on', p.id==='p-'+id));
+  const cur = NAVPAGES.includes(id) ? id : PARENT[id];
+  document.querySelectorAll('#nav button').forEach(b=>{
+    if(b.dataset.go===cur) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current');
+  });
+  window.scrollTo(0,0);
+}
+document.addEventListener('click', e=>{
+  const box = e.target.closest('.check');
+  if(box){
+    e.stopPropagation();
+    box.setAttribute('aria-checked', box.getAttribute('aria-checked') === 'true' ? 'false' : 'true');
+    return;
+  }
+  const el = e.target.closest('[data-go]');
+  if(!el) return;
+  e.preventDefault();
+  go(el.dataset.go);
+});
+</script>
+</body>
+</html>

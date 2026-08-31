@@ -24,6 +24,20 @@ export class HdProgress extends LitElement {
         font-size: 0.8rem;
         margin-top: 4px;
       }
+      .status {
+        align-items: center;
+        color: ${colorVar('--hd-color-muted')};
+        display: inline-flex;
+        font-size: 0.8rem;
+        gap: 6px;
+      }
+      .status[data-done='true'] {
+        color: ${colorVar('--hd-color-done')};
+      }
+      .status .icon {
+        font-size: 0.9rem;
+        line-height: 1;
+      }
     `,
   ]
 
@@ -41,7 +55,35 @@ export class HdProgress extends LitElement {
     return this.max <= 0 ? 0 : Math.min(this.value / this.max, 1)
   }
 
+  /**
+   * A max of 0 or 1 can only ever read 0% or 100%: one bit of information.
+   * A full-width bar for that is decoration, and the heaviest element in a
+   * row that carries the least meaning. Below this max, render a compact
+   * done/not-done status instead — see `renderCompact`.
+   */
   override render() {
+    return this.max <= 1 ? this.renderCompact() : this.renderBar()
+  }
+
+  private renderCompact() {
+    const done = this.max > 0 && this.value >= this.max
+    return html`
+      <div
+        class="status"
+        role="progressbar"
+        aria-label=${this.label}
+        aria-valuenow=${this.value}
+        aria-valuemin="0"
+        aria-valuemax=${this.max}
+        data-done=${String(done)}
+      >
+        <span class="icon" aria-hidden="true">${done ? '✓' : '○'}</span>
+        <span class="status-text">${done ? 'Done' : 'Not done'}</span>
+      </div>
+    `
+  }
+
+  private renderBar() {
     const percent = Math.round(this.ratio * 100)
     return html`
       <div

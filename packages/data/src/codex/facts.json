@@ -110,7 +110,7 @@
     "collection": "codex"
   },
   {
-    "id": "codex:lord-hades",
+    "id": "codex:hades",
     "label": "Unlock the Lord Hades Codex entry",
     "kind": "boolean",
     "collection": "codex"

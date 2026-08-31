@@ -129,7 +129,7 @@ Verified during research. Where two wiki pages disagree, both numbers appear.
 | System | Count |
 | --- | --- |
 | Fated List of Minor Prophecies | 55 |
-| Platform achievements | 50 on the wiki, 49 shown publicly on Steam |
+| Platform achievements | 50 |
 | Codex entries | 119 across 9 sections |
 | Standard boons | 111 across 9 gods |
 | Duo boons | 28, which is every pair of the 8 eligible gods |
@@ -183,6 +183,12 @@ These need someone with the game open.
    List names a "Dire Voidstone".
 
 ### Settled
+
+- **How many platform achievements are there?** 50. There are 49 ordinary
+  achievements, plus a 50th earned by completing the other 49. Steam shows
+  only 49 publicly because the 50th is hidden. The wiki and Steam never
+  disagreed; the apparent conflict was a hidden entry. Settled by the project
+  owner from the game, 2026-08-31.
 
 - **Does Persephone have a Codex entry?** No, and this is a genuine wiki
   inconsistency, not a gap in our data. Persephone's own wiki page shows a
