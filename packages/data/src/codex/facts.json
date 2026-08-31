@@ -105,8 +105,7 @@
     "label": "Hear Zeus express a wish to reconcile with Hades, and Hades' response",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["zeus", "hades"],
-    "spoiler": true
+    "subjects": ["zeus", "hades"]
   },
   {
     "id": "talk:athena-acknowledges-zagreus-strength",
@@ -631,7 +630,7 @@
     "kind": "boolean",
     "collection": "codex",
     "subjects": ["centaur-heart"],
-    "description": "A run-scoped pickup that raises current and maximum Life."
+    "description": "A run-scoped pickup that raises current and maximum Life by 25."
   },
   {
     "id": "artifact:pom-of-power",
@@ -711,7 +710,7 @@
     "kind": "boolean",
     "collection": "codex",
     "subjects": ["loyalty-card"],
-    "description": "A run-scoped item that discounts prices at Charon’s shop and the Well of Charon."
+    "description": "A run-scoped item that cuts prices at Charon's shop and the Well of Charon by 20%. It is lost when Zagreus dies."
   },
   {
     "id": "artifact:red-onion",

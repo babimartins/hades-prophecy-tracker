@@ -1,7 +1,7 @@
 # Descriptions: what we have, what is missing, what to gather
 
-> **Done, 2026-08-31.** 453 facts carry a description, 11 collections carry
-> one, and 12 entries carry a spoiler flag. The counts below describe the
+> **Done, 2026-08-31.** 450 facts carry a description, 11 collections carry
+> one, and 15 entries carry a spoiler flag. The counts below describe the
 > state before phase 2 ran; the sections that follow are kept because the
 > reasoning still governs any new entry.
 

@@ -298,7 +298,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["stygius"],
-    "description": "The blade in its original form. Levelling it raises bonus Attack Speed and Move Speed."
+    "description": "The blade in its original form. Leveling it raises bonus Attack Speed and Move Speed."
   },
   {
     "id": "combat:slay-skelly-with-stygius",
@@ -2188,28 +2188,32 @@
     "label": "Slay the Doomstone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["doomstone"]
+    "subjects": ["doomstone"],
+    "description": "Mini-boss found in a unique chamber in Tartarus."
   },
   {
     "id": "miniboss:wretched-sneak",
     "label": "Slay the Wretched Sneak",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["wretched-sneak"]
+    "subjects": ["wretched-sneak"],
+    "description": "Mini-boss found in a unique chamber in Tartarus."
   },
   {
     "id": "miniboss:dire-voidstone",
     "label": "Slay the Dire Voidstone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["voidstone"]
+    "subjects": ["voidstone"],
+    "description": "The Voidstones on the Barge of Death in Asphodel, which the Fated List counts as Dire."
   },
   {
     "id": "miniboss:megagorgon",
     "label": "Slay the Megagorgon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["megagorgon"]
+    "subjects": ["megagorgon"],
+    "description": "Asphodel mini-boss."
   },
   {
     "id": "miniboss:dire-skull-crusher",
@@ -2223,14 +2227,16 @@
     "label": "Slay the Dire Spreader",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["spreader"]
+    "subjects": ["spreader"],
+    "description": "A coven of four, the Witches Circle, encountered as a mini-boss in Asphodel."
   },
   {
     "id": "miniboss:dire-soul-catcher",
     "label": "Slay the Dire Soul Catcher",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["soul-catcher"]
+    "subjects": ["soul-catcher"],
+    "description": "The Butterfly Ball: a much larger Soul Catcher, found only as a mini-boss in Elysium."
   },
   {
     "id": "miniboss:dire-bother",
@@ -2244,21 +2250,24 @@
     "label": "Slay the Dire Snakestone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["snakestone"]
+    "subjects": ["snakestone"],
+    "description": "A mini-boss variant with heavily increased armor, bright purple instead of neon green."
   },
   {
     "id": "miniboss:dire-gigantic-vermin",
     "label": "Slay the Dire Gigantic Vermin",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["gigantic-vermin"]
+    "subjects": ["gigantic-vermin"],
+    "description": "A mini-boss variant with heavily increased armor and health, jet-black instead of grey."
   },
   {
     "id": "miniboss:dire-satyr-cultist",
     "label": "Slay the Dire Satyr Cultist",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["satyr-cultist"]
+    "subjects": ["satyr-cultist"],
+    "description": "A mini-boss variant with heavily increased armor, wearing a dark green cloak."
   },
   {
     "id": "contractor:renovation-tasks",
@@ -2442,7 +2451,7 @@
     "kind": "boolean",
     "collection": "prophecy",
     "subjects": [],
-    "description": "Gain Obol = 1.1 - 1.8x Heart cost (for a blood price)"
+    "description": "Trade 10 to 50 Heart for Obol, at 1.1 to 1.8 times the Heart spent."
   },
   {
     "id": "wellofcharon:kiss-of-styx",
@@ -3129,7 +3138,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["coronacht"],
-    "description": "The bow in its original form. Levelling it raises Critical Attack Chance."
+    "description": "The bow in its original form. Leveling it raises Critical Attack Chance."
   },
   {
     "id": "aspect:coronacht:chiron",
@@ -3156,7 +3165,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["aegis"],
-    "description": "The shield in its original form. Levelling it raises Attack and Dash-Strike damage."
+    "description": "The shield in its original form. Leveling it raises Attack and Dash-Strike damage."
   },
   {
     "id": "aspect:aegis:chaos",
@@ -3183,7 +3192,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["varatha"],
-    "description": "The spear in its original form. Levelling it raises Special damage, range and speed."
+    "description": "The spear in its original form. Leveling it raises Special damage, range and speed."
   },
   {
     "id": "aspect:varatha:achilles",
@@ -3210,7 +3219,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["malphon"],
-    "description": "The fists in their original form. Levelling them raise Dodge Chance."
+    "description": "The fists in their original form. Leveling them raises Dodge Chance."
   },
   {
     "id": "aspect:malphon:talos",
@@ -3237,7 +3246,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["exagryph"],
-    "description": "The rail in its original form. Levelling it raises bonus maximum Ammo."
+    "description": "The rail in its original form. Leveling it raises bonus maximum Ammo."
   },
   {
     "id": "aspect:exagryph:eris",

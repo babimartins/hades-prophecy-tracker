@@ -281,8 +281,9 @@ describe('fact descriptions', () => {
       curse: 13,
       blessing: 12,
       perk: 11,
+      miniboss: 9,
     })
-    expect(described).toHaveLength(441)
+    expect(described).toHaveLength(450)
   })
 
   it('never stores a wiki cross-reference in place of an answer', () => {
@@ -304,10 +305,15 @@ describe('fact descriptions', () => {
   it('never stores a description for an Elite that describes the ordinary foe', () => {
     // Nine `miniboss:dire-*` facts carried their `encounter:*` twin's text
     // verbatim, which sent a player hunting the Dire Voidstone in Elysium
-    // where only the ordinary Voidstone appears. They carry none until a
-    // source describes the Elite form.
+    // where only the ordinary Voidstone appears. Six now describe the Elite
+    // form from the foe's own page; three have no Elite paragraph anywhere and
+    // stay empty. The other three `miniboss:*` facts ARE the mini-boss, not an
+    // Elite of a separate foe, so sharing their twin's text is correct and
+    // they are exempt.
+    const ownMiniboss = ['miniboss:doomstone', 'miniboss:wretched-sneak', 'miniboss:megagorgon']
     const copied = dataset.facts.filter((fact) => {
       if (!fact.id.startsWith('miniboss:') || !fact.description) return false
+      if (ownMiniboss.includes(fact.id)) return false
       const twin = dataset.facts.find(
         (other) => other.id === `encounter:${fact.id.split(':')[1]!.replace(/^dire-/, '')}`,
       )
@@ -387,23 +393,23 @@ describe('what a system is, and what the player should not read yet', () => {
       'talk:hypnos-and-thanatos-reconcile',
       'talk:persephone-and-hades-after-family-reunion',
       'talk:persephone-returns-to-house-of-hades',
-      'talk:zeus-reconciles-with-hades',
     ])
   })
 
-  it('keeps a fact-level flag consistent with its achievement twin', () => {
-    // codex:companion-shady and codex:companion-antos are flagged for the same
-    // reveal their facts carry. A flag on one and not the other would hide the
-    // outcome in one view and print it in the next.
-    const flaggedFacts = new Set(
-      dataset.facts.filter((f) => f.spoiler === true).map((f) => f.id),
-    )
-    expect(flaggedFacts.has('companion:shady')).toBe(true)
-    expect(flaggedFacts.has('companion:antos')).toBe(true)
-    const twins = dataset.achievements.filter((a) =>
-      ['codex:companion-shady', 'codex:companion-antos'].includes(a.id),
-    )
-    expect(twins.every((a) => a.spoiler === true)).toBe(true)
+  it('keeps every companion fact and its Codex twin on the same side of the flag', () => {
+    // A flag on one and not the other hides the outcome in one view and prints
+    // it in the next. Stated over all six pairs, not two, so a new mismatch on
+    // any of them fails rather than passing unnoticed.
+    const mismatched = dataset.facts
+      .filter((fact) => fact.id.startsWith('companion:'))
+      .map((fact) => {
+        const twin = dataset.achievements.find(
+          (a) => a.id === `codex:companion-${fact.id.split(':')[1]!}`,
+        )
+        return { id: fact.id, fact: fact.spoiler === true, twin: twin?.spoiler === true }
+      })
+      .filter((pair) => pair.fact !== pair.twin)
+    expect(mismatched).toEqual([])
   })
 
   it('leaves the 55 Fated List texts unflagged, because the game prints them', () => {

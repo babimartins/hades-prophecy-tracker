@@ -73,5 +73,6 @@ Two places carry a working tooltip. Hover, or tab to the dotted label.
 
 The interface language is English, to match the game.
 
-The "What this is" blocks now carry the text stored in `packages/data`, which
-is sourced. The tooltips are still mockup text.
+The "What this is" blocks carry the text stored in `packages/data`, which is
+sourced. One block adds a sourced sentence that the dataset does not store, so
+the two are not byte-identical. The tooltips are still mockup text.
