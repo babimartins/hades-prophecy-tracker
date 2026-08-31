@@ -5,14 +5,19 @@
     "kind": "number",
     "max": 5,
     "collection": "codex",
-    "subjects": ["hades"]
+    "subjects": [
+      "hades"
+    ]
   },
   {
     "id": "talk:persephone-returns-to-house-of-hades",
     "label": "See Hades' gratitude after Persephone returns to the House of Hades",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hades", "persephone"],
+    "subjects": [
+      "hades",
+      "persephone"
+    ],
     "spoiler": true
   },
   {
@@ -21,7 +26,9 @@
     "kind": "number",
     "max": 9,
     "collection": "codex",
-    "subjects": ["nyx"]
+    "subjects": [
+      "nyx"
+    ]
   },
   {
     "id": "nectar:charon",
@@ -29,7 +36,9 @@
     "kind": "number",
     "max": 7,
     "collection": "codex",
-    "subjects": ["charon"]
+    "subjects": [
+      "charon"
+    ]
   },
   {
     "id": "spend:charons-shop",
@@ -37,7 +46,9 @@
     "kind": "number",
     "max": 10000,
     "collection": "codex",
-    "subjects": ["charon"]
+    "subjects": [
+      "charon"
+    ]
   },
   {
     "id": "nectar:hypnos",
@@ -45,14 +56,19 @@
     "kind": "number",
     "max": 8,
     "collection": "codex",
-    "subjects": ["hypnos"]
+    "subjects": [
+      "hypnos"
+    ]
   },
   {
     "id": "talk:hypnos-and-thanatos-reconcile",
     "label": "Witness Hypnos and Thanatos reconcile as brothers",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hypnos", "thanatos"],
+    "subjects": [
+      "hypnos",
+      "thanatos"
+    ],
     "spoiler": true
   },
   {
@@ -61,14 +77,18 @@
     "kind": "number",
     "max": 10,
     "collection": "codex",
-    "subjects": ["thanatos"]
+    "subjects": [
+      "thanatos"
+    ]
   },
   {
     "id": "favor:thanatos",
     "label": "Complete Thanatos' favor after giving him 6 Nectar",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["thanatos"]
+    "subjects": [
+      "thanatos"
+    ]
   },
   {
     "id": "nectar:megaera",
@@ -76,14 +96,18 @@
     "kind": "number",
     "max": 10,
     "collection": "codex",
-    "subjects": ["megaera"]
+    "subjects": [
+      "megaera"
+    ]
   },
   {
     "id": "favor:megaera",
     "label": "Complete Megaera's favor after giving her 4 Nectar",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["megaera"]
+    "subjects": [
+      "megaera"
+    ]
   },
   {
     "id": "nectar:chaos",
@@ -91,42 +115,55 @@
     "kind": "number",
     "max": 8,
     "collection": "codex",
-    "subjects": ["chaos"]
+    "subjects": [
+      "chaos"
+    ]
   },
   {
     "id": "talk:zeus-hears-other-gods-opinions",
     "label": "Hear the other Gods share their opinions of Zeus",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["zeus"]
+    "subjects": [
+      "zeus"
+    ]
   },
   {
     "id": "talk:zeus-reconciles-with-hades",
     "label": "Hear Zeus express a wish to reconcile with Hades, and Hades' response",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["zeus", "hades"]
+    "subjects": [
+      "zeus",
+      "hades"
+    ]
   },
   {
     "id": "talk:athena-acknowledges-zagreus-strength",
     "label": "Hear Athena's three remarks acknowledging Zagreus' strength after a clear",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["athena"]
+    "subjects": [
+      "athena"
+    ]
   },
   {
     "id": "talk:artemis-confides-about-callisto",
     "label": "Hear Artemis say she can be herself with Zagreus",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["artemis"]
+    "subjects": [
+      "artemis"
+    ]
   },
   {
     "id": "talk:demeter-after-epilogue",
     "label": "Complete the Epilogue and hear Demeter ask Zagreus to be more candid",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["demeter"],
+    "subjects": [
+      "demeter"
+    ],
     "spoiler": true
   },
   {
@@ -134,140 +171,183 @@
     "label": "Unlock the Lord Hades Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hades"]
+    "subjects": [
+      "hades"
+    ]
   },
   {
     "id": "codex:zagreus",
     "label": "Unlock the Zagreus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["zagreus"]
+    "subjects": [
+      "zagreus"
+    ]
   },
   {
     "id": "codex:nyx",
     "label": "Unlock the Nyx Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["nyx"]
+    "subjects": [
+      "nyx"
+    ]
   },
   {
     "id": "codex:charon",
     "label": "Unlock the Charon Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["charon"]
+    "subjects": [
+      "charon"
+    ]
   },
   {
     "id": "codex:hypnos",
     "label": "Unlock the Hypnos Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hypnos"]
+    "subjects": [
+      "hypnos"
+    ]
   },
   {
     "id": "codex:thanatos",
     "label": "Unlock the Thanatos Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["thanatos"]
+    "subjects": [
+      "thanatos"
+    ]
   },
   {
     "id": "codex:megaera",
     "label": "Unlock the Megaera Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["megaera"]
+    "subjects": [
+      "megaera"
+    ]
   },
   {
     "id": "codex:alecto",
     "label": "Unlock the Alecto Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["alecto"]
+    "subjects": [
+      "alecto"
+    ]
   },
   {
     "id": "codex:tisiphone",
     "label": "Unlock the Tisiphone Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["tisiphone"]
+    "subjects": [
+      "tisiphone"
+    ]
   },
   {
     "id": "codex:chaos",
     "label": "Unlock the Chaos Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["chaos"]
+    "subjects": [
+      "chaos"
+    ]
   },
   {
     "id": "codex:zeus",
     "label": "Unlock the Zeus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["zeus"]
+    "subjects": [
+      "zeus"
+    ]
   },
   {
     "id": "codex:poseidon",
     "label": "Unlock the Poseidon Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["poseidon"]
+    "subjects": [
+      "poseidon"
+    ]
   },
   {
     "id": "codex:athena",
     "label": "Unlock the Athena Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["athena"]
+    "subjects": [
+      "athena"
+    ]
   },
   {
     "id": "codex:aphrodite",
     "label": "Unlock the Aphrodite Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["aphrodite"]
+    "subjects": [
+      "aphrodite"
+    ]
   },
   {
     "id": "codex:artemis",
     "label": "Unlock the Artemis Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["artemis"]
+    "subjects": [
+      "artemis"
+    ]
   },
   {
     "id": "codex:ares",
     "label": "Unlock the Ares Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["ares"]
+    "subjects": [
+      "ares"
+    ]
   },
   {
     "id": "codex:dionysus",
     "label": "Unlock the Dionysus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["dionysus"]
+    "subjects": [
+      "dionysus"
+    ]
   },
   {
     "id": "codex:hermes",
     "label": "Unlock the Hermes Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hermes"]
+    "subjects": [
+      "hermes"
+    ]
   },
   {
     "id": "codex:demeter",
     "label": "Unlock the Demeter Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["demeter"]
+    "subjects": [
+      "demeter"
+    ]
   },
   {
     "id": "talk:aphrodite-after-bonds-forged",
     "label": "Hear Aphrodite's response after forging bonds with Dusa, Thanatos and Megaera",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["aphrodite", "dusa", "thanatos", "megaera"]
+    "subjects": [
+      "aphrodite",
+      "dusa",
+      "thanatos",
+      "megaera"
+    ]
   },
   {
     "id": "nectar:achilles",
@@ -275,21 +355,27 @@
     "kind": "number",
     "max": 9,
     "collection": "codex",
-    "subjects": ["achilles"]
+    "subjects": [
+      "achilles"
+    ]
   },
   {
     "id": "codex:achilles",
     "label": "Unlock the Achilles Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["achilles"]
+    "subjects": [
+      "achilles"
+    ]
   },
   {
     "id": "codex:orpheus",
     "label": "Unlock the Orpheus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["orpheus"]
+    "subjects": [
+      "orpheus"
+    ]
   },
   {
     "id": "nectar:sisyphus",
@@ -297,21 +383,27 @@
     "kind": "number",
     "max": 9,
     "collection": "codex",
-    "subjects": ["sisyphus"]
+    "subjects": [
+      "sisyphus"
+    ]
   },
   {
     "id": "codex:sisyphus",
     "label": "Unlock the Sisyphus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["sisyphus"]
+    "subjects": [
+      "sisyphus"
+    ]
   },
   {
     "id": "codex:eurydice",
     "label": "Unlock the Eurydice Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["eurydice"]
+    "subjects": [
+      "eurydice"
+    ]
   },
   {
     "id": "nectar:patroclus",
@@ -319,28 +411,36 @@
     "kind": "number",
     "max": 8,
     "collection": "codex",
-    "subjects": ["patroclus"]
+    "subjects": [
+      "patroclus"
+    ]
   },
   {
     "id": "codex:patroclus",
     "label": "Unlock the Patroclus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["patroclus"]
+    "subjects": [
+      "patroclus"
+    ]
   },
   {
     "id": "codex:theseus",
     "label": "Unlock the Theseus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["theseus"]
+    "subjects": [
+      "theseus"
+    ]
   },
   {
     "id": "codex:asterius",
     "label": "Unlock the Asterius Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["asterius"]
+    "subjects": [
+      "asterius"
+    ]
   },
   {
     "id": "nectar:cerberus",
@@ -348,7 +448,9 @@
     "kind": "number",
     "max": 9,
     "collection": "codex",
-    "subjects": ["cerberus"]
+    "subjects": [
+      "cerberus"
+    ]
   },
   {
     "id": "pet:cerberus",
@@ -356,14 +458,18 @@
     "kind": "number",
     "max": 20,
     "collection": "codex",
-    "subjects": ["cerberus"]
+    "subjects": [
+      "cerberus"
+    ]
   },
   {
     "id": "codex:cerberus",
     "label": "Unlock the Cerberus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["cerberus"]
+    "subjects": [
+      "cerberus"
+    ]
   },
   {
     "id": "nectar:dusa",
@@ -371,14 +477,18 @@
     "kind": "number",
     "max": 10,
     "collection": "codex",
-    "subjects": ["dusa"]
+    "subjects": [
+      "dusa"
+    ]
   },
   {
     "id": "codex:dusa",
     "label": "Unlock the Dusa Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["dusa"]
+    "subjects": [
+      "dusa"
+    ]
   },
   {
     "id": "nectar:skelly",
@@ -386,63 +496,85 @@
     "kind": "number",
     "max": 9,
     "collection": "codex",
-    "subjects": ["skelly"]
+    "subjects": [
+      "skelly"
+    ]
   },
   {
     "id": "codex:skelly",
     "label": "Unlock the Skelly Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["skelly"]
+    "subjects": [
+      "skelly"
+    ]
   },
   {
     "id": "companion:battie",
     "label": "Give Ambrosia to Megaera for the first time, after her favor is complete, to obtain Companion Battie",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-battie", "megaera"]
+    "subjects": [
+      "companion-battie",
+      "megaera"
+    ]
   },
   {
     "id": "codex:companion-battie",
     "label": "Unlock the Companion Battie Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-battie"]
+    "subjects": [
+      "companion-battie"
+    ]
   },
   {
     "id": "companion:mort",
     "label": "Give Ambrosia to Thanatos for the first time, after his favor is complete, to obtain Companion Mort",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-mort", "thanatos"]
+    "subjects": [
+      "companion-mort",
+      "thanatos"
+    ]
   },
   {
     "id": "codex:companion-mort",
     "label": "Unlock the Companion Mort Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-mort"]
+    "subjects": [
+      "companion-mort"
+    ]
   },
   {
     "id": "companion:fidi",
     "label": "Give Ambrosia to Dusa for the first time, after her Lounge renovation favor is complete, to obtain Companion Fidi",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-fidi", "dusa"]
+    "subjects": [
+      "companion-fidi",
+      "dusa"
+    ]
   },
   {
     "id": "codex:companion-fidi",
     "label": "Unlock the Companion Fidi Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-fidi"]
+    "subjects": [
+      "companion-fidi"
+    ]
   },
   {
     "id": "companion:shady",
     "label": "Give Ambrosia to Sisyphus for the first time, after his sentence is amended, to obtain Companion Shady",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-shady", "sisyphus"],
+    "subjects": [
+      "companion-shady",
+      "sisyphus"
+    ],
     "spoiler": true
   },
   {
@@ -450,28 +582,38 @@
     "label": "Unlock the Companion Shady Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-shady"]
+    "subjects": [
+      "companion-shady"
+    ]
   },
   {
     "id": "companion:rib",
     "label": "Give Ambrosia to Skelly for the first time, after slaying him with the Level 5 Stygius Aspect, to obtain Companion Rib",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-rib", "skelly"]
+    "subjects": [
+      "companion-rib",
+      "skelly"
+    ]
   },
   {
     "id": "codex:companion-rib",
     "label": "Unlock the Companion Rib Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-rib"]
+    "subjects": [
+      "companion-rib"
+    ]
   },
   {
     "id": "companion:antos",
     "label": "Give Ambrosia to Achilles for the first time, after he reunites with Patroclus, to obtain Companion Antos",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-antos", "achilles"],
+    "subjects": [
+      "companion-antos",
+      "achilles"
+    ],
     "spoiler": true
   },
   {
@@ -479,133 +621,171 @@
     "label": "Unlock the Companion Antos Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-antos"]
+    "subjects": [
+      "companion-antos"
+    ]
   },
   {
     "id": "codex:house-of-hades",
     "label": "Unlock the House of Hades Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["house-of-hades"]
+    "subjects": [
+      "house-of-hades"
+    ]
   },
   {
     "id": "codex:chaos-realm",
     "label": "Unlock the Chaos (The Underworld) Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["chaos-realm"]
+    "subjects": [
+      "chaos-realm"
+    ]
   },
   {
     "id": "reach:erebus",
     "label": "Enter Erebus for the first time, via an Infernal Gate or by defeating Charon",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["erebus"]
+    "subjects": [
+      "erebus"
+    ]
   },
   {
     "id": "codex:erebus",
     "label": "Unlock the Erebus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["erebus"]
+    "subjects": [
+      "erebus"
+    ]
   },
   {
     "id": "codex:tartarus",
     "label": "Unlock the Tartarus Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["tartarus"]
+    "subjects": [
+      "tartarus"
+    ]
   },
   {
     "id": "reach:asphodel",
     "label": "Clear Tartarus to reach Asphodel for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["asphodel"]
+    "subjects": [
+      "asphodel"
+    ]
   },
   {
     "id": "codex:asphodel",
     "label": "Unlock the Asphodel Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["asphodel"]
+    "subjects": [
+      "asphodel"
+    ]
   },
   {
     "id": "reach:elysium",
     "label": "Clear Asphodel to reach Elysium for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["elysium"]
+    "subjects": [
+      "elysium"
+    ]
   },
   {
     "id": "codex:elysium",
     "label": "Unlock the Elysium Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["elysium"]
+    "subjects": [
+      "elysium"
+    ]
   },
   {
     "id": "reach:styx",
     "label": "Clear Elysium to reach the Temple of Styx for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["styx"]
+    "subjects": [
+      "styx"
+    ]
   },
   {
     "id": "codex:styx",
     "label": "Unlock the Styx Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["styx"]
+    "subjects": [
+      "styx"
+    ]
   },
   {
     "id": "codex:stygian-blade",
     "label": "Unlock the Stygian Blade Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["stygius"]
+    "subjects": [
+      "stygius"
+    ]
   },
   {
     "id": "codex:eternal-spear",
     "label": "Unlock the Eternal Spear Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["varatha"]
+    "subjects": [
+      "varatha"
+    ]
   },
   {
     "id": "codex:heart-seeking-bow",
     "label": "Unlock the Heart-Seeking Bow Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["coronacht"]
+    "subjects": [
+      "coronacht"
+    ]
   },
   {
     "id": "codex:shield-of-chaos",
     "label": "Unlock the Shield of Chaos Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["aegis"]
+    "subjects": [
+      "aegis"
+    ]
   },
   {
     "id": "codex:twin-fists",
     "label": "Unlock the Twin Fists Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["malphon"]
+    "subjects": [
+      "malphon"
+    ]
   },
   {
     "id": "codex:adamant-rail",
     "label": "Unlock the Adamant Rail Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["exagryph"]
+    "subjects": [
+      "exagryph"
+    ]
   },
   {
     "id": "artifact:darkness",
     "label": "Collect Darkness for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["darkness"],
+    "subjects": [
+      "darkness"
+    ],
     "description": "A currency used to unlock and upgrade Mirror of Night talents."
   },
   {
@@ -613,7 +793,9 @@
     "label": "Open an Infernal Trove for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["infernal-trove"],
+    "subjects": [
+      "infernal-trove"
+    ],
     "description": "Chest guarded by enemies that must be slain quickly before its reward decays."
   },
   {
@@ -621,7 +803,9 @@
     "label": "Collect a Charon's Obol for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["charons-obol"],
+    "subjects": [
+      "charons-obol"
+    ],
     "description": "A currency spent at Charon's shop or a Well of Charon. Unlike other currencies, it is lost when Zagreus dies."
   },
   {
@@ -629,7 +813,9 @@
     "label": "Collect a Centaur Heart for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["centaur-heart"],
+    "subjects": [
+      "centaur-heart"
+    ],
     "description": "A run-scoped pickup that raises current and maximum Life by 25, or by 50 in an Erebus encounter or a mini-boss room."
   },
   {
@@ -637,7 +823,9 @@
     "label": "Receive a Pom of Power for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["pom-of-power"],
+    "subjects": [
+      "pom-of-power"
+    ],
     "description": "Raises the level of one held boon for the current run."
   },
   {
@@ -645,7 +833,9 @@
     "label": "Receive a Daedalus Hammer offer for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["daedalus-hammer"],
+    "subjects": [
+      "daedalus-hammer"
+    ],
     "description": "Run-scoped item that upgrades a weapon's attacks. The enchantments it grants are tracked separately in the Infernal Arms section; this entry is about the delivery item alone."
   },
   {
@@ -653,7 +843,9 @@
     "label": "Purchase the Anvil of Fates from Charon in the Temple of Styx, after picking up a Daedalus Hammer that run",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["anvil-of-fates"],
+    "subjects": [
+      "anvil-of-fates"
+    ],
     "description": "Rerolls and adds a third Daedalus Hammer upgrade for the run. It can only be bought after a Hammer has already been picked up that run."
   },
   {
@@ -661,7 +853,9 @@
     "label": "Collect a Chthonic Key for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["chthonic-keys"],
+    "subjects": [
+      "chthonic-keys"
+    ],
     "description": "Spent to unlock additional Infernal Arms and Mirror of Night upgrade slots."
   },
   {
@@ -669,7 +863,9 @@
     "label": "Collect Titan Blood for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["titan-blood"],
+    "subjects": [
+      "titan-blood"
+    ],
     "description": "Spent to unlock and upgrade Weapon Aspects."
   },
   {
@@ -677,7 +873,9 @@
     "label": "Collect a Gemstone for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["gemstones"],
+    "subjects": [
+      "gemstones"
+    ],
     "description": "Spent to commission House Contractor upgrades."
   },
   {
@@ -685,7 +883,9 @@
     "label": "Collect a Diamond for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["diamond"],
+    "subjects": [
+      "diamond"
+    ],
     "description": "Spent on higher-tier House Contractor upgrades."
   },
   {
@@ -693,7 +893,9 @@
     "label": "Collect Nectar for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["nectar"],
+    "subjects": [
+      "nectar"
+    ],
     "description": "A rare resource given to characters as a gift to raise affinity. This tracks finding Nectar, not giving it away."
   },
   {
@@ -701,7 +903,9 @@
     "label": "Collect Ambrosia for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["ambrosia"],
+    "subjects": [
+      "ambrosia"
+    ],
     "description": "A resource given to characters who have deepened their bond with Zagreus."
   },
   {
@@ -709,7 +913,9 @@
     "label": "Collect a Loyalty Card for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["loyalty-card"],
+    "subjects": [
+      "loyalty-card"
+    ],
     "description": "A run-scoped item that cuts prices at Charon's shop and the Well of Charon by 20%. It is lost when Zagreus dies."
   },
   {
@@ -717,7 +923,9 @@
     "label": "Receive a Red Onion for failing a Perfect Clear challenge in Erebus",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["red-onion"],
+    "subjects": [
+      "red-onion"
+    ],
     "description": "Consolation reward given in place of the usual prize when a Perfect Clear challenge in Erebus is failed."
   },
   {
@@ -725,119 +933,153 @@
     "label": "Unlock the Darkness Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["darkness"]
+    "subjects": [
+      "darkness"
+    ]
   },
   {
     "id": "codex:bloodstones",
     "label": "Unlock the Bloodstones Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bloodstones"]
+    "subjects": [
+      "bloodstones"
+    ]
   },
   {
     "id": "codex:infernal-trove",
     "label": "Unlock the Infernal Trove Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["infernal-trove"]
+    "subjects": [
+      "infernal-trove"
+    ]
   },
   {
     "id": "codex:charons-obol",
     "label": "Unlock the Charon's Obol Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["charons-obol"]
+    "subjects": [
+      "charons-obol"
+    ]
   },
   {
     "id": "codex:centaur-heart",
     "label": "Unlock the Centaur Heart Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["centaur-heart"]
+    "subjects": [
+      "centaur-heart"
+    ]
   },
   {
     "id": "codex:pom-of-power",
     "label": "Unlock the Pom of Power Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["pom-of-power"]
+    "subjects": [
+      "pom-of-power"
+    ]
   },
   {
     "id": "codex:daedalus-hammer",
     "label": "Unlock the Daedalus Hammer Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["daedalus-hammer"]
+    "subjects": [
+      "daedalus-hammer"
+    ]
   },
   {
     "id": "codex:anvil-of-fates",
     "label": "Unlock the Anvil of Fates Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["anvil-of-fates"]
+    "subjects": [
+      "anvil-of-fates"
+    ]
   },
   {
     "id": "codex:chthonic-keys",
     "label": "Unlock the Chthonic Keys Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["chthonic-keys"]
+    "subjects": [
+      "chthonic-keys"
+    ]
   },
   {
     "id": "codex:titan-blood",
     "label": "Unlock the Titan Blood Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["titan-blood"]
+    "subjects": [
+      "titan-blood"
+    ]
   },
   {
     "id": "codex:gemstones",
     "label": "Unlock the Gemstones Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["gemstones"]
+    "subjects": [
+      "gemstones"
+    ]
   },
   {
     "id": "codex:diamond",
     "label": "Unlock the Diamond Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["diamond"]
+    "subjects": [
+      "diamond"
+    ]
   },
   {
     "id": "codex:nectar",
     "label": "Unlock the Nectar Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["nectar"]
+    "subjects": [
+      "nectar"
+    ]
   },
   {
     "id": "codex:ambrosia",
     "label": "Unlock the Ambrosia Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["ambrosia"]
+    "subjects": [
+      "ambrosia"
+    ]
   },
   {
     "id": "codex:loyalty-card",
     "label": "Unlock the Loyalty Card Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["loyalty-card"]
+    "subjects": [
+      "loyalty-card"
+    ]
   },
   {
     "id": "codex:red-onion",
     "label": "Unlock the Red Onion Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["red-onion"]
+    "subjects": [
+      "red-onion"
+    ]
   },
   {
     "id": "catch:mati",
     "label": "Catch a Mati for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["mati"],
+    "subjects": [
+      "mati"
+    ],
     "description": "A Common fish found in the Chaos realm."
   },
   {
@@ -845,7 +1087,9 @@
     "label": "Catch a Projelly for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["projelly"],
+    "subjects": [
+      "projelly"
+    ],
     "description": "A Rare fish found in the Chaos realm."
   },
   {
@@ -853,7 +1097,9 @@
     "label": "Catch a Voidskate for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["voidskate"],
+    "subjects": [
+      "voidskate"
+    ],
     "description": "A Legendary fish found in the Chaos realm."
   },
   {
@@ -861,7 +1107,9 @@
     "label": "Catch a Hellfish for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hellfish"],
+    "subjects": [
+      "hellfish"
+    ],
     "description": "A Common fish found in Tartarus."
   },
   {
@@ -869,7 +1117,9 @@
     "label": "Catch a Knucklehead for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["knucklehead"],
+    "subjects": [
+      "knucklehead"
+    ],
     "description": "A Rare fish found in Tartarus."
   },
   {
@@ -877,7 +1127,9 @@
     "label": "Catch a Scyllascion for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["scyllascion"],
+    "subjects": [
+      "scyllascion"
+    ],
     "description": "A Legendary fish found in Tartarus."
   },
   {
@@ -885,7 +1137,9 @@
     "label": "Catch a Slavug for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["slavug"],
+    "subjects": [
+      "slavug"
+    ],
     "description": "A Common fish found in Asphodel."
   },
   {
@@ -893,7 +1147,9 @@
     "label": "Catch a Chrustacean for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["chrustacean"],
+    "subjects": [
+      "chrustacean"
+    ],
     "description": "A Rare fish found in Asphodel."
   },
   {
@@ -901,7 +1157,9 @@
     "label": "Catch a Flameater for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["flameater"],
+    "subjects": [
+      "flameater"
+    ],
     "description": "A Legendary fish found in Asphodel."
   },
   {
@@ -909,7 +1167,9 @@
     "label": "Catch a Chlam for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["chlam"],
+    "subjects": [
+      "chlam"
+    ],
     "description": "A Common fish found in Elysium."
   },
   {
@@ -917,7 +1177,9 @@
     "label": "Catch a Charp for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["charp"],
+    "subjects": [
+      "charp"
+    ],
     "description": "A Rare fish found in Elysium."
   },
   {
@@ -925,7 +1187,9 @@
     "label": "Catch a Seamare for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["seamare"],
+    "subjects": [
+      "seamare"
+    ],
     "description": "A Legendary fish found in Elysium."
   },
   {
@@ -933,7 +1197,9 @@
     "label": "Catch a Gupp for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["gupp"],
+    "subjects": [
+      "gupp"
+    ],
     "description": "A Common fish found in the Temple of Styx."
   },
   {
@@ -941,7 +1207,9 @@
     "label": "Catch a Scuffer for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["scuffer"],
+    "subjects": [
+      "scuffer"
+    ],
     "description": "A Rare fish found in the Temple of Styx."
   },
   {
@@ -949,7 +1217,9 @@
     "label": "Catch a Stonewhal for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["stonewhal"],
+    "subjects": [
+      "stonewhal"
+    ],
     "description": "A Legendary fish found in the Temple of Styx."
   },
   {
@@ -957,7 +1227,9 @@
     "label": "Catch a Trout for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["trout"],
+    "subjects": [
+      "trout"
+    ],
     "description": "A Common fish found in Greece."
   },
   {
@@ -965,7 +1237,9 @@
     "label": "Catch a Bass for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bass"],
+    "subjects": [
+      "bass"
+    ],
     "description": "A Rare fish found in Greece."
   },
   {
@@ -973,7 +1247,9 @@
     "label": "Catch a Sturgeon for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["sturgeon"],
+    "subjects": [
+      "sturgeon"
+    ],
     "description": "A Legendary fish found in Greece."
   },
   {
@@ -981,133 +1257,171 @@
     "label": "Unlock the Mati Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["mati"]
+    "subjects": [
+      "mati"
+    ]
   },
   {
     "id": "codex:projelly",
     "label": "Unlock the Projelly Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["projelly"]
+    "subjects": [
+      "projelly"
+    ]
   },
   {
     "id": "codex:voidskate",
     "label": "Unlock the Voidskate Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["voidskate"]
+    "subjects": [
+      "voidskate"
+    ]
   },
   {
     "id": "codex:hellfish",
     "label": "Unlock the Hellfish Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hellfish"]
+    "subjects": [
+      "hellfish"
+    ]
   },
   {
     "id": "codex:knucklehead",
     "label": "Unlock the Knucklehead Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["knucklehead"]
+    "subjects": [
+      "knucklehead"
+    ]
   },
   {
     "id": "codex:scyllascion",
     "label": "Unlock the Scyllascion Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["scyllascion"]
+    "subjects": [
+      "scyllascion"
+    ]
   },
   {
     "id": "codex:slavug",
     "label": "Unlock the Slavug Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["slavug"]
+    "subjects": [
+      "slavug"
+    ]
   },
   {
     "id": "codex:chrustacean",
     "label": "Unlock the Chrustacean Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["chrustacean"]
+    "subjects": [
+      "chrustacean"
+    ]
   },
   {
     "id": "codex:flameater",
     "label": "Unlock the Flameater Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["flameater"]
+    "subjects": [
+      "flameater"
+    ]
   },
   {
     "id": "codex:chlam",
     "label": "Unlock the Chlam Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["chlam"]
+    "subjects": [
+      "chlam"
+    ]
   },
   {
     "id": "codex:charp",
     "label": "Unlock the Charp Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["charp"]
+    "subjects": [
+      "charp"
+    ]
   },
   {
     "id": "codex:seamare",
     "label": "Unlock the Seamare Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["seamare"]
+    "subjects": [
+      "seamare"
+    ]
   },
   {
     "id": "codex:gupp",
     "label": "Unlock the Gupp Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["gupp"]
+    "subjects": [
+      "gupp"
+    ]
   },
   {
     "id": "codex:scuffer",
     "label": "Unlock the Scuffer Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["scuffer"]
+    "subjects": [
+      "scuffer"
+    ]
   },
   {
     "id": "codex:stonewhal",
     "label": "Unlock the Stonewhal Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["stonewhal"]
+    "subjects": [
+      "stonewhal"
+    ]
   },
   {
     "id": "codex:trout",
     "label": "Unlock the Trout Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["trout"]
+    "subjects": [
+      "trout"
+    ]
   },
   {
     "id": "codex:bass",
     "label": "Unlock the Bass Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bass"]
+    "subjects": [
+      "bass"
+    ]
   },
   {
     "id": "codex:sturgeon",
     "label": "Unlock the Sturgeon Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["sturgeon"]
+    "subjects": [
+      "sturgeon"
+    ]
   },
   {
     "id": "encounter:wretched-thug",
     "label": "Encounter a Wretched Thug for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-thug"],
+    "subjects": [
+      "wretched-thug"
+    ],
     "description": "Enemy found in Tartarus."
   },
   {
@@ -1115,14 +1429,18 @@
     "label": "Unlock the Wretched Thug Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-thug"]
+    "subjects": [
+      "wretched-thug"
+    ]
   },
   {
     "id": "encounter:wretched-witch",
     "label": "Encounter a Wretched Witch for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-witch"],
+    "subjects": [
+      "wretched-witch"
+    ],
     "description": "Enemy found in Tartarus."
   },
   {
@@ -1130,14 +1448,18 @@
     "label": "Unlock the Wretched Witch Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-witch"]
+    "subjects": [
+      "wretched-witch"
+    ]
   },
   {
     "id": "encounter:wretched-lout",
     "label": "Encounter a Wretched Lout for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-lout"],
+    "subjects": [
+      "wretched-lout"
+    ],
     "description": "Enemy found in Tartarus."
   },
   {
@@ -1145,14 +1467,18 @@
     "label": "Unlock the Wretched Lout Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-lout"]
+    "subjects": [
+      "wretched-lout"
+    ]
   },
   {
     "id": "encounter:wretched-pest",
     "label": "Encounter a Wretched Pest for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-pest"],
+    "subjects": [
+      "wretched-pest"
+    ],
     "description": "Enemy found in Tartarus."
   },
   {
@@ -1160,14 +1486,18 @@
     "label": "Unlock the Wretched Pest Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-pest"]
+    "subjects": [
+      "wretched-pest"
+    ]
   },
   {
     "id": "encounter:wretched-sneak",
     "label": "Encounter a Wretched Sneak for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-sneak"],
+    "subjects": [
+      "wretched-sneak"
+    ],
     "description": "Mini-boss found in a unique chamber in Tartarus."
   },
   {
@@ -1175,14 +1505,18 @@
     "label": "Unlock the Wretched Sneak Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wretched-sneak"]
+    "subjects": [
+      "wretched-sneak"
+    ]
   },
   {
     "id": "encounter:numbskull",
     "label": "Encounter a Numbskull for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["numbskull"],
+    "subjects": [
+      "numbskull"
+    ],
     "description": "Enemy found in Tartarus and Asphodel."
   },
   {
@@ -1190,14 +1524,18 @@
     "label": "Unlock the Numbskull Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["numbskull"]
+    "subjects": [
+      "numbskull"
+    ]
   },
   {
     "id": "encounter:skullomat",
     "label": "Encounter a Skullomat for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["skullomat"],
+    "subjects": [
+      "skullomat"
+    ],
     "description": "Enemy found in Tartarus and Asphodel that spawns Numbskulls."
   },
   {
@@ -1205,14 +1543,18 @@
     "label": "Unlock the Skullomat Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["skullomat"]
+    "subjects": [
+      "skullomat"
+    ]
   },
   {
     "id": "encounter:wringer",
     "label": "Encounter a Wringer for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wringer"],
+    "subjects": [
+      "wringer"
+    ],
     "description": "Enemy found in Tartarus."
   },
   {
@@ -1220,14 +1562,18 @@
     "label": "Unlock the Wringer Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wringer"]
+    "subjects": [
+      "wringer"
+    ]
   },
   {
     "id": "encounter:brimstone",
     "label": "Encounter a Brimstone for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["brimstone"],
+    "subjects": [
+      "brimstone"
+    ],
     "description": "Enemy found in Tartarus and Asphodel."
   },
   {
@@ -1235,14 +1581,18 @@
     "label": "Unlock the Brimstone Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["brimstone"]
+    "subjects": [
+      "brimstone"
+    ]
   },
   {
     "id": "encounter:doomstone",
     "label": "Encounter a Doomstone for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["doomstone"],
+    "subjects": [
+      "doomstone"
+    ],
     "description": "Mini-boss found in a unique chamber in Tartarus."
   },
   {
@@ -1250,14 +1600,18 @@
     "label": "Unlock the Doomstone Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["doomstone"]
+    "subjects": [
+      "doomstone"
+    ]
   },
   {
     "id": "encounter:voidstone",
     "label": "Encounter a Voidstone for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["voidstone"],
+    "subjects": [
+      "voidstone"
+    ],
     "description": "Enemy found in Asphodel and Elysium."
   },
   {
@@ -1265,14 +1619,18 @@
     "label": "Unlock the Voidstone Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["voidstone"]
+    "subjects": [
+      "voidstone"
+    ]
   },
   {
     "id": "encounter:bloodless",
     "label": "Encounter a Bloodless for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bloodless"],
+    "subjects": [
+      "bloodless"
+    ],
     "description": "Enemy found in Asphodel."
   },
   {
@@ -1280,14 +1638,18 @@
     "label": "Unlock the Bloodless Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bloodless"]
+    "subjects": [
+      "bloodless"
+    ]
   },
   {
     "id": "encounter:bone-raker",
     "label": "Encounter a Bone-Raker for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bone-raker"],
+    "subjects": [
+      "bone-raker"
+    ],
     "description": "Enemy found in Asphodel."
   },
   {
@@ -1295,14 +1657,18 @@
     "label": "Unlock the Bone-Raker Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bone-raker"]
+    "subjects": [
+      "bone-raker"
+    ]
   },
   {
     "id": "encounter:inferno-bomber",
     "label": "Encounter an Inferno-Bomber for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["inferno-bomber"],
+    "subjects": [
+      "inferno-bomber"
+    ],
     "description": "Enemy found in Tartarus and Asphodel."
   },
   {
@@ -1310,14 +1676,18 @@
     "label": "Unlock the Inferno-Bomber Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["inferno-bomber"]
+    "subjects": [
+      "inferno-bomber"
+    ]
   },
   {
     "id": "encounter:slam-dancer",
     "label": "Encounter a Slam-Dancer for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["slam-dancer"],
+    "subjects": [
+      "slam-dancer"
+    ],
     "description": "Enemy found in Tartarus and Asphodel."
   },
   {
@@ -1325,14 +1695,18 @@
     "label": "Unlock the Slam-Dancer Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["slam-dancer"]
+    "subjects": [
+      "slam-dancer"
+    ]
   },
   {
     "id": "encounter:burn-flinger",
     "label": "Encounter a Burn-Flinger for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["burn-flinger"],
+    "subjects": [
+      "burn-flinger"
+    ],
     "description": "Enemy found in Tartarus and Asphodel."
   },
   {
@@ -1340,14 +1714,18 @@
     "label": "Unlock the Burn-Flinger Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["burn-flinger"]
+    "subjects": [
+      "burn-flinger"
+    ]
   },
   {
     "id": "encounter:wave-maker",
     "label": "Encounter a Wave-Maker for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wave-maker"],
+    "subjects": [
+      "wave-maker"
+    ],
     "description": "Enemy found in Tartarus and Asphodel."
   },
   {
@@ -1355,14 +1733,18 @@
     "label": "Unlock the Wave-Maker Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["wave-maker"]
+    "subjects": [
+      "wave-maker"
+    ]
   },
   {
     "id": "encounter:dracon",
     "label": "Encounter a Dracon for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["dracon"],
+    "subjects": [
+      "dracon"
+    ],
     "description": "Enemy found in Asphodel."
   },
   {
@@ -1370,14 +1752,18 @@
     "label": "Unlock the Dracon Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["dracon"]
+    "subjects": [
+      "dracon"
+    ]
   },
   {
     "id": "encounter:spreader",
     "label": "Encounter a Spreader for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["spreader"],
+    "subjects": [
+      "spreader"
+    ],
     "description": "Enemy found in Asphodel."
   },
   {
@@ -1385,14 +1771,18 @@
     "label": "Unlock the Spreader Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["spreader"]
+    "subjects": [
+      "spreader"
+    ]
   },
   {
     "id": "encounter:gorgon",
     "label": "Encounter a Gorgon for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["gorgon"],
+    "subjects": [
+      "gorgon"
+    ],
     "description": "Enemy found in Asphodel."
   },
   {
@@ -1400,14 +1790,18 @@
     "label": "Unlock the Gorgon Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["gorgon"]
+    "subjects": [
+      "gorgon"
+    ]
   },
   {
     "id": "encounter:skull-crusher",
     "label": "Encounter a Skull-Crusher for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["skull-crusher"],
+    "subjects": [
+      "skull-crusher"
+    ],
     "description": "Enemy found in Asphodel."
   },
   {
@@ -1415,14 +1809,18 @@
     "label": "Unlock the Skull-Crusher Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["skull-crusher"]
+    "subjects": [
+      "skull-crusher"
+    ]
   },
   {
     "id": "encounter:megagorgon",
     "label": "Encounter a Megagorgon for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["megagorgon"],
+    "subjects": [
+      "megagorgon"
+    ],
     "description": "Asphodel mini-boss."
   },
   {
@@ -1430,14 +1828,18 @@
     "label": "Unlock the Megagorgon Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["megagorgon"]
+    "subjects": [
+      "megagorgon"
+    ]
   },
   {
     "id": "encounter:bone-hydra",
     "label": "Encounter a Bone Hydra for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bone-hydra"],
+    "subjects": [
+      "bone-hydra"
+    ],
     "description": "Boss encounter for Asphodel."
   },
   {
@@ -1445,14 +1847,18 @@
     "label": "Unlock the Bone Hydra Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bone-hydra"]
+    "subjects": [
+      "bone-hydra"
+    ]
   },
   {
     "id": "encounter:splitter",
     "label": "Encounter a Splitter for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["splitter"],
+    "subjects": [
+      "splitter"
+    ],
     "description": "Enemy found in Elysium."
   },
   {
@@ -1460,14 +1866,18 @@
     "label": "Unlock the Splitter Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["splitter"]
+    "subjects": [
+      "splitter"
+    ]
   },
   {
     "id": "encounter:nemean-chariot",
     "label": "Encounter a Nemean Chariot for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["nemean-chariot"],
+    "subjects": [
+      "nemean-chariot"
+    ],
     "description": "Enemy found in Elysium."
   },
   {
@@ -1475,14 +1885,18 @@
     "label": "Unlock the Nemean Chariot Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["nemean-chariot"]
+    "subjects": [
+      "nemean-chariot"
+    ]
   },
   {
     "id": "encounter:flame-wheel",
     "label": "Encounter a Flame Wheel for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["flame-wheel"],
+    "subjects": [
+      "flame-wheel"
+    ],
     "description": "Enemy found in Elysium."
   },
   {
@@ -1490,14 +1904,18 @@
     "label": "Unlock the Flame Wheel Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["flame-wheel"]
+    "subjects": [
+      "flame-wheel"
+    ]
   },
   {
     "id": "encounter:brightsword",
     "label": "Encounter a Brightsword for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["brightsword"],
+    "subjects": [
+      "brightsword"
+    ],
     "description": "Enemy found in Elysium."
   },
   {
@@ -1505,14 +1923,18 @@
     "label": "Unlock the Brightsword Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["brightsword"]
+    "subjects": [
+      "brightsword"
+    ]
   },
   {
     "id": "encounter:longspear",
     "label": "Encounter a Longspear for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["longspear"],
+    "subjects": [
+      "longspear"
+    ],
     "description": "Enemy found in Elysium."
   },
   {
@@ -1520,14 +1942,18 @@
     "label": "Unlock the Longspear Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["longspear"]
+    "subjects": [
+      "longspear"
+    ]
   },
   {
     "id": "encounter:strongbow",
     "label": "Encounter a Strongbow for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["strongbow"],
+    "subjects": [
+      "strongbow"
+    ],
     "description": "Enemy found in Elysium."
   },
   {
@@ -1535,14 +1961,18 @@
     "label": "Unlock the Strongbow Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["strongbow"]
+    "subjects": [
+      "strongbow"
+    ]
   },
   {
     "id": "encounter:greatshield",
     "label": "Encounter a Greatshield for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["greatshield"],
+    "subjects": [
+      "greatshield"
+    ],
     "description": "Enemy found in Elysium."
   },
   {
@@ -1550,14 +1980,18 @@
     "label": "Unlock the Greatshield Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["greatshield"]
+    "subjects": [
+      "greatshield"
+    ]
   },
   {
     "id": "encounter:soul-catcher",
     "label": "Encounter a Soul Catcher for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["soul-catcher"],
+    "subjects": [
+      "soul-catcher"
+    ],
     "description": "Enemy found in Elysium."
   },
   {
@@ -1565,14 +1999,18 @@
     "label": "Unlock the Soul Catcher Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["soul-catcher"]
+    "subjects": [
+      "soul-catcher"
+    ]
   },
   {
     "id": "encounter:crawler",
     "label": "Encounter a Crawler for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["crawler"],
+    "subjects": [
+      "crawler"
+    ],
     "description": "Enemy found in the Temple of Styx."
   },
   {
@@ -1580,14 +2018,18 @@
     "label": "Unlock the Crawler Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["crawler"]
+    "subjects": [
+      "crawler"
+    ]
   },
   {
     "id": "encounter:gigantic-vermin",
     "label": "Encounter a Gigantic Vermin for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["gigantic-vermin"],
+    "subjects": [
+      "gigantic-vermin"
+    ],
     "description": "Enemy found in the Temple of Styx."
   },
   {
@@ -1595,14 +2037,18 @@
     "label": "Unlock the Gigantic Vermin Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["gigantic-vermin"]
+    "subjects": [
+      "gigantic-vermin"
+    ]
   },
   {
     "id": "encounter:king-vermin",
     "label": "Encounter a King Vermin for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["king-vermin"],
+    "subjects": [
+      "king-vermin"
+    ],
     "description": "Enemy found in the Temple of Styx."
   },
   {
@@ -1610,14 +2056,18 @@
     "label": "Unlock the King Vermin Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["king-vermin"]
+    "subjects": [
+      "king-vermin"
+    ]
   },
   {
     "id": "encounter:bother",
     "label": "Encounter a Bother for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bother"],
+    "subjects": [
+      "bother"
+    ],
     "description": "Enemy found in the Temple of Styx."
   },
   {
@@ -1625,14 +2075,18 @@
     "label": "Unlock the Bother Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["bother"]
+    "subjects": [
+      "bother"
+    ]
   },
   {
     "id": "encounter:snakestone",
     "label": "Encounter a Snakestone for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["snakestone"],
+    "subjects": [
+      "snakestone"
+    ],
     "description": "Enemy found in the Temple of Styx."
   },
   {
@@ -1640,14 +2094,18 @@
     "label": "Unlock the Snakestone Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["snakestone"]
+    "subjects": [
+      "snakestone"
+    ]
   },
   {
     "id": "encounter:satyr-cultist",
     "label": "Encounter a Satyr Cultist for the first time",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["satyr-cultist"],
+    "subjects": [
+      "satyr-cultist"
+    ],
     "description": "Enemy found in the Temple of Styx."
   },
   {
@@ -1655,6 +2113,8 @@
     "label": "Unlock the Satyr Cultist Codex entry",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["satyr-cultist"]
+    "subjects": [
+      "satyr-cultist"
+    ]
   }
 ]

@@ -8,7 +8,7 @@ each single action inside each prophecy.
 The site is live at https://babimartins.github.io/hades-prophecy-tracker/.
 
 Three phases rebuilt the project around **subjects** rather than collections.
-The dataset holds 120 subjects, 883 facts and 766 achievements; 622 facts carry
+The dataset holds 120 subjects, 884 facts and 767 achievements; 625 facts carry
 a description of what the thing does, and every fact names the subjects it
 belongs to. 187 of them carry a price, in the currency the shop asks for.
 
@@ -77,7 +77,7 @@ This list is verified against the current state of the repository.
 | `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, `hd-progress`, and shared design tokens (`colorVar`, `colorTokens`). No game knowledge. |
 | `apps/web`         | Vite application. Holds the dashboard UI — collection filter, search, section grouping — the IndexedDB progress store, and the export/import transfer format. |
 
-The curated dataset in `packages/data` holds 766 achievements across 12
+The curated dataset in `packages/data` holds 767 achievements across 13
 populated collections, each broken into its sub-item facts:
 
 | Collection                     | Entries | Notes                                                |
@@ -94,18 +94,19 @@ populated collections, each broken into its sub-item facts:
 | Mirror of Night                | 24      | 12 talent pairs, red and green side, per pair.       |
 | Pact of Punishment             | 15      | Every condition, tracked as active (`atLeast 1`), not maxed. |
 | Perks                          | 11      | Every named perk from the Benefits Package condition. |
+| Skelly's Challenge Statues     | 1       | The three covered statues, cleared at Heat 8, 16 and 32. The third backs no trophy and no prophecy. |
 
-883 facts back these 766 achievements. Some are shared across collections —
+884 facts back these 767 achievements. Some are shared across collections —
 for example, `aspect:stygius:zagreus` backs an achievement in the weapon
 aspects collection, two in the Fated List, and two in the Codex — so marking
 one action can advance entries in more than one collection at once.
 
 The 50 platform achievements are mostly not new work. 13 restate a prophecy
-and take its requirement. 14 more are expressed over facts that already exist,
-including 4 that are a threshold over a whole pool: 100 of the 149 boons, 50 of
-the 72 Daedalus enchantments, 50 of the 164 Contractor jobs, any 15 of the 55
-prophecies. Only 22 need a fact of their own. The 50th, God of Blood, is the
-other 49. Steam lists only 49 publicly because that one is hidden.
+and take its requirement. 4 are a threshold over a whole pool: 100 of the 149
+boons, 50 of the 72 Daedalus enchantments, 50 of the 164 Contractor jobs, any
+15 of the 55 prophecies. 11 more reuse facts that already exist. Only 21 need a
+fact of their own. The 50th, God of Blood, is the other 49. Steam lists only 49
+publicly because that one is hidden.
 
 ## Development
 

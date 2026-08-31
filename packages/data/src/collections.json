@@ -58,5 +58,10 @@
     "id": "contractor",
     "name": "House Contractor",
     "description": "The House Contractor turns Gemstones, Diamonds and a few rarer things into permanent renovations: added chambers, Underworld upgrades, and the decor of each room in the House. His Work Orders are what unlock several characters' story steps, so he is the reason some favors can be finished at all."
+  },
+  {
+    "id": "statue",
+    "name": "Skelly's Challenge Statues",
+    "description": "Skelly adds three covered statues to the southwest of the courtyard. Each asks you to clear a run at a Heat level: 8, 16 and 32. Uncovering one gives one of his prizes. The third carries no trophy and no prophecy."
   }
 ]

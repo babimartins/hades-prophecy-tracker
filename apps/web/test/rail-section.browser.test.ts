@@ -96,8 +96,29 @@ describe('The House', () => {
       'Contractor · Court Music',
       'Well of Charon',
       'Wretched Broker',
+      'Skelly’s Challenge Statues',
       'Platform achievements',
     ])
+  })
+
+  it('gives the third statue the only place it is counted', async () => {
+    // Heat 8 backs a prophecy and a trophy, Heat 16 backs a trophy, Heat 32
+    // backs neither. Without this group the third would be in the dataset and
+    // reachable from nowhere.
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="statue"]')?.click()
+    await section().updateComplete
+    const rows = [...root().querySelectorAll('li[data-fact]')].map((li) =>
+      li.getAttribute('data-fact'),
+    )
+    expect(rows).toEqual([
+      'combat:defeat-hades-heat8',
+      'combat:defeat-hades-heat16',
+      'combat:defeat-hades-heat32',
+    ])
+    const elsewhere = dataset.achievements.filter(
+      (a) => a.collection !== 'statue' && collectFactIds(a.requirement).includes('combat:defeat-hades-heat32'),
+    )
+    expect(elsewhere).toEqual([])
   })
 
   it('shows every purchase in a room, with the Work Orders kept apart', async () => {

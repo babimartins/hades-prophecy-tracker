@@ -22,6 +22,7 @@ import perkAchievements from './perk/achievements.json'
 import perkFacts from './perk/facts.json'
 import prophecyAchievements from './prophecies/achievements.json'
 import prophecyFacts from './prophecies/facts.json'
+import statueAchievements from './statue/achievements.json'
 import subjects from './subjects.json'
 import wellOfCharonAchievements from './well-of-charon/achievements.json'
 import wellOfCharonFacts from './well-of-charon/facts.json'
@@ -49,6 +50,7 @@ export const dataset: Dataset = validateDataset({
     ...trophyAchievements,
     ...codexAchievements,
     ...contractorAchievements,
+    ...statueAchievements,
     ...keepsakeAchievements,
     ...aspectAchievements,
     ...boonAchievements,

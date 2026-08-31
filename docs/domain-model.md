@@ -178,22 +178,33 @@ answering from the game.
    become more complete." A section is a part of one entry, not one of the nine
    groupings. The fact now carries that as its description.
 3. ~~Whether clearing at a given Heat is recorded per weapon or globally.~~
-   Settled: globally, and the question was larger than the data needs. Only one
-   entry uses Heat. The Fated List gives The Useless Trinket's "How to
-   Complete" as "Beat Hades with at least 8 heat", with no weapon named. The
-   single boolean `combat:defeat-hades-heat8` is right.
-4. ~~Whether the Skelly statues are per save or per weapon.~~ Settled: neither,
-   and they are not a tracked step at all. The Fated List's column header reads
-   **How to reveal**, and The Useless Trinket's is "Escape the Underworld at
-   least 5 times, then check the three covered statues in the preparation
-   chamber." A reveal condition is not a completion step. The page states that
-   progress "is tracked even before meeting the prerequisites", so the dataset
-   deliberately holds no reveal conditions.
+   Settled: globally. No source names a weapon anywhere Heat is required. The
+   Fated List gives The Useless Trinket's "How to Complete" as "Beat Hades with
+   at least 8 heat"; the Achievements page gives the two trophies as "set the
+   Heat level to 8 minimum" and "to 16 minimum". Three boolean facts, one per
+   Heat level, and none of them per weapon. See question 4: the first answer
+   here said only one entry used Heat, and missed the other two statues.
+4. ~~Whether the Skelly statues are per save or per weapon.~~ Settled: neither.
+   They are three Heat challenges. Skelly's page: "Skelly will add 3 covered
+   statues to the southwest of the courtyard which require you to complete runs
+   at certain heat levels: **8, 16, and 32**."
 
-   The bullet "Earn the first of Skelly's Prizes" sits in that row's
-   **Description** cell, not its How to Complete. It is what the prophecy
-   gives, not a step to take. Reading the header before adding a fact is what
-   stopped a wrong one going in.
+   A first answer here said the statues were only a reveal condition and not
+   tracked. That was wrong, and Barbara caught it by asking whether they were
+   the weapons being revealed. The statues are three actions with three prizes,
+   and only the first was in the dataset.
+
+   - Heat 8 uncovers the first prize. It backs `prophecy:useless-trinket` and
+     the trophy `achievement:the-useless-trinket`.
+   - Heat 16 uncovers the second. It backs `achievement:skellys-last-lamentations`,
+     which had been modelled as a checkbox reading "Earn the second of Skelly's
+     prizes" — the reward, not the action.
+   - Heat 32 uncovers the third. It backs no trophy and no prophecy, so the
+     `statue` collection exists to hold all three.
+
+   The bullet "Earn the first of Skelly's Prizes" does sit in the Fated List's
+   **Description** cell rather than its How to Complete, so it is still not a
+   separate step: it names what the prophecy gives.
 5. ~~Whether Dionysus' "6 different characters" is the same counter as The
    Queen's Plan's "6 of the 9 Olympians".~~ Settled: **no**, they are different
    pools. Dionysus' page locks his final gauge until Zagreus "forges bonds with
