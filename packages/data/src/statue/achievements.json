@@ -1,0 +1,16 @@
+[
+  {
+    "id": "statue:skellys-challenge-statues",
+    "name": "Skelly's Challenge Statues",
+    "description": "Uncover all three by clearing a run at Heat 8, at Heat 16 and at Heat 32.",
+    "collection": "statue",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-hades-heat8",
+        "combat:defeat-hades-heat16",
+        "combat:defeat-hades-heat32"
+      ]
+    }
+  }
+]

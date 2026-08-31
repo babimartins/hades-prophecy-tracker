@@ -224,9 +224,9 @@ describe('facts tagged with a subject', () => {
   it('splits into tagged and deliberately subject-less', () => {
     // The two buckets partition the same array, so their sum is the total by
     // construction. The pinned numbers are what this test actually checks.
-    expect(tagged).toHaveLength(615)
-    expect(systemFacts).toHaveLength(268)
-    expect(dataset.facts).toHaveLength(883)
+    expect(tagged).toHaveLength(617)
+    expect(systemFacts).toHaveLength(267)
+    expect(dataset.facts).toHaveLength(884)
   })
 
   it('gives a system fact an empty list, never a missing key and never a subject', () => {
@@ -298,8 +298,10 @@ describe('fact descriptions', () => {
       // last heart. Each says how many conversations, or what the count is of.
       talk: 4,
       ambrosia: 1,
+      // Skelly's three challenge statues, each naming its Heat level.
+      combat: 3,
     })
-    expect(described).toHaveLength(622)
+    expect(described).toHaveLength(625)
   })
 
   it('never stores a wiki cross-reference in place of an answer', () => {
@@ -380,7 +382,7 @@ describe('what a system is, and what the player should not read yet', () => {
   it('describes every collection', () => {
     const undescribed = dataset.collections.filter((c) => c.description === undefined)
     expect(undescribed.map((c) => c.id)).toEqual([])
-    expect(dataset.collections).toHaveLength(12)
+    expect(dataset.collections).toHaveLength(13)
   })
 
   it('flags the entries whose text states an outcome the player may not have reached', () => {
@@ -597,9 +599,10 @@ describe('the platform trophies', () => {
 
   it('needs a new fact only where no existing action covers the trophy', () => {
     const own = dataset.facts.filter((fact) => fact.id.startsWith('achievement:'))
-    expect(own).toHaveLength(22)
-    // 28 of the 50 are covered by prophecies or by facts that already exist
-    expect(50 - own.length).toBe(28)
+    expect(own).toHaveLength(21)
+    // The other 29: 13 restate a prophecy, 4 are a threshold over a whole
+    // pool, 11 reuse existing facts, and God of Blood is the other 49.
+    expect(13 + 4 + 11 + 1 + own.length).toBe(trophies.length)
   })
 
   it('counts, rather than hiding a count behind one checkbox', () => {
@@ -731,5 +734,57 @@ describe("what the Fated List means by forging a bond", () => {
       const fact = dataset.facts.find((f) => f.id === child.fact)!
       expect([child.fact, child.value]).toEqual([child.fact, fact.max])
     }
+  })
+})
+
+
+describe("Skelly's three challenge statues", () => {
+  // Skelly adds three covered statues to the courtyard, each asking for a run
+  // cleared at a Heat level: 8, 16 and 32. Only the first was in the dataset.
+  // The second was an opaque checkbox reading "Earn the second of Skelly's
+  // prizes", which is the reward, not the action. The third was absent.
+  const STATUES: [number, string | null][] = [
+    [8, 'achievement:the-useless-trinket'],
+    [16, 'achievement:skellys-last-lamentations'],
+    [32, null],
+  ]
+
+  it('names the Heat level in the label, not the prize', () => {
+    for (const [heat] of STATUES) {
+      const fact = dataset.facts.find((f) => f.id === `combat:defeat-hades-heat${heat}`)
+      expect([heat, fact?.label]).toEqual([heat, `Defeat Hades with at least ${heat} Heat active`])
+    }
+    expect(dataset.facts.some((f) => f.id === 'achievement:skellys-last-lamentations')).toBe(false)
+  })
+
+  it('points each trophy at its own Heat level', () => {
+    // Both trophies read "Earn the Nth of Skelly's prizes", so a swap between
+    // them changes nothing visible and nothing else here would catch it.
+    for (const [heat, trophyId] of STATUES) {
+      if (trophyId === null) continue
+      const trophy = dataset.achievements.find((a) => a.id === trophyId)!
+      expect([trophyId, collectFactIds(trophy.requirement)]).toEqual([
+        trophyId,
+        [`combat:defeat-hades-heat${heat}`],
+      ])
+    }
+  })
+
+  it('gives the third statue an entry, because no trophy covers it', () => {
+    const entry = dataset.achievements.find((a) => a.collection === 'statue')!
+    expect(collectFactIds(entry.requirement)).toEqual(
+      STATUES.map(([heat]) => `combat:defeat-hades-heat${heat}`),
+    )
+    const others = dataset.achievements.filter(
+      (a) =>
+        a.collection !== 'statue' &&
+        collectFactIds(a.requirement).includes('combat:defeat-hades-heat32'),
+    )
+    expect(others).toEqual([])
+  })
+
+  it('keeps the first statue on the prophecy that already used it', () => {
+    const prophecy = dataset.achievements.find((a) => a.id === 'prophecy:useless-trinket')!
+    expect(collectFactIds(prophecy.requirement)).toEqual(['combat:defeat-hades-heat8'])
   })
 })

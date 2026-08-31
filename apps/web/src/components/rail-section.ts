@@ -106,6 +106,13 @@ function groupsFor(section: RailSectionId): Group[] {
         achievements: [], rule: 'Ticked the first time you buy each ware.' },
       house('perk', 'Wretched Broker', ['perk']),
       {
+        id: 'statue',
+        label: 'Skelly’s Challenge Statues',
+        about: collectionDescription.get('statue'),
+        facts: STATUE_FACTS.map((id) => factById.get(id)).filter((f): f is Fact => f !== undefined),
+        achievements: dataset.achievements.filter((a) => a.collection === 'statue'),
+      },
+      {
         id: 'achievement',
         label: 'Platform achievements',
         about: collectionDescription.get('achievement'),
@@ -131,6 +138,19 @@ function groupsFor(section: RailSectionId): Group[] {
       rule: 'Each needs a completed favor and one Ambrosia.' },
   ]
 }
+
+/**
+ * Skelly's three challenge statues, in the order he uncovers them.
+ *
+ * Heat 8 backs a prophecy and a trophy, Heat 16 backs a trophy, and Heat 32
+ * backs neither. Without a group of its own the third would be in the dataset
+ * and reachable from nowhere.
+ */
+const STATUE_FACTS = [
+  'combat:defeat-hades-heat8',
+  'combat:defeat-hades-heat16',
+  'combat:defeat-hades-heat32',
+]
 
 const ROOM_LABEL: Readonly<Record<string, string>> = {
   'work-orders': 'Contractor · Work Orders',

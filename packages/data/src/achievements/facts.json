@@ -49,13 +49,6 @@
     "subjects": []
   },
   {
-    "id": "achievement:skellys-last-lamentations",
-    "label": "Earn the second of Skelly's prizes",
-    "kind": "boolean",
-    "collection": "achievement",
-    "subjects": []
-  },
-  {
     "id": "achievement:thanks-but-no-thanks",
     "label": "Purge a Legendary Boon",
     "kind": "boolean",
@@ -154,5 +147,25 @@
     "collection": "achievement",
     "subjects": [],
     "max": 15
+  },
+  {
+    "id": "combat:defeat-hades-heat16",
+    "label": "Defeat Hades with at least 16 Heat active",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": [
+      "hades"
+    ],
+    "description": "The second of Skelly's three challenge statues."
+  },
+  {
+    "id": "combat:defeat-hades-heat32",
+    "label": "Defeat Hades with at least 32 Heat active",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": [
+      "hades"
+    ],
+    "description": "The third of Skelly's three challenge statues. It carries no trophy and no prophecy."
   }
 ]

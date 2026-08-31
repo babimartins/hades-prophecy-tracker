@@ -617,3 +617,32 @@ over all 24 affinity gauges and a new `ambrosia:total-given` counter.
 The wiki's per-character heart maximums were cross-checked against all 24
 `nectar:` facts. 23 matched exactly. The 24th, Cerberus, only phrases it
 differently on its page; the value matches too.
+
+## 48. Skelly's three challenge statues are three actions, and two were missing
+
+Skelly's page: "Skelly will add 3 covered statues to the southwest of the
+courtyard which require you to complete runs at certain heat levels: 8, 16, and
+32."
+
+Only Heat 8 was in the dataset. Heat 16 existed as a checkbox labelled "Earn
+the second of Skelly's prizes", which names the reward rather than the action,
+so the player could not see what to do. Heat 32 was absent.
+
+The third statue backs no trophy and no prophecy. Every fact must back an
+achievement — an integrity test enforces it, and it caught the orphan — so the
+three statues get a collection of their own. That is what they are in the game:
+a closed list of three with three prizes.
+
+Both trophies read "Earn the Nth of Skelly's prizes", so swapping which Heat
+level each points at would change nothing visible. A test pins each one.
+
+## 49. A wrong answer stood until Barbara asked a question about it
+
+The first answer to the statues question said they were a reveal condition and
+not a tracked step. It was reached by reading the Fated List's column headers,
+which was the right method, and stopping there — Skelly's own page was never
+opened. She asked whether the statues were the weapons being revealed. They are
+not, but the question was enough to send the research back to a source that had
+the answer.
+
+Read the page for the thing itself, not only the page that mentions it.
