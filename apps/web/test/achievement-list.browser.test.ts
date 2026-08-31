@@ -61,6 +61,21 @@ const large: Achievement[] = Array.from({ length: 41 }, (_, index) => ({
   section: index < 21 ? 'chthonic-gods' : 'olympian-gods',
 }))
 
+/**
+ * 41 unsectioned achievements in one collection — the shape of the real
+ * 55-entry Fated List of Minor Prophecies, which carries no section at all.
+ * Above `LARGE_LIST_ROW_THRESHOLD`, this must collapse by default exactly
+ * like a large sectioned collection does: the same list must not behave two
+ * different ways depending only on whether it happens to carry a section.
+ */
+const largeUnsectioned: Achievement[] = Array.from({ length: 41 }, (_, index) => ({
+  id: `prophecy:entry-${index}`,
+  name: `Entry ${index}`,
+  description: `Entry ${index}.`,
+  collection: 'prophecy',
+  requirement: { kind: 'all', of: [`a:fact-${index}`] },
+}))
+
 const collectionsMeta = [
   { id: 'prophecy', name: 'Fated List of Minor Prophecies' },
   { id: 'codex', name: 'Codex' },
@@ -157,7 +172,10 @@ describe('achievement-list', () => {
 
   it('marks a completed achievement as done', async () => {
     render(
-      html`<achievement-list .achievements=${achievements} .facts=${{ 'a:three': true }}></achievement-list>`,
+      html`<achievement-list
+        .achievements=${achievements}
+        .facts=${{ 'a:three': true }}
+      ></achievement-list>`,
       document.body,
     )
     const element = document.querySelector('achievement-list')!
@@ -168,7 +186,10 @@ describe('achievement-list', () => {
   })
 
   it('fires achievement-open on a row click', async () => {
-    render(html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`, document.body)
+    render(
+      html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
     const element = document.querySelector('achievement-list')!
     await element.updateComplete
     const ids: string[] = []
@@ -217,7 +238,10 @@ describe('achievement-list', () => {
   })
 
   it('collapses every section by default once the list is large', async () => {
-    render(html`<achievement-list .achievements=${large} .facts=${{}}></achievement-list>`, document.body)
+    render(
+      html`<achievement-list .achievements=${large} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
     const element = document.querySelector('achievement-list')!
     await element.updateComplete
     const groups = [...element.shadowRoot!.querySelectorAll('details')]
@@ -301,6 +325,71 @@ describe('achievement-list', () => {
     summary.click()
     await vi.waitFor(() => expect(events.length).toBe(1))
     expect(events).toEqual([{ collection: 'codex', section: 'chthonic-gods', open: false }])
+  })
+})
+
+describe('achievement-list treats a large unsectioned collection like a large sectioned one', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('collapses it behind a details control by default, the same as a large sectioned collection', async () => {
+    render(
+      html`<achievement-list .achievements=${largeUnsectioned} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups.length).toBe(1)
+    expect(groups[0]!.open).toBe(false)
+    expect(groups[0]!.querySelectorAll('li').length).toBe(41)
+  })
+
+  it('still renders a small unsectioned collection flat and open, unchanged', async () => {
+    render(
+      html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    expect(element.shadowRoot!.querySelectorAll('details').length).toBe(0)
+    expect(element.shadowRoot!.querySelectorAll('ul > li').length).toBe(2)
+  })
+
+  it('lets an explicit collapse-state entry force it open, the same as a sectioned collection', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${largeUnsectioned}
+        .facts=${{}}
+        .collapsedSections=${{ 'prophecy:': false }}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const details = element.shadowRoot!.querySelector('details')!
+    expect(details.open).toBe(true)
+  })
+
+  it('fires section-toggle naming the collection when its heading is activated', async () => {
+    render(
+      html`<achievement-list .achievements=${largeUnsectioned} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const events: { collection: string; section: string; open: boolean }[] = []
+    element.addEventListener('section-toggle', (event) => {
+      events.push(
+        (event as CustomEvent<{ collection: string; section: string; open: boolean }>).detail,
+      )
+    })
+    const summary = element.shadowRoot!.querySelector('details summary') as HTMLElement
+    summary.click()
+    await vi.waitFor(() => expect(events.length).toBe(1))
+    expect(events[0]!.collection).toBe('prophecy')
+    expect(events[0]!.open).toBe(true)
   })
 })
 

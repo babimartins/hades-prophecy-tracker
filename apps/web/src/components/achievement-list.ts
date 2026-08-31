@@ -284,24 +284,41 @@ export class AchievementList extends LitElement {
     `
   }
 
+  /**
+   * A collection with no section used to always render flat and open,
+   * whatever its size, while a sectioned collection collapsed above
+   * `LARGE_LIST_ROW_THRESHOLD` rows — the same list behaving two different
+   * ways for no reason the player could see. `''` stands in for "no
+   * section" as the collapse-state key, so a large unsectioned collection
+   * (the 55-entry Fated List, once part of a large "All" view) collapses
+   * behind the same kind of control a large sectioned collection gets. A
+   * small unsectioned collection still renders flat with no control at
+   * all, exactly as before sections existed.
+   */
   private renderGroup(group: SectionGroup): TemplateResult {
-    if (group.section === undefined) {
+    const section = group.section ?? ''
+    const defaultOpen = this.achievements.length <= LARGE_LIST_ROW_THRESHOLD
+    if (
+      group.section === undefined &&
+      this.collapsedSections[sectionKey(group.collection, section)] === undefined &&
+      defaultOpen
+    ) {
       return html`<ul>
         ${group.items.map((achievement) => this.renderRow(achievement))}
       </ul>`
     }
     const collection = group.collection
-    const section = group.section
     const key = sectionKey(collection, section)
     const explicit = this.collapsedSections[key]
-    const defaultOpen = this.achievements.length <= LARGE_LIST_ROW_THRESHOLD
     const open = explicit === undefined ? defaultOpen : !explicit
+    const heading =
+      group.section === undefined ? this.collectionName(collection) : sectionHeading(section)
     return html`
       <details ?open=${open}>
         <summary
           @click=${(event: MouseEvent) => this.onSummaryClick(collection, section, open, event)}
         >
-          ${sectionHeading(section)}
+          ${heading}
         </summary>
         <ul>
           ${group.items.map((achievement) => this.renderRow(achievement))}
@@ -312,9 +329,11 @@ export class AchievementList extends LitElement {
 
   private renderCollectionBlock(block: CollectionBlock, showHeading: boolean): TemplateResult {
     return html`
-      ${showHeading
-        ? html`<h2 class="collection-heading">${this.collectionName(block.collection)}</h2>`
-        : null}
+      ${
+        showHeading
+          ? html`<h2 class="collection-heading">${this.collectionName(block.collection)}</h2>`
+          : null
+      }
       ${block.groups.map((group) => this.renderGroup(group))}
     `
   }
