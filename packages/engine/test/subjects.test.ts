@@ -73,7 +73,7 @@ describe('subjectFacts', () => {
     expect(everyTagged.map((f) => f.id)).not.toContain('pact:hard-labor')
   })
 
-  it('returns a shared fact for each of its subjects, in dataset order', () => {
+  it('returns the same fact object for each subject that names it', () => {
     // The duplicate of the test above went when the absent-key state did. This
     // covers the shape that replaced it: one fact reachable from two subjects,
     // each time in the order the dataset lists it.

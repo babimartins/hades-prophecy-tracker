@@ -630,7 +630,7 @@
     "kind": "boolean",
     "collection": "codex",
     "subjects": ["centaur-heart"],
-    "description": "A run-scoped pickup that raises current and maximum Life by 25."
+    "description": "A run-scoped pickup that raises current and maximum Life by 25, or by 50 in an Erebus encounter or a mini-boss room."
   },
   {
     "id": "artifact:pom-of-power",

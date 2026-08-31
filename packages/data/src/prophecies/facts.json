@@ -2181,7 +2181,8 @@
     "label": "Slay the Dire Inferno Bomber",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["inferno-bomber"]
+    "subjects": ["inferno-bomber"],
+    "description": "Encountered as a mid-stage mini-boss in Tartarus only, though the ordinary foe also appears in Asphodel."
   },
   {
     "id": "miniboss:doomstone",
@@ -2205,7 +2206,7 @@
     "kind": "boolean",
     "collection": "prophecy",
     "subjects": ["voidstone"],
-    "description": "The Voidstones on the Barge of Death in Asphodel, which the Fated List counts as Dire."
+    "description": "The Voidstones on the Barge of Death in Asphodel, which the Fated List counts as Dire. They look like ordinary Voidstones and have no special qualities, not even armor."
   },
   {
     "id": "miniboss:megagorgon",
@@ -2220,7 +2221,8 @@
     "label": "Slay the Dire Skull-Crusher",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["skull-crusher"]
+    "subjects": ["skull-crusher"],
+    "description": "The single armored Skull-Crusher that fights alongside the Megagorgon in the Asphodel mini-boss encounter, and deals the brunt of its damage."
   },
   {
     "id": "miniboss:dire-spreader",
@@ -2259,7 +2261,7 @@
     "kind": "boolean",
     "collection": "prophecy",
     "subjects": ["gigantic-vermin"],
-    "description": "A mini-boss variant with heavily increased armor and health, jet-black instead of grey."
+    "description": "A mini-boss variant with heavily increased armor and health, jet-black instead of gray."
   },
   {
     "id": "miniboss:dire-satyr-cultist",

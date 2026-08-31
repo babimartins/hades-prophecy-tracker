@@ -281,9 +281,9 @@ describe('fact descriptions', () => {
       curse: 13,
       blessing: 12,
       perk: 11,
-      miniboss: 9,
+      miniboss: 11,
     })
-    expect(described).toHaveLength(450)
+    expect(described).toHaveLength(452)
   })
 
   it('never stores a wiki cross-reference in place of an answer', () => {
@@ -306,8 +306,8 @@ describe('fact descriptions', () => {
     // Nine `miniboss:dire-*` facts carried their `encounter:*` twin's text
     // verbatim, which sent a player hunting the Dire Voidstone in Elysium
     // where only the ordinary Voidstone appears. Six now describe the Elite
-    // form from the foe's own page; three have no Elite paragraph anywhere and
-    // stay empty. The other three `miniboss:*` facts ARE the mini-boss, not an
+    // form from the foe's own page. Only the Bother has no Elite paragraph
+    // anywhere, so only it stays empty. The other three `miniboss:*` facts ARE the mini-boss, not an
     // Elite of a separate foe, so sharing their twin's text is correct and
     // they are exempt.
     const ownMiniboss = ['miniboss:doomstone', 'miniboss:wretched-sneak', 'miniboss:megagorgon']
