@@ -140,6 +140,19 @@ describe('subjectProgress', () => {
     expect(result.ratio).toBeCloseTo(0)
   })
 
+  it('counts the very first step as partial, not as nothing started', () => {
+    // The boundary is value > 0, not value > 1. A player who has given Zeus
+    // his first Nectar, 1 of 7, must not read as untouched.
+    expect(subjectProgress(dataset, 'zeus', { 'nectar:zeus': 1 })).toMatchObject({
+      done: 0,
+      partial: 1,
+    })
+    expect(subjectProgress(dataset, 'zeus', { 'nectar:zeus': 0 })).toMatchObject({
+      done: 0,
+      partial: 0,
+    })
+  })
+
   it('counts a number fact at its max as done', () => {
     const result = subjectProgress(dataset, 'zeus', { 'nectar:zeus': 7 })
     expect(result.done).toBe(1)
