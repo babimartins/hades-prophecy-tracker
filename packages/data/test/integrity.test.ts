@@ -150,3 +150,41 @@ describe('dataset integrity', () => {
     expect(totalFacts).toBe(dataset.facts.length)
   })
 })
+
+describe('the subject roster', () => {
+  it('holds one entry per Codex entry', () => {
+    const codexEntries = dataset.achievements.filter((a) => a.collection === 'codex')
+    expect(dataset.subjects).toHaveLength(codexEntries.length)
+    expect(dataset.subjects).toHaveLength(119)
+  })
+
+  it('has no duplicate subject id', () => {
+    const ids = dataset.subjects.map((subject) => subject.id)
+    expect(new Set(ids).size).toBe(ids.length)
+  })
+
+  it('splits into the four types as the Codex sections dictate', () => {
+    const counts: Record<string, number> = {}
+    for (const subject of dataset.subjects) {
+      counts[subject.type] = (counts[subject.type] ?? 0) + 1
+    }
+    expect(counts).toEqual({ character: 72, collectible: 34, region: 7, weapon: 6 })
+  })
+
+  it('names the six weapons by their true name, not their Codex display name', () => {
+    const weapons = dataset.subjects.filter((s) => s.type === 'weapon').map((s) => s.id)
+    expect(weapons.sort()).toEqual([
+      'aegis',
+      'coronacht',
+      'exagryph',
+      'malphon',
+      'stygius',
+      'varatha',
+    ])
+  })
+
+  it('keeps the Codex display name, so a weapon reads as the player sees it', () => {
+    const stygius = dataset.subjects.find((s) => s.id === 'stygius')
+    expect(stygius?.name).toBe('Stygian Blade')
+  })
+})
