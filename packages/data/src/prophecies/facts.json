@@ -298,7 +298,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["stygius"],
-    "description": "The form in which the blade of the underworld first revealed itself."
+    "description": "The blade in its original form. Levelling it raises bonus Attack Speed and Move Speed."
   },
   {
     "id": "combat:slay-skelly-with-stygius",
@@ -2181,96 +2181,84 @@
     "label": "Slay the Dire Inferno Bomber",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["inferno-bomber"],
-    "description": "Enemy found in Tartarus and Asphodel."
+    "subjects": ["inferno-bomber"]
   },
   {
     "id": "miniboss:doomstone",
     "label": "Slay the Doomstone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["doomstone"],
-    "description": "Mini-boss found in a unique chamber in Tartarus."
+    "subjects": ["doomstone"]
   },
   {
     "id": "miniboss:wretched-sneak",
     "label": "Slay the Wretched Sneak",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["wretched-sneak"],
-    "description": "Mini-boss found in a unique chamber in Tartarus."
+    "subjects": ["wretched-sneak"]
   },
   {
     "id": "miniboss:dire-voidstone",
     "label": "Slay the Dire Voidstone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["voidstone"],
-    "description": "Enemy found in Asphodel and Elysium."
+    "subjects": ["voidstone"]
   },
   {
     "id": "miniboss:megagorgon",
     "label": "Slay the Megagorgon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["megagorgon"],
-    "description": "Asphodel mini-boss."
+    "subjects": ["megagorgon"]
   },
   {
     "id": "miniboss:dire-skull-crusher",
     "label": "Slay the Dire Skull-Crusher",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["skull-crusher"],
-    "description": "Enemy found in Asphodel."
+    "subjects": ["skull-crusher"]
   },
   {
     "id": "miniboss:dire-spreader",
     "label": "Slay the Dire Spreader",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["spreader"],
-    "description": "Enemy found in Asphodel."
+    "subjects": ["spreader"]
   },
   {
     "id": "miniboss:dire-soul-catcher",
     "label": "Slay the Dire Soul Catcher",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["soul-catcher"],
-    "description": "Enemy found in Elysium."
+    "subjects": ["soul-catcher"]
   },
   {
     "id": "miniboss:dire-bother",
     "label": "Slay the Dire Bother",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["bother"],
-    "description": "Enemy found in the Temple of Styx."
+    "subjects": ["bother"]
   },
   {
     "id": "miniboss:dire-snakestone",
     "label": "Slay the Dire Snakestone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["snakestone"],
-    "description": "Enemy found in the Temple of Styx."
+    "subjects": ["snakestone"]
   },
   {
     "id": "miniboss:dire-gigantic-vermin",
     "label": "Slay the Dire Gigantic Vermin",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["gigantic-vermin"],
-    "description": "Enemy found in the Temple of Styx."
+    "subjects": ["gigantic-vermin"]
   },
   {
     "id": "miniboss:dire-satyr-cultist",
     "label": "Slay the Dire Satyr Cultist",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["satyr-cultist"],
-    "description": "Enemy found in the Temple of Styx."
+    "subjects": ["satyr-cultist"]
   },
   {
     "id": "contractor:renovation-tasks",
@@ -2454,7 +2442,7 @@
     "kind": "boolean",
     "collection": "prophecy",
     "subjects": [],
-    "description": "Gain Obol = 1.1 - 1.8x Heart cost (for a blood price) (WIP)"
+    "description": "Gain Obol = 1.1 - 1.8x Heart cost (for a blood price)"
   },
   {
     "id": "wellofcharon:kiss-of-styx",
@@ -2478,7 +2466,7 @@
     "kind": "boolean",
     "collection": "prophecy",
     "subjects": [],
-    "description": "Gain 11-14 Gemstones (WIP)"
+    "description": "Gain 11-14 Gemstones"
   },
   {
     "id": "wellofcharon:night-spindle",
@@ -2602,7 +2590,7 @@
     "kind": "boolean",
     "collection": "prophecy",
     "subjects": ["stygius"],
-    "description": "Your Attack deals bonus damage equal to 1=5% of your current Obol."
+    "description": "Your Attack deals bonus damage equal to 5% of your current Obol."
   },
   {
     "id": "daedalus:stygius:piercing-wave",
@@ -2898,7 +2886,7 @@
     "kind": "boolean",
     "collection": "prophecy",
     "subjects": ["varatha"],
-    "description": "Hold Special to charge your skewer for up to +200% base damage. Minimum range reduced*."
+    "description": "Hold Special to charge your skewer for up to +200% base damage. Minimum range reduced."
   },
   {
     "id": "daedalus:varatha:serrated-point",
@@ -3141,7 +3129,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["coronacht"],
-    "description": "The form in which the heart-seeking bow first revealed itself."
+    "description": "The bow in its original form. Levelling it raises Critical Attack Chance."
   },
   {
     "id": "aspect:coronacht:chiron",
@@ -3168,7 +3156,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["aegis"],
-    "description": "The form in which the shield of chaos first revealed itself."
+    "description": "The shield in its original form. Levelling it raises Attack and Dash-Strike damage."
   },
   {
     "id": "aspect:aegis:chaos",
@@ -3186,7 +3174,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["aegis"],
-    "description": "Your Special is replaced with the Blitz Disc.*"
+    "description": "Your Special is replaced with the Blitz Disc."
   },
   {
     "id": "aspect:varatha:zagreus",
@@ -3195,7 +3183,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["varatha"],
-    "description": "The form in which the eternal spear first revealed itself."
+    "description": "The spear in its original form. Levelling it raises Special damage, range and speed."
   },
   {
     "id": "aspect:varatha:achilles",
@@ -3222,7 +3210,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["malphon"],
-    "description": "The form in which the Twin Fists first revealed themselves."
+    "description": "The fists in their original form. Levelling them raise Dodge Chance."
   },
   {
     "id": "aspect:malphon:talos",
@@ -3240,7 +3228,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["malphon"],
-    "description": "After landing 12 strikes, your next Special* hits more times."
+    "description": "After landing 12 strikes, your next Special hits more times."
   },
   {
     "id": "aspect:exagryph:zagreus",
@@ -3249,7 +3237,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["exagryph"],
-    "description": "The form in which the Adamant Rail first revealed itself."
+    "description": "The rail in its original form. Levelling it raises bonus maximum Ammo."
   },
   {
     "id": "aspect:exagryph:eris",
@@ -3276,7 +3264,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["stygius"],
-    "description": "You have Holy Excalibur*, and +50 HealthUp to your Life Total."
+    "description": "You have Holy Excalibur, and +50 HealthUp to your Life Total."
   },
   {
     "id": "aspect:varatha:guan-yu",
@@ -3285,7 +3273,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["varatha"],
-    "description": "You have the Frost Fair Blade**, but your life and healing are reduced."
+    "description": "You have the Frost Fair Blade, but your life and healing are reduced."
   },
   {
     "id": "aspect:coronacht:rama",
@@ -3294,7 +3282,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["coronacht"],
-    "description": "You have Celestial Sharanga*, which can cause Shared Suffering."
+    "description": "You have Celestial Sharanga, which can cause Shared Suffering."
   },
   {
     "id": "aspect:aegis:beowulf",
@@ -3303,7 +3291,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["aegis"],
-    "description": "You have Naegling's Board** but take +10% damage."
+    "description": "You have Naegling's Board but take +10% damage."
   },
   {
     "id": "aspect:malphon:gilgamesh",
@@ -3312,7 +3300,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["malphon"],
-    "description": "You have the Claws of Enkidu, whose Dash-Upper can Maim** foes."
+    "description": "You have the Claws of Enkidu, whose Dash-Upper can Maim foes."
   },
   {
     "id": "aspect:exagryph:lucifer",
@@ -3321,7 +3309,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": ["exagryph"],
-    "description": "You have Igneus Eden*, which launches volatile Hellfire."
+    "description": "You have Igneus Eden, which launches volatile Hellfire."
   },
   {
     "id": "talent:shadow-presence",
@@ -3612,7 +3600,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["zeus"],
-    "description": "See Keepsakes from Olympians"
+    "description": "The next Boon you find will be from Zeus. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:conch-shell",
@@ -3621,7 +3609,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["poseidon"],
-    "description": "See Keepsakes from Olympians"
+    "description": "The next Boon you find will be from Poseidon. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:owl-pendant",
@@ -3630,7 +3618,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["athena"],
-    "description": "See Keepsakes from Olympians"
+    "description": "The next Boon you find will be from Athena. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:eternal-rose",
@@ -3639,7 +3627,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["aphrodite"],
-    "description": "See Keepsakes from Olympians"
+    "description": "The next Boon you find will be from Aphrodite. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:blood-filled-vial",
@@ -3648,7 +3636,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["ares"],
-    "description": "See Keepsakes from Olympians"
+    "description": "The next Boon you find will be from Ares. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:adamant-arrowhead",
@@ -3657,7 +3645,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["artemis"],
-    "description": "See Keepsakes from Olympians"
+    "description": "The next Boon you find will be from Artemis. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:overflowing-cup",
@@ -3666,7 +3654,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["dionysus"],
-    "description": "See Keepsakes from Olympians"
+    "description": "The next Boon you find will be from Dionysus. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:lambent-plume",
@@ -3684,7 +3672,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["demeter"],
-    "description": "See Keepsakes from Olympians"
+    "description": "The next Boon you find will be from Demeter. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:cosmic-egg",
@@ -3692,7 +3680,7 @@
     "kind": "number",
     "max": 3,
     "collection": "prophecy",
-    "subjects": ["chaos-realm"],
+    "subjects": ["chaos"],
     "description": "Enter Chaos Gates without losing Heart. Blessings from Chaos have +20/30/40% chance to be Rare or better."
   },
   {
@@ -3738,6 +3726,6 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["hades"],
-    "description": "Your Call becomes Hades' Aid , which briefly makes you Invisible; your God Gauge starts 10/20/30% full. Stealth Damage Bonus: +50/75/100%"
+    "description": "Your Call becomes Hades' Aid, which briefly makes you Invisible; your God Gauge starts 10/20/30% full. Stealth Damage Bonus: +50/75/100%"
   }
 ]

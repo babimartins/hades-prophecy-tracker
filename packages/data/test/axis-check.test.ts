@@ -43,7 +43,7 @@ describe('the subject axis against the real dataset', () => {
     // subjectProgress counts a fact in `total` and skips its capability bucket
     // when the namespace is in neither list. A per-capability breakdown would
     // then quietly stop summing to the whole, with no error anywhere. This runs
-    // over all 119 real subjects, not a fixture, because the fixture only
+    // over all 120 real subjects, not a fixture, because the fixture only
     // covers five of the dataset's namespaces.
     for (const subject of dataset.subjects) {
       const progress = subjectProgress(dataset, subject.id, {})
@@ -172,6 +172,6 @@ describe('the subject axis against the real dataset', () => {
     const tagInstances = tagged.reduce((running, fact) => running + fact.subjects.length, 0)
     expect(tagged).toHaveLength(611)
     expect(summed).toBe(tagInstances)
-    expect(tagInstances).toBe(655)
+    expect(tagInstances).toBe(661)
   })
 })

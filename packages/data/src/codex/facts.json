@@ -52,7 +52,8 @@
     "label": "Witness Hypnos and Thanatos reconcile as brothers",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["hypnos", "thanatos"]
+    "subjects": ["hypnos", "thanatos"],
+    "spoiler": true
   },
   {
     "id": "nectar:thanatos",
@@ -104,7 +105,8 @@
     "label": "Hear Zeus express a wish to reconcile with Hades, and Hades' response",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["zeus", "hades"]
+    "subjects": ["zeus", "hades"],
+    "spoiler": true
   },
   {
     "id": "talk:athena-acknowledges-zagreus-strength",
@@ -399,7 +401,7 @@
     "label": "Give Ambrosia to Megaera for the first time, after her favor is complete, to obtain Companion Battie",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-battie"]
+    "subjects": ["companion-battie", "megaera"]
   },
   {
     "id": "codex:companion-battie",
@@ -413,7 +415,7 @@
     "label": "Give Ambrosia to Thanatos for the first time, after his favor is complete, to obtain Companion Mort",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-mort"]
+    "subjects": ["companion-mort", "thanatos"]
   },
   {
     "id": "codex:companion-mort",
@@ -427,7 +429,7 @@
     "label": "Give Ambrosia to Dusa for the first time, after her Lounge renovation favor is complete, to obtain Companion Fidi",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-fidi"]
+    "subjects": ["companion-fidi", "dusa"]
   },
   {
     "id": "codex:companion-fidi",
@@ -441,7 +443,8 @@
     "label": "Give Ambrosia to Sisyphus for the first time, after his sentence is amended, to obtain Companion Shady",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-shady"]
+    "subjects": ["companion-shady", "sisyphus"],
+    "spoiler": true
   },
   {
     "id": "codex:companion-shady",
@@ -455,7 +458,7 @@
     "label": "Give Ambrosia to Skelly for the first time, after slaying him with the Level 5 Stygius Aspect, to obtain Companion Rib",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-rib"]
+    "subjects": ["companion-rib", "skelly"]
   },
   {
     "id": "codex:companion-rib",
@@ -469,7 +472,8 @@
     "label": "Give Ambrosia to Achilles for the first time, after he reunites with Patroclus, to obtain Companion Antos",
     "kind": "boolean",
     "collection": "codex",
-    "subjects": ["companion-antos"]
+    "subjects": ["companion-antos", "achilles"],
+    "spoiler": true
   },
   {
     "id": "codex:companion-antos",
@@ -627,7 +631,7 @@
     "kind": "boolean",
     "collection": "codex",
     "subjects": ["centaur-heart"],
-    "description": "Which raises Zagreus' current and maximum health for the current run only."
+    "description": "A run-scoped pickup that raises current and maximum Life."
   },
   {
     "id": "artifact:pom-of-power",
@@ -707,7 +711,7 @@
     "kind": "boolean",
     "collection": "codex",
     "subjects": ["loyalty-card"],
-    "description": "Which discounts Charon's shop and Well of Charon prices for the run. Like Charon's Obol, it is lost when Zagreus dies."
+    "description": "A run-scoped item that discounts prices at Charon’s shop and the Well of Charon."
   },
   {
     "id": "artifact:red-onion",

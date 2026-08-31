@@ -215,9 +215,10 @@ describe('facts tagged with a subject', () => {
   })
 
   it('splits into tagged and deliberately subject-less', () => {
+    // The two buckets partition the same array, so their sum is the total by
+    // construction. The pinned numbers are what this test actually checks.
     expect(tagged).toHaveLength(611)
     expect(systemFacts).toHaveLength(81)
-    expect(tagged.length + systemFacts.length).toBe(dataset.facts.length)
     expect(dataset.facts).toHaveLength(692)
   })
 
@@ -246,12 +247,14 @@ describe('facts tagged with a subject', () => {
     expect(orphans.map((subject) => subject.id)).toEqual([])
   })
 
-  it('leaves nothing unresolved', () => {
-    // Every fact names its subjects or declares it has none. The schema now
-    // requires the key, so this is belt and braces, and it is the assertion
-    // that says phase 2 finished.
-    const missing = dataset.facts.filter((fact) => !Array.isArray(fact.subjects))
-    expect(missing).toEqual([])
+  it('never repeats a subject inside one fact', () => {
+    // Zod already guarantees the key is an array, so asserting that proves
+    // nothing. What it does not guarantee is that a fact names each subject
+    // once, and a repeat would double a subject's own fact count.
+    const repeated = dataset.facts
+      .filter((fact) => new Set(fact.subjects).size !== fact.subjects.length)
+      .map((fact) => fact.id)
+    expect(repeated).toEqual([])
   })
 })
 
@@ -277,10 +280,40 @@ describe('fact descriptions', () => {
       pact: 15,
       curse: 13,
       blessing: 12,
-      miniboss: 12,
       perk: 11,
     })
-    expect(described).toHaveLength(453)
+    expect(described).toHaveLength(441)
+  })
+
+  it('never stores a wiki cross-reference in place of an answer', () => {
+    // Eight Olympian keepsakes shipped reading "See Keepsakes from Olympians",
+    // the wiki's own internal pointer with its link stripped off.
+    const pointers = described
+      .filter((fact) => /^See\b|^see\b|^Main article/.test(fact.description!))
+      .map((fact) => fact.id)
+    expect(pointers).toEqual([])
+  })
+
+  it('never leaves a description as a clipped relative clause', () => {
+    const fragments = described
+      .filter((fact) => /^(Which|That|Who)\b/.test(fact.description!))
+      .map((fact) => `${fact.id}: ${fact.description!.slice(0, 50)}`)
+    expect(fragments).toEqual([])
+  })
+
+  it('never stores a description for an Elite that describes the ordinary foe', () => {
+    // Nine `miniboss:dire-*` facts carried their `encounter:*` twin's text
+    // verbatim, which sent a player hunting the Dire Voidstone in Elysium
+    // where only the ordinary Voidstone appears. They carry none until a
+    // source describes the Elite form.
+    const copied = dataset.facts.filter((fact) => {
+      if (!fact.id.startsWith('miniboss:') || !fact.description) return false
+      const twin = dataset.facts.find(
+        (other) => other.id === `encounter:${fact.id.split(':')[1]!.replace(/^dire-/, '')}`,
+      )
+      return twin?.description === fact.description
+    })
+    expect(copied.map((f) => f.id)).toEqual([])
   })
 
   it('never stores a blank or whitespace-only description', () => {
@@ -295,9 +328,15 @@ describe('fact descriptions', () => {
     // `style=` and a bare `|` are in this list because they were not, and 15
     // Pact descriptions shipped reading `style="text-align:left;" | All foes
     // deal bonus damage`. A spot-check caught it; this test did not.
+    // Each pattern here is a leak that actually shipped:
+    //   style=  — 15 Pact descriptions, caught by a spot-check
+    //   1=      — a MediaWiki named-parameter escape, "1=5% of your current Obol"
+    //   *       — a footnote marker whose footnote was never copied
+    //   (WIP)   — a wiki editorial marker
+    //   " ,"    — a space before punctuation, left by stripping a link
     const dirty = described
       .filter((fact) =>
-        /\{\{|\]\]|\[\[|'''|<[a-z/]|style\s*=|class\s*=|colspan|rowspan|\|/i.test(
+        /\{\{|\]\]|\[\[|'''|<[a-z/]|style\s*=|class\s*=|colspan|rowspan|\||\*|\(WIP\)|\b\d=|\s[,.;]/i.test(
           fact.description!,
         ),
       )
@@ -335,13 +374,36 @@ describe('what a system is, and what the player should not read yet', () => {
     ])
   })
 
-  it('flags the three facts whose own label states a story outcome', () => {
+  it('flags every fact whose own label states a story outcome, and only those', () => {
+    // The reveal is in the label here, not the description, so the interface
+    // has to hide the label too. Naming a Work Order or a renovation is not a
+    // reveal — it names a purchase — which is why the `workorder:*` facts and
+    // `talk:dusa-after-lounge-decor` are absent.
     const flagged = dataset.facts.filter((f) => f.spoiler === true).map((f) => f.id)
     expect(flagged.sort()).toEqual([
+      'companion:antos',
+      'companion:shady',
       'talk:demeter-after-epilogue',
+      'talk:hypnos-and-thanatos-reconcile',
       'talk:persephone-and-hades-after-family-reunion',
       'talk:persephone-returns-to-house-of-hades',
+      'talk:zeus-reconciles-with-hades',
     ])
+  })
+
+  it('keeps a fact-level flag consistent with its achievement twin', () => {
+    // codex:companion-shady and codex:companion-antos are flagged for the same
+    // reveal their facts carry. A flag on one and not the other would hide the
+    // outcome in one view and print it in the next.
+    const flaggedFacts = new Set(
+      dataset.facts.filter((f) => f.spoiler === true).map((f) => f.id),
+    )
+    expect(flaggedFacts.has('companion:shady')).toBe(true)
+    expect(flaggedFacts.has('companion:antos')).toBe(true)
+    const twins = dataset.achievements.filter((a) =>
+      ['codex:companion-shady', 'codex:companion-antos'].includes(a.id),
+    )
+    expect(twins.every((a) => a.spoiler === true)).toBe(true)
   })
 
   it('leaves the 55 Fated List texts unflagged, because the game prints them', () => {

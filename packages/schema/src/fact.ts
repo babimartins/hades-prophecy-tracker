@@ -28,7 +28,14 @@ export const factSchema = z.object({
   subjects: z.array(subjectIdSchema),
   /** What the thing is or does, beyond the action the label states. */
   description: z.string().min(1).optional(),
-  /** True when the description reveals something the player may not have reached. */
+  /**
+   * True when this fact's own text states an outcome the player may not have
+   * reached. The reveal can sit in the `label` as well as the `description`,
+   * so the interface must hide both, not only the description.
+   *
+   * Naming a Work Order or a renovation is not a reveal: it names a purchase.
+   * The bar is a stated outcome.
+   */
   spoiler: z.boolean().optional(),
 })
 

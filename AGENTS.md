@@ -230,7 +230,7 @@ its Codex entry alone. Six facts need this rule and nothing else does.
 `NAMESPACES_WITHOUT_CAPABILITY`.** `subjectProgress` counts a fact in `total`
 and skips its capability bucket when the namespace is in neither, so the
 per-capability breakdown silently stops summing to the whole. Two tests guard
-this: the sum over all 119 real subjects, and the namespace-to-capability map
+this: the sum over all 120 real subjects, and the namespace-to-capability map
 pinned entry by entry. Membership alone is not enough — re-pointing `catch` to
 `collect` keeps every sum valid while a fish reads "Collect".
 
@@ -244,9 +244,10 @@ divide-by-zero test where no input reaches zero. `ratioOf` guards
 `total === 0`, and every real subject owns at least one fact, so only the
 engine fixture can cover that path. Assert the invariant that could break.
 
-**Deleting a key is not the same as setting it to `undefined`.** The dataset
-omits `subjects` entirely on an unresolved fact. A test that writes
-`fact.subjects = undefined` creates the key and never covers the real shape.
+**Deleting a key is not the same as setting it to `undefined`.** A test that
+writes `fact.subjects = undefined` creates the key, so it never covers the
+absent-key shape. `subjects` is required now, so the schema test asserts the
+deletion throws; the distinction still matters for any field that is optional.
 
 **Read the file back after a scripted edit.** A patch script that throws part
 way writes nothing, and an earlier success line says nothing about the final
