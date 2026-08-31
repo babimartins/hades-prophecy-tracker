@@ -2116,5 +2116,35 @@
     "subjects": [
       "satyr-cultist"
     ]
+  },
+  {
+    "id": "codex:persephone",
+    "label": "Unlock the Persephone Codex entry",
+    "kind": "boolean",
+    "collection": "codex",
+    "subjects": [
+      "persephone"
+    ]
+  },
+  {
+    "id": "nectar:persephone",
+    "label": "Affinity with Persephone",
+    "kind": "number",
+    "max": 9,
+    "collection": "codex",
+    "subjects": [
+      "persephone"
+    ],
+    "description": "She can only be gifted Nectar after she returns to the House of Hades. The first one earns the Pom Blossom."
+  },
+  {
+    "id": "talk:persephone-good-mother",
+    "label": "Assure Persephone she is a good mother",
+    "kind": "boolean",
+    "collection": "codex",
+    "subjects": [
+      "persephone"
+    ],
+    "description": "Her 6th heart stays locked until this conversation happens."
   }
 ]

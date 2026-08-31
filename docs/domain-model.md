@@ -253,9 +253,30 @@ answering from the game.
   disagreed; the apparent conflict was a hidden entry. Settled by the project
   owner from the game, 2026-08-31.
 
-- **Does Persephone have a Codex entry?** No, and this is a genuine wiki
-  inconsistency, not a gap in our data. Persephone's own wiki page shows a
-  Codex entry section, but the Codex page itself lists her in neither its
-  nine section tables nor its "Not in the Codex" exclusion list. Our 119
-  entries follow the Codex page, so Persephone is correctly absent. Do not
-  add her on the strength of her own page alone.
+- **Does Persephone have a Codex entry?** Yes. This reverses an earlier answer
+  here, which read only the Codex page's index and concluded she was correctly
+  absent. Three things say otherwise, and none of them is her page alone.
+
+  1. Her page carries a `== Codex entry ==` section with Achilles' prose about
+     the Queen of the Underworld, in the same form as every other entry.
+  2. Her page shows a 9-heart affinity gauge, laid out exactly like the other
+     24, ending in "Bond Forged".
+  3. The Codex page itself says the hearts live inside entries: it "serves as a
+     reference of how many bottles of Nectar and Ambrosia have been gifted to
+     certain characters, via a row of hearts in the top right corner of their
+     entries". Hearts imply an entry.
+
+  Against that stands one index list, which never names her at all and has no
+  exclusion list either. She is a late-game story reveal, which is a plain
+  reason for an index to be out of date. The owner chose to follow the three
+  over the one.
+
+  Her entry carries **no section**. The Codex page files every other entry
+  under one of nine headings and does not mention her, so choosing between
+  Chthonic Gods and Others of Note would be inventing a fact. The Characters
+  index falls back to "Character" for her.
+
+  This was found by auditing an old plan document that said "26 Nectar-eligible
+  characters" against a dataset holding 24. The other two are Persephone and
+  Bouldy; Bouldy can be gifted Nectar but, per his page, "lacks an Affinity
+  level", so he has nothing to track.

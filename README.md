@@ -8,7 +8,7 @@ each single action inside each prophecy.
 The site is live at https://babimartins.github.io/hades-prophecy-tracker/.
 
 Three phases rebuilt the project around **subjects** rather than collections.
-The dataset holds 120 subjects, 884 facts and 767 achievements; 625 facts carry
+The dataset holds 120 subjects, 887 facts and 768 achievements; 627 facts carry
 a description of what the thing does, and every fact names the subjects it
 belongs to. 187 of them carry a price, in the currency the shop asks for.
 
@@ -77,14 +77,14 @@ This list is verified against the current state of the repository.
 | `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, `hd-progress`, and shared design tokens (`colorVar`, `colorTokens`). No game knowledge. |
 | `apps/web`         | Vite application. Holds the dashboard UI — collection filter, search, section grouping — the IndexedDB progress store, and the export/import transfer format. |
 
-The curated dataset in `packages/data` holds 767 achievements across 13
+The curated dataset in `packages/data` holds 768 achievements across 13
 populated collections, each broken into its sub-item facts:
 
 | Collection                     | Entries | Notes                                                |
 | ------------------------------ | ------- | ---------------------------------------------------- |
 | Boons                          | 174     | 111 standard boons across 9 gods, 28 duo boons, the 10 legendary boons the Fated List asks for, and 25 Chaos blessings and curses. |
 | House Contractor               | 171     | Every job, in the six rooms the game sells them from. 164 carry a price. |
-| Codex                          | 119     | Every entry, across the Codex's 9 in-game sections.  |
+| Codex                          | 120     | Every entry. 119 carry one of the Codex's 9 sections; Persephone's own page has an entry the Codex index omits, and no source says which section. |
 | Daedalus                       | 72      | 12 enchantments tracked per weapon, across the 6 weapons. |
 | Fated List of Minor Prophecies | 55      | The full in-game Fated List.                         |
 | Platform Achievements          | 50      | Every trophy, including the hidden one for earning the other 49. |
@@ -96,7 +96,7 @@ populated collections, each broken into its sub-item facts:
 | Perks                          | 11      | Every named perk from the Benefits Package condition. |
 | Skelly's Challenge Statues     | 1       | The three covered statues, cleared at Heat 8, 16 and 32. The third backs no trophy and no prophecy. |
 
-884 facts back these 767 achievements. Some are shared across collections —
+887 facts back these 768 achievements. Some are shared across collections —
 for example, `aspect:stygius:zagreus` backs an achievement in the weapon
 aspects collection, two in the Fated List, and two in the Codex — so marking
 one action can advance entries in more than one collection at once.
