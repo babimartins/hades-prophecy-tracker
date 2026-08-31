@@ -4,6 +4,7 @@ import { impact, nextSteps } from '../src/index.js'
 
 const dataset: Dataset = {
   collections: [{ id: 'prophecy', name: 'Prophecies' }],
+  subjects: [],
   facts: [
     { id: 'a:shared', label: 'Shared', kind: 'boolean', collection: 'prophecy' },
     { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy' },
@@ -56,6 +57,7 @@ describe('nextSteps', () => {
   it('keeps an atLeast fact missing when it is below the threshold', () => {
     const atLeastDataset: Dataset = {
       collections: [{ id: 'prophecy', name: 'Prophecies' }],
+      subjects: [],
       facts: [{ id: 'a:threshold', label: 'Threshold', kind: 'number', collection: 'prophecy' }],
       achievements: [
         {
@@ -73,6 +75,7 @@ describe('nextSteps', () => {
   it('does not flag a satisfied branch of a nested any node as missing', () => {
     const nestedDataset: Dataset = {
       collections: [{ id: 'prophecy', name: 'Prophecies' }],
+      subjects: [],
       facts: [
         { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy' },
         { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy' },

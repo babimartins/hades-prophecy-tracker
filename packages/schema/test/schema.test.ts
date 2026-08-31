@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { Achievement, Dataset } from '../src/index.js'
+import type { Achievement, Dataset, Subject } from '../src/index.js'
 import { validateDataset } from '../src/index.js'
 
 const validDataset: Dataset = {
@@ -14,6 +14,7 @@ const validDataset: Dataset = {
       collection: 'prophecy',
     },
   ],
+  subjects: [{ id: 'dusa', name: 'Dusa', type: 'character' }],
   achievements: [
     {
       id: 'prophecy:example',
@@ -81,5 +82,45 @@ describe('validateDataset', () => {
       requirement: { kind: 'all', of: ['nectar:dusa'] },
     }
     expect(achievement.section).toBeUndefined()
+  })
+})
+
+describe('subjects', () => {
+  it('accepts each of the four types', () => {
+    const types: Subject['type'][] = ['character', 'weapon', 'collectible', 'region']
+    for (const type of types) {
+      const data = structuredClone(validDataset)
+      data.subjects = [{ id: 'stygius', name: 'Stygian Blade', type }]
+      expect(validateDataset(data).subjects[0]?.type).toBe(type)
+    }
+  })
+
+  it('rejects a fifth type', () => {
+    const bad = structuredClone(validDataset)
+    // @ts-expect-error deliberate invalid input
+    bad.subjects = [{ id: 'stygius', name: 'Stygian Blade', type: 'artifact' }]
+    expect(() => validateDataset(bad)).toThrow()
+  })
+
+  it('rejects a subject id with a bad shape', () => {
+    const bad = structuredClone(validDataset)
+    bad.subjects = [{ id: 'Lord Hades', name: 'Lord Hades', type: 'character' }]
+    expect(() => validateDataset(bad)).toThrow()
+  })
+
+  it('carries an optional description and spoiler flag', () => {
+    const data = structuredClone(validDataset)
+    data.subjects = [
+      { id: 'hades', name: 'Lord Hades', type: 'character', description: 'The king.', spoiler: true },
+    ]
+    const parsed = validateDataset(data)
+    expect(parsed.subjects[0]?.description).toBe('The king.')
+    expect(parsed.subjects[0]?.spoiler).toBe(true)
+  })
+
+  it('defaults subjects to empty for a dataset written before the axis existed', () => {
+    const withoutSubjects: Record<string, unknown> = structuredClone(validDataset)
+    delete withoutSubjects.subjects
+    expect(validateDataset(withoutSubjects).subjects).toEqual([])
   })
 })

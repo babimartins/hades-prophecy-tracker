@@ -8,6 +8,7 @@ const dataset: Dataset = {
     { id: 'codex', name: 'Codex' },
     { id: 'achievement', name: 'Platform Achievements' },
   ],
+  subjects: [],
   facts: [{ id: 'a:zeus', label: 'Invite Zeus', kind: 'boolean', collection: 'prophecy' }],
   achievements: [
     {

@@ -15,6 +15,7 @@ const dataset: Dataset = {
     { id: 'prophecy', name: 'Prophecies' },
     { id: 'codex', name: 'Codex' },
   ],
+  subjects: [],
   facts: [
     { id: 'a:one', label: 'One', kind: 'boolean', collection: 'prophecy' },
     { id: 'a:two', label: 'Two', kind: 'boolean', collection: 'prophecy' },

@@ -64,7 +64,7 @@ export class NextStepsPanel extends LitElement {
     limit: { type: Number },
   }
 
-  catalog: Dataset = { collections: [], facts: [], achievements: [] }
+  catalog: Dataset = { collections: [], facts: [], subjects: [], achievements: [] }
   facts: FactMap = {}
   limit = 8
 

@@ -84,3 +84,19 @@ produces the dishonest progress bar that slice 4 already had to fix once.
 interface on `main` breaks a working site for the length of phase 2, which is
 the longest phase. The verification step asserts an empty diff against
 `apps/web`.
+
+## 8. `subjects` is required on the Dataset type, so one line of `apps/web` changes
+
+**Chosen:** `subjects: z.array(subjectSchema).default([])`. The parsed type
+requires the key; the runtime tolerates its absence. One empty-catalog default
+in `next-steps-panel.ts` gains `subjects: []`.
+
+**Alternative:** make the field optional on the type too, so no consumer changes
+at all and the phase-1 diff against `apps/web` is genuinely empty.
+
+**Why:** an optional field forces every engine function, for the rest of the
+project, to handle `undefined` for a field that is always present in the real
+dataset. That is a permanent cost paid to keep one mechanical line out of one
+diff. The phase-1 constraint means "do not migrate the interface", not "change
+zero characters", so the verification step now asserts that `apps/web` changes
+by exactly one line and no component behaviour changes.

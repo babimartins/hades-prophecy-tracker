@@ -100,8 +100,8 @@ gets **no** `subjects` key, so the gap stays visible.
 
 - [ ] `corepack pnpm exec turbo run lint typecheck test build --force`, with no
       cache. Report the real numbers.
-- [ ] Confirm `apps/web` is untouched: `git diff --stat main -- apps/web` is
-      empty.
+- [ ] Confirm `apps/web` changed by exactly one line, the empty-catalog default
+      in `next-steps-panel.ts`, and that no component behaviour changed.
 - [ ] Confirm the built site still loads and the dashboard still works.
 
 ## Done when
@@ -109,6 +109,6 @@ gets **no** `subjects` key, so the gap stays visible.
 - [ ] The four checks pass on a forced run.
 - [ ] 119 subjects, 501 tagged facts, 78 empty, 113 untagged, and the integrity
       test asserts each number.
-- [ ] `apps/web` has no diff against `main`.
+- [ ] `apps/web` differs from `main` by one line only.
 - [ ] Every count in this plan matches what the test asserts. A number that
       drifted is a defect, not a rounding difference.
