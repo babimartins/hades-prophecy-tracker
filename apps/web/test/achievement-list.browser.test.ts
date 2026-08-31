@@ -221,7 +221,9 @@ describe('achievement-list', () => {
     const groups = element.shadowRoot!.querySelectorAll('details')
     expect(groups.length).toBe(2)
     const headings = [...groups].map((group) => group.querySelector('summary')!.textContent?.trim())
-    expect(headings).toEqual(['Chthonic Gods', 'Olympian Gods'])
+    // Every heading carries its own row count now (finding: no result
+    // count anywhere).
+    expect(headings).toEqual(['Chthonic Gods (2 entries)', 'Olympian Gods (1 entry)'])
     expect(groups[0]!.querySelectorAll('li').length).toBe(2)
     expect(groups[1]!.querySelectorAll('li').length).toBe(1)
   })
@@ -325,6 +327,152 @@ describe('achievement-list', () => {
     summary.click()
     await vi.waitFor(() => expect(events.length).toBe(1))
     expect(events).toEqual([{ collection: 'codex', section: 'chthonic-gods', open: false }])
+  })
+})
+
+describe('achievement-list does not repeat a collection name in its own summary', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * Prophecies, keepsakes, Pact, perks and Well of Charon are all
+   * unsectioned. Once one of them is large enough to collapse (finding 9)
+   * and appears alongside another collection — the unfiltered "All" view,
+   * 545 rows — its own `<h2>` and its collapsed group's `<summary>` both
+   * showed the same collection name, back to back: the first thing a
+   * player's eye lands on, reading as a bug.
+   */
+  it('shows the row count, not the collection name a second time, when a block heading already names it', async () => {
+    const largePropheciesAlongsideCodex: Achievement[] = [
+      ...Array.from({ length: 41 }, (_, index) => ({
+        id: `prophecy:entry-${index}`,
+        name: `Entry ${index}`,
+        description: `Entry ${index}.`,
+        collection: 'prophecy',
+        requirement: { kind: 'all' as const, of: [`a:fact-${index}`] },
+      })),
+      {
+        id: 'codex:alpha',
+        name: 'Alpha',
+        description: 'Alpha entry.',
+        collection: 'codex',
+        requirement: { kind: 'all' as const, of: ['a:alpha'] },
+        section: 'chthonic-gods',
+      },
+    ]
+    render(
+      html`<achievement-list
+        .achievements=${largePropheciesAlongsideCodex}
+        .facts=${{}}
+        .collections=${collectionsMeta}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+
+    const h2 = element.shadowRoot!.querySelector('.collection-heading')!
+    expect(h2.textContent?.trim()).toBe('Fated List of Minor Prophecies')
+
+    const propheciesSummary = [
+      ...element.shadowRoot!.querySelectorAll('details summary'),
+    ].find((summary) => summary.closest('details')!.querySelectorAll('li').length === 41)!
+    expect(propheciesSummary.textContent?.trim()).toBe('41 entries')
+    expect(propheciesSummary.textContent).not.toContain('Fated List of Minor Prophecies')
+  })
+
+  it('still names the collection in the summary when no block heading names it first', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${largeUnsectioned}
+        .facts=${{}}
+        .collections=${collectionsMeta}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    expect(element.shadowRoot!.querySelectorAll('.collection-heading').length).toBe(0)
+    const summary = element.shadowRoot!.querySelector('details summary')!
+    expect(summary.textContent?.trim()).toBe('Fated List of Minor Prophecies (41 entries)')
+  })
+})
+
+describe('achievement-list shows a result count', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('shows the total row count above the list', async () => {
+    render(
+      html`<achievement-list .achievements=${achievements} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const count = element.shadowRoot!.querySelector('.result-count')!
+    expect(count.textContent?.trim()).toBe('2 entries')
+  })
+})
+
+describe('achievement-list opens a narrowed view regardless of its row count', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * A search or a filter is an explicit request to see rows. The row-count
+   * threshold that collapses a large unfiltered view must not also
+   * collapse a narrowed one and answer that request with zero visible rows.
+   */
+  it('opens every section by default when narrowed, even above the row-count threshold', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${large}
+        .facts=${{}}
+        .narrowed=${true}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups.length).toBe(2)
+    expect(groups.every((group) => group.open)).toBe(true)
+  })
+
+  it('opens a large unsectioned collection by default when narrowed', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${largeUnsectioned}
+        .facts=${{}}
+        .narrowed=${true}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    // Narrowed and small enough to stay open renders flat, with no
+    // <details> control at all — better than one forced open, since there
+    // is nothing left to collapse away.
+    expect(element.shadowRoot!.querySelectorAll('details').length).toBe(0)
+    expect(element.shadowRoot!.querySelectorAll('ul > li').length).toBe(41)
+  })
+
+  it('still collapses a large unfiltered view — the threshold applies to the unfiltered "All" view only', async () => {
+    render(
+      html`<achievement-list
+        .achievements=${large}
+        .facts=${{}}
+        .narrowed=${false}
+      ></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const groups = [...element.shadowRoot!.querySelectorAll('details')]
+    expect(groups.every((group) => group.open)).toBe(false)
   })
 })
 

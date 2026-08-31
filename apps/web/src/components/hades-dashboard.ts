@@ -286,6 +286,7 @@ export class HadesDashboard extends LitElement {
                 .collections=${collectionsWithEntries(dataset)}
                 .facts=${facts}
                 .collapsedSections=${this.collapsedSections}
+                .narrowed=${this.query !== '' || this.selectedCollection !== undefined}
                 @achievement-open=${this.onOpen}
                 @section-toggle=${this.onSectionToggle}
               ></achievement-list>

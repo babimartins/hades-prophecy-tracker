@@ -166,6 +166,67 @@ describe('hades-dashboard does not scroll sideways on a narrow phone', () => {
   })
 })
 
+describe('hades-dashboard search and filter results stay visible', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * `defaultOpen` used to key off the narrowed achievements.length, so a
+   * search or a filter — an explicit request to see rows — could collapse
+   * every section shut and show nothing. The row-count threshold belongs on
+   * the unfiltered view only; a narrowed view must always open.
+   */
+  /**
+   * `<li>` rows inside a closed `<details>` are still present in the DOM —
+   * `querySelectorAll('li')` finds them either way — so the real check is
+   * visibility, not presence. `checkVisibility()` walks the ancestor chain
+   * (a closed `<details>`'s `<ul>` child is `display: none` per the UA
+   * stylesheet) and is what actually catches the "technically rendered,
+   * not actually shown" bug; `offsetParent` and `getBoundingClientRect()`
+   * both proved unreliable for this specific case in this test harness.
+   */
+  function visibleRowCount(list: Element): number {
+    return [...list.shadowRoot!.querySelectorAll('li')].filter((li) =>
+      (li as HTMLElement).checkVisibility(),
+    ).length
+  }
+
+  it('renders visible rows for a search that matches many entries', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const searchBox = element.shadowRoot!.querySelector('search-box')!
+    searchBox.dispatchEvent(
+      new CustomEvent('search-change', { detail: { query: 'boon' }, bubbles: true, composed: true }),
+    )
+    await element.updateComplete
+
+    const list = element.shadowRoot!.querySelector('achievement-list')!
+    expect(visibleRowCount(list)).toBeGreaterThan(0)
+  })
+
+  it('renders visible rows when filtered to a single large collection', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const filter = element.shadowRoot!.querySelector('collection-filter')!
+    filter.dispatchEvent(
+      new CustomEvent('collection-select', {
+        detail: { id: 'prophecy' },
+        bubbles: true,
+        composed: true,
+      }),
+    )
+    await element.updateComplete
+
+    const list = element.shadowRoot!.querySelector('achievement-list')!
+    expect(visibleRowCount(list)).toBeGreaterThan(0)
+  })
+})
+
 describe('hades-dashboard collection filter', () => {
   beforeEach(() => {
     render(html``, document.body)
