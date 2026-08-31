@@ -113,7 +113,7 @@ subject owns, so storing it would create a second source of truth that drifts.
 | `affinity` | `nectar` |
 | `boons` | `boon`, `blessing`, `curse` |
 | `keepsake` | `keepsake` |
-| `companion` | `companion` |
+| `companion` | `companion` — see the note below |
 | `combat` | `combat`, `encounter`, `miniboss` |
 | `dialogue` | `talk` |
 | `invite` | `invite` |
@@ -131,6 +131,13 @@ subject owns, so storing it would create a second source of truth that drifts.
 The interface labels are not capabilities. "Olympian" is `boons` plus type
 `character`; "Fightable" is `combat`. The engine reports the capability and the
 interface decides the word.
+
+**`companion` is the one capability that will mean two opposite things.** A
+companion derives it from its own fact, meaning "is a companion". Once phase 2
+adds the giver to that same fact, the giver derives it too, meaning "gives a
+companion". The namespace cannot separate them. The interface must read the
+subject's type and its other capabilities to choose the word, and phase 3 has
+to handle this.
 
 ## 6. New and changed shapes
 

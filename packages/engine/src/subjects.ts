@@ -19,6 +19,14 @@ export const CAPABILITY_BY_NAMESPACE: Readonly<Record<string, string>> = {
   blessing: 'boons',
   curse: 'boons',
   keepsake: 'keepsake',
+  /**
+   * `companion` will mean two opposite things once phase 2 adds the givers.
+   * `companion:battie` already names Battie, so she derives "is a companion".
+   * The same fact will also name Megaera, who derives "gives a companion" from
+   * the same namespace. The engine cannot tell them apart from the namespace
+   * alone; the interface must read the subject's type and its other
+   * capabilities to choose the word.
+   */
   companion: 'companion',
   combat: 'combat',
   encounter: 'combat',
@@ -147,6 +155,13 @@ export function subjectProgress(
  * Both indexes are memoised per dataset. A list view calls this once per row,
  * and rebuilding a 692-entry map on every call turns a phone render into a
  * scan of hundreds of thousands of comparisons.
+ *
+ * **The caller must treat a `Dataset` as immutable once it has been passed
+ * here.** Editing a fact object in place is seen, because the index holds
+ * references. Pushing to or splicing `dataset.facts` or `dataset.subjects` on
+ * an instance this function has already seen is not, and returns a stale
+ * answer. Build a new dataset object instead; `packages/data` builds one once,
+ * and every test mints a new one with a spread or a structuredClone.
  */
 export function subjectsOfAchievement(dataset: Dataset, achievement: Achievement): Subject[] {
   const { factById, subjectById } = indexesFor(dataset)

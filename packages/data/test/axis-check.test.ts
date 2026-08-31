@@ -1,4 +1,11 @@
-import { subjectCapabilities, subjectFacts, subjectProgress, subjectsOfType } from '@hades/engine'
+import {
+  CAPABILITY_BY_NAMESPACE,
+  NAMESPACES_WITHOUT_CAPABILITY,
+  subjectCapabilities,
+  subjectFacts,
+  subjectProgress,
+  subjectsOfType,
+} from '@hades/engine'
 import { describe, expect, it } from 'vitest'
 import { dataset } from '../src/index.js'
 
@@ -15,7 +22,7 @@ describe('the subject axis against the real dataset', () => {
   })
 
   it('gives Zeus the five capabilities his tagged facts imply', () => {
-    // `dialogue` is absent because the 18 `talk:` facts are among the 113 that
+    // `dialogue` is absent because the 18 `talk:` facts are among the 105 that
     // phase 2 still has to source. It appears once they carry a subject.
     expect(subjectCapabilities(dataset, 'zeus').sort()).toEqual([
       'affinity',
@@ -26,12 +33,48 @@ describe('the subject axis against the real dataset', () => {
     ])
   })
 
-  it('never divides by zero, on any of the 119 subjects', () => {
+  it('keeps every capability bucket summing to the subject total', () => {
+    // subjectProgress counts a fact in `total` and skips its capability bucket
+    // when the namespace is in neither list. A per-capability breakdown would
+    // then quietly stop summing to the whole, with no error anywhere. This runs
+    // over all 119 real subjects, not a fixture, because the fixture only
+    // covers five of the dataset's namespaces.
     for (const subject of dataset.subjects) {
       const progress = subjectProgress(dataset, subject.id, {})
-      expect(Number.isFinite(progress.ratio)).toBe(true)
-      expect(progress.total).toBeGreaterThan(0)
+      const summed = Object.values(progress.byCapability).reduce(
+        (running, bucket) => running + bucket.total,
+        0,
+      )
+      expect([subject.id, summed]).toEqual([subject.id, progress.total])
     }
+  })
+
+  it('classifies every namespace in the dataset, not only the fixture ones', () => {
+    const unclassified = [
+      ...new Set(dataset.facts.map((fact) => fact.id.split(':')[0]!)),
+    ].filter(
+      (namespace) =>
+        !(namespace in CAPABILITY_BY_NAMESPACE) &&
+        !NAMESPACES_WITHOUT_CAPABILITY.includes(namespace),
+    )
+    expect(unclassified).toEqual([])
+  })
+
+  it('gives the six companions the capability their own facts imply', () => {
+    // Each companion is a Codex Fable, so its roster id carries the namespace:
+    // `companion:battie` belongs to `companion-battie`. Missing this made the
+    // `companion` capability unreachable and reported Battie as complete for a
+    // player who had only unlocked her Codex entry.
+    const companions = dataset.subjects.filter((s) => s.id.startsWith('companion-'))
+    expect(companions).toHaveLength(6)
+    for (const companion of companions) {
+      expect([companion.id, subjectCapabilities(dataset, companion.id).sort()]).toEqual([
+        companion.id,
+        ['codex', 'companion'],
+      ])
+    }
+    expect(subjectProgress(dataset, 'companion-battie', { 'codex:companion-battie': true }))
+      .toMatchObject({ done: 1, total: 2 })
   })
 
   it('has no fact tagged with two subjects yet', () => {

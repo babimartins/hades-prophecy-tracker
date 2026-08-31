@@ -53,8 +53,9 @@ already imply.
 
 ## 5. An untagged fact keeps no `subjects` key; a system fact carries an empty array
 
-**Chosen:** the 78 system facts get `"subjects": []`. The 113 unsourced facts
-get no key at all.
+**Chosen:** the system facts get `"subjects": []`. The unsourced facts get no
+key at all. The split ended at 80 and 105 once decisions 9 and 10 landed; it
+was 78 and 113 when this was written.
 
 **Alternative:** give both an empty array, or leave both missing.
 
