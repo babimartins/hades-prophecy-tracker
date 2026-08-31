@@ -23,11 +23,16 @@ default that can be quietly dropped.
 | The interface is in English. | Everywhere |
 | Green means done, and nothing else uses it. | Section 8 |
 | Collections is the last tab. | Section 1 |
+| Next Steps is grouped by where you act, not sorted. | Section 11 |
 
 ## 1. The shell
 
-Five sections, in this order: **Characters, Weapons, Fated List, The House,
-Collections.**
+Six sections, in this order: **Next Steps, Characters, Weapons, Fated List,
+The House, Collections.**
+
+Next Steps was added after the walkthrough, at the owner's request, and leads
+because it answers the question she opens the app with. The other five keep the
+order she approved, Collections last.
 
 - A header holds the title, an overall figure, and the tab bar.
 - The header and the footer are fixed. Neither scrolls.
@@ -197,3 +202,32 @@ The two are not comparable and no view may add them together.
   worse than no price.
 - The preview's own tooltips are mockup text. The real ones come from
   `Fact.description`.
+
+
+## 11. Next Steps
+
+Every unfinished action, ranked by how many incomplete entries it would advance,
+in three blocks: **House Contractor, House of Hades, During a run.** Each block
+shows its top 12 and scrolls inside the frozen frame.
+
+Grouped rather than sorted, by the owner's choice: a ranked list is not a plan
+until it says where each action happens. She opens the app before a run, so
+"what do I buy" and "what can I do on this run" are separate questions.
+
+- A row shows the action, its control, how many entries it unblocks, and up to
+  three of their names.
+- Names are deduplicated without regard to case. 18 names belong to more than
+  one entry, and "End To Torment, End to Torment" reads as a bug.
+- The five roll-up entries are excluded from the count and the names. God of
+  Blood reaches 692 facts and Had to Happen 460, so leaving them in adds one to
+  almost every row and puts their names on all of them.
+- A row's target is the **hardest** any unfinished entry sets. A keepsake wanted
+  at rank 1 by one entry and rank 3 by another stays listed until rank 3.
+
+**It is a ranking, not an order.** The dataset holds no prerequisites, so an
+action gated behind story progress appears as readily as one available now. The
+page says so in its own first line rather than implying a sequence.
+
+`apps/web/src/lib/where.ts` names every namespace explicitly, with no default. A
+prefix rule with a fallback is how `contractor:renovation-tasks` was once
+counted as one of the 164 Contractor jobs.

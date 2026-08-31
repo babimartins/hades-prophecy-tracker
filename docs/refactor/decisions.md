@@ -219,8 +219,9 @@ pra decidir pra quem dou ambrosia". Sorting the Hearts column ascending *is*
 the Ambrosia queue. The panel ranked facts by how many achievements they
 unblock, which is a different question and not one she asked.
 
-The engine's `nextSteps` stays. It is tested, pure, and a later view may want
-it; deleting the view does not oblige us to delete the answer.
+~~The engine's `nextSteps` stays. It is tested, pure, and a later view may want
+it; deleting the view does not oblige us to delete the answer.~~ Reversed by
+decision 53: `nextSteps` and `impact` were deleted.
 
 ## 17. The shell owns the height, and `theme.css` gives up the body padding
 
@@ -254,8 +255,8 @@ box anywhere. The indexes sort and filter, and the rail lists every item at
 once, which is what the structure was designed to make possible. Adding a
 control she did not ask for and did not see would be scope, not fidelity.
 
-The engine's `searchAchievements` stays, untouched and tested, for whenever a
-view wants it.
+~~The engine's `searchAchievements` stays, untouched and tested, for whenever a
+view wants it.~~ Reversed by decision 53: `searchAchievements` was deleted.
 
 ## 20. Six components deleted rather than adapted
 
@@ -706,3 +707,50 @@ nothing to track.
 Nothing tests description text against the requirement beside it, so it went
 unnoticed until this audit read the file for another reason. Descriptions that
 describe the state of the work rot; describe the game instead.
+
+
+## 53. The three unused engine functions go
+
+`searchAchievements`, `nextSteps` and `impact` were reachable from nothing but
+their own tests. Decisions 16 and 19 had kept them, on the grounds that a later
+view might want them. That was a guess, not a plan, and no plan followed. The
+owner asked for them gone.
+
+"It is tested" was the weakest part of the case: the tests only exercised code
+nobody could reach, so they cost maintenance and proved nothing about the app.
+
+Tree-shaking already kept them out of the bundle, so this changes no bytes the
+player downloads. It removes 202 lines of source and test, and two entries from
+the engine's public surface.
+
+`nextSteps` was the only one that answered a question the interface answers
+nowhere else: which single action unblocks the most entries. The indexes answer
+"who is furthest behind", which is a different question. If that view is ever
+wanted, the history has the function.
+
+## 54. Next Steps comes back, as a section, and leads
+
+Decision 16 dropped `next-steps-panel` because the Characters table answers
+"what next" by sorting. Decision 53 then deleted the engine function. The owner
+asked for both back, as a section of its own.
+
+The old panel ranked facts and stopped there. This one groups by **where you
+do it**, which is what turns a ranking into a plan: the top of the list is Work
+Orders you buy from the Contractor and conversations you have in the House,
+neither of which is a loadout decision.
+
+It leads the six sections and is the default, because it answers the question
+she opens the app with. Collections stays last.
+
+Three things the ranking needed before it was worth showing.
+
+- The five roll-up entries are excluded. God of Blood reaches 692 facts and Had
+  to Happen 460, so counting them adds one to almost every row and puts their
+  two names on every one.
+- Names are deduplicated without regard to case. 13 trophies restate a prophecy
+  and take the same name, sometimes with a different capital.
+- A row's target is the hardest any unfinished entry sets, not the easiest, so a
+  keepsake wanted at rank 3 by one entry does not read as done at rank 1.
+
+`nextSteps` takes the entries to ignore as an argument rather than knowing them.
+Which entries are roll-ups is game knowledge, and the engine holds none.

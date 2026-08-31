@@ -9,12 +9,19 @@ import type { ProgressStore } from '../storage/progress-store.js'
 import { StateController } from './state-controller.js'
 import { buildRows, isFoe } from './character-table.js'
 import './character-table.js'
+import './next-steps-page.js'
 import './rail-section.js'
 import './subject-page.js'
 import './transfer-controls.js'
 import './weapon-table.js'
 
-export type SectionId = 'characters' | 'weapons' | 'fated' | 'house' | 'collections'
+export type SectionId =
+  | 'next'
+  | 'characters'
+  | 'weapons'
+  | 'fated'
+  | 'house'
+  | 'collections'
 
 
 interface Section {
@@ -33,8 +40,14 @@ interface Section {
 const SHOWN_CHARACTERS = buildRows({}).filter((row) => !isFoe(row)).length
 const TOTAL_CHARACTERS = subjectsOfType(dataset, 'character').length
 
-/** The order the owner approved. Collections is last on purpose. */
+/**
+ * The order the owner approved. Collections is last on purpose.
+ *
+ * Next Steps came later and leads, because it answers the question she opens
+ * the app with. The other five keep the order she walked through.
+ */
 export const SECTIONS: readonly Section[] = [
+  { id: 'next', label: 'Next Steps' },
   { id: 'characters', label: 'Characters' },
   { id: 'weapons', label: 'Weapons' },
   { id: 'fated', label: 'Fated List' },
@@ -207,7 +220,7 @@ export class AppShell extends LitElement {
     error: { type: String },
   }
 
-  section: SectionId = 'characters'
+  section: SectionId = 'next'
   /** The open subject, or empty for the section's index. Not a sixth tab. */
   subject = ''
   error = ''
@@ -258,6 +271,8 @@ export class AppShell extends LitElement {
     const facts = (namespace: string): number =>
       dataset.facts.filter((fact) => fact.id.startsWith(`${namespace}:`)).length
     switch (section) {
+      case 'next':
+        return 'what to do, and where you do it'
       case 'characters':
         return `${SHOWN_CHARACTERS} of ${TOTAL_CHARACTERS} characters · ${facts('nectar')} with affinity`
       case 'weapons':
@@ -281,6 +296,8 @@ export class AppShell extends LitElement {
       return html`<subject-page .subjectId=${this.subject} .facts=${this.facts}></subject-page>`
     }
     switch (section) {
+      case 'next':
+        return html`<next-steps-page .facts=${this.facts}></next-steps-page>`
       case 'characters':
         return html`<character-table .facts=${this.facts}></character-table>`
       case 'weapons':

@@ -12,8 +12,9 @@ The dataset holds 120 subjects, 887 facts and 768 achievements; 627 facts carry
 a description of what the thing does, and every fact names the subjects it
 belongs to. 187 of them carry a price, in the currency the shop asks for.
 
-The interface has five sections — Characters, Weapons, Fated List, The House,
-Collections. The two indexes are comparison tables, sortable and filterable, so
+The interface has six sections: Next Steps, Characters, Weapons, Fated List,
+The House, Collections. Next Steps leads and ranks every unfinished action by
+how many entries it would advance, grouped by where you do it. The two indexes are comparison tables, sortable and filterable, so
 "who gets the next Ambrosia" is answered without opening anything. The three
 list sections use a vertical rail with a detail pane. The page never scrolls:
 the table body, the rail or the pane scrolls inside a frozen frame.
@@ -73,7 +74,7 @@ This list is verified against the current state of the repository.
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | `packages/schema`  | Data model and Zod validation: facts, requirements, achievements, collections, dataset.                            |
 | `packages/data`    | Curated game data as JSON, plus its integrity test. The source of truth for facts and achievements, across every collection. |
-| `packages/engine`  | Pure functions that evaluate requirements against facts (`evaluate`, `achievementProgress`, `overallProgress`, `impact`, `nextSteps`, `searchAchievements`). No DOM, no I/O. |
+| `packages/engine`  | Pure functions that evaluate requirements against facts (`evaluate`, `achievementProgress`, `overallProgress`, `factTargets`, `nextSteps`, `subjectFacts`, `subjectProgress`). No DOM, no I/O. |
 | `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, `hd-progress`, and shared design tokens (`colorVar`, `colorTokens`). No game knowledge. |
 | `apps/web`         | Vite application. Holds the dashboard UI — collection filter, search, section grouping — the IndexedDB progress store, and the export/import transfer format. |
 
