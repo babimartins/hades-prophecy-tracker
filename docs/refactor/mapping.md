@@ -174,7 +174,8 @@ Pure, in `packages/engine`, alongside the existing five.
 numbers are not comparable and the names must keep saying so.
 
 A dataset-wide total is still computed once over the 692 facts, never by summing
-per-subject counts. 28 duo boons are tagged twice, so summing overcounts.
+per-subject counts. No fact carries two subjects yet; once phase 2 tags the 28
+duo boons, each will be counted twice and summing will overcount.
 
 ## 8. What phase 1 must not do
 

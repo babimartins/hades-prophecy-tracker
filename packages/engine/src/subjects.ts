@@ -158,8 +158,8 @@ export function subjectProgress(
  *
  * **The caller must treat a `Dataset` as immutable once it has been passed
  * here.** Editing a fact object in place is seen, because the index holds
- * references. Pushing to or splicing `dataset.facts` or `dataset.subjects` on
- * an instance this function has already seen is not, and returns a stale
+ * references. Replacing, pushing to or splicing `dataset.facts` or
+ * `dataset.subjects` on an instance this function has already seen is not, and returns a stale
  * answer. Build a new dataset object instead; `packages/data` builds one once,
  * and every test mints a new one with a spread or a structuredClone.
  */

@@ -49,6 +49,57 @@ describe('the subject axis against the real dataset', () => {
     }
   })
 
+  it('maps each namespace to the capability it is meant to mean', () => {
+    // Membership in one of the two lists is not enough: re-pointing
+    // `catch` to `collect` or `miniboss` to `quest` keeps every sum valid and
+    // every namespace classified, while a fish reads "Collect" and an Elite
+    // foe reads "Quest". This pins the value, not just the presence.
+    const derived: Record<string, string> = {}
+    for (const fact of dataset.facts) {
+      const namespace = fact.id.split(':')[0]!
+      const capability = CAPABILITY_BY_NAMESPACE[namespace]
+      if (capability) derived[namespace] = capability
+    }
+    expect(derived).toEqual({
+      aspect: 'aspect',
+      artifact: 'collect',
+      blessing: 'boons',
+      boon: 'boons',
+      catch: 'catch',
+      codex: 'codex',
+      combat: 'combat',
+      companion: 'companion',
+      curse: 'boons',
+      daedalus: 'enchant',
+      encounter: 'combat',
+      escape: 'escape',
+      favor: 'quest',
+      invite: 'invite',
+      keepsake: 'keepsake',
+      lounge: 'quest',
+      lyre: 'quest',
+      meet: 'introduction',
+      miniboss: 'combat',
+      nectar: 'affinity',
+      pet: 'pet',
+      reach: 'reach',
+      spend: 'shop',
+      talk: 'dialogue',
+      weapon: 'acquire',
+      workorder: 'quest',
+    })
+  })
+
+  it('partly completes a capability bucket, rather than reporting nothing started', () => {
+    // 49 tagged number facts can be partial: 24 nectar and 24 aspect plus one
+    // more. A subject page reads these per capability, so the bucket counter
+    // needs a non-zero assertion over real data, not only over a fixture.
+    const zeus = subjectProgress(dataset, 'zeus', { 'nectar:zeus': 4 })
+    expect(zeus.byCapability.affinity).toMatchObject({ done: 0, partial: 1, total: 1 })
+    const stygius = subjectProgress(dataset, 'stygius', { 'aspect:stygius:zagreus': 2 })
+    expect(stygius.byCapability.aspect).toMatchObject({ done: 0, partial: 1, total: 4 })
+  })
+
   it('classifies every namespace in the dataset, not only the fixture ones', () => {
     const unclassified = [
       ...new Set(dataset.facts.map((fact) => fact.id.split(':')[0]!)),

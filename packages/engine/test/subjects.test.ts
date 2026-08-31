@@ -158,6 +158,16 @@ describe('subjectProgress', () => {
     expect(result.byCapability.affinity).toEqual({ done: 0, total: 1, partial: 0, ratio: 0 })
   })
 
+  it('counts a partial fact inside its own capability bucket', () => {
+    // Every other assertion pins a bucket's `partial` at 0, so dropping the
+    // per-capability partial counter would go unnoticed. A subject page would
+    // then read "nothing started" for a player more than half way to max
+    // Nectar, which is the dishonest bar slice 4 already had to fix once.
+    const result = subjectProgress(dataset, 'zeus', { 'nectar:zeus': 4 })
+    expect(result.byCapability.affinity).toEqual({ done: 0, partial: 1, total: 1, ratio: 0 })
+    expect(result.partial).toBe(1)
+  })
+
   it('reports zero for a subject with no facts, without dividing by zero', () => {
     const result = subjectProgress(dataset, 'tartarus', {})
     expect(result).toMatchObject({ done: 0, total: 0, ratio: 0 })
