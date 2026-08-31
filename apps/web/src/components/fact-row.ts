@@ -67,6 +67,13 @@ export class FactRow extends LitElement {
       font-variant-numeric: tabular-nums;
     }
 
+    .cost {
+      color: ${colorVar('--hd-color-accent')};
+      font-size: 0.72rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
     .desc {
       color: ${colorVar('--hd-color-muted')};
       flex-basis: 100%;
@@ -168,6 +175,9 @@ export class FactRow extends LitElement {
       <div class="row">
         ${stepped ? html`<label for=${`rank-${fact.id}`}>${label}</label>` : nothing}
         ${control}
+        ${fact.cost
+          ? html`<span class="cost">${fact.cost.amount} ${fact.cost.currency}</span>`
+          : nothing}
         ${fact.description ? html`<span class="desc">${fact.description}</span>` : nothing}
       </div>
     `

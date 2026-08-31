@@ -190,7 +190,10 @@ The two are not comparable and no view may add them together.
 ## 10. Out of scope
 
 - No timestamps. Progress stores values only, by the owner's decision.
-- No shop prices. The schema has no cost field; the Well harvest holds the Obol
-  prices for when it does.
+- Shop prices are **in**. `Fact.cost` holds an amount and a currency, and the
+  row shows it beside the purchase. 180 facts carry one: 158 Contractor items
+  and 22 Well of Charon wares. Four Well wares are paid in Heart at a variable
+  rate, so they carry none — a range is not an amount, and a wrong price is
+  worse than no price.
 - The preview's own tooltips are mockup text. The real ones come from
   `Fact.description`.

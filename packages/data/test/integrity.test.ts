@@ -464,11 +464,34 @@ describe('the House Contractor stock', () => {
     expect(dataset.facts.filter((f) => f.id.startsWith('contractor:'))).toHaveLength(165)
   })
 
+  it('leaves a blood-price ware uncosted, because a range is not an amount', () => {
+    // Four Well of Charon wares are paid in Heart at a variable rate — the
+    // Price of Midas asks 10 to 50. The schema holds one amount, so storing a
+    // number would be storing a wrong one.
+    const uncosted = dataset.facts
+      .filter((fact) => fact.id.startsWith('wellofcharon:') && fact.cost === undefined)
+      .map((fact) => fact.id)
+    expect(uncosted.sort()).toEqual([
+      'wellofcharon:gaeas-treasure',
+      'wellofcharon:life-essence',
+      'wellofcharon:price-of-midas',
+      'wellofcharon:tinge-of-erebus',
+    ])
+  })
+
+  it('prices the Well of Charon in Obols', () => {
+    const priced = dataset.facts.filter(
+      (fact) => fact.id.startsWith('wellofcharon:') && fact.cost !== undefined,
+    )
+    expect(priced).toHaveLength(22)
+    expect(priced.every((fact) => fact.cost!.currency === 'Obol')).toBe(true)
+  })
+
   it('records what each purchase costs, and in which currency', () => {
     // The Contractor takes more than one currency, so a bare number would not
     // say which. Six purchases are free and carry no cost at all.
     const priced = dataset.facts.filter((fact) => fact.cost !== undefined)
-    expect(priced).toHaveLength(158)
+    expect(priced).toHaveLength(180)
     const currencies: Record<string, number> = {}
     for (const fact of priced) {
       currencies[fact.cost!.currency] = (currencies[fact.cost!.currency] ?? 0) + 1
@@ -476,6 +499,7 @@ describe('the House Contractor stock', () => {
     expect(currencies).toEqual({
       Gemstones: 110,
       Diamond: 44,
+      Obol: 22,
       Ambrosia: 2,
       Nectar: 1,
       'Chthonic Key': 1,

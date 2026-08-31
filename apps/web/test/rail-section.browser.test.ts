@@ -222,3 +222,30 @@ describe('what the rail pane must not lose', () => {
     expect(root().querySelector('.about')).toBeNull()
   })
 })
+
+describe('a shop shows its prices', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('puts the price beside the purchase, with the currency it asks for', async () => {
+    await mount('house')
+    railRoot()
+      .querySelector<HTMLButtonElement>('button[data-item="contractor-court-music"]')
+      ?.click()
+    await section().updateComplete
+    const cost = root().querySelector('li fact-row')?.shadowRoot?.querySelector('.cost')
+    expect(cost?.textContent?.trim()).toMatch(/^\d+ (Diamond|Gemstones|Obol)$/)
+  })
+
+  it('shows the Well of Charon in Obols', async () => {
+    await mount('house')
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="well-of-charon"]')?.click()
+    await section().updateComplete
+    const costs = [...root().querySelectorAll('li fact-row')]
+      .map((row) => row.shadowRoot?.querySelector('.cost')?.textContent?.trim())
+      .filter(Boolean)
+    expect(costs).toHaveLength(22)
+    expect(costs.every((text) => text!.endsWith('Obol'))).toBe(true)
+  })
+})

@@ -471,3 +471,26 @@ the Lounge".
 and Sanguine rug. They are different purchases with identical names, and the
 integrity test that forbids two facts sharing a normalised label caught all
 four.
+
+## 36. Four Well wares stay uncosted, because a range is not an amount
+
+**Chosen:** the Price of Midas, Life Essence, Tinge of Erebus and Gaea's
+Treasure carry no `cost`.
+
+**Why:** they are paid in Heart at a variable rate — the Price of Midas asks
+10 to 50. `Fact.cost` holds one amount, so storing a number means storing a
+wrong one. A missing price is cheap; a wrong price sends a player to a shop
+they cannot afford. A test names all four and says why.
+
+## 37. Two more stale claims, both mine, both corrected
+
+`docs/refactor/phase-3-spec.md` §10 said "No shop prices. The schema has no
+cost field." Both halves are now false, and were only true because I had not
+done the work. 180 facts carry a price and the row shows it.
+
+`docs/preview/index.html` still advertised "~28 items still missing" and
+"Prices: deferred" on the Contractor card. The estimate was wrong by a factor
+of six and the deferral was never the owner's.
+
+The one out-of-scope claim that survives audit is the timestamp: she said
+"vamo deixar o quando pra la, so valores ta bom".
