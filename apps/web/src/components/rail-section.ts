@@ -37,6 +37,23 @@ interface Group {
  */
 const DERIVED_TROPHY = 'achievement:god-of-blood'
 
+/**
+ * The trophies that are a threshold over a pool the app already lists in full,
+ * and where that pool lives.
+ *
+ * Every action they need is recorded somewhere the player can reach. Printing
+ * the pool a second time here costs 845 more rows in one pane and tells them
+ * nothing new, so each shows its roll-up and the way to its items instead. The
+ * roll-up is the part that exists nowhere else: 0/50 of the 164 jobs.
+ */
+const DERIVED_FROM: Readonly<Record<string, string>> = {
+  [DERIVED_TROPHY]: 'the other 49 trophies on this list',
+  'achievement:home-makeover': 'the six Contractor rooms on this rail',
+  'achievement:blessed-by-the-gods': 'Collections, under Boons by type',
+  'achievement:tools-of-the-architect': 'each weapon page, under Daedalus',
+  'achievement:had-to-happen': 'the Fated List',
+}
+
 const factById = new Map(dataset.facts.map((fact) => [fact.id, fact]))
 const collectionDescription = new Map(
   dataset.collections.map((collection) => [collection.id, collection.description]),
@@ -466,6 +483,7 @@ export class RailSection extends LitElement {
    * trophy of that shape, the way `subject-labels.ts` names the nine Olympians.
    */
   #trophy(trophy: Achievement, group: Group): TemplateResult {
+    const derivedFrom = DERIVED_FROM[trophy.id]
     const derived = trophy.id === DERIVED_TROPHY
     // Its own evaluation sums the units of all 49 requirements. That comes to
     // 10283. The number is true and useless. It counts trophies, not units.
@@ -477,7 +495,7 @@ export class RailSection extends LitElement {
           total: others.length,
         }
       : achievementProgress(trophy, this.facts)
-    const facts = derived ? [] : factsOf(trophy)
+    const facts = derivedFrom === undefined ? factsOf(trophy) : []
     return html`
       <li class="trophy" data-achievement=${trophy.id}>
         <div class="thead">
@@ -487,8 +505,8 @@ export class RailSection extends LitElement {
           >
         </div>
         ${trophy.description ? html`<p class="tdesc">${trophy.description}</p>` : nothing}
-        ${derived
-          ? html`<p class="tdesc">Its actions are the other 49 trophies on this list.</p>`
+        ${derivedFrom !== undefined
+          ? html`<p class="tdesc">Its actions are ${derivedFrom}.</p>`
           : html`
               <ul class="tfacts">
                 ${facts.map(

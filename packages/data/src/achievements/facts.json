@@ -56,22 +56,8 @@
     "subjects": []
   },
   {
-    "id": "achievement:blessed-by-the-gods",
-    "label": "Choose 100 different Olympian Boon effects",
-    "kind": "boolean",
-    "collection": "achievement",
-    "subjects": []
-  },
-  {
     "id": "achievement:thanks-but-no-thanks",
     "label": "Purge a Legendary Boon",
-    "kind": "boolean",
-    "collection": "achievement",
-    "subjects": []
-  },
-  {
-    "id": "achievement:tools-of-the-architect",
-    "label": "Choose 50 different Daedalus Hammer enchantments",
     "kind": "boolean",
     "collection": "achievement",
     "subjects": []
@@ -86,23 +72,10 @@
   {
     "id": "achievement:day-or-night-trader",
     "label": "Trade 20 times with the Wretched Broker",
-    "kind": "boolean",
+    "kind": "number",
     "collection": "achievement",
-    "subjects": []
-  },
-  {
-    "id": "achievement:home-makeover",
-    "label": "Pay for 50 jobs from the House Contractor",
-    "kind": "boolean",
-    "collection": "achievement",
-    "subjects": []
-  },
-  {
-    "id": "achievement:had-to-happen",
-    "label": "Fulfill any 15 Prophecies",
-    "kind": "boolean",
-    "collection": "achievement",
-    "subjects": []
+    "subjects": [],
+    "max": 20
   },
   {
     "id": "achievement:urge-to-sing",
@@ -177,8 +150,9 @@
   {
     "id": "achievement:skelly-slayer",
     "label": "Slay Skelly 15 times",
-    "kind": "boolean",
+    "kind": "number",
     "collection": "achievement",
-    "subjects": []
+    "subjects": [],
+    "max": 15
   }
 ]

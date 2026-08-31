@@ -129,18 +129,49 @@ describe('The House', () => {
     expect(root().querySelector('.rule')?.textContent).toContain('Both sides')
   })
 
+  it('keeps the pane readable by not printing a pool it lists elsewhere', async () => {
+    // Before this, Had to Happen alone drew all 55 prophecies as 460 rows,
+    // Home Makeover drew 164 and Blessed by the Gods 149. The pane ran to
+    // 1129 rows. It now draws 284, and the largest single block is 25.
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="achievement"]')?.click()
+    await section().updateComplete
+    expect(root().querySelectorAll('fact-row').length).toBe(284)
+    const biggest = Math.max(
+      ...[...root().querySelectorAll('.trophy')].map((t) => t.querySelectorAll('fact-row').length),
+    )
+    expect(biggest).toBe(25)
+    const makeover = root().querySelector('[data-achievement="achievement:home-makeover"]')
+    // The roll-up is the part that exists nowhere else.
+    expect(makeover?.querySelector('.tnum')?.textContent?.trim()).toBe('0/50')
+    expect(makeover?.textContent).toContain('Contractor rooms')
+  })
+
   it('lists all 50 platform trophies, each with the actions it needs', async () => {
     railRoot().querySelector<HTMLButtonElement>('button[data-item="achievement"]')?.click()
     await section().updateComplete
     const trophies = [...root().querySelectorAll('.trophy')]
     expect(trophies).toHaveLength(50)
-    // The owner's rule: anything that needs sub-items must list them. God of
-    // Blood is the single exception, named here so that moving the exception
-    // to another trophy fails this test rather than sliding past it.
+    // The owner's rule: anything that needs sub-items must list them. The five
+    // exceptions are thresholds over pools the app lists in full elsewhere,
+    // and each says where. They are named here so that adding a sixth is a
+    // reviewed edit rather than something that slides past.
     const withoutActions = trophies
       .filter((trophy) => trophy.querySelectorAll('fact-row').length === 0)
       .map((trophy) => trophy.getAttribute('data-achievement'))
-    expect(withoutActions).toEqual(['achievement:god-of-blood'])
+    expect(withoutActions.sort()).toEqual([
+      'achievement:blessed-by-the-gods',
+      'achievement:god-of-blood',
+      'achievement:had-to-happen',
+      'achievement:home-makeover',
+      'achievement:tools-of-the-architect',
+    ])
+    for (const trophy of trophies) {
+      if (trophy.querySelectorAll('fact-row').length > 0) continue
+      expect([
+        trophy.getAttribute('data-achievement'),
+        (trophy.textContent ?? '').includes('Its actions are'),
+      ]).toEqual([trophy.getAttribute('data-achievement'), true])
+    }
   })
 
   it('shows God of Blood as the other 49, without repeating 207 rows', async () => {
