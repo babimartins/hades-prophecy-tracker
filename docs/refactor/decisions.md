@@ -646,3 +646,30 @@ not, but the question was enough to send the research back to a source that had
 the answer.
 
 Read the page for the thing itself, not only the page that mentions it.
+
+## 50. A row's state is read against what the entry asks, not what the fact holds
+
+301 requirement nodes ask for less than the fact's own max, and 297 of them ask
+for exactly 1. "Something From Everyone" wants 25 keepsakes at `atLeast 1`,
+while each keepsake's gauge holds 3, so a keepsake the player already owned
+rendered amber with 1/3 beside it, as though two ranks were still owed.
+
+Barbara picked the smallest of three designs offered. The number never changes:
+it is always the rank actually held, out of the gauge's own size. Only the
+tick moves, and it now reads against the entry's target.
+
+The same keepsake at rank 1 is **done** under Something From Everyone and
+**partial** under Friends Forever, which asks the same 25 at `atLeast 3`.
+
+`factTargets` in the engine returns the target per fact. A plain child asks for
+1, because `isSatisfied` counts a number fact above zero. A fact reached twice
+takes the more demanding target: God of Blood reaches `pet:cerberus` at both 1
+and 10.
+
+Three rows in the whole app print a target, because theirs is neither 1 nor the
+max: Cerberus at 10 of 20 pets, 18 of the 25 fish, and Demeter at 6 of her 7
+hearts. An earlier draft printed one on every row; she rejected it.
+
+A view with no entry behind it keeps the fact's own max. That is the subject
+page, and the header's overall figure. The keepsake's own page still shows 1/3
+as unfinished, because there the question is how far you took it.

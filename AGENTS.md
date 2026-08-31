@@ -317,3 +317,17 @@ requirement child caught it, by moving from 15 to 16.
 A trophy whose pool the interface already lists in full shows its roll-up and
 one line naming where the items live. Printing the pool twice cost 845 rows in
 one pane and told the player nothing new.
+
+### Read a row's state against the entry, not against the fact
+
+`factState` takes an optional target. Pass it wherever an entry is the context:
+`factTargets(achievement.requirement)` gives the target per fact.
+
+Without it, 297 rows read as partly done when they were finished. The trap is
+that the fact and the entry disagree on purpose. The same 25 keepsakes back
+Something From Everyone at `atLeast 1` and Friends Forever at `atLeast 3`, and
+one stored rank of 1 must render differently under each.
+
+The displayed number is always the real rank out of the gauge's own size. Never
+substitute the target for it. Print the target only when it is neither 1 nor
+the max, which is true of three rows in the whole dataset.

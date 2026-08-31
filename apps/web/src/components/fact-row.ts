@@ -6,12 +6,21 @@ import { live } from 'lit/directives/live.js'
 
 export type FactState = 'todo' | 'partial' | 'done'
 
-/** A number fact is done at its `max`, partial in between, todo at zero. */
-export function factState(fact: Fact, facts: FactMap): FactState {
+/**
+ * A number fact is done at its target, partial in between, todo at zero.
+ *
+ * The target is the fact's own `max` on a subject page, where the question is
+ * "how far have I taken this". Inside an entry it is what that entry asks for,
+ * which is usually 1: owning a keepsake satisfies "Something From Everyone" no
+ * matter what rank you took it to. Without the target, 297 rows read as partly
+ * done when they were finished.
+ */
+export function factState(fact: Fact, facts: FactMap, target?: number): FactState {
   const value = facts[fact.id]
-  if (fact.kind === 'number' && fact.max !== undefined) {
+  const goal = target ?? (fact.kind === 'number' ? fact.max : undefined)
+  if (fact.kind === 'number' && goal !== undefined) {
     const current = typeof value === 'number' ? value : value === true ? 1 : 0
-    if (current >= fact.max) return 'done'
+    if (current >= goal) return 'done'
     return current > 0 ? 'partial' : 'todo'
   }
   return value === true || (typeof value === 'number' && value > 0) ? 'done' : 'todo'
@@ -67,6 +76,16 @@ export class FactRow extends LitElement {
       font-variant-numeric: tabular-nums;
     }
 
+    /* Only three rows in the whole app show this: Cerberus at 10 of 20 pets,
+       18 of the 25 fish, and Demeter at 6 of her 7 hearts. Everywhere else the
+       entry asks for 1 and the tick alone says so. */
+    .target {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.72rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
     .cost {
       color: ${colorVar('--hd-color-accent')};
       font-size: 0.72rem;
@@ -95,11 +114,14 @@ export class FactRow extends LitElement {
   static override readonly properties = {
     fact: { attribute: false },
     facts: { attribute: false },
+    target: { type: Number },
     revealed: { type: Boolean },
   }
 
   fact!: Fact
   facts: FactMap = {}
+  /** What this row must reach here. Undefined means the fact's own `max`. */
+  target: number | undefined = undefined
   revealed = false
 
   #emit(value: boolean | number): void {
@@ -164,7 +186,7 @@ export class FactRow extends LitElement {
           `
         : html`
             <hd-checklist-item
-              .checked=${factState(fact, this.facts) === 'done'}
+              .checked=${factState(fact, this.facts, this.target) === 'done'}
               .label=${label}
               @hd-toggle=${(event: CustomEvent<{ checked: boolean }>) =>
                 this.#emit(event.detail.checked)}
@@ -175,6 +197,9 @@ export class FactRow extends LitElement {
       <div class="row">
         ${stepped ? html`<label for=${`rank-${fact.id}`}>${label}</label>` : nothing}
         ${control}
+        ${stepped && this.target !== undefined && this.target > 1 && this.target < (fact.max ?? 0)
+          ? html`<span class="target">target ${this.target}</span>`
+          : nothing}
         ${fact.cost
           ? html`<span class="cost">${fact.cost.amount} ${fact.cost.currency}</span>`
           : nothing}
