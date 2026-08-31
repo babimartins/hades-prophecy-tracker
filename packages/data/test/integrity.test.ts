@@ -460,6 +460,9 @@ describe('the House Contractor stock', () => {
     for (const id of reused) {
       const backing = items.filter((item) => collectFactIds(item.requirement).includes(id))
       expect([id, backing.length]).toEqual([id, 1])
+      // and a reused id keeps the price of the purchase it names
+      const fact = dataset.facts.find((candidate) => candidate.id === id)
+      expect([id, fact?.cost !== undefined]).toEqual([id, true])
     }
     expect(dataset.facts.filter((f) => f.id.startsWith('contractor:'))).toHaveLength(165)
   })
@@ -490,19 +493,22 @@ describe('the House Contractor stock', () => {
   it('records what each purchase costs, and in which currency', () => {
     // The Contractor takes more than one currency, so a bare number would not
     // say which. Six purchases are free and carry no cost at all.
+    // Includes the seven reused ids: a Work Order costs Gemstones like any
+    // other purchase, and reusing its id must not lose its price.
     const priced = dataset.facts.filter((fact) => fact.cost !== undefined)
-    expect(priced).toHaveLength(180)
+    expect(priced).toHaveLength(187)
     const currencies: Record<string, number> = {}
     for (const fact of priced) {
       currencies[fact.cost!.currency] = (currencies[fact.cost!.currency] ?? 0) + 1
     }
     expect(currencies).toEqual({
-      Gemstones: 110,
-      Diamond: 44,
+      Gemstones: 112,
+      Diamond: 48,
       Obol: 22,
       Ambrosia: 2,
       Nectar: 1,
       'Chthonic Key': 1,
+      Darkness: 1,
     })
     expect(priced.every((fact) => fact.cost!.amount >= 0)).toBe(true)
   })

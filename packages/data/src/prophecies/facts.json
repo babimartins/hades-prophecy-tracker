@@ -278,7 +278,11 @@
     "collection": "prophecy",
     "subjects": [
       "nyx"
-    ]
+    ],
+    "cost": {
+      "amount": 3142,
+      "currency": "Darkness"
+    }
   },
   {
     "id": "talk:nyx-in-chaos-realm",
@@ -296,7 +300,11 @@
     "collection": "prophecy",
     "subjects": [
       "orpheus"
-    ]
+    ],
+    "cost": {
+      "amount": 1,
+      "currency": "Diamond"
+    }
   },
   {
     "id": "nectar:orpheus",
@@ -326,7 +334,11 @@
     "subjects": [
       "orpheus",
       "eurydice"
-    ]
+    ],
+    "cost": {
+      "amount": 3,
+      "currency": "Diamond"
+    }
   },
   {
     "id": "talk:orpheus-after-singers-gamble",
@@ -344,7 +356,11 @@
     "collection": "prophecy",
     "subjects": [
       "sisyphus"
-    ]
+    ],
+    "cost": {
+      "amount": 4,
+      "currency": "Diamond"
+    }
   },
   {
     "id": "talk:sisyphus-after-knave-kings-sentence",
@@ -362,7 +378,11 @@
     "collection": "prophecy",
     "subjects": [
       "achilles"
-    ]
+    ],
+    "cost": {
+      "amount": 5,
+      "currency": "Diamond"
+    }
   },
   {
     "id": "talk:achilles-after-heros-sacrifice",
@@ -464,7 +484,11 @@
     "collection": "prophecy",
     "subjects": [
       "dusa"
-    ]
+    ],
+    "cost": {
+      "amount": 15,
+      "currency": "Gemstones"
+    }
   },
   {
     "id": "lounge:detailing-service",
@@ -473,7 +497,11 @@
     "collection": "prophecy",
     "subjects": [
       "dusa"
-    ]
+    ],
+    "cost": {
+      "amount": 25,
+      "currency": "Gemstones"
+    }
   },
   {
     "id": "lounge:any-rug",
