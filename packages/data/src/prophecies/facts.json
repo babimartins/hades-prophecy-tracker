@@ -296,7 +296,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "The form in which the blade of the underworld first revealed itself."
   },
   {
     "id": "combat:slay-skelly-with-stygius",
@@ -2091,161 +2092,184 @@
     "label": "Slay a foe with the Shifter Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe teleports randomly."
   },
   {
     "id": "perk:bruiser",
     "label": "Slay a foe with the Bruiser Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe gains greatly increased health and size."
   },
   {
     "id": "perk:slugger",
     "label": "Slay a foe with the Slugger Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe deals more damage."
   },
   {
     "id": "perk:puller",
     "label": "Slay a foe with the Puller Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe pulls you toward it with a field you must dash to escape."
   },
   {
     "id": "perk:savior",
     "label": "Slay a foe with the Savior Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe periodically shields nearby foes."
   },
   {
     "id": "perk:speeder",
     "label": "Slay a foe with the Speeder Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe attacks and moves faster."
   },
   {
     "id": "perk:linker",
     "label": "Slay a foe with the Linker Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe links to another foe with a damaging laser."
   },
   {
     "id": "perk:cloner",
     "label": "Slay a foe with the Cloner Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe spawns fake one-hp clones, Tartarus only."
   },
   {
     "id": "perk:burner",
     "label": "Slay a foe with the Burner Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe constantly creates fire traps, Asphodel only."
   },
   {
     "id": "perk:seeker",
     "label": "Slay a foe with the Seeker Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe's projectiles home in on you."
   },
   {
     "id": "perk:popper",
     "label": "Slay a foe with the Popper Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe drops exploding fake souls alongside the real one, Elysium only."
   },
   {
     "id": "miniboss:dire-inferno-bomber",
     "label": "Slay the Dire Inferno Bomber",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["inferno-bomber"]
+    "subjects": ["inferno-bomber"],
+    "description": "Enemy found in Tartarus and Asphodel."
   },
   {
     "id": "miniboss:doomstone",
     "label": "Slay the Doomstone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["doomstone"]
+    "subjects": ["doomstone"],
+    "description": "Mini-boss found in a unique chamber in Tartarus."
   },
   {
     "id": "miniboss:wretched-sneak",
     "label": "Slay the Wretched Sneak",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["wretched-sneak"]
+    "subjects": ["wretched-sneak"],
+    "description": "Mini-boss found in a unique chamber in Tartarus."
   },
   {
     "id": "miniboss:dire-voidstone",
     "label": "Slay the Dire Voidstone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["voidstone"]
+    "subjects": ["voidstone"],
+    "description": "Enemy found in Asphodel and Elysium."
   },
   {
     "id": "miniboss:megagorgon",
     "label": "Slay the Megagorgon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["megagorgon"]
+    "subjects": ["megagorgon"],
+    "description": "Asphodel mini-boss."
   },
   {
     "id": "miniboss:dire-skull-crusher",
     "label": "Slay the Dire Skull-Crusher",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["skull-crusher"]
+    "subjects": ["skull-crusher"],
+    "description": "Enemy found in Asphodel."
   },
   {
     "id": "miniboss:dire-spreader",
     "label": "Slay the Dire Spreader",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["spreader"]
+    "subjects": ["spreader"],
+    "description": "Enemy found in Asphodel."
   },
   {
     "id": "miniboss:dire-soul-catcher",
     "label": "Slay the Dire Soul Catcher",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["soul-catcher"]
+    "subjects": ["soul-catcher"],
+    "description": "Enemy found in Elysium."
   },
   {
     "id": "miniboss:dire-bother",
     "label": "Slay the Dire Bother",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["bother"]
+    "subjects": ["bother"],
+    "description": "Enemy found in the Temple of Styx."
   },
   {
     "id": "miniboss:dire-snakestone",
     "label": "Slay the Dire Snakestone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["snakestone"]
+    "subjects": ["snakestone"],
+    "description": "Enemy found in the Temple of Styx."
   },
   {
     "id": "miniboss:dire-gigantic-vermin",
     "label": "Slay the Dire Gigantic Vermin",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["gigantic-vermin"]
+    "subjects": ["gigantic-vermin"],
+    "description": "Enemy found in the Temple of Styx."
   },
   {
     "id": "miniboss:dire-satyr-cultist",
     "label": "Slay the Dire Satyr Cultist",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["satyr-cultist"]
+    "subjects": ["satyr-cultist"],
+    "description": "Enemy found in the Temple of Styx."
   },
   {
     "id": "contractor:renovation-tasks",
@@ -3096,7 +3120,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "For 3 Sec. after your Special, your Attack may deal Critical damage."
   },
   {
     "id": "aspect:stygius:poseidon",
@@ -3104,7 +3129,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Special dislodges Ammo from foes."
   },
   {
     "id": "aspect:coronacht:zagreus",
@@ -3112,7 +3138,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "The form in which the heart-seeking bow first revealed itself."
   },
   {
     "id": "aspect:coronacht:chiron",
@@ -3120,7 +3147,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Special automatically seeks the foe last struck by your Attack."
   },
   {
     "id": "aspect:coronacht:hera",
@@ -3128,7 +3156,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your CastAmmo loads into your next Attack, firing on impact."
   },
   {
     "id": "aspect:aegis:zagreus",
@@ -3136,7 +3165,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "The form in which the shield of chaos first revealed itself."
   },
   {
     "id": "aspect:aegis:chaos",
@@ -3144,7 +3174,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "After you Bull Rush, your next Special throws multiple shields."
   },
   {
     "id": "aspect:aegis:zeus",
@@ -3152,7 +3183,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Special is replaced with the Blitz Disc.*"
   },
   {
     "id": "aspect:varatha:zagreus",
@@ -3160,7 +3192,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "The form in which the eternal spear first revealed itself."
   },
   {
     "id": "aspect:varatha:achilles",
@@ -3168,7 +3201,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "After your Special, you can retrieve your Spear with Raging Rush."
   },
   {
     "id": "aspect:varatha:hades",
@@ -3176,7 +3210,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Spin Attack becomes Punishing Sweep."
   },
   {
     "id": "aspect:malphon:zagreus",
@@ -3184,7 +3219,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "The form in which the Twin Fists first revealed themselves."
   },
   {
     "id": "aspect:malphon:talos",
@@ -3192,7 +3228,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Special becomes Magnetic Cutter; its pull deals 20 damage."
   },
   {
     "id": "aspect:malphon:demeter",
@@ -3200,7 +3237,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "After landing 12 strikes, your next Special* hits more times."
   },
   {
     "id": "aspect:exagryph:zagreus",
@@ -3208,7 +3246,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "The form in which the Adamant Rail first revealed itself."
   },
   {
     "id": "aspect:exagryph:eris",
@@ -3216,7 +3255,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "For 4 seconds after absorbing your Special's blast, deal more damage."
   },
   {
     "id": "aspect:exagryph:hestia",
@@ -3224,7 +3264,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "After you manually Reload, your next shot is empowered."
   },
   {
     "id": "aspect:stygius:arthur",
@@ -3232,7 +3273,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "You have Holy Excalibur*, and +50 HealthUp to your Life Total."
   },
   {
     "id": "aspect:varatha:guan-yu",
@@ -3240,7 +3282,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "You have the Frost Fair Blade**, but your life and healing are reduced."
   },
   {
     "id": "aspect:coronacht:rama",
@@ -3248,7 +3291,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "You have Celestial Sharanga*, which can cause Shared Suffering."
   },
   {
     "id": "aspect:aegis:beowulf",
@@ -3256,7 +3300,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "You have Naegling's Board** but take +10% damage."
   },
   {
     "id": "aspect:malphon:gilgamesh",
@@ -3264,7 +3309,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "You have the Claws of Enkidu, whose Dash-Upper can Maim** foes."
   },
   {
     "id": "aspect:exagryph:lucifer",
@@ -3272,175 +3318,200 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "You have Igneus Eden*, which launches volatile Hellfire."
   },
   {
     "id": "talent:shadow-presence",
     "label": "Escape the Underworld with the Shadow Presence talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "It gives Attack and Special +10% damage per rank when striking foes from behind."
   },
   {
     "id": "talent:fiery-presence",
     "label": "Escape the Underworld with the Fiery Presence talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "It gives Attack and Special +15% damage per rank when striking undamaged foes."
   },
   {
     "id": "talent:chthonic-vitality",
     "label": "Escape the Underworld with the Chthonic Vitality talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank restores 1 Health when you exit a chamber."
   },
   {
     "id": "talent:dark-regeneration",
     "label": "Escape the Underworld with the Dark Regeneration talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank makes +30% of any Darkness you collect restore your Health by that much."
   },
   {
     "id": "talent:death-defiance",
     "label": "Escape the Underworld with the Death Defiance talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank restores you for 50% Health, once, when your Life Total is depleted."
   },
   {
     "id": "talent:stubborn-defiance",
     "label": "Escape the Underworld with the Stubborn Defiance talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "It restores you to 30% Health, once per chamber, when your Life Total is depleted."
   },
   {
     "id": "talent:greater-reflex",
     "label": "Escape the Underworld with the Greater Reflex talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank lets you chain one extra Dash before briefly recovering."
   },
   {
     "id": "talent:ruthless-reflex",
     "label": "Escape the Underworld with the Ruthless Reflex talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Dashing just before getting hit gives +50% damage and dodge chance for 2 seconds."
   },
   {
     "id": "talent:boiling-blood",
     "label": "Escape the Underworld with the Boiling Blood talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +10% Attack and Special damage to foes carrying your Cast Ammo."
   },
   {
     "id": "talent:abyssal-blood",
     "label": "Escape the Underworld with the Abyssal Blood talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank reduces the speed and damage of foes carrying your Cast Ammo by -6%."
   },
   {
     "id": "talent:infernal-soul",
     "label": "Escape the Underworld with the Infernal Soul talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +1 Cast Ammo for your Cast."
   },
   {
     "id": "talent:stygian-soul",
     "label": "Escape the Underworld with the Stygian Soul talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Your Cast Ammo regenerates instead of dropping, 1 second faster per rank."
   },
   {
     "id": "talent:deep-pockets",
     "label": "Escape the Underworld with the Deep Pockets talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank grants 10 Obols at the start of each escape from the House of Hades."
   },
   {
     "id": "talent:golden-touch",
     "label": "Escape the Underworld with the Golden Touch talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank grants +5% of your Obols total each time you clear an Underworld region."
   },
   {
     "id": "talent:thick-skin",
     "label": "Escape the Underworld with the Thick Skin talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank adds +5 Health to your Life Total."
   },
   {
     "id": "talent:high-confidence",
     "label": "Escape the Underworld with the High Confidence talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +5% damage while you have 80% Health or greater."
   },
   {
     "id": "talent:privileged-status",
     "label": "Escape the Underworld with the Privileged Status talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +20% damage against foes afflicted by at least two Status Curse effects."
   },
   {
     "id": "talent:family-favorite",
     "label": "Escape the Underworld with the Family Favorite talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +2.5% damage for each different Olympian whose Boons you hold."
   },
   {
     "id": "talent:olympian-favor",
     "label": "Escape the Underworld with the Olympian Favor talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank adds a 1% bonus chance for a Boon to be Rare."
   },
   {
     "id": "talent:dark-foresight",
     "label": "Escape the Underworld with the Dark Foresight talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +2% greater chance for Gold Laurel rewards."
   },
   {
     "id": "talent:gods-pride",
     "label": "Escape the Underworld with the Gods' Pride talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank adds a 1% bonus chance for a Boon to be Epic."
   },
   {
     "id": "talent:gods-legacy",
     "label": "Escape the Underworld with the Gods' Legacy talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +1% greater chance for a Boon to be Legendary or a Duo."
   },
   {
     "id": "talent:fated-authority",
     "label": "Escape the Underworld with the Fated Authority talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives one die, used to alter the reward for the next chamber."
   },
   {
     "id": "talent:fated-persuasion",
     "label": "Escape the Underworld with the Fated Persuasion talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives one die, used to alter Boon and Well of Charon choices."
   },
   {
     "id": "keepsake:old-spiked-collar",
