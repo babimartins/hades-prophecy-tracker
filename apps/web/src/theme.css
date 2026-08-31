@@ -5,7 +5,7 @@
  * at startup by calling `applyDesignTokens` from `./theme-tokens.js`. See
  * `packages/ui/src/tokens.css.ts`.
  *
- * The one exception is the `#f2e7d0` fallback below. Every component in
+ * The one exception is the `#efe6da` fallback below. Every component in
  * `apps/web` reads its colours through `colorVar` from `@hades/ui`, which
  * builds its `var(--token, fallback)` fallback from `colorTokens` at import
  * time — no hand-typed hex literal to fall out of sync. Plain CSS cannot
@@ -32,12 +32,12 @@ body {
 
 body {
   /*
-   * A second hand-typed literal, for the same reason as the `#f2e7d0` above:
+   * A second hand-typed literal, for the same reason as the `#efe6da` above:
    * plain CSS cannot call `colorVar`. This is the page ground behind every
    * component and has no token, so nothing can drift out of sync with it.
    */
   background: #150e19;
-  color: var(--hd-color-text, #f2e7d0);
+  color: var(--hd-color-text, #efe6da);
   font-family: system-ui, sans-serif;
   margin: 0;
   /*

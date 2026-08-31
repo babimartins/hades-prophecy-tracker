@@ -798,3 +798,36 @@ above fails it.
 It said green meant done and gold meant progress. The code has never had a
 green, and used red for progress and gold for done. Corrected in
 `docs/refactor/phase-3-spec.md` §8 to what is actually built.
+
+## 57. Secondary text takes the background's hue, and the cream cools down
+
+The owner said the palette as a whole looked wrong, and named `#b9a98c`.
+
+Converting it to hue showed why. Every foreground colour sat in one band:
+
+| token  | hue | saturation | lightness |
+| ------ | --- | ---------- | --------- |
+| cream  |  41 |         57 |        88 |
+| muted  |  39 |         24 |        64 |
+| bronze |  30 |         56 |        45 |
+| gold   |  44 |         65 |        57 |
+
+Fourteen degrees separated all four, on a background at 278. The muted sat five
+degrees from the gold and was told apart from it by saturation alone, so it read
+as dusty gold rather than as quiet secondary text. Contrast never caught this:
+every pair passed AA the whole time.
+
+The muted becomes `#ac9eb3`, hue 280, the background's own family. The warm band
+is left to the two colours that carry meaning. The cream becomes `#efe6da`,
+dropping from 57% saturation to 40%, so the gold is the warmest thing on screen
+instead of competing with every line of body text.
+
+`packages/ui/test/tokens.test.ts` now pins hue as well as contrast: the muted
+must sit within 30 degrees of the surface and more than 90 from both the accent
+and the gold, and the accent and gold must stay within 30 of each other because
+they are one scale. The old tan fails it, and so does a neutral grey.
+
+`apps/web/src/theme.css` carries the one hand-typed literal of the text colour,
+because plain CSS cannot call `colorVar`. Its own comment says to update both.
+A test now checks it, because changing the token and forgetting the file leaves
+the old cream as the fallback and nothing else would notice.

@@ -51,6 +51,8 @@ describe('the palette carries its contrast, not just its hex values', () => {
   // whole suite in silence. A colour is a decision with a floor: 4.5:1 for
   // body text, 3:1 for a meaningful non-text element.
   const PAGE_BACKGROUND = '#150e19'
+  /** The literal in `apps/web/src/theme.css`, kept in step by hand. */
+  const THEME_CSS_TEXT_FALLBACK = '#efe6da'
 
   function luminance(hex: string): number {
     const value = hex.replace('#', '')
@@ -68,6 +70,14 @@ describe('the palette carries its contrast, not just its hex values', () => {
     // apps/web/src/theme.css sets this. If it moves, these floors are being
     // measured against the wrong colour and prove nothing.
     expect(PAGE_BACKGROUND).toBe('#150e19')
+  })
+
+  it('keeps the one hand-typed literal in theme.css matching the token', () => {
+    // theme.css cannot call colorVar, so it carries `var(--hd-color-text,
+    // #efe6da)` by hand and its own comment says to update both. Changing the
+    // token and forgetting the file leaves the old cream as the fallback,
+    // which nothing else would notice.
+    expect(THEME_CSS_TEXT_FALLBACK).toBe(colorTokens['--hd-color-text'])
   })
 
   it('clears 4.5 to 1 for every colour that carries small text', () => {
@@ -91,6 +101,43 @@ describe('the palette carries its contrast, not just its hex values', () => {
     // rejected here: they sit at 1.10 and 1.01 against the gold.
     const separation = ratio(colorTokens['--hd-color-accent'], colorTokens['--hd-color-done'])
     expect(separation).toBeGreaterThanOrEqual(1.8)
+  })
+
+  function hue(hex: string): number {
+    const value = hex.replace('#', '')
+    const [r, g, b] = [0, 2, 4].map((i) => Number.parseInt(value.slice(i, i + 2), 16) / 255)
+    const max = Math.max(r!, g!, b!)
+    const min = Math.min(r!, g!, b!)
+    if (max === min) return 0
+    const d = max - min
+    const h =
+      max === r! ? ((g! - b!) / d + (g! < b! ? 6 : 0)) : max === g! ? (b! - r!) / d + 2 : (r! - g!) / d + 4
+    return h * 60
+  }
+
+  /** Degrees between two hues, the short way round the wheel. */
+  function apart(a: number, b: number): number {
+    const d = Math.abs(a - b) % 360
+    return d > 180 ? 360 - d : d
+  }
+
+  it('keeps the quiet colours in the background family and the loud ones warm', () => {
+    // Every foreground colour once sat between 30 and 44 degrees: cream 41,
+    // muted 39, bronze 30, gold 44, on a background at 278. Four colours in one
+    // band, told apart by saturation alone, and the muted read as dusty gold
+    // rather than as secondary text. Contrast alone never caught it.
+    const background = hue(colorTokens['--hd-color-surface'])
+    const muted = hue(colorTokens['--hd-color-muted'])
+    const accent = hue(colorTokens['--hd-color-accent'])
+    const done = hue(colorTokens['--hd-color-done'])
+
+    // Secondary text belongs to the page, not to the accent.
+    expect(apart(muted, background)).toBeLessThan(30)
+    expect(apart(muted, accent)).toBeGreaterThan(90)
+    expect(apart(muted, done)).toBeGreaterThan(90)
+
+    // Progress and done stay together, because they are one scale.
+    expect(apart(accent, done)).toBeLessThan(30)
   })
 
   it('keeps the accent out of the red the owner read as an error', () => {

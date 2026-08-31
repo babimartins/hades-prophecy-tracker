@@ -348,3 +348,14 @@ A new accent must clear 4.5:1 on both `#150e19` and `#241627` **and** stay at
 least 1.8 from the gold. Those pull against each other: the brighter, calmer
 candidates all sit near the gold's luminance. `packages/ui/test/tokens.test.ts`
 holds the floors.
+
+### Check hue, not only contrast
+
+Every pair in the palette passed AA while the secondary text still read as
+dusty gold, because all four foreground colours sat between 30 and 44 degrees
+on a background at 278. Contrast cannot see that.
+
+The rule now: quiet colours take the background's hue, loud ones stay warm.
+Secondary text sits within 30 degrees of the surface and more than 90 from the
+accent and the gold. The accent and the gold stay within 30 of each other,
+because they are one scale. `packages/ui/test/tokens.test.ts` pins all of it.
