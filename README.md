@@ -5,21 +5,22 @@ each single action inside each prophecy.
 
 ## Status
 
-Slice 3 is complete. The dataset now covers 10 populated collections: the
-55 prophecies of the in-game Fated List, all 119 Codex entries, all 174
-boons, all 72 Daedalus enchantments, all 26 Well of Charon purchases, all
-25 keepsakes, all 24 weapon aspect thresholds, all 24 Mirror of Night
-talents, all 15 Pact of Punishment conditions, and all 11 perks — 545
-achievements in total, backed by 692 facts. An 11th collection, platform
-achievements, is registered but holds no entries yet. The dashboard offers
-a collection filter, search, and collapsible section grouping for the five
-collections (Codex, weapon aspects, boons, Daedalus, Mirror of Night)
-whose in-game tables have sections. `pnpm build` passes and produces a
-working application.
+The site is live at https://babimartins.github.io/hades-prophecy-tracker/.
 
-The site is not live yet. GitHub Pages deployment needs one manual step from a
-repository owner. See "Deployment" below. Once that step runs, the site is at
-https://babimartins.github.io/hades-prophecy-tracker/.
+Three phases rebuilt the project around **subjects** rather than collections.
+The dataset holds 120 subjects, 692 facts and 545 achievements; 452 facts carry
+a description of what the thing does, and every fact names the subjects it
+belongs to.
+
+The interface has five sections — Characters, Weapons, Fated List, The House,
+Collections. The two indexes are comparison tables, sortable and filterable, so
+"who gets the next Ambrosia" is answered without opening anything. The three
+list sections use a vertical rail with a detail pane. The page never scrolls:
+the table body, the rail or the pane scrolls inside a frozen frame.
+
+`docs/refactor/` holds the mapping, the three plans, the interface spec and a
+log of every decision taken without asking. `docs/preview/index.html` is the
+static mockup the structure was approved from.
 
 ## Why it exists
 
