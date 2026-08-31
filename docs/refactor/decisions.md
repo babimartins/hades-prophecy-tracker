@@ -858,3 +858,19 @@ ones guarding the worst defect this project had, so each was rewritten to cover
 whichever control the fact now gets rather than relaxed. The clamp and the
 rounding tests moved to `pet:cerberus`, which stops at 20 and so keeps the
 field.
+
+## 59. Next Steps takes the rail, like the other three list sections
+
+It shipped as three blocks side by side. The owner asked for the vertical rail
+the Fated List, The House and Collections already use, so all four list
+sections now read the same way and `rail-view` is reused rather than a fourth
+layout invented.
+
+Two things the rail changed.
+
+The pane is a full column instead of a third of the width, so it holds 25
+actions where a block held 12.
+
+The rail bar counts **every fact that belongs to a place**, not the rows on
+show. "During a run" holds 610 unfinished actions; a bar reading 0/25 would say
+the place was nearly finished. The pane is the front of the queue and says so.

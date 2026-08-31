@@ -25,8 +25,17 @@ async function mount(facts: FactMap = {}): Promise<void> {
   await page().updateComplete
 }
 
-function block(place: string): Element | null {
-  return root().querySelector(`section[data-place="${place}"]`)
+function railRoot(): ShadowRoot {
+  const rail = root().querySelector('rail-view')
+  if (!rail?.shadowRoot) throw new Error('rail-view has no shadow root')
+  return rail.shadowRoot
+}
+
+/** Selects a place on the rail and returns the pane, which is the light DOM. */
+async function block(place: string): Promise<ShadowRoot> {
+  railRoot().querySelector<HTMLButtonElement>(`button[data-item="${place}"]`)?.click()
+  await page().updateComplete
+  return root()
 }
 
 describe('where an action happens', () => {
@@ -52,23 +61,38 @@ describe('the Next Steps page', () => {
     await mount()
   })
 
-  it('shows the three places, in the order they are declared', () => {
-    const headings = [...root().querySelectorAll('section h2')].map((h) => h.textContent?.trim())
-    expect(headings).toEqual(['House Contractor', 'House of Hades', 'During a run'])
+  it('lists the three places on the rail, in the order they are declared', () => {
+    const labels = [...railRoot().querySelectorAll('.rail .name')].map((n) => n.textContent?.trim())
+    expect(labels).toEqual(['House Contractor', 'House of Hades', 'During a run'])
   })
 
-  it('leads each block with the action that unblocks the most', () => {
-    // On an empty save the two Work Orders top the Contractor block: each one
+  it('opens on the first place and swaps the pane when another is chosen', async () => {
+    expect(root().querySelector('h2')?.textContent?.trim()).toBe('House Contractor')
+    await block('run')
+    expect(root().querySelector('h2')?.textContent?.trim()).toBe('During a run')
+  })
+
+  it('counts a place on the rail in facts, over everything that belongs to it', async () => {
+    // The pane shows the front of the queue; the rail bar shows the whole
+    // place, so it does not read as nearly done when 25 of 610 are listed.
+    const item = railRoot().querySelector('button[data-item="run"]')?.textContent ?? ''
+    expect(item).toMatch(/0\/\d{3}/)
+  })
+
+  it('leads each place with the action that unblocks the most', async () => {
+    // On an empty save the two Work Orders top the Contractor pane: each one
     // opens a story chain that four other entries wait on.
-    const first = block('contractor')?.querySelector('li')
-    expect(first?.getAttribute('data-fact')).toBe('workorder:knave-kings-sentence')
-    const counts = [...block('contractor')!.querySelectorAll('.blocks-count')].map((n) =>
+    const pane = await block('contractor')
+    expect(pane.querySelector('li')?.getAttribute('data-fact')).toBe(
+      'workorder:knave-kings-sentence',
+    )
+    const counts = [...pane.querySelectorAll('.blocks-count')].map((n) =>
       Number((n.textContent ?? '').replace(/\D/g, '')),
     )
     expect(counts).toEqual([...counts].sort((a, b) => b - a))
   })
 
-  it('leaves the roll-up entries out of the count and out of the names', () => {
+  it('leaves the roll-up entries out of the count and out of the names', async () => {
     // God of Blood reaches 692 facts and Had to Happen 460, so counting them
     // adds one to almost every row and puts their names on all of them.
     const text = root().textContent ?? ''
@@ -84,24 +108,26 @@ describe('the Next Steps page', () => {
     // The count on the page must be the one without them. Checking only the
     // names let a version through that still counted all five: God of Blood
     // and Had to Happen both reach this action, so 8 became 10.
-    const shown = block('contractor')?.querySelector('.blocks-count')?.textContent ?? ''
+    const shown = (await block('contractor')).querySelector('.blocks-count')?.textContent ?? ''
     expect(shown.replace(/\D/g, '')).toBe(String(top.blocks))
     expect(top.blocks).toBe(8)
   })
 
-  it('names the entries an action would advance', () => {
+  it('names the entries an action would advance', async () => {
     // Case-insensitive: the trophy writes it "End To Torment" and the prophecy
     // "End to Torment", and which capitalisation survives the dedupe is not
     // what this test is about.
-    const first = block('contractor')?.querySelector('li .unlocks')?.textContent ?? ''
-    expect(first.toLowerCase()).toContain('end to torment')
+    const pane = await block('contractor')
+    expect((pane.querySelector('li .unlocks')?.textContent ?? '').toLowerCase()).toContain(
+      'end to torment',
+    )
   })
 
-  it('names a goal once, though a trophy and a prophecy may share it', () => {
+  it('names a goal once, though a trophy and a prophecy may share it', async () => {
     // 18 names belong to more than one entry. "End To Torment" the trophy and
     // "End to Torment" the prophecy differ only in a capital T, and printing
     // both reads as a bug.
-    const shown = block('contractor')?.querySelector('li .unlocks')?.textContent ?? ''
+    const shown = (await block('contractor')).querySelector('li .unlocks')?.textContent ?? ''
     const names = shown
       .split('·')[1]
       ?.split(',')
@@ -117,12 +143,12 @@ describe('the Next Steps page', () => {
     expect(root().querySelector('.lede')?.textContent).toMatch(/not an\s+order/)
   })
 
-  it('sets a row to the hardest target any unfinished entry asks for', () => {
+  it('sets a row to the hardest target any unfinished entry asks for', async () => {
     // A keepsake is wanted at rank 1 by Something From Everyone and at rank 3
     // by Friends Forever. Here it must stay listed until rank 3, because it is
     // still blocking something. Taking the easiest target instead would tick
     // it done at rank 1 and drop it while Friends Forever still waits.
-    const keepsake = [...block('run')!.querySelectorAll('li')].find((li) =>
+    const keepsake = [...(await block('run')).querySelectorAll('li')].find((li) =>
       (li.getAttribute('data-fact') ?? '').startsWith('keepsake:'),
     )
     expect(keepsake).toBeDefined()
@@ -142,24 +168,29 @@ describe('the Next Steps page', () => {
       steps.findIndex((s) => s.fact === 'keepsake:lambent-plume')
     expect(rank(after)).toBeGreaterThan(rank(before))
     await mount({ 'keepsake:lambent-plume': 3 })
-    const ids = [...block('run')!.querySelectorAll('li')].map((li) => li.getAttribute('data-fact'))
+    const ids = [...(await block('run')).querySelectorAll('li')].map((li) =>
+      li.getAttribute('data-fact'),
+    )
     expect(ids).not.toContain('keepsake:lambent-plume')
   })
 
   it('drops an action out of the list once nothing needs it', async () => {
-    const before = block('contractor')?.querySelectorAll('li').length ?? 0
+    const before = (await block('contractor')).querySelectorAll('li').length
     await mount({ 'workorder:knave-kings-sentence': true })
-    const ids = [...block('contractor')!.querySelectorAll('li')].map((li) =>
+    const ids = [...(await block('contractor')).querySelectorAll('li')].map((li) =>
       li.getAttribute('data-fact'),
     )
     expect(ids).not.toContain('workorder:knave-kings-sentence')
     expect(before).toBeGreaterThan(0)
   })
 
-  it('caps each block, so one place cannot crowd out the others', () => {
+  it('caps a place at the front of its queue', async () => {
+    // "During a run" alone has 610 unfinished actions. The pane shows the
+    // front of the queue; the rail bar carries the whole count.
     for (const place of ['contractor', 'house', 'run']) {
-      const n = block(place)?.querySelectorAll('li').length ?? 0
-      expect([place, n <= 12]).toEqual([place, true])
+      const n = (await block(place)).querySelectorAll('li').length
+      expect([place, n <= 25]).toEqual([place, true])
     }
+    expect((await block('run')).querySelectorAll('li')).toHaveLength(25)
   })
 })

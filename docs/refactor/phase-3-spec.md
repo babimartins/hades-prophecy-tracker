@@ -24,6 +24,7 @@ default that can be quietly dropped.
 | Green means done, and nothing else uses it. | Section 8 |
 | Collections is the last tab. | Section 1 |
 | Next Steps is grouped by where you act, not sorted. | Section 11 |
+| Four sections use the rail, not three. | Sections 6 and 11 |
 
 ## 1. The shell
 
@@ -138,6 +139,8 @@ Fated List, The House and Collections use a vertical rail with a detail pane.
 - Below 860px the rail sits above the pane, capped at 200px, and both still
   scroll inside the frame.
 
+**Next Steps.** One rail item per place, three of them. See section 11.
+
 **Fated List.** One rail item per prophecy, all 55. A prophecy with one
 sub-item renders as one line in the pane — it is not folded away and not padded
 out. 392 entries are of that shape.
@@ -239,12 +242,19 @@ The two are not comparable and no view may add them together.
 ## 11. Next Steps
 
 Every unfinished action, ranked by how many incomplete entries it would advance,
-in three blocks: **House Contractor, House of Hades, During a run.** Each block
-shows its top 12 and scrolls inside the frozen frame.
+grouped by where you do it: **House Contractor, House of Hades, During a run.**
 
 Grouped rather than sorted, by the owner's choice: a ranked list is not a plan
 until it says where each action happens. She opens the app before a run, so
 "what do I buy" and "what can I do on this run" are separate questions.
+
+It uses the **same vertical rail** as the Fated List, The House and Collections,
+with one rail item per place. Three side-by-side blocks came first and she asked
+for the rail, so the four list sections now read the same way.
+
+The rail bar counts every fact that belongs to a place, not the rows on show.
+The pane holds the front of the queue, capped at 25: "During a run" has 610
+unfinished actions and a bar reading 0/25 would say the place was nearly done.
 
 - A row shows the action, its control, how many entries it unblocks, and up to
   three of their names.
