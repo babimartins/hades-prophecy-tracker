@@ -284,9 +284,24 @@ describe('fact descriptions', () => {
   it('leaves no wiki markup in a description', () => {
     // The harvest strips templates, links, bold markers and HTML. Anything left
     // means a shape the cleaner did not know about.
+    //
+    // `style=` and a bare `|` are in this list because they were not, and 15
+    // Pact descriptions shipped reading `style="text-align:left;" | All foes
+    // deal bonus damage`. A spot-check caught it; this test did not.
     const dirty = described
-      .filter((fact) => /\{\{|\]\]|\[\[|'''|<[a-z/]/i.test(fact.description!))
+      .filter((fact) =>
+        /\{\{|\]\]|\[\[|'''|<[a-z/]|style\s*=|class\s*=|colspan|rowspan|\|/i.test(
+          fact.description!,
+        ),
+      )
       .map((fact) => `${fact.id}: ${fact.description!.slice(0, 60)}`)
     expect(dirty).toEqual([])
+  })
+
+  it('starts every description with a capital letter, not with leftover syntax', () => {
+    const odd = described
+      .filter((fact) => !/^[A-Z(]/.test(fact.description!))
+      .map((fact) => `${fact.id}: ${fact.description!.slice(0, 50)}`)
+    expect(odd).toEqual([])
   })
 })

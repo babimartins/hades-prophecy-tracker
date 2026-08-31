@@ -404,7 +404,7 @@
     "max": 4,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" |Each Underworld region's Bosses gain new techniques, 1 region per rank (Tartarus first)."
+    "description": "Each Underworld region's Bosses gain new techniques, 1 region per rank (Tartarus first)."
   },
   {
     "id": "combat:defeat-theseus-extreme-measures",
@@ -1967,7 +1967,7 @@
     "max": 5,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | All foes deal bonus damage, +20% per rank."
+    "description": "All foes deal bonus damage, +20% per rank."
   },
   {
     "id": "pact:lasting-consequences",
@@ -1976,7 +1976,7 @@
     "max": 4,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | Any Healing effects restore less of your Life Total than usual, -25% per rank."
+    "description": "Any Healing effects restore less of your Life Total than usual, -25% per rank."
   },
   {
     "id": "pact:convenience-fee",
@@ -1985,7 +1985,7 @@
     "max": 2,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | All Obol prices are higher, +40% per rank."
+    "description": "All Obol prices are higher, +40% per rank."
   },
   {
     "id": "pact:jury-summons",
@@ -1994,7 +1994,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | Foes in standard Encounters appear in greater numbers, +20% per rank."
+    "description": "Foes in standard Encounters appear in greater numbers, +20% per rank."
   },
   {
     "id": "pact:calisthenics-program",
@@ -2003,7 +2003,7 @@
     "max": 2,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | All foes have higher Life Totals, +15% HealthUp per rank."
+    "description": "All foes have higher Life Totals, +15% HealthUp per rank."
   },
   {
     "id": "pact:benefits-package",
@@ -2012,7 +2012,7 @@
     "max": 2,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | Most Armored foes have Perks (dangerous traits that vary per Encounter), +1 per rank."
+    "description": "Most Armored foes have Perks (dangerous traits that vary per Encounter), +1 per rank."
   },
   {
     "id": "pact:middle-management",
@@ -2021,7 +2021,7 @@
     "max": 1,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | Each Mini-boss Encounter contains +1 Armored foe (or some additional problem)."
+    "description": "Each Mini-boss Encounter contains +1 Armored foe (or some additional problem)."
   },
   {
     "id": "pact:underworld-customs",
@@ -2030,7 +2030,7 @@
     "max": 1,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | The exit to each Underworld region requires you to purge 1 Boon to unlock it."
+    "description": "The exit to each Underworld region requires you to purge 1 Boon to unlock it."
   },
   {
     "id": "pact:forced-overtime",
@@ -2039,7 +2039,7 @@
     "max": 2,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | All foes have bonus move speed and attack speed, +20% per rank."
+    "description": "All foes have bonus move speed and attack speed, +20% per rank."
   },
   {
     "id": "pact:heightened-security",
@@ -2048,7 +2048,7 @@
     "max": 1,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | All Traps and Magma deal +400% bonus damage."
+    "description": "All Traps and Magma deal +400% bonus damage."
   },
   {
     "id": "pact:routine-inspection",
@@ -2057,7 +2057,7 @@
     "max": 4,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | Your Talents from the Mirror of Night are deactivated (will affect the dark reflections prophecy), -3 per rank, (from the bottom up)."
+    "description": "Your Talents from the Mirror of Night are deactivated (will affect the dark reflections prophecy), -3 per rank, (from the bottom up)."
   },
   {
     "id": "pact:damage-control",
@@ -2066,7 +2066,7 @@
     "max": 2,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | All foes have ShieldHealth, making them ignore initial instances of damage, 1 hit per rank."
+    "description": "All foes have ShieldHealth, making them ignore initial instances of damage, 1 hit per rank."
   },
   {
     "id": "pact:approval-process",
@@ -2075,7 +2075,7 @@
     "max": 2,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | You have fewer choices when offered Boons, items or upgrades, -1 per rank."
+    "description": "You have fewer choices when offered Boons, items or upgrades, -1 per rank."
   },
   {
     "id": "pact:tight-deadline",
@@ -2084,7 +2084,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": [],
-    "description": "style=\"text-align:left;\" | You get 9 Min. to clear each Underworld region (or else!), reduced by -2 Min. per rank."
+    "description": "You get 9 Min. to clear each Underworld region (or else!), reduced by -2 Min. per rank."
   },
   {
     "id": "perk:shifter",
@@ -3638,7 +3638,7 @@
     "max": 3,
     "collection": "prophecy",
     "subjects": ["eurydice"],
-    "description": "in the final encounter in each underworld region, take 0 damage the first 3/4/5 times foes hit you."
+    "description": "In the final encounter in each underworld region, take 0 damage the first 3/4/5 times foes hit you."
   },
   {
     "id": "keepsake:broken-spearpoint",
