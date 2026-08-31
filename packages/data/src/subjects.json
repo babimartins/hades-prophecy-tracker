@@ -1,0 +1,597 @@
+[
+  {
+    "id": "achilles",
+    "name": "Achilles",
+    "type": "character"
+  },
+  {
+    "id": "alecto",
+    "name": "Alecto",
+    "type": "character"
+  },
+  {
+    "id": "aphrodite",
+    "name": "Aphrodite",
+    "type": "character"
+  },
+  {
+    "id": "ares",
+    "name": "Ares",
+    "type": "character"
+  },
+  {
+    "id": "artemis",
+    "name": "Artemis",
+    "type": "character"
+  },
+  {
+    "id": "asterius",
+    "name": "Asterius",
+    "type": "character"
+  },
+  {
+    "id": "athena",
+    "name": "Athena",
+    "type": "character"
+  },
+  {
+    "id": "bloodless",
+    "name": "Bloodless",
+    "type": "character"
+  },
+  {
+    "id": "bone-hydra",
+    "name": "Bone Hydra",
+    "type": "character"
+  },
+  {
+    "id": "bone-raker",
+    "name": "Bone-Raker",
+    "type": "character"
+  },
+  {
+    "id": "bother",
+    "name": "Bother",
+    "type": "character"
+  },
+  {
+    "id": "brightsword",
+    "name": "Brightsword",
+    "type": "character"
+  },
+  {
+    "id": "brimstone",
+    "name": "Brimstone",
+    "type": "character"
+  },
+  {
+    "id": "burn-flinger",
+    "name": "Burn-Flinger",
+    "type": "character"
+  },
+  {
+    "id": "cerberus",
+    "name": "Cerberus",
+    "type": "character"
+  },
+  {
+    "id": "chaos",
+    "name": "Chaos",
+    "type": "character"
+  },
+  {
+    "id": "charon",
+    "name": "Charon",
+    "type": "character"
+  },
+  {
+    "id": "companion-antos",
+    "name": "Companion Antos",
+    "type": "character"
+  },
+  {
+    "id": "companion-battie",
+    "name": "Companion Battie",
+    "type": "character"
+  },
+  {
+    "id": "companion-fidi",
+    "name": "Companion Fidi",
+    "type": "character"
+  },
+  {
+    "id": "companion-mort",
+    "name": "Companion Mort",
+    "type": "character"
+  },
+  {
+    "id": "companion-rib",
+    "name": "Companion Rib",
+    "type": "character"
+  },
+  {
+    "id": "companion-shady",
+    "name": "Companion Shady",
+    "type": "character"
+  },
+  {
+    "id": "crawler",
+    "name": "Crawler",
+    "type": "character"
+  },
+  {
+    "id": "demeter",
+    "name": "Demeter",
+    "type": "character"
+  },
+  {
+    "id": "dionysus",
+    "name": "Dionysus",
+    "type": "character"
+  },
+  {
+    "id": "doomstone",
+    "name": "Doomstone",
+    "type": "character"
+  },
+  {
+    "id": "dracon",
+    "name": "Dracon",
+    "type": "character"
+  },
+  {
+    "id": "dusa",
+    "name": "Dusa",
+    "type": "character"
+  },
+  {
+    "id": "eurydice",
+    "name": "Eurydice",
+    "type": "character"
+  },
+  {
+    "id": "flame-wheel",
+    "name": "Flame Wheel",
+    "type": "character"
+  },
+  {
+    "id": "gigantic-vermin",
+    "name": "Gigantic Vermin",
+    "type": "character"
+  },
+  {
+    "id": "gorgon",
+    "name": "Gorgon",
+    "type": "character"
+  },
+  {
+    "id": "greatshield",
+    "name": "Greatshield",
+    "type": "character"
+  },
+  {
+    "id": "hades",
+    "name": "Lord Hades",
+    "type": "character"
+  },
+  {
+    "id": "hermes",
+    "name": "Hermes",
+    "type": "character"
+  },
+  {
+    "id": "hypnos",
+    "name": "Hypnos",
+    "type": "character"
+  },
+  {
+    "id": "inferno-bomber",
+    "name": "Inferno-Bomber",
+    "type": "character"
+  },
+  {
+    "id": "king-vermin",
+    "name": "King Vermin",
+    "type": "character"
+  },
+  {
+    "id": "longspear",
+    "name": "Longspear",
+    "type": "character"
+  },
+  {
+    "id": "megaera",
+    "name": "Megaera",
+    "type": "character"
+  },
+  {
+    "id": "megagorgon",
+    "name": "Megagorgon",
+    "type": "character"
+  },
+  {
+    "id": "nemean-chariot",
+    "name": "Nemean Chariot",
+    "type": "character"
+  },
+  {
+    "id": "numbskull",
+    "name": "Numbskull",
+    "type": "character"
+  },
+  {
+    "id": "nyx",
+    "name": "Nyx",
+    "type": "character"
+  },
+  {
+    "id": "orpheus",
+    "name": "Orpheus",
+    "type": "character"
+  },
+  {
+    "id": "patroclus",
+    "name": "Patroclus",
+    "type": "character"
+  },
+  {
+    "id": "poseidon",
+    "name": "Poseidon",
+    "type": "character"
+  },
+  {
+    "id": "satyr-cultist",
+    "name": "Satyr Cultist",
+    "type": "character"
+  },
+  {
+    "id": "sisyphus",
+    "name": "Sisyphus",
+    "type": "character"
+  },
+  {
+    "id": "skelly",
+    "name": "Skelly",
+    "type": "character"
+  },
+  {
+    "id": "skull-crusher",
+    "name": "Skull-Crusher",
+    "type": "character"
+  },
+  {
+    "id": "skullomat",
+    "name": "Skullomat",
+    "type": "character"
+  },
+  {
+    "id": "slam-dancer",
+    "name": "Slam-Dancer",
+    "type": "character"
+  },
+  {
+    "id": "snakestone",
+    "name": "Snakestone",
+    "type": "character"
+  },
+  {
+    "id": "soul-catcher",
+    "name": "Soul Catcher",
+    "type": "character"
+  },
+  {
+    "id": "splitter",
+    "name": "Splitter",
+    "type": "character"
+  },
+  {
+    "id": "spreader",
+    "name": "Spreader",
+    "type": "character"
+  },
+  {
+    "id": "strongbow",
+    "name": "Strongbow",
+    "type": "character"
+  },
+  {
+    "id": "thanatos",
+    "name": "Thanatos",
+    "type": "character"
+  },
+  {
+    "id": "theseus",
+    "name": "Theseus",
+    "type": "character"
+  },
+  {
+    "id": "tisiphone",
+    "name": "Tisiphone",
+    "type": "character"
+  },
+  {
+    "id": "voidstone",
+    "name": "Voidstone",
+    "type": "character"
+  },
+  {
+    "id": "wave-maker",
+    "name": "Wave-Maker",
+    "type": "character"
+  },
+  {
+    "id": "wretched-lout",
+    "name": "Wretched Lout",
+    "type": "character"
+  },
+  {
+    "id": "wretched-pest",
+    "name": "Wretched Pest",
+    "type": "character"
+  },
+  {
+    "id": "wretched-sneak",
+    "name": "Wretched Sneak",
+    "type": "character"
+  },
+  {
+    "id": "wretched-thug",
+    "name": "Wretched Thug",
+    "type": "character"
+  },
+  {
+    "id": "wretched-witch",
+    "name": "Wretched Witch",
+    "type": "character"
+  },
+  {
+    "id": "wringer",
+    "name": "Wringer",
+    "type": "character"
+  },
+  {
+    "id": "zagreus",
+    "name": "Zagreus",
+    "type": "character"
+  },
+  {
+    "id": "zeus",
+    "name": "Zeus",
+    "type": "character"
+  },
+  {
+    "id": "aegis",
+    "name": "Shield of Chaos",
+    "type": "weapon"
+  },
+  {
+    "id": "coronacht",
+    "name": "Heart-Seeking Bow",
+    "type": "weapon"
+  },
+  {
+    "id": "exagryph",
+    "name": "Adamant Rail",
+    "type": "weapon"
+  },
+  {
+    "id": "malphon",
+    "name": "Twin Fists",
+    "type": "weapon"
+  },
+  {
+    "id": "stygius",
+    "name": "Stygian Blade",
+    "type": "weapon"
+  },
+  {
+    "id": "varatha",
+    "name": "Eternal Spear",
+    "type": "weapon"
+  },
+  {
+    "id": "ambrosia",
+    "name": "Ambrosia",
+    "type": "collectible"
+  },
+  {
+    "id": "anvil-of-fates",
+    "name": "Anvil of Fates",
+    "type": "collectible"
+  },
+  {
+    "id": "bass",
+    "name": "Bass",
+    "type": "collectible"
+  },
+  {
+    "id": "bloodstones",
+    "name": "Bloodstones",
+    "type": "collectible"
+  },
+  {
+    "id": "centaur-heart",
+    "name": "Centaur Heart",
+    "type": "collectible"
+  },
+  {
+    "id": "charons-obol",
+    "name": "Charon's Obol",
+    "type": "collectible"
+  },
+  {
+    "id": "charp",
+    "name": "Charp",
+    "type": "collectible"
+  },
+  {
+    "id": "chlam",
+    "name": "Chlam",
+    "type": "collectible"
+  },
+  {
+    "id": "chrustacean",
+    "name": "Chrustacean",
+    "type": "collectible"
+  },
+  {
+    "id": "chthonic-keys",
+    "name": "Chthonic Keys",
+    "type": "collectible"
+  },
+  {
+    "id": "daedalus-hammer",
+    "name": "Daedalus Hammer",
+    "type": "collectible"
+  },
+  {
+    "id": "darkness",
+    "name": "Darkness",
+    "type": "collectible"
+  },
+  {
+    "id": "diamond",
+    "name": "Diamond",
+    "type": "collectible"
+  },
+  {
+    "id": "flameater",
+    "name": "Flameater",
+    "type": "collectible"
+  },
+  {
+    "id": "gemstones",
+    "name": "Gemstones",
+    "type": "collectible"
+  },
+  {
+    "id": "gupp",
+    "name": "Gupp",
+    "type": "collectible"
+  },
+  {
+    "id": "hellfish",
+    "name": "Hellfish",
+    "type": "collectible"
+  },
+  {
+    "id": "infernal-trove",
+    "name": "Infernal Trove",
+    "type": "collectible"
+  },
+  {
+    "id": "knucklehead",
+    "name": "Knucklehead",
+    "type": "collectible"
+  },
+  {
+    "id": "loyalty-card",
+    "name": "Loyalty Card",
+    "type": "collectible"
+  },
+  {
+    "id": "mati",
+    "name": "Mati",
+    "type": "collectible"
+  },
+  {
+    "id": "nectar",
+    "name": "Nectar",
+    "type": "collectible"
+  },
+  {
+    "id": "pom-of-power",
+    "name": "Pom of Power",
+    "type": "collectible"
+  },
+  {
+    "id": "projelly",
+    "name": "Projelly",
+    "type": "collectible"
+  },
+  {
+    "id": "red-onion",
+    "name": "Red Onion",
+    "type": "collectible"
+  },
+  {
+    "id": "scuffer",
+    "name": "Scuffer",
+    "type": "collectible"
+  },
+  {
+    "id": "scyllascion",
+    "name": "Scyllascion",
+    "type": "collectible"
+  },
+  {
+    "id": "seamare",
+    "name": "Seamare",
+    "type": "collectible"
+  },
+  {
+    "id": "slavug",
+    "name": "Slavug",
+    "type": "collectible"
+  },
+  {
+    "id": "stonewhal",
+    "name": "Stonewhal",
+    "type": "collectible"
+  },
+  {
+    "id": "sturgeon",
+    "name": "Sturgeon",
+    "type": "collectible"
+  },
+  {
+    "id": "titan-blood",
+    "name": "Titan Blood",
+    "type": "collectible"
+  },
+  {
+    "id": "trout",
+    "name": "Trout",
+    "type": "collectible"
+  },
+  {
+    "id": "voidskate",
+    "name": "Voidskate",
+    "type": "collectible"
+  },
+  {
+    "id": "asphodel",
+    "name": "Asphodel",
+    "type": "region"
+  },
+  {
+    "id": "chaos-realm",
+    "name": "Chaos",
+    "type": "region"
+  },
+  {
+    "id": "elysium",
+    "name": "Elysium",
+    "type": "region"
+  },
+  {
+    "id": "erebus",
+    "name": "Erebus",
+    "type": "region"
+  },
+  {
+    "id": "house-of-hades",
+    "name": "House of Hades",
+    "type": "region"
+  },
+  {
+    "id": "styx",
+    "name": "Styx",
+    "type": "region"
+  },
+  {
+    "id": "tartarus",
+    "name": "Tartarus",
+    "type": "region"
+  }
+]

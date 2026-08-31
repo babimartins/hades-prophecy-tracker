@@ -1,4 +1,4 @@
-import { collectFactIds } from '@hades/engine'
+import { collectFactIds, NAMESPACES_WITHOUT_CAPABILITY } from '@hades/engine'
 import type { RequirementChild } from '@hades/schema'
 import { describe, expect, it } from 'vitest'
 import { dataset } from '../src/index.js'
@@ -148,5 +148,111 @@ describe('dataset integrity', () => {
     // Every fact must be counted exactly once, whatever its share count is.
     const totalFacts = [...distribution.entries()].reduce((sum, [, facts]) => sum + facts, 0)
     expect(totalFacts).toBe(dataset.facts.length)
+  })
+})
+
+describe('the subject roster', () => {
+  it('holds one entry per Codex entry', () => {
+    const codexEntries = dataset.achievements.filter((a) => a.collection === 'codex')
+    expect(dataset.subjects).toHaveLength(codexEntries.length)
+    expect(dataset.subjects).toHaveLength(119)
+  })
+
+  it('has no duplicate subject id', () => {
+    const ids = dataset.subjects.map((subject) => subject.id)
+    expect(new Set(ids).size).toBe(ids.length)
+  })
+
+  it('splits into the four types as the Codex sections dictate', () => {
+    const counts: Record<string, number> = {}
+    for (const subject of dataset.subjects) {
+      counts[subject.type] = (counts[subject.type] ?? 0) + 1
+    }
+    expect(counts).toEqual({ character: 72, collectible: 34, region: 7, weapon: 6 })
+  })
+
+  it('names the six weapons by their true name, not their Codex display name', () => {
+    const weapons = dataset.subjects.filter((s) => s.type === 'weapon').map((s) => s.id)
+    expect(weapons.sort()).toEqual([
+      'aegis',
+      'coronacht',
+      'exagryph',
+      'malphon',
+      'stygius',
+      'varatha',
+    ])
+  })
+
+  it('keeps the Codex display name, so a weapon reads as the player sees it', () => {
+    const stygius = dataset.subjects.find((s) => s.id === 'stygius')
+    expect(stygius?.name).toBe('Stygian Blade')
+  })
+})
+
+describe('facts tagged with a subject', () => {
+  const withKey = dataset.facts.filter((fact) => fact.subjects !== undefined)
+  const tagged = withKey.filter((fact) => fact.subjects!.length > 0)
+  const systemFacts = withKey.filter((fact) => fact.subjects!.length === 0)
+  const untagged = dataset.facts.filter((fact) => fact.subjects === undefined)
+
+  it('names only subjects that exist in the roster', () => {
+    const roster = new Set(dataset.subjects.map((subject) => subject.id))
+    const unknown: string[] = []
+    for (const fact of tagged) {
+      for (const id of fact.subjects!) {
+        if (!roster.has(id)) unknown.push(`${fact.id} -> ${id}`)
+      }
+    }
+    expect(unknown).toEqual([])
+  })
+
+  it('splits into tagged, deliberately empty, and not yet established', () => {
+    expect(tagged).toHaveLength(507)
+    expect(systemFacts).toHaveLength(80)
+    expect(untagged).toHaveLength(105)
+    expect(tagged.length + systemFacts.length + untagged.length).toBe(dataset.facts.length)
+  })
+
+  it('gives a system fact an empty list, never a missing key and never a subject', () => {
+    // The two states mean different things. An empty list says "this names no
+    // subject on purpose". A missing key says "nobody has established it yet".
+    // Asserting only that the key exists would let a `pact:*` fact tagged
+    // ["zeus"] through, so this asserts the list is actually empty.
+    const wrong = dataset.facts
+      .filter((fact) => NAMESPACES_WITHOUT_CAPABILITY.includes(fact.id.split(':')[0]!))
+      .filter((fact) => fact.subjects?.length !== 0)
+      .map((fact) => `${fact.id} -> ${JSON.stringify(fact.subjects)}`)
+    expect(wrong).toEqual([])
+  })
+
+  it('covers the aggregate facts that name no namespace of their own', () => {
+    // `codex:sections-revealed` counts Codex sections. It sits in a namespace
+    // that is otherwise a subject, so the namespace rule cannot reach it.
+    const aggregate = dataset.facts.find((fact) => fact.id === 'codex:sections-revealed')
+    expect(aggregate?.subjects).toEqual([])
+  })
+
+  it('leaves every subject named by at least one fact', () => {
+    const named = new Set(tagged.flatMap((fact) => fact.subjects!))
+    const orphans = dataset.subjects.filter((subject) => !named.has(subject.id))
+    expect(orphans.map((subject) => subject.id)).toEqual([])
+  })
+
+  it('lists the namespaces phase 2 still has to source', () => {
+    const byNamespace: Record<string, number> = {}
+    for (const fact of untagged) {
+      const namespace = fact.id.split(':')[0]!
+      byNamespace[namespace] = (byNamespace[namespace] ?? 0) + 1
+    }
+    expect(byNamespace).toEqual({
+      boon: 38,
+      keepsake: 25,
+      talk: 18,
+      combat: 13,
+      workorder: 5,
+      lounge: 4,
+      spend: 1,
+      lyre: 1,
+    })
   })
 })

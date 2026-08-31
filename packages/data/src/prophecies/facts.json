@@ -3,55 +3,64 @@
     "id": "invite:zeus",
     "label": "Invite Zeus to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "invite:poseidon",
     "label": "Invite Poseidon to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "invite:demeter",
     "label": "Invite Demeter to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "invite:athena",
     "label": "Invite Athena to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "invite:aphrodite",
     "label": "Invite Aphrodite to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "invite:ares",
     "label": "Invite Ares to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "invite:artemis",
     "label": "Invite Artemis to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "invite:dionysus",
     "label": "Invite Dionysus to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "invite:hermes",
     "label": "Invite Hermes to the family reunion",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "talk:persephone-and-hades-after-family-reunion",
@@ -64,63 +73,72 @@
     "label": "Affinity with Zeus",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "nectar:poseidon",
     "label": "Affinity with Poseidon",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "nectar:demeter",
     "label": "Affinity with Demeter",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "nectar:athena",
     "label": "Affinity with Athena",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "nectar:aphrodite",
     "label": "Affinity with Aphrodite",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "nectar:ares",
     "label": "Affinity with Ares",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "nectar:artemis",
     "label": "Affinity with Artemis",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "nectar:dionysus",
     "label": "Affinity with Dionysus",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "nectar:hermes",
     "label": "Affinity with Hermes",
     "kind": "number",
     "max": 8,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "combat:defeat-hades",
@@ -132,55 +150,64 @@
     "id": "meet:hades",
     "label": "Meet Hades",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"]
   },
   {
     "id": "meet:nyx",
     "label": "Meet Nyx",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["nyx"]
   },
   {
     "id": "meet:charon",
     "label": "Meet Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["charon"]
   },
   {
     "id": "meet:thanatos",
     "label": "Meet Thanatos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["thanatos"]
   },
   {
     "id": "meet:hypnos",
     "label": "Meet Hypnos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hypnos"]
   },
   {
     "id": "meet:megaera",
     "label": "Meet Megaera",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["megaera"]
   },
   {
     "id": "meet:alecto",
     "label": "Meet Alecto",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["alecto"]
   },
   {
     "id": "meet:tisiphone",
     "label": "Meet Tisiphone",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["tisiphone"]
   },
   {
     "id": "meet:chaos",
     "label": "Meet Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "workorder:eldest-sigil-restoration",
@@ -205,14 +232,16 @@
     "label": "Affinity with Orpheus",
     "kind": "number",
     "max": 8,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "nectar:eurydice",
     "label": "Affinity with Eurydice",
     "kind": "number",
     "max": 7,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["eurydice"]
   },
   {
     "id": "workorder:singers-gamble",
@@ -255,7 +284,8 @@
     "label": "Stygius Aspect of Zagreus level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "combat:slay-skelly-with-stygius",
@@ -267,43 +297,50 @@
     "id": "meet:zeus",
     "label": "Meet Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "meet:poseidon",
     "label": "Meet Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "meet:athena",
     "label": "Meet Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "meet:dionysus",
     "label": "Meet Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "meet:aphrodite",
     "label": "Meet Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "meet:ares",
     "label": "Meet Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "meet:artemis",
     "label": "Meet Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "lounge:deep-cleaning-service",
@@ -347,7 +384,8 @@
     "label": "Extreme Measures Pact of Punishment condition rank",
     "kind": "number",
     "max": 4,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "combat:defeat-theseus-extreme-measures",
@@ -384,667 +422,778 @@
     "id": "boon:athena:divine-strike",
     "label": "Earn the Divine Strike boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:divine-flourish",
     "label": "Earn the Divine Flourish boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:divine-dash",
     "label": "Earn the Divine Dash boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:phalanx-shot",
     "label": "Earn the Phalanx Shot boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:athenas-aid",
     "label": "Earn the Athena's Aid boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:sure-footing",
     "label": "Earn the Sure Footing boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:bronze-skin",
     "label": "Earn the Bronze Skin boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:holy-shield",
     "label": "Earn the Holy Shield boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:proud-bearing",
     "label": "Earn the Proud Bearing boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:blinding-flash",
     "label": "Earn the Blinding Flash boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:athena:brilliant-riposte",
     "label": "Earn the Brilliant Riposte boon from Athena",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "boon:zeus:lightning-strike",
     "label": "Earn the Lightning Strike boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:thunder-dash",
     "label": "Earn the Thunder Dash boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:electric-shot",
     "label": "Earn the Electric Shot boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:thunder-flourish",
     "label": "Earn the Thunder Flourish boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:zeus-aid",
     "label": "Earn the Zeus' Aid boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:heavens-vengeance",
     "label": "Earn the Heaven's Vengeance boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:clouded-judgement",
     "label": "Earn the Clouded Judgment boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:billowing-strength",
     "label": "Earn the Billowing Strength boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:lightning-reflexes",
     "label": "Earn the Lightning Reflexes boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:storm-lightning",
     "label": "Earn the Storm Lightning boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:static-discharge",
     "label": "Earn the Static Discharge boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:high-voltage",
     "label": "Earn the High Voltage boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:zeus:double-strike",
     "label": "Earn the Double Strike boon from Zeus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "boon:poseidon:tempest-strike",
     "label": "Earn the Tempest Strike boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:tempest-flourish",
     "label": "Earn the Tempest Flourish boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:tidal-dash",
     "label": "Earn the Tidal Dash boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:flood-shot",
     "label": "Earn the Flood Shot boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:poseidons-aid",
     "label": "Earn the Poseidon's Aid boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:hydraulic-might",
     "label": "Earn the Hydraulic Might boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:oceans-bounty",
     "label": "Earn the Ocean's Bounty boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:boiling-point",
     "label": "Earn the Boiling Point boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:rip-current",
     "label": "Earn the Rip Current boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:typhoons-fury",
     "label": "Earn the Typhoon's Fury boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:breaking-wave",
     "label": "Earn the Breaking Wave boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:razor-shoals",
     "label": "Earn the Razor Shoals boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:poseidon:wave-pounding",
     "label": "Earn the Wave Pounding boon from Poseidon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "boon:aphrodite:heartbreak-strike",
     "label": "Earn the Heartbreak Strike boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:heartbreak-flourish",
     "label": "Earn the Heartbreak Flourish boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:passion-dash",
     "label": "Earn the Passion Dash boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:crush-shot",
     "label": "Earn the Crush Shot boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:aphrodites-aid",
     "label": "Earn the Aphrodite's Aid boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:blown-kiss",
     "label": "Earn the Blown Kiss boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:wave-of-despair",
     "label": "Earn the Wave of Despair boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:dying-lament",
     "label": "Earn the Dying Lament boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:different-league",
     "label": "Earn the Different League boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:life-affirmation",
     "label": "Earn the Life Affirmation boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:empty-inside",
     "label": "Earn the Empty Inside boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:sweet-surrender",
     "label": "Earn the Sweet Surrender boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:aphrodite:broken-resolve",
     "label": "Earn the Broken Resolve boon from Aphrodite",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "boon:ares:curse-of-agony",
     "label": "Earn the Curse of Agony boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:curse-of-pain",
     "label": "Earn the Curse of Pain boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:blade-dash",
     "label": "Earn the Blade Dash boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:slicing-shot",
     "label": "Earn the Slicing Shot boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:ares-aid",
     "label": "Earn the Ares' Aid boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:curse-of-vengeance",
     "label": "Earn the Curse of Vengeance boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:urge-to-kill",
     "label": "Earn the Urge to Kill boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:battle-rage",
     "label": "Earn the Battle Rage boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:blood-frenzy",
     "label": "Earn the Blood Frenzy boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:impending-doom",
     "label": "Earn the Impending Doom boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:dire-misfortune",
     "label": "Earn the Dire Misfortune boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:black-metal",
     "label": "Earn the Black Metal boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:ares:engulfing-vortex",
     "label": "Earn the Engulfing Vortex boon from Ares",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "boon:artemis:deadly-strike",
     "label": "Earn the Deadly Strike boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:hunter-dash",
     "label": "Earn the Hunter Dash boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:true-shot",
     "label": "Earn the True Shot boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:deadly-flourish",
     "label": "Earn the Deadly Flourish boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:artemis-aid",
     "label": "Earn the Artemis' Aid boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:pressure-points",
     "label": "Earn the Pressure Points boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:support-fire",
     "label": "Earn the Support Fire boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:hunters-mark",
     "label": "Earn the Hunter's Mark boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:clean-kill",
     "label": "Earn the Clean Kill boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:hide-breaker",
     "label": "Earn the Hide Breaker boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:hunter-instinct",
     "label": "Earn the Hunter Instinct boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:artemis:exit-wounds",
     "label": "Earn the Exit Wounds boon from Artemis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "boon:dionysus:drunken-strike",
     "label": "Earn the Drunken Strike boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:drunken-flourish",
     "label": "Earn the Drunken Flourish boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:drunken-dash",
     "label": "Earn the Drunken Dash boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:trippy-shot",
     "label": "Earn the Trippy Shot boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:dionysus-aid",
     "label": "Earn the Dionysus' Aid boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:after-party",
     "label": "Earn the After Party boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:positive-outlook",
     "label": "Earn the Positive Outlook boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:strong-drink",
     "label": "Earn the Strong Drink boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:peer-pressure",
     "label": "Earn the Peer Pressure boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:numbing-sensation",
     "label": "Earn the Numbing Sensation boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:bad-influence",
     "label": "Earn the Bad Influence boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:dionysus:high-tolerance",
     "label": "Earn the High Tolerance boon from Dionysus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "boon:hermes:second-wind",
     "label": "Earn the Second Wind boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:swift-strike",
     "label": "Earn the Swift Strike boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:swift-flourish",
     "label": "Earn the Swift Flourish boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:quick-recovery",
     "label": "Earn the Quick Recovery boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:greater-haste",
     "label": "Earn the Greater Haste boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:hyper-sprint",
     "label": "Earn the Hyper Sprint boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:flurry-cast",
     "label": "Earn the Flurry Cast boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:greatest-reflex",
     "label": "Earn the Greatest Reflex boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:greater-evasion",
     "label": "Earn the Greater Evasion boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:quick-favor",
     "label": "Earn the Quick Favor boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:side-hustle",
     "label": "Earn the Side Hustle boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:quick-reload",
     "label": "Earn the Quick Reload boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:hermes:rush-delivery",
     "label": "Earn the Rush Delivery boon from Hermes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "boon:demeter:frost-strike",
     "label": "Earn the Frost Strike boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:mistral-dash",
     "label": "Earn the Mistral Dash boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:crystal-beam",
     "label": "Earn the Crystal Beam boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:frost-flourish",
     "label": "Earn the Frost Flourish boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:demeters-aid",
     "label": "Earn the Demeter's Aid boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:snow-burst",
     "label": "Earn the Snow Burst boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:glacial-glare",
     "label": "Earn the Glacial Glare boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:frozen-touch",
     "label": "Earn the Frozen Touch boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:ravenous-will",
     "label": "Earn the Ravenous Will boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:arctic-blast",
     "label": "Earn the Arctic Blast boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:demeter:killing-freeze",
     "label": "Earn the Killing Freeze boon from Demeter",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "boon:legendary:splitting-bolt",
@@ -1278,187 +1427,218 @@
     "id": "blessing:chaos:strike",
     "label": "Earn the Strike blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:shot",
     "label": "Earn the Shot blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:grasp",
     "label": "Earn the Grasp blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:soul",
     "label": "Earn the Soul blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:favor",
     "label": "Earn the Favor blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:affluence",
     "label": "Earn the Affluence blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:eclipse",
     "label": "Earn the Eclipse blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:flourish",
     "label": "Earn the Flourish blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:lunge",
     "label": "Earn the Lunge blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:ambush",
     "label": "Earn the Ambush blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:assault",
     "label": "Earn the Assault blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "blessing:chaos:defiance",
     "label": "Earn the Defiance blessing from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:paupers",
     "label": "Suffer the Pauper's curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:slippery",
     "label": "Suffer the Slippery curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:maimed",
     "label": "Suffer the Maimed curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:flayed",
     "label": "Suffer the Flayed curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:addled",
     "label": "Suffer the Addled curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:caustic",
     "label": "Suffer the Caustic curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:enshrouded",
     "label": "Suffer the Enshrouded curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:excruciating",
     "label": "Suffer the Excruciating curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:abyssal",
     "label": "Suffer the Abyssal curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:atrophic",
     "label": "Suffer the Atrophic curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:slothful",
     "label": "Suffer the Slothful curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:halting",
     "label": "Suffer the Halting curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "curse:chaos:roiling",
     "label": "Suffer the Roiling curse from Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"]
   },
   {
     "id": "weapon:stygian-blade",
     "label": "Acquire the Stygian Blade",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "weapon:eternal-spear",
     "label": "Acquire the Eternal Spear",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "weapon:shield-of-chaos",
     "label": "Acquire the Shield of Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "weapon:heart-seeking-bow",
     "label": "Acquire the Heart-Seeking Bow",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "weapon:twin-fists-of-malphon",
     "label": "Acquire the Twin Fists of Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "weapon:adamant-rail",
     "label": "Acquire the Adamant Rail",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "combat:cerberus-stygius-arthur",
@@ -1500,456 +1680,529 @@
     "id": "escape:stygian-blade",
     "label": "Escape the Underworld using the Stygian Blade",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "escape:eternal-spear",
     "label": "Escape the Underworld using the Eternal Spear",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "escape:shield-of-chaos",
     "label": "Escape the Underworld using the Shield of Chaos",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "escape:heart-seeking-bow",
     "label": "Escape the Underworld using the Heart-Seeking Bow",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "escape:twin-fists-of-malphon",
     "label": "Escape the Underworld using the Twin Fists of Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "escape:adamant-rail",
     "label": "Escape the Underworld using the Adamant Rail",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "pact:hard-labor",
     "label": "Hard Labor Pact of Punishment condition rank",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:lasting-consequences",
     "label": "Lasting Consequences Pact of Punishment condition rank",
     "kind": "number",
     "max": 4,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:convenience-fee",
     "label": "Convenience Fee Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:jury-summons",
     "label": "Jury Summons Pact of Punishment condition rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:calisthenics-program",
     "label": "Calisthenics Program Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:benefits-package",
     "label": "Benefits Package Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:middle-management",
     "label": "Middle Management Pact of Punishment condition rank",
     "kind": "number",
     "max": 1,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:underworld-customs",
     "label": "Underworld Customs Pact of Punishment condition rank",
     "kind": "number",
     "max": 1,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:forced-overtime",
     "label": "Forced Overtime Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:heightened-security",
     "label": "Heightened Security Pact of Punishment condition rank",
     "kind": "number",
     "max": 1,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:routine-inspection",
     "label": "Routine Inspection Pact of Punishment condition rank",
     "kind": "number",
     "max": 4,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:damage-control",
     "label": "Damage Control Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:approval-process",
     "label": "Approval Process Pact of Punishment condition rank",
     "kind": "number",
     "max": 2,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "pact:tight-deadline",
     "label": "Tight Deadline Pact of Punishment condition rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:shifter",
     "label": "Slay a foe with the Shifter Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:bruiser",
     "label": "Slay a foe with the Bruiser Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:slugger",
     "label": "Slay a foe with the Slugger Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:puller",
     "label": "Slay a foe with the Puller Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:savior",
     "label": "Slay a foe with the Savior Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:speeder",
     "label": "Slay a foe with the Speeder Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:linker",
     "label": "Slay a foe with the Linker Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:cloner",
     "label": "Slay a foe with the Cloner Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:burner",
     "label": "Slay a foe with the Burner Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:seeker",
     "label": "Slay a foe with the Seeker Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "perk:popper",
     "label": "Slay a foe with the Popper Perk active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "miniboss:dire-inferno-bomber",
     "label": "Slay the Dire Inferno Bomber",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["inferno-bomber"]
   },
   {
     "id": "miniboss:doomstone",
     "label": "Slay the Doomstone",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["doomstone"]
   },
   {
     "id": "miniboss:wretched-sneak",
     "label": "Slay the Wretched Sneak",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["wretched-sneak"]
   },
   {
     "id": "miniboss:dire-voidstone",
     "label": "Slay the Dire Voidstone",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["voidstone"]
   },
   {
     "id": "miniboss:megagorgon",
     "label": "Slay the Megagorgon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["megagorgon"]
   },
   {
     "id": "miniboss:dire-skull-crusher",
     "label": "Slay the Dire Skull-Crusher",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["skull-crusher"]
   },
   {
     "id": "miniboss:dire-spreader",
     "label": "Slay the Dire Spreader",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["spreader"]
   },
   {
     "id": "miniboss:dire-soul-catcher",
     "label": "Slay the Dire Soul Catcher",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["soul-catcher"]
   },
   {
     "id": "miniboss:dire-bother",
     "label": "Slay the Dire Bother",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["bother"]
   },
   {
     "id": "miniboss:dire-snakestone",
     "label": "Slay the Dire Snakestone",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["snakestone"]
   },
   {
     "id": "miniboss:dire-gigantic-vermin",
     "label": "Slay the Dire Gigantic Vermin",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["gigantic-vermin"]
   },
   {
     "id": "miniboss:dire-satyr-cultist",
     "label": "Slay the Dire Satyr Cultist",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["satyr-cultist"]
   },
   {
     "id": "contractor:renovation-tasks",
     "label": "Renovation tasks ordered from the House Contractor",
     "kind": "number",
     "max": 30,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "codex:sections-revealed",
     "label": "Codex sections revealed",
     "kind": "number",
     "max": 70,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:hydralite",
     "label": "Purchase HydraLite from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:eye-of-lamia",
     "label": "Purchase Eye of Lamia from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:cyclops-jerky",
     "label": "Purchase Cyclops Jerky from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:prometheus-stone",
     "label": "Purchase Prometheus Stone from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:braid-of-atlas",
     "label": "Purchase Braid of Atlas from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:ignited-ichor",
     "label": "Purchase Ignited Ichor from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:yarn-of-ariadne",
     "label": "Purchase Yarn of Ariadne from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:touch-of-styx",
     "label": "Purchase Touch of Styx from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:nail-of-talos",
     "label": "Purchase Nail of Talos from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:eris-bangle",
     "label": "Purchase Eris Bangle from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:nemesis-crest",
     "label": "Purchase Nemesis Crest from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:chimaera-jerky",
     "label": "Purchase Chimaera Jerky from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:stygian-shard",
     "label": "Purchase Stygian Shard from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:aether-net",
     "label": "Purchase Aether Net from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:light-of-ixion",
     "label": "Purchase Light of Ixion from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:trove-tracker",
     "label": "Purchase Trove Tracker from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:skeletal-lure",
     "label": "Purchase Skeletal Lure from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:flame-wheels-release",
     "label": "Purchase Flame Wheels Release from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:life-essence",
     "label": "Purchase Life Essence from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:centaur-soul",
     "label": "Purchase Centaur Soul from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:price-of-midas",
     "label": "Purchase Price of Midas from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:kiss-of-styx",
     "label": "Purchase Kiss of Styx from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:tinge-of-erebus",
     "label": "Purchase Tinge of Erebus from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:gaeas-treasure",
     "label": "Purchase Gaea's Treasure from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:night-spindle",
     "label": "Purchase Night Spindle from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "wellofcharon:fateful-twist",
     "label": "Purchase Fateful Twist from the Well of Charon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "fish:caught",
     "label": "Fish caught",
     "kind": "number",
     "max": 25,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "fish:very-rare-caught",
     "label": "Catch a Very Rare fish",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talk:poseidon-after-fishing",
@@ -1980,738 +2233,857 @@
     "id": "daedalus:stygius:breaching-slash",
     "label": "Take the Breaching Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:cruel-thrust",
     "label": "Take the Cruel Thrust Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:cursed-slash",
     "label": "Take the Cursed Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:dash-nova",
     "label": "Take the Dash Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:double-edge",
     "label": "Take the Double Edge Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:double-nova",
     "label": "Take the Double Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:flurry-slash",
     "label": "Take the Flurry Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:hoarding-slash",
     "label": "Take the Hoarding Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:piercing-wave",
     "label": "Take the Piercing Wave Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:shadow-slash",
     "label": "Take the Shadow Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:super-nova",
     "label": "Take the Super Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:stygius:world-splitter",
     "label": "Take the World Splitter Daedalus enchantment for Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "daedalus:coronacht:twin-shot",
     "label": "Take the Twin Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:sniper-shot",
     "label": "Take the Sniper Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:explosive-shot",
     "label": "Take the Explosive Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:flurry-shot",
     "label": "Take the Flurry Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:piercing-volley",
     "label": "Take the Piercing Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:perfect-shot",
     "label": "Take the Perfect Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:relentless-volley",
     "label": "Take the Relentless Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:triple-shot",
     "label": "Take the Triple Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:charged-volley",
     "label": "Take the Charged Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:chain-shot",
     "label": "Take the Chain Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:point-blank-shot",
     "label": "Take the Point-Blank Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:coronacht:concentrated-volley",
     "label": "Take the Concentrated Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "daedalus:aegis:dread-flight",
     "label": "Take the Dread Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:sudden-rush",
     "label": "Take the Sudden Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:pulverizing-blow",
     "label": "Take the Pulverizing Blow Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:dashing-wallop",
     "label": "Take the Dashing Wallop Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:explosive-return",
     "label": "Take the Explosive Return Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:minotaur-rush",
     "label": "Take the Minotaur Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:breaching-rush",
     "label": "Take the Breaching Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:charged-shot",
     "label": "Take the Charged Shot Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:charged-flight",
     "label": "Take the Charged Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:empowering-flight",
     "label": "Take the Empowering Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:dashing-flight",
     "label": "Take the Dashing Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:aegis:ferocious-guard",
     "label": "Take the Ferocious Guard Daedalus enchantment for Aegis",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "daedalus:varatha:extending-jab",
     "label": "Take the Extending Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:chain-skewer",
     "label": "Take the Chain Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:breaching-skewer",
     "label": "Take the Breaching Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:vicious-skewer",
     "label": "Take the Vicious Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:exploding-launcher",
     "label": "Take the Exploding Launcher Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:massive-spin",
     "label": "Take the Massive Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:quick-spin",
     "label": "Take the Quick Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:flurry-jab",
     "label": "Take the Flurry Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:charged-skewer",
     "label": "Take the Charged Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:serrated-point",
     "label": "Take the Serrated Point Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:flaring-spin",
     "label": "Take the Flaring Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:varatha:triple-jab",
     "label": "Take the Triple Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "daedalus:malphon:breaching-cross",
     "label": "Take the Breaching Cross Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:rolling-knuckle",
     "label": "Take the Rolling Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:long-knuckle",
     "label": "Take the Long Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:draining-cutter",
     "label": "Take the Draining Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:concentrated-knuckle",
     "label": "Take the Concentrated Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:explosive-upper",
     "label": "Take the Explosive Upper Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:flying-cutter",
     "label": "Take the Flying Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:rush-kick",
     "label": "Take the Rush Kick Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:quake-cutter",
     "label": "Take the Quake Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:kinetic-launcher",
     "label": "Take the Kinetic Launcher Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:heavy-knuckle",
     "label": "Take the Heavy Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:malphon:colossus-knuckle",
     "label": "Take the Colossus Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "daedalus:exagryph:flurry-fire",
     "label": "Take the Flurry Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:ricochet-fire",
     "label": "Take the Ricochet Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:spread-fire",
     "label": "Take the Spread Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:explosive-fire",
     "label": "Take the Explosive Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:delta-chamber",
     "label": "Take the Delta Chamber Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:piercing-fire",
     "label": "Take the Piercing Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:triple-bomb",
     "label": "Take the Triple Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:rocket-bomb",
     "label": "Take the Rocket Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:targeting-system",
     "label": "Take the Targeting System Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:hazard-bomb",
     "label": "Take the Hazard Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:cluster-bomb",
     "label": "Take the Cluster Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "daedalus:exagryph:seeking-fire",
     "label": "Take the Seeking Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "aspect:stygius:nemesis",
     "label": "Stygius Aspect of Nemesis level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "aspect:stygius:poseidon",
     "label": "Stygius Aspect of Poseidon level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "aspect:coronacht:zagreus",
     "label": "Coronacht Aspect of Zagreus level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "aspect:coronacht:chiron",
     "label": "Coronacht Aspect of Chiron level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "aspect:coronacht:hera",
     "label": "Coronacht Aspect of Hera level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "aspect:aegis:zagreus",
     "label": "Aegis Aspect of Zagreus level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "aspect:aegis:chaos",
     "label": "Aegis Aspect of Chaos level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "aspect:aegis:zeus",
     "label": "Aegis Aspect of Zeus level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "aspect:varatha:zagreus",
     "label": "Varatha Aspect of Zagreus level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "aspect:varatha:achilles",
     "label": "Varatha Aspect of Achilles level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "aspect:varatha:hades",
     "label": "Varatha Aspect of Hades level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "aspect:malphon:zagreus",
     "label": "Malphon Aspect of Zagreus level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "aspect:malphon:talos",
     "label": "Malphon Aspect of Talos level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "aspect:malphon:demeter",
     "label": "Malphon Aspect of Demeter level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "aspect:exagryph:zagreus",
     "label": "Exagryph Aspect of Zagreus level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "aspect:exagryph:eris",
     "label": "Exagryph Aspect of Eris level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "aspect:exagryph:hestia",
     "label": "Exagryph Aspect of Hestia level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "aspect:stygius:arthur",
     "label": "Stygius Aspect of Arthur level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["stygius"]
   },
   {
     "id": "aspect:varatha:guan-yu",
     "label": "Varatha Aspect of Guan Yu level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["varatha"]
   },
   {
     "id": "aspect:coronacht:rama",
     "label": "Coronacht Aspect of Rama level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["coronacht"]
   },
   {
     "id": "aspect:aegis:beowulf",
     "label": "Aegis Aspect of Beowulf level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aegis"]
   },
   {
     "id": "aspect:malphon:gilgamesh",
     "label": "Malphon Aspect of Gilgamesh level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["malphon"]
   },
   {
     "id": "aspect:exagryph:lucifer",
     "label": "Exagryph Aspect of Lucifer level",
     "kind": "number",
     "max": 5,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["exagryph"]
   },
   {
     "id": "talent:shadow-presence",
     "label": "Escape the Underworld with the Shadow Presence talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:fiery-presence",
     "label": "Escape the Underworld with the Fiery Presence talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:chthonic-vitality",
     "label": "Escape the Underworld with the Chthonic Vitality talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:dark-regeneration",
     "label": "Escape the Underworld with the Dark Regeneration talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:death-defiance",
     "label": "Escape the Underworld with the Death Defiance talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:stubborn-defiance",
     "label": "Escape the Underworld with the Stubborn Defiance talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:greater-reflex",
     "label": "Escape the Underworld with the Greater Reflex talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:ruthless-reflex",
     "label": "Escape the Underworld with the Ruthless Reflex talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:boiling-blood",
     "label": "Escape the Underworld with the Boiling Blood talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:abyssal-blood",
     "label": "Escape the Underworld with the Abyssal Blood talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:infernal-soul",
     "label": "Escape the Underworld with the Infernal Soul talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:stygian-soul",
     "label": "Escape the Underworld with the Stygian Soul talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:deep-pockets",
     "label": "Escape the Underworld with the Deep Pockets talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:golden-touch",
     "label": "Escape the Underworld with the Golden Touch talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:thick-skin",
     "label": "Escape the Underworld with the Thick Skin talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:high-confidence",
     "label": "Escape the Underworld with the High Confidence talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:privileged-status",
     "label": "Escape the Underworld with the Privileged Status talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:family-favorite",
     "label": "Escape the Underworld with the Family Favorite talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:olympian-favor",
     "label": "Escape the Underworld with the Olympian Favor talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:dark-foresight",
     "label": "Escape the Underworld with the Dark Foresight talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:gods-pride",
     "label": "Escape the Underworld with the Gods' Pride talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:gods-legacy",
     "label": "Escape the Underworld with the Gods' Legacy talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:fated-authority",
     "label": "Escape the Underworld with the Fated Authority talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talent:fated-persuasion",
     "label": "Escape the Underworld with the Fated Persuasion talent active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "keepsake:old-spiked-collar",

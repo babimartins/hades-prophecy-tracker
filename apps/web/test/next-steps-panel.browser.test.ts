@@ -5,6 +5,7 @@ import '../src/components/next-steps-panel.js'
 
 const dataset: Dataset = {
   collections: [{ id: 'prophecy', name: 'Prophecies' }],
+  subjects: [],
   facts: [
     { id: 'a:shared', label: 'Shared step', kind: 'boolean', collection: 'prophecy' },
     { id: 'a:one', label: 'Only step one', kind: 'boolean', collection: 'prophecy' },
@@ -69,6 +70,7 @@ describe('next-steps-panel', () => {
   it('lines a number-fact row up with the checkbox rows above it, and keeps its label and badge on one line', async () => {
     const numberDataset: Dataset = {
       collections: [{ id: 'prophecy', name: 'Prophecies' }],
+      subjects: [],
       facts: [
         {
           id: 'a:rank',
@@ -113,6 +115,7 @@ describe('next-steps-panel', () => {
   it('never lets a single interaction reduce a number fact below its current value', async () => {
     const numberDataset: Dataset = {
       collections: [{ id: 'prophecy', name: 'Prophecies' }],
+      subjects: [],
       facts: [{ id: 'a:rank', label: 'Reach rank', kind: 'number', max: 5, collection: 'prophecy' }],
       achievements: [
         {

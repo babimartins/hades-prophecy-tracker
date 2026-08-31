@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import type { Achievement, Dataset } from '../src/index.js'
+import type { Achievement, Dataset, Subject } from '../src/index.js'
 import { validateDataset } from '../src/index.js'
 
 const validDataset: Dataset = {
@@ -14,6 +14,7 @@ const validDataset: Dataset = {
       collection: 'prophecy',
     },
   ],
+  subjects: [{ id: 'dusa', name: 'Dusa', type: 'character' }],
   achievements: [
     {
       id: 'prophecy:example',
@@ -81,5 +82,103 @@ describe('validateDataset', () => {
       requirement: { kind: 'all', of: ['nectar:dusa'] },
     }
     expect(achievement.section).toBeUndefined()
+  })
+})
+
+describe('subjects', () => {
+  it('accepts each of the four types', () => {
+    const types: Subject['type'][] = ['character', 'weapon', 'collectible', 'region']
+    for (const type of types) {
+      const data = structuredClone(validDataset)
+      data.subjects = [{ id: 'stygius', name: 'Stygian Blade', type }]
+      expect(validateDataset(data).subjects[0]?.type).toBe(type)
+    }
+  })
+
+  it('rejects a fifth type', () => {
+    const bad = structuredClone(validDataset)
+    // @ts-expect-error deliberate invalid input
+    bad.subjects = [{ id: 'stygius', name: 'Stygian Blade', type: 'artifact' }]
+    expect(() => validateDataset(bad)).toThrow()
+  })
+
+  it('rejects a subject id with a bad shape', () => {
+    const bad = structuredClone(validDataset)
+    bad.subjects = [{ id: 'Lord Hades', name: 'Lord Hades', type: 'character' }]
+    expect(() => validateDataset(bad)).toThrow()
+  })
+
+  it('carries an optional description and spoiler flag', () => {
+    const data = structuredClone(validDataset)
+    data.subjects = [
+      { id: 'hades', name: 'Lord Hades', type: 'character', description: 'The king.', spoiler: true },
+    ]
+    const parsed = validateDataset(data)
+    expect(parsed.subjects[0]?.description).toBe('The king.')
+    expect(parsed.subjects[0]?.spoiler).toBe(true)
+  })
+
+  it('defaults subjects to empty for a dataset written before the axis existed', () => {
+    const withoutSubjects: Record<string, unknown> = structuredClone(validDataset)
+    delete withoutSubjects.subjects
+    expect(validateDataset(withoutSubjects).subjects).toEqual([])
+  })
+})
+
+describe('the optional fields the subject axis adds', () => {
+  it('accepts a fact tagged with two subjects', () => {
+    const data = structuredClone(validDataset)
+    data.facts[0]!.subjects = ['athena', 'demeter']
+    expect(validateDataset(data).facts[0]?.subjects).toEqual(['athena', 'demeter'])
+  })
+
+  it('tells an empty subject list apart from an absent key', () => {
+    // The real dataset omits the key entirely; it never sets it to undefined.
+    // Deleting it is the only way to test the shape the data actually has, and
+    // a stray `.default([])` on the fact schema would turn the absent key into
+    // an empty array and fail here.
+    const data: { facts: Record<string, unknown>[] } & Record<string, unknown> =
+      structuredClone(validDataset)
+    data.facts[0]!.subjects = []
+    delete data.facts[1]!.subjects
+    const parsed = validateDataset(data)
+    expect(parsed.facts).toHaveLength(2)
+    expect(parsed.facts[0]!.subjects).toEqual([])
+    expect('subjects' in parsed.facts[1]!).toBe(false)
+  })
+
+  it('rejects a subject id with a bad shape inside a fact', () => {
+    const bad = structuredClone(validDataset)
+    bad.facts[0]!.subjects = ['Lord Hades']
+    expect(() => validateDataset(bad)).toThrow()
+  })
+
+  it('carries a description and a spoiler flag on a fact', () => {
+    const data = structuredClone(validDataset)
+    data.facts[0]!.description = 'Foes deal more damage.'
+    data.facts[0]!.spoiler = false
+    const parsed = validateDataset(data)
+    expect(parsed.facts[0]?.description).toBe('Foes deal more damage.')
+    expect(parsed.facts[0]?.spoiler).toBe(false)
+  })
+
+  it('carries a spoiler flag on an achievement', () => {
+    const data = structuredClone(validDataset)
+    data.achievements[0]!.spoiler = true
+    expect(validateDataset(data).achievements[0]?.spoiler).toBe(true)
+  })
+
+  it('carries a description on a collection', () => {
+    const data = structuredClone(validDataset)
+    data.collections[0]!.description = 'The in-game list of minor prophecies.'
+    expect(validateDataset(data).collections[0]?.description).toBe(
+      'The in-game list of minor prophecies.',
+    )
+  })
+
+  it('rejects an empty description rather than storing a blank one', () => {
+    const bad = structuredClone(validDataset)
+    bad.facts[0]!.description = ''
+    expect(() => validateDataset(bad)).toThrow()
   })
 })

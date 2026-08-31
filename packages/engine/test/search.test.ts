@@ -4,6 +4,7 @@ import { searchAchievements } from '../src/index.js'
 
 const dataset: Dataset = {
   collections: [{ id: 'prophecy', name: 'Prophecies' }],
+  subjects: [],
   facts: [
     { id: 'nectar:dusa', label: 'Give Nectar to Dusa', kind: 'boolean', collection: 'prophecy' },
     { id: 'a:other', label: 'Other step', kind: 'boolean', collection: 'prophecy' },
