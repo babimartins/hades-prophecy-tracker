@@ -35,6 +35,11 @@ export class HadesDashboard extends LitElement {
     .error {
       color: ${colorVar('--hd-color-accent')};
     }
+    .entries-complete {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.8rem;
+      margin: 6px 0 0;
+    }
     .grid {
       display: grid;
       gap: 16px;
@@ -156,6 +161,13 @@ export class HadesDashboard extends LitElement {
   override render() {
     const facts = this.#controller.state.facts
     const overall = overallProgress(dataset, facts)
+    // `overall.done` counts completed entries: ticking one sub-item of a
+    // multi-sub-item entry moves it by nothing, so the bar barely crawls
+    // across 545 entries even on a productive session. `overallProgress`
+    // itself is untouched — this is what the interface chooses to show as
+    // Overall, counting every recorded fact instead, so every tick moves
+    // it. The entries-complete count stays visible as text underneath.
+    const factsRecorded = Object.keys(facts).length
 
     return html`
       <h1>Hades Prophecy Tracker</h1>
@@ -164,10 +176,11 @@ export class HadesDashboard extends LitElement {
         <hd-card>
           <span slot="header">Overall</span>
           <hd-progress
-            .value=${overall.done}
-            .max=${overall.total}
-            label="Overall progress"
+            .value=${factsRecorded}
+            .max=${dataset.facts.length}
+            label="Actions recorded"
           ></hd-progress>
+          <p class="entries-complete">${overall.done} / ${overall.total} entries complete</p>
         </hd-card>
         <hd-card>
           <span slot="header">Next steps</span>

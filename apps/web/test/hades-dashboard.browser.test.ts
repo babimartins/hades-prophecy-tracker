@@ -1,3 +1,4 @@
+import { dataset } from '@hades/data'
 import { page } from '@vitest/browser/context'
 import { html, render } from 'lit'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
@@ -279,6 +280,48 @@ describe('hades-dashboard scrolls the active view into place', () => {
     } finally {
       Element.prototype.scrollIntoView = original
     }
+  })
+})
+
+describe('hades-dashboard Overall feedback', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * `overallProgress().done` counts completed entries: ticking one sub-item
+   * of a multi-sub-item entry moves nothing, and the count crawls across
+   * 545 entries even on a productive session. Overall now tracks recorded
+   * facts instead — every tick moves it — while the entries-complete count
+   * stays visible as text underneath. `overallProgress` itself is untouched:
+   * this only changes what the interface chooses to show as Overall.
+   */
+  it('moves when a fact is recorded, even though no entry has completed yet', async () => {
+    const element = mount({
+      load: async () => ({ 'nectar:test-one': true, 'nectar:test-two': true }),
+      save: async () => undefined,
+    })
+    await element.updateComplete
+    await element.updateComplete
+
+    const overallProgressEl = element.shadowRoot!.querySelector('.top-row hd-progress')!
+    expect((overallProgressEl as unknown as { value: number }).value).toBe(2)
+    expect((overallProgressEl as unknown as { max: number }).max).toBe(dataset.facts.length)
+
+    // Neither fake fact id belongs to any real achievement, so the
+    // entries-complete count stays at zero even though Overall moved.
+    const entriesComplete = element.shadowRoot!.querySelector('.entries-complete')!
+    expect(entriesComplete.textContent).toContain(`0 / ${dataset.achievements.length}`)
+  })
+
+  it('shows zero recorded facts before the player has done anything', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const overallProgressEl = element.shadowRoot!.querySelector('.top-row hd-progress')!
+    expect((overallProgressEl as unknown as { value: number }).value).toBe(0)
+    expect((overallProgressEl as unknown as { max: number }).max).toBe(dataset.facts.length)
   })
 })
 
