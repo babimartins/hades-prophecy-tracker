@@ -126,6 +126,46 @@ describe('hades-dashboard top row', () => {
   })
 })
 
+describe('hades-dashboard does not scroll sideways on a narrow phone', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * Reproduces the reviewer's exact measurement: at innerWidth 453, the
+   * unfixed page had scrollWidth 625 — a nowrap label inside hd-checklist-item
+   * (no min-width: 0 on an inline :host) set a large min-content width that
+   * pushed the next-steps card, and with it the whole `repeat(auto-fit,
+   * minmax(260px, 1fr))` track, past the viewport. WCAG 1.4.10 Reflow.
+   */
+  it('keeps document scrollWidth at or below innerWidth at 453px, list view and detail view', async () => {
+    await page.viewport(453, 900)
+    try {
+      const element = mount({ load: async () => ({}), save: async () => undefined })
+      await element.updateComplete
+      await element.updateComplete
+
+      expect(document.documentElement.scrollWidth).toBeLessThanOrEqual(window.innerWidth)
+
+      const list = element.shadowRoot!.querySelector('achievement-list')!
+      const firstId = list.achievements[0]!.id
+      list.dispatchEvent(
+        new CustomEvent('achievement-open', {
+          detail: { id: firstId },
+          bubbles: true,
+          composed: true,
+        }),
+      )
+      await element.updateComplete
+      await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+
+      expect(document.documentElement.scrollWidth).toBeLessThanOrEqual(window.innerWidth)
+    } finally {
+      await page.viewport(414, 896)
+    }
+  })
+})
+
 describe('hades-dashboard collection filter', () => {
   beforeEach(() => {
     render(html``, document.body)

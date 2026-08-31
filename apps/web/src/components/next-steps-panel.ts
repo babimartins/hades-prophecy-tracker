@@ -27,12 +27,17 @@ export class NextStepsPanel extends LitElement {
       flex-shrink: 0;
       width: 18px;
     }
+    /*
+     * Wraps normally. An earlier version truncated this to one line with
+     * an ellipsis via white-space: nowrap; combined with hd-checklist-item
+     * having no min-width: 0 of its own further up the tree, that forced a
+     * wide min-content box the surrounding CSS grid track expanded to fit,
+     * scrolling the whole page sideways on a phone. min-width: 0 here is
+     * what lets this flex child shrink and wrap instead of pushing wider.
+     */
     .rank .label {
       flex: 1 1 auto;
       min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
     .rank .control {
       align-items: center;
@@ -84,7 +89,7 @@ export class NextStepsPanel extends LitElement {
     return html`
       <div class="rank">
         <span class="spacer" aria-hidden="true"></span>
-        <label class="label" for=${`next-${fact.id}`}>${fact.label}</label>
+        <label class="label" for=${`next-${fact.id}`} title=${fact.label}>${fact.label}</label>
         <span class="control">
           <input
             id=${`next-${fact.id}`}

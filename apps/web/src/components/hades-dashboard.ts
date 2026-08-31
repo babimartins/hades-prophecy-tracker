@@ -64,6 +64,18 @@ export class HadesDashboard extends LitElement {
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       margin-bottom: 24px;
     }
+    /*
+     * A grid item's automatic minimum size defaults to its content's
+     * min-content width, which a minmax(260px, 1fr) track's explicit
+     * 260px minimum does not override on its own -- an unbreakable run of
+     * text anywhere in an hd-card's subtree could still force every card in
+     * its column wider than 260px, and every card sharing that column
+     * along with it. min-width: 0 is what actually lets a card shrink to
+     * the track's own size.
+     */
+    .grid > * {
+      min-width: 0;
+    }
     /**
      * Overall and Backup are short (roughly 105px each); Next steps is
      * tall. Three equal grid columns stretched every card to the tallest

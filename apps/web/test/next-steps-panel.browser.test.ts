@@ -103,8 +103,10 @@ describe('next-steps-panel', () => {
     // Same width as the checkbox in hd-checklist-item, so the label column
     // of a number row lines up with the label column of a checkbox row.
     expect(getComputedStyle(spacer).width).toBe('18px')
-    expect(getComputedStyle(label).whiteSpace).toBe('nowrap')
-    expect(getComputedStyle(label).textOverflow).toBe('ellipsis')
+    // Wraps rather than truncates: a version that set white-space: nowrap
+    // here, with no min-width: 0 on the surrounding grid track, was what
+    // scrolled the whole page sideways on a phone.
+    expect(getComputedStyle(label).whiteSpace).not.toBe('nowrap')
     expect(getComputedStyle(badge).whiteSpace).toBe('nowrap')
   })
 
