@@ -269,7 +269,7 @@ describe('fact descriptions', () => {
       daedalus: 72,
       encounter: 37,
       keepsake: 25,
-      wellofcharon: 25,
+      wellofcharon: 26,
       aspect: 24,
       talent: 24,
       catch: 18,
@@ -280,7 +280,7 @@ describe('fact descriptions', () => {
       miniboss: 12,
       perk: 11,
     })
-    expect(described).toHaveLength(452)
+    expect(described).toHaveLength(453)
   })
 
   it('never stores a blank or whitespace-only description', () => {

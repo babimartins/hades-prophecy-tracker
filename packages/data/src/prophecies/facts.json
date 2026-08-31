@@ -2349,7 +2349,8 @@
     "label": "Purchase Touch of Styx from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Your Stubborn Defiance restores +10% Heart."
   },
   {
     "id": "wellofcharon:nail-of-talos",
@@ -2461,7 +2462,7 @@
     "kind": "boolean",
     "collection": "prophecy",
     "subjects": [],
-    "description": "Your Stubborn Defiance restores +10% Heart."
+    "description": "Replenish 1 use of Death Defiance."
   },
   {
     "id": "wellofcharon:tinge-of-erebus",
