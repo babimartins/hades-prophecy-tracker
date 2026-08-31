@@ -15,13 +15,27 @@ export class HdChecklistItem extends LitElement {
       }
       input {
         accent-color: ${colorVar('--hd-color-accent')};
+        flex-shrink: 0;
         height: 18px;
         width: 18px;
       }
+      /**
+       * A long label truncates instead of wrapping to two or three lines.
+       * min-width: 0 is what lets a flex child shrink below its content
+       * size at all; without it overflow/text-overflow have nothing to do.
+       */
+      .label {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
       .badge {
         color: ${colorVar('--hd-color-muted')};
+        flex-shrink: 0;
         font-size: 0.75rem;
         margin-left: auto;
+        white-space: nowrap;
       }
     `,
   ]
@@ -48,7 +62,7 @@ export class HdChecklistItem extends LitElement {
     return html`
       <label>
         <input type="checkbox" .checked=${this.checked} @change=${this.onChange} />
-        <span>${this.label}</span>
+        <span class="label">${this.label}</span>
         ${this.badge ? html`<span class="badge">${this.badge}</span>` : null}
       </label>
     `

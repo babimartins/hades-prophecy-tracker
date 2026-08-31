@@ -17,13 +17,39 @@ export class NextStepsPanel extends LitElement {
       gap: 8px;
       padding: 6px 0;
     }
+    /**
+     * A number row has no checkbox, so without this spacer its label starts
+     * 26px to the left of a checkbox row's label (18px box + 8px gap),
+     * misaligning the two. The spacer matches hd-checklist-item's checkbox
+     * exactly, so the label columns of every row line up.
+     */
+    .rank .spacer {
+      flex-shrink: 0;
+      width: 18px;
+    }
+    .rank .label {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .rank .control {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      gap: 4px;
+      white-space: nowrap;
+    }
     input[type='number'] {
       width: 4rem;
     }
     .badge {
       color: ${colorVar('--hd-color-muted')};
+      flex-shrink: 0;
       font-size: 0.75rem;
       margin-left: auto;
+      white-space: nowrap;
     }
   `
 
@@ -57,19 +83,22 @@ export class NextStepsPanel extends LitElement {
     const max = fact.max ?? numericValue(fact.id, this.facts)
     return html`
       <div class="rank">
-        <label for=${`next-${fact.id}`}>${fact.label}</label>
-        <input
-          id=${`next-${fact.id}`}
-          type="number"
-          min="0"
-          max=${max}
-          .value=${String(numericValue(fact.id, this.facts))}
-          @change=${(event: Event) => {
-            const raw = Number((event.target as HTMLInputElement).value)
-            this.emit(fact.id, Math.min(Math.max(raw, 0), max))
-          }}
-        />
-        <span>/ ${max}</span>
+        <span class="spacer" aria-hidden="true"></span>
+        <label class="label" for=${`next-${fact.id}`}>${fact.label}</label>
+        <span class="control">
+          <input
+            id=${`next-${fact.id}`}
+            type="number"
+            min="0"
+            max=${max}
+            .value=${String(numericValue(fact.id, this.facts))}
+            @change=${(event: Event) => {
+              const raw = Number((event.target as HTMLInputElement).value)
+              this.emit(fact.id, Math.min(Math.max(raw, 0), max))
+            }}
+          />
+          <span>/ ${max}</span>
+        </span>
         <span class="badge">${this.badgeFor(fact.id)}</span>
       </div>
     `
