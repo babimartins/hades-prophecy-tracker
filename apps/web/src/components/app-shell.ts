@@ -22,6 +22,17 @@ interface Section {
   label: string
 }
 
+/**
+ * How many characters the default view shows, and how many exist.
+ *
+ * Computed once. `buildRows({})` walks 73 characters and calls `subjectFacts`,
+ * `subjectProgress` and `subjectCapabilities` on each, every one a filter over
+ * 692 facts — about 25ms, measured, to produce a number that cannot change at
+ * runtime. Doing it inside `render` paid that on every shell update.
+ */
+const SHOWN_CHARACTERS = buildRows({}).filter((row) => !isFoe(row)).length
+const TOTAL_CHARACTERS = subjectsOfType(dataset, 'character').length
+
 /** The order the owner approved. Collections is last on purpose. */
 export const SECTIONS: readonly Section[] = [
   { id: 'characters', label: 'Characters' },
@@ -247,13 +258,8 @@ export class AppShell extends LitElement {
     const facts = (namespace: string): number =>
       dataset.facts.filter((fact) => fact.id.startsWith(`${namespace}:`)).length
     switch (section) {
-      case 'characters': {
-        // The default view hides the bare foes, so the heading counts what the
-        // table shows. A heading that said 73 above 34 rows contradicts them.
-        const shown = buildRows({}).filter((row) => !isFoe(row)).length
-        const total = subjectsOfType(dataset, 'character').length
-        return `${shown} of ${total} characters · ${facts('nectar')} with affinity`
-      }
+      case 'characters':
+        return `${SHOWN_CHARACTERS} of ${TOTAL_CHARACTERS} characters · ${facts('nectar')} with affinity`
       case 'weapons':
         return `${subjectsOfType(dataset, 'weapon').length} weapons · ${facts('aspect')} aspects · ${facts('daedalus')} enchantments`
       case 'fated': {

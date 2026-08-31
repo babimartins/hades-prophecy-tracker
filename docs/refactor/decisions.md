@@ -392,3 +392,30 @@ button in the name cell is the only focus stop in a row.
 made every row two stops — 68 in the Characters table — and one of them was a
 focusable element with no role and no accessible name, which announces nothing
 when it receives focus.
+
+## 30. `requirement-tree` is deleted, not kept
+
+**Chosen:** delete the component and its 13 tests.
+
+**Alternative:** keep it. Decision 20 said it "carried over unchanged".
+
+**Why:** it carried over into nothing — no file in `src/` imported it, so it
+shipped in the bundle unreachable while its tests went on passing. Dead code
+with a green test suite is worse than no code: it reads as covered.
+
+Its one irreplaceable part, the bounded rank stepper, now lives in `fact-row`
+with the comment explaining why the control dispatches on the fact's own
+`kind`. Its other part, rendering a nested `all`/`any`/`count` tree, is not
+what the approved design asks for: a prophecy pane is a flat list of actions
+with one line stating a `count` node's rule, which is what the preview shows.
+
+## 31. A section summary is computed once, not per render
+
+**Chosen:** hoist the character counts to module scope.
+
+**Why:** `buildRows({})` walks 73 characters, calling `subjectFacts`,
+`subjectProgress` and `subjectCapabilities` on each — every one a filter over
+692 facts — and `isFoe` calls `subjectCapabilities` again per row. Measured at
+25ms per shell render on the Characters tab, against 0.2ms on The House, to
+produce the number 34. It is called with an empty fact map, so the answer is a
+dataset constant.
