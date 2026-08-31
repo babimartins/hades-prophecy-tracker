@@ -3,6 +3,7 @@ import { subjectFacts, subjectsOfType, type FactMap } from '@hades/engine'
 import type { Fact, Subject } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, type TemplateResult } from 'lit'
+import { displayId } from '../lib/subject-labels.js'
 
 export interface WeaponRow {
   subject: Subject
@@ -147,6 +148,27 @@ export class WeaponTable extends LitElement {
       background: ${colorVar('--hd-color-accent')};
     }
 
+    .cellnum {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+    }
+
+    .bar {
+      background: ${colorVar('--hd-color-surface')};
+      border-radius: 3px;
+      height: 5px;
+      overflow: hidden;
+      width: 70px;
+    }
+
+    .bar i {
+      background: ${colorVar('--hd-color-accent')};
+      border-radius: 3px;
+      display: block;
+      height: 100%;
+    }
+
     .count {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.72rem;
@@ -263,8 +285,20 @@ export class WeaponTable extends LitElement {
               const levels = row.aspects.reduce((total, aspect) => total + aspect.level, 0)
               const ceiling = row.aspects.reduce((total, aspect) => total + aspect.max, 0)
               return html`
-                <tr data-weapon=${row.subject.id} @click=${() => this.#open(row)}>
-                  <td class="name">${row.subject.id}<small>${row.display}</small></td>
+                <tr
+                  data-weapon=${row.subject.id}
+                  tabindex="0"
+                  role="link"
+                  aria-label=${`Open ${row.display}`}
+                  @click=${() => this.#open(row)}
+                  @keydown=${(event: KeyboardEvent) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault()
+                      this.#open(row)
+                    }
+                  }}
+                >
+                  <td class="name">${displayId(row.subject)}<small>${row.display}</small></td>
                   <td>${this.#tick(row.unlocked, `${row.display} unlocked`)}</td>
                   <td>${this.#tick(row.escaped, `Escaped with ${row.display}`)}</td>
                   <td>
@@ -285,7 +319,20 @@ export class WeaponTable extends LitElement {
                       )}
                     </span>
                   </td>
-                  <td class="count">${row.daedalus.done}/${row.daedalus.total}</td>
+                  <td>
+                    <span class="cellnum">
+                      <span class="count">${row.daedalus.done}/${row.daedalus.total}</span>
+                      <span class="bar"
+                        ><i
+                          style=${`width:${
+                            row.daedalus.total === 0
+                              ? 0
+                              : Math.round((row.daedalus.done / row.daedalus.total) * 100)
+                          }%`}
+                        ></i
+                      ></span>
+                    </span>
+                  </td>
                   <td class="count">${levels}/${ceiling}</td>
                 </tr>
               `

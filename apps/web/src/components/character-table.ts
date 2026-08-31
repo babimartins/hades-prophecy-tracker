@@ -9,6 +9,7 @@ import {
 import type { Subject } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
+import { markersFor, sectionOf } from '../lib/subject-labels.js'
 
 export type SortKey = 'name' | 'hearts' | 'keepsake' | 'boons' | 'favor'
 
@@ -22,52 +23,18 @@ export interface CharacterRow {
   markers: string[]
 }
 
-/** A marker earns its place only if it varies. Codex, Affinity and Keepsake do not. */
-const MARKER_LABEL: Readonly<Record<string, string>> = {
-  olympian: 'Olympian',
-  grants: 'Grants boons',
-  fightable: 'Fightable',
-  favor: 'Favor',
-  companion: 'Companion',
-}
-
-const OLYMPIANS = new Set([
-  'zeus',
-  'poseidon',
-  'athena',
-  'aphrodite',
-  'ares',
-  'artemis',
-  'dionysus',
-  'demeter',
-  'hermes',
-])
-
 export function buildRows(facts: FactMap): CharacterRow[] {
-  const sections = new Map(
-    dataset.achievements
-      .filter((achievement) => achievement.collection === 'codex')
-      .map((achievement) => [achievement.name, achievement.section ?? '']),
-  )
-
   return subjectsOfType(dataset, 'character').map((subject) => {
     const owned = subjectFacts(dataset, subject.id)
     const progress = subjectProgress(dataset, subject.id, facts)
-    const capabilities = subjectCapabilities(dataset, subject.id)
 
     const affinity = owned.find((fact) => fact.id.startsWith('nectar:'))
     const keepsake = owned.find((fact) => fact.id.startsWith('keepsake:'))
 
-    const markers: string[] = []
-    if (OLYMPIANS.has(subject.id)) markers.push('olympian')
-    else if (capabilities.includes('boons')) markers.push('grants')
-    if (capabilities.includes('combat')) markers.push('fightable')
-    if (capabilities.includes('quest')) markers.push('favor')
-    if (capabilities.includes('companion')) markers.push('companion')
 
     return {
       subject,
-      section: sections.get(subject.name) ?? '',
+      section: sectionOf(subject),
       hearts: affinity
         ? { done: numeric(facts[affinity.id]), max: affinity.max ?? 1 }
         : null,
@@ -78,7 +45,7 @@ export function buildRows(facts: FactMap): CharacterRow[] {
       favor: progress.byCapability.quest
         ? { done: progress.byCapability.quest.done, total: progress.byCapability.quest.total }
         : null,
-      markers,
+      markers: markersFor(subject.id),
     }
   })
 }
@@ -103,11 +70,18 @@ export function isFoe(row: CharacterRow): boolean {
 
 const FILTERS: readonly { id: FilterId; label: string; match: (row: CharacterRow) => boolean }[] = [
   { id: 'all', label: 'All', match: (row) => !isFoe(row) },
-  { id: 'olympian', label: 'Olympians', match: (row) => row.markers.includes('olympian') },
+  { id: 'olympian', label: 'Olympians', match: (row) => row.markers.includes('Olympian') },
   { id: 'affinity', label: 'With affinity', match: (row) => row.hearts !== null },
-  { id: 'fightable', label: 'Fightable', match: (row) => row.markers.includes('fightable') },
-  { id: 'favor', label: 'With a favor', match: (row) => row.markers.includes('favor') },
-  { id: 'companion', label: 'Companion', match: (row) => row.markers.includes('companion') },
+  { id: 'fightable', label: 'Fightable', match: (row) => row.markers.includes('Fightable') },
+  { id: 'favor', label: 'With a favor', match: (row) => row.markers.includes('Favor') },
+  {
+    id: 'companion',
+    // The characters who give one, not the companions themselves. `companion`
+    // means two opposite things and the chip has to pick one; a player asking
+    // "who still owes me a companion" is asking about the givers.
+    label: 'Gives a companion',
+    match: (row) => row.markers.includes('Gives a companion'),
+  },
   { id: 'foes', label: 'Foes', match: (row) => isFoe(row) },
 ]
 
@@ -228,6 +202,27 @@ export class CharacterTable extends LitElement {
       margin-left: 6px;
     }
 
+    .cellnum {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+    }
+
+    .bar {
+      background: ${colorVar('--hd-color-surface')};
+      border-radius: 3px;
+      height: 5px;
+      overflow: hidden;
+      width: 70px;
+    }
+
+    .bar i {
+      background: ${colorVar('--hd-color-accent')};
+      border-radius: 3px;
+      display: block;
+      height: 100%;
+    }
+
     .tag {
       border: 1px solid ${colorVar('--hd-color-muted')};
       border-radius: 20px;
@@ -255,11 +250,29 @@ export class CharacterTable extends LitElement {
   ascending = true
   filter: FilterId = 'all'
 
+  /**
+   * A filter narrows the default population, it does not replace it. Counting
+   * "Fightable" across all 73 gave 42 while "All" showed 34, and clicking it
+   * surfaced the bare foes the default view deliberately hides.
+   */
+  #visible(filter: FilterId, rows: CharacterRow[]): CharacterRow[] {
+    const entry = FILTERS.find((candidate) => candidate.id === filter)
+    if (!entry) return rows
+    if (filter === 'foes' || filter === 'all') return rows.filter(entry.match)
+    return rows.filter((row) => !isFoe(row) && entry.match(row))
+  }
+
   get rows(): CharacterRow[] {
-    const match = FILTERS.find((entry) => entry.id === this.filter)?.match ?? (() => true)
-    const rows = buildRows(this.facts).filter(match)
+    const rows = this.#visible(this.filter, buildRows(this.facts))
     const direction = this.ascending ? 1 : -1
-    return rows.sort((a, b) => direction * (rank(a, this.sort) - rank(b, this.sort)) || a.subject.name.localeCompare(b.subject.name))
+    return rows.sort((a, b) => {
+      if (this.sort === 'name') return direction * a.subject.name.localeCompare(b.subject.name)
+      const key = this.sort
+      return (
+        direction * (rank(a, key) - rank(b, key)) ||
+        a.subject.name.localeCompare(b.subject.name)
+      )
+    })
   }
 
   #sortBy(key: SortKey): void {
@@ -297,7 +310,13 @@ export class CharacterTable extends LitElement {
 
   #ratio(value: { done: number; total: number } | null): TemplateResult {
     if (!value) return html`<span class="empty">—</span>`
-    return html`<span class="count">${value.done}/${value.total}</span>`
+    const percent = value.total === 0 ? 0 : Math.round((value.done / value.total) * 100)
+    return html`
+      <span class="cellnum">
+        <span class="count">${value.done}/${value.total}</span>
+        <span class="bar"><i style=${`width:${percent}%`}></i></span>
+      </span>
+    `
   }
 
   override render(): TemplateResult {
@@ -315,7 +334,7 @@ export class CharacterTable extends LitElement {
                 this.filter = entry.id
               }}
             >
-              ${entry.label} · ${all.filter(entry.match).length}
+              ${entry.label} · ${this.#visible(entry.id, all).length}
             </button>
           `,
         )}
@@ -334,7 +353,19 @@ export class CharacterTable extends LitElement {
           <tbody>
             ${rows.map(
               (row) => html`
-                <tr data-subject=${row.subject.id} @click=${() => this.#open(row)}>
+                <tr
+                  data-subject=${row.subject.id}
+                  tabindex="0"
+                  role="link"
+                  aria-label=${`Open ${row.subject.name}`}
+                  @click=${() => this.#open(row)}
+                  @keydown=${(event: KeyboardEvent) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault()
+                      this.#open(row)
+                    }
+                  }}
+                >
                   <td class="name">${row.subject.name}<small>${row.section}</small></td>
                   <td>${this.#pips(row.hearts)}</td>
                   <td>${this.#pips(row.keepsake)}</td>
@@ -342,7 +373,7 @@ export class CharacterTable extends LitElement {
                   <td>${this.#ratio(row.favor)}</td>
                   <td>
                     ${row.markers.length
-                      ? row.markers.map((marker) => html`<span class="tag">${MARKER_LABEL[marker]}</span>`)
+                      ? row.markers.map((marker) => html`<span class="tag">${marker}</span>`)
                       : html`<span class="empty">—</span>`}
                   </td>
                 </tr>
@@ -356,10 +387,8 @@ export class CharacterTable extends LitElement {
   }
 }
 
-function rank(row: CharacterRow, key: SortKey): number {
+function rank(row: CharacterRow, key: Exclude<SortKey, 'name'>): number {
   switch (key) {
-    case 'name':
-      return 0
     case 'hearts':
       return row.hearts ? row.hearts.done : -1
     case 'keepsake':

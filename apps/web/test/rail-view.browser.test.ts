@@ -70,10 +70,12 @@ describe('the rail', () => {
     expect(root().querySelector('.pane')?.getAttribute('role')).toBe('tabpanel')
   })
 
-  it('scrolls the rail and the pane independently, and neither grows the page', () => {
+  it('scrolls the rail and the pane independently', () => {
+    // The page-scroll assertion that used to sit here could not fail: three
+    // items in a bare body never overflow. The frozen page is covered where
+    // the grid actually lives, in shell.browser.test.ts.
     expect(getComputedStyle(root().querySelector('.rail')!).overflowY).toBe('auto')
     expect(getComputedStyle(root().querySelector('.pane')!).overflowY).toBe('auto')
-    expect(document.documentElement.scrollHeight - document.documentElement.clientHeight).toBe(0)
   })
 
   it('renders whatever the parent slots into the pane', () => {

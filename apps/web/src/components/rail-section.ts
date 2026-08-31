@@ -3,6 +3,8 @@ import { achievementProgress, collectFactIds, type FactMap } from '@hades/engine
 import type { Achievement, Fact } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
+import { factState } from './fact-row.js'
+import './fact-row.js'
 import type { RailItem } from './rail-view.js'
 import './rail-view.js'
 
@@ -15,6 +17,8 @@ interface Group {
   about?: string | undefined
   /** How the tracker counts it, when the game is familiar but our rule is not. */
   rule?: string | undefined
+  /** The entry's own text, which the game itself prints. */
+  prose?: string | undefined
   facts: Fact[]
   achievements: Achievement[]
 }
@@ -55,6 +59,7 @@ function groupsFor(section: RailSectionId): Group[] {
       .map((achievement) => ({
         id: achievement.id,
         label: achievement.name,
+        prose: achievement.description,
         facts: factsOf(achievement),
         achievements: [achievement],
       }))
@@ -62,12 +67,13 @@ function groupsFor(section: RailSectionId): Group[] {
 
   if (section === 'house') {
     return [
-      house('mirror', 'Mirror of Night', ['talent'], 'Both sides of a pair count separately.'),
+      { id: 'mirror', label: 'Mirror of Night', facts: factsIn(['talent']), achievements: [],
+        rule: 'Both sides of a pair count separately.' },
       house('pact', 'Pact of Punishment', ['pact'], 'A single point in a Condition ticks it off.'),
       house('contractor', 'House Contractor', ['workorder', 'lounge', 'contractor'],
         'A shop, not a subject: eleven of its twelve facts belong to a character.'),
-      house('well-of-charon', 'Well of Charon', ['wellofcharon'],
-        'Ticked the first time you buy each ware.'),
+      { id: 'well-of-charon', label: 'Well of Charon', facts: factsIn(['wellofcharon']),
+        achievements: [], rule: 'Ticked the first time you buy each ware.' },
       house('perk', 'Wretched Broker', ['perk']),
       {
         id: 'achievement',
@@ -114,7 +120,46 @@ export class RailSection extends LitElement {
     h2 {
       font-family: var(--hd-font-display, serif);
       font-size: 1.25rem;
-      margin: 0 0 12px;
+      margin: 0;
+    }
+
+    .panehead {
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .prose {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.82rem;
+      margin: 4px 0 0;
+      max-width: 62ch;
+    }
+
+    .counting {
+      font-size: 0.82rem;
+      margin: 6px 0 0;
+    }
+
+    .pnum {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .pnum b {
+      color: ${colorVar('--hd-color-accent')};
+      font-family: var(--hd-font-display, serif);
+      font-size: 1.2rem;
+    }
+
+    .pnum span {
+      color: ${colorVar('--hd-color-muted')};
+      display: block;
+      font-size: 0.62rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
     }
 
     .about {
@@ -199,28 +244,7 @@ export class RailSection extends LitElement {
   }
 
   #isDone(fact: Fact): boolean {
-    const value = this.facts[fact.id]
-    if (fact.kind === 'number' && fact.max !== undefined) {
-      return typeof value === 'number' && value >= fact.max
-    }
-    return value === true || (typeof value === 'number' && value > 0)
-  }
-
-  #toggle(fact: Fact): void {
-    const current = this.facts[fact.id]
-    const next =
-      fact.kind === 'number' && fact.max !== undefined
-        ? typeof current === 'number' && current >= fact.max
-          ? 0
-          : fact.max
-        : current !== true
-    this.dispatchEvent(
-      new CustomEvent('set-fact', {
-        detail: { id: fact.id, value: next },
-        bubbles: true,
-        composed: true,
-      }),
-    )
+    return factState(fact, this.facts) === 'done'
   }
 
   #items(): RailItem[] {
@@ -259,8 +283,28 @@ export class RailSection extends LitElement {
 
   #pane(group: Group): TemplateResult {
     const single = group.facts.length === 1
+    const achievement = group.achievements[0]
+    const rollup = achievement ? achievementProgress(achievement, this.facts) : null
+    // A `count` node means any N of the children satisfy it. Flattening the
+    // tree loses that, so the rail says 6 while the pane lists 9 things to do.
+    const requirement = achievement?.requirement
+    const counting =
+      requirement && typeof requirement !== 'string' && requirement.kind === 'count'
+        ? `Any ${requirement.n} of these ${requirement.of.length} satisfy it.`
+        : requirement && typeof requirement !== 'string' && requirement.kind === 'any'
+          ? 'Any one of these satisfies it.'
+          : ''
     return html`
-      <h2>${group.label}</h2>
+      <div class="panehead">
+        <div>
+          <h2>${group.label}</h2>
+          ${group.prose ? html`<p class="prose">${group.prose}</p>` : nothing}
+          ${counting ? html`<p class="counting">${counting}</p>` : nothing}
+        </div>
+        ${rollup
+          ? html`<div class="pnum"><b>${rollup.done}/${rollup.total}</b><span>done</span></div>`
+          : nothing}
+      </div>
       ${group.about
         ? html`<div class="about"><h3>What this is</h3><p>${group.about}</p></div>`
         : nothing}
@@ -274,17 +318,8 @@ export class RailSection extends LitElement {
             <ul>
               ${group.facts.map(
                 (fact) => html`
-                  <li data-fact=${fact.id}>
-                    <hd-checklist-item
-                      .checked=${this.#isDone(fact)}
-                      .label=${fact.spoiler === true
-                        ? 'Hidden: this step names a story outcome'
-                        : fact.label}
-                      @toggle=${() => this.#toggle(fact)}
-                    ></hd-checklist-item>
-                    ${fact.description
-                      ? html`<span class="desc">${fact.description}</span>`
-                      : nothing}
+                  <li data-fact=${fact.id} class=${factState(fact, this.facts)}>
+                    <fact-row .fact=${fact} .facts=${this.facts}></fact-row>
                   </li>
                 `,
               )}

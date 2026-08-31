@@ -94,15 +94,17 @@ describe('the shell', () => {
     expect(scroller?.contains(footer!)).toBe(false)
   })
 
-  it('gives main a full-width track, so its auto margins cannot collapse it', () => {
-    // A flex item with `margin: 0 auto` does not stretch. Without an explicit
-    // width, main shrinks to its content and the page mis-centres.
-    const main = root().querySelector('main')
-    expect(main).not.toBeNull()
-    expect(getComputedStyle(main!).width).not.toBe('auto')
-    const headerWidth = root().querySelector('header .wrap')?.getBoundingClientRect().width
-    const mainWidth = main!.getBoundingClientRect().width
-    expect(Math.abs(mainWidth - (headerWidth ?? 0))).toBeLessThan(41)
+  it('lines main up with the header, whatever the viewport', () => {
+    // A flex item with `margin: 0 auto` does not stretch, so without an
+    // explicit width main collapses to its content and the page mis-centres.
+    // Reading the computed width proves nothing — it returns a px value for
+    // any non-inline element — so this compares the two boxes instead.
+    const main = root().querySelector('main')!
+    const header = root().querySelector('header .wrap')!
+    const mainRect = main.getBoundingClientRect()
+    const headerRect = header.getBoundingClientRect()
+    expect(Math.round(mainRect.left)).toBe(Math.round(headerRect.left))
+    expect(Math.round(mainRect.width)).toBe(Math.round(headerRect.width))
   })
 
   it('reports overall progress in facts, and says which unit it is', () => {

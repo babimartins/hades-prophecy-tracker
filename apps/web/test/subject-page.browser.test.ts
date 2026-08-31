@@ -1,5 +1,5 @@
 import { dataset } from '@hades/data'
-import { subjectFacts, type FactMap } from '@hades/engine'
+import { subjectCapabilities, subjectFacts, type FactMap } from '@hades/engine'
 import { html, render } from 'lit'
 import { beforeEach, describe, expect, it } from 'vitest'
 import type { SubjectPage } from '../src/components/subject-page.js'
@@ -43,6 +43,13 @@ function composedText(node: Node): string {
   return text
 }
 
+/** The controls live inside fact-row's own shadow root. */
+function rowShadow(factId: string): ShadowRoot {
+  const row = root().querySelector(`li[data-fact="${factId}"] fact-row`)
+  if (!row?.shadowRoot) throw new Error(`no fact-row for ${factId}`)
+  return row.shadowRoot
+}
+
 function blocks(): string[] {
   return [...root().querySelectorAll('section')].map((section) => section.dataset.block ?? '')
 }
@@ -67,13 +74,22 @@ describe('a subject page', () => {
     expect(blocks()).not.toContain('Affinity')
   })
 
-  it('never renders an empty block', async () => {
+  it('renders one block per capability the subject has, and no more', async () => {
+    // The old form asserted no block is empty, which the render guard makes
+    // structurally impossible. This compares the blocks against the engine.
     for (const id of ['zeus', 'dusa', 'theseus', 'stygius', 'mati']) {
       await mount(id)
-      const empty = [...root().querySelectorAll('section')].filter(
-        (section) => section.querySelectorAll('li').length === 0,
+      const capabilities = new Set(subjectCapabilities(dataset, id))
+      const rendered = blocks().length
+      expect([id, rendered]).toEqual([id, expect.any(Number)])
+      expect([id, rendered > 0]).toEqual([id, capabilities.size > 0])
+      // every rendered block holds at least one of the subject's own facts
+      const rows = [...root().querySelectorAll('li[data-fact]')].map(
+        (li) => (li as HTMLElement).dataset.fact,
       )
-      expect([id, empty.length]).toEqual([id, 0])
+      const owned = new Set(subjectFacts(dataset, id).map((fact) => fact.id))
+      expect([id, rows.every((factId) => owned.has(factId!))]).toEqual([id, true])
+      expect([id, rows.length]).toEqual([id, owned.size])
     }
   })
 
@@ -96,46 +112,86 @@ describe('a subject page', () => {
 
   it('shows a description under the action it explains', async () => {
     await mount('zeus')
-    const withDescription = root().querySelector('.desc')
-    expect(withDescription?.textContent?.trim().length).toBeGreaterThan(5)
+    const described = rowShadow('boon:zeus:lightning-strike').querySelector('.desc')
+    expect(described?.textContent?.trim().length).toBeGreaterThan(5)
   })
 
   it('hides a spoiler label until the reader asks for it', async () => {
     // companion:shady says "after his sentence is amended". The reveal is in
     // the label, so hiding only the description would hide nothing.
     await mount('sisyphus')
-    const row = root().querySelector('li[data-fact="companion:shady"]')
-    expect(row).not.toBeNull()
-    expect(composedText(row!)).not.toContain('sentence is amended')
-    expect(row?.querySelector('.reveal')).not.toBeNull()
+    const shadow = rowShadow('companion:shady')
+    expect(composedText(shadow)).not.toContain('sentence is amended')
+    const reveal = shadow.querySelector<HTMLButtonElement>('.reveal')
+    expect(reveal).not.toBeNull()
 
-    row?.querySelector<HTMLButtonElement>('.reveal')?.click()
-    await page().updateComplete
-    const revealed = root().querySelector('li[data-fact="companion:shady"]')
-    expect(composedText(revealed!)).toContain('sentence is amended')
+    reveal!.click()
+    await (root().querySelector('li[data-fact="companion:shady"] fact-row') as HTMLElement & {
+      updateComplete: Promise<unknown>
+    }).updateComplete
+    expect(composedText(rowShadow('companion:shady'))).toContain('sentence is amended')
   })
 
-  it('asks to set a fact rather than writing it, and sends the right value', async () => {
+  it('records a boolean fact when the player clicks the box', async () => {
+    // Clicking the real input, not dispatching the event the handler expects.
+    // A first pass bound `@toggle` where hd-checklist-item fires `hd-toggle`,
+    // so nothing recorded — and three tests that fabricated `toggle` passed
+    // while no player could reach the handler.
     await mount('zeus')
     const events: { id: string; value: unknown }[] = []
     page().addEventListener('set-fact', (event) => {
       events.push((event as CustomEvent<{ id: string; value: unknown }>).detail)
     })
-    const boon = root().querySelector('li[data-fact="boon:zeus:lightning-strike"] hd-checklist-item')
-    boon?.dispatchEvent(new CustomEvent('toggle', { bubbles: true, composed: true }))
+    const input = rowShadow('boon:zeus:lightning-strike')
+      .querySelector('hd-checklist-item')
+      ?.shadowRoot?.querySelector<HTMLInputElement>('input')
+    expect(input).not.toBeNull()
+    input!.click()
     expect(events).toEqual([{ id: 'boon:zeus:lightning-strike', value: true }])
   })
 
-  it('sends a number fact to its own max, not to 1', async () => {
-    // A number fact read as a boolean is how a stored rank was destroyed once.
-    await mount('zeus')
+  it('gives a number fact a bounded stepper, never a checkbox', async () => {
+    // 96 of 692 facts are ranks. As a checkbox a rank can only be 0 or max, so
+    // four of seven Nectar reads as untouched and the next tick overwrites the
+    // stored 4. AGENTS.md records that defect; a first pass reintroduced it.
+    await mount('zeus', { 'nectar:zeus': 4 })
+    const shadow = rowShadow('nectar:zeus')
+    const input = shadow.querySelector<HTMLInputElement>('input[type="number"]')
+    expect(input).not.toBeNull()
+    expect(input!.value).toBe('4')
+    expect(input!.max).toBe('7')
+    expect(shadow.querySelector('hd-checklist-item')).toBeNull()
+
     const events: { id: string; value: unknown }[] = []
     page().addEventListener('set-fact', (event) => {
       events.push((event as CustomEvent<{ id: string; value: unknown }>).detail)
     })
-    const affinity = root().querySelector('li[data-fact="nectar:zeus"] hd-checklist-item')
-    affinity?.dispatchEvent(new CustomEvent('toggle', { bubbles: true, composed: true }))
+    input!.value = '5'
+    input!.dispatchEvent(new Event('change', { bubbles: true }))
+    expect(events).toEqual([{ id: 'nectar:zeus', value: 5 }])
+  })
+
+  it('clamps a rank to the fact max, so no view can push it past the game', async () => {
+    await mount('zeus', { 'nectar:zeus': 4 })
+    const events: { id: string; value: unknown }[] = []
+    page().addEventListener('set-fact', (event) => {
+      events.push((event as CustomEvent<{ id: string; value: unknown }>).detail)
+    })
+    const input = rowShadow('nectar:zeus').querySelector<HTMLInputElement>('input[type="number"]')
+    input!.value = '99'
+    input!.dispatchEvent(new Event('change', { bubbles: true }))
     expect(events).toEqual([{ id: 'nectar:zeus', value: 7 }])
+  })
+
+  it('agrees with the Characters index about a partly filled rank', async () => {
+    // The index read 4/7 while the page read 0/1 and unticked, because the
+    // block header counted rows rather than values.
+    await mount('zeus', { 'nectar:zeus': 4 })
+    const affinity = [...root().querySelectorAll('section')].find(
+      (block) => block.dataset.block === 'Affinity',
+    )
+    expect(affinity?.querySelector('.count')?.textContent).toContain('started')
+    expect(root().querySelector('.rollup')?.textContent).toContain('0/28')
   })
 
   it('scrolls its block list rather than the page', async () => {

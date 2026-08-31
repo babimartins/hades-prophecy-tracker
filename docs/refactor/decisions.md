@@ -272,3 +272,54 @@ question in one application, and the tests would go on asserting the old one.
 
 `requirement-tree`, `transfer-controls`, `state-controller`, the store and
 `@hades/ui` all carried over unchanged.
+
+## 21. A rank gets a bounded stepper, not a checkbox
+
+**Chosen:** `fact-row` dispatches on the fact's own `kind`. A number fact with
+a `max` renders `<input type="number">` clamped to that max; everything else
+renders `hd-checklist-item`.
+
+**Alternative:** the first pass, which rendered all 692 facts as a checkbox and
+toggled a number fact between 0 and its max.
+
+**Why:** a review found it and it was the defect that would have hurt most. 96
+of 692 facts are ranks. As a checkbox, four of seven Nectar with Zeus reads as
+untouched, and the next tick overwrites the stored 4. `AGENTS.md` records this
+as a defect that already destroyed a stored rank once, and I reintroduced it in
+the file that replaced the component carrying the guard.
+
+It also broke the reason the redesign exists. The Hearts column could only read
+0/7 or 7/7, so sorting it ascending was not an Ambrosia queue.
+
+## 22. `hd-toggle`, not `toggle`
+
+**Chosen:** listen for `hd-toggle`, the event `hd-checklist-item` documents on
+its first line and dispatches.
+
+**Why:** I bound `@toggle` in two components, so **680 of 692 facts could not
+be recorded**. The box ticked and the value vanished on the next render. The
+only writes that worked were the twelve weapon ticks, which use a hand-rolled
+button.
+
+Worse, three tests covered that path by dispatching a synthetic `toggle` event
+the application never fires. They passed while no player could reach the
+handler, and one of them was the test written specifically to guard the rank
+trap above. **A test that constructs the event under test proves only that the
+handler exists.** Every one of them now clicks the real control.
+
+## 23. A subject's Codex section is looked up by id, never by name
+
+**Chosen:** `codex:${subject.id}`, falling back to the display name for the six
+weapons whose subject id is their true name.
+
+**Why:** two Codex entries are named "Chaos" — the deity in Chthonic Gods and
+the realm in The Underworld. A name-keyed `Map` keeps the last, so Chaos the
+god was filed as a realm. `AGENTS.md` records this trap by name.
+
+## 24. A filter narrows the default population, it does not replace it
+
+**Chosen:** every chip except All and Foes counts within the non-foe view.
+
+**Why:** counting across all 73 characters gave "Fightable · 42" beside
+"All · 34", and clicking it surfaced 37 bare foes the default view hides on
+purpose. A count larger than the whole is a count of something else.

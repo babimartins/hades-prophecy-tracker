@@ -137,10 +137,65 @@ describe('Collections', () => {
     })
     railRoot().querySelector<HTMLButtonElement>('button[data-item="fish"]')?.click()
     await section().updateComplete
-    root()
-      .querySelector('li hd-checklist-item')
-      ?.dispatchEvent(new CustomEvent('toggle', { bubbles: true, composed: true }))
+    const input = root()
+      .querySelector('li fact-row')
+      ?.shadowRoot?.querySelector('hd-checklist-item')
+      ?.shadowRoot?.querySelector<HTMLInputElement>('input')
+    expect(input).not.toBeNull()
+    input!.click()
     expect(events).toHaveLength(1)
     expect(events[0]?.id).toMatch(/^catch:/)
+  })
+})
+
+describe('what the rail pane must not lose', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  it('offers a Reveal on a spoiler row, as the subject page does', async () => {
+    // Two of the six Companions rows were permanently unlabelled and identical
+    // to each other, because the pane hid the label and offered no way back.
+    await mount('collections')
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="companions"]')?.click()
+    await section().updateComplete
+    const shadow = root().querySelector('li[data-fact="companion:shady"] fact-row')?.shadowRoot
+    expect(shadow?.querySelector('.reveal')).not.toBeNull()
+  })
+
+  it('prints a prophecy own text, which the game itself shows the player', async () => {
+    await mount('fated')
+    const queens = dataset.achievements.find((a) => a.name === "The Queen's Plan")
+    railRoot().querySelector<HTMLButtonElement>(`button[data-item="${queens!.id}"]`)?.click()
+    await section().updateComplete
+    expect(root().querySelector('.prose')?.textContent).toContain('son of the god of the dead')
+  })
+
+  it('states a count node rather than listing nine things for a six-of-nine goal', async () => {
+    // The rail said 6 while the pane listed 9 checkboxes and never said why.
+    await mount('fated')
+    const queens = dataset.achievements.find((a) => a.name === "The Queen's Plan")
+    railRoot().querySelector<HTMLButtonElement>(`button[data-item="${queens!.id}"]`)?.click()
+    await section().updateComplete
+    const counting = root().querySelector('.counting')?.textContent ?? ''
+    expect(counting).toMatch(/Any 6 of these 9/)
+  })
+
+  it('shows the pane roll-up the rail already shows', async () => {
+    await mount('fated')
+    const queens = dataset.achievements.find((a) => a.name === "The Queen's Plan")
+    railRoot().querySelector<HTMLButtonElement>(`button[data-item="${queens!.id}"]`)?.click()
+    await section().updateComplete
+    expect(root().querySelector('.pnum')?.textContent).toContain('/6')
+  })
+
+  it('gives a familiar system a counting rule and no explaining block', async () => {
+    // Use the weakest level that works. Mirror of Night is in the bedroom from
+    // the first run; only our rule about its two sides needs saying.
+    await mount('house')
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="mirror"]')?.click()
+    await section().updateComplete
+    expect(root().querySelector('.rule')).not.toBeNull()
+    expect(root().querySelector('.about')).toBeNull()
   })
 })

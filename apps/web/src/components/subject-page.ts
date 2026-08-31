@@ -1,8 +1,17 @@
 import { dataset } from '@hades/data'
-import { subjectCapabilities, subjectFacts, subjectProgress, type FactMap } from '@hades/engine'
+import {
+  capabilityOf,
+  subjectCapabilities,
+  subjectFacts,
+  subjectProgress,
+  type FactMap,
+} from '@hades/engine'
 import type { Fact, Subject } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
+import { factState } from './fact-row.js'
+import './fact-row.js'
+import { CODEX_SECTION_LABEL, markersFor, sectionOf } from '../lib/subject-labels.js'
 
 /**
  * The order blocks appear in, and the heading each capability takes.
@@ -17,8 +26,8 @@ import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
  * escape.
  */
 const BLOCKS: readonly { capability: string; heading: string; why?: string }[] = [
-  { capability: 'acquire', heading: 'Milestones', why: 'obtain, escape, Cerberus' },
-  { capability: 'escape', heading: 'Milestones', why: 'obtain, escape, Cerberus' },
+  { capability: 'acquire', heading: 'Milestones', why: 'obtain and escape' },
+  { capability: 'escape', heading: 'Milestones', why: 'obtain and escape' },
   { capability: 'combat', heading: 'Combat' },
   { capability: 'affinity', heading: 'Affinity', why: 'Nectar and Ambrosia' },
   { capability: 'boons', heading: 'Boons', why: 'only for those who grant them' },
@@ -38,38 +47,6 @@ const BLOCKS: readonly { capability: string; heading: string; why?: string }[] =
   { capability: 'codex', heading: 'Codex', why: 'dissolved into this page' },
 ]
 
-const NAMESPACE_CAPABILITY: Readonly<Record<string, string>> = {
-  codex: 'codex',
-  meet: 'introduction',
-  nectar: 'affinity',
-  boon: 'boons',
-  blessing: 'boons',
-  curse: 'boons',
-  keepsake: 'keepsake',
-  companion: 'companion',
-  combat: 'combat',
-  encounter: 'combat',
-  miniboss: 'combat',
-  talk: 'dialogue',
-  invite: 'invite',
-  favor: 'quest',
-  workorder: 'quest',
-  lounge: 'quest',
-  lyre: 'quest',
-  aspect: 'aspect',
-  daedalus: 'enchant',
-  weapon: 'acquire',
-  escape: 'escape',
-  artifact: 'collect',
-  catch: 'catch',
-  reach: 'reach',
-  pet: 'pet',
-  spend: 'shop',
-}
-
-function namespaceCapability(namespace: string): string | undefined {
-  return NAMESPACE_CAPABILITY[namespace]
-}
 
 export class SubjectPage extends LitElement {
   static override readonly styles = css`
@@ -111,6 +88,21 @@ export class SubjectPage extends LitElement {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.78rem;
       margin-top: 2px;
+    }
+
+    .caps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      border: 1px solid ${colorVar('--hd-color-muted')};
+      border-radius: 20px;
+      font-size: 0.68rem;
+      padding: 2px 8px;
+      white-space: nowrap;
     }
 
     .rollup {
@@ -226,12 +218,10 @@ export class SubjectPage extends LitElement {
   static override readonly properties = {
     subjectId: { type: String },
     facts: { attribute: false },
-    revealed: { attribute: false },
   }
 
   subjectId = ''
   facts: FactMap = {}
-  revealed: Set<string> = new Set()
 
   get subject(): Subject | undefined {
     return dataset.subjects.find((candidate) => candidate.id === this.subjectId)
@@ -241,49 +231,18 @@ export class SubjectPage extends LitElement {
     this.dispatchEvent(new CustomEvent('close-subject', { bubbles: true, composed: true }))
   }
 
-  #reveal(factId: string): void {
-    this.revealed = new Set([...this.revealed, factId])
-  }
-
-  #toggle(fact: Fact): void {
-    const current = this.facts[fact.id]
-    const next =
-      fact.kind === 'number' && fact.max !== undefined
-        ? typeof current === 'number' && current >= fact.max
-          ? 0
-          : fact.max
-        : current !== true
-    this.dispatchEvent(
-      new CustomEvent('set-fact', {
-        detail: { id: fact.id, value: next },
-        bubbles: true,
-        composed: true,
-      }),
-    )
-  }
-
   #isDone(fact: Fact): boolean {
-    const value = this.facts[fact.id]
-    if (fact.kind === 'number' && fact.max !== undefined) {
-      return typeof value === 'number' && value >= fact.max
-    }
-    return value === true || (typeof value === 'number' && value > 0)
+    return factState(fact, this.facts) === 'done'
+  }
+
+  #partial(fact: Fact): boolean {
+    return factState(fact, this.facts) === 'partial'
   }
 
   #row(fact: Fact): TemplateResult {
-    const hidden = fact.spoiler === true && !this.revealed.has(fact.id)
     return html`
-      <li data-fact=${fact.id} class=${this.#isDone(fact) ? 'done' : ''}>
-        <hd-checklist-item
-          .checked=${this.#isDone(fact)}
-          .label=${hidden ? 'Hidden: this step names a story outcome' : fact.label}
-          @toggle=${() => this.#toggle(fact)}
-        ></hd-checklist-item>
-        ${hidden
-          ? html`<button class="reveal" @click=${() => this.#reveal(fact.id)}>Reveal</button>`
-          : fact.description
-            ? html`<span class="desc" title=${fact.description}>${fact.description}</span>`
-            : nothing}
+      <li data-fact=${fact.id} class=${factState(fact, this.facts)}>
+        <fact-row .fact=${fact} .facts=${this.facts}></fact-row>
       </li>
     `
   }
@@ -309,7 +268,10 @@ export class SubjectPage extends LitElement {
       <div class="head">
         <div>
           <h2>${subject.name}</h2>
-          <div class="sub">${subject.type}</div>
+          <div class="sub">${sectionOf(subject) || CODEX_SECTION_LABEL[subject.type] || ''}</div>
+          <div class="caps">
+            ${markersFor(subject.id).map((marker) => html`<span class="tag">${marker}</span>`)}
+          </div>
         </div>
         <div class="rollup">
           <b>${progress.done}/${progress.total}</b>
@@ -323,17 +285,20 @@ export class SubjectPage extends LitElement {
             (other) => other.capability,
           )
           const rows = owned.filter((fact) => {
-            const capability = namespaceCapability(fact.id.split(':')[0] ?? '')
+            const capability = capabilityOf(fact.id)
             return capability !== undefined && headings.includes(capability)
           })
           if (rows.length === 0) return nothing
           const done = rows.filter((fact) => this.#isDone(fact)).length
+          const partial = rows.filter((fact) => this.#partial(fact)).length
           return html`
             <section data-block=${block.heading}>
               <div class="block-head">
                 <h3>${block.heading}</h3>
                 ${block.why ? html`<span class="why">${block.why}</span>` : nothing}
-                <span class="count">${done}/${rows.length}</span>
+                <span class="count"
+                  >${done}/${rows.length}${partial > 0 ? html` · ${partial} started` : nothing}</span
+                >
               </div>
               <ul>
                 ${rows.map((fact) => this.#row(fact))}

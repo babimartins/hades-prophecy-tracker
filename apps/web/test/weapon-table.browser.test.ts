@@ -30,14 +30,20 @@ describe('the Weapons index', () => {
     expect(root().querySelectorAll('tbody tr')).toHaveLength(6)
   })
 
-  it('reads an aspect level from the fact max, never from a hard-coded five', () => {
+  it('draws one pip per level the fact allows, not a fixed five', async () => {
+    // Comparing `aspect.max` with `aspect.fact.max` compares a value with its
+    // own source, and every aspect happens to have max 5, so a hard-coded 5
+    // would pass too. Count the pips the DOM actually draws instead.
     const rows = buildWeaponRows({})
     for (const row of rows) {
-      expect([row.subject.id, row.aspects]).toEqual([row.subject.id, expect.any(Array)])
       expect([row.subject.id, row.aspects.length]).toEqual([row.subject.id, 4])
-      for (const aspect of row.aspects) {
-        expect([aspect.fact.id, aspect.max]).toEqual([aspect.fact.id, aspect.fact.max])
-      }
+    }
+    const groups = [...root().querySelectorAll('tr[data-weapon="stygius"] .pips')]
+    expect(groups).toHaveLength(4)
+    for (const group of groups) {
+      const label = group.getAttribute('aria-label') ?? ''
+      const max = Number(label.split(' of ').at(-1))
+      expect([label, group.querySelectorAll('i').length]).toEqual([label, max])
     }
   })
 
