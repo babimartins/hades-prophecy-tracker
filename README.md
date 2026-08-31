@@ -8,7 +8,7 @@ each single action inside each prophecy.
 The site is live at https://babimartins.github.io/hades-prophecy-tracker/.
 
 Three phases rebuilt the project around **subjects** rather than collections.
-The dataset holds 120 subjects, 878 facts and 766 achievements; 617 facts carry
+The dataset holds 120 subjects, 883 facts and 766 achievements; 622 facts carry
 a description of what the thing does, and every fact names the subjects it
 belongs to. 187 of them carry a price, in the currency the shop asks for.
 
@@ -95,7 +95,7 @@ populated collections, each broken into its sub-item facts:
 | Pact of Punishment             | 15      | Every condition, tracked as active (`atLeast 1`), not maxed. |
 | Perks                          | 11      | Every named perk from the Benefits Package condition. |
 
-878 facts back these 766 achievements. Some are shared across collections —
+883 facts back these 766 achievements. Some are shared across collections —
 for example, `aspect:stygius:zagreus` backs an achievement in the weapon
 aspects collection, two in the Fated List, and two in the Codex — so marking
 one action can advance entries in more than one collection at once.

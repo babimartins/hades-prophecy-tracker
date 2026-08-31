@@ -157,8 +157,9 @@ Verified during research. Where two wiki pages disagree, both numbers appear.
 
 ## 8. Open questions that reading cannot settle
 
-Three of the seven still need someone with the game open: 3, 4 and 5. The
-other four are settled from sources.
+All seven are settled from sources. Barbara had not reached the Heat mechanic
+and did not recognise the statues, so she asked for research rather than
+answering from the game.
 
 1. ~~The Athena and Demeter duo boon is "Stubborn Bolts" on the Fated List
    page and "Stubborn Roots" on the Duo Boons page.~~ Settled: "Stubborn
@@ -176,10 +177,51 @@ other four are settled from sources.
    Codex, he is able to access Achilles' knowledge more deeply, and the entries
    become more complete." A section is a part of one entry, not one of the nine
    groupings. The fact now carries that as its description.
-3. Whether clearing at a given Heat is recorded per weapon or globally.
-4. Whether the Skelly statues are per save or per weapon.
-5. Whether Dionysus' "6 different characters" is the same counter as The Queen's
-   Plan's "6 of the 9 Olympians".
+3. ~~Whether clearing at a given Heat is recorded per weapon or globally.~~
+   Settled: globally, and the question was larger than the data needs. Only one
+   entry uses Heat. The Fated List gives The Useless Trinket's "How to
+   Complete" as "Beat Hades with at least 8 heat", with no weapon named. The
+   single boolean `combat:defeat-hades-heat8` is right.
+4. ~~Whether the Skelly statues are per save or per weapon.~~ Settled: neither,
+   and they are not a tracked step at all. The Fated List's column header reads
+   **How to reveal**, and The Useless Trinket's is "Escape the Underworld at
+   least 5 times, then check the three covered statues in the preparation
+   chamber." A reveal condition is not a completion step. The page states that
+   progress "is tracked even before meeting the prerequisites", so the dataset
+   deliberately holds no reveal conditions.
+
+   The bullet "Earn the first of Skelly's Prizes" sits in that row's
+   **Description** cell, not its How to Complete. It is what the prophecy
+   gives, not a step to take. Reading the header before adding a fact is what
+   stopped a wrong one going in.
+5. ~~Whether Dionysus' "6 different characters" is the same counter as The
+   Queen's Plan's "6 of the 9 Olympians".~~ Settled: **no**, they are different
+   pools. Dionysus' page locks his final gauge until Zagreus "forges bonds with
+   at least 6 different characters, and gifting a minimum of 10 Ambrosia to any
+   number of characters" — any characters, all 24 with a gauge. The Queen's
+   Plan asks for 6 of the 9 Olympians. Maxing six Olympians satisfies both;
+   maxing six others satisfies only Dionysus.
+
+   Two data errors came out of checking this.
+
+   **"Forge a bond" is a full gauge, not one Nectar.** The Queen's Plan was
+   modelled as `atLeast 1` for each of the nine, so it read as complete after
+   nine gifts. The Epilogue Guide's Affinity Requirements section gives the
+   real figures: Zeus 7, Poseidon 7, Athena 7, Aphrodite 7, Artemis 7, Ares 7,
+   Dionysus 7, Hermes 8, Demeter 6. Demeter is 6 where her gauge holds 7; the
+   source says 6, so the data says 6.
+
+   **The prophecy's second half was missing.** Its How to Complete also asks to
+   "See specific dialogue from Persephone, Hades, Zeus, and Demeter". The
+   Epilogue Guide names nine conversations across those four, so each is a
+   counter rather than nine checkboxes.
+
+   Dionysus was also the only gated character whose gate was absent. Every
+   other one already carried it: `talk:` facts for Zeus, Athena, Artemis,
+   Demeter, Aphrodite and Hypnos, `pet:cerberus` at 20, `spend:charons-shop`
+   at 10000, `keepsake:lambent-plume` at 3 for Hermes, `favor:megaera` and
+   `favor:thanatos`, and the work orders for Nyx, Chaos, Sisyphus, Achilles,
+   Patroclus and Eurydice.
 6. ~~Whether Hades accepts Ambrosia.~~ Settled: no. The Ambrosia wiki page
    states "there are a few who cannot [receive Ambrosia]: Bouldy, Hades, and
    those unable to be gifted Nectar". Hades' `nectar:hades` fact stays a

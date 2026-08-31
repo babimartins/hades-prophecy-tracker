@@ -66,6 +66,8 @@ export const NAMESPACES_WITHOUT_CAPABILITY: readonly string[] = [
   'fish',
   // A platform trophy is awarded by Steam, not owned by anything in the game.
   'achievement',
+  // Ambrosia given to anyone at all. The count belongs to no one character.
+  'ambrosia',
 ]
 
 export function capabilityOf(factId: string): string | undefined {

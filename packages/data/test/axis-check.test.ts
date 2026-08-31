@@ -170,14 +170,15 @@ describe('the subject axis against the real dataset', () => {
     )
     // `summed === tagInstances` follows from the roster check and the
     // no-repeat check, so it cannot fail on its own. The pinned totals are what
-    // this test checks: 611 tagged facts producing 661 tag instances. The 50
-    // extra come from 48 facts naming more than one subject — 28 duo boons,
+    // this test checks: 615 tagged facts producing 665 tag instances. The 50
+    // extra come from 48 facts naming more than one subject: 28 duo boons,
     // 7 combat milestones, 6 conversations worth 8 instances because one names
-    // four people, 6 companions with their givers, and one work order.
+    // four people, 6 companions with their givers, and one work order. The
+    // four new facts are The Queen's Plan dialogue, one subject each.
     const tagged = dataset.facts.filter((fact) => fact.subjects.length > 0)
     const tagInstances = tagged.reduce((running, fact) => running + fact.subjects.length, 0)
-    expect(tagged).toHaveLength(611)
-    expect(tagInstances).toBe(661)
-    expect(summed).toBe(661)
+    expect(tagged).toHaveLength(615)
+    expect(tagInstances).toBe(665)
+    expect(summed).toBe(665)
   })
 })

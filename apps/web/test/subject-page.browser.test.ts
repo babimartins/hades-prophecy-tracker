@@ -207,7 +207,10 @@ describe('a subject page', () => {
       (block) => block.dataset.block === 'Affinity',
     )
     expect(affinity?.querySelector('.count')?.textContent).toContain('started')
-    expect(root().querySelector('.rollup')?.textContent).toContain('0/28')
+    // Derived, not written down: a hard-coded 28 broke the moment Zeus gained
+    // a fact, and the number was never what this test is about.
+    const total = subjectFacts(dataset, 'zeus').length
+    expect(root().querySelector('.rollup')?.textContent).toContain(`0/${total}`)
   })
 
   it('scrolls its block list rather than the page', async () => {

@@ -580,3 +580,40 @@ Each of the five now shows its roll-up and one line naming where its items
 live. The roll-up is the part that exists nowhere else: 0/50 of the 164 jobs.
 
 The pane is 284 rows, and the largest single block is 25.
+
+## 45. "Forge a bond" means a full affinity gauge
+
+The Queen's Plan asks to "Forge a bond with any 6 of the 9 Olympians". This was
+modelled as one Nectar for each of the nine, which read as complete after nine
+gifts instead of after six full gauges.
+
+The Epilogue Guide's Affinity Requirements section gives the figures: Zeus 7,
+Poseidon 7, Athena 7, Aphrodite 7, Artemis 7, Ares 7, Dionysus 7, Hermes 8,
+Demeter 6. Demeter is 6 where her gauge holds 7. Copy the source; do not tidy
+it into a max.
+
+The prophecy also asks to "See specific dialogue from Persephone, Hades, Zeus,
+and Demeter", which was missing entirely. The guide names nine conversations
+across those four people, so each person is a counter, not nine checkboxes.
+
+## 46. A `count` node is explained wherever it sits, not only at the root
+
+`rail-section` read only the root requirement to decide whether to print "Any 6
+of these 9 satisfy it." The Queen's Plan now wraps its six-of-nine in an `all`
+beside the dialogue, so the line vanished and the pane listed nine gods with no
+statement that six are enough. The pane walks the whole tree now.
+
+## 47. Dionysus was the only affinity gate missing
+
+Every character with an affinity gauge has its last hearts locked behind a
+named action, and 21 of the 22 were already in the dataset as `talk:` facts,
+work orders, favors, `pet:cerberus` at 20, `spend:charons-shop` at 10000, or
+`keepsake:lambent-plume` at 3.
+
+Dionysus' gate is "forge bonds with at least 6 different characters, and gift
+at least 10 Ambrosia to any number of characters". It needed a `count` of 6
+over all 24 affinity gauges and a new `ambrosia:total-given` counter.
+
+The wiki's per-character heart maximums were cross-checked against all 24
+`nectar:` facts. 23 matched exactly. The 24th, Cerberus, only phrases it
+differently on its page; the value matches too.

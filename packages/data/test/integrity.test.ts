@@ -224,9 +224,9 @@ describe('facts tagged with a subject', () => {
   it('splits into tagged and deliberately subject-less', () => {
     // The two buckets partition the same array, so their sum is the total by
     // construction. The pinned numbers are what this test actually checks.
-    expect(tagged).toHaveLength(611)
-    expect(systemFacts).toHaveLength(267)
-    expect(dataset.facts).toHaveLength(878)
+    expect(tagged).toHaveLength(615)
+    expect(systemFacts).toHaveLength(268)
+    expect(dataset.facts).toHaveLength(883)
   })
 
   it('gives a system fact an empty list, never a missing key and never a subject', () => {
@@ -294,8 +294,12 @@ describe('fact descriptions', () => {
       perk: 11,
       miniboss: 11,
       contractor: 164,
+      // The Queen's Plan dialogue, plus the Ambrosia counter behind Dionysus'
+      // last heart. Each says how many conversations, or what the count is of.
+      talk: 4,
+      ambrosia: 1,
     })
-    expect(described).toHaveLength(617)
+    expect(described).toHaveLength(622)
   })
 
   it('never stores a wiki cross-reference in place of an answer', () => {
@@ -651,5 +655,81 @@ describe('the platform trophies', () => {
       15,
       prophecies.length,
     ])
+  })
+})
+
+
+describe("what the Fated List means by forging a bond", () => {
+  // The Queen's Plan asks to "Forge a bond with any 6 of the 9 Olympians".
+  // This was modelled as one Nectar each, which read as complete after nine
+  // gifts. The Epilogue Guide's Affinity Requirements section gives the real
+  // figures, and they are the gods' full gauges: Zeus 7, Poseidon 7, Athena 7,
+  // Aphrodite 7, Artemis 7, Ares 7, Dionysus 7, Hermes 8, Demeter 6.
+  const BOND: Record<string, number> = {
+    zeus: 7,
+    poseidon: 7,
+    athena: 7,
+    aphrodite: 7,
+    artemis: 7,
+    ares: 7,
+    dionysus: 7,
+    hermes: 8,
+    demeter: 6,
+  }
+
+  it('asks for a full gauge, not for one Nectar', () => {
+    const plan = dataset.achievements.find((a) => a.id === 'prophecy:queens-plan')!
+    const root = plan.requirement as { kind: string; of: unknown[] }
+    const bonds = root.of[0] as {
+      kind: string
+      n: number
+      of: { fact: string; value: number }[]
+    }
+    expect([bonds.kind, bonds.n]).toEqual(['count', 6])
+    expect(Object.fromEntries(bonds.of.map((c) => [c.fact.split(':')[1], c.value]))).toEqual(BOND)
+  })
+
+  it('takes Demeter at 6, which is one short of her gauge', () => {
+    // The guide says 6 where her gauge maxes at 7. Copy the source, do not
+    // tidy it into a max.
+    const demeter = dataset.facts.find((fact) => fact.id === 'nectar:demeter')!
+    expect(demeter.max).toBe(7)
+    expect(BOND['demeter']).toBe(6)
+  })
+
+  it('lists the dialogue the prophecy also needs', () => {
+    // "See specific dialogue from Persephone, Hades, Zeus, and Demeter" was
+    // missing entirely. The Epilogue Guide names nine conversations across the
+    // four, so each is a counter rather than nine separate checkboxes.
+    const plan = dataset.achievements.find((a) => a.id === 'prophecy:queens-plan')!
+    const ids = collectFactIds(plan.requirement).filter((id) => id.startsWith('talk:'))
+    expect(ids.sort()).toEqual([
+      'talk:demeter-about-persephone',
+      'talk:hades-about-persephone',
+      'talk:persephone-about-returning',
+      'talk:zeus-about-persephone',
+    ])
+    const totals = ids.map((id) => dataset.facts.find((fact) => fact.id === id)!.max ?? 1)
+    expect(totals.reduce((sum, n) => sum + n, 0)).toBe(9)
+  })
+
+  it("gates Dionysus' last heart, the only affinity gate that was missing", () => {
+    // Every other gated character already carried their gate in their Codex
+    // entry: talk facts for Zeus and Athena, pet:cerberus at 20,
+    // spend:charons-shop at 10000, keepsake:lambent-plume at 3 for Hermes.
+    const entry = dataset.achievements.find((a) => a.id === 'codex:dionysus')!
+    const ids = collectFactIds(entry.requirement)
+    expect(ids).toContain('ambrosia:total-given')
+    const bonds = (entry.requirement as { of: unknown[] }).of.find(
+      (node) => (node as { kind?: string }).kind === 'count',
+    ) as { n: number; of: { fact: string; value: number }[] }
+    // Six *characters*, not six Olympians: a different pool from the Queen's
+    // Plan, which is why the two are not the same counter.
+    expect(bonds.n).toBe(6)
+    expect(bonds.of).toHaveLength(dataset.facts.filter((f) => f.id.startsWith('nectar:')).length)
+    for (const child of bonds.of) {
+      const fact = dataset.facts.find((f) => f.id === child.fact)!
+      expect([child.fact, child.value]).toEqual([child.fact, fact.max])
+    }
   })
 })
