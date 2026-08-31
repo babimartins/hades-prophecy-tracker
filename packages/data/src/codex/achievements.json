@@ -1,6 +1,6 @@
 [
   {
-    "id": "codex:lord-hades",
+    "id": "codex:hades",
     "name": "Lord Hades",
     "description": "Max affinity with Hades by giving him Nectar, after Persephone returns to the House of Hades and he responds with gratitude.",
     "collection": "codex",
@@ -8,7 +8,7 @@
     "requirement": {
       "kind": "all",
       "of": [
-        "codex:lord-hades",
+        "codex:hades",
         {
           "kind": "atLeast",
           "fact": "nectar:hades",
