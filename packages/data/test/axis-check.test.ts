@@ -21,8 +21,8 @@ describe('the subject axis against the real dataset', () => {
     }
   })
 
-  it('gives Zeus the five capabilities his tagged facts imply', () => {
-    // `dialogue` is absent because the 18 `talk:` facts are among the 105 that
+  it('gives Zeus the capabilities his tagged facts imply', () => {
+    // `dialogue` is absent because the 18 `talk:` facts are among the 80 that
     // phase 2 still has to source. It appears once they carry a subject.
     expect(subjectCapabilities(dataset, 'zeus').sort()).toEqual([
       'affinity',
@@ -30,6 +30,7 @@ describe('the subject axis against the real dataset', () => {
       'codex',
       'introduction',
       'invite',
+      'keepsake',
     ])
   })
 
@@ -148,7 +149,7 @@ describe('the subject axis against the real dataset', () => {
       0,
     )
     const tagged = dataset.facts.filter((fact) => (fact.subjects?.length ?? 0) > 0)
-    expect(tagged).toHaveLength(507)
+    expect(tagged).toHaveLength(532)
     expect(summed).toBe(tagged.length)
   })
 })

@@ -3090,174 +3090,199 @@
     "label": "Old Spiked Collar keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus"]
   },
   {
     "id": "keepsake:myrmidon-bracer",
     "label": "Myrmidon Bracer keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["achilles"]
   },
   {
     "id": "keepsake:black-shawl",
     "label": "Black Shawl keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["nyx"]
   },
   {
     "id": "keepsake:pierced-butterfly",
     "label": "Pierced Butterfly keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["thanatos"]
   },
   {
     "id": "keepsake:bone-hourglass",
     "label": "Bone Hourglass keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["charon"]
   },
   {
     "id": "keepsake:chthonic-coin-purse",
     "label": "Chthonic Coin Purse keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hypnos"]
   },
   {
     "id": "keepsake:skull-earring",
     "label": "Skull Earring keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["megaera"]
   },
   {
     "id": "keepsake:distant-memory",
     "label": "Distant Memory keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "keepsake:harpy-feather-duster",
     "label": "Harpy Feather Duster keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "keepsake:lucky-tooth",
     "label": "Lucky Tooth keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["skelly"]
   },
   {
     "id": "keepsake:thunder-signet",
     "label": "Thunder Signet keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"]
   },
   {
     "id": "keepsake:conch-shell",
     "label": "Conch Shell keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "keepsake:owl-pendant",
     "label": "Owl Pendant keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"]
   },
   {
     "id": "keepsake:eternal-rose",
     "label": "Eternal Rose keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"]
   },
   {
     "id": "keepsake:blood-filled-vial",
     "label": "Blood-Filled Vial keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "keepsake:adamant-arrowhead",
     "label": "Adamant Arrowhead keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"]
   },
   {
     "id": "keepsake:overflowing-cup",
     "label": "Overflowing Cup keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"]
   },
   {
     "id": "keepsake:lambent-plume",
     "label": "Lambent Plume keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"]
   },
   {
     "id": "keepsake:frostbitten-horn",
     "label": "Frostbitten Horn keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"]
   },
   {
     "id": "keepsake:cosmic-egg",
     "label": "Cosmic Egg keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos-realm"]
   },
   {
     "id": "keepsake:shattered-shackle",
     "label": "Shattered Shackle keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["sisyphus"]
   },
   {
     "id": "keepsake:evergreen-acorn",
     "label": "Evergreen Acorn keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["eurydice"]
   },
   {
     "id": "keepsake:broken-spearpoint",
     "label": "Broken Spearpoint keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["patroclus"]
   },
   {
     "id": "keepsake:pom-blossom",
     "label": "Pom Blossom keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["persephone"]
   },
   {
     "id": "keepsake:sigil-of-the-dead",
     "label": "Sigil of the Dead keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"]
   }
 ]

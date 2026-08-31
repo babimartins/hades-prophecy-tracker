@@ -152,10 +152,20 @@ describe('dataset integrity', () => {
 })
 
 describe('the subject roster', () => {
-  it('holds one entry per Codex entry', () => {
+  it('holds one entry per Codex entry, plus Persephone', () => {
+    // Persephone is the one subject the Codex cannot supply. The Codex page
+    // lists her in neither its section tables nor its exclusion list, yet she
+    // has facts and gives the Pom Blossom keepsake.
     const codexEntries = dataset.achievements.filter((a) => a.collection === 'codex')
-    expect(dataset.subjects).toHaveLength(codexEntries.length)
-    expect(dataset.subjects).toHaveLength(119)
+    expect(codexEntries).toHaveLength(119)
+    expect(dataset.subjects).toHaveLength(120)
+    // The six weapons take their true name, so their subject id does not match
+    // the Codex slug. Compare on the display name instead, which is shared.
+    const codexNames = new Set(codexEntries.map((entry) => entry.name))
+    const withoutCodexEntry = dataset.subjects.filter(
+      (subject) => !codexNames.has(subject.name),
+    )
+    expect(withoutCodexEntry.map((s) => s.id)).toEqual(['persephone'])
   })
 
   it('has no duplicate subject id', () => {
@@ -168,7 +178,7 @@ describe('the subject roster', () => {
     for (const subject of dataset.subjects) {
       counts[subject.type] = (counts[subject.type] ?? 0) + 1
     }
-    expect(counts).toEqual({ character: 72, collectible: 34, region: 7, weapon: 6 })
+    expect(counts).toEqual({ character: 73, collectible: 34, region: 7, weapon: 6 })
   })
 
   it('names the six weapons by their true name, not their Codex display name', () => {
@@ -207,9 +217,9 @@ describe('facts tagged with a subject', () => {
   })
 
   it('splits into tagged, deliberately empty, and not yet established', () => {
-    expect(tagged).toHaveLength(507)
+    expect(tagged).toHaveLength(532)
     expect(systemFacts).toHaveLength(80)
-    expect(untagged).toHaveLength(105)
+    expect(untagged).toHaveLength(80)
     expect(tagged.length + systemFacts.length + untagged.length).toBe(dataset.facts.length)
   })
 
@@ -246,7 +256,6 @@ describe('facts tagged with a subject', () => {
     }
     expect(byNamespace).toEqual({
       boon: 38,
-      keepsake: 25,
       talk: 18,
       combat: 13,
       workorder: 5,

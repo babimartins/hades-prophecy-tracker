@@ -7,9 +7,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:breaching-slash"
-      ]
+      "of": ["daedalus:stygius:breaching-slash"]
     }
   },
   {
@@ -20,9 +18,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:cruel-thrust"
-      ]
+      "of": ["daedalus:stygius:cruel-thrust"]
     }
   },
   {
@@ -33,9 +29,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:cursed-slash"
-      ]
+      "of": ["daedalus:stygius:cursed-slash"]
     }
   },
   {
@@ -46,9 +40,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:dash-nova"
-      ]
+      "of": ["daedalus:stygius:dash-nova"]
     }
   },
   {
@@ -59,9 +51,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:double-edge"
-      ]
+      "of": ["daedalus:stygius:double-edge"]
     }
   },
   {
@@ -72,9 +62,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:double-nova"
-      ]
+      "of": ["daedalus:stygius:double-nova"]
     }
   },
   {
@@ -85,9 +73,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:flurry-slash"
-      ]
+      "of": ["daedalus:stygius:flurry-slash"]
     }
   },
   {
@@ -98,9 +84,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:hoarding-slash"
-      ]
+      "of": ["daedalus:stygius:hoarding-slash"]
     }
   },
   {
@@ -111,9 +95,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:piercing-wave"
-      ]
+      "of": ["daedalus:stygius:piercing-wave"]
     }
   },
   {
@@ -124,9 +106,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:shadow-slash"
-      ]
+      "of": ["daedalus:stygius:shadow-slash"]
     }
   },
   {
@@ -137,9 +117,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:super-nova"
-      ]
+      "of": ["daedalus:stygius:super-nova"]
     }
   },
   {
@@ -150,9 +128,7 @@
     "section": "stygius",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:stygius:world-splitter"
-      ]
+      "of": ["daedalus:stygius:world-splitter"]
     }
   },
   {
@@ -163,9 +139,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:extending-jab"
-      ]
+      "of": ["daedalus:varatha:extending-jab"]
     }
   },
   {
@@ -176,9 +150,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:chain-skewer"
-      ]
+      "of": ["daedalus:varatha:chain-skewer"]
     }
   },
   {
@@ -189,9 +161,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:breaching-skewer"
-      ]
+      "of": ["daedalus:varatha:breaching-skewer"]
     }
   },
   {
@@ -202,9 +172,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:vicious-skewer"
-      ]
+      "of": ["daedalus:varatha:vicious-skewer"]
     }
   },
   {
@@ -215,9 +183,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:exploding-launcher"
-      ]
+      "of": ["daedalus:varatha:exploding-launcher"]
     }
   },
   {
@@ -228,9 +194,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:massive-spin"
-      ]
+      "of": ["daedalus:varatha:massive-spin"]
     }
   },
   {
@@ -241,9 +205,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:quick-spin"
-      ]
+      "of": ["daedalus:varatha:quick-spin"]
     }
   },
   {
@@ -254,9 +216,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:flurry-jab"
-      ]
+      "of": ["daedalus:varatha:flurry-jab"]
     }
   },
   {
@@ -267,9 +227,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:charged-skewer"
-      ]
+      "of": ["daedalus:varatha:charged-skewer"]
     }
   },
   {
@@ -280,9 +238,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:serrated-point"
-      ]
+      "of": ["daedalus:varatha:serrated-point"]
     }
   },
   {
@@ -293,9 +249,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:flaring-spin"
-      ]
+      "of": ["daedalus:varatha:flaring-spin"]
     }
   },
   {
@@ -306,9 +260,7 @@
     "section": "varatha",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:varatha:triple-jab"
-      ]
+      "of": ["daedalus:varatha:triple-jab"]
     }
   },
   {
@@ -319,9 +271,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:twin-shot"
-      ]
+      "of": ["daedalus:coronacht:twin-shot"]
     }
   },
   {
@@ -332,9 +282,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:sniper-shot"
-      ]
+      "of": ["daedalus:coronacht:sniper-shot"]
     }
   },
   {
@@ -345,9 +293,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:explosive-shot"
-      ]
+      "of": ["daedalus:coronacht:explosive-shot"]
     }
   },
   {
@@ -358,9 +304,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:flurry-shot"
-      ]
+      "of": ["daedalus:coronacht:flurry-shot"]
     }
   },
   {
@@ -371,9 +315,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:piercing-volley"
-      ]
+      "of": ["daedalus:coronacht:piercing-volley"]
     }
   },
   {
@@ -384,9 +326,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:perfect-shot"
-      ]
+      "of": ["daedalus:coronacht:perfect-shot"]
     }
   },
   {
@@ -397,9 +337,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:relentless-volley"
-      ]
+      "of": ["daedalus:coronacht:relentless-volley"]
     }
   },
   {
@@ -410,9 +348,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:triple-shot"
-      ]
+      "of": ["daedalus:coronacht:triple-shot"]
     }
   },
   {
@@ -423,9 +359,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:charged-volley"
-      ]
+      "of": ["daedalus:coronacht:charged-volley"]
     }
   },
   {
@@ -436,9 +370,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:chain-shot"
-      ]
+      "of": ["daedalus:coronacht:chain-shot"]
     }
   },
   {
@@ -449,9 +381,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:point-blank-shot"
-      ]
+      "of": ["daedalus:coronacht:point-blank-shot"]
     }
   },
   {
@@ -462,9 +392,7 @@
     "section": "coronacht",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:coronacht:concentrated-volley"
-      ]
+      "of": ["daedalus:coronacht:concentrated-volley"]
     }
   },
   {
@@ -475,9 +403,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:dread-flight"
-      ]
+      "of": ["daedalus:aegis:dread-flight"]
     }
   },
   {
@@ -488,9 +414,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:sudden-rush"
-      ]
+      "of": ["daedalus:aegis:sudden-rush"]
     }
   },
   {
@@ -501,9 +425,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:pulverizing-blow"
-      ]
+      "of": ["daedalus:aegis:pulverizing-blow"]
     }
   },
   {
@@ -514,9 +436,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:dashing-wallop"
-      ]
+      "of": ["daedalus:aegis:dashing-wallop"]
     }
   },
   {
@@ -527,9 +447,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:explosive-return"
-      ]
+      "of": ["daedalus:aegis:explosive-return"]
     }
   },
   {
@@ -540,9 +458,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:minotaur-rush"
-      ]
+      "of": ["daedalus:aegis:minotaur-rush"]
     }
   },
   {
@@ -553,9 +469,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:breaching-rush"
-      ]
+      "of": ["daedalus:aegis:breaching-rush"]
     }
   },
   {
@@ -566,9 +480,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:charged-shot"
-      ]
+      "of": ["daedalus:aegis:charged-shot"]
     }
   },
   {
@@ -579,9 +491,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:charged-flight"
-      ]
+      "of": ["daedalus:aegis:charged-flight"]
     }
   },
   {
@@ -592,9 +502,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:empowering-flight"
-      ]
+      "of": ["daedalus:aegis:empowering-flight"]
     }
   },
   {
@@ -605,9 +513,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:dashing-flight"
-      ]
+      "of": ["daedalus:aegis:dashing-flight"]
     }
   },
   {
@@ -618,9 +524,7 @@
     "section": "aegis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:aegis:ferocious-guard"
-      ]
+      "of": ["daedalus:aegis:ferocious-guard"]
     }
   },
   {
@@ -631,9 +535,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:breaching-cross"
-      ]
+      "of": ["daedalus:malphon:breaching-cross"]
     }
   },
   {
@@ -644,9 +546,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:rolling-knuckle"
-      ]
+      "of": ["daedalus:malphon:rolling-knuckle"]
     }
   },
   {
@@ -657,9 +557,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:long-knuckle"
-      ]
+      "of": ["daedalus:malphon:long-knuckle"]
     }
   },
   {
@@ -670,9 +568,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:draining-cutter"
-      ]
+      "of": ["daedalus:malphon:draining-cutter"]
     }
   },
   {
@@ -683,9 +579,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:concentrated-knuckle"
-      ]
+      "of": ["daedalus:malphon:concentrated-knuckle"]
     }
   },
   {
@@ -696,9 +590,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:explosive-upper"
-      ]
+      "of": ["daedalus:malphon:explosive-upper"]
     }
   },
   {
@@ -709,9 +601,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:flying-cutter"
-      ]
+      "of": ["daedalus:malphon:flying-cutter"]
     }
   },
   {
@@ -722,9 +612,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:rush-kick"
-      ]
+      "of": ["daedalus:malphon:rush-kick"]
     }
   },
   {
@@ -735,9 +623,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:quake-cutter"
-      ]
+      "of": ["daedalus:malphon:quake-cutter"]
     }
   },
   {
@@ -748,9 +634,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:kinetic-launcher"
-      ]
+      "of": ["daedalus:malphon:kinetic-launcher"]
     }
   },
   {
@@ -761,9 +645,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:heavy-knuckle"
-      ]
+      "of": ["daedalus:malphon:heavy-knuckle"]
     }
   },
   {
@@ -774,9 +656,7 @@
     "section": "malphon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:malphon:colossus-knuckle"
-      ]
+      "of": ["daedalus:malphon:colossus-knuckle"]
     }
   },
   {
@@ -787,9 +667,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:flurry-fire"
-      ]
+      "of": ["daedalus:exagryph:flurry-fire"]
     }
   },
   {
@@ -800,9 +678,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:ricochet-fire"
-      ]
+      "of": ["daedalus:exagryph:ricochet-fire"]
     }
   },
   {
@@ -813,9 +689,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:spread-fire"
-      ]
+      "of": ["daedalus:exagryph:spread-fire"]
     }
   },
   {
@@ -826,9 +700,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:explosive-fire"
-      ]
+      "of": ["daedalus:exagryph:explosive-fire"]
     }
   },
   {
@@ -839,9 +711,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:delta-chamber"
-      ]
+      "of": ["daedalus:exagryph:delta-chamber"]
     }
   },
   {
@@ -852,9 +722,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:piercing-fire"
-      ]
+      "of": ["daedalus:exagryph:piercing-fire"]
     }
   },
   {
@@ -865,9 +733,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:triple-bomb"
-      ]
+      "of": ["daedalus:exagryph:triple-bomb"]
     }
   },
   {
@@ -878,9 +744,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:rocket-bomb"
-      ]
+      "of": ["daedalus:exagryph:rocket-bomb"]
     }
   },
   {
@@ -891,9 +755,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:targeting-system"
-      ]
+      "of": ["daedalus:exagryph:targeting-system"]
     }
   },
   {
@@ -904,9 +766,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:hazard-bomb"
-      ]
+      "of": ["daedalus:exagryph:hazard-bomb"]
     }
   },
   {
@@ -917,9 +777,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:cluster-bomb"
-      ]
+      "of": ["daedalus:exagryph:cluster-bomb"]
     }
   },
   {
@@ -930,9 +788,7 @@
     "section": "exagryph",
     "requirement": {
       "kind": "all",
-      "of": [
-        "daedalus:exagryph:seeking-fire"
-      ]
+      "of": ["daedalus:exagryph:seeking-fire"]
     }
   }
 ]
