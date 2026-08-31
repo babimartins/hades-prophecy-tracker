@@ -7,7 +7,7 @@
   {
     "id": "achievement",
     "name": "Platform Achievements",
-    "description": "Platform achievements, awarded by Steam and the other stores. There are 50: 49 ordinary ones plus a 50th for earning the other 49, which is why Steam lists only 49 publicly."
+    "description": "The trophies the platform awards. There are 50: 49 ordinary ones and a 50th, God of Blood, for earning the other 49. Steam lists only 49 publicly because that last one is hidden. Thirteen of them restate a prophecy and share its actions, so nothing here asks you to tick the same thing twice."
   },
   {
     "id": "codex",

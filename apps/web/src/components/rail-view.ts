@@ -78,6 +78,15 @@ export class RailView extends LitElement {
       margin-top: 4px;
     }
 
+    /* Every rail item but one counts facts. The one that counts something
+       else says which, rather than leaving two units to look alike. */
+    .unit {
+      color: ${colorVar('--hd-color-muted')};
+      display: block;
+      font-size: 0.64rem;
+      margin-top: 2px;
+    }
+
     .bar {
       background: ${colorVar('--hd-color-surface')};
       border-radius: 3px;
@@ -189,6 +198,9 @@ export class RailView extends LitElement {
                     `
                   : html`<span>${item.sub ?? '—'}</span>`}
               </span>
+              ${item.total > 0 && item.sub
+                ? html`<span class="unit">${item.sub}</span>`
+                : nothing}
             </button>
           `,
         )}

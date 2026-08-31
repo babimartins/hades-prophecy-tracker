@@ -64,6 +64,8 @@ export const NAMESPACES_WITHOUT_CAPABILITY: readonly string[] = [
   'wellofcharon',
   'contractor',
   'fish',
+  // A platform trophy is awarded by Steam, not owned by anything in the game.
+  'achievement',
 ]
 
 export function capabilityOf(factId: string): string | undefined {

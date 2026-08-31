@@ -1,0 +1,184 @@
+[
+  {
+    "id": "achievement:escaped-tartarus",
+    "label": "Clear Tartarus",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:escaped-asphodel",
+    "label": "Clear Asphodel",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:escaped-elysium",
+    "label": "Clear Elysium",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:champion-of-elysium",
+    "label": "Clear Elysium with the 'Extreme Measures' Condition",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:hold-the-onions",
+    "label": "Clear an Infernal Gate without taking damage",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:weapon-of-fate",
+    "label": "Clear an escape attempt with a hidden Weapon Aspect",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:to-charons-credit",
+    "label": "Earn a Loyalty Card",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:skellys-last-lamentations",
+    "label": "Earn the second of Skelly's prizes",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:blessed-by-the-gods",
+    "label": "Choose 100 different Olympian Boon effects",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:thanks-but-no-thanks",
+    "label": "Purge a Legendary Boon",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:tools-of-the-architect",
+    "label": "Choose 50 different Daedalus Hammer enchantments",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:well-versed",
+    "label": "Fully Unlock the Olympians' Codex entries",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:day-or-night-trader",
+    "label": "Trade 20 times with the Wretched Broker",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:home-makeover",
+    "label": "Pay for 50 jobs from the House Contractor",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:had-to-happen",
+    "label": "Fulfill any 15 Prophecies",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:urge-to-sing",
+    "label": "Compel Orpheus to sing again",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:back-to-work",
+    "label": "Earn access to and enter the Administrative Chamber",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:the-family-secret",
+    "label": "Complete the main quest in the story",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:one-for-the-ages",
+    "label": "Reach the epilogue of the story",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:well-stocked",
+    "label": "Buy 9 'Well of Charon' items in one escape attempt",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:thorn-of-thanatos",
+    "label": "Get 30% bonus damage with the Pierced Butterfly",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:haste-of-hermes",
+    "label": "Get 20% dodge chance with the Lambent Plume",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:death-dealer",
+    "label": "Beat Thanatos by 15 kills or more",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:friends-in-high-places",
+    "label": "Use Greater Call to invoke an Olympian's aid",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:bad-call",
+    "label": "Use an Olympian's Greater Call against them in a Trial",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  },
+  {
+    "id": "achievement:skelly-slayer",
+    "label": "Slay Skelly 15 times",
+    "kind": "boolean",
+    "collection": "achievement",
+    "subjects": []
+  }
+]

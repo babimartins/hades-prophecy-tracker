@@ -129,10 +129,57 @@ describe('The House', () => {
     expect(root().querySelector('.rule')?.textContent).toContain('Both sides')
   })
 
-  it('says plainly that platform achievements hold nothing yet', async () => {
+  it('lists all 50 platform trophies, each with the actions it needs', async () => {
     railRoot().querySelector<HTMLButtonElement>('button[data-item="achievement"]')?.click()
     await section().updateComplete
-    expect(root().querySelector('.single')?.textContent).toContain('Nothing is tracked')
+    const trophies = [...root().querySelectorAll('.trophy')]
+    expect(trophies).toHaveLength(50)
+    // The owner's rule: anything that needs sub-items must list them. God of
+    // Blood is the single exception, named here so that moving the exception
+    // to another trophy fails this test rather than sliding past it.
+    const withoutActions = trophies
+      .filter((trophy) => trophy.querySelectorAll('fact-row').length === 0)
+      .map((trophy) => trophy.getAttribute('data-achievement'))
+    expect(withoutActions).toEqual(['achievement:god-of-blood'])
+  })
+
+  it('shows God of Blood as the other 49, without repeating 207 rows', async () => {
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="achievement"]')?.click()
+    await section().updateComplete
+    const god = root().querySelector('[data-achievement="achievement:god-of-blood"]')
+    expect(god?.textContent).toContain('other 49')
+    expect(god?.querySelectorAll('fact-row')).toHaveLength(0)
+  })
+
+  it('counts God of Blood in trophies, not in the 10283 units it sums to', async () => {
+    // Its requirement is the other 49 requirements, so evaluating it adds up
+    // every unit inside them. The sum is true and unreadable.
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="achievement"]')?.click()
+    await section().updateComplete
+    const god = root().querySelector('[data-achievement="achievement:god-of-blood"]')
+    expect(god?.querySelector('.tnum')?.textContent?.trim()).toBe('0/49')
+  })
+
+  it('reads God of Blood last, after the trophies it is made of', async () => {
+    railRoot().querySelector<HTMLButtonElement>('button[data-item="achievement"]')?.click()
+    await section().updateComplete
+    const ids = [...root().querySelectorAll('.trophy')].map((t) =>
+      t.getAttribute('data-achievement'),
+    )
+    expect(ids[ids.length - 1]).toBe('achievement:god-of-blood')
+  })
+
+  it('counts the rail item in trophies earned, and says so', async () => {
+    const trophy = dataset.achievements.find((a) => a.id === 'achievement:river-denizens')!
+    const facts: FactMap = Object.fromEntries(
+      collectFactIds(trophy.requirement).map((id) => [id, true]),
+    )
+    render(html``, document.body)
+    await mount('house', facts)
+    const item = railRoot().querySelector('button[data-item="achievement"]')
+    // Every fish fact ticked earns exactly this one trophy, not 6 of 882.
+    expect(item?.textContent).toContain('trophies earned')
+    expect(item?.textContent).toContain('50')
   })
 })
 

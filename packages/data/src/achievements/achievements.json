@@ -1,0 +1,2633 @@
+[
+  {
+    "id": "achievement:god-of-blood",
+    "name": "God of Blood",
+    "description": "Earn all other Trophies.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "all",
+          "of": [
+            "achievement:escaped-tartarus"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:escaped-asphodel"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:escaped-elysium"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:champion-of-elysium"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:hold-the-onions"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:defeat-hades"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:weapon-of-fate"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:to-charons-credit"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "combat:defeat-hades-heat8"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:skellys-last-lamentations"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:adamant-arrowhead",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:black-shawl",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:blood-filled-vial",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:bone-hourglass",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:broken-spearpoint",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:chthonic-coin-purse",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:conch-shell",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:cosmic-egg",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:distant-memory",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:eternal-rose",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:evergreen-acorn",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:frostbitten-horn",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:harpy-feather-duster",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lambent-plume",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lucky-tooth",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:myrmidon-bracer",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:old-spiked-collar",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:overflowing-cup",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:owl-pendant",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pierced-butterfly",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pom-blossom",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:shattered-shackle",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:sigil-of-the-dead",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:skull-earring",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:thunder-signet",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:adamant-arrowhead",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:black-shawl",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:blood-filled-vial",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:bone-hourglass",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:broken-spearpoint",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:chthonic-coin-purse",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:conch-shell",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:cosmic-egg",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:distant-memory",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:eternal-rose",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:evergreen-acorn",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:frostbitten-horn",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:harpy-feather-duster",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lambent-plume",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:lucky-tooth",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:myrmidon-bracer",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:old-spiked-collar",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:overflowing-cup",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:owl-pendant",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pierced-butterfly",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:pom-blossom",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:shattered-shackle",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:sigil-of-the-dead",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:skull-earring",
+              "value": 3
+            },
+            {
+              "kind": "atLeast",
+              "fact": "keepsake:thunder-signet",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "companion:antos",
+            "companion:battie",
+            "companion:fidi",
+            "companion:mort",
+            "companion:rib",
+            "companion:shady"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "companion:antos",
+            "companion:battie",
+            "companion:fidi",
+            "companion:mort",
+            "companion:rib",
+            "companion:shady"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:beowulf",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:chaos",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zeus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:chiron",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:hera",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:rama",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:eris",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:hestia",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:lucifer",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:demeter",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:gilgamesh",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:talos",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:arthur",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:nemesis",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:poseidon",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:zagreus",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:achilles",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:guan-yu",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:hades",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:zagreus",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:beowulf",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:chaos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:aegis:zeus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:chiron",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:hera",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:rama",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:coronacht:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:eris",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:hestia",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:lucifer",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:exagryph:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:demeter",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:gilgamesh",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:talos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:malphon:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:arthur",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:nemesis",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:poseidon",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:stygius:zagreus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:achilles",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:guan-yu",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:hades",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "aspect:varatha:zagreus",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:blessed-by-the-gods"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:thanks-but-no-thanks"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:tools-of-the-architect"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "weapon:stygian-blade",
+            "weapon:eternal-spear",
+            "weapon:shield-of-chaos",
+            "weapon:heart-seeking-bow",
+            "weapon:twin-fists-of-malphon",
+            "weapon:adamant-rail"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "nectar:achilles",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:aphrodite",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:ares",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:artemis",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:athena",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:cerberus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:chaos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:charon",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:demeter",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:dionysus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:dusa",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:eurydice",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hades",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hermes",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hypnos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:megaera",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:nyx",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:orpheus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:patroclus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:poseidon",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:sisyphus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:skelly",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:thanatos",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:zeus",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:well-versed"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:day-or-night-trader"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:home-makeover"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:had-to-happen"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "any",
+              "of": [
+                "catch:mati",
+                "catch:projelly",
+                "catch:voidskate"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:hellfish",
+                "catch:knucklehead",
+                "catch:scyllascion"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:slavug",
+                "catch:chrustacean",
+                "catch:flameater"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:chlam",
+                "catch:charp",
+                "catch:seamare"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:gupp",
+                "catch:scuffer",
+                "catch:stonewhal"
+              ]
+            },
+            {
+              "kind": "any",
+              "of": [
+                "catch:trout",
+                "catch:bass",
+                "catch:sturgeon"
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:urge-to-sing"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "talent:abyssal-blood",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:boiling-blood",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:chthonic-vitality",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:dark-foresight",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:dark-regeneration",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:death-defiance",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:deep-pockets",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:family-favorite",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:fated-authority",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:fated-persuasion",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:fiery-presence",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:gods-legacy",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:gods-pride",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:golden-touch",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:greater-reflex",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:high-confidence",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:infernal-soul",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:olympian-favor",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:privileged-status",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:ruthless-reflex",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:shadow-presence",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:stubborn-defiance",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:stygian-soul",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "talent:thick-skin",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:eldest-sigil-restoration",
+            "talk:nyx-in-chaos-realm"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "meet:hades",
+            "meet:nyx",
+            "meet:charon",
+            "meet:thanatos",
+            "meet:hypnos",
+            "meet:megaera",
+            "meet:alecto",
+            "meet:tisiphone",
+            "meet:chaos"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "combat:foes-slain",
+              "value": 10000
+            },
+            "talk:ares-after-10000-foes"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:knave-kings-sentence",
+            "talk:sisyphus-after-knave-kings-sentence"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "nectar:orpheus",
+              "value": 1
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:eurydice",
+              "value": 1
+            },
+            "workorder:singers-gamble",
+            "talk:orpheus-after-singers-gamble"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "workorder:heros-sacrifice",
+            "talk:achilles-after-heros-sacrifice"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "talent:shadow-presence",
+            "talent:fiery-presence",
+            "talent:chthonic-vitality",
+            "talent:dark-regeneration",
+            "talent:death-defiance",
+            "talent:stubborn-defiance",
+            "talent:greater-reflex",
+            "talent:ruthless-reflex",
+            "talent:boiling-blood",
+            "talent:abyssal-blood",
+            "talent:infernal-soul",
+            "talent:stygian-soul",
+            "talent:deep-pockets",
+            "talent:golden-touch",
+            "talent:thick-skin",
+            "talent:high-confidence",
+            "talent:privileged-status",
+            "talent:family-favorite",
+            "talent:olympian-favor",
+            "talent:dark-foresight",
+            "talent:gods-pride",
+            "talent:gods-legacy",
+            "talent:fated-authority",
+            "talent:fated-persuasion"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "pact:hard-labor",
+            "pact:lasting-consequences",
+            "pact:convenience-fee",
+            "pact:jury-summons",
+            "pact:extreme-measures",
+            "pact:calisthenics-program",
+            "pact:benefits-package",
+            "pact:middle-management",
+            "pact:underworld-customs",
+            "pact:forced-overtime",
+            "pact:heightened-security",
+            "pact:routine-inspection",
+            "pact:damage-control",
+            "pact:approval-process",
+            "pact:tight-deadline"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "escape:stygian-blade",
+            "escape:eternal-spear",
+            "escape:shield-of-chaos",
+            "escape:heart-seeking-bow",
+            "escape:twin-fists-of-malphon",
+            "escape:adamant-rail"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "perk:shifter",
+            "perk:bruiser",
+            "perk:slugger",
+            "perk:puller",
+            "perk:savior",
+            "perk:speeder",
+            "perk:linker",
+            "perk:cloner",
+            "perk:burner",
+            "perk:seeker",
+            "perk:popper"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:back-to-work"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:the-family-secret"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:one-for-the-ages"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:well-stocked"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:thorn-of-thanatos"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:haste-of-hermes"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:death-dealer"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:friends-in-high-places"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:bad-call"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            "achievement:skelly-slayer"
+          ]
+        },
+        {
+          "kind": "all",
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "pet:cerberus",
+              "value": 10
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:escaped-tartarus",
+    "name": "Escaped Tartarus",
+    "description": "Clear Tartarus.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:escaped-tartarus"
+      ]
+    }
+  },
+  {
+    "id": "achievement:escaped-asphodel",
+    "name": "Escaped Asphodel",
+    "description": "Clear Asphodel.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:escaped-asphodel"
+      ]
+    }
+  },
+  {
+    "id": "achievement:escaped-elysium",
+    "name": "Escaped Elysium",
+    "description": "Clear Elysium.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:escaped-elysium"
+      ]
+    }
+  },
+  {
+    "id": "achievement:champion-of-elysium",
+    "name": "Champion of Elysium",
+    "description": "Clear Elysium with the 'Extreme Measures' Condition.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:champion-of-elysium"
+      ]
+    }
+  },
+  {
+    "id": "achievement:hold-the-onions",
+    "name": "Hold the Onions",
+    "description": "Clear an Infernal Gate without taking damage.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:hold-the-onions"
+      ]
+    }
+  },
+  {
+    "id": "achievement:is-there-no-escape",
+    "name": "Is There No Escape?",
+    "description": "Clear an escape attempt.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-hades"
+      ]
+    }
+  },
+  {
+    "id": "achievement:weapon-of-fate",
+    "name": "Weapon of Fate",
+    "description": "Clear an escape attempt with a hidden Weapon Aspect.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:weapon-of-fate"
+      ]
+    }
+  },
+  {
+    "id": "achievement:to-charons-credit",
+    "name": "To Charon's Credit",
+    "description": "Earn a Loyalty Card.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:to-charons-credit"
+      ]
+    }
+  },
+  {
+    "id": "achievement:the-useless-trinket",
+    "name": "The Useless Trinket",
+    "description": "Earn the first of Skelly's prizes.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "combat:defeat-hades-heat8"
+      ]
+    }
+  },
+  {
+    "id": "achievement:skellys-last-lamentations",
+    "name": "Skelly's Last Lamentations",
+    "description": "Earn the second of Skelly's prizes.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:skellys-last-lamentations"
+      ]
+    }
+  },
+  {
+    "id": "achievement:something-from-everyone",
+    "name": "Something From Everyone",
+    "description": "Unlock each standard Keepsake.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:adamant-arrowhead",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:black-shawl",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:blood-filled-vial",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:bone-hourglass",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:broken-spearpoint",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:chthonic-coin-purse",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:conch-shell",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:cosmic-egg",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:distant-memory",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:eternal-rose",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:evergreen-acorn",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:frostbitten-horn",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:harpy-feather-duster",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lambent-plume",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lucky-tooth",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:myrmidon-bracer",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:old-spiked-collar",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:overflowing-cup",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:owl-pendant",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pierced-butterfly",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pom-blossom",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:shattered-shackle",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:sigil-of-the-dead",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:skull-earring",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:thunder-signet",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:friends-forever",
+    "name": "Friends Forever",
+    "description": "Max-rank each standard Keepsake.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:adamant-arrowhead",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:black-shawl",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:blood-filled-vial",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:bone-hourglass",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:broken-spearpoint",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:chthonic-coin-purse",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:conch-shell",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:cosmic-egg",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:distant-memory",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:eternal-rose",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:evergreen-acorn",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:frostbitten-horn",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:harpy-feather-duster",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lambent-plume",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:lucky-tooth",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:myrmidon-bracer",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:old-spiked-collar",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:overflowing-cup",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:owl-pendant",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pierced-butterfly",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:pom-blossom",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:shattered-shackle",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:sigil-of-the-dead",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:skull-earring",
+          "value": 3
+        },
+        {
+          "kind": "atLeast",
+          "fact": "keepsake:thunder-signet",
+          "value": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:rare-collectable",
+    "name": "Rare Collectible",
+    "description": "Equip a Chthonic Companion.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "any",
+      "of": [
+        "companion:antos",
+        "companion:battie",
+        "companion:fidi",
+        "companion:mort",
+        "companion:rib",
+        "companion:shady"
+      ]
+    }
+  },
+  {
+    "id": "achievement:complete-set",
+    "name": "Complete Set",
+    "description": "Earn all Chthonic Companions.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "companion:antos",
+        "companion:battie",
+        "companion:fidi",
+        "companion:mort",
+        "companion:rib",
+        "companion:shady"
+      ]
+    }
+  },
+  {
+    "id": "achievement:blood-bound",
+    "name": "Blood Bound",
+    "description": "Max any Weapon Aspect.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "any",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:beowulf",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:chaos",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zeus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:chiron",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:hera",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:rama",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:eris",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:hestia",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:lucifer",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:demeter",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:gilgamesh",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:talos",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:arthur",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:nemesis",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:poseidon",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:zagreus",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:achilles",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:guan-yu",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:hades",
+          "value": 5
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:zagreus",
+          "value": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:infernal-arms",
+    "name": "Infernal Arms",
+    "description": "Unlock all weapon aspects.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:beowulf",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:chaos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:aegis:zeus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:chiron",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:hera",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:rama",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:coronacht:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:eris",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:hestia",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:lucifer",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:exagryph:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:demeter",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:gilgamesh",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:talos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:malphon:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:arthur",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:nemesis",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:poseidon",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:stygius:zagreus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:achilles",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:guan-yu",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:hades",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "aspect:varatha:zagreus",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:blessed-by-the-gods",
+    "name": "Blessed by the Gods",
+    "description": "Choose 100 different Olympian Boon effects.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:blessed-by-the-gods"
+      ]
+    }
+  },
+  {
+    "id": "achievement:thanks-but-no-thanks",
+    "name": "Thanks, But No Thanks",
+    "description": "Purge a Legendary Boon.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:thanks-but-no-thanks"
+      ]
+    }
+  },
+  {
+    "id": "achievement:tools-of-the-architect",
+    "name": "Tools of the Architect",
+    "description": "Choose 50 different Daedalus Hammer enchantments.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:tools-of-the-architect"
+      ]
+    }
+  },
+  {
+    "id": "achievement:arms-collector",
+    "name": "Arms Collector",
+    "description": "Unlock each of the Infernal Arms.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "weapon:stygian-blade",
+        "weapon:eternal-spear",
+        "weapon:shield-of-chaos",
+        "weapon:heart-seeking-bow",
+        "weapon:twin-fists-of-malphon",
+        "weapon:adamant-rail"
+      ]
+    }
+  },
+  {
+    "id": "achievement:grown-close",
+    "name": "Grown Close",
+    "description": "Forge a bond with any character.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "any",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "nectar:achilles",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:aphrodite",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:ares",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:artemis",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:athena",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:cerberus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:chaos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:charon",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:demeter",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:dionysus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:dusa",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:eurydice",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hades",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hermes",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:hypnos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:megaera",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:nyx",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:orpheus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:patroclus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:poseidon",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:sisyphus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:skelly",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:thanatos",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:zeus",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:well-versed",
+    "name": "Well Versed",
+    "description": "Fully Unlock the Olympians' Codex entries.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:well-versed"
+      ]
+    }
+  },
+  {
+    "id": "achievement:day-or-night-trader",
+    "name": "Day-or-Night Trader",
+    "description": "Trade 20 times with the Wretched Broker.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:day-or-night-trader"
+      ]
+    }
+  },
+  {
+    "id": "achievement:home-makeover",
+    "name": "Home Makeover",
+    "description": "Pay for 50 jobs from the House Contractor.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:home-makeover"
+      ]
+    }
+  },
+  {
+    "id": "achievement:had-to-happen",
+    "name": "Had to Happen",
+    "description": "Fulfill any 15 Prophecies.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:had-to-happen"
+      ]
+    }
+  },
+  {
+    "id": "achievement:river-denizens",
+    "name": "River Denizens",
+    "description": "Catch a fish from each region.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "any",
+          "of": [
+            "catch:mati",
+            "catch:projelly",
+            "catch:voidskate"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:hellfish",
+            "catch:knucklehead",
+            "catch:scyllascion"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:slavug",
+            "catch:chrustacean",
+            "catch:flameater"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:chlam",
+            "catch:charp",
+            "catch:seamare"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:gupp",
+            "catch:scuffer",
+            "catch:stonewhal"
+          ]
+        },
+        {
+          "kind": "any",
+          "of": [
+            "catch:trout",
+            "catch:bass",
+            "catch:sturgeon"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:urge-to-sing",
+    "name": "Urge to Sing",
+    "description": "Compel Orpheus to sing again.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:urge-to-sing"
+      ]
+    }
+  },
+  {
+    "id": "achievement:nyxs-mirror",
+    "name": "Nyx's Mirror",
+    "description": "Have at least one rank in each Mirror of Night Talent.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "talent:abyssal-blood",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:boiling-blood",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:chthonic-vitality",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:dark-foresight",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:dark-regeneration",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:death-defiance",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:deep-pockets",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:family-favorite",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:fated-authority",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:fated-persuasion",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:fiery-presence",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:gods-legacy",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:gods-pride",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:golden-touch",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:greater-reflex",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:high-confidence",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:infernal-soul",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:olympian-favor",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:privileged-status",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:ruthless-reflex",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:shadow-presence",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:stubborn-defiance",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:stygian-soul",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "talent:thick-skin",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "achievement:night-and-darkness",
+    "name": "Night and Darkness",
+    "description": "Fulfill the 'Night and Darkness' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:eldest-sigil-restoration",
+        "talk:nyx-in-chaos-realm"
+      ]
+    }
+  },
+  {
+    "id": "achievement:chthonic-colleagues",
+    "name": "Chthonic Colleagues",
+    "description": "Fulfill the 'Chthonic Colleagues' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "meet:hades",
+        "meet:nyx",
+        "meet:charon",
+        "meet:thanatos",
+        "meet:hypnos",
+        "meet:megaera",
+        "meet:alecto",
+        "meet:tisiphone",
+        "meet:chaos"
+      ]
+    }
+  },
+  {
+    "id": "achievement:war-gods-bloodlust",
+    "name": "War-God's Bloodlust",
+    "description": "Fulfill the 'War-God's Bloodlust' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "combat:foes-slain",
+          "value": 10000
+        },
+        "talk:ares-after-10000-foes"
+      ]
+    }
+  },
+  {
+    "id": "achievement:end-to-torment",
+    "name": "End to Torment",
+    "description": "Fulfill the 'End to Torment' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence"
+      ]
+    }
+  },
+  {
+    "id": "achievement:musician-and-muse",
+    "name": "Musician and Muse",
+    "description": "Fulfill the 'Musician and Muse' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "nectar:orpheus",
+          "value": 1
+        },
+        {
+          "kind": "atLeast",
+          "fact": "nectar:eurydice",
+          "value": 1
+        },
+        "workorder:singers-gamble",
+        "talk:orpheus-after-singers-gamble"
+      ]
+    }
+  },
+  {
+    "id": "achievement:divided-by-death",
+    "name": "Divided by Death",
+    "description": "Fulfill the 'Divided by Death' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:heros-sacrifice",
+        "talk:achilles-after-heros-sacrifice"
+      ]
+    }
+  },
+  {
+    "id": "achievement:dark-reflections",
+    "name": "Dark Reflections",
+    "description": "Fulfill the 'Dark Reflections' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "talent:shadow-presence",
+        "talent:fiery-presence",
+        "talent:chthonic-vitality",
+        "talent:dark-regeneration",
+        "talent:death-defiance",
+        "talent:stubborn-defiance",
+        "talent:greater-reflex",
+        "talent:ruthless-reflex",
+        "talent:boiling-blood",
+        "talent:abyssal-blood",
+        "talent:infernal-soul",
+        "talent:stygian-soul",
+        "talent:deep-pockets",
+        "talent:golden-touch",
+        "talent:thick-skin",
+        "talent:high-confidence",
+        "talent:privileged-status",
+        "talent:family-favorite",
+        "talent:olympian-favor",
+        "talent:dark-foresight",
+        "talent:gods-pride",
+        "talent:gods-legacy",
+        "talent:fated-authority",
+        "talent:fated-persuasion"
+      ]
+    }
+  },
+  {
+    "id": "achievement:harsh-conditions",
+    "name": "Harsh Conditions",
+    "description": "Fulfill the 'Harsh Conditions' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "pact:hard-labor",
+        "pact:lasting-consequences",
+        "pact:convenience-fee",
+        "pact:jury-summons",
+        "pact:extreme-measures",
+        "pact:calisthenics-program",
+        "pact:benefits-package",
+        "pact:middle-management",
+        "pact:underworld-customs",
+        "pact:forced-overtime",
+        "pact:heightened-security",
+        "pact:routine-inspection",
+        "pact:damage-control",
+        "pact:approval-process",
+        "pact:tight-deadline"
+      ]
+    }
+  },
+  {
+    "id": "achievement:master-of-arms",
+    "name": "Master of Arms",
+    "description": "Fulfill the 'Master of Arms' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "escape:stygian-blade",
+        "escape:eternal-spear",
+        "escape:shield-of-chaos",
+        "escape:heart-seeking-bow",
+        "escape:twin-fists-of-malphon",
+        "escape:adamant-rail"
+      ]
+    }
+  },
+  {
+    "id": "achievement:slashed-benefits",
+    "name": "Slashed Benefits",
+    "description": "Fulfill the 'Slashed Benefits' Prophecy.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "perk:shifter",
+        "perk:bruiser",
+        "perk:slugger",
+        "perk:puller",
+        "perk:savior",
+        "perk:speeder",
+        "perk:linker",
+        "perk:cloner",
+        "perk:burner",
+        "perk:seeker",
+        "perk:popper"
+      ]
+    }
+  },
+  {
+    "id": "achievement:back-to-work",
+    "name": "Back to Work",
+    "description": "Earn access to and enter the Administrative Chamber.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:back-to-work"
+      ]
+    }
+  },
+  {
+    "id": "achievement:the-family-secret",
+    "name": "The Family Secret",
+    "description": "Complete the main quest in the story.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:the-family-secret"
+      ]
+    }
+  },
+  {
+    "id": "achievement:one-for-the-ages",
+    "name": "One for the Ages",
+    "description": "Reach the epilogue of the story.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:one-for-the-ages"
+      ]
+    }
+  },
+  {
+    "id": "achievement:well-stocked",
+    "name": "Well Stocked",
+    "description": "Buy 9 'Well of Charon' items in one escape attempt.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:well-stocked"
+      ]
+    }
+  },
+  {
+    "id": "achievement:thorn-of-thanatos",
+    "name": "Thorn of Thanatos",
+    "description": "Get 30% bonus damage with the Pierced Butterfly.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:thorn-of-thanatos"
+      ]
+    }
+  },
+  {
+    "id": "achievement:haste-of-hermes",
+    "name": "Haste of Hermes",
+    "description": "Get 20% dodge chance with the Lambent Plume.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:haste-of-hermes"
+      ]
+    }
+  },
+  {
+    "id": "achievement:death-dealer",
+    "name": "Death Dealer",
+    "description": "Beat Thanatos by 15 kills or more.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:death-dealer"
+      ]
+    }
+  },
+  {
+    "id": "achievement:friends-in-high-places",
+    "name": "Friends in High Places",
+    "description": "Use Greater Call to invoke an Olympian's aid.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:friends-in-high-places"
+      ]
+    }
+  },
+  {
+    "id": "achievement:bad-call",
+    "name": "Bad Call",
+    "description": "Use an Olympian's Greater Call against them in a Trial.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:bad-call"
+      ]
+    }
+  },
+  {
+    "id": "achievement:skelly-slayer",
+    "name": "Skelly Slayer",
+    "description": "Slay Skelly 15 times.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "achievement:skelly-slayer"
+      ]
+    }
+  },
+  {
+    "id": "achievement:three-headed-boy",
+    "name": "Three-Headed Boy",
+    "description": "Pet Cerberus 10 times.",
+    "collection": "achievement",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        {
+          "kind": "atLeast",
+          "fact": "pet:cerberus",
+          "value": 10
+        }
+      ]
+    }
+  }
+]

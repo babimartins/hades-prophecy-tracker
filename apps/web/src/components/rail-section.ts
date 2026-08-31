@@ -1,5 +1,5 @@
 import { dataset } from '@hades/data'
-import { achievementProgress, collectFactIds, type FactMap } from '@hades/engine'
+import { achievementProgress, collectFactIds, isComplete, type FactMap } from '@hades/engine'
 import type { Achievement, Fact } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
@@ -28,6 +28,14 @@ interface Group {
   facts: Fact[]
   achievements: Achievement[]
 }
+
+/**
+ * The one trophy awarded for earning every other trophy.
+ *
+ * Named by id because the game has exactly one of that shape, the way
+ * `subject-labels.ts` names the nine Olympians.
+ */
+const DERIVED_TROPHY = 'achievement:god-of-blood'
 
 const factById = new Map(dataset.facts.map((fact) => [fact.id, fact]))
 const collectionDescription = new Map(
@@ -85,7 +93,12 @@ function groupsFor(section: RailSectionId): Group[] {
         label: 'Platform achievements',
         about: collectionDescription.get('achievement'),
         facts: [],
-        achievements: [],
+        // God of Blood is the capstone, so it reads last. The wiki lists it
+        // first, where its roll-up over the other 49 looks like the section
+        // total rather than one more trophy.
+        achievements: dataset.achievements
+          .filter((a) => a.collection === 'achievement')
+          .sort((a, b) => Number(a.id === DERIVED_TROPHY) - Number(b.id === DERIVED_TROPHY)),
       },
     ]
   }
@@ -162,6 +175,55 @@ export class RailSection extends LitElement {
       font-family: var(--hd-font-display, serif);
       font-size: 1.25rem;
       margin: 0;
+    }
+
+    /* The generic li rule below is a centred flex row for a single fact. A
+       trophy is a block with a heading and its own list, so it opts out. */
+    .trophy {
+      align-items: stretch;
+      border-bottom: 0;
+      border-top: 1px solid ${colorVar('--hd-color-surface')};
+      display: block;
+      padding: 12px 0;
+    }
+
+    .trophy:first-child {
+      border-top: none;
+    }
+
+    .thead {
+      align-items: baseline;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    .thead h3 {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .tnum {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.78rem;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .tnum.done {
+      color: ${colorVar('--hd-color-done')};
+    }
+
+    .tdesc {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.78rem;
+      margin: 4px 0 0;
+    }
+
+    .tfacts {
+      list-style: none;
+      margin: 6px 0 0;
+      padding: 0;
     }
 
     .panehead {
@@ -290,6 +352,21 @@ export class RailSection extends LitElement {
 
   #items(): RailItem[] {
     return this.groups.map((group) => {
+      if (group.achievements.length > 1) {
+        // The only group counted in achievements rather than facts, so the
+        // sub-label names the unit. `subjectProgress` counts facts and
+        // `overallProgress` counts achievements, and the two never add up.
+        const earned = group.achievements.filter((achievement) =>
+          isComplete(achievementProgress(achievement, this.facts)),
+        ).length
+        return {
+          id: group.id,
+          label: group.label,
+          done: earned,
+          total: group.achievements.length,
+          sub: 'trophies earned',
+        }
+      }
       if (group.achievements.length === 1) {
         const progress = achievementProgress(group.achievements[0]!, this.facts)
         return { id: group.id, label: group.label, done: progress.done, total: progress.total }
@@ -353,7 +430,16 @@ export class RailSection extends LitElement {
       ${single
         ? html`<p class="single">One action. It is not folded away and it is not padded out.</p>`
         : nothing}
-      ${group.facts.length === 0
+      ${group.achievements.length > 1
+        ? html`
+            <ul class="trophies">
+              ${group.achievements.map((trophy) => this.#trophy(trophy, group))}
+            </ul>
+          `
+        : nothing}
+      ${group.achievements.length > 1
+        ? nothing
+        : group.facts.length === 0
         ? html`<p class="single">Nothing is tracked here yet.</p>`
         : html`
             <ul>
@@ -366,6 +452,55 @@ export class RailSection extends LitElement {
               )}
             </ul>
           `}
+    `
+  }
+
+  /**
+   * One trophy, with every action it needs listed under it.
+   *
+   * God of Blood is "Earn all other Trophies", so its requirement is literally
+   * the other 49 requirements: 207 distinct facts, every one of them already
+   * shown under the trophy it belongs to. Repeating them would make the pane
+   * twice as long and no more informative, so it shows its roll-up and says
+   * where its actions live. It is named by id because the game has exactly one
+   * trophy of that shape, the way `subject-labels.ts` names the nine Olympians.
+   */
+  #trophy(trophy: Achievement, group: Group): TemplateResult {
+    const derived = trophy.id === DERIVED_TROPHY
+    // Its own evaluation sums the units of all 49 requirements. That comes to
+    // 10283. The number is true and useless. It counts trophies, not units.
+    const others = group.achievements.filter((other) => other.id !== trophy.id)
+    const progress = derived
+      ? {
+          done: others.filter((other) => isComplete(achievementProgress(other, this.facts)))
+            .length,
+          total: others.length,
+        }
+      : achievementProgress(trophy, this.facts)
+    const facts = derived ? [] : factsOf(trophy)
+    return html`
+      <li class="trophy" data-achievement=${trophy.id}>
+        <div class="thead">
+          <h3>${trophy.name}</h3>
+          <span class="tnum ${progress.done >= progress.total ? 'done' : ''}"
+            >${progress.done}/${progress.total}</span
+          >
+        </div>
+        ${trophy.description ? html`<p class="tdesc">${trophy.description}</p>` : nothing}
+        ${derived
+          ? html`<p class="tdesc">Its actions are the other 49 trophies on this list.</p>`
+          : html`
+              <ul class="tfacts">
+                ${facts.map(
+                  (fact) => html`
+                    <li data-fact=${fact.id} class=${factState(fact, this.facts)}>
+                      <fact-row .fact=${fact} .facts=${this.facts}></fact-row>
+                    </li>
+                  `,
+                )}
+              </ul>
+            `}
+      </li>
     `
   }
 }
