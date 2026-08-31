@@ -388,3 +388,14 @@ An outer rule beats the component's own `:host`. `rail-view` declares
 column: the rail rendered 119px wide against the 290px every other section
 gets. Set only the properties the parent owns, which are the flex or grid child
 properties, never the child's own layout mode.
+
+### Spacing comes from the scale, never from a number
+
+`spaceVar('--hd-space-N')` from `@hades/ui`, with steps 2, 4, 8, 12, 16, 24, 32.
+`apps/web/test/spacing.test.ts` reads the component sources and fails on a raw
+pixel value or a token outside the scale.
+
+**Never use the `padding` shorthand on a shared layout class.** `.wrap` carried
+`padding: 0 20px` and beat `main { padding-top }` and `footer { padding }` on
+specificity, silently zeroing both for months. Use `padding-inline` or
+`padding-block` so a rule can only touch the axis it means.

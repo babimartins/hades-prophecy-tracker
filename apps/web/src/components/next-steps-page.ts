@@ -1,7 +1,7 @@
 import { dataset } from '@hades/data'
 import { factTargets, nextSteps, unlockedBy, type FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
 import { DERIVED_FROM } from '../lib/derived.js'
 import { PLACES, PLACE_LABEL, placeOf, type Place } from '../lib/where.js'
@@ -65,7 +65,7 @@ export class NextStepsPage extends LitElement {
     .lede {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.8rem;
-      margin: 0 0 14px;
+      margin: 0 0 ${spaceVar('--hd-space-4')};
       max-width: 62ch;
     }
 
@@ -79,7 +79,7 @@ export class NextStepsPage extends LitElement {
     }
 
     .panehead {
-      margin-bottom: 12px;
+      margin-bottom: ${spaceVar('--hd-space-3')};
     }
 
     h2 {
@@ -91,7 +91,7 @@ export class NextStepsPage extends LitElement {
     .count {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.72rem;
-      margin: 2px 0 10px;
+      margin: ${spaceVar('--hd-space-hair')} 0 ${spaceVar('--hd-space-3')};
     }
 
     ul {
@@ -102,7 +102,7 @@ export class NextStepsPage extends LitElement {
 
     li {
       border-bottom: 1px solid ${colorVar('--hd-color-surface')};
-      padding: 8px 0;
+      padding: ${spaceVar('--hd-space-2')} 0;
     }
 
     li:last-child {
@@ -118,7 +118,7 @@ export class NextStepsPage extends LitElement {
     .unlocks {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.72rem;
-      margin: 2px 0 0;
+      margin: ${spaceVar('--hd-space-hair')} 0 0;
     }
 
     .empty {

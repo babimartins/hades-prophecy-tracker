@@ -1,7 +1,7 @@
 import { dataset } from '@hades/data'
 import { achievementProgress, isComplete, subjectsOfType } from '@hades/engine'
 import type { FactMap } from '@hades/engine'
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
 import { ProgressState } from '../state/progress-state.js'
 import { createIndexedDbStore } from '../storage/indexeddb-store.js'
@@ -76,25 +76,32 @@ export class AppShell extends LitElement {
       overflow: hidden;
     }
 
+    /* padding-inline, not the padding shorthand. As padding: 0 20px this rule
+       beat the main and footer rules on specificity and silently zeroed their
+       vertical padding, so the content sat flush against the header and the
+       footer buttons had no room at all. */
     .wrap {
       box-sizing: border-box;
       margin: 0 auto;
       max-width: 1120px;
-      padding: 0 20px;
+      padding-inline: ${spaceVar('--hd-space-5')};
       width: 100%;
     }
 
+    /* No divider. The header's own surface colour separates it from the page,
+       and the active tab's indicator is the only line in the region. Carrying
+       a border here as well put two parallel lines a tab's height apart, which
+       reads as a stray rule rather than as an edge. */
     header {
       background: ${colorVar('--hd-color-surface')};
-      border-bottom: 1px solid ${colorVar('--hd-color-muted')};
       flex: none;
     }
 
     .top {
       align-items: center;
       display: flex;
-      gap: 16px;
-      padding-top: 14px;
+      gap: ${spaceVar('--hd-space-4')};
+      padding-top: ${spaceVar('--hd-space-4')};
     }
 
     h1 {
@@ -116,10 +123,14 @@ export class AppShell extends LitElement {
       font-variant-numeric: tabular-nums;
     }
 
+    /* No padding below the tabs. The active tab's indicator has to land on
+       the header's own divider; separated from it by even a little, the two
+       read as a pair of stray parallel lines. The room between the tabs and
+       the content is main's padding-top instead. */
     nav {
       display: flex;
-      gap: 2px;
-      margin-top: 12px;
+      gap: ${spaceVar('--hd-space-hair')};
+      margin-top: ${spaceVar('--hd-space-3')};
       overflow-x: auto;
       scrollbar-width: none;
     }
@@ -136,7 +147,7 @@ export class AppShell extends LitElement {
       color: ${colorVar('--hd-color-muted')};
       cursor: pointer;
       font: inherit;
-      padding: 9px 15px;
+      padding: ${spaceVar('--hd-space-2')} ${spaceVar('--hd-space-4')};
       white-space: nowrap;
     }
 
@@ -161,15 +172,15 @@ export class AppShell extends LitElement {
       flex-direction: column;
       min-height: 0;
       overflow: hidden;
-      padding-top: 22px;
+      padding-top: ${spaceVar('--hd-space-5')};
     }
 
     .phead {
       align-items: baseline;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin: 0 0 12px;
+      gap: ${spaceVar('--hd-space-3')};
+      margin: 0 0 ${spaceVar('--hd-space-3')};
     }
 
     .phead h2 {
@@ -199,7 +210,7 @@ export class AppShell extends LitElement {
       color: ${colorVar('--hd-color-muted')};
       flex: none;
       font-size: 0.72rem;
-      padding: 10px 0;
+      padding-block: ${spaceVar('--hd-space-3')};
     }
 
     .error {
@@ -209,7 +220,7 @@ export class AppShell extends LitElement {
     footer {
       align-items: center;
       display: flex;
-      gap: 12px;
+      gap: ${spaceVar('--hd-space-3')};
       justify-content: space-between;
     }
   `
@@ -274,7 +285,7 @@ export class AppShell extends LitElement {
       case 'next':
         return 'what to do, and where you do it'
       case 'characters':
-        return `${SHOWN_CHARACTERS} of ${TOTAL_CHARACTERS} characters · ${facts('nectar')} with affinity`
+        return `${TOTAL_CHARACTERS} characters · ${SHOWN_CHARACTERS} with more than combat · ${facts('nectar')} with affinity`
       case 'weapons':
         return `${subjectsOfType(dataset, 'weapon').length} weapons · ${facts('aspect')} aspects · ${facts('daedalus')} enchantments`
       case 'fated': {

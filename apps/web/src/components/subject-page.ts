@@ -7,7 +7,7 @@ import {
   type FactMap,
 } from '@hades/engine'
 import type { Fact, Subject } from '@hades/schema'
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
 import { factState } from './fact-row.js'
 import './fact-row.js'
@@ -64,7 +64,7 @@ export class SubjectPage extends LitElement {
       cursor: pointer;
       font: inherit;
       font-size: 0.8rem;
-      margin-bottom: 12px;
+      margin-bottom: ${spaceVar('--hd-space-3')};
       padding: 0;
       text-align: left;
     }
@@ -74,8 +74,8 @@ export class SubjectPage extends LitElement {
       border-bottom: 1px solid ${colorVar('--hd-color-muted')};
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      padding-bottom: 14px;
+      gap: ${spaceVar('--hd-space-4')};
+      padding-bottom: ${spaceVar('--hd-space-4')};
     }
 
     h2 {
@@ -87,21 +87,21 @@ export class SubjectPage extends LitElement {
     .sub {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.78rem;
-      margin-top: 2px;
+      margin-top: ${spaceVar('--hd-space-hair')};
     }
 
     .caps {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
+      gap: ${spaceVar('--hd-space-2')};
+      margin-top: ${spaceVar('--hd-space-2')};
     }
 
     .tag {
       border: 1px solid ${colorVar('--hd-color-muted')};
       border-radius: 20px;
       font-size: 0.68rem;
-      padding: 2px 8px;
+      padding: ${spaceVar('--hd-space-hair')} ${spaceVar('--hd-space-2')};
       white-space: nowrap;
     }
 
@@ -129,13 +129,13 @@ export class SubjectPage extends LitElement {
       flex: 1;
       min-height: 0;
       overflow-y: auto;
-      padding: 16px 4px 16px 0;
+      padding: ${spaceVar('--hd-space-4')} ${spaceVar('--hd-space-1')} ${spaceVar('--hd-space-4')} 0;
     }
 
     section {
       border: 1px solid ${colorVar('--hd-color-muted')};
       border-radius: 12px;
-      margin-bottom: 14px;
+      margin-bottom: ${spaceVar('--hd-space-4')};
     }
 
     .block-head {
@@ -144,8 +144,8 @@ export class SubjectPage extends LitElement {
       border-bottom: 1px solid ${colorVar('--hd-color-muted')};
       border-radius: 11px 11px 0 0;
       display: flex;
-      gap: 10px;
-      padding: 11px 14px;
+      gap: ${spaceVar('--hd-space-3')};
+      padding: ${spaceVar('--hd-space-3')} ${spaceVar('--hd-space-4')};
     }
 
     h3 {
@@ -171,15 +171,15 @@ export class SubjectPage extends LitElement {
     ul {
       list-style: none;
       margin: 0;
-      padding: 4px 14px 10px;
+      padding: ${spaceVar('--hd-space-1')} ${spaceVar('--hd-space-4')} ${spaceVar('--hd-space-3')};
     }
 
     li {
       align-items: center;
       border-bottom: 1px solid ${colorVar('--hd-color-surface')};
       display: flex;
-      gap: 10px;
-      padding: 7px 0;
+      gap: ${spaceVar('--hd-space-3')};
+      padding: ${spaceVar('--hd-space-2')} 0;
     }
 
     li:last-child {
@@ -200,7 +200,7 @@ export class SubjectPage extends LitElement {
       color: ${colorVar('--hd-color-muted')};
       display: block;
       font-size: 0.72rem;
-      margin-top: 2px;
+      margin-top: ${spaceVar('--hd-space-hair')};
     }
 
     .reveal {
@@ -211,7 +211,7 @@ export class SubjectPage extends LitElement {
       cursor: pointer;
       font: inherit;
       font-size: 0.72rem;
-      padding: 2px 8px;
+      padding: ${spaceVar('--hd-space-hair')} ${spaceVar('--hd-space-2')};
     }
   `
 

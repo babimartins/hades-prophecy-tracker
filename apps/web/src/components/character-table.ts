@@ -7,7 +7,7 @@ import {
   type FactMap,
 } from '@hades/engine'
 import type { Subject } from '@hades/schema'
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
 import { CODEX_SECTION_LABEL, markersFor, sectionOf } from '../lib/subject-labels.js'
 
@@ -55,7 +55,15 @@ function numeric(value: boolean | number | undefined): number {
   return value === true ? 1 : 0
 }
 
-export type FilterId = 'all' | 'olympian' | 'affinity' | 'fightable' | 'favor' | 'companion' | 'foes'
+export type FilterId =
+  | 'all'
+  | 'olympian'
+  | 'affinity'
+  | 'fightable'
+  | 'favor'
+  | 'companion'
+  | 'not-foes'
+  | 'foes'
 
 /**
  * A foe is a character whose only capabilities are `codex` and `combat`. The
@@ -69,7 +77,9 @@ export function isFoe(row: CharacterRow): boolean {
 }
 
 const FILTERS: readonly { id: FilterId; label: string; match: (row: CharacterRow) => boolean }[] = [
-  { id: 'all', label: 'All', match: (row) => !isFoe(row) },
+  // All means all 73. It used to hide the 39 foes, so it read "All · 34"
+  // beside a heading saying 73 and the two numbers argued with each other.
+  { id: 'all', label: 'All', match: () => true },
   { id: 'olympian', label: 'Olympians', match: (row) => row.markers.includes('Olympian') },
   { id: 'affinity', label: 'With affinity', match: (row) => row.hearts !== null },
   { id: 'fightable', label: 'Fightable', match: (row) => row.markers.includes('Fightable') },
@@ -82,6 +92,10 @@ const FILTERS: readonly { id: FilterId; label: string; match: (row: CharacterRow
     label: 'Gives a companion',
     match: (row) => row.markers.includes('Gives a companion'),
   },
+  // The pair at the end splits the roster in two: 34 with something to do
+  // beyond fighting, 39 without. They sit together so the sum reads at a
+  // glance.
+  { id: 'not-foes', label: 'Not foes', match: (row) => !isFoe(row) },
   { id: 'foes', label: 'Foes', match: (row) => isFoe(row) },
 ]
 
@@ -97,8 +111,8 @@ export class CharacterTable extends LitElement {
     .filters {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin: 0 0 14px;
+      gap: ${spaceVar('--hd-space-2')};
+      margin: 0 0 ${spaceVar('--hd-space-4')};
     }
 
     .chip {
@@ -109,7 +123,7 @@ export class CharacterTable extends LitElement {
       cursor: pointer;
       font: inherit;
       font-size: 0.75rem;
-      padding: 5px 12px;
+      padding: ${spaceVar('--hd-space-1')} ${spaceVar('--hd-space-3')};
     }
 
     .chip[aria-pressed='true'] {
@@ -122,7 +136,7 @@ export class CharacterTable extends LitElement {
       border: 1px solid ${colorVar('--hd-color-muted')};
       border-radius: 12px;
       flex: 1;
-      margin-bottom: 14px;
+      margin-bottom: ${spaceVar('--hd-space-4')};
       min-height: 0;
       overflow: auto;
     }
@@ -136,7 +150,7 @@ export class CharacterTable extends LitElement {
     th,
     td {
       border-bottom: 1px solid ${colorVar('--hd-color-muted')};
-      padding: 9px 14px;
+      padding: ${spaceVar('--hd-space-2')} ${spaceVar('--hd-space-4')};
       text-align: left;
       vertical-align: middle;
     }
@@ -194,7 +208,7 @@ export class CharacterTable extends LitElement {
 
     .pips {
       display: inline-flex;
-      gap: 3px;
+      gap: ${spaceVar('--hd-space-1')};
       vertical-align: middle;
     }
 
@@ -214,13 +228,13 @@ export class CharacterTable extends LitElement {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.72rem;
       font-variant-numeric: tabular-nums;
-      margin-left: 6px;
+      margin-left: ${spaceVar('--hd-space-2')};
     }
 
     .cellnum {
       align-items: center;
       display: flex;
-      gap: 8px;
+      gap: ${spaceVar('--hd-space-2')};
     }
 
     .bar {
@@ -250,8 +264,8 @@ export class CharacterTable extends LitElement {
       border-radius: 20px;
       display: inline-block;
       font-size: 0.68rem;
-      margin-right: 4px;
-      padding: 2px 8px;
+      margin-right: ${spaceVar('--hd-space-1')};
+      padding: ${spaceVar('--hd-space-hair')} ${spaceVar('--hd-space-2')};
       white-space: nowrap;
     }
 

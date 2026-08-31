@@ -885,3 +885,47 @@ rule, so the grid never applied. The rail shrank to its three short labels:
 
 The parent now sets only the properties it owns, the flex-child ones. A test
 pins the rendered width, and `AGENTS.md` carries the rule.
+
+## 61. A spacing scale, because there was none
+
+The owner said the header had too much room above the tabs, none between the
+tabs and the content, none around the footer buttons, and that it was all
+without a standard. She was right about the last part: the app used 2, 3, 4, 5,
+6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 20 and 22 pixels, very nearly every integer.
+
+`spaceTokens` holds a 4px base with one hairline below it: 2, 4, 8, 12, 16, 24,
+32. Every gap, pad and margin in every component now names one of them, and
+`apps/web/test/spacing.test.ts` reads the sources and fails on a raw pixel or an
+undeclared token.
+
+Two of her three complaints were the same bug. `main` and `footer` both carry
+`.wrap`, whose `padding: 0 20px` beat their own rules on specificity and zeroed
+their vertical padding. `main { padding-top: 22px }` and `footer { padding: 10px
+0 }` had never applied. `.wrap` uses `padding-inline` now, which cannot reach
+the vertical axis.
+
+## 62. One line under the tabs, not two
+
+Adding room below the tabs put the active tab's indicator and the header's own
+border a tab's height apart, reading as two stray parallel rules. The owner
+asked for the header's border to go: the surface colour already separates the
+header from the page, and the indicator is the only line the region needs.
+
+## 63. A row is one height whatever its control
+
+`hd-checklist-item` carried `padding: 6px 0` from when it was used directly in
+lists. Inside `fact-row` that doubled the row's own padding, so a checkbox row
+was 69px against a pip row's 52px in the same list. The component has exactly
+one consumer, so the padding moved to the consumer, and `.row` carries a
+`min-height` to hold a checkbox, a pip and a field at the same height.
+
+## 64. All means all 73
+
+The `All` chip filtered out the 39 foes, so it read "All · 34" beside a heading
+saying 73. The two numbers argued with each other, and the owner spotted it.
+
+`All` now matches everything and stays first and selected. A `Not foes · 34`
+chip sits beside `Foes · 39` so the split reads at a glance and the sum is
+visible. The cost is that the table opens with 39 rows that hold only a Codex
+entry, which is what the old default existed to avoid; she chose the honest
+label over the tidier opening.

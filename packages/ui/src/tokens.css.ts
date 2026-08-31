@@ -60,11 +60,38 @@ export const colorTokens = {
 export type ColorTokenName = keyof typeof colorTokens
 
 /**
- * Renders `colorTokens` as a CSS rule body. A consumer builds its own
- * `:root` stylesheet from this, so the two never fall out of sync.
+ * The spacing scale. Every gap, pad and margin in the application is one of
+ * these.
+ *
+ * Before it existed the app used 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15,
+ * 16, 20 and 22 pixels — very nearly every integer — so nothing lined up with
+ * anything and the owner could see it. The steps are a 4px base, doubling and
+ * then stepping by 8, with one hairline below the base for the gap between
+ * pips and between tabs.
+ */
+export const spaceTokens = {
+  '--hd-space-hair': '2px',
+  '--hd-space-1': '4px',
+  '--hd-space-2': '8px',
+  '--hd-space-3': '12px',
+  '--hd-space-4': '16px',
+  '--hd-space-5': '24px',
+  '--hd-space-6': '32px',
+} as const
+
+export type SpaceTokenName = keyof typeof spaceTokens
+
+/** `var(--token, fallback)` for one entry of `spaceTokens`. */
+export function spaceVar(name: SpaceTokenName) {
+  return unsafeCSS(`var(${name}, ${spaceTokens[name]})`)
+}
+
+/**
+ * Renders every token as a CSS rule body. A consumer builds its own `:root`
+ * stylesheet from this, so the two never fall out of sync.
  */
 export function rootTokensCss(selector = ':root'): string {
-  const declarations = Object.entries(colorTokens)
+  const declarations = Object.entries({ ...colorTokens, ...spaceTokens })
     .map(([name, value]) => `  ${name}: ${value};`)
     .join('\n')
   return `${selector} {\n${declarations}\n}`

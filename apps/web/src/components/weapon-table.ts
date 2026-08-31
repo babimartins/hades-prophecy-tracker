@@ -1,7 +1,7 @@
 import { dataset } from '@hades/data'
 import { subjectFacts, subjectsOfType, type FactMap } from '@hades/engine'
 import type { Fact, Subject } from '@hades/schema'
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement, type TemplateResult } from 'lit'
 import { displayId } from '../lib/subject-labels.js'
 
@@ -68,7 +68,7 @@ export class WeaponTable extends LitElement {
       border: 1px solid ${colorVar('--hd-color-muted')};
       border-radius: 12px;
       flex: 1;
-      margin-bottom: 14px;
+      margin-bottom: ${spaceVar('--hd-space-4')};
       min-height: 0;
       overflow: auto;
     }
@@ -82,7 +82,7 @@ export class WeaponTable extends LitElement {
     th,
     td {
       border-bottom: 1px solid ${colorVar('--hd-color-muted')};
-      padding: 9px 14px;
+      padding: ${spaceVar('--hd-space-2')} ${spaceVar('--hd-space-4')};
       text-align: left;
       vertical-align: middle;
     }
@@ -143,12 +143,12 @@ export class WeaponTable extends LitElement {
 
     .pipset {
       display: inline-flex;
-      gap: 14px;
+      gap: ${spaceVar('--hd-space-4')};
     }
 
     .pips {
       display: inline-flex;
-      gap: 3px;
+      gap: ${spaceVar('--hd-space-1')};
     }
 
     .pips i {
@@ -166,7 +166,7 @@ export class WeaponTable extends LitElement {
     .cellnum {
       align-items: center;
       display: flex;
-      gap: 8px;
+      gap: ${spaceVar('--hd-space-2')};
     }
 
     .bar {
@@ -219,7 +219,7 @@ export class WeaponTable extends LitElement {
       letter-spacing: normal;
       line-height: 1.5;
       opacity: 0;
-      padding: 9px 12px;
+      padding: ${spaceVar('--hd-space-2')} ${spaceVar('--hd-space-3')};
       position: absolute;
       text-transform: none;
       top: calc(100% + 8px);

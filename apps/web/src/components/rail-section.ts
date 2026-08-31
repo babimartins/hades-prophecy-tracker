@@ -7,7 +7,7 @@ import {
   type FactMap,
 } from '@hades/engine'
 import type { Achievement, Fact, RequirementChild } from '@hades/schema'
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { DERIVED_FROM, DERIVED_TROPHY } from '../lib/derived.js'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
 import { factState } from './fact-row.js'
@@ -236,7 +236,7 @@ export class RailSection extends LitElement {
       border-bottom: 0;
       border-top: 1px solid ${colorVar('--hd-color-surface')};
       display: block;
-      padding: 12px 0;
+      padding: ${spaceVar('--hd-space-3')} 0;
     }
 
     .trophy:first-child {
@@ -246,7 +246,7 @@ export class RailSection extends LitElement {
     .thead {
       align-items: baseline;
       display: flex;
-      gap: 10px;
+      gap: ${spaceVar('--hd-space-3')};
       justify-content: space-between;
     }
 
@@ -269,12 +269,12 @@ export class RailSection extends LitElement {
     .tdesc {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.78rem;
-      margin: 4px 0 0;
+      margin: ${spaceVar('--hd-space-1')} 0 0;
     }
 
     .tfacts {
       list-style: none;
-      margin: 6px 0 0;
+      margin: ${spaceVar('--hd-space-2')} 0 0;
       padding: 0;
     }
 
@@ -282,20 +282,20 @@ export class RailSection extends LitElement {
       align-items: flex-start;
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 14px;
+      gap: ${spaceVar('--hd-space-4')};
+      margin-bottom: ${spaceVar('--hd-space-4')};
     }
 
     .prose {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.82rem;
-      margin: 4px 0 0;
+      margin: ${spaceVar('--hd-space-1')} 0 0;
       max-width: 62ch;
     }
 
     .counting {
       font-size: 0.82rem;
-      margin: 6px 0 0;
+      margin: ${spaceVar('--hd-space-2')} 0 0;
     }
 
     .pnum {
@@ -321,15 +321,15 @@ export class RailSection extends LitElement {
       background: ${colorVar('--hd-color-surface')};
       border: 1px solid ${colorVar('--hd-color-muted')};
       border-radius: 10px;
-      margin: 0 0 14px;
-      padding: 12px 14px;
+      margin: 0 0 ${spaceVar('--hd-space-4')};
+      padding: ${spaceVar('--hd-space-3')} ${spaceVar('--hd-space-4')};
     }
 
     .about h3 {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.65rem;
       letter-spacing: 0.08em;
-      margin: 0 0 6px;
+      margin: 0 0 ${spaceVar('--hd-space-2')};
       text-transform: uppercase;
     }
 
@@ -342,8 +342,8 @@ export class RailSection extends LitElement {
       color: ${colorVar('--hd-color-muted')};
       display: flex;
       font-size: 0.8rem;
-      gap: 8px;
-      margin: 0 0 14px;
+      gap: ${spaceVar('--hd-space-2')};
+      margin: 0 0 ${spaceVar('--hd-space-4')};
     }
 
     .rule::before {
@@ -364,8 +364,8 @@ export class RailSection extends LitElement {
       align-items: center;
       border-bottom: 1px solid ${colorVar('--hd-color-surface')};
       display: flex;
-      gap: 10px;
-      padding: 7px 0;
+      gap: ${spaceVar('--hd-space-3')};
+      padding: ${spaceVar('--hd-space-2')} 0;
     }
 
     li:last-child {
@@ -380,7 +380,7 @@ export class RailSection extends LitElement {
     .single {
       color: ${colorVar('--hd-color-muted')};
       font-size: 0.8rem;
-      margin: 0 0 10px;
+      margin: 0 0 ${spaceVar('--hd-space-3')};
     }
   `
 

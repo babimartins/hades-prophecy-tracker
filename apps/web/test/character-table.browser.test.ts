@@ -42,23 +42,53 @@ describe('the Characters index', () => {
     await mount()
   })
 
-  it('shows exactly the characters that are more than a foe', () => {
-    // The bounds were 20 to 40, which could not see the split drift from
-    // 29/44 to 34/39. Derive both sides from the data instead.
+  it('opens on every character, because All says all', () => {
+    // It used to open on the 34 that are more than a foe, so the chip read
+    // "All · 34" beside a heading saying 73 and the two numbers argued.
     const characters = subjectsOfType(dataset, 'character')
     expect(characters).toHaveLength(73)
+    expect(rowNames()).toHaveLength(73)
+    expect(rowNames()).toContain('Zeus')
+    expect(rowNames()).toContain('Numbskull')
+  })
+
+  it('splits the roster in two with the pair at the end, and loses no one', async () => {
+    // The bounds were 20 to 40, which could not see the split drift from
+    // 29/44 to 34/39. Derive both sides from the data instead.
     const rows = buildRows({})
-    const expected = rows.filter((row) => !isFoe(row))
-    expect(rowNames().sort()).toEqual(expected.map((row) => row.subject.name).sort())
+    const notFoes = rows.filter((row) => !isFoe(row)).map((row) => row.subject.name)
+    const foes = rows.filter((row) => isFoe(row)).map((row) => row.subject.name)
+
+    chip('not-foes').click()
+    await table().updateComplete
+    expect(rowNames().sort()).toEqual([...notFoes].sort())
     expect(rowNames()).toContain('Zeus')
     expect(rowNames()).not.toContain('Numbskull')
+
+    chip('foes').click()
+    await table().updateComplete
+    expect(rowNames().sort()).toEqual([...foes].sort())
+
+    // Together they are the whole roster, with nobody in both and nobody left
+    // out: the two chips sit side by side so that sum reads at a glance.
+    expect(notFoes.length + foes.length).toBe(73)
+    expect(new Set([...notFoes, ...foes]).size).toBe(73)
   })
 
   it('counts each chip over the population it actually shows', async () => {
     // Counting across all 73 gave "Fightable · 42" beside "All · 34", and
     // clicking it surfaced the bare foes the default view hides on purpose.
     const counts: Record<string, number> = {}
-    for (const chipId of ['all', 'olympian', 'affinity', 'fightable', 'favor', 'companion', 'foes']) {
+    for (const chipId of [
+      'all',
+      'olympian',
+      'affinity',
+      'fightable',
+      'favor',
+      'companion',
+      'not-foes',
+      'foes',
+    ]) {
       const text = root().querySelector(`.chip[data-filter="${chipId}"]`)?.textContent ?? ''
       counts[chipId] = Number(text.split('·').at(-1)?.trim())
       chip(chipId).click()

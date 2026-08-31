@@ -1,6 +1,6 @@
 import { capabilityOf, type FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
 import { live } from 'lit/directives/live.js'
 
@@ -58,11 +58,14 @@ export class FactRow extends LitElement {
       display: block;
     }
 
+    /* One height for every control. A checkbox is 18px tall and a pip 13, so
+       without this a list steps up and down as the controls change. */
     .row {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: ${spaceVar('--hd-space-2')};
+      min-height: ${spaceVar('--hd-space-5')};
     }
 
     label {
@@ -83,7 +86,7 @@ export class FactRow extends LitElement {
       color: inherit;
       font: inherit;
       font-variant-numeric: tabular-nums;
-      padding: 2px 4px;
+      padding: ${spaceVar('--hd-space-hair')} ${spaceVar('--hd-space-1')};
       text-align: center;
       width: 3.4rem;
     }
@@ -103,8 +106,8 @@ export class FactRow extends LitElement {
       border-radius: 4px;
       cursor: pointer;
       display: inline-flex;
-      gap: 4px;
-      padding: 2px;
+      gap: ${spaceVar('--hd-space-1')};
+      padding: ${spaceVar('--hd-space-hair')};
     }
 
     .pips:focus-visible {
@@ -165,7 +168,7 @@ export class FactRow extends LitElement {
       cursor: pointer;
       font: inherit;
       font-size: 0.72rem;
-      padding: 2px 8px;
+      padding: ${spaceVar('--hd-space-hair')} ${spaceVar('--hd-space-2')};
     }
   `
 

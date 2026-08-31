@@ -1,5 +1,5 @@
 import type { FactMap } from '@hades/engine'
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement } from 'lit'
 import { parseTransfer, toTransfer } from '../storage/transfer.js'
 
@@ -8,7 +8,7 @@ export class TransferControls extends LitElement {
   static override readonly styles = css`
     .row {
       display: flex;
-      gap: 8px;
+      gap: ${spaceVar('--hd-space-2')};
     }
     button,
     label {
@@ -18,7 +18,7 @@ export class TransferControls extends LitElement {
       color: inherit;
       cursor: pointer;
       font: inherit;
-      padding: 6px 10px;
+      padding: ${spaceVar('--hd-space-2')} ${spaceVar('--hd-space-3')};
     }
     input[type='file'] {
       display: none;

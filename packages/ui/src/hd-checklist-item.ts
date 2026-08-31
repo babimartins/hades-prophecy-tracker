@@ -23,7 +23,10 @@ export class HdChecklistItem extends LitElement {
         cursor: pointer;
         display: flex;
         gap: var(--hd-gap);
-        padding: 6px 0;
+        /* No vertical padding. fact-row is this component's only consumer and
+           it owns the row's height, so padding here made a checkbox row 69px
+           against a pip row's 52px in the same list. */
+        padding: 0;
       }
       input {
         accent-color: ${colorVar('--hd-color-accent')};

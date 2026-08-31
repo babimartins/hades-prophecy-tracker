@@ -1,4 +1,4 @@
-import { colorVar } from '@hades/ui'
+import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
 
 export interface RailItem {
@@ -24,10 +24,10 @@ export class RailView extends LitElement {
     :host {
       display: grid;
       flex: 1;
-      gap: 18px;
+      gap: ${spaceVar('--hd-space-4')};
       grid-template-columns: 290px minmax(0, 1fr);
       min-height: 0;
-      padding-bottom: 14px;
+      padding-bottom: ${spaceVar('--hd-space-4')};
     }
 
     .rail {
@@ -46,7 +46,7 @@ export class RailView extends LitElement {
       cursor: pointer;
       display: block;
       font: inherit;
-      padding: 10px 14px;
+      padding: ${spaceVar('--hd-space-3')} ${spaceVar('--hd-space-4')};
       text-align: left;
       width: 100%;
     }
@@ -74,8 +74,8 @@ export class RailView extends LitElement {
       color: ${colorVar('--hd-color-muted')};
       display: flex;
       font-size: 0.68rem;
-      gap: 8px;
-      margin-top: 4px;
+      gap: ${spaceVar('--hd-space-2')};
+      margin-top: ${spaceVar('--hd-space-1')};
     }
 
     /* Every rail item but one counts facts. The one that counts something
@@ -84,7 +84,7 @@ export class RailView extends LitElement {
       color: ${colorVar('--hd-color-muted')};
       display: block;
       font-size: 0.64rem;
-      margin-top: 2px;
+      margin-top: ${spaceVar('--hd-space-hair')};
     }
 
     .bar {
@@ -115,7 +115,7 @@ export class RailView extends LitElement {
       min-height: 0;
       min-width: 0;
       overflow-y: auto;
-      padding-right: 4px;
+      padding-right: ${spaceVar('--hd-space-1')};
     }
 
     /*
