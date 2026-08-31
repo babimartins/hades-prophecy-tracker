@@ -26,53 +26,74 @@
     "description": "The son of the god of the dead shall someday inspire Queen Persephone to develop a plan that might settle the score between the House of Hades and Olympus.",
     "collection": "prophecy",
     "requirement": {
-      "kind": "count",
-      "n": 6,
+      "kind": "all",
       "of": [
         {
+          "kind": "count",
+          "n": 6,
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "nectar:zeus",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:poseidon",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:athena",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:aphrodite",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:artemis",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:ares",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:dionysus",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hermes",
+              "value": 8
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:demeter",
+              "value": 6
+            }
+          ]
+        },
+        "talk:persephone-about-returning",
+        {
           "kind": "atLeast",
-          "fact": "nectar:zeus",
-          "value": 1
+          "fact": "talk:hades-about-persephone",
+          "value": 2
         },
         {
           "kind": "atLeast",
-          "fact": "nectar:poseidon",
-          "value": 1
+          "fact": "talk:demeter-about-persephone",
+          "value": 4
         },
         {
           "kind": "atLeast",
-          "fact": "nectar:demeter",
-          "value": 1
-        },
-        {
-          "kind": "atLeast",
-          "fact": "nectar:athena",
-          "value": 1
-        },
-        {
-          "kind": "atLeast",
-          "fact": "nectar:aphrodite",
-          "value": 1
-        },
-        {
-          "kind": "atLeast",
-          "fact": "nectar:ares",
-          "value": 1
-        },
-        {
-          "kind": "atLeast",
-          "fact": "nectar:artemis",
-          "value": 1
-        },
-        {
-          "kind": "atLeast",
-          "fact": "nectar:dionysus",
-          "value": 1
-        },
-        {
-          "kind": "atLeast",
-          "fact": "nectar:hermes",
-          "value": 1
+          "fact": "talk:zeus-about-persephone",
+          "value": 2
         }
       ]
     }
@@ -84,7 +105,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:defeat-hades"]
+      "of": [
+        "combat:defeat-hades"
+      ]
     }
   },
   {
@@ -114,7 +137,10 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["workorder:eldest-sigil-restoration", "talk:nyx-in-chaos-realm"]
+      "of": [
+        "workorder:eldest-sigil-restoration",
+        "talk:nyx-in-chaos-realm"
+      ]
     }
   },
   {
@@ -124,7 +150,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["workorder:court-musicians-sentence"]
+      "of": [
+        "workorder:court-musicians-sentence"
+      ]
     }
   },
   {
@@ -157,7 +185,10 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["workorder:knave-kings-sentence", "talk:sisyphus-after-knave-kings-sentence"]
+      "of": [
+        "workorder:knave-kings-sentence",
+        "talk:sisyphus-after-knave-kings-sentence"
+      ]
     }
   },
   {
@@ -167,7 +198,10 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["workorder:heros-sacrifice", "talk:achilles-after-heros-sacrifice"]
+      "of": [
+        "workorder:heros-sacrifice",
+        "talk:achilles-after-heros-sacrifice"
+      ]
     }
   },
   {
@@ -232,7 +266,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:defeat-hades-with-cosmic-egg"]
+      "of": [
+        "combat:defeat-hades-with-cosmic-egg"
+      ]
     }
   },
   {
@@ -273,7 +309,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:defeat-charon-twice-consecutive"]
+      "of": [
+        "combat:defeat-charon-twice-consecutive"
+      ]
     }
   },
   {
@@ -617,7 +655,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:cerberus-stygius-arthur"]
+      "of": [
+        "combat:cerberus-stygius-arthur"
+      ]
     }
   },
   {
@@ -627,7 +667,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:cerberus-varatha-guan-yu"]
+      "of": [
+        "combat:cerberus-varatha-guan-yu"
+      ]
     }
   },
   {
@@ -637,7 +679,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:cerberus-coronacht-rama"]
+      "of": [
+        "combat:cerberus-coronacht-rama"
+      ]
     }
   },
   {
@@ -647,7 +691,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:cerberus-aegis-beowulf"]
+      "of": [
+        "combat:cerberus-aegis-beowulf"
+      ]
     }
   },
   {
@@ -657,7 +703,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:cerberus-malphon-gilgamesh"]
+      "of": [
+        "combat:cerberus-malphon-gilgamesh"
+      ]
     }
   },
   {
@@ -667,7 +715,9 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": ["combat:cerberus-exagryph-lucifer"]
+      "of": [
+        "combat:cerberus-exagryph-lucifer"
+      ]
     }
   },
   {
@@ -868,7 +918,9 @@
     "description": "The son of the god of the dead shall someday earn a magnificent tribute after breaking free from the realm in which he was born, despite the Pact of Punishment.",
     "requirement": {
       "kind": "all",
-      "of": ["combat:defeat-hades-heat8"]
+      "of": [
+        "combat:defeat-hades-heat8"
+      ]
     },
     "collection": "prophecy"
   },

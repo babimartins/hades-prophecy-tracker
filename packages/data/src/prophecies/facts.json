@@ -4667,5 +4667,57 @@
       "hades"
     ],
     "description": "Your Call becomes Hades' Aid, which briefly makes you Invisible; your God Gauge starts 10/20/30% full. Stealth Damage Bonus: +50/75/100%"
+  },
+  {
+    "id": "talk:persephone-about-returning",
+    "label": "Hear Persephone speak about her return to the House",
+    "kind": "boolean",
+    "collection": "prophecy",
+    "subjects": [
+      "persephone"
+    ],
+    "description": "One conversation. It comes shortly after Persephone returns."
+  },
+  {
+    "id": "talk:hades-about-persephone",
+    "label": "Hear Hades speak about Persephone and Olympus",
+    "kind": "number",
+    "max": 2,
+    "collection": "prophecy",
+    "subjects": [
+      "hades"
+    ],
+    "description": "Two conversations, in order. The first starts when you ask him how Persephone came to join him."
+  },
+  {
+    "id": "talk:demeter-about-persephone",
+    "label": "Hear Demeter speak about Persephone",
+    "kind": "number",
+    "max": 4,
+    "collection": "prophecy",
+    "subjects": [
+      "demeter"
+    ],
+    "description": "Four conversations, in order. Each has its own dialogue and affinity requirements."
+  },
+  {
+    "id": "talk:zeus-about-persephone",
+    "label": "Hear Zeus speak about Persephone",
+    "kind": "number",
+    "max": 2,
+    "collection": "prophecy",
+    "subjects": [
+      "zeus"
+    ],
+    "description": "Two conversations, in order."
+  },
+  {
+    "id": "ambrosia:total-given",
+    "label": "Ambrosia gifted, to any characters",
+    "kind": "number",
+    "max": 10,
+    "collection": "prophecy",
+    "subjects": [],
+    "description": "Counts every Ambrosia you give, to anyone. Dionysus' last heart stays locked below 10."
   }
 ]

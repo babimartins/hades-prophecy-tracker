@@ -1,5 +1,5 @@
 import { dataset } from '@hades/data'
-import { collectFactIds, type FactMap } from '@hades/engine'
+import { achievementProgress, collectFactIds, type FactMap } from '@hades/engine'
 import { html, render } from 'lit'
 import { beforeEach, describe, expect, it } from 'vitest'
 import type { RailSection, RailSectionId } from '../src/components/rail-section.js'
@@ -284,10 +284,14 @@ describe('what the rail pane must not lose', () => {
 
   it('shows the pane roll-up the rail already shows', async () => {
     await mount('fated')
-    const queens = dataset.achievements.find((a) => a.name === "The Queen's Plan")
-    railRoot().querySelector<HTMLButtonElement>(`button[data-item="${queens!.id}"]`)?.click()
+    const queens = dataset.achievements.find((a) => a.name === "The Queen's Plan")!
+    railRoot().querySelector<HTMLButtonElement>(`button[data-item="${queens.id}"]`)?.click()
     await section().updateComplete
-    expect(root().querySelector('.pnum')?.textContent).toContain('/6')
+    // 15, not the 6 this pinned when the requirement was the count alone: six
+    // bonds plus the nine conversations the Epilogue Guide names.
+    const rollup = achievementProgress(queens, {})
+    expect(rollup.total).toBe(15)
+    expect(root().querySelector('.pnum')?.textContent).toContain(`/${rollup.total}`)
   })
 
   it('gives a familiar system a counting rule and no explaining block', async () => {

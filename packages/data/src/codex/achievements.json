@@ -27,7 +27,9 @@
     "section": "chthonic-gods",
     "requirement": {
       "kind": "all",
-      "of": ["codex:zagreus"]
+      "of": [
+        "codex:zagreus"
+      ]
     }
   },
   {
@@ -139,7 +141,9 @@
     "section": "chthonic-gods",
     "requirement": {
       "kind": "all",
-      "of": ["codex:alecto"]
+      "of": [
+        "codex:alecto"
+      ]
     }
   },
   {
@@ -150,7 +154,9 @@
     "section": "chthonic-gods",
     "requirement": {
       "kind": "all",
-      "of": ["codex:tisiphone"]
+      "of": [
+        "codex:tisiphone"
+      ]
     }
   },
   {
@@ -327,6 +333,137 @@
           "kind": "atLeast",
           "fact": "nectar:dionysus",
           "value": 7
+        },
+        {
+          "kind": "count",
+          "n": 6,
+          "of": [
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hades",
+              "value": 5
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:nyx",
+              "value": 9
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:charon",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hypnos",
+              "value": 8
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:thanatos",
+              "value": 10
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:megaera",
+              "value": 10
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:chaos",
+              "value": 8
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:achilles",
+              "value": 9
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:sisyphus",
+              "value": 9
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:patroclus",
+              "value": 8
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:cerberus",
+              "value": 9
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:dusa",
+              "value": 10
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:skelly",
+              "value": 9
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:zeus",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:poseidon",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:demeter",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:athena",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:aphrodite",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:ares",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:artemis",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:dionysus",
+              "value": 7
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:hermes",
+              "value": 8
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:orpheus",
+              "value": 8
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:eurydice",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "kind": "atLeast",
+          "fact": "ambrosia:total-given",
+          "value": 10
         }
       ]
     }
@@ -493,7 +630,9 @@
     "section": "others-of-note",
     "requirement": {
       "kind": "all",
-      "of": ["codex:theseus"]
+      "of": [
+        "codex:theseus"
+      ]
     }
   },
   {
@@ -504,7 +643,9 @@
     "section": "others-of-note",
     "requirement": {
       "kind": "all",
-      "of": ["codex:asterius"]
+      "of": [
+        "codex:asterius"
+      ]
     }
   },
   {
@@ -589,7 +730,11 @@
     "section": "fables",
     "requirement": {
       "kind": "all",
-      "of": ["codex:companion-battie", "favor:megaera", "companion:battie"]
+      "of": [
+        "codex:companion-battie",
+        "favor:megaera",
+        "companion:battie"
+      ]
     }
   },
   {
@@ -600,7 +745,11 @@
     "section": "fables",
     "requirement": {
       "kind": "all",
-      "of": ["codex:companion-mort", "favor:thanatos", "companion:mort"]
+      "of": [
+        "codex:companion-mort",
+        "favor:thanatos",
+        "companion:mort"
+      ]
     }
   },
   {
@@ -692,7 +841,9 @@
     "section": "the-underworld",
     "requirement": {
       "kind": "all",
-      "of": ["codex:house-of-hades"]
+      "of": [
+        "codex:house-of-hades"
+      ]
     }
   },
   {
@@ -703,7 +854,10 @@
     "section": "the-underworld",
     "requirement": {
       "kind": "all",
-      "of": ["codex:chaos-realm", "meet:chaos"]
+      "of": [
+        "codex:chaos-realm",
+        "meet:chaos"
+      ]
     }
   },
   {
@@ -714,7 +868,10 @@
     "section": "the-underworld",
     "requirement": {
       "kind": "all",
-      "of": ["codex:erebus", "reach:erebus"]
+      "of": [
+        "codex:erebus",
+        "reach:erebus"
+      ]
     }
   },
   {
@@ -725,7 +882,9 @@
     "section": "the-underworld",
     "requirement": {
       "kind": "all",
-      "of": ["codex:tartarus"]
+      "of": [
+        "codex:tartarus"
+      ]
     }
   },
   {
@@ -736,7 +895,10 @@
     "section": "the-underworld",
     "requirement": {
       "kind": "all",
-      "of": ["codex:asphodel", "reach:asphodel"]
+      "of": [
+        "codex:asphodel",
+        "reach:asphodel"
+      ]
     }
   },
   {
@@ -747,7 +909,10 @@
     "section": "the-underworld",
     "requirement": {
       "kind": "all",
-      "of": ["codex:elysium", "reach:elysium"]
+      "of": [
+        "codex:elysium",
+        "reach:elysium"
+      ]
     }
   },
   {
@@ -758,7 +923,10 @@
     "section": "the-underworld",
     "requirement": {
       "kind": "all",
-      "of": ["codex:styx", "reach:styx"]
+      "of": [
+        "codex:styx",
+        "reach:styx"
+      ]
     }
   },
   {
@@ -769,7 +937,10 @@
     "section": "infernal-arms",
     "requirement": {
       "kind": "all",
-      "of": ["codex:stygian-blade", "weapon:stygian-blade"]
+      "of": [
+        "codex:stygian-blade",
+        "weapon:stygian-blade"
+      ]
     }
   },
   {
@@ -780,7 +951,10 @@
     "section": "infernal-arms",
     "requirement": {
       "kind": "all",
-      "of": ["codex:eternal-spear", "weapon:eternal-spear"]
+      "of": [
+        "codex:eternal-spear",
+        "weapon:eternal-spear"
+      ]
     }
   },
   {
@@ -791,7 +965,10 @@
     "section": "infernal-arms",
     "requirement": {
       "kind": "all",
-      "of": ["codex:heart-seeking-bow", "weapon:heart-seeking-bow"]
+      "of": [
+        "codex:heart-seeking-bow",
+        "weapon:heart-seeking-bow"
+      ]
     }
   },
   {
@@ -802,7 +979,10 @@
     "section": "infernal-arms",
     "requirement": {
       "kind": "all",
-      "of": ["codex:shield-of-chaos", "weapon:shield-of-chaos"]
+      "of": [
+        "codex:shield-of-chaos",
+        "weapon:shield-of-chaos"
+      ]
     }
   },
   {
@@ -813,7 +993,10 @@
     "section": "infernal-arms",
     "requirement": {
       "kind": "all",
-      "of": ["codex:twin-fists", "weapon:twin-fists-of-malphon"]
+      "of": [
+        "codex:twin-fists",
+        "weapon:twin-fists-of-malphon"
+      ]
     }
   },
   {
@@ -824,7 +1007,10 @@
     "section": "infernal-arms",
     "requirement": {
       "kind": "all",
-      "of": ["codex:adamant-rail", "weapon:adamant-rail"]
+      "of": [
+        "codex:adamant-rail",
+        "weapon:adamant-rail"
+      ]
     }
   },
   {
@@ -835,7 +1021,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:darkness", "artifact:darkness"]
+      "of": [
+        "codex:darkness",
+        "artifact:darkness"
+      ]
     }
   },
   {
@@ -846,7 +1035,9 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:bloodstones"]
+      "of": [
+        "codex:bloodstones"
+      ]
     }
   },
   {
@@ -857,7 +1048,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:infernal-trove", "artifact:infernal-trove"]
+      "of": [
+        "codex:infernal-trove",
+        "artifact:infernal-trove"
+      ]
     }
   },
   {
@@ -868,7 +1062,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:charons-obol", "artifact:charons-obol"]
+      "of": [
+        "codex:charons-obol",
+        "artifact:charons-obol"
+      ]
     }
   },
   {
@@ -879,7 +1076,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:centaur-heart", "artifact:centaur-heart"]
+      "of": [
+        "codex:centaur-heart",
+        "artifact:centaur-heart"
+      ]
     }
   },
   {
@@ -890,7 +1090,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:pom-of-power", "artifact:pom-of-power"]
+      "of": [
+        "codex:pom-of-power",
+        "artifact:pom-of-power"
+      ]
     }
   },
   {
@@ -901,7 +1104,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:daedalus-hammer", "artifact:daedalus-hammer"]
+      "of": [
+        "codex:daedalus-hammer",
+        "artifact:daedalus-hammer"
+      ]
     }
   },
   {
@@ -912,7 +1118,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:anvil-of-fates", "artifact:anvil-of-fates"]
+      "of": [
+        "codex:anvil-of-fates",
+        "artifact:anvil-of-fates"
+      ]
     }
   },
   {
@@ -923,7 +1132,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:chthonic-keys", "artifact:chthonic-keys"]
+      "of": [
+        "codex:chthonic-keys",
+        "artifact:chthonic-keys"
+      ]
     }
   },
   {
@@ -934,7 +1146,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:titan-blood", "artifact:titan-blood"]
+      "of": [
+        "codex:titan-blood",
+        "artifact:titan-blood"
+      ]
     }
   },
   {
@@ -945,7 +1160,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:gemstones", "artifact:gemstones"]
+      "of": [
+        "codex:gemstones",
+        "artifact:gemstones"
+      ]
     }
   },
   {
@@ -956,7 +1174,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:diamond", "artifact:diamond"]
+      "of": [
+        "codex:diamond",
+        "artifact:diamond"
+      ]
     }
   },
   {
@@ -967,7 +1188,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:nectar", "artifact:nectar"]
+      "of": [
+        "codex:nectar",
+        "artifact:nectar"
+      ]
     }
   },
   {
@@ -978,7 +1202,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:ambrosia", "artifact:ambrosia"]
+      "of": [
+        "codex:ambrosia",
+        "artifact:ambrosia"
+      ]
     }
   },
   {
@@ -989,7 +1216,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:loyalty-card", "artifact:loyalty-card"]
+      "of": [
+        "codex:loyalty-card",
+        "artifact:loyalty-card"
+      ]
     }
   },
   {
@@ -1000,7 +1230,10 @@
     "section": "artifacts",
     "requirement": {
       "kind": "all",
-      "of": ["codex:red-onion", "artifact:red-onion"]
+      "of": [
+        "codex:red-onion",
+        "artifact:red-onion"
+      ]
     }
   },
   {
@@ -1011,7 +1244,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:mati", "catch:mati"]
+      "of": [
+        "codex:mati",
+        "catch:mati"
+      ]
     }
   },
   {
@@ -1022,7 +1258,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:projelly", "catch:projelly"]
+      "of": [
+        "codex:projelly",
+        "catch:projelly"
+      ]
     }
   },
   {
@@ -1033,7 +1272,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:voidskate", "catch:voidskate"]
+      "of": [
+        "codex:voidskate",
+        "catch:voidskate"
+      ]
     }
   },
   {
@@ -1044,7 +1286,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:hellfish", "catch:hellfish"]
+      "of": [
+        "codex:hellfish",
+        "catch:hellfish"
+      ]
     }
   },
   {
@@ -1055,7 +1300,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:knucklehead", "catch:knucklehead"]
+      "of": [
+        "codex:knucklehead",
+        "catch:knucklehead"
+      ]
     }
   },
   {
@@ -1066,7 +1314,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:scyllascion", "catch:scyllascion"]
+      "of": [
+        "codex:scyllascion",
+        "catch:scyllascion"
+      ]
     }
   },
   {
@@ -1077,7 +1328,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:slavug", "catch:slavug"]
+      "of": [
+        "codex:slavug",
+        "catch:slavug"
+      ]
     }
   },
   {
@@ -1088,7 +1342,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:chrustacean", "catch:chrustacean"]
+      "of": [
+        "codex:chrustacean",
+        "catch:chrustacean"
+      ]
     }
   },
   {
@@ -1099,7 +1356,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:flameater", "catch:flameater"]
+      "of": [
+        "codex:flameater",
+        "catch:flameater"
+      ]
     }
   },
   {
@@ -1110,7 +1370,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:chlam", "catch:chlam"]
+      "of": [
+        "codex:chlam",
+        "catch:chlam"
+      ]
     }
   },
   {
@@ -1121,7 +1384,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:charp", "catch:charp"]
+      "of": [
+        "codex:charp",
+        "catch:charp"
+      ]
     }
   },
   {
@@ -1132,7 +1398,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:seamare", "catch:seamare"]
+      "of": [
+        "codex:seamare",
+        "catch:seamare"
+      ]
     }
   },
   {
@@ -1143,7 +1412,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:gupp", "catch:gupp"]
+      "of": [
+        "codex:gupp",
+        "catch:gupp"
+      ]
     }
   },
   {
@@ -1154,7 +1426,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:scuffer", "catch:scuffer"]
+      "of": [
+        "codex:scuffer",
+        "catch:scuffer"
+      ]
     }
   },
   {
@@ -1165,7 +1440,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:stonewhal", "catch:stonewhal"]
+      "of": [
+        "codex:stonewhal",
+        "catch:stonewhal"
+      ]
     }
   },
   {
@@ -1176,7 +1454,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:trout", "catch:trout"]
+      "of": [
+        "codex:trout",
+        "catch:trout"
+      ]
     }
   },
   {
@@ -1187,7 +1468,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:bass", "catch:bass"]
+      "of": [
+        "codex:bass",
+        "catch:bass"
+      ]
     }
   },
   {
@@ -1198,7 +1482,10 @@
     "section": "river-denizens",
     "requirement": {
       "kind": "all",
-      "of": ["codex:sturgeon", "catch:sturgeon"]
+      "of": [
+        "codex:sturgeon",
+        "catch:sturgeon"
+      ]
     }
   },
   {
@@ -1209,7 +1496,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:wretched-thug", "encounter:wretched-thug"]
+      "of": [
+        "codex:wretched-thug",
+        "encounter:wretched-thug"
+      ]
     }
   },
   {
@@ -1220,7 +1510,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:wretched-witch", "encounter:wretched-witch"]
+      "of": [
+        "codex:wretched-witch",
+        "encounter:wretched-witch"
+      ]
     }
   },
   {
@@ -1231,7 +1524,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:wretched-lout", "encounter:wretched-lout"]
+      "of": [
+        "codex:wretched-lout",
+        "encounter:wretched-lout"
+      ]
     }
   },
   {
@@ -1242,7 +1538,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:wretched-pest", "encounter:wretched-pest"]
+      "of": [
+        "codex:wretched-pest",
+        "encounter:wretched-pest"
+      ]
     }
   },
   {
@@ -1253,7 +1552,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:wretched-sneak", "encounter:wretched-sneak"]
+      "of": [
+        "codex:wretched-sneak",
+        "encounter:wretched-sneak"
+      ]
     }
   },
   {
@@ -1264,7 +1566,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:numbskull", "encounter:numbskull"]
+      "of": [
+        "codex:numbskull",
+        "encounter:numbskull"
+      ]
     }
   },
   {
@@ -1275,7 +1580,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:skullomat", "encounter:skullomat"]
+      "of": [
+        "codex:skullomat",
+        "encounter:skullomat"
+      ]
     }
   },
   {
@@ -1286,7 +1594,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:wringer", "encounter:wringer"]
+      "of": [
+        "codex:wringer",
+        "encounter:wringer"
+      ]
     }
   },
   {
@@ -1297,7 +1608,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:brimstone", "encounter:brimstone"]
+      "of": [
+        "codex:brimstone",
+        "encounter:brimstone"
+      ]
     }
   },
   {
@@ -1308,7 +1622,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:doomstone", "encounter:doomstone"]
+      "of": [
+        "codex:doomstone",
+        "encounter:doomstone"
+      ]
     }
   },
   {
@@ -1319,7 +1636,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:voidstone", "encounter:voidstone"]
+      "of": [
+        "codex:voidstone",
+        "encounter:voidstone"
+      ]
     }
   },
   {
@@ -1330,7 +1650,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:bloodless", "encounter:bloodless"]
+      "of": [
+        "codex:bloodless",
+        "encounter:bloodless"
+      ]
     }
   },
   {
@@ -1341,7 +1664,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:bone-raker", "encounter:bone-raker"]
+      "of": [
+        "codex:bone-raker",
+        "encounter:bone-raker"
+      ]
     }
   },
   {
@@ -1352,7 +1678,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:inferno-bomber", "encounter:inferno-bomber"]
+      "of": [
+        "codex:inferno-bomber",
+        "encounter:inferno-bomber"
+      ]
     }
   },
   {
@@ -1363,7 +1692,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:slam-dancer", "encounter:slam-dancer"]
+      "of": [
+        "codex:slam-dancer",
+        "encounter:slam-dancer"
+      ]
     }
   },
   {
@@ -1374,7 +1706,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:burn-flinger", "encounter:burn-flinger"]
+      "of": [
+        "codex:burn-flinger",
+        "encounter:burn-flinger"
+      ]
     }
   },
   {
@@ -1385,7 +1720,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:wave-maker", "encounter:wave-maker"]
+      "of": [
+        "codex:wave-maker",
+        "encounter:wave-maker"
+      ]
     }
   },
   {
@@ -1396,7 +1734,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:dracon", "encounter:dracon"]
+      "of": [
+        "codex:dracon",
+        "encounter:dracon"
+      ]
     }
   },
   {
@@ -1407,7 +1748,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:spreader", "encounter:spreader"]
+      "of": [
+        "codex:spreader",
+        "encounter:spreader"
+      ]
     }
   },
   {
@@ -1418,7 +1762,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:gorgon", "encounter:gorgon"]
+      "of": [
+        "codex:gorgon",
+        "encounter:gorgon"
+      ]
     }
   },
   {
@@ -1429,7 +1776,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:skull-crusher", "encounter:skull-crusher"]
+      "of": [
+        "codex:skull-crusher",
+        "encounter:skull-crusher"
+      ]
     }
   },
   {
@@ -1440,7 +1790,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:megagorgon", "encounter:megagorgon"]
+      "of": [
+        "codex:megagorgon",
+        "encounter:megagorgon"
+      ]
     }
   },
   {
@@ -1451,7 +1804,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:bone-hydra", "encounter:bone-hydra"]
+      "of": [
+        "codex:bone-hydra",
+        "encounter:bone-hydra"
+      ]
     }
   },
   {
@@ -1462,7 +1818,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:splitter", "encounter:splitter"]
+      "of": [
+        "codex:splitter",
+        "encounter:splitter"
+      ]
     }
   },
   {
@@ -1473,7 +1832,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:nemean-chariot", "encounter:nemean-chariot"]
+      "of": [
+        "codex:nemean-chariot",
+        "encounter:nemean-chariot"
+      ]
     }
   },
   {
@@ -1484,7 +1846,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:flame-wheel", "encounter:flame-wheel"]
+      "of": [
+        "codex:flame-wheel",
+        "encounter:flame-wheel"
+      ]
     }
   },
   {
@@ -1495,7 +1860,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:brightsword", "encounter:brightsword"]
+      "of": [
+        "codex:brightsword",
+        "encounter:brightsword"
+      ]
     }
   },
   {
@@ -1506,7 +1874,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:longspear", "encounter:longspear"]
+      "of": [
+        "codex:longspear",
+        "encounter:longspear"
+      ]
     }
   },
   {
@@ -1517,7 +1888,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:strongbow", "encounter:strongbow"]
+      "of": [
+        "codex:strongbow",
+        "encounter:strongbow"
+      ]
     }
   },
   {
@@ -1528,7 +1902,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:greatshield", "encounter:greatshield"]
+      "of": [
+        "codex:greatshield",
+        "encounter:greatshield"
+      ]
     }
   },
   {
@@ -1539,7 +1916,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:soul-catcher", "encounter:soul-catcher"]
+      "of": [
+        "codex:soul-catcher",
+        "encounter:soul-catcher"
+      ]
     }
   },
   {
@@ -1550,7 +1930,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:crawler", "encounter:crawler"]
+      "of": [
+        "codex:crawler",
+        "encounter:crawler"
+      ]
     }
   },
   {
@@ -1561,7 +1944,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:gigantic-vermin", "encounter:gigantic-vermin"]
+      "of": [
+        "codex:gigantic-vermin",
+        "encounter:gigantic-vermin"
+      ]
     }
   },
   {
@@ -1572,7 +1958,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:king-vermin", "encounter:king-vermin"]
+      "of": [
+        "codex:king-vermin",
+        "encounter:king-vermin"
+      ]
     }
   },
   {
@@ -1583,7 +1972,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:bother", "encounter:bother"]
+      "of": [
+        "codex:bother",
+        "encounter:bother"
+      ]
     }
   },
   {
@@ -1594,7 +1986,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:snakestone", "encounter:snakestone"]
+      "of": [
+        "codex:snakestone",
+        "encounter:snakestone"
+      ]
     }
   },
   {
@@ -1605,7 +2000,10 @@
     "section": "perilous-foes",
     "requirement": {
       "kind": "all",
-      "of": ["codex:satyr-cultist", "encounter:satyr-cultist"]
+      "of": [
+        "codex:satyr-cultist",
+        "encounter:satyr-cultist"
+      ]
     }
   }
 ]

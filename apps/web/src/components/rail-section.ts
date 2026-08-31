@@ -1,6 +1,6 @@
 import { dataset } from '@hades/data'
 import { achievementProgress, collectFactIds, isComplete, type FactMap } from '@hades/engine'
-import type { Achievement, Fact } from '@hades/schema'
+import type { Achievement, Fact, RequirementChild } from '@hades/schema'
 import { colorVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
 import { factState } from './fact-row.js'
@@ -166,6 +166,25 @@ function contractorRooms(): Group[] {
     facts,
     achievements: [],
   }))
+}
+
+/**
+ * One sentence per `count` or `any` node in a requirement, wherever it sits.
+ *
+ * Without these the pane lists nine gods for a six-of-nine goal and never says
+ * so. Nested `count` nodes inside the derived trophies are not reached, because
+ * those panes list no facts at all.
+ */
+function countingLines(node: RequirementChild | undefined): string[] {
+  if (node === undefined || typeof node === 'string') return []
+  if (node.kind === 'atLeast') return []
+  const here =
+    node.kind === 'count'
+      ? [`Any ${node.n} of these ${node.of.length} satisfy it.`]
+      : node.kind === 'any'
+        ? ['Any one of these satisfies it.']
+        : []
+  return [...here, ...node.of.flatMap((child) => countingLines(child))]
 }
 
 function house(id: string, label: string, namespaces: string[], rule?: string): Group {
@@ -422,13 +441,10 @@ export class RailSection extends LitElement {
     const rollup = achievement ? achievementProgress(achievement, this.facts) : null
     // A `count` node means any N of the children satisfy it. Flattening the
     // tree loses that, so the rail says 6 while the pane lists 9 things to do.
-    const requirement = achievement?.requirement
-    const counting =
-      requirement && typeof requirement !== 'string' && requirement.kind === 'count'
-        ? `Any ${requirement.n} of these ${requirement.of.length} satisfy it.`
-        : requirement && typeof requirement !== 'string' && requirement.kind === 'any'
-          ? 'Any one of these satisfies it.'
-          : ''
+    // Search the whole tree, not only the root: The Queen's Plan wraps its
+    // six-of-nine in an `all` beside the dialogue it also needs, and reading
+    // only the root dropped the line that explains the pane.
+    const counting = countingLines(achievement?.requirement).join(' ')
     return html`
       <div class="panehead">
         <div>
