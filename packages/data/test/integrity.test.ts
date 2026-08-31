@@ -254,3 +254,39 @@ describe('facts tagged with a subject', () => {
     expect(missing).toEqual([])
   })
 })
+
+describe('fact descriptions', () => {
+  const described = dataset.facts.filter((fact) => fact.description !== undefined)
+
+  it('covers every namespace whose label states an action but not an effect', () => {
+    const byNamespace: Record<string, number> = {}
+    for (const fact of described) {
+      const namespace = fact.id.split(':')[0]!
+      byNamespace[namespace] = (byNamespace[namespace] ?? 0) + 1
+    }
+    expect(byNamespace).toEqual({
+      boon: 149,
+      daedalus: 72,
+      keepsake: 25,
+      wellofcharon: 25,
+      pact: 15,
+      curse: 13,
+      blessing: 12,
+    })
+    expect(described).toHaveLength(311)
+  })
+
+  it('never stores a blank or whitespace-only description', () => {
+    const blank = described.filter((fact) => fact.description!.trim().length === 0)
+    expect(blank).toEqual([])
+  })
+
+  it('leaves no wiki markup in a description', () => {
+    // The harvest strips templates, links, bold markers and HTML. Anything left
+    // means a shape the cleaner did not know about.
+    const dirty = described
+      .filter((fact) => /\{\{|\]\]|\[\[|'''|<[a-z/]/i.test(fact.description!))
+      .map((fact) => `${fact.id}: ${fact.description!.slice(0, 60)}`)
+    expect(dirty).toEqual([])
+  })
+})
