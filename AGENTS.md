@@ -143,6 +143,46 @@ which can only emit a boolean — and `#applyFact` reads `false` as delete and
 `next-steps-panel.ts` both need this guard; adding a control to one means
 checking the other.
 
+**Scroll a newly shown view after one animation frame, never inside the same
+tick.** A `scrollIntoView` called the instant `updated()` fires measures a
+near-empty element, because child components render themselves a microtask
+later — the scroll lands short, and `theme.css`'s `overflow-anchor: none`
+guards against the browser undoing even a correct scroll once that content
+grows in afterward. Waiting one animation frame (which always runs after every
+microtask-scheduled update has settled) fixes both. Assert the target's real
+`rect.top`, not `top < innerHeight` — a 24px sliver at the very bottom edge of
+the viewport satisfies that and let the bug through review once already.
+
+**A view scrolled to the top needs either real room below it, or nothing tall
+above it.** A browser cannot scroll an element's top flush with the viewport
+top when the document does not extend at least one more viewport-height past
+that point — a short `achievement-detail` (a handful of steps) is often
+shorter than the viewport, and sits last in the document with nothing after
+it. `min-height: 100dvh` on the wrapper is a correct, minimal fix wherever
+something tall stays above the target (the list view, below the header
+cards) — the reserved space exactly equals what flush-scrolling requires, no
+more. It is the wrong fix where nothing needs to stay above the target: for
+the detail view, `hades-dashboard.ts` hides the header cards outright while
+an entry is open, so there is no long scroll — and no reserved void — needed
+at all.
+
+**A custom element's `:host` needs an explicit `display`, and a CSS grid
+item needs `min-width: 0`, or one nowrap descendant can scroll the whole page
+sideways.** The custom-element default is `display: inline`; hd-checklist-item
+had no override, and a `white-space: nowrap` label inside it (added for
+next-steps-panel, reached requirement-tree too — see the fact-kind-dispatch
+rule above) sized the *host itself* to the label's full, unclamped
+min-content width, not the width its flex layout would otherwise have
+shrunk it to. A `repeat(auto-fit, minmax(260px, 1fr))` grid track then grew
+to fit — even though the track's own minimum was an explicit 260px, not
+`auto`, a grid item's automatic minimum size (its own content-based
+minimum, from `min-width: auto`) is a separate mechanism layered underneath
+and is not overridden by the track's `minmax()` on its own. Fix at both
+ends: `:host { display: block }` on the component, and `min-width: 0` on
+whatever sits directly in the grid. A component-level test in an isolated
+`render()` call did not reproduce this — the failure needs the real grid
+context to show up; test it where the grid actually is.
+
 ## Game data
 
 `packages/data` is the one place where being wrong is worse than being late.
