@@ -41,6 +41,34 @@ export class HadesDashboard extends LitElement {
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       margin-bottom: 24px;
     }
+    /**
+     * Overall and Backup are short (roughly 105px each); Next steps is
+     * tall. Three equal grid columns stretched every card to the tallest
+     * and left a large void under Overall and Backup. Overall stacks above
+     * Backup in one column instead, next to Next steps in a second, taller
+     * column — each column sized by its own content, no stretch to match
+     * an unrelated neighbour. Below 640px there is no room for two
+     * columns, so all three stack in the original single-column order.
+     */
+    .top-row {
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) {
+      .top-row {
+        align-items: start;
+        grid-template-areas: 'overall next' 'backup next';
+        grid-template-columns: minmax(220px, 1fr) minmax(280px, 1.6fr);
+      }
+      .top-row hd-card:nth-of-type(1) {
+        grid-area: overall;
+      }
+      .top-row hd-card:nth-of-type(2) {
+        grid-area: next;
+      }
+      .top-row hd-card:nth-of-type(3) {
+        grid-area: backup;
+      }
+    }
   `
 
   static override readonly properties = {

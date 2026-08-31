@@ -1,3 +1,4 @@
+import { page } from '@vitest/browser/context'
 import { html, render } from 'lit'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { HadesDashboard } from '../src/components/hades-dashboard.js'
@@ -83,6 +84,44 @@ describe('hades-dashboard layout', () => {
     expect(topRow.compareDocumentPosition(collectionsGrid) & Node.DOCUMENT_POSITION_FOLLOWING).toBe(
       Node.DOCUMENT_POSITION_FOLLOWING,
     )
+  })
+})
+
+describe('hades-dashboard top row', () => {
+  beforeEach(() => {
+    render(html``, document.body)
+  })
+
+  /**
+   * Overall and Backup are short; Next steps is tall. Three equal grid
+   * columns used to stretch every card to the tallest and leave a large
+   * void under the two short ones. At a width with room for two columns,
+   * Overall stacks directly above Backup in one column, next to the taller
+   * Next steps in a second — deliberate, not an equal-height stretch.
+   */
+  it('stacks Overall above Backup in one column, beside the taller Next steps, once there is room', async () => {
+    await page.viewport(1280, 900)
+    try {
+      const element = mount({ load: async () => ({}), save: async () => undefined })
+      await element.updateComplete
+      await element.updateComplete
+
+      const topRow = element.shadowRoot!.querySelector('.top-row')!
+      const cards = [...topRow.querySelectorAll('hd-card')]
+      const [overall, nextSteps, backup] = cards.map((card) => card.getBoundingClientRect())
+
+      // Overall and Backup share a column: same left edge, Overall above Backup.
+      expect(overall!.left).toBeCloseTo(backup!.left, 0)
+      expect(overall!.bottom).toBeLessThanOrEqual(backup!.top + 1)
+
+      // Next steps sits in a second column, not stretched to match either
+      // short card, and each card sizes to its own content.
+      expect(nextSteps!.left).toBeGreaterThan(overall!.left)
+      expect(overall!.height).toBeLessThan(nextSteps!.height)
+      expect(backup!.height).toBeLessThan(nextSteps!.height)
+    } finally {
+      await page.viewport(414, 896)
+    }
   })
 })
 
