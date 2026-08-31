@@ -84,9 +84,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:defeat-hades"
-      ]
+      "of": ["combat:defeat-hades"]
     }
   },
   {
@@ -116,10 +114,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "workorder:eldest-sigil-restoration",
-        "talk:nyx-in-chaos-realm"
-      ]
+      "of": ["workorder:eldest-sigil-restoration", "talk:nyx-in-chaos-realm"]
     }
   },
   {
@@ -129,9 +124,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "workorder:court-musicians-sentence"
-      ]
+      "of": ["workorder:court-musicians-sentence"]
     }
   },
   {
@@ -164,10 +157,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "workorder:knave-kings-sentence",
-        "talk:sisyphus-after-knave-kings-sentence"
-      ]
+      "of": ["workorder:knave-kings-sentence", "talk:sisyphus-after-knave-kings-sentence"]
     }
   },
   {
@@ -177,10 +167,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "workorder:heros-sacrifice",
-        "talk:achilles-after-heros-sacrifice"
-      ]
+      "of": ["workorder:heros-sacrifice", "talk:achilles-after-heros-sacrifice"]
     }
   },
   {
@@ -245,9 +232,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:defeat-hades-with-cosmic-egg"
-      ]
+      "of": ["combat:defeat-hades-with-cosmic-egg"]
     }
   },
   {
@@ -288,9 +273,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:defeat-charon-twice-consecutive"
-      ]
+      "of": ["combat:defeat-charon-twice-consecutive"]
     }
   },
   {
@@ -634,9 +617,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:cerberus-stygius-arthur"
-      ]
+      "of": ["combat:cerberus-stygius-arthur"]
     }
   },
   {
@@ -646,9 +627,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:cerberus-varatha-guan-yu"
-      ]
+      "of": ["combat:cerberus-varatha-guan-yu"]
     }
   },
   {
@@ -658,9 +637,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:cerberus-coronacht-rama"
-      ]
+      "of": ["combat:cerberus-coronacht-rama"]
     }
   },
   {
@@ -670,9 +647,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:cerberus-aegis-beowulf"
-      ]
+      "of": ["combat:cerberus-aegis-beowulf"]
     }
   },
   {
@@ -682,9 +657,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:cerberus-malphon-gilgamesh"
-      ]
+      "of": ["combat:cerberus-malphon-gilgamesh"]
     }
   },
   {
@@ -694,9 +667,7 @@
     "collection": "prophecy",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:cerberus-exagryph-lucifer"
-      ]
+      "of": ["combat:cerberus-exagryph-lucifer"]
     }
   },
   {
@@ -897,9 +868,7 @@
     "description": "The son of the god of the dead shall someday earn a magnificent tribute after breaking free from the realm in which he was born, despite the Pact of Punishment.",
     "requirement": {
       "kind": "all",
-      "of": [
-        "combat:defeat-hades-heat8"
-      ]
+      "of": ["combat:defeat-hades-heat8"]
     },
     "collection": "prophecy"
   },

@@ -94,9 +94,9 @@ Four mechanical rules beyond a plain split, each of them provable:
 | `lounge` | 4 | Dusa, named nowhere in the id |
 | `spend`, `lyre` | 2 | Charon, Orpheus |
 
-The six `companion:*` facts also gain their **giver** in phase 2, on top of the
-companion they already name. They are the second place, after the duo boons,
-where one fact carries two subjects.
+The six `companion:*` facts carry their **giver** as well as the companion they
+name, so `companion:battie` is `["companion-battie", "megaera"]`. They are the
+second place, after the duo boons, where one fact carries two subjects.
 
 The research file holds a candidate for every one of these. It is analysis, not
 sourced per entry, so phase 2 re-reads the page instead of copying it.
@@ -155,7 +155,8 @@ datasetSchema     += { subjects: Subject[] }
 Every field is optional. The 545 achievements and 692 facts keep validating
 while phase 2 fills the gaps, so every commit in between stays green.
 
-`subjects` becomes required when the 105 are sourced. Not before.
+`subjects` became required once all 105 were sourced. Every fact now names its
+subjects or declares an empty list.
 
 ## 7. New engine functions
 

@@ -82,7 +82,7 @@ export function subjectsOfType(dataset: Dataset, type: SubjectType): Subject[] {
  * subject, so both are absent from every result.
  */
 export function subjectFacts(dataset: Dataset, subjectId: SubjectId): Fact[] {
-  return dataset.facts.filter((fact) => fact.subjects?.includes(subjectId) ?? false)
+  return dataset.facts.filter((fact) => fact.subjects.includes(subjectId))
 }
 
 /** The capabilities the subject's own facts imply, in first-seen order. */

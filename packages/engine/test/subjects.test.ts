@@ -24,7 +24,7 @@ const dataset: Dataset = {
     { id: 'boon:duo:lightning-phalanx', label: 'Lightning Phalanx', kind: 'boolean', collection: 'codex', subjects: ['zeus', 'athena'] },
     { id: 'aspect:stygius:zagreus', label: 'Aspect of Zagreus', kind: 'number', max: 5, collection: 'codex', subjects: ['stygius'] },
     { id: 'pact:hard-labor', label: 'Hard Labor', kind: 'number', max: 5, collection: 'codex', subjects: [] },
-    { id: 'keepsake:thunder-signet', label: 'Thunder Signet rank', kind: 'number', max: 3, collection: 'codex' },
+    { id: 'keepsake:thunder-signet', label: 'Thunder Signet rank', kind: 'number', max: 3, collection: 'codex', subjects: [] },
   ],
   achievements: [
     {
@@ -73,9 +73,24 @@ describe('subjectFacts', () => {
     expect(everyTagged.map((f) => f.id)).not.toContain('pact:hard-labor')
   })
 
-  it('never returns a fact whose subject nobody has established yet', () => {
-    const everyTagged = dataset.subjects.flatMap((s) => subjectFacts(dataset, s.id))
-    expect(everyTagged.map((f) => f.id)).not.toContain('keepsake:thunder-signet')
+  it('returns the same fact object for each subject that names it', () => {
+    // The duplicate of the test above went when the absent-key state did. This
+    // covers the shape that replaced it: one fact reachable from two subjects,
+    // each time in the order the dataset lists it.
+    expect(subjectFacts(dataset, 'zeus').map((f) => f.id)).toContain(
+      'boon:duo:lightning-phalanx',
+    )
+    expect(subjectFacts(dataset, 'athena').map((f) => f.id)).toContain(
+      'boon:duo:lightning-phalanx',
+    )
+    // and the fact object is the same instance both times, not a copy
+    const fromZeus = subjectFacts(dataset, 'zeus').find(
+      (f) => f.id === 'boon:duo:lightning-phalanx',
+    )
+    const fromAthena = subjectFacts(dataset, 'athena').find(
+      (f) => f.id === 'boon:duo:lightning-phalanx',
+    )
+    expect(fromZeus).toBe(fromAthena)
   })
 
   it('returns nothing for a subject with no facts', () => {

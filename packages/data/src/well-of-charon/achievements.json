@@ -6,9 +6,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:aether-net"
-      ]
+      "of": ["wellofcharon:aether-net"]
     }
   },
   {
@@ -18,9 +16,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:braid-of-atlas"
-      ]
+      "of": ["wellofcharon:braid-of-atlas"]
     }
   },
   {
@@ -30,9 +26,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:centaur-soul"
-      ]
+      "of": ["wellofcharon:centaur-soul"]
     }
   },
   {
@@ -42,9 +36,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:chimaera-jerky"
-      ]
+      "of": ["wellofcharon:chimaera-jerky"]
     }
   },
   {
@@ -54,9 +46,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:cyclops-jerky"
-      ]
+      "of": ["wellofcharon:cyclops-jerky"]
     }
   },
   {
@@ -66,9 +56,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:eris-bangle"
-      ]
+      "of": ["wellofcharon:eris-bangle"]
     }
   },
   {
@@ -78,9 +66,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:eye-of-lamia"
-      ]
+      "of": ["wellofcharon:eye-of-lamia"]
     }
   },
   {
@@ -90,9 +76,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:fateful-twist"
-      ]
+      "of": ["wellofcharon:fateful-twist"]
     }
   },
   {
@@ -102,9 +86,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:flame-wheels-release"
-      ]
+      "of": ["wellofcharon:flame-wheels-release"]
     }
   },
   {
@@ -114,9 +96,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:gaeas-treasure"
-      ]
+      "of": ["wellofcharon:gaeas-treasure"]
     }
   },
   {
@@ -126,9 +106,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:hydralite"
-      ]
+      "of": ["wellofcharon:hydralite"]
     }
   },
   {
@@ -138,9 +116,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:ignited-ichor"
-      ]
+      "of": ["wellofcharon:ignited-ichor"]
     }
   },
   {
@@ -150,9 +126,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:kiss-of-styx"
-      ]
+      "of": ["wellofcharon:kiss-of-styx"]
     }
   },
   {
@@ -162,9 +136,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:life-essence"
-      ]
+      "of": ["wellofcharon:life-essence"]
     }
   },
   {
@@ -174,9 +146,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:light-of-ixion"
-      ]
+      "of": ["wellofcharon:light-of-ixion"]
     }
   },
   {
@@ -186,9 +156,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:nail-of-talos"
-      ]
+      "of": ["wellofcharon:nail-of-talos"]
     }
   },
   {
@@ -198,9 +166,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:nemesis-crest"
-      ]
+      "of": ["wellofcharon:nemesis-crest"]
     }
   },
   {
@@ -210,9 +176,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:night-spindle"
-      ]
+      "of": ["wellofcharon:night-spindle"]
     }
   },
   {
@@ -222,9 +186,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:price-of-midas"
-      ]
+      "of": ["wellofcharon:price-of-midas"]
     }
   },
   {
@@ -234,9 +196,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:prometheus-stone"
-      ]
+      "of": ["wellofcharon:prometheus-stone"]
     }
   },
   {
@@ -246,9 +206,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:skeletal-lure"
-      ]
+      "of": ["wellofcharon:skeletal-lure"]
     }
   },
   {
@@ -258,9 +216,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:stygian-shard"
-      ]
+      "of": ["wellofcharon:stygian-shard"]
     }
   },
   {
@@ -270,9 +226,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:tinge-of-erebus"
-      ]
+      "of": ["wellofcharon:tinge-of-erebus"]
     }
   },
   {
@@ -282,9 +236,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:touch-of-styx"
-      ]
+      "of": ["wellofcharon:touch-of-styx"]
     }
   },
   {
@@ -294,9 +246,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:trove-tracker"
-      ]
+      "of": ["wellofcharon:trove-tracker"]
     }
   },
   {
@@ -306,9 +256,7 @@
     "collection": "well-of-charon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "wellofcharon:yarn-of-ariadne"
-      ]
+      "of": ["wellofcharon:yarn-of-ariadne"]
     }
   }
 ]

@@ -733,8 +733,7 @@ const RAILS = {
          blk('Darkness','spent so far','18,400', list([li('Next talent',0,'cost pending')]))},
 
       {n:'Pact of Punishment', s:'15 conditions · Heat', p:[6,15],
-       body: about('The Pact of Punishment is the difficulty menu at the door out of the House. You switch on Conditions that make the run harder — tougher foes, less healing, a time limit — and each point you add raises your <b>Heat</b>. Higher Heat unlocks better rewards and is the only way to keep farming a region you have already cleared. You choose the Conditions before each run and can change them freely.',
-         'Draft. Verify against hades.fandom.com/wiki/Pact_of_Punishment before this ships.') +
+       body: about("The Pact of Punishment is the difficulty menu at the door out of the House. Switching a Condition on makes the run harder and raises your Heat, which unlocks better rewards.") +
          `<p class="lede" style="margin:0 0 14px">The Fated List only needs a single point in a Condition. The 15 entries below track raising each one to its own maximum.</p>` +
          blk('Conditions activated','','6/15',
          list([li(tip('Hard Labor','Hard Labor · max rank 5','Foes deal more damage. Raise it to rank 5 for this entry; the Fated List only needs rank 1.'),1),
@@ -748,8 +747,7 @@ const RAILS = {
          blk('Heat','highest cleared','12', list([li('Reach Heat 16',0)]))},
 
       {n:'House Contractor', s:'shop · ~28 items still missing', p:[2,12],
-       body: about('The House Contractor takes <b>Gemstones</b> and turns them into renovations: new rooms, decorations, fountains, and the Work Orders that unlock other characters\u2019 story steps. Everything he sells is permanent. He is the reason several favors can be finished at all.',
-         'Draft. Verify against hades.fandom.com/wiki/House_Contractor before this ships.') +
+       body: about('The House Contractor takes Gemstones and turns them into renovations: new rooms, decorations, and the Work Orders that unlock other characters&rsquo; story steps. Everything he sells is permanent.') +
          blk('Work orders','5 facts, all owned by a character','1/5',
          list([li('Eldest Sigil Restoration',1,'→ Nyx'),li('+ 4 orders',0,'→ their characters')])) +
          blk('Lounge items','4 facts, all owned by Dusa','0/4',
@@ -765,8 +763,7 @@ const RAILS = {
          blk('Prices','deferred','pending', list([li('Obol cost per item',0,'schema change needed')]))},
 
       {n:'Wretched Broker', s:'11 named perks', p:[4,11],
-       body: about('These 11 Perks are the extra abilities foes gain when the <b>Benefits Package</b> Pact condition is switched on. Each one changes how a foe behaves, and the Fated List asks you to slay a foe carrying each Perk at least once. The Wretched Broker is a separate character who trades resources; the Perks are named after his benefits, which is why they sit together.',
-         'Draft. The 11 Perk descriptions we already store are sourced; this framing paragraph is not. Verify before it ships.') +
+       body: about("These are the abilities foes gain when the Benefits Package Pact condition is active. Each one changes how a foe behaves, and the Fated List asks you to slay a foe carrying each. The Wretched Broker is a different character, who trades resources.") +
          blk('Perks','from the Benefits Package condition','4/11',
          list([li('Chthonic Key exchange',1),li('Darkness exchange',1),li('Gemstone exchange',1),li('Nectar exchange',1),li('+ 7 missing',0)]))},
 

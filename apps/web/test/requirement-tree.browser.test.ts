@@ -4,13 +4,13 @@ import { beforeEach, describe, expect, it } from 'vitest'
 import '../src/components/requirement-tree.js'
 
 const facts: Fact[] = [
-  { id: 'a:one', label: 'Do the first thing', kind: 'boolean', collection: 'prophecy' },
-  { id: 'a:two', label: 'Do the second thing', kind: 'boolean', collection: 'prophecy' },
-  { id: 'a:rank', label: 'Reach rank', kind: 'number', max: 4, collection: 'prophecy' },
+  { id: 'a:one', label: 'Do the first thing', kind: 'boolean', collection: 'prophecy', subjects: [] },
+  { id: 'a:two', label: 'Do the second thing', kind: 'boolean', collection: 'prophecy', subjects: [] },
+  { id: 'a:rank', label: 'Reach rank', kind: 'number', max: 4, collection: 'prophecy', subjects: [] },
   // Fact max deliberately differs from the atLeast threshold used below, the
   // way `aspect:stygius:zagreus` (max 5) differs between `prophecy:eternal-rest`
   // (atLeast 5) and `prophecy:violent-past` (atLeast 1).
-  { id: 'a:shared-rank', label: 'Reach shared rank', kind: 'number', max: 5, collection: 'prophecy' },
+  { id: 'a:shared-rank', label: 'Reach shared rank', kind: 'number', max: 5, collection: 'prophecy', subjects: [] },
 ]
 const factsById = new Map(facts.map((fact) => [fact.id, fact]))
 

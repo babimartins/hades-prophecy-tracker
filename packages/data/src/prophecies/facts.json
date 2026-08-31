@@ -66,7 +66,9 @@
     "id": "talk:persephone-and-hades-after-family-reunion",
     "label": "Report to Persephone and Hades after inviting all Olympians",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["persephone", "hades"],
+    "spoiler": true
   },
   {
     "id": "nectar:zeus",
@@ -144,7 +146,8 @@
     "id": "combat:defeat-hades",
     "label": "Defeat Hades",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"]
   },
   {
     "id": "meet:hades",
@@ -213,19 +216,22 @@
     "id": "workorder:eldest-sigil-restoration",
     "label": "Complete the Eldest Sigil Restoration Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["nyx"]
   },
   {
     "id": "talk:nyx-in-chaos-realm",
     "label": "Speak with Nyx in Chaos's realm",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["nyx"]
   },
   {
     "id": "workorder:court-musicians-sentence",
     "label": "Complete the Court Musician's Sentence Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "nectar:orpheus",
@@ -247,37 +253,43 @@
     "id": "workorder:singers-gamble",
     "label": "Complete the Singer's Gamble Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus", "eurydice"]
   },
   {
     "id": "talk:orpheus-after-singers-gamble",
     "label": "Speak with Orpheus after the Singer's Gamble Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "workorder:knave-kings-sentence",
     "label": "Complete the Knave-King's Sentence Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["sisyphus"]
   },
   {
     "id": "talk:sisyphus-after-knave-kings-sentence",
     "label": "Speak with Sisyphus after the Knave-King's Sentence Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["sisyphus"]
   },
   {
     "id": "workorder:heros-sacrifice",
     "label": "Complete the Hero's Sacrifice Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["achilles"]
   },
   {
     "id": "talk:achilles-after-heros-sacrifice",
     "label": "Speak with Achilles after the Hero's Sacrifice Work Order",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["achilles"]
   },
   {
     "id": "aspect:stygius:zagreus",
@@ -285,13 +297,15 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "The blade in its original form. Leveling it raises bonus Attack Speed and Move Speed."
   },
   {
     "id": "combat:slay-skelly-with-stygius",
     "label": "Slay Skelly using Stygius",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["skelly", "stygius"]
   },
   {
     "id": "meet:zeus",
@@ -346,38 +360,44 @@
     "id": "lounge:deep-cleaning-service",
     "label": "Purchase the Deep Cleaning lounge service",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "lounge:detailing-service",
     "label": "Purchase the Detailing lounge service",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "lounge:any-rug",
     "label": "Purchase any rug for the Lounge",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "lounge:other-items",
     "label": "Other Lounge items purchased",
     "kind": "number",
     "max": 10,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "talk:dusa-after-lounge-decor",
     "label": "Speak with Dusa after decorating the Lounge",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"]
   },
   {
     "id": "combat:defeat-hades-with-cosmic-egg",
     "label": "Defeat Hades with the Cosmic Egg keepsake equipped",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"]
   },
   {
     "id": "pact:extreme-measures",
@@ -385,1218 +405,1436 @@
     "kind": "number",
     "max": 4,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each Underworld region's Bosses gain new techniques, 1 region per rank (Tartarus first)."
   },
   {
     "id": "combat:defeat-theseus-extreme-measures",
     "label": "Defeat Theseus while Extreme Measures is active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["theseus"]
   },
   {
     "id": "talk:poseidon-after-theseus-extreme-measures",
     "label": "Speak with Poseidon after defeating Extreme Measures Theseus",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon", "theseus"]
   },
   {
     "id": "combat:foes-slain",
     "label": "Foes slain",
     "kind": "number",
     "max": 10000,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": []
   },
   {
     "id": "talk:ares-after-10000-foes",
     "label": "Speak with Ares after slaying 10,000 foes",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"]
   },
   {
     "id": "combat:defeat-charon-twice-consecutive",
     "label": "Defeat Charon two consecutive times",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["charon"]
   },
   {
     "id": "boon:athena:divine-strike",
     "label": "Earn the Divine Strike boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "Your Attack is stronger, and can Deflect."
   },
   {
     "id": "boon:athena:divine-flourish",
     "label": "Earn the Divine Flourish boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "Your Special is stronger, and can Deflect."
   },
   {
     "id": "boon:athena:divine-dash",
     "label": "Earn the Divine Dash boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "Your Dash deals damage and can Deflect."
   },
   {
     "id": "boon:athena:phalanx-shot",
     "label": "Earn the Phalanx Shot boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "Your Cast damages foes in a small area, and can Deflect."
   },
   {
     "id": "boon:athena:athenas-aid",
     "label": "Earn the Athena's Aid boon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "Your Call briefly makes you Invulnerable and Deflect all attacks. Max gauge bonus: 6x duration"
   },
   {
     "id": "boon:athena:sure-footing",
     "label": "Earn the Sure Footing boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "Resist damage from Traps."
   },
   {
     "id": "boon:athena:bronze-skin",
     "label": "Earn the Bronze Skin boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "Resist damage from foes' attacks."
   },
   {
     "id": "boon:athena:holy-shield",
     "label": "Earn the Holy Shield boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "After you take damage, damage nearby foes and briefly Deflect."
   },
   {
     "id": "boon:athena:proud-bearing",
     "label": "Earn the Proud Bearing boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "You begin each Encounter with your God Gauge partly full."
   },
   {
     "id": "boon:athena:blinding-flash",
     "label": "Earn the Blinding Flash boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "Your abilities that can Deflect also make foes Exposed."
   },
   {
     "id": "boon:athena:brilliant-riposte",
     "label": "Earn the Brilliant Riposte boon from Athena",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["athena"]
+    "subjects": ["athena"],
+    "description": "When you Deflect attacks, they deal more damage."
   },
   {
     "id": "boon:zeus:lightning-strike",
     "label": "Earn the Lightning Strike boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your Attack emits chain-lightning when you damage a foe."
   },
   {
     "id": "boon:zeus:thunder-dash",
     "label": "Earn the Thunder Dash boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your Dash causes a lightning bolt to strike nearby foes."
   },
   {
     "id": "boon:zeus:electric-shot",
     "label": "Earn the Electric Shot boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your Cast is a burst of chain-lightning that bounces between foes."
   },
   {
     "id": "boon:zeus:thunder-flourish",
     "label": "Earn the Thunder Flourish boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your Special causes a lightning bolt to strike nearby foes."
   },
   {
     "id": "boon:zeus:zeus-aid",
     "label": "Earn the Zeus' Aid boon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your Call makes lightning strike nearby foes repeatedly for 1.5 Sec."
   },
   {
     "id": "boon:zeus:heavens-vengeance",
     "label": "Earn the Heaven's Vengeance boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "After you take damage, your foe is struck by lightning."
   },
   {
     "id": "boon:zeus:clouded-judgement",
     "label": "Earn the Clouded Judgment boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your God Gauge charges faster when you deal or take damage."
   },
   {
     "id": "boon:zeus:billowing-strength",
     "label": "Earn the Billowing Strength boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "After using Call, you deal more damage for 15 Sec."
   },
   {
     "id": "boon:zeus:lightning-reflexes",
     "label": "Earn the Lightning Reflexes boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "After you Dash just before getting hit, a bolt strikes a nearby foes."
   },
   {
     "id": "boon:zeus:storm-lightning",
     "label": "Earn the Storm Lightning boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your chain-lightning effects bounce more times before expiring."
   },
   {
     "id": "boon:zeus:static-discharge",
     "label": "Earn the Static Discharge boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your lightning effects also make foes Jolted."
   },
   {
     "id": "boon:zeus:high-voltage",
     "label": "Earn the High Voltage boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your lightning bolt effects deal damage in a larger area."
   },
   {
     "id": "boon:zeus:double-strike",
     "label": "Earn the Double Strike boon from Zeus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["zeus"]
+    "subjects": ["zeus"],
+    "description": "Your lightning bolt effects have a chance to strike twice."
   },
   {
     "id": "boon:poseidon:tempest-strike",
     "label": "Earn the Tempest Strike boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your Attack deals more damage and knocks foes away."
   },
   {
     "id": "boon:poseidon:tempest-flourish",
     "label": "Earn the Tempest Flourish boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your Special deals more damage and knocks foes away."
   },
   {
     "id": "boon:poseidon:tidal-dash",
     "label": "Earn the Tidal Dash boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your Dash damages foes in an area and knocks them away."
   },
   {
     "id": "boon:poseidon:flood-shot",
     "label": "Earn the Flood Shot boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your Cast damages foes in an area and knocks them away."
   },
   {
     "id": "boon:poseidon:poseidons-aid",
     "label": "Earn the Poseidon's Aid boon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your Call makes you surge into foes while Impervious for 1.2 Sec."
   },
   {
     "id": "boon:poseidon:hydraulic-might",
     "label": "Earn the Hydraulic Might boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your Attack and Special are stronger the first 10 Sec. in Encounter(s)."
   },
   {
     "id": "boon:poseidon:oceans-bounty",
     "label": "Earn the Ocean's Bounty boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Any Gemstones, Darkness or Obol chamber rewards are worth more."
   },
   {
     "id": "boon:poseidon:boiling-point",
     "label": "Earn the Boiling Point boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your God Gauge charges faster when you take damage."
   },
   {
     "id": "boon:poseidon:rip-current",
     "label": "Earn the Rip Current boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your Call pulls in foes and the effect lasts longer."
   },
   {
     "id": "boon:poseidon:typhoons-fury",
     "label": "Earn the Typhoon's Fury boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "You deal more damage when slamming foes into barriers."
   },
   {
     "id": "boon:poseidon:breaking-wave",
     "label": "Earn the Breaking Wave boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Slamming foes into walls or corners creates a watery blast in the area."
   },
   {
     "id": "boon:poseidon:razor-shoals",
     "label": "Earn the Razor Shoals boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Using knock-away effects also Rupture foes."
   },
   {
     "id": "boon:poseidon:wave-pounding",
     "label": "Earn the Wave Pounding boon from Poseidon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["poseidon"]
+    "subjects": ["poseidon"],
+    "description": "Your boons with Knock-Away effects deal bonus damage to bosses."
   },
   {
     "id": "boon:aphrodite:heartbreak-strike",
     "label": "Earn the Heartbreak Strike boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Your Attack deals more damage and inflicts Weak."
   },
   {
     "id": "boon:aphrodite:heartbreak-flourish",
     "label": "Earn the Heartbreak Flourish boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Your Special deals more damage and inflicts Weak."
   },
   {
     "id": "boon:aphrodite:passion-dash",
     "label": "Earn the Passion Dash boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Your Dash inflicts damage where you end up, inflicting Weak."
   },
   {
     "id": "boon:aphrodite:crush-shot",
     "label": "Earn the Crush Shot boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Your Cast is a wide, short-range blast that inflicts Weak."
   },
   {
     "id": "boon:aphrodite:aphrodites-aid",
     "label": "Earn the Aphrodite's Aid boon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Your Call fires a seeking projectile that inflicts Charm."
   },
   {
     "id": "boon:aphrodite:blown-kiss",
     "label": "Earn the Blown Kiss boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Your Cast shoots farther and is stronger against undamaged foes."
   },
   {
     "id": "boon:aphrodite:wave-of-despair",
     "label": "Earn the Wave of Despair boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "After you take damage, damage nearby foes and inflict Weak."
   },
   {
     "id": "boon:aphrodite:dying-lament",
     "label": "Earn the Dying Lament boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "When foes are slain, they damage nearby foes and inflict Weak."
   },
   {
     "id": "boon:aphrodite:different-league",
     "label": "Earn the Different League boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Resist some damage from nearby foes' attacks."
   },
   {
     "id": "boon:aphrodite:life-affirmation",
     "label": "Earn the Life Affirmation boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Any HealthUp chamber rewards are worth more."
   },
   {
     "id": "boon:aphrodite:empty-inside",
     "label": "Earn the Empty Inside boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Your Weak effects have a longer duration."
   },
   {
     "id": "boon:aphrodite:sweet-surrender",
     "label": "Earn the Sweet Surrender boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Weak-afflicted foes are also more susceptible to damage."
   },
   {
     "id": "boon:aphrodite:broken-resolve",
     "label": "Earn the Broken Resolve boon from Aphrodite",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aphrodite"]
+    "subjects": ["aphrodite"],
+    "description": "Your Weak effects are more potent."
   },
   {
     "id": "boon:ares:curse-of-agony",
     "label": "Earn the Curse of Agony boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Attack inflicts Doom."
   },
   {
     "id": "boon:ares:curse-of-pain",
     "label": "Earn the Curse of Pain boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Special inflicts Doom."
   },
   {
     "id": "boon:ares:blade-dash",
     "label": "Earn the Blade Dash boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Dash creates a Blade Rift where you started."
   },
   {
     "id": "boon:ares:slicing-shot",
     "label": "Earn the Slicing Shot boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Cast sends a Blade Rift hurling ahead."
   },
   {
     "id": "boon:ares:ares-aid",
     "label": "Earn the Ares' Aid boon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Call turns you into an Impervious Blade Rift for 1.2 Sec. Max gauge bonus: 5 sec. duration"
   },
   {
     "id": "boon:ares:curse-of-vengeance",
     "label": "Earn the Curse of Vengeance boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "After you take damage, inflict Doom on surrounding foes."
   },
   {
     "id": "boon:ares:urge-to-kill",
     "label": "Earn the Urge to Kill boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Attack, Special, and Cast deal more damage."
   },
   {
     "id": "boon:ares:battle-rage",
     "label": "Earn the Battle Rage boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "After slaying a foe, your next Attack or Special deals more damage."
   },
   {
     "id": "boon:ares:blood-frenzy",
     "label": "Earn the Blood Frenzy boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "After using Death Defiance, deal more damage that encounter."
   },
   {
     "id": "boon:ares:impending-doom",
     "label": "Earn the Impending Doom boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Doom effects deal more damage, but take+0.5 Sec. to activate."
   },
   {
     "id": "boon:ares:dire-misfortune",
     "label": "Earn the Dire Misfortune boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Doom effects deal more damage when applied multiple times."
   },
   {
     "id": "boon:ares:black-metal",
     "label": "Earn the Black Metal boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Blade Rift powers deal damage in a wider area."
   },
   {
     "id": "boon:ares:engulfing-vortex",
     "label": "Earn the Engulfing Vortex boon from Ares",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["ares"]
+    "subjects": ["ares"],
+    "description": "Your Blade Rift effects last longer and pull foes in."
   },
   {
     "id": "boon:artemis:deadly-strike",
     "label": "Earn the Deadly Strike boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your Attack is stronger, with +15% chance to deal Critical damage."
   },
   {
     "id": "boon:artemis:hunter-dash",
     "label": "Earn the Hunter Dash boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your Dash-Strike deals more damage."
   },
   {
     "id": "boon:artemis:true-shot",
     "label": "Earn the True Shot boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your Cast seeks foes, with a 10% chance to deal Critical damage."
   },
   {
     "id": "boon:artemis:deadly-flourish",
     "label": "Earn the Deadly Flourish boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your Special is stronger, with +20% chance to deal Critical Damage."
   },
   {
     "id": "boon:artemis:artemis-aid",
     "label": "Earn the Artemis' Aid boon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your Call fires a seeking arrow with +35% Critical chance."
   },
   {
     "id": "boon:artemis:pressure-points",
     "label": "Earn the Pressure Points boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Any damage you deal has a chance to be Critical."
   },
   {
     "id": "boon:artemis:support-fire",
     "label": "Earn the Support Fire boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "After you Cast, or hit with an Attack or Special, fire a seeking arrow."
   },
   {
     "id": "boon:artemis:hunters-mark",
     "label": "Earn the Hunter's Mark boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "After you deal Critical damage to a foe, a foe near it is Marked."
   },
   {
     "id": "boon:artemis:clean-kill",
     "label": "Earn the Clean Kill boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your Critical effects deal even more damage."
   },
   {
     "id": "boon:artemis:hide-breaker",
     "label": "Earn the Hide Breaker boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your Critical effects deal even more damage to Armor."
   },
   {
     "id": "boon:artemis:hunter-instinct",
     "label": "Earn the Hunter Instinct boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your God Gauge charges faster when you deal Critical damage."
   },
   {
     "id": "boon:artemis:exit-wounds",
     "label": "Earn the Exit Wounds boon from Artemis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["artemis"]
+    "subjects": ["artemis"],
+    "description": "Your foes take damage when your Ammo stuck in them is dislodged."
   },
   {
     "id": "boon:dionysus:drunken-strike",
     "label": "Earn the Drunken Strike boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Your Attack inflicts Hangover."
   },
   {
     "id": "boon:dionysus:drunken-flourish",
     "label": "Earn the Drunken Flourish boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Your Special inflicts Hangover."
   },
   {
     "id": "boon:dionysus:drunken-dash",
     "label": "Earn the Drunken Dash boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Your Dash inflicts foes near you with Hangover."
   },
   {
     "id": "boon:dionysus:trippy-shot",
     "label": "Earn the Trippy Shot boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Your Cast lobs a projectile that bursts into Festive Fog."
   },
   {
     "id": "boon:dionysus:dionysus-aid",
     "label": "Earn the Dionysus' Aid boon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Your Call inflicts Hangover to foes all around you for 1.5 Sec."
   },
   {
     "id": "boon:dionysus:after-party",
     "label": "Earn the After Party boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "If your Heart is low after Encounters, restore to the threshold."
   },
   {
     "id": "boon:dionysus:positive-outlook",
     "label": "Earn the Positive Outlook boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Take less damage while at 40% Heart or below."
   },
   {
     "id": "boon:dionysus:strong-drink",
     "label": "Earn the Strong Drink boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Using a Fountain restores all Heart and gives you bonus damage."
   },
   {
     "id": "boon:dionysus:peer-pressure",
     "label": "Earn the Peer Pressure boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Hangover-afflicted foes contaminate other nearby foes every 4 Sec."
   },
   {
     "id": "boon:dionysus:numbing-sensation",
     "label": "Earn the Numbing Sensation boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Your Hangover effects also make foes move slower."
   },
   {
     "id": "boon:dionysus:bad-influence",
     "label": "Earn the Bad Influence boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Deal more damage while 3 foes are Hangover-afflicted."
   },
   {
     "id": "boon:dionysus:high-tolerance",
     "label": "Earn the High Tolerance boon from Dionysus",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["dionysus"]
+    "subjects": ["dionysus"],
+    "description": "Take less damage while standing in Festive Fog."
   },
   {
     "id": "boon:hermes:second-wind",
     "label": "Earn the Second Wind boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "After using Call, gain Dodge chance and move speed for 10 Sec."
   },
   {
     "id": "boon:hermes:swift-strike",
     "label": "Earn the Swift Strike boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "Your Attack is +X% faster."
   },
   {
     "id": "boon:hermes:swift-flourish",
     "label": "Earn the Swift Flourish boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "Your Special is +X% faster."
   },
   {
     "id": "boon:hermes:quick-recovery",
     "label": "Earn the Quick Recovery boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "After you take damage, quickly Dash to recover up to X% Heart lost."
   },
   {
     "id": "boon:hermes:greater-haste",
     "label": "Earn the Greater Haste boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "You move X% faster."
   },
   {
     "id": "boon:hermes:hyper-sprint",
     "label": "Earn the Hyper Sprint boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "For X seconds after you Dash, become Sturdy and run +100% faster."
   },
   {
     "id": "boon:hermes:flurry-cast",
     "label": "Earn the Flurry Cast boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "Your Cast is +X% faster and fully automatic."
   },
   {
     "id": "boon:hermes:greatest-reflex",
     "label": "Earn the Greatest Reflex boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "You can Dash +X more time(s) in a row."
   },
   {
     "id": "boon:hermes:greater-evasion",
     "label": "Earn the Greater Evasion boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "You have +X% chance to Dodge."
   },
   {
     "id": "boon:hermes:quick-favor",
     "label": "Earn the Quick Favor boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "Your Call charges up automatically."
   },
   {
     "id": "boon:hermes:side-hustle",
     "label": "Earn the Side Hustle boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "Each time you enter a Chamber, gain a bit of wealth."
   },
   {
     "id": "boon:hermes:quick-reload",
     "label": "Earn the Quick Reload boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "Foes drop Ammo stuck in them faster."
   },
   {
     "id": "boon:hermes:rush-delivery",
     "label": "Earn the Rush Delivery boon from Hermes",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["hermes"]
+    "subjects": ["hermes"],
+    "description": "You deal bonus damage based on any bonus move speed."
   },
   {
     "id": "boon:demeter:frost-strike",
     "label": "Earn the Frost Strike boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "Your Attack is stronger and inflicts Chill."
   },
   {
     "id": "boon:demeter:mistral-dash",
     "label": "Earn the Mistral Dash boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "Your Dash shoots a gust ahead that inflicts Chill."
   },
   {
     "id": "boon:demeter:crystal-beam",
     "label": "Earn the Crystal Beam boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "Your Cast drops a crystal that fires a beam straight ahead for 5 Sec."
   },
   {
     "id": "boon:demeter:frost-flourish",
     "label": "Earn the Frost Flourish boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "Your Special is stronger and inflicts Chill."
   },
   {
     "id": "boon:demeter:demeters-aid",
     "label": "Earn the Demeter's Aid boon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "Your Call creates a winter vortex for 5 Sec., deals damage every 0.25 Sec inflicting Chill."
   },
   {
     "id": "boon:demeter:snow-burst",
     "label": "Earn the Snow Burst boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "Whenever you Cast, damage nearby foes and inflict Chill."
   },
   {
     "id": "boon:demeter:glacial-glare",
     "label": "Earn the Glacial Glare boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "Your Cast fires longer and inflicts Chill."
   },
   {
     "id": "boon:demeter:frozen-touch",
     "label": "Earn the Frozen Touch boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "After you take damage, damage and completely Chill your foe."
   },
   {
     "id": "boon:demeter:ravenous-will",
     "label": "Earn the Ravenous Will boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "While you have no Ammo, take 10% less damage and deal more."
   },
   {
     "id": "boon:demeter:arctic-blast",
     "label": "Earn the Arctic Blast boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "Applying 10 stacks of Chill causes a blast, clearing the effect."
   },
   {
     "id": "boon:demeter:killing-freeze",
     "label": "Earn the Killing Freeze boon from Demeter",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["demeter"]
+    "subjects": ["demeter"],
+    "description": "When all foes are Chill afflicted, they become Slow and Decay."
   },
   {
     "id": "boon:legendary:splitting-bolt",
     "label": "Earn the Splitting Bolt Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"],
+    "description": "All your lightning effects create an additional burst."
   },
   {
     "id": "boon:legendary:second-wave",
     "label": "Earn the Second Wave Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"],
+    "description": "Your knock-away effects shove foes a second time after the first."
   },
   {
     "id": "boon:legendary:divine-protection",
     "label": "Earn the Divine Protection Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"],
+    "description": "You have a barrier that negates incoming damage."
   },
   {
     "id": "boon:legendary:vicious-cycle",
     "label": "Earn the Vicious Cycle Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"],
+    "description": "Your Blade Rift effects deal more damage for each consecutive hit."
   },
   {
     "id": "boon:legendary:unhealthy-fixation",
     "label": "Earn the Unhealthy Fixation Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"],
+    "description": "Your Weak effects also have a 15% chance to Charm foes."
   },
   {
     "id": "boon:legendary:fully-loaded",
     "label": "Earn the Fully Loaded Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"],
+    "description": "Gain extra Ammo for your Cast."
   },
   {
     "id": "boon:legendary:black-out",
     "label": "Earn the Black Out Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"],
+    "description": "Hangover-afflicted foes take bonus damage in Festive Fog."
   },
   {
     "id": "boon:legendary:greater-recall",
     "label": "Earn the Greater Recall Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"],
+    "description": "Your Ammo automatically return to you."
   },
   {
     "id": "boon:legendary:bad-news",
     "label": "Earn the Bad News Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"],
+    "description": "Your cast deals more damage to foes without ammo on them."
   },
   {
     "id": "boon:legendary:winter-harvest",
     "label": "Earn the Winter Harvest Legendary Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"],
+    "description": "Chill-affected foes shatter at 10% HP, inflicting Chill nearby."
   },
   {
     "id": "boon:duo:scintillating-feast",
     "label": "Earn the Scintillating Feast Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus", "zeus"],
+    "description": "Your Festive Fog effects also deal lightning damage periodically."
   },
   {
     "id": "boon:duo:vengeful-mood",
     "label": "Earn the Vengeful Mood Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "zeus"],
+    "description": "Your Revenge attacks sometimes occur without taking damage."
   },
   {
     "id": "boon:duo:sea-storm",
     "label": "Earn the Sea Storm Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon", "zeus"],
+    "description": "Your knock-away effects also cause foes to be struck by lightning."
   },
   {
     "id": "boon:duo:lightning-phalanx",
     "label": "Earn the Lightning Phalanx Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena", "zeus"],
+    "description": "Your Phalanx Shot Cast bounces between nearby foes."
   },
   {
     "id": "boon:duo:merciful-end",
     "label": "Earn the Merciful End Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "athena"],
+    "description": "Your attacks that can Deflect immediately activate Doom effects."
   },
   {
     "id": "boon:duo:calculated-risk",
     "label": "Earn the Calculated Risk Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena", "dionysus"],
+    "description": "Your foes' ranged-attack projectiles are slower."
   },
   {
     "id": "boon:duo:deadly-reversal",
     "label": "Earn the Deadly Reversal Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "athena"],
+    "description": "After you Deflect, briefly gain +20% chance to deal Critical damage."
   },
   {
     "id": "boon:duo:hunting-blades",
     "label": "Earn the Hunting Blades Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "artemis"],
+    "description": "Your Cast creates a faster Blade Rift that seeks the nearest foe."
   },
   {
     "id": "boon:duo:lightning-rod",
     "label": "Earn the Lightning Rod Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "zeus"],
+    "description": "Your collectible Ammo strike nearby foes with lightning every 1 Sec."
   },
   {
     "id": "boon:duo:heart-rend",
     "label": "Earn the Heart Rend Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "artemis"],
+    "description": "Your Critical effects deal even more damage to Weak foes."
   },
   {
     "id": "boon:duo:curse-of-longing",
     "label": "Earn the Curse of Longing Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "ares"],
+    "description": "Your Doom effects continuously strike Weak foes."
   },
   {
     "id": "boon:duo:sweet-nectar",
     "label": "Earn the Sweet Nectar Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "poseidon"],
+    "description": "Any Poms of Power you find are more effective."
   },
   {
     "id": "boon:duo:low-tolerance",
     "label": "Earn the Low Tolerance Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "dionysus"],
+    "description": "Your Hangover effects stack even more times against Weak foes."
   },
   {
     "id": "boon:duo:exclusive-access",
     "label": "Earn the Exclusive Access Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus", "poseidon"],
+    "description": "Any Boons you find have superior effects."
   },
   {
     "id": "boon:duo:crystal-clarity",
     "label": "Earn the Crystal Clarity Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "demeter"],
+    "description": "Your Cast is stronger and tracks foes more effectively."
   },
   {
     "id": "boon:duo:ice-wine",
     "label": "Earn the Ice Wine Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter", "dionysus"],
+    "description": "Your Cast blasts an area with freezing Festive Fog that inflicts Chill."
   },
   {
     "id": "boon:duo:blizzard-shot",
     "label": "Earn the Blizzard Shot Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter", "poseidon"],
+    "description": "Your Cast moves slowly, piercing foes and firing shards around it."
   },
   {
     "id": "boon:duo:cold-fusion",
     "label": "Earn the Cold Fusion Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter", "zeus"],
+    "description": "Jolted status does not expire on your enemies' attacks."
   },
   {
     "id": "boon:duo:curse-of-drowning",
     "label": "Earn the Curse of Drowning Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "poseidon"],
+    "description": "Your Cast is a pulse that deals damage to foes around you."
   },
   {
     "id": "boon:duo:mirage-shot",
     "label": "Earn the Mirage Shot Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "poseidon"],
+    "description": "Your Cast fires a second projectile, though it has reduced damage."
   },
   {
     "id": "boon:duo:parting-shot",
     "label": "Earn the Parting Shot Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "athena"],
+    "description": "Your Cast gains any bonuses you have for striking foes from behind."
   },
   {
     "id": "boon:duo:curse-of-nausea",
     "label": "Earn the Curse of Nausea Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "dionysus"],
+    "description": "Your Hangover effects deal damage faster."
   },
   {
     "id": "boon:duo:cold-embrace",
     "label": "Earn the Cold Embrace Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "demeter"],
+    "description": "Your Cast crystal fires its beam directly at you for +4 seconds."
   },
   {
     "id": "boon:duo:freezing-vortex",
     "label": "Earn the Freezing Vortex Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares", "demeter"],
+    "description": "Your Cast inflicts Chill, but is smaller and moves slower."
   },
   {
     "id": "boon:duo:stubborn-roots",
     "label": "Earn the Stubborn Roots Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena", "demeter"],
+    "description": "While you have no Death/Stubborn Defiance your Heart slowly recovers."
   },
   {
     "id": "boon:duo:smoldering-air",
     "label": "Earn the Smoldering Air Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite", "zeus"],
+    "description": "Your Call charges up automatically, but is capped at 25%."
   },
   {
     "id": "boon:duo:unshakable-mettle",
     "label": "Earn the Unshakable Mettle Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena", "poseidon"],
+    "description": "You cannot be stunned, and resist some damage from Bosses."
   },
   {
     "id": "boon:duo:splitting-headache",
     "label": "Earn the Splitting Headache Duo Boon",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis", "dionysus"],
+    "description": "Hangover-afflicted foes are more likely to take Critical damage."
   },
   {
     "id": "blessing:chaos:strike",
     "label": "Earn the Strike blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Your Attack deals +X% damage."
   },
   {
     "id": "blessing:chaos:shot",
     "label": "Earn the Shot blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Your Cast deals +X% damage."
   },
   {
     "id": "blessing:chaos:grasp",
     "label": "Earn the Grasp blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Gain +X Ammo."
   },
   {
     "id": "blessing:chaos:soul",
     "label": "Earn the Soul blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Gain +X HealthUp."
   },
   {
     "id": "blessing:chaos:favor",
     "label": "Earn the Favor blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Boons have +X% chance to be Rare or better."
   },
   {
     "id": "blessing:chaos:affluence",
     "label": "Earn the Affluence blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Any Obol you find is worth +X%."
   },
   {
     "id": "blessing:chaos:eclipse",
     "label": "Earn the Eclipse blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Any Darkness and Gemstones you find are worth +X%."
   },
   {
     "id": "blessing:chaos:flourish",
     "label": "Earn the Flourish blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Your Special deals +X% damage."
   },
   {
     "id": "blessing:chaos:lunge",
     "label": "Earn the Lunge blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "Your Dash Attack deals +X% damage."
   },
   {
     "id": "blessing:chaos:ambush",
     "label": "Earn the Ambush blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "You deal +X% damage striking foes from behind."
   },
   {
     "id": "blessing:chaos:assault",
     "label": "Earn the Assault blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "You deal +X% damage striking undamaged foes."
   },
   {
     "id": "blessing:chaos:defiance",
     "label": "Earn the Defiance blessing from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "You have +1 use of Death Defiance (this escape attempt)."
   },
   {
     "id": "curse:chaos:paupers",
     "label": "Suffer the Pauper's curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, you cannot earn Obol."
   },
   {
     "id": "curse:chaos:slippery",
     "label": "Suffer the Slippery curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, you cannot collect Ammo for 10–15 seconds."
   },
   {
     "id": "curse:chaos:maimed",
     "label": "Suffer the Maimed curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, each time you Attack, get hit for 3–5 Heart."
   },
   {
     "id": "curse:chaos:flayed",
     "label": "Suffer the Flayed curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, each time you Special, get hit for 3–5 Heart."
   },
   {
     "id": "curse:chaos:addled",
     "label": "Suffer the Addled curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, each time you Cast, get hit for 3–5 Heart."
   },
   {
     "id": "curse:chaos:caustic",
     "label": "Suffer the Caustic curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, slain foes toss an Inferno-Bomb at you."
   },
   {
     "id": "curse:chaos:enshrouded",
     "label": "Suffer the Enshrouded curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 4–5 chambers, chamber reward previews are hidden."
   },
   {
     "id": "curse:chaos:excruciating",
     "label": "Suffer the Excruciating curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, you take +20%–50% damage."
   },
   {
     "id": "curse:chaos:abyssal",
     "label": "Suffer the Abyssal curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, you take +300%–500% damage from traps."
   },
   {
     "id": "curse:chaos:atrophic",
     "label": "Suffer the Atrophic curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3-4 encounters, your Life Total is reduced by 25–49 Heart."
   },
   {
     "id": "curse:chaos:slothful",
     "label": "Suffer the Slothful curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, you have -40%–-60% move speed."
   },
   {
     "id": "curse:chaos:halting",
     "label": "Suffer the Halting curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, your Dash has -20%–50% reduced range."
   },
   {
     "id": "curse:chaos:roiling",
     "label": "Suffer the Roiling curse from Chaos",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["chaos"]
+    "subjects": ["chaos"],
+    "description": "For the next 3–4 encounters, you face +30%–80% more foes."
   },
   {
     "id": "weapon:stygian-blade",
@@ -1644,37 +1882,43 @@
     "id": "combat:cerberus-stygius-arthur",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Stygian Blade with the Aspect of Arthur in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "stygius"]
   },
   {
     "id": "combat:cerberus-varatha-guan-yu",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Eternal Spear with the Aspect of Guan Yu in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "varatha"]
   },
   {
     "id": "combat:cerberus-coronacht-rama",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Heart-Seeking Bow with the Aspect of Rama in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "coronacht"]
   },
   {
     "id": "combat:cerberus-aegis-beowulf",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Shield of Chaos with the Aspect of Beowulf in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "aegis"]
   },
   {
     "id": "combat:cerberus-malphon-gilgamesh",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Twin Fists of Malphon with the Aspect of Gilgamesh in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "malphon"]
   },
   {
     "id": "combat:cerberus-exagryph-lucifer",
     "label": "Get past Cerberus at the Temple of Styx while wielding the Adamant Rail with the Aspect of Lucifer in effect",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus", "exagryph"]
   },
   {
     "id": "escape:stygian-blade",
@@ -1724,7 +1968,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "All foes deal bonus damage, +20% per rank."
   },
   {
     "id": "pact:lasting-consequences",
@@ -1732,7 +1977,8 @@
     "kind": "number",
     "max": 4,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Any Healing effects restore less of your Life Total than usual, -25% per rank."
   },
   {
     "id": "pact:convenience-fee",
@@ -1740,7 +1986,8 @@
     "kind": "number",
     "max": 2,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "All Obol prices are higher, +40% per rank."
   },
   {
     "id": "pact:jury-summons",
@@ -1748,7 +1995,8 @@
     "kind": "number",
     "max": 3,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Foes in standard Encounters appear in greater numbers, +20% per rank."
   },
   {
     "id": "pact:calisthenics-program",
@@ -1756,7 +2004,8 @@
     "kind": "number",
     "max": 2,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "All foes have higher Life Totals, +15% HealthUp per rank."
   },
   {
     "id": "pact:benefits-package",
@@ -1764,7 +2013,8 @@
     "kind": "number",
     "max": 2,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Most Armored foes have Perks (dangerous traits that vary per Encounter), +1 per rank."
   },
   {
     "id": "pact:middle-management",
@@ -1772,7 +2022,8 @@
     "kind": "number",
     "max": 1,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each Mini-boss Encounter contains +1 Armored foe (or some additional problem)."
   },
   {
     "id": "pact:underworld-customs",
@@ -1780,7 +2031,8 @@
     "kind": "number",
     "max": 1,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The exit to each Underworld region requires you to purge 1 Boon to unlock it."
   },
   {
     "id": "pact:forced-overtime",
@@ -1788,7 +2040,8 @@
     "kind": "number",
     "max": 2,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "All foes have bonus move speed and attack speed, +20% per rank."
   },
   {
     "id": "pact:heightened-security",
@@ -1796,7 +2049,8 @@
     "kind": "number",
     "max": 1,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "All Traps and Magma deal +400% bonus damage."
   },
   {
     "id": "pact:routine-inspection",
@@ -1804,7 +2058,8 @@
     "kind": "number",
     "max": 4,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Your Talents from the Mirror of Night are deactivated (will affect the dark reflections prophecy), -3 per rank, (from the bottom up)."
   },
   {
     "id": "pact:damage-control",
@@ -1812,7 +2067,8 @@
     "kind": "number",
     "max": 2,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "All foes have ShieldHealth, making them ignore initial instances of damage, 1 hit per rank."
   },
   {
     "id": "pact:approval-process",
@@ -1820,7 +2076,8 @@
     "kind": "number",
     "max": 2,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "You have fewer choices when offered Boons, items or upgrades, -1 per rank."
   },
   {
     "id": "pact:tight-deadline",
@@ -1828,140 +2085,160 @@
     "kind": "number",
     "max": 3,
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "You get 9 Min. to clear each Underworld region (or else!), reduced by -2 Min. per rank."
   },
   {
     "id": "perk:shifter",
     "label": "Slay a foe with the Shifter Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe teleports randomly."
   },
   {
     "id": "perk:bruiser",
     "label": "Slay a foe with the Bruiser Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe gains greatly increased health and size."
   },
   {
     "id": "perk:slugger",
     "label": "Slay a foe with the Slugger Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe deals more damage."
   },
   {
     "id": "perk:puller",
     "label": "Slay a foe with the Puller Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe pulls you toward it with a field you must dash to escape."
   },
   {
     "id": "perk:savior",
     "label": "Slay a foe with the Savior Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe periodically shields nearby foes."
   },
   {
     "id": "perk:speeder",
     "label": "Slay a foe with the Speeder Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe attacks and moves faster."
   },
   {
     "id": "perk:linker",
     "label": "Slay a foe with the Linker Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe links to another foe with a damaging laser."
   },
   {
     "id": "perk:cloner",
     "label": "Slay a foe with the Cloner Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe spawns fake one-hp clones, Tartarus only."
   },
   {
     "id": "perk:burner",
     "label": "Slay a foe with the Burner Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe constantly creates fire traps, Asphodel only."
   },
   {
     "id": "perk:seeker",
     "label": "Slay a foe with the Seeker Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe's projectiles home in on you."
   },
   {
     "id": "perk:popper",
     "label": "Slay a foe with the Popper Perk active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The foe drops exploding fake souls alongside the real one, Elysium only."
   },
   {
     "id": "miniboss:dire-inferno-bomber",
     "label": "Slay the Dire Inferno Bomber",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["inferno-bomber"]
+    "subjects": ["inferno-bomber"],
+    "description": "Encountered as a mid-stage mini-boss in Tartarus only, though the ordinary foe also appears in Asphodel."
   },
   {
     "id": "miniboss:doomstone",
     "label": "Slay the Doomstone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["doomstone"]
+    "subjects": ["doomstone"],
+    "description": "Mini-boss found in a unique chamber in Tartarus."
   },
   {
     "id": "miniboss:wretched-sneak",
     "label": "Slay the Wretched Sneak",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["wretched-sneak"]
+    "subjects": ["wretched-sneak"],
+    "description": "Mini-boss found in a unique chamber in Tartarus."
   },
   {
     "id": "miniboss:dire-voidstone",
     "label": "Slay the Dire Voidstone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["voidstone"]
+    "subjects": ["voidstone"],
+    "description": "The Voidstones on the Barge of Death in Asphodel, which the Fated List counts as Dire. They look like ordinary Voidstones and have no special qualities, not even armor."
   },
   {
     "id": "miniboss:megagorgon",
     "label": "Slay the Megagorgon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["megagorgon"]
+    "subjects": ["megagorgon"],
+    "description": "Asphodel mini-boss."
   },
   {
     "id": "miniboss:dire-skull-crusher",
     "label": "Slay the Dire Skull-Crusher",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["skull-crusher"]
+    "subjects": ["skull-crusher"],
+    "description": "The single armored Skull-Crusher that fights alongside the Megagorgon in the Asphodel mini-boss encounter, and deals the brunt of its damage."
   },
   {
     "id": "miniboss:dire-spreader",
     "label": "Slay the Dire Spreader",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["spreader"]
+    "subjects": ["spreader"],
+    "description": "A coven of four, the Witches Circle, encountered as a mini-boss in Asphodel."
   },
   {
     "id": "miniboss:dire-soul-catcher",
     "label": "Slay the Dire Soul Catcher",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["soul-catcher"]
+    "subjects": ["soul-catcher"],
+    "description": "The Butterfly Ball: a much larger Soul Catcher, found only as a mini-boss in Elysium."
   },
   {
     "id": "miniboss:dire-bother",
@@ -1975,21 +2252,24 @@
     "label": "Slay the Dire Snakestone",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["snakestone"]
+    "subjects": ["snakestone"],
+    "description": "A mini-boss variant with heavily increased armor, bright purple instead of neon green."
   },
   {
     "id": "miniboss:dire-gigantic-vermin",
     "label": "Slay the Dire Gigantic Vermin",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["gigantic-vermin"]
+    "subjects": ["gigantic-vermin"],
+    "description": "A mini-boss variant with heavily increased armor and health, jet-black instead of gray."
   },
   {
     "id": "miniboss:dire-satyr-cultist",
     "label": "Slay the Dire Satyr Cultist",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["satyr-cultist"]
+    "subjects": ["satyr-cultist"],
+    "description": "A mini-boss variant with heavily increased armor, wearing a dark green cloak."
   },
   {
     "id": "contractor:renovation-tasks",
@@ -2012,182 +2292,208 @@
     "label": "Purchase HydraLite from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "You recover 10% Heart when you enter a chamber."
   },
   {
     "id": "wellofcharon:eye-of-lamia",
     "label": "Purchase Eye of Lamia from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Slain foes have a 15% chance to drop healing items."
   },
   {
     "id": "wellofcharon:cyclops-jerky",
     "label": "Purchase Cyclops Jerky from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Your Attack deals +30% damage."
   },
   {
     "id": "wellofcharon:prometheus-stone",
     "label": "Purchase Prometheus Stone from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Gain +1 Ammo for your Cast."
   },
   {
     "id": "wellofcharon:braid-of-atlas",
     "label": "Purchase Braid of Atlas from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Your Cast deals +50% damage."
   },
   {
     "id": "wellofcharon:ignited-ichor",
     "label": "Purchase Ignited Ichor from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Gain 20% move speed."
   },
   {
     "id": "wellofcharon:yarn-of-ariadne",
     "label": "Purchase Yarn of Ariadne from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "The next Boon you find has upgraded Rarity (in reality, only guarantees Rare while increasing chances of Epic by +25% and duo/legendary by +10%)."
   },
   {
     "id": "wellofcharon:touch-of-styx",
     "label": "Purchase Touch of Styx from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Your Stubborn Defiance restores +10% Heart."
   },
   {
     "id": "wellofcharon:nail-of-talos",
     "label": "Purchase Nail of Talos from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "You deal +50% damage to Armor."
   },
   {
     "id": "wellofcharon:eris-bangle",
     "label": "Purchase Eris Bangle from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "You deal +50% damage striking undamaged foes."
   },
   {
     "id": "wellofcharon:nemesis-crest",
     "label": "Purchase Nemesis Crest from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "You deal +50% damage striking foes from behind."
   },
   {
     "id": "wellofcharon:chimaera-jerky",
     "label": "Purchase Chimaera Jerky from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Your Special deals +40% damage."
   },
   {
     "id": "wellofcharon:stygian-shard",
     "label": "Purchase Stygian Shard from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Traps deal +500% damage to your foes."
   },
   {
     "id": "wellofcharon:aether-net",
     "label": "Purchase Aether Net from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "You start Encounter(s) with your God Gauge 15% full."
   },
   {
     "id": "wellofcharon:light-of-ixion",
     "label": "Purchase Light of Ixion from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Ensure a Chaos Gate will spawn ahead (where possible)."
   },
   {
     "id": "wellofcharon:trove-tracker",
     "label": "Purchase Trove Tracker from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Ensure a Infernal Trove will spawn ahead (where possible)."
   },
   {
     "id": "wellofcharon:skeletal-lure",
     "label": "Purchase Skeletal Lure from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Ensure a Fishing Point will spawn ahead (where possible)."
   },
   {
     "id": "wellofcharon:flame-wheels-release",
     "label": "Purchase Flame Wheels Release from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Prevent Flame Wheel foes from appearing in Encounter(s)."
   },
   {
     "id": "wellofcharon:life-essence",
     "label": "Purchase Life Essence from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Restore up to 22-38% Heart (rounded up)."
   },
   {
     "id": "wellofcharon:centaur-soul",
     "label": "Purchase Centaur Soul from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Gain +25HealthUp (without restoring Heart)."
   },
   {
     "id": "wellofcharon:price-of-midas",
     "label": "Purchase Price of Midas from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Trade 10 to 50 Heart for Obol, at 1.1 to 1.8 times the Heart spent."
   },
   {
     "id": "wellofcharon:kiss-of-styx",
     "label": "Purchase Kiss of Styx from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Replenish 1 use of Death Defiance."
   },
   {
     "id": "wellofcharon:tinge-of-erebus",
     "label": "Purchase Tinge of Erebus from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Gain 12-26 Darkness"
   },
   {
     "id": "wellofcharon:gaeas-treasure",
     "label": "Purchase Gaea's Treasure from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Gain 11-14 Gemstones"
   },
   {
     "id": "wellofcharon:night-spindle",
     "label": "Purchase Night Spindle from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Gain +1 use of your Chthonic Companion's Summon."
   },
   {
     "id": "wellofcharon:fateful-twist",
     "label": "Purchase Fateful Twist from the Well of Charon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Gain a random item offered from the Well of Charon."
   },
   {
     "id": "fish:caught",
@@ -2208,530 +2514,606 @@
     "id": "talk:poseidon-after-fishing",
     "label": "Report to Poseidon after fishing",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"]
   },
   {
     "id": "lyre:interactions",
     "label": "Lyre interactions",
     "kind": "number",
     "max": 210,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "talk:orpheus-after-lyre",
     "label": "Report to Orpheus after learning the Lyre",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"]
   },
   {
     "id": "combat:defeat-hades-heat8",
     "label": "Defeat Hades with at least 8 Heat active",
     "kind": "boolean",
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"]
   },
   {
     "id": "daedalus:stygius:breaching-slash",
     "label": "Take the Breaching Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Attack deals +300% damage to Armor."
   },
   {
     "id": "daedalus:stygius:cruel-thrust",
     "label": "Take the Cruel Thrust Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Thrust deals +200% damage and has a +40% Critical chance."
   },
   {
     "id": "daedalus:stygius:cursed-slash",
     "label": "Take the Cursed Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Attack restores 2 Heart, but you have -60% Heart."
   },
   {
     "id": "daedalus:stygius:dash-nova",
     "label": "Take the Dash Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Special makes you lunge ahead, then become Sturdy for 0.8 Sec."
   },
   {
     "id": "daedalus:stygius:double-edge",
     "label": "Take the Double Edge Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Dash-Strike hits twice and deals +20% damage."
   },
   {
     "id": "daedalus:stygius:double-nova",
     "label": "Take the Double Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Special hits twice but no longer knocks foes away."
   },
   {
     "id": "daedalus:stygius:flurry-slash",
     "label": "Take the Flurry Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Hold Attack to strike rapidly, dealing 25 base damage per hit."
   },
   {
     "id": "daedalus:stygius:hoarding-slash",
     "label": "Take the Hoarding Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Attack deals bonus damage equal to 5% of your current Obol."
   },
   {
     "id": "daedalus:stygius:piercing-wave",
     "label": "Take the Piercing Wave Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Attack fires a wave that pierces foes, dealing 30 damage."
   },
   {
     "id": "daedalus:stygius:shadow-slash",
     "label": "Take the Shadow Slash Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Attack deals +200% damage when striking foes from behind."
   },
   {
     "id": "daedalus:stygius:super-nova",
     "label": "Take the Super Nova Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Special hits a wider area and deals +20% damage."
   },
   {
     "id": "daedalus:stygius:world-splitter",
     "label": "Take the World Splitter Daedalus enchantment for Stygius",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Attack is replaced with a big chop that deals 90 base damage."
   },
   {
     "id": "daedalus:coronacht:twin-shot",
     "label": "Take the Twin Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Attack fires 2 shots side-by-side, but has reduced range."
   },
   {
     "id": "daedalus:coronacht:sniper-shot",
     "label": "Take the Sniper Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Attack deals +200% damage to distant foes."
   },
   {
     "id": "daedalus:coronacht:explosive-shot",
     "label": "Take the Explosive Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Attack deals +300% damage in an area, but charges slower."
   },
   {
     "id": "daedalus:coronacht:flurry-shot",
     "label": "Take the Flurry Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Hold Attack to shoot rapidly, but you cannot Power Shot."
   },
   {
     "id": "daedalus:coronacht:piercing-volley",
     "label": "Take the Piercing Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Special pierces foes and deals +400% damage to Armor."
   },
   {
     "id": "daedalus:coronacht:perfect-shot",
     "label": "Take the Perfect Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Power Shot is easier to execute and deals +150% damage."
   },
   {
     "id": "daedalus:coronacht:relentless-volley",
     "label": "Take the Relentless Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Special shoots +4 shots."
   },
   {
     "id": "daedalus:coronacht:triple-shot",
     "label": "Take the Triple Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Attack fires 3 shots in a spread pattern."
   },
   {
     "id": "daedalus:coronacht:charged-volley",
     "label": "Take the Charged Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Hold Special for up to 250% base damage; minimum range is reduced."
   },
   {
     "id": "daedalus:coronacht:chain-shot",
     "label": "Take the Chain Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Attack bounces to up to 3 foes, dealing +15% damage for each."
   },
   {
     "id": "daedalus:coronacht:point-blank-shot",
     "label": "Take the Point-Blank Shot Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Attack deals +150% damage to nearby foes."
   },
   {
     "id": "daedalus:coronacht:concentrated-volley",
     "label": "Take the Concentrated Volley Daedalus enchantment for Coronacht",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Special deals +3 base damage for each consecutive hit to a foe."
   },
   {
     "id": "daedalus:aegis:dread-flight",
     "label": "Take the Dread Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Special can strike up to 4 additional foes before returning."
   },
   {
     "id": "daedalus:aegis:sudden-rush",
     "label": "Take the Sudden Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Bull Rush charges much faster."
   },
   {
     "id": "daedalus:aegis:pulverizing-blow",
     "label": "Take the Pulverizing Blow Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Attack hits twice, but does not knock foes away."
   },
   {
     "id": "daedalus:aegis:dashing-wallop",
     "label": "Take the Dashing Wallop Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Dash-Strike deals +50% damage in a larger area."
   },
   {
     "id": "daedalus:aegis:explosive-return",
     "label": "Take the Explosive Return Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Special deals 50 damage to nearby foes when you catch it."
   },
   {
     "id": "daedalus:aegis:minotaur-rush",
     "label": "Take the Minotaur Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Bull Rush gains a Power Rush that does +500% damage."
   },
   {
     "id": "daedalus:aegis:breaching-rush",
     "label": "Take the Breaching Rush Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Bull Rush deals +400% damage to Armor."
   },
   {
     "id": "daedalus:aegis:charged-shot",
     "label": "Take the Charged Shot Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Bull Rush instead fires a piercing shot that deals 80 base damage."
   },
   {
     "id": "daedalus:aegis:charged-flight",
     "label": "Take the Charged Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Hold Special to charge your throw for up to +200% base damage."
   },
   {
     "id": "daedalus:aegis:empowering-flight",
     "label": "Take the Empowering Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "After your Special hits, your next 2 Attacks deal +80% damage."
   },
   {
     "id": "daedalus:aegis:dashing-flight",
     "label": "Take the Dashing Flight Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "While you Dash, your Special is faster and deals +200% damage."
   },
   {
     "id": "daedalus:aegis:ferocious-guard",
     "label": "Take the Ferocious Guard Daedalus enchantment for Aegis",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "After blocking a foe, gain +20% damage and move speed for 10 Sec."
   },
   {
     "id": "daedalus:varatha:extending-jab",
     "label": "Take the Extending Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Attack has more range and deals +40% damage to distant foes."
   },
   {
     "id": "daedalus:varatha:chain-skewer",
     "label": "Take the Chain Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Special bounces to up to 7 foes, dealing +30% damage for each."
   },
   {
     "id": "daedalus:varatha:breaching-skewer",
     "label": "Take the Breaching Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Special deals +400% damage to Armor."
   },
   {
     "id": "daedalus:varatha:vicious-skewer",
     "label": "Take the Vicious Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Special deals +50% damage; +50% Critical chance on recovery."
   },
   {
     "id": "daedalus:varatha:exploding-launcher",
     "label": "Take the Exploding Launcher Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Special is replaced with a shot that deals 50 damage in an area."
   },
   {
     "id": "daedalus:varatha:massive-spin",
     "label": "Take the Massive Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Spin Attack deals +125% damage and hits a larger area."
   },
   {
     "id": "daedalus:varatha:quick-spin",
     "label": "Take the Quick Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Spin Attack charges and recovers much faster."
   },
   {
     "id": "daedalus:varatha:flurry-jab",
     "label": "Take the Flurry Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Hold Attack to strike rapidly, but you cannot Spin Attack."
   },
   {
     "id": "daedalus:varatha:charged-skewer",
     "label": "Take the Charged Skewer Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Hold Special to charge your skewer for up to +200% base damage. Minimum range reduced."
   },
   {
     "id": "daedalus:varatha:serrated-point",
     "label": "Take the Serrated Point Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Dash-Strike hits 3 times, but your dash has -25% range."
   },
   {
     "id": "daedalus:varatha:flaring-spin",
     "label": "Take the Flaring Spin Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Charging your Spin Attack makes you Sturdy and pulse 40 damage."
   },
   {
     "id": "daedalus:varatha:triple-jab",
     "label": "Take the Triple Jab Daedalus enchantment for Varatha",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Attack strikes 3 times in a spread pattern."
   },
   {
     "id": "daedalus:malphon:breaching-cross",
     "label": "Take the Breaching Cross Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Dash-Strike pierces foes and deals +900% damage to Armor"
   },
   {
     "id": "daedalus:malphon:rolling-knuckle",
     "label": "Take the Rolling Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Dash-Strike deals +60% damage; added to Attack sequence."
   },
   {
     "id": "daedalus:malphon:long-knuckle",
     "label": "Take the Long Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Attack has more range and deals +10% damage"
   },
   {
     "id": "daedalus:malphon:draining-cutter",
     "label": "Take the Draining Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Whenever your Special slays foes, restore 2% life"
   },
   {
     "id": "daedalus:malphon:concentrated-knuckle",
     "label": "Take the Concentrated Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Attack deals +5 base damage for each uninterrupted hit to a foe."
   },
   {
     "id": "daedalus:malphon:explosive-upper",
     "label": "Take the Explosive Upper Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Dash-Upper deals +100% damage in an area"
   },
   {
     "id": "daedalus:malphon:flying-cutter",
     "label": "Take the Flying Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Hold Special for longer range and up to +100% base damage"
   },
   {
     "id": "daedalus:malphon:rush-kick",
     "label": "Take the Rush Kick Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Special becomes an advancing kick that also deals 40 base damage twice"
   },
   {
     "id": "daedalus:malphon:quake-cutter",
     "label": "Take the Quake Cutter Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "After using your Special, deal 90 damage in an area where you land"
   },
   {
     "id": "daedalus:malphon:kinetic-launcher",
     "label": "Take the Kinetic Launcher Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Special becomes a charged ranged attack that deals 50 base damage."
   },
   {
     "id": "daedalus:malphon:heavy-knuckle",
     "label": "Take the Heavy Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Attack becomes a slower 3-hit sequence, each deals 40 base damage."
   },
   {
     "id": "daedalus:malphon:colossus-knuckle",
     "label": "Take the Colossus Knuckle Daedalus enchantment for Malphon",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "While using your Attack or Special, you are Sturdy"
   },
   {
     "id": "daedalus:exagryph:flurry-fire",
     "label": "Take the Flurry Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Attack is faster and more accurate; gain +6 ammo capacity."
   },
   {
     "id": "daedalus:exagryph:ricochet-fire",
     "label": "Take the Ricochet Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Attack bounces to +1 other foe"
   },
   {
     "id": "daedalus:exagryph:spread-fire",
     "label": "Take the Spread Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Attack becomes a short spread that deals 40 base damage; lose -6 ammo capacity."
   },
   {
     "id": "daedalus:exagryph:explosive-fire",
     "label": "Take the Explosive Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Attack deals damage in an area and briefly slows foes."
   },
   {
     "id": "daedalus:exagryph:delta-chamber",
     "label": "Take the Delta Chamber Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Attack is a 3-round burst; you never have to Reload."
   },
   {
     "id": "daedalus:exagryph:piercing-fire",
     "label": "Take the Piercing Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Attack pierces foes and deals +50% damage to Armor."
   },
   {
     "id": "daedalus:exagryph:triple-bomb",
     "label": "Take the Triple Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "You can use your Special 3 times in rapid succession."
   },
   {
     "id": "daedalus:exagryph:rocket-bomb",
     "label": "Take the Rocket Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Special is replaced with a rocket that deals 80 base damage."
   },
   {
     "id": "daedalus:exagryph:targeting-system",
     "label": "Take the Targeting System Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Foes targeted by your Special move slower and take +30% damage."
   },
   {
     "id": "daedalus:exagryph:hazard-bomb",
     "label": "Take the Hazard Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Special deals +300% base damage in a large area, but can hurt you."
   },
   {
     "id": "daedalus:exagryph:cluster-bomb",
     "label": "Take the Cluster Bomb Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Special fires a spread of 5 bombs, but each deals -30% damage."
   },
   {
     "id": "daedalus:exagryph:seeking-fire",
     "label": "Take the Seeking Fire Daedalus enchantment for Exagryph",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "Your Attack seeks the nearest foe and deals +10% damage."
   },
   {
     "id": "aspect:stygius:nemesis",
@@ -2739,7 +3121,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "For 3 Sec. after your Special, your Attack may deal Critical damage."
   },
   {
     "id": "aspect:stygius:poseidon",
@@ -2747,7 +3130,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "Your Special dislodges Ammo from foes."
   },
   {
     "id": "aspect:coronacht:zagreus",
@@ -2755,7 +3139,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "The bow in its original form. Leveling it raises Critical Attack Chance."
   },
   {
     "id": "aspect:coronacht:chiron",
@@ -2763,7 +3148,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your Special automatically seeks the foe last struck by your Attack."
   },
   {
     "id": "aspect:coronacht:hera",
@@ -2771,7 +3157,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "Your CastAmmo loads into your next Attack, firing on impact."
   },
   {
     "id": "aspect:aegis:zagreus",
@@ -2779,7 +3166,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "The shield in its original form. Leveling it raises Attack and Dash-Strike damage."
   },
   {
     "id": "aspect:aegis:chaos",
@@ -2787,7 +3175,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "After you Bull Rush, your next Special throws multiple shields."
   },
   {
     "id": "aspect:aegis:zeus",
@@ -2795,7 +3184,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "Your Special is replaced with the Blitz Disc."
   },
   {
     "id": "aspect:varatha:zagreus",
@@ -2803,7 +3193,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "The spear in its original form. Leveling it raises Special damage, range and speed."
   },
   {
     "id": "aspect:varatha:achilles",
@@ -2811,7 +3202,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "After your Special, you can retrieve your Spear with Raging Rush."
   },
   {
     "id": "aspect:varatha:hades",
@@ -2819,7 +3211,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "Your Spin Attack becomes Punishing Sweep."
   },
   {
     "id": "aspect:malphon:zagreus",
@@ -2827,7 +3220,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "The fists in their original form. Leveling them raises Dodge Chance."
   },
   {
     "id": "aspect:malphon:talos",
@@ -2835,7 +3229,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "Your Special becomes Magnetic Cutter; its pull deals 20 damage."
   },
   {
     "id": "aspect:malphon:demeter",
@@ -2843,7 +3238,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "After landing 12 strikes, your next Special hits more times."
   },
   {
     "id": "aspect:exagryph:zagreus",
@@ -2851,7 +3247,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "The rail in its original form. Leveling it raises bonus maximum Ammo."
   },
   {
     "id": "aspect:exagryph:eris",
@@ -2859,7 +3256,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "For 4 seconds after absorbing your Special's blast, deal more damage."
   },
   {
     "id": "aspect:exagryph:hestia",
@@ -2867,7 +3265,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "After you manually Reload, your next shot is empowered."
   },
   {
     "id": "aspect:stygius:arthur",
@@ -2875,7 +3274,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["stygius"]
+    "subjects": ["stygius"],
+    "description": "You have Holy Excalibur, and +50 HealthUp to your Life Total."
   },
   {
     "id": "aspect:varatha:guan-yu",
@@ -2883,7 +3283,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["varatha"]
+    "subjects": ["varatha"],
+    "description": "You have the Frost Fair Blade, but your life and healing are reduced."
   },
   {
     "id": "aspect:coronacht:rama",
@@ -2891,7 +3292,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["coronacht"]
+    "subjects": ["coronacht"],
+    "description": "You have Celestial Sharanga, which can cause Shared Suffering."
   },
   {
     "id": "aspect:aegis:beowulf",
@@ -2899,7 +3301,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["aegis"]
+    "subjects": ["aegis"],
+    "description": "You have Naegling's Board but take +10% damage."
   },
   {
     "id": "aspect:malphon:gilgamesh",
@@ -2907,7 +3310,8 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["malphon"]
+    "subjects": ["malphon"],
+    "description": "You have the Claws of Enkidu, whose Dash-Upper can Maim foes."
   },
   {
     "id": "aspect:exagryph:lucifer",
@@ -2915,349 +3319,424 @@
     "kind": "number",
     "max": 5,
     "collection": "prophecy",
-    "subjects": ["exagryph"]
+    "subjects": ["exagryph"],
+    "description": "You have Igneus Eden, which launches volatile Hellfire."
   },
   {
     "id": "talent:shadow-presence",
     "label": "Escape the Underworld with the Shadow Presence talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "It gives Attack and Special +10% damage per rank when striking foes from behind."
   },
   {
     "id": "talent:fiery-presence",
     "label": "Escape the Underworld with the Fiery Presence talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "It gives Attack and Special +15% damage per rank when striking undamaged foes."
   },
   {
     "id": "talent:chthonic-vitality",
     "label": "Escape the Underworld with the Chthonic Vitality talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank restores 1 Health when you exit a chamber."
   },
   {
     "id": "talent:dark-regeneration",
     "label": "Escape the Underworld with the Dark Regeneration talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank makes +30% of any Darkness you collect restore your Health by that much."
   },
   {
     "id": "talent:death-defiance",
     "label": "Escape the Underworld with the Death Defiance talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank restores you for 50% Health, once, when your Life Total is depleted."
   },
   {
     "id": "talent:stubborn-defiance",
     "label": "Escape the Underworld with the Stubborn Defiance talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "It restores you to 30% Health, once per chamber, when your Life Total is depleted."
   },
   {
     "id": "talent:greater-reflex",
     "label": "Escape the Underworld with the Greater Reflex talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank lets you chain one extra Dash before briefly recovering."
   },
   {
     "id": "talent:ruthless-reflex",
     "label": "Escape the Underworld with the Ruthless Reflex talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Dashing just before getting hit gives +50% damage and dodge chance for 2 seconds."
   },
   {
     "id": "talent:boiling-blood",
     "label": "Escape the Underworld with the Boiling Blood talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +10% Attack and Special damage to foes carrying your Cast Ammo."
   },
   {
     "id": "talent:abyssal-blood",
     "label": "Escape the Underworld with the Abyssal Blood talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank reduces the speed and damage of foes carrying your Cast Ammo by -6%."
   },
   {
     "id": "talent:infernal-soul",
     "label": "Escape the Underworld with the Infernal Soul talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +1 Cast Ammo for your Cast."
   },
   {
     "id": "talent:stygian-soul",
     "label": "Escape the Underworld with the Stygian Soul talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Your Cast Ammo regenerates instead of dropping, 1 second faster per rank."
   },
   {
     "id": "talent:deep-pockets",
     "label": "Escape the Underworld with the Deep Pockets talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank grants 10 Obols at the start of each escape from the House of Hades."
   },
   {
     "id": "talent:golden-touch",
     "label": "Escape the Underworld with the Golden Touch talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank grants +5% of your Obols total each time you clear an Underworld region."
   },
   {
     "id": "talent:thick-skin",
     "label": "Escape the Underworld with the Thick Skin talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank adds +5 Health to your Life Total."
   },
   {
     "id": "talent:high-confidence",
     "label": "Escape the Underworld with the High Confidence talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +5% damage while you have 80% Health or greater."
   },
   {
     "id": "talent:privileged-status",
     "label": "Escape the Underworld with the Privileged Status talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +20% damage against foes afflicted by at least two Status Curse effects."
   },
   {
     "id": "talent:family-favorite",
     "label": "Escape the Underworld with the Family Favorite talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +2.5% damage for each different Olympian whose Boons you hold."
   },
   {
     "id": "talent:olympian-favor",
     "label": "Escape the Underworld with the Olympian Favor talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank adds a 1% bonus chance for a Boon to be Rare."
   },
   {
     "id": "talent:dark-foresight",
     "label": "Escape the Underworld with the Dark Foresight talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +2% greater chance for Gold Laurel rewards."
   },
   {
     "id": "talent:gods-pride",
     "label": "Escape the Underworld with the Gods' Pride talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank adds a 1% bonus chance for a Boon to be Epic."
   },
   {
     "id": "talent:gods-legacy",
     "label": "Escape the Underworld with the Gods' Legacy talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives +1% greater chance for a Boon to be Legendary or a Duo."
   },
   {
     "id": "talent:fated-authority",
     "label": "Escape the Underworld with the Fated Authority talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives one die, used to alter the reward for the next chamber."
   },
   {
     "id": "talent:fated-persuasion",
     "label": "Escape the Underworld with the Fated Persuasion talent active",
     "kind": "boolean",
     "collection": "prophecy",
-    "subjects": []
+    "subjects": [],
+    "description": "Each rank gives one die, used to alter Boon and Well of Charon choices."
   },
   {
     "id": "keepsake:old-spiked-collar",
     "label": "Old Spiked Collar keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["cerberus"],
+    "description": "Gain +25/38/50 Heart"
   },
   {
     "id": "keepsake:myrmidon-bracer",
     "label": "Myrmidon Bracer keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["achilles"],
+    "description": "Take 20/25/30% less damage from the front, but 10% more from the back."
   },
   {
     "id": "keepsake:black-shawl",
     "label": "Black Shawl keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["nyx"],
+    "description": "Deal 10/15/20% damage striking undamaged foes; also striking foes from behind."
   },
   {
     "id": "keepsake:pierced-butterfly",
     "label": "Pierced Butterfly keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["thanatos"],
+    "description": "Gain +1/1.5/2% damage for each Encounter you clear without taking damage."
   },
   {
     "id": "keepsake:bone-hourglass",
     "label": "Bone Hourglass keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["charon"],
+    "description": "Items from the Well of Charon have durations increased by +4/6/8 Encounters."
   },
   {
     "id": "keepsake:chthonic-coin-purse",
     "label": "Chthonic Coin Purse keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hypnos"],
+    "description": "Receive 100/125/150 Obol to spend as you please (once per escape attempt)."
   },
   {
     "id": "keepsake:skull-earring",
     "label": "Skull Earring keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["megaera"],
+    "description": "Deal 20/30/40% more damage while at 35% Heart or less."
   },
   {
     "id": "keepsake:distant-memory",
     "label": "Distant Memory keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["orpheus"],
+    "description": "Deal 10/20/30% more damage to distant foes (at least 500 units away)."
   },
   {
     "id": "keepsake:harpy-feather-duster",
     "label": "Harpy Feather Duster keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dusa"],
+    "description": "Broken urns have a 3/5/6% chance to contain healing items."
   },
   {
     "id": "keepsake:lucky-tooth",
     "label": "Lucky Tooth keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["skelly"],
+    "description": "Automatically restore up to 50/75/100 Heart when your Life Total is depleted (once per escape attempt)."
   },
   {
     "id": "keepsake:thunder-signet",
     "label": "Thunder Signet keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["zeus"],
+    "description": "The next Boon you find will be from Zeus. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:conch-shell",
     "label": "Conch Shell keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["poseidon"],
+    "description": "The next Boon you find will be from Poseidon. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:owl-pendant",
     "label": "Owl Pendant keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["athena"],
+    "description": "The next Boon you find will be from Athena. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:eternal-rose",
     "label": "Eternal Rose keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["aphrodite"],
+    "description": "The next Boon you find will be from Aphrodite. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:blood-filled-vial",
     "label": "Blood-Filled Vial keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["ares"],
+    "description": "The next Boon you find will be from Ares. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:adamant-arrowhead",
     "label": "Adamant Arrowhead keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["artemis"],
+    "description": "The next Boon you find will be from Artemis. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:overflowing-cup",
     "label": "Overflowing Cup keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["dionysus"],
+    "description": "The next Boon you find will be from Dionysus. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:lambent-plume",
     "label": "Lambent Plume keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hermes"],
+    "description": "Gain +1/1.1/1.2% Dodge chance and move speed each time you quickly clear an Encounter."
   },
   {
     "id": "keepsake:frostbitten-horn",
     "label": "Frostbitten Horn keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["demeter"],
+    "description": "The next Boon you find will be from Demeter. Their blessings have a +10/15/20% chance to be Rare or better."
   },
   {
     "id": "keepsake:cosmic-egg",
     "label": "Cosmic Egg keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["chaos"],
+    "description": "Enter Chaos Gates without losing Heart. Blessings from Chaos have +20/30/40% chance to be Rare or better."
   },
   {
     "id": "keepsake:shattered-shackle",
     "label": "Shattered Shackle keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["sisyphus"],
+    "description": "Your Attack, Special, and Cast each deal +50/75/100% damage while not empowered by a Boon."
   },
   {
     "id": "keepsake:evergreen-acorn",
     "label": "Evergreen Acorn keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["eurydice"],
+    "description": "In the final encounter in each underworld region, take 0 damage the first 3/4/5 times foes hit you."
   },
   {
     "id": "keepsake:broken-spearpoint",
     "label": "Broken Spearpoint keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["patroclus"],
+    "description": "After taking damage, become impervious to damage for 1/1.25/1.5 sec. Refreshes after 7 Sec."
   },
   {
     "id": "keepsake:pom-blossom",
     "label": "Pom Blossom keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["persephone"],
+    "description": "After every 6/5/4 Encounters, gain +1 Lv. (a random Boon grows stronger)."
   },
   {
     "id": "keepsake:sigil-of-the-dead",
     "label": "Sigil of the Dead keepsake rank",
     "kind": "number",
     "max": 3,
-    "collection": "prophecy"
+    "collection": "prophecy",
+    "subjects": ["hades"],
+    "description": "Your Call becomes Hades' Aid, which briefly makes you Invisible; your God Gauge starts 10/20/30% full. Stealth Damage Bonus: +50/75/100%"
   }
 ]

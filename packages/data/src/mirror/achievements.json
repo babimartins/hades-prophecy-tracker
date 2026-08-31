@@ -7,9 +7,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:shadow-presence"
-      ]
+      "of": ["talent:shadow-presence"]
     }
   },
   {
@@ -20,9 +18,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:fiery-presence"
-      ]
+      "of": ["talent:fiery-presence"]
     }
   },
   {
@@ -33,9 +29,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:chthonic-vitality"
-      ]
+      "of": ["talent:chthonic-vitality"]
     }
   },
   {
@@ -46,9 +40,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:dark-regeneration"
-      ]
+      "of": ["talent:dark-regeneration"]
     }
   },
   {
@@ -59,9 +51,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:death-defiance"
-      ]
+      "of": ["talent:death-defiance"]
     }
   },
   {
@@ -72,9 +62,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:stubborn-defiance"
-      ]
+      "of": ["talent:stubborn-defiance"]
     }
   },
   {
@@ -85,9 +73,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:greater-reflex"
-      ]
+      "of": ["talent:greater-reflex"]
     }
   },
   {
@@ -98,9 +84,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:ruthless-reflex"
-      ]
+      "of": ["talent:ruthless-reflex"]
     }
   },
   {
@@ -111,9 +95,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:boiling-blood"
-      ]
+      "of": ["talent:boiling-blood"]
     }
   },
   {
@@ -124,9 +106,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:abyssal-blood"
-      ]
+      "of": ["talent:abyssal-blood"]
     }
   },
   {
@@ -137,9 +117,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:infernal-soul"
-      ]
+      "of": ["talent:infernal-soul"]
     }
   },
   {
@@ -150,9 +128,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:stygian-soul"
-      ]
+      "of": ["talent:stygian-soul"]
     }
   },
   {
@@ -163,9 +139,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:deep-pockets"
-      ]
+      "of": ["talent:deep-pockets"]
     }
   },
   {
@@ -176,9 +150,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:golden-touch"
-      ]
+      "of": ["talent:golden-touch"]
     }
   },
   {
@@ -189,9 +161,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:thick-skin"
-      ]
+      "of": ["talent:thick-skin"]
     }
   },
   {
@@ -202,9 +172,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:high-confidence"
-      ]
+      "of": ["talent:high-confidence"]
     }
   },
   {
@@ -215,9 +183,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:privileged-status"
-      ]
+      "of": ["talent:privileged-status"]
     }
   },
   {
@@ -228,9 +194,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:family-favorite"
-      ]
+      "of": ["talent:family-favorite"]
     }
   },
   {
@@ -241,9 +205,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:olympian-favor"
-      ]
+      "of": ["talent:olympian-favor"]
     }
   },
   {
@@ -254,9 +216,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:dark-foresight"
-      ]
+      "of": ["talent:dark-foresight"]
     }
   },
   {
@@ -267,9 +227,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:gods-pride"
-      ]
+      "of": ["talent:gods-pride"]
     }
   },
   {
@@ -280,9 +238,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:gods-legacy"
-      ]
+      "of": ["talent:gods-legacy"]
     }
   },
   {
@@ -293,9 +249,7 @@
     "section": "red",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:fated-authority"
-      ]
+      "of": ["talent:fated-authority"]
     }
   },
   {
@@ -306,9 +260,7 @@
     "section": "green",
     "requirement": {
       "kind": "all",
-      "of": [
-        "talent:fated-persuasion"
-      ]
+      "of": ["talent:fated-persuasion"]
     }
   }
 ]

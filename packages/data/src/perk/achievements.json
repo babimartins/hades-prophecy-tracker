@@ -6,9 +6,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:shifter"
-      ]
+      "of": ["perk:shifter"]
     }
   },
   {
@@ -18,9 +16,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:bruiser"
-      ]
+      "of": ["perk:bruiser"]
     }
   },
   {
@@ -30,9 +26,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:slugger"
-      ]
+      "of": ["perk:slugger"]
     }
   },
   {
@@ -42,9 +36,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:puller"
-      ]
+      "of": ["perk:puller"]
     }
   },
   {
@@ -54,9 +46,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:savior"
-      ]
+      "of": ["perk:savior"]
     }
   },
   {
@@ -66,9 +56,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:speeder"
-      ]
+      "of": ["perk:speeder"]
     }
   },
   {
@@ -78,9 +66,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:linker"
-      ]
+      "of": ["perk:linker"]
     }
   },
   {
@@ -90,9 +76,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:cloner"
-      ]
+      "of": ["perk:cloner"]
     }
   },
   {
@@ -102,9 +86,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:burner"
-      ]
+      "of": ["perk:burner"]
     }
   },
   {
@@ -114,9 +96,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:seeker"
-      ]
+      "of": ["perk:seeker"]
     }
   },
   {
@@ -126,9 +106,7 @@
     "collection": "perk",
     "requirement": {
       "kind": "all",
-      "of": [
-        "perk:popper"
-      ]
+      "of": ["perk:popper"]
     }
   }
 ]

@@ -235,6 +235,11 @@
     "type": "character"
   },
   {
+    "id": "persephone",
+    "name": "Persephone",
+    "type": "character"
+  },
+  {
     "id": "poseidon",
     "name": "Poseidon",
     "type": "character"

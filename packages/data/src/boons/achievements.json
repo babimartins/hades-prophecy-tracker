@@ -7,9 +7,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:heartbreak-strike"
-      ]
+      "of": ["boon:aphrodite:heartbreak-strike"]
     }
   },
   {
@@ -20,9 +18,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:heartbreak-flourish"
-      ]
+      "of": ["boon:aphrodite:heartbreak-flourish"]
     }
   },
   {
@@ -33,9 +29,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:passion-dash"
-      ]
+      "of": ["boon:aphrodite:passion-dash"]
     }
   },
   {
@@ -46,9 +40,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:crush-shot"
-      ]
+      "of": ["boon:aphrodite:crush-shot"]
     }
   },
   {
@@ -59,9 +51,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:aphrodites-aid"
-      ]
+      "of": ["boon:aphrodite:aphrodites-aid"]
     }
   },
   {
@@ -72,9 +62,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:blown-kiss"
-      ]
+      "of": ["boon:aphrodite:blown-kiss"]
     }
   },
   {
@@ -85,9 +73,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:wave-of-despair"
-      ]
+      "of": ["boon:aphrodite:wave-of-despair"]
     }
   },
   {
@@ -98,9 +84,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:dying-lament"
-      ]
+      "of": ["boon:aphrodite:dying-lament"]
     }
   },
   {
@@ -111,9 +95,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:different-league"
-      ]
+      "of": ["boon:aphrodite:different-league"]
     }
   },
   {
@@ -124,9 +106,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:life-affirmation"
-      ]
+      "of": ["boon:aphrodite:life-affirmation"]
     }
   },
   {
@@ -137,9 +117,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:empty-inside"
-      ]
+      "of": ["boon:aphrodite:empty-inside"]
     }
   },
   {
@@ -150,9 +128,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:sweet-surrender"
-      ]
+      "of": ["boon:aphrodite:sweet-surrender"]
     }
   },
   {
@@ -163,9 +139,7 @@
     "section": "aphrodite",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:aphrodite:broken-resolve"
-      ]
+      "of": ["boon:aphrodite:broken-resolve"]
     }
   },
   {
@@ -176,9 +150,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:curse-of-agony"
-      ]
+      "of": ["boon:ares:curse-of-agony"]
     }
   },
   {
@@ -189,9 +161,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:curse-of-pain"
-      ]
+      "of": ["boon:ares:curse-of-pain"]
     }
   },
   {
@@ -202,9 +172,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:blade-dash"
-      ]
+      "of": ["boon:ares:blade-dash"]
     }
   },
   {
@@ -215,9 +183,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:slicing-shot"
-      ]
+      "of": ["boon:ares:slicing-shot"]
     }
   },
   {
@@ -228,9 +194,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:ares-aid"
-      ]
+      "of": ["boon:ares:ares-aid"]
     }
   },
   {
@@ -241,9 +205,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:curse-of-vengeance"
-      ]
+      "of": ["boon:ares:curse-of-vengeance"]
     }
   },
   {
@@ -254,9 +216,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:urge-to-kill"
-      ]
+      "of": ["boon:ares:urge-to-kill"]
     }
   },
   {
@@ -267,9 +227,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:battle-rage"
-      ]
+      "of": ["boon:ares:battle-rage"]
     }
   },
   {
@@ -280,9 +238,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:blood-frenzy"
-      ]
+      "of": ["boon:ares:blood-frenzy"]
     }
   },
   {
@@ -293,9 +249,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:impending-doom"
-      ]
+      "of": ["boon:ares:impending-doom"]
     }
   },
   {
@@ -306,9 +260,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:dire-misfortune"
-      ]
+      "of": ["boon:ares:dire-misfortune"]
     }
   },
   {
@@ -319,9 +271,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:black-metal"
-      ]
+      "of": ["boon:ares:black-metal"]
     }
   },
   {
@@ -332,9 +282,7 @@
     "section": "ares",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:ares:engulfing-vortex"
-      ]
+      "of": ["boon:ares:engulfing-vortex"]
     }
   },
   {
@@ -345,9 +293,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:deadly-strike"
-      ]
+      "of": ["boon:artemis:deadly-strike"]
     }
   },
   {
@@ -358,9 +304,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:hunter-dash"
-      ]
+      "of": ["boon:artemis:hunter-dash"]
     }
   },
   {
@@ -371,9 +315,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:true-shot"
-      ]
+      "of": ["boon:artemis:true-shot"]
     }
   },
   {
@@ -384,9 +326,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:deadly-flourish"
-      ]
+      "of": ["boon:artemis:deadly-flourish"]
     }
   },
   {
@@ -397,9 +337,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:artemis-aid"
-      ]
+      "of": ["boon:artemis:artemis-aid"]
     }
   },
   {
@@ -410,9 +348,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:pressure-points"
-      ]
+      "of": ["boon:artemis:pressure-points"]
     }
   },
   {
@@ -423,9 +359,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:support-fire"
-      ]
+      "of": ["boon:artemis:support-fire"]
     }
   },
   {
@@ -436,9 +370,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:hunters-mark"
-      ]
+      "of": ["boon:artemis:hunters-mark"]
     }
   },
   {
@@ -449,9 +381,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:clean-kill"
-      ]
+      "of": ["boon:artemis:clean-kill"]
     }
   },
   {
@@ -462,9 +392,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:hide-breaker"
-      ]
+      "of": ["boon:artemis:hide-breaker"]
     }
   },
   {
@@ -475,9 +403,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:hunter-instinct"
-      ]
+      "of": ["boon:artemis:hunter-instinct"]
     }
   },
   {
@@ -488,9 +414,7 @@
     "section": "artemis",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:artemis:exit-wounds"
-      ]
+      "of": ["boon:artemis:exit-wounds"]
     }
   },
   {
@@ -501,9 +425,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:divine-strike"
-      ]
+      "of": ["boon:athena:divine-strike"]
     }
   },
   {
@@ -514,9 +436,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:divine-flourish"
-      ]
+      "of": ["boon:athena:divine-flourish"]
     }
   },
   {
@@ -527,9 +447,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:divine-dash"
-      ]
+      "of": ["boon:athena:divine-dash"]
     }
   },
   {
@@ -540,9 +458,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:phalanx-shot"
-      ]
+      "of": ["boon:athena:phalanx-shot"]
     }
   },
   {
@@ -553,9 +469,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:athenas-aid"
-      ]
+      "of": ["boon:athena:athenas-aid"]
     }
   },
   {
@@ -566,9 +480,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:sure-footing"
-      ]
+      "of": ["boon:athena:sure-footing"]
     }
   },
   {
@@ -579,9 +491,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:bronze-skin"
-      ]
+      "of": ["boon:athena:bronze-skin"]
     }
   },
   {
@@ -592,9 +502,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:holy-shield"
-      ]
+      "of": ["boon:athena:holy-shield"]
     }
   },
   {
@@ -605,9 +513,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:proud-bearing"
-      ]
+      "of": ["boon:athena:proud-bearing"]
     }
   },
   {
@@ -618,9 +524,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:blinding-flash"
-      ]
+      "of": ["boon:athena:blinding-flash"]
     }
   },
   {
@@ -631,9 +535,7 @@
     "section": "athena",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:athena:brilliant-riposte"
-      ]
+      "of": ["boon:athena:brilliant-riposte"]
     }
   },
   {
@@ -644,9 +546,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:frost-strike"
-      ]
+      "of": ["boon:demeter:frost-strike"]
     }
   },
   {
@@ -657,9 +557,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:mistral-dash"
-      ]
+      "of": ["boon:demeter:mistral-dash"]
     }
   },
   {
@@ -670,9 +568,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:crystal-beam"
-      ]
+      "of": ["boon:demeter:crystal-beam"]
     }
   },
   {
@@ -683,9 +579,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:frost-flourish"
-      ]
+      "of": ["boon:demeter:frost-flourish"]
     }
   },
   {
@@ -696,9 +590,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:demeters-aid"
-      ]
+      "of": ["boon:demeter:demeters-aid"]
     }
   },
   {
@@ -709,9 +601,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:snow-burst"
-      ]
+      "of": ["boon:demeter:snow-burst"]
     }
   },
   {
@@ -722,9 +612,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:glacial-glare"
-      ]
+      "of": ["boon:demeter:glacial-glare"]
     }
   },
   {
@@ -735,9 +623,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:frozen-touch"
-      ]
+      "of": ["boon:demeter:frozen-touch"]
     }
   },
   {
@@ -748,9 +634,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:ravenous-will"
-      ]
+      "of": ["boon:demeter:ravenous-will"]
     }
   },
   {
@@ -761,9 +645,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:arctic-blast"
-      ]
+      "of": ["boon:demeter:arctic-blast"]
     }
   },
   {
@@ -774,9 +656,7 @@
     "section": "demeter",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:demeter:killing-freeze"
-      ]
+      "of": ["boon:demeter:killing-freeze"]
     }
   },
   {
@@ -787,9 +667,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:drunken-strike"
-      ]
+      "of": ["boon:dionysus:drunken-strike"]
     }
   },
   {
@@ -800,9 +678,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:drunken-flourish"
-      ]
+      "of": ["boon:dionysus:drunken-flourish"]
     }
   },
   {
@@ -813,9 +689,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:drunken-dash"
-      ]
+      "of": ["boon:dionysus:drunken-dash"]
     }
   },
   {
@@ -826,9 +700,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:trippy-shot"
-      ]
+      "of": ["boon:dionysus:trippy-shot"]
     }
   },
   {
@@ -839,9 +711,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:dionysus-aid"
-      ]
+      "of": ["boon:dionysus:dionysus-aid"]
     }
   },
   {
@@ -852,9 +722,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:after-party"
-      ]
+      "of": ["boon:dionysus:after-party"]
     }
   },
   {
@@ -865,9 +733,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:positive-outlook"
-      ]
+      "of": ["boon:dionysus:positive-outlook"]
     }
   },
   {
@@ -878,9 +744,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:strong-drink"
-      ]
+      "of": ["boon:dionysus:strong-drink"]
     }
   },
   {
@@ -891,9 +755,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:peer-pressure"
-      ]
+      "of": ["boon:dionysus:peer-pressure"]
     }
   },
   {
@@ -904,9 +766,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:numbing-sensation"
-      ]
+      "of": ["boon:dionysus:numbing-sensation"]
     }
   },
   {
@@ -917,9 +777,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:bad-influence"
-      ]
+      "of": ["boon:dionysus:bad-influence"]
     }
   },
   {
@@ -930,9 +788,7 @@
     "section": "dionysus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:dionysus:high-tolerance"
-      ]
+      "of": ["boon:dionysus:high-tolerance"]
     }
   },
   {
@@ -943,9 +799,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:second-wind"
-      ]
+      "of": ["boon:hermes:second-wind"]
     }
   },
   {
@@ -956,9 +810,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:swift-strike"
-      ]
+      "of": ["boon:hermes:swift-strike"]
     }
   },
   {
@@ -969,9 +821,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:swift-flourish"
-      ]
+      "of": ["boon:hermes:swift-flourish"]
     }
   },
   {
@@ -982,9 +832,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:quick-recovery"
-      ]
+      "of": ["boon:hermes:quick-recovery"]
     }
   },
   {
@@ -995,9 +843,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:greater-haste"
-      ]
+      "of": ["boon:hermes:greater-haste"]
     }
   },
   {
@@ -1008,9 +854,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:hyper-sprint"
-      ]
+      "of": ["boon:hermes:hyper-sprint"]
     }
   },
   {
@@ -1021,9 +865,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:flurry-cast"
-      ]
+      "of": ["boon:hermes:flurry-cast"]
     }
   },
   {
@@ -1034,9 +876,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:greatest-reflex"
-      ]
+      "of": ["boon:hermes:greatest-reflex"]
     }
   },
   {
@@ -1047,9 +887,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:greater-evasion"
-      ]
+      "of": ["boon:hermes:greater-evasion"]
     }
   },
   {
@@ -1060,9 +898,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:quick-favor"
-      ]
+      "of": ["boon:hermes:quick-favor"]
     }
   },
   {
@@ -1073,9 +909,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:side-hustle"
-      ]
+      "of": ["boon:hermes:side-hustle"]
     }
   },
   {
@@ -1086,9 +920,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:quick-reload"
-      ]
+      "of": ["boon:hermes:quick-reload"]
     }
   },
   {
@@ -1099,9 +931,7 @@
     "section": "hermes",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:hermes:rush-delivery"
-      ]
+      "of": ["boon:hermes:rush-delivery"]
     }
   },
   {
@@ -1112,9 +942,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:tempest-strike"
-      ]
+      "of": ["boon:poseidon:tempest-strike"]
     }
   },
   {
@@ -1125,9 +953,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:tempest-flourish"
-      ]
+      "of": ["boon:poseidon:tempest-flourish"]
     }
   },
   {
@@ -1138,9 +964,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:tidal-dash"
-      ]
+      "of": ["boon:poseidon:tidal-dash"]
     }
   },
   {
@@ -1151,9 +975,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:flood-shot"
-      ]
+      "of": ["boon:poseidon:flood-shot"]
     }
   },
   {
@@ -1164,9 +986,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:poseidons-aid"
-      ]
+      "of": ["boon:poseidon:poseidons-aid"]
     }
   },
   {
@@ -1177,9 +997,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:hydraulic-might"
-      ]
+      "of": ["boon:poseidon:hydraulic-might"]
     }
   },
   {
@@ -1190,9 +1008,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:oceans-bounty"
-      ]
+      "of": ["boon:poseidon:oceans-bounty"]
     }
   },
   {
@@ -1203,9 +1019,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:boiling-point"
-      ]
+      "of": ["boon:poseidon:boiling-point"]
     }
   },
   {
@@ -1216,9 +1030,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:rip-current"
-      ]
+      "of": ["boon:poseidon:rip-current"]
     }
   },
   {
@@ -1229,9 +1041,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:typhoons-fury"
-      ]
+      "of": ["boon:poseidon:typhoons-fury"]
     }
   },
   {
@@ -1242,9 +1052,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:breaking-wave"
-      ]
+      "of": ["boon:poseidon:breaking-wave"]
     }
   },
   {
@@ -1255,9 +1063,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:razor-shoals"
-      ]
+      "of": ["boon:poseidon:razor-shoals"]
     }
   },
   {
@@ -1268,9 +1074,7 @@
     "section": "poseidon",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:poseidon:wave-pounding"
-      ]
+      "of": ["boon:poseidon:wave-pounding"]
     }
   },
   {
@@ -1281,9 +1085,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:lightning-strike"
-      ]
+      "of": ["boon:zeus:lightning-strike"]
     }
   },
   {
@@ -1294,9 +1096,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:thunder-dash"
-      ]
+      "of": ["boon:zeus:thunder-dash"]
     }
   },
   {
@@ -1307,9 +1107,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:electric-shot"
-      ]
+      "of": ["boon:zeus:electric-shot"]
     }
   },
   {
@@ -1320,9 +1118,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:thunder-flourish"
-      ]
+      "of": ["boon:zeus:thunder-flourish"]
     }
   },
   {
@@ -1333,9 +1129,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:zeus-aid"
-      ]
+      "of": ["boon:zeus:zeus-aid"]
     }
   },
   {
@@ -1346,9 +1140,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:heavens-vengeance"
-      ]
+      "of": ["boon:zeus:heavens-vengeance"]
     }
   },
   {
@@ -1359,9 +1151,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:clouded-judgement"
-      ]
+      "of": ["boon:zeus:clouded-judgement"]
     }
   },
   {
@@ -1372,9 +1162,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:billowing-strength"
-      ]
+      "of": ["boon:zeus:billowing-strength"]
     }
   },
   {
@@ -1385,9 +1173,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:lightning-reflexes"
-      ]
+      "of": ["boon:zeus:lightning-reflexes"]
     }
   },
   {
@@ -1398,9 +1184,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:storm-lightning"
-      ]
+      "of": ["boon:zeus:storm-lightning"]
     }
   },
   {
@@ -1411,9 +1195,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:static-discharge"
-      ]
+      "of": ["boon:zeus:static-discharge"]
     }
   },
   {
@@ -1424,9 +1206,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:high-voltage"
-      ]
+      "of": ["boon:zeus:high-voltage"]
     }
   },
   {
@@ -1437,9 +1217,7 @@
     "section": "zeus",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:zeus:double-strike"
-      ]
+      "of": ["boon:zeus:double-strike"]
     }
   },
   {
@@ -1450,9 +1228,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:scintillating-feast"
-      ]
+      "of": ["boon:duo:scintillating-feast"]
     }
   },
   {
@@ -1463,9 +1239,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:vengeful-mood"
-      ]
+      "of": ["boon:duo:vengeful-mood"]
     }
   },
   {
@@ -1476,9 +1250,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:sea-storm"
-      ]
+      "of": ["boon:duo:sea-storm"]
     }
   },
   {
@@ -1489,9 +1261,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:lightning-phalanx"
-      ]
+      "of": ["boon:duo:lightning-phalanx"]
     }
   },
   {
@@ -1502,9 +1272,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:merciful-end"
-      ]
+      "of": ["boon:duo:merciful-end"]
     }
   },
   {
@@ -1515,9 +1283,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:calculated-risk"
-      ]
+      "of": ["boon:duo:calculated-risk"]
     }
   },
   {
@@ -1528,9 +1294,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:deadly-reversal"
-      ]
+      "of": ["boon:duo:deadly-reversal"]
     }
   },
   {
@@ -1541,9 +1305,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:hunting-blades"
-      ]
+      "of": ["boon:duo:hunting-blades"]
     }
   },
   {
@@ -1554,9 +1316,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:lightning-rod"
-      ]
+      "of": ["boon:duo:lightning-rod"]
     }
   },
   {
@@ -1567,9 +1327,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:heart-rend"
-      ]
+      "of": ["boon:duo:heart-rend"]
     }
   },
   {
@@ -1580,9 +1338,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:curse-of-longing"
-      ]
+      "of": ["boon:duo:curse-of-longing"]
     }
   },
   {
@@ -1593,9 +1349,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:sweet-nectar"
-      ]
+      "of": ["boon:duo:sweet-nectar"]
     }
   },
   {
@@ -1606,9 +1360,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:low-tolerance"
-      ]
+      "of": ["boon:duo:low-tolerance"]
     }
   },
   {
@@ -1619,9 +1371,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:exclusive-access"
-      ]
+      "of": ["boon:duo:exclusive-access"]
     }
   },
   {
@@ -1632,9 +1382,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:crystal-clarity"
-      ]
+      "of": ["boon:duo:crystal-clarity"]
     }
   },
   {
@@ -1645,9 +1393,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:ice-wine"
-      ]
+      "of": ["boon:duo:ice-wine"]
     }
   },
   {
@@ -1658,9 +1404,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:blizzard-shot"
-      ]
+      "of": ["boon:duo:blizzard-shot"]
     }
   },
   {
@@ -1671,9 +1415,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:cold-fusion"
-      ]
+      "of": ["boon:duo:cold-fusion"]
     }
   },
   {
@@ -1684,9 +1426,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:curse-of-drowning"
-      ]
+      "of": ["boon:duo:curse-of-drowning"]
     }
   },
   {
@@ -1697,9 +1437,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:mirage-shot"
-      ]
+      "of": ["boon:duo:mirage-shot"]
     }
   },
   {
@@ -1710,9 +1448,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:parting-shot"
-      ]
+      "of": ["boon:duo:parting-shot"]
     }
   },
   {
@@ -1723,9 +1459,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:curse-of-nausea"
-      ]
+      "of": ["boon:duo:curse-of-nausea"]
     }
   },
   {
@@ -1736,9 +1470,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:cold-embrace"
-      ]
+      "of": ["boon:duo:cold-embrace"]
     }
   },
   {
@@ -1749,9 +1481,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:freezing-vortex"
-      ]
+      "of": ["boon:duo:freezing-vortex"]
     }
   },
   {
@@ -1762,9 +1492,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:stubborn-roots"
-      ]
+      "of": ["boon:duo:stubborn-roots"]
     }
   },
   {
@@ -1775,9 +1503,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:smoldering-air"
-      ]
+      "of": ["boon:duo:smoldering-air"]
     }
   },
   {
@@ -1788,9 +1514,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:unshakable-mettle"
-      ]
+      "of": ["boon:duo:unshakable-mettle"]
     }
   },
   {
@@ -1801,9 +1525,7 @@
     "section": "duo",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:duo:splitting-headache"
-      ]
+      "of": ["boon:duo:splitting-headache"]
     }
   },
   {
@@ -1814,9 +1536,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:splitting-bolt"
-      ]
+      "of": ["boon:legendary:splitting-bolt"]
     }
   },
   {
@@ -1827,9 +1547,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:second-wave"
-      ]
+      "of": ["boon:legendary:second-wave"]
     }
   },
   {
@@ -1840,9 +1558,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:divine-protection"
-      ]
+      "of": ["boon:legendary:divine-protection"]
     }
   },
   {
@@ -1853,9 +1569,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:vicious-cycle"
-      ]
+      "of": ["boon:legendary:vicious-cycle"]
     }
   },
   {
@@ -1866,9 +1580,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:unhealthy-fixation"
-      ]
+      "of": ["boon:legendary:unhealthy-fixation"]
     }
   },
   {
@@ -1879,9 +1591,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:fully-loaded"
-      ]
+      "of": ["boon:legendary:fully-loaded"]
     }
   },
   {
@@ -1892,9 +1602,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:black-out"
-      ]
+      "of": ["boon:legendary:black-out"]
     }
   },
   {
@@ -1905,9 +1613,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:greater-recall"
-      ]
+      "of": ["boon:legendary:greater-recall"]
     }
   },
   {
@@ -1918,9 +1624,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:bad-news"
-      ]
+      "of": ["boon:legendary:bad-news"]
     }
   },
   {
@@ -1931,9 +1635,7 @@
     "section": "legendary",
     "requirement": {
       "kind": "all",
-      "of": [
-        "boon:legendary:winter-harvest"
-      ]
+      "of": ["boon:legendary:winter-harvest"]
     }
   },
   {
@@ -1944,9 +1646,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:strike"
-      ]
+      "of": ["blessing:chaos:strike"]
     }
   },
   {
@@ -1957,9 +1657,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:shot"
-      ]
+      "of": ["blessing:chaos:shot"]
     }
   },
   {
@@ -1970,9 +1668,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:grasp"
-      ]
+      "of": ["blessing:chaos:grasp"]
     }
   },
   {
@@ -1983,9 +1679,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:soul"
-      ]
+      "of": ["blessing:chaos:soul"]
     }
   },
   {
@@ -1996,9 +1690,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:favor"
-      ]
+      "of": ["blessing:chaos:favor"]
     }
   },
   {
@@ -2009,9 +1701,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:affluence"
-      ]
+      "of": ["blessing:chaos:affluence"]
     }
   },
   {
@@ -2022,9 +1712,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:eclipse"
-      ]
+      "of": ["blessing:chaos:eclipse"]
     }
   },
   {
@@ -2035,9 +1723,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:flourish"
-      ]
+      "of": ["blessing:chaos:flourish"]
     }
   },
   {
@@ -2048,9 +1734,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:lunge"
-      ]
+      "of": ["blessing:chaos:lunge"]
     }
   },
   {
@@ -2061,9 +1745,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:ambush"
-      ]
+      "of": ["blessing:chaos:ambush"]
     }
   },
   {
@@ -2074,9 +1756,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:assault"
-      ]
+      "of": ["blessing:chaos:assault"]
     }
   },
   {
@@ -2087,9 +1767,7 @@
     "section": "chaos-blessings",
     "requirement": {
       "kind": "all",
-      "of": [
-        "blessing:chaos:defiance"
-      ]
+      "of": ["blessing:chaos:defiance"]
     }
   },
   {
@@ -2100,9 +1778,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:paupers"
-      ]
+      "of": ["curse:chaos:paupers"]
     }
   },
   {
@@ -2113,9 +1789,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:slippery"
-      ]
+      "of": ["curse:chaos:slippery"]
     }
   },
   {
@@ -2126,9 +1800,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:maimed"
-      ]
+      "of": ["curse:chaos:maimed"]
     }
   },
   {
@@ -2139,9 +1811,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:flayed"
-      ]
+      "of": ["curse:chaos:flayed"]
     }
   },
   {
@@ -2152,9 +1822,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:addled"
-      ]
+      "of": ["curse:chaos:addled"]
     }
   },
   {
@@ -2165,9 +1833,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:caustic"
-      ]
+      "of": ["curse:chaos:caustic"]
     }
   },
   {
@@ -2178,9 +1844,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:enshrouded"
-      ]
+      "of": ["curse:chaos:enshrouded"]
     }
   },
   {
@@ -2191,9 +1855,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:excruciating"
-      ]
+      "of": ["curse:chaos:excruciating"]
     }
   },
   {
@@ -2204,9 +1866,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:abyssal"
-      ]
+      "of": ["curse:chaos:abyssal"]
     }
   },
   {
@@ -2217,9 +1877,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:atrophic"
-      ]
+      "of": ["curse:chaos:atrophic"]
     }
   },
   {
@@ -2230,9 +1888,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:slothful"
-      ]
+      "of": ["curse:chaos:slothful"]
     }
   },
   {
@@ -2243,9 +1899,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:halting"
-      ]
+      "of": ["curse:chaos:halting"]
     }
   },
   {
@@ -2256,9 +1910,7 @@
     "section": "chaos-curses",
     "requirement": {
       "kind": "all",
-      "of": [
-        "curse:chaos:roiling"
-      ]
+      "of": ["curse:chaos:roiling"]
     }
   }
 ]
