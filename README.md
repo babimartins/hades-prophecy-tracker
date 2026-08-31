@@ -75,7 +75,7 @@ This list is verified against the current state of the repository.
 | `packages/schema`  | Data model and Zod validation: facts, requirements, achievements, collections, dataset.                            |
 | `packages/data`    | Curated game data as JSON, plus its integrity test. The source of truth for facts and achievements, across every collection. |
 | `packages/engine`  | Pure functions that evaluate requirements against facts (`evaluate`, `achievementProgress`, `overallProgress`, `factTargets`, `nextSteps`, `subjectFacts`, `subjectProgress`). No DOM, no I/O. |
-| `packages/ui`      | Generic Lit web components: `hd-card`, `hd-checklist-item`, and shared design tokens (`colorVar`, `colorTokens`). No game knowledge. |
+| `packages/ui`      | `hd-checklist-item` and the shared design tokens (`colorVar`, `spaceVar`, `colorTokens`, `spaceTokens`). No game knowledge. |
 | `apps/web`         | Vite application. Holds the dashboard UI — collection filter, search, section grouping — the IndexedDB progress store, and the export/import transfer format. |
 
 The curated dataset in `packages/data` holds 768 achievements across 13

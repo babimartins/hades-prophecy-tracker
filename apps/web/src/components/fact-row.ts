@@ -1,4 +1,4 @@
-import { capabilityOf, type FactMap } from '@hades/engine'
+import type { FactMap } from '@hades/engine'
 import type { Fact } from '@hades/schema'
 import { colorVar, spaceVar } from '@hades/ui'
 import { css, html, LitElement, nothing, type TemplateResult } from 'lit'
@@ -334,8 +334,6 @@ export class FactRow extends LitElement {
     `
   }
 }
-
-export { capabilityOf }
 
 customElements.define('fact-row', FactRow)
 

@@ -1,6 +1,6 @@
 import { html, render } from 'lit'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import '../src/hd-card.js'
+import '../src/hd-checklist-item.js'
 import { colorTokens } from '../src/tokens.css.js'
 
 /** `#rrggbb` as the `rgb(r, g, b)` string `getComputedStyle` returns. */
@@ -18,31 +18,35 @@ describe('design tokens', () => {
   })
 
   afterEach(() => {
-    document.documentElement.style.removeProperty('--hd-color-surface')
+    document.documentElement.style.removeProperty('--hd-color-text')
   })
 
+  /**
+   * Read through `color` on the host, which the shared `surface` style sets
+   * from `--hd-color-text`. It used to read a background on `hd-card`, which
+   * has been deleted for having no consumer; the mechanism under test is the
+   * token with its fallback, not any one component.
+   */
   it('falls back to the packages/ui default when no ancestor sets the token', async () => {
-    render(html`<hd-card></hd-card>`, document.body)
-    const card = document.querySelector('hd-card')!
-    await card.updateComplete
-    const section = card.shadowRoot!.querySelector('section')!
-    expect(getComputedStyle(section).backgroundColor).toBe(asRgb(colorTokens['--hd-color-surface']))
+    render(html`<hd-checklist-item></hd-checklist-item>`, document.body)
+    const item = document.querySelector('hd-checklist-item')!
+    await item.updateComplete
+    expect(getComputedStyle(item).color).toBe(asRgb(colorTokens['--hd-color-text']))
   })
 
   /**
    * A consumer overrides a token by setting it on `:root`. This only works
-   * because `surface` (in `tokens.css.ts`) reads `--hd-color-surface` with a
+   * because `surface` (in `tokens.css.ts`) reads `--hd-color-text` with a
    * fallback and never redeclares it on `:host`: a literal `:host` value
    * would win over this inherited one regardless of the override's own
    * specificity.
    */
   it('lets a consumer override a token by setting it on :root', async () => {
-    document.documentElement.style.setProperty('--hd-color-surface', 'rgb(1, 2, 3)')
-    render(html`<hd-card></hd-card>`, document.body)
-    const card = document.querySelector('hd-card')!
-    await card.updateComplete
-    const section = card.shadowRoot!.querySelector('section')!
-    expect(getComputedStyle(section).backgroundColor).toBe('rgb(1, 2, 3)')
+    document.documentElement.style.setProperty('--hd-color-text', 'rgb(1, 2, 3)')
+    render(html`<hd-checklist-item></hd-checklist-item>`, document.body)
+    const item = document.querySelector('hd-checklist-item')!
+    await item.updateComplete
+    expect(getComputedStyle(item).color).toBe('rgb(1, 2, 3)')
   })
 })
 

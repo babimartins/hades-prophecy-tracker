@@ -19,7 +19,7 @@ entries are Lit and layout defects this application already paid for once.
 
 | Keep | Why |
 | --- | --- |
-| `@hades/ui`: `hd-card`, `hd-checklist-item`, `hd-progress` | generic, no game knowledge, and slice 4 fixed real defects in them |
+| `@hades/ui`: `hd-checklist-item` | generic, no game knowledge, and slice 4 fixed real defects in it |
 | `theme.css`, `applyDesignTokens`, `colorVar` | the token discipline `AGENTS.md` requires |
 | `state-controller.ts`, the IndexedDB store, `transfer-controls.ts` | persistence is unaffected by the axis change |
 | `requirement-tree.ts` | a prophecy's sub-items still render as a requirement tree |

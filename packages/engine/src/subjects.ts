@@ -1,5 +1,5 @@
-import type { Achievement, Dataset, Fact, Subject, SubjectId, SubjectType } from '@hades/schema'
-import { collectFactIds, isSatisfied, numericValue, type FactMap } from './facts.js'
+import type { Dataset, Fact, Subject, SubjectId, SubjectType } from '@hades/schema'
+import { isSatisfied, numericValue, type FactMap } from './facts.js'
 
 /**
  * What a subject offers. A capability follows from the namespaces of the
@@ -151,50 +151,6 @@ export function subjectProgress(
   }
 
   return { done, partial, total, ratio: ratioOf(done, total), byCapability }
-}
-
-/**
- * The subjects an achievement's facts name, without repeats, in first-seen order.
- *
- * Both indexes are memoised per dataset. A list view calls this once per row,
- * and rebuilding a 692-entry map on every call turns a phone render into a
- * scan of hundreds of thousands of comparisons.
- *
- * **The caller must treat a `Dataset` as immutable once it has been passed
- * here.** Editing a fact object in place is seen, because the index holds
- * references. Replacing, pushing to or splicing `dataset.facts` or
- * `dataset.subjects` on an instance this function has already seen is not, and returns a stale
- * answer. Build a new dataset object instead; `packages/data` builds one once,
- * and every test mints a new one with a spread or a structuredClone.
- */
-export function subjectsOfAchievement(dataset: Dataset, achievement: Achievement): Subject[] {
-  const { factById, subjectById } = indexesFor(dataset)
-  const found: Subject[] = []
-  for (const factId of collectFactIds(achievement.requirement)) {
-    for (const id of factById.get(factId)?.subjects ?? []) {
-      const subject = subjectById.get(id)
-      if (subject && !found.includes(subject)) found.push(subject)
-    }
-  }
-  return found
-}
-
-interface DatasetIndexes {
-  factById: Map<string, Fact>
-  subjectById: Map<SubjectId, Subject>
-}
-
-const indexCache = new WeakMap<Dataset, DatasetIndexes>()
-
-function indexesFor(dataset: Dataset): DatasetIndexes {
-  const cached = indexCache.get(dataset)
-  if (cached) return cached
-  const built: DatasetIndexes = {
-    factById: new Map(dataset.facts.map((fact) => [fact.id, fact])),
-    subjectById: new Map(dataset.subjects.map((subject) => [subject.id, subject])),
-  }
-  indexCache.set(dataset, built)
-  return built
 }
 
 type FactState = 'todo' | 'partial' | 'done'

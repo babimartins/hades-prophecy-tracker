@@ -222,7 +222,6 @@ No new engine work is expected. Phase 1 built these.
 | What does this subject own? | `subjectFacts` |
 | Which blocks does this page get? | `subjectCapabilities` |
 | What is this subject's progress? | `subjectProgress` |
-| Which subjects does this entry touch? | `subjectsOfAchievement` |
 
 `subjectProgress` counts **facts**. `overallProgress` counts **achievements**.
 The two are not comparable and no view may add them together.

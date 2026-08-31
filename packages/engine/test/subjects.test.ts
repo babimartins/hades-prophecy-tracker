@@ -6,7 +6,6 @@ import {
   subjectCapabilities,
   subjectFacts,
   subjectProgress,
-  subjectsOfAchievement,
   subjectsOfType,
 } from '../src/index.js'
 
@@ -236,11 +235,3 @@ describe('a number fact with no max', () => {
   })
 })
 
-describe('subjectsOfAchievement', () => {
-  it('returns the subjects its facts name, without repeats', () => {
-    expect(subjectsOfAchievement(dataset, dataset.achievements[0]!).map((s) => s.id)).toEqual([
-      'zeus',
-      'athena',
-    ])
-  })
-})

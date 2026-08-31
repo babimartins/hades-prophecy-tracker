@@ -929,3 +929,35 @@ chip sits beside `Foes · 39` so the split reads at a glance and the sum is
 visible. The cost is that the table opens with 39 rows that hold only a Codex
 entry, which is what the old default existed to avoid; she chose the honest
 label over the tidier opening.
+
+## 65. Every dead thing in the repository, removed at once
+
+An audit of the whole repository, not just the package that prompted it. A
+naive "exported and never named" scan reported 27 symbols and was almost all
+false positives: a component class is reached through `customElements.define`
+and its tag, and a type is often used only inside its own file. A file-level
+import graph found nothing either, because each package's `index.ts`
+re-exports everything.
+
+What actually settles it is two questions: does the app ever name this tag, and
+does anything outside the defining module use this symbol.
+
+Three things were dead.
+
+- **`hd-card`**, the last unused component. Its tag appears nowhere in the app.
+  `tokens.test.ts` had used it as a vehicle to prove a token reaches a shadow
+  root; that now reads `color` on `hd-checklist-item`, which the shared
+  `surface` style sets from `--hd-color-text`. The mechanism under test was
+  never about the card.
+- **`subjectsOfAchievement`**, one of the five engine functions
+  `phase-3-spec.md` listed. Nothing ever called it. Removing it orphaned a
+  `WeakMap` index cache and two imports that existed only to serve it, so the
+  dead code was deeper than the function.
+- **A re-export of `capabilityOf`** at the foot of `fact-row.ts`. It imported
+  the symbol purely to export it again; the one real consumer, `subject-page`,
+  imports it from the engine directly.
+
+Nothing else. No unused npm dependency in any of the five packages. The
+remaining "unused" exports are schemas used by each other inside
+`@hades/schema`, engine helpers used by sibling engine modules, and component
+classes reached through their tags.
