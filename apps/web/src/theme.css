@@ -18,20 +18,33 @@
   color-scheme: dark;
 }
 
+/*
+ * The shell is the fixed-height frame: `app-shell` is `100dvh` with
+ * `overflow: hidden`, and whichever region holds a section's content scrolls
+ * inside it. So the document itself must never be taller than the viewport —
+ * no body padding, no body scroll.
+ */
+html,
 body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  /*
+   * A second hand-typed literal, for the same reason as the `#f2e7d0` above:
+   * plain CSS cannot call `colorVar`. This is the page ground behind every
+   * component and has no token, so nothing can drift out of sync with it.
+   */
   background: #150e19;
   color: var(--hd-color-text, #f2e7d0);
   font-family: system-ui, sans-serif;
   margin: 0;
   /*
-   * Opening or closing an entry (hades-dashboard.ts) scrolls the new view
-   * to the top of the viewport. The browser's scroll-anchoring would
-   * otherwise "correct" that scroll a moment later, once the newly
-   * mounted view's own async child components finish rendering and the
-   * document grows taller above the anchor point — silently undoing most
-   * of the deliberate scroll. Disabled document-wide, since the scrolling
-   * element here is the document itself, not a nested container.
+   * The document can no longer scroll at all: `app-shell` is the fixed-height
+   * frame and every scrolling region lives inside it. Scroll anchoring is
+   * disabled anyway, so a region that grows while the reader is inside it
+   * cannot be silently re-positioned under them.
    */
   overflow-anchor: none;
-  padding: 24px;
 }

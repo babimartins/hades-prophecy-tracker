@@ -205,3 +205,217 @@ a combat milestone.
 
 The same rule keeps `talk:nyx-in-chaos-realm` on Nyx alone. Chaos's realm is
 where the conversation happens, not a participant.
+
+## 16. `next-steps-panel` goes, and the Characters table replaces it
+
+**Chosen:** drop the panel. The Characters and Weapons tables answer "what
+next" by sorting.
+
+**Alternative:** keep it as a sixth block on the shell.
+
+**Why:** the owner opens the app before a run to decide a loadout, and what she
+described wanting is comparison — "quantos corações tenho com cada personagem
+pra decidir pra quem dou ambrosia". Sorting the Hearts column ascending *is*
+the Ambrosia queue. The panel ranked facts by how many achievements they
+unblock, which is a different question and not one she asked.
+
+The engine's `nextSteps` stays. It is tested, pure, and a later view may want
+it; deleting the view does not oblige us to delete the answer.
+
+## 17. The shell owns the height, and `theme.css` gives up the body padding
+
+**Chosen:** `app-shell` is `100dvh` with `overflow: hidden`, and `html, body`
+are `height: 100%; overflow: hidden` with no padding.
+
+**Alternative:** keep the body padding and let the shell be `calc(100dvh - 48px)`.
+
+**Why:** the document must never be taller than the viewport, and body padding
+guarantees it is. `100dvh` rather than `100vh` so a phone's collapsing address
+bar does not leave a scrollable sliver — the exact failure the owner's rule
+exists to prevent.
+
+## 18. No backtick inside a `css` template's comments
+
+**Chosen:** write CSS comments without backticks.
+
+**Why:** not a preference. A backtick closes the tagged template, and the file
+fails to transform with `Syntax error "d"` pointing at the middle of a comment.
+It cost a build cycle on the first component of this phase.
+
+## 19. No search box, because the approved design has none
+
+**Chosen:** drop `search-box` with the rest of the collection-axis components.
+
+**Alternative:** carry it over and make it narrow the current index.
+
+**Why:** the plan listed search as task 7, carried over from the old
+application. The preview the owner walked through and approved has no search
+box anywhere. The indexes sort and filter, and the rail lists every item at
+once, which is what the structure was designed to make possible. Adding a
+control she did not ask for and did not see would be scope, not fidelity.
+
+The engine's `searchAchievements` stays, untouched and tested, for whenever a
+view wants it.
+
+## 20. Six components deleted rather than adapted
+
+**Chosen:** delete `hades-dashboard`, `achievement-list`, `collection-filter`,
+`achievement-detail`, `search-box`, `next-steps-panel` and
+`lib/achievement-filter`.
+
+**Alternative:** keep them behind the new shell.
+
+**Why:** each is built on the collection axis — its props, its grouping and its
+state are "which collection, which section". The new structure asks "which
+subject, which capability". Keeping them would leave two answers to the same
+question in one application, and the tests would go on asserting the old one.
+
+`requirement-tree`, `transfer-controls`, `state-controller`, the store and
+`@hades/ui` all carried over unchanged.
+
+## 21. A rank gets a bounded stepper, not a checkbox
+
+**Chosen:** `fact-row` dispatches on the fact's own `kind`. A number fact with
+a `max` renders `<input type="number">` clamped to that max; everything else
+renders `hd-checklist-item`.
+
+**Alternative:** the first pass, which rendered all 692 facts as a checkbox and
+toggled a number fact between 0 and its max.
+
+**Why:** a review found it and it was the defect that would have hurt most. 96
+of 692 facts are ranks. As a checkbox, four of seven Nectar with Zeus reads as
+untouched, and the next tick overwrites the stored 4. `AGENTS.md` records this
+as a defect that already destroyed a stored rank once, and I reintroduced it in
+the file that replaced the component carrying the guard.
+
+It also broke the reason the redesign exists. The Hearts column could only read
+0/7 or 7/7, so sorting it ascending was not an Ambrosia queue.
+
+## 22. `hd-toggle`, not `toggle`
+
+**Chosen:** listen for `hd-toggle`, the event `hd-checklist-item` documents on
+its first line and dispatches.
+
+**Why:** I bound `@toggle` in two components, so **680 of 692 facts could not
+be recorded**. The box ticked and the value vanished on the next render. The
+only writes that worked were the twelve weapon ticks, which use a hand-rolled
+button.
+
+Worse, three tests covered that path by dispatching a synthetic `toggle` event
+the application never fires. They passed while no player could reach the
+handler, and one of them was the test written specifically to guard the rank
+trap above. **A test that constructs the event under test proves only that the
+handler exists.** Every one of them now clicks the real control.
+
+## 23. A subject's Codex section is looked up by id, never by name
+
+**Chosen:** `codex:${subject.id}`, falling back to the display name for the six
+weapons whose subject id is their true name.
+
+**Why:** two Codex entries are named "Chaos" — the deity in Chthonic Gods and
+the realm in The Underworld. A name-keyed `Map` keeps the last, so Chaos the
+god was filed as a realm. `AGENTS.md` records this trap by name.
+
+## 24. A filter narrows the default population, it does not replace it
+
+**Chosen:** every chip except All and Foes counts within the non-foe view.
+
+**Why:** counting across all 73 characters gave "Fightable · 42" beside
+"All · 34", and clicking it surfaced 37 bare foes the default view hides on
+purpose. A count larger than the whole is a count of something else.
+
+## 25. The Weapons table does not sort, and that is deliberate
+
+**Chosen:** no sort controls on the six weapon rows.
+
+**Alternative:** mark Aspects and Daedalus sortable, as the preview does.
+
+**Why:** sorting earns its place when a list is too long to scan and the order
+answers a question. The spec names that question for Characters — Hearts
+ascending is the Ambrosia queue — and names none for Weapons. Six rows are on
+screen at once with no scrolling, so the eye does the sort. The preview marked
+those headers sortable while demonstrating the table pattern; it is not one of
+the owner's decisions.
+
+The two headers carry `cursor: help` and a dotted underline, so they read as
+"explain", not "click to sort". No false affordance.
+
+## 26. A row is a row, and the name cell carries the affordance
+
+**Chosen:** `<tr tabindex="0">` with a `<button>` in the name cell, and Enter
+on the row when the row itself has focus.
+
+**Alternative:** the first pass, `<tr role="link" aria-label="Open Zeus">`.
+
+**Why:** a review found both halves of that wrong. `role="link"` overrides the
+implicit `role="row"`, which orphans the six cells, and a link takes its name
+from `aria-label`, so the row announced "Open Zeus, link" and the Hearts,
+Keepsake, Boons and Favor values were never read. The comparison table stopped
+being one for exactly the reader who most needs it to be.
+
+And the row's `keydown` treated Space as activation, which is the native
+activation key of the tick buttons inside the row. A keyboard user pressing
+Space on Escaped navigated to the weapon page and recorded nothing — the
+owner's original complaint, reproduced by the fix meant to make rows reachable.
+The handler now ignores any event that did not start on the row itself.
+
+## 27. A rejected entry must not stay on screen
+
+**Chosen:** `live()` on the stepper's value, plus a `requestUpdate()` after
+emitting.
+
+**Why:** a property binding dirty-checks against the last committed value, not
+against the DOM. Typing 99 into a rank stored at 7 clamps to 7, which is what
+was already there, so `facts` never changes, nothing re-renders, and the field
+goes on reading "99 / 7". `live()` compares against the live DOM — but only if
+an update runs, which is why both are needed.
+
+## 28. A rank is rounded as well as clamped
+
+**Chosen:** `step="1"` on the input and `Math.round` before the clamp.
+
+**Why:** the clamp bounded the range and never touched precision, so `2.7`
+passed straight through to IndexedDB and into the export file. The index then
+drew three filled pips beside a stored 2.7 — the store and the view disagreeing
+again, which is the class of defect this whole phase kept producing. A rank
+counts gifts or levels; 2.7 is not a smaller 3, it is not a value.
+
+The browser already knew: `validity.valid` was false the whole time. Nothing
+was asking it.
+
+## 29. The row is not a focus stop; the name cell is
+
+**Chosen:** `<tr>` keeps its click handler for the mouse and nothing else. The
+button in the name cell is the only focus stop in a row.
+
+**Why:** leaving `tabindex="0"` on the row after the button took over the job
+made every row two stops — 68 in the Characters table — and one of them was a
+focusable element with no role and no accessible name, which announces nothing
+when it receives focus.
+
+## 30. `requirement-tree` is deleted, not kept
+
+**Chosen:** delete the component and its 13 tests.
+
+**Alternative:** keep it. Decision 20 said it "carried over unchanged".
+
+**Why:** it carried over into nothing — no file in `src/` imported it, so it
+shipped in the bundle unreachable while its tests went on passing. Dead code
+with a green test suite is worse than no code: it reads as covered.
+
+Its one irreplaceable part, the bounded rank stepper, now lives in `fact-row`
+with the comment explaining why the control dispatches on the fact's own
+`kind`. Its other part, rendering a nested `all`/`any`/`count` tree, is not
+what the approved design asks for: a prophecy pane is a flat list of actions
+with one line stating a `count` node's rule, which is what the preview shows.
+
+## 31. A section summary is computed once, not per render
+
+**Chosen:** hoist the character counts to module scope.
+
+**Why:** `buildRows({})` walks 73 characters, calling `subjectFacts`,
+`subjectProgress` and `subjectCapabilities` on each — every one a filter over
+692 facts — and `isFoe` calls `subjectCapabilities` again per row. Measured at
+25ms per shell render on the Characters tab, against 0.2ms on The House, to
+produce the number 34. It is called with an empty fact map, so the answer is a
+dataset constant.
