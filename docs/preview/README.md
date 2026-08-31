@@ -73,4 +73,5 @@ Two places carry a working tooltip. Hover, or tab to the dotted label.
 
 The interface language is English, to match the game.
 
-Every "What this is" block is a draft and says so. None is sourced yet.
+The "What this is" blocks now carry the text stored in `packages/data`, which
+is sourced. The tooltips are still mockup text.

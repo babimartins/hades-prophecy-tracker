@@ -1,5 +1,10 @@
 # Phase 2 plan: gather the data that is missing
 
+> **Done, 2026-08-31.** All 692 facts name their subjects. 453 carry a
+> description. 11 collections and 12 spoiler flags are in place. The one
+> outstanding item is the Contractor stock and its prices, which the owner
+> deferred.
+
 **Goal:** every fact names its subject, and every item a reader cannot work out
 from its label carries a description. No interface work.
 
