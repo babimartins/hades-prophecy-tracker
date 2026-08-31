@@ -40,19 +40,31 @@ export class HadesDashboard extends LitElement {
       font-size: 0.8rem;
       margin: 6px 0 0;
     }
+    /**
+     * "Actions recorded" used to reach the screen only as an aria-label,
+     * invisible to a sighted player: the number showed with nothing to
+     * explain it, while the entries-complete count that did explain itself
+     * sat below in small muted text. The label is real, visible text now.
+     */
+    .metric-label {
+      color: ${colorVar('--hd-color-muted')};
+      font-size: 0.8rem;
+      margin: 0 0 4px;
+    }
     /*
-     * Whichever view is active (the detail, or the filter/search/list
-     * group) is the last thing in the document, with nothing after it. A
-     * short achievement-detail -- one prophecy, a handful of steps -- can
-     * be shorter than the viewport, and a browser cannot scroll an
-     * element's top flush with the viewport top when there is not enough
-     * document left below it: it scrolls as far as the document's natural
-     * end allows and stops there, leaving the opened entry sitting low in
-     * the viewport instead of at its top. A guaranteed minimum height
-     * gives the scrollIntoView call in scrollActiveViewIntoPlace enough
-     * room below the target to always reach the top, whatever the entry's
-     * own length. 100dvh accounts for a mobile browser's address bar;
-     * 100vh is the fallback where dvh is unsupported.
+     * The filter/search/list group sits below the 13 header cards, and is
+     * the last thing in the document: a browser cannot scroll an element's
+     * top flush with the viewport top when there is not enough document
+     * left below it. A narrow search or filter can leave very few rows, so
+     * a guaranteed minimum height gives the scrollIntoView call in
+     * scrollActiveViewIntoPlace enough room below collection-filter to
+     * always reach the top. 100dvh accounts for a mobile browser's address
+     * bar; 100vh is the fallback where dvh is unsupported.
+     *
+     * The detail view needs no such reservation: it hides the header cards
+     * outright (see openId in render()) rather than scrolling past them,
+     * so there is nothing tall above achievement-detail to scroll past in
+     * the first place, and no void to reserve underneath a short one.
      */
     .active-view {
       min-height: 100vh;
@@ -206,74 +218,90 @@ export class HadesDashboard extends LitElement {
     }
   }
 
+  /**
+   * `overall.done` counts completed entries: ticking one sub-item of a
+   * multi-sub-item entry moves it by nothing, so the bar barely crawls
+   * across 545 entries even on a productive session. `overallProgress`
+   * itself is untouched — this is what the interface chooses to show as
+   * Overall instead. A number fact counts fractionally (a rank of 1 out of
+   * 5 contributes 0.2, not the full 1 a maxed rank would), so a partial
+   * rank cannot look as complete as a finished one; a boolean fact always
+   * contributes 1, since it has no partial state to weigh.
+   */
+  #factsRecorded(facts: FactMap): number {
+    let total = 0
+    for (const [id, value] of Object.entries(facts)) {
+      if (typeof value !== 'number') {
+        total += 1
+        continue
+      }
+      const max = this.#factsById.get(id)?.max ?? value
+      total += max > 0 ? Math.min(value, max) / max : 0
+    }
+    return total
+  }
+
   override render() {
     const facts = this.#controller.state.facts
     const overall = overallProgress(dataset, facts)
-    // `overall.done` counts completed entries: ticking one sub-item of a
-    // multi-sub-item entry moves it by nothing, so the bar barely crawls
-    // across 545 entries even on a productive session. `overallProgress`
-    // itself is untouched — this is what the interface chooses to show as
-    // Overall, counting every recorded fact instead, so every tick moves
-    // it. The entries-complete count stays visible as text underneath.
-    const factsRecorded = Object.keys(facts).length
+    const factsRecorded = this.#factsRecorded(facts)
 
     return html`
       <h1>Hades Prophecy Tracker</h1>
       ${this.saveError ? html`<p class="error">${this.saveError}</p>` : null}
-      <div class="grid top-row">
-        <hd-card>
-          <span slot="header">Overall</span>
-          <hd-progress
-            .value=${factsRecorded}
-            .max=${dataset.facts.length}
-            label="Actions recorded"
-          ></hd-progress>
-          <p class="entries-complete">${overall.done} / ${overall.total} entries complete</p>
-        </hd-card>
-        <hd-card>
-          <span slot="header">Next steps</span>
-          <next-steps-panel
-            .catalog=${dataset}
-            .facts=${facts}
-            .limit=${8}
-            @fact-toggle=${this.onFactToggle}
-          ></next-steps-panel>
-        </hd-card>
-        <hd-card>
-          <span slot="header">Backup</span>
-          <transfer-controls .facts=${facts} @facts-import=${this.onImport}></transfer-controls>
-        </hd-card>
-      </div>
-      <div class="grid collections-grid">
-        ${dataset.collections
-          .filter((collection) => (overall.byCollection[collection.id]?.total ?? 0) > 0)
-          .map((collection) => {
-            const bucket = overall.byCollection[collection.id]
-            return html`
-              <hd-card>
-                <span slot="header">${collection.name}</span>
-                <hd-progress
-                  .value=${bucket?.done ?? 0}
-                  .max=${bucket?.total ?? 0}
-                  label=${collection.name}
-                ></hd-progress>
-              </hd-card>
-            `
-          })}
-      </div>
       ${this.openId
         ? html`
-            <div class="active-view">
-              <achievement-detail
-                .achievement=${dataset.achievements.find((item) => item.id === this.openId)}
-                .facts=${facts}
-                .factsById=${this.#factsById}
-                @fact-toggle=${this.onFactToggle}
-                @detail-close=${() => (this.openId = undefined)}
-              ></achievement-detail>
-            </div>
+            <achievement-detail
+              .achievement=${dataset.achievements.find((item) => item.id === this.openId)}
+              .facts=${facts}
+              .factsById=${this.#factsById}
+              @fact-toggle=${this.onFactToggle}
+              @detail-close=${() => (this.openId = undefined)}
+            ></achievement-detail>
           `
         : html`
+            <div class="grid top-row">
+              <hd-card>
+                <span slot="header">Overall</span>
+                <p class="metric-label">Actions recorded</p>
+                <hd-progress
+                  .value=${Math.round(factsRecorded)}
+                  .max=${dataset.facts.length}
+                  label="Actions recorded"
+                ></hd-progress>
+                <p class="entries-complete">${overall.done} / ${overall.total} entries complete</p>
+              </hd-card>
+              <hd-card>
+                <span slot="header">Next steps</span>
+                <next-steps-panel
+                  .catalog=${dataset}
+                  .facts=${facts}
+                  .limit=${8}
+                  @fact-toggle=${this.onFactToggle}
+                ></next-steps-panel>
+              </hd-card>
+              <hd-card>
+                <span slot="header">Backup</span>
+                <transfer-controls .facts=${facts} @facts-import=${this.onImport}></transfer-controls>
+              </hd-card>
+            </div>
+            <div class="grid collections-grid">
+              ${dataset.collections
+                .filter((collection) => (overall.byCollection[collection.id]?.total ?? 0) > 0)
+                .map((collection) => {
+                  const bucket = overall.byCollection[collection.id]
+                  return html`
+                    <hd-card>
+                      <span slot="header">${collection.name}</span>
+                      <hd-progress
+                        .value=${bucket?.done ?? 0}
+                        .max=${bucket?.total ?? 0}
+                        label=${collection.name}
+                      ></hd-progress>
+                    </hd-card>
+                  `
+                })}
+            </div>
             <div class="active-view">
               <collection-filter
                 .collections=${collectionsWithEntries(dataset)}

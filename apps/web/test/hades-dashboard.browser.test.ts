@@ -391,9 +391,13 @@ describe('hades-dashboard scrolls the active view into place', () => {
    * `rect.top < innerHeight` is true even for a 24px sliver poking up from
    * the very bottom edge of the viewport — technically "in the viewport",
    * and not what a player means by "the thing I opened is what I'm looking
-   * at". This is the assertion that let a near-invisible scroll through:
-   * the opened entry's own heading must land at (or a hair below) the very
-   * top of the viewport, with the dashboard scrolled off above it.
+   * at". The opened entry's own heading must land right after the page's
+   * own h1 — the only thing still above it — with the 13 header cards
+   * gone outright, not merely scrolled past (see the min-height doc
+   * comment in hades-dashboard.ts for why "scrolled past" alone used to
+   * leave a large void under a short entry). Returning to the list keeps
+   * the header cards, so collection-filter's own bound stays tight: it has
+   * nothing but page margin above it once scrolled fully to the top.
    */
   async function opensToTheTopOfTheViewport(width: number, height: number): Promise<void> {
     await page.viewport(width, height)
@@ -419,10 +423,18 @@ describe('hades-dashboard scrolls the active view into place', () => {
       await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
       await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
 
+      // The 13 header cards are gone from the DOM outright while an entry
+      // is open, not merely scrolled past — see render()'s openId branch.
+      expect(element.shadowRoot!.querySelector('.top-row')).toBeFalsy()
+      expect(element.shadowRoot!.querySelector('.collections-grid')).toBeFalsy()
+
       const detail = element.shadowRoot!.querySelector('achievement-detail')!
       const detailTop = detail.getBoundingClientRect().top
+      const h1Bottom = element.shadowRoot!.querySelector('h1')!.getBoundingClientRect().bottom
       expect(detailTop).toBeGreaterThanOrEqual(-2)
-      expect(detailTop).toBeLessThan(16)
+      // Nothing but the page's own h1 sits above the entry now, so the gap
+      // is bounded by h1's own height and margin, not a whole dashboard.
+      expect(detailTop - h1Bottom).toBeLessThan(32)
 
       detail.dispatchEvent(new CustomEvent('detail-close', { bubbles: true, composed: true }))
       await element.updateComplete
@@ -486,6 +498,52 @@ describe('hades-dashboard Overall feedback', () => {
     const overallProgressEl = element.shadowRoot!.querySelector('.top-row hd-progress')!
     expect((overallProgressEl as unknown as { value: number }).value).toBe(0)
     expect((overallProgressEl as unknown as { max: number }).max).toBe(dataset.facts.length)
+  })
+
+  /**
+   * "Actions recorded" used to reach the screen only as an aria-label: the
+   * player saw a bare, unexplained number. It is real, visible text now.
+   */
+  it('shows the Actions recorded label as real text on screen, not only an aria-label', async () => {
+    const element = mount({ load: async () => ({}), save: async () => undefined })
+    await element.updateComplete
+    await element.updateComplete
+
+    const label = element.shadowRoot!.querySelector('.metric-label')!
+    expect(label.textContent?.trim()).toBe('Actions recorded')
+  })
+
+  /**
+   * A number fact contributes fractionally: a rank of 1 out of a possible 7
+   * (nectar:zeus, a real fact with max 7) must count as roughly a seventh,
+   * not the same full 1 a maxed rank would. Ticking a single point of
+   * affinity should not look as complete as maxing it.
+   */
+  it('counts a partial number-fact rank as a fraction, not the same as a maxed rank', async () => {
+    const partial = mount({
+      load: async () => ({ 'nectar:zeus': 1 }),
+      save: async () => undefined,
+    })
+    await partial.updateComplete
+    await partial.updateComplete
+    const partialValue = (
+      partial.shadowRoot!.querySelector('.top-row hd-progress') as unknown as { value: number }
+    ).value
+
+    const maxed = mount({
+      load: async () => ({ 'nectar:zeus': 7 }),
+      save: async () => undefined,
+    })
+    await maxed.updateComplete
+    await maxed.updateComplete
+    const maxedValue = (
+      maxed.shadowRoot!.querySelector('.top-row hd-progress') as unknown as { value: number }
+    ).value
+
+    // 1 of 7 rounds to 0; a maxed rank (7 of 7) rounds to 1. The old
+    // unweighted count would have shown both as 1.
+    expect(partialValue).toBe(0)
+    expect(maxedValue).toBe(1)
   })
 })
 
