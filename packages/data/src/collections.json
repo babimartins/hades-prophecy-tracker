@@ -53,5 +53,10 @@
     "id": "well-of-charon",
     "name": "Well of Charon",
     "description": "The Well of Charon is the vending machine that appears in a chamber during a run. You pay Obols for an item that lasts that run only, so what the tracker records is having ever bought each one."
+  },
+  {
+    "id": "contractor",
+    "name": "House Contractor",
+    "description": "The House Contractor turns Gemstones, Diamonds and a few rarer things into permanent renovations: added chambers, Underworld upgrades, and the decor of each room in the House. His Work Orders are what unlock several characters' story steps, so he is the reason some favors can be finished at all."
   }
 ]

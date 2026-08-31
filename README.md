@@ -8,9 +8,9 @@ each single action inside each prophecy.
 The site is live at https://babimartins.github.io/hades-prophecy-tracker/.
 
 Three phases rebuilt the project around **subjects** rather than collections.
-The dataset holds 120 subjects, 692 facts and 545 achievements; 452 facts carry
+The dataset holds 120 subjects, 856 facts and 716 achievements; 616 facts carry
 a description of what the thing does, and every fact names the subjects it
-belongs to.
+belongs to. 158 of them carry a price, in the currency the shop asks for.
 
 The interface has five sections — Characters, Weapons, Fated List, The House,
 Collections. The two indexes are comparison tables, sortable and filterable, so

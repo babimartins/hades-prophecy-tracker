@@ -218,8 +218,8 @@ describe('facts tagged with a subject', () => {
     // The two buckets partition the same array, so their sum is the total by
     // construction. The pinned numbers are what this test actually checks.
     expect(tagged).toHaveLength(611)
-    expect(systemFacts).toHaveLength(81)
-    expect(dataset.facts).toHaveLength(692)
+    expect(systemFacts).toHaveLength(245)
+    expect(dataset.facts).toHaveLength(856)
   })
 
   it('gives a system fact an empty list, never a missing key and never a subject', () => {
@@ -282,8 +282,9 @@ describe('fact descriptions', () => {
       blessing: 12,
       perk: 11,
       miniboss: 11,
+      contractor: 164,
     })
-    expect(described).toHaveLength(452)
+    expect(described).toHaveLength(616)
   })
 
   it('never stores a wiki cross-reference in place of an answer', () => {
@@ -339,10 +340,12 @@ describe('fact descriptions', () => {
     //   1=      — a MediaWiki named-parameter escape, "1=5% of your current Obol"
     //   *       — a footnote marker whose footnote was never copied
     //   (WIP)   — a wiki editorial marker
-    //   " ,"    — a space before punctuation, left by stripping a link
+    //   " ,"    — a space before punctuation, left by stripping a link.
+    //             An ellipsis is prose, so " ..." is deliberately allowed.
+    //             (an ellipsis is prose, so " ..." is allowed)
     const dirty = described
       .filter((fact) =>
-        /\{\{|\]\]|\[\[|'''|<[a-z/]|style\s*=|class\s*=|colspan|rowspan|\||\*|\(WIP\)|\b\d=|\s[,.;]/i.test(
+        /\{\{|\]\]|\[\[|'''|<[a-z/]|style\s*=|class\s*=|colspan|rowspan|\||\*|\(WIP\)|\b\d=|\s[,;]|\s\.(?!\.)/i.test(
           fact.description!,
         ),
       )
@@ -362,7 +365,7 @@ describe('what a system is, and what the player should not read yet', () => {
   it('describes every collection', () => {
     const undescribed = dataset.collections.filter((c) => c.description === undefined)
     expect(undescribed.map((c) => c.id)).toEqual([])
-    expect(dataset.collections).toHaveLength(11)
+    expect(dataset.collections).toHaveLength(12)
   })
 
   it('flags the entries whose text states an outcome the player may not have reached', () => {
@@ -418,5 +421,73 @@ describe('what a system is, and what the player should not read yet', () => {
     const prophecies = dataset.achievements.filter((a) => a.collection === 'prophecy')
     expect(prophecies).toHaveLength(55)
     expect(prophecies.filter((a) => a.spoiler === true)).toEqual([])
+  })
+})
+
+
+describe('the House Contractor stock', () => {
+  const items = dataset.achievements.filter((a) => a.collection === 'contractor')
+
+  it('covers every purchase, grouped by the room the wiki groups it under', () => {
+    const byRoom: Record<string, number> = {}
+    for (const item of items) {
+      byRoom[item.section ?? ''] = (byRoom[item.section ?? ''] ?? 0) + 1
+    }
+    expect(byRoom).toEqual({
+      'work-orders': 37,
+      'great-hall': 42,
+      'west-hall': 29,
+      lounge: 28,
+      'court-music': 24,
+      bedchambers: 11,
+    })
+    expect(items).toHaveLength(171)
+  })
+
+  it('reuses the ids of the seven purchases already tracked', () => {
+    // Five Work Orders back nine Codex entries and five prophecies, and two
+    // Lounge services back Dusa's favour. A second id for the same purchase
+    // would mean one action ticking two boxes.
+    const reused = [
+      'workorder:eldest-sigil-restoration',
+      'workorder:court-musicians-sentence',
+      'workorder:singers-gamble',
+      'workorder:knave-kings-sentence',
+      'workorder:heros-sacrifice',
+      'lounge:deep-cleaning-service',
+      'lounge:detailing-service',
+    ]
+    for (const id of reused) {
+      const backing = items.filter((item) => collectFactIds(item.requirement).includes(id))
+      expect([id, backing.length]).toEqual([id, 1])
+    }
+    expect(dataset.facts.filter((f) => f.id.startsWith('contractor:'))).toHaveLength(165)
+  })
+
+  it('records what each purchase costs, and in which currency', () => {
+    // The Contractor takes more than one currency, so a bare number would not
+    // say which. Six purchases are free and carry no cost at all.
+    const priced = dataset.facts.filter((fact) => fact.cost !== undefined)
+    expect(priced).toHaveLength(158)
+    const currencies: Record<string, number> = {}
+    for (const fact of priced) {
+      currencies[fact.cost!.currency] = (currencies[fact.cost!.currency] ?? 0) + 1
+    }
+    expect(currencies).toEqual({
+      Gemstones: 110,
+      Diamond: 44,
+      Ambrosia: 2,
+      Nectar: 1,
+      'Chthonic Key': 1,
+    })
+    expect(priced.every((fact) => fact.cost!.amount >= 0)).toBe(true)
+  })
+
+  it('tells two rooms apart when they sell the same thing', () => {
+    // Four rugs are sold for both the West Hall and the Lounge under the same
+    // name. They are different purchases, so the label carries the room.
+    const earthy = dataset.facts.filter((fact) => fact.id.endsWith(':rug-earthy'))
+    expect(earthy).toHaveLength(2)
+    expect(new Set(earthy.map((fact) => fact.label)).size).toBe(2)
   })
 })

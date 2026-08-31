@@ -419,3 +419,55 @@ with one line stating a `count` node's rule, which is what the preview shows.
 25ms per shell render on the Characters tab, against 0.2ms on The House, to
 produce the number 34. It is called with an empty fact map, so the answer is a
 dataset constant.
+
+## 32. The Contractor was never the owner's deferral, and it is 171 items
+
+**Corrected.** Three documents and a merge commit said the House Contractor
+stock was "deferred by her choice". What she said was *"de primeira n busca oq
+ta faltando nn, vamo so mapeando antes"* — not yet, map first. The mapping was
+phase 1 and phase 2 was "buscar os dados faltantes". I turned a "not yet" into
+a permanent deferral and then attributed the choice to her.
+
+The estimate was wrong too. I had written "~28 missing items". The Contractor
+sells **171**, across six rooms.
+
+**Chosen:** one `contractor` collection, with each item's room in `section`,
+the same mechanism the Codex and the boons already use for their in-game
+tables.
+
+**Why rooms and not one list:** the wiki keeps six separate tables and the game
+sells from six separate menus. One 171-line pane would bury the 37 Work Orders,
+which are the only purchases that unlock a character's story.
+
+## 33. Seven ids are reused, not duplicated
+
+**Chosen:** the five Work Orders and the two Lounge services keep the ids they
+already had.
+
+**Why:** those seven back nine Codex entries, five prophecies and Dusa's
+favour. A second id for the same purchase would mean one action ticking two
+boxes, which is the duplication `AGENTS.md` exists to prevent. 164 new facts,
+seven reused, 171 achievements.
+
+## 34. A cost is an amount and a currency, not a number
+
+**Chosen:** `Fact.cost` is `{ amount, currency }`.
+
+**Why:** the Contractor takes Gemstones for 110 purchases, Diamonds for 44, and
+Ambrosia, Nectar or a Chthonic Key for the last four. A bare number would not
+say which, and the shop view she asked for is a price list.
+
+A first pass read the cost by pattern-matching the row for "number followed by
+a currency", which found "+20 Obol" **inside a description** and called it the
+price of an item that costs 3 Diamonds. The column is positional; the parser is
+now too.
+
+## 35. Four rugs are sold twice, so the label carries the room
+
+**Chosen:** every Contractor label names its room — "Purchase Rug, Earthy for
+the Lounge".
+
+**Why:** the West Hall and the Lounge both sell an Earthy, Chthonic, Elysian
+and Sanguine rug. They are different purchases with identical names, and the
+integrity test that forbids two facts sharing a normalised label caught all
+four.

@@ -1,0 +1,2225 @@
+[
+  {
+    "id": "contractor:work-orders:fountain-chamber-tartarus",
+    "name": "Fountain Chamber, Tartarus",
+    "description": "Added Chamber: Restore some Heart amidst the gloom. (Adds the Fountain Chamber to Tartarus.)",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:fountain-chamber-tartarus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:underworld-fountains-purified",
+    "name": "Underworld Fountains, Purified",
+    "description": "Underworld Renovation: Fountains provide +10% more Healing than usual.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:underworld-fountains-purified"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:underworld-fountains-holy",
+    "name": "Underworld Fountains, Holy",
+    "description": "Underworld Renovation: Fountains provide +20% more Healing than usual.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:underworld-fountains-holy"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:fountain-chamber-asphodel",
+    "name": "Fountain Chamber, Asphodel",
+    "description": "Added Chamber: Restore some Heart amid the searing heat. (Adds the Fountain Chamber to Asphodel.)",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:fountain-chamber-asphodel"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:fountain-chamber-elysium",
+    "name": "Fountain Chamber, Elysium",
+    "description": "Added Chamber: Restore some Heart amid the lush environs. (Adds the Fountain Chamber to Elysium.)",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:fountain-chamber-elysium"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:plunder-lesser",
+    "name": "Plunder, Lesser",
+    "description": "Underworld Renovation: Chambers may contain an Infernal Trove. Trove rewards: 100 Obol / 100 Heart / 50 Darkness / 25 Gemstones",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:plunder-lesser"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:plunder-greater",
+    "name": "Plunder, Greater",
+    "description": "Underworld Renovation: Each Infernal Trove contains more. Trove rewards: 125 Obol / 125 Heart / 100 Darkness / 50 Gemstones",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:plunder-greater"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:plunder-superior",
+    "name": "Plunder, Superior",
+    "description": "Underworld Renovation: Each Infernal Trove contains even more. Trove rewards: 150 Obol / 150 Heart / 150 Darkness / 75 Gemstones",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:plunder-superior"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:urns-of-wealth-lesser",
+    "name": "Urns of Wealth, Lesser",
+    "description": "Underworld Renovation: Chambers may contain urns with 5 Obol.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:urns-of-wealth-lesser"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:urns-of-wealth-greater",
+    "name": "Urns of Wealth, Greater",
+    "description": "Underworld Renovation: Chambers may contain urns with 10 Obol.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:urns-of-wealth-greater"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:urns-of-wealth-superior",
+    "name": "Urns of Wealth, Superior",
+    "description": "Underworld Renovation: Chambers may contain urns with 15 Obol.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:urns-of-wealth-superior"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:keepsake-collection-regional",
+    "name": "Keepsake Collection, Regional",
+    "description": "Underworld Renovation: Switch Keepsakes between Underworld regions.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:keepsake-collection-regional"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:fated-list-of-minor-prophecies",
+    "name": "Fated List of Minor Prophecies",
+    "description": "Special Item: The Fates reward whomever moves things along...",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:fated-list-of-minor-prophecies"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:codex-index",
+    "name": "Codex Index",
+    "description": "Special Item: Update the Codex with a handy list of Boons for each Olympian.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:codex-index"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:extremer-measures",
+    "name": "Extremer Measures",
+    "description": "Pact Stipulation: Unlocks the final rank of Extreme Measures ... if you dare.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:extremer-measures"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:contractor-s-desk-deluxe",
+    "name": "Contractor's Desk, Deluxe",
+    "description": "Special Item: Give the House Contractor a break (and new jobs...)",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:contractor-s-desk-deluxe"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:pitch-black-darkness",
+    "name": "Pitch-Black Darkness",
+    "description": "Underworld Renovation: Claiming Darkness chamber rewards gives you +5 HealthUp.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:pitch-black-darkness"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:fated-keys",
+    "name": "Fated Keys",
+    "description": "Underworld Renovation: Claiming Chthonic Key chamber rewards gives you +1 Fated Authority / Fated Persuasion.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:fated-keys"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:brilliant-gemstones",
+    "name": "Brilliant Gemstones",
+    "description": "Underworld Renovation: Claiming Gemstones chamber rewards gives you +20 Obol.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:brilliant-gemstones"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:vintage-nectar",
+    "name": "Vintage Nectar",
+    "description": "Underworld Renovation: Claiming Nectar chamber rewards a random Boon +1 Lv.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:vintage-nectar"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:darker-thirst",
+    "name": "Darker Thirst",
+    "description": "Underworld Renovation: Your weapons' Dark Thirst also gives +20% Gemstones",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:darker-thirst"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:vanquisher-s-keep",
+    "name": "Vanquisher's Keep",
+    "description": "Underworld Renovation: Awards bonus Gemstones after vanquishing Underworld Bosses. Rewards: 10 Gemstones | 20 Gemstones | 30 Gemstones | 50 Gemstones",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:vanquisher-s-keep"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:gateways-erebus",
+    "name": "Gateways, Erebus",
+    "description": "Underworld Renovation: Chambers may contain an Infernal Gate.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:gateways-erebus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:rod-of-fishing",
+    "name": "Rod of Fishing",
+    "description": "Special Item: Scoop creatures from the Underworld's rivers...",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:rod-of-fishing"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:court-music-stand",
+    "name": "Court Music Stand",
+    "description": "House Decor: Authorizes playback of music pieces from the vault.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:court-music-stand"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:administrative-privilege",
+    "name": "Administrative Privilege",
+    "description": "Special Item: (Re)authorizes entry into the administrative chamber.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:administrative-privilege"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:court-musician-s-sentence",
+    "name": "Court Musician's Sentence",
+    "description": "Sealed Document: Free Orpheus from solitary confinement.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:court-musicians-sentence"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:knave-king-s-sentence",
+    "name": "Knave-King's Sentence",
+    "description": "Sealed Document: Free Sisyphus of an eternity of hard labor.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:knave-kings-sentence"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:singer-s-gamble",
+    "name": "Singer's Gamble",
+    "description": "Sealed Document: Permit Orpheus to be with his muse again.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:singers-gamble"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:hero-s-sacrifice",
+    "name": "Hero's Sacrifice",
+    "description": "Sealed Document: Allow Achilles to return to Elysium.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:heros-sacrifice"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:eldest-sigil-restoration",
+    "name": "Eldest Sigil Restoration",
+    "description": "House Repair: Help Nyx by imbuing the Sigil in the Administrative Chamber.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "workorder:eldest-sigil-restoration"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-infernal",
+    "name": "Theme, Infernal",
+    "description": "Decorative Theme: Evokes infernal might and unbearable heat.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:theme-infernal"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-sonorous",
+    "name": "Theme, Sonorous",
+    "description": "Decorative Theme: Evokes soaring harmonies and inspiration.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:theme-sonorous"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-lovely",
+    "name": "Theme, Lovely",
+    "description": "Decorative Theme: Evokes certain descriptions of joy and levity.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:theme-lovely"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-woodland",
+    "name": "Theme, Woodland",
+    "description": "Decorative Theme: Evokes greenery found only on the surface.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:theme-woodland"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-chthonic",
+    "name": "Theme, Chthonic",
+    "description": "Decorative Theme: Evokes night, darkness and the Underworld.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:theme-chthonic"
+      ]
+    }
+  },
+  {
+    "id": "contractor:work-orders:theme-princely",
+    "name": "Theme, Princely",
+    "description": "Decorative Theme: Evokes the clean utility of the house of Hades.",
+    "collection": "contractor",
+    "section": "work-orders",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:work-orders:theme-princely"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:drapery-azure",
+    "name": "Drapery, Azure",
+    "description": "House Decor: Gives the drapery a hue reminiscent of the sea.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:drapery-azure"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:drapery-olive",
+    "name": "Drapery, Olive",
+    "description": "House Decor: Gives the drapery a hue similar to a small, bitter fruit.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:drapery-olive"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:drapery-bone",
+    "name": "Drapery, Bone",
+    "description": "House Decor: Gives the drapery a look reminiscent of decay.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:drapery-bone"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:drapery-crimson",
+    "name": "Drapery, Crimson",
+    "description": "House Decor: Restores the original drapery color.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:drapery-crimson"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:trim-ash-gray",
+    "name": "Trim, Ash Gray",
+    "description": "House Decor: Embellishes the East Hall flooring in gray.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:trim-ash-gray"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:trim-chthonic-purple",
+    "name": "Trim, Chthonic Purple",
+    "description": "House Decor: Embellishes the East Hall flooring in purple.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:trim-chthonic-purple"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:trim-blood-red",
+    "name": "Trim, Blood-Red",
+    "description": "House Decor: Embellishes the East Hall flooring in red.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:trim-blood-red"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:trim-burnished-gold",
+    "name": "Trim, Burnished Gold",
+    "description": "House Decor: Embellishes the East Hall flooring in gold.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:trim-burnished-gold"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:flower-vase-lilac",
+    "name": "Flower Vase, Lilac",
+    "description": "House Decor: Adds a splash of color to the East Wing of the House.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:flower-vase-lilac"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:flower-vase-rose",
+    "name": "Flower Vase, Rose",
+    "description": "House Decor: Adds a bit of mystique to the East Wing of the House.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:flower-vase-rose"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:lighting-wax-pillar",
+    "name": "Lighting, Wax Pillar",
+    "description": "House Decor: Illuminates the pillar-tops with long-burning flames.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:lighting-wax-pillar"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:lighting-dual-stick",
+    "name": "Lighting, Dual Stick",
+    "description": "House Decor: Illuminates the pillar-tops with slender candlesticks.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:lighting-dual-stick"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:laurels-cobalt",
+    "name": "Laurels, Cobalt",
+    "description": "House Decor: Decorate the East Hall walls in blue.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:laurels-cobalt"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:laurels-deathly",
+    "name": "Laurels, Deathly",
+    "description": "House Decor: Decorate the East Hall walls in bone.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:laurels-deathly"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:laurels-crimson",
+    "name": "Laurels, Crimson",
+    "description": "House Decor: Decorate the East Hall walls in red.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:laurels-crimson"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:bedding-quilted",
+    "name": "Bedding, Quilted",
+    "description": "House Decor: Provides elegant comfort for large hounds.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:bedding-quilted"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:bedding-fancy",
+    "name": "Bedding, Fancy",
+    "description": "House Decor: Provides luxurious comfort for large hounds.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:bedding-fancy"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:tiling-skull",
+    "name": "Tiling, Skull",
+    "description": "House Decor: Gives the East Wing a sense of foreboding.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:tiling-skull"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:towel-rack-stygian",
+    "name": "Towel Rack, Stygian",
+    "description": "House Decor: Dries those who enter the House the painful way.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:towel-rack-stygian"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:plaything-round",
+    "name": "Plaything, Round",
+    "description": "House Decor: Enjoyed by some hounds with one or more heads.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:plaything-round"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:plaything-plush",
+    "name": "Plaything, Plush",
+    "description": "House Decor: Chewed by some hounds with one or more heads.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:plaything-plush"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:flames-promethean",
+    "name": "Flames, Promethean",
+    "description": "House Decor: Gives off an infernal glow near the Pool of Styx.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:flames-promethean"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:decorative-arms-xiphos",
+    "name": "Decorative Arms, Xiphos",
+    "description": "House Decor: Accents the East Wing walls with double-edged swords.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:decorative-arms-xiphos"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:decorative-arms-labrys",
+    "name": "Decorative Arms, Labrys",
+    "description": "House Decor: Accents the East Wing walls with twin-bladed axes.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:decorative-arms-labrys"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:decorative-arms-bident",
+    "name": "Decorative Arms, Bident",
+    "description": "House Decor: Accents the East Wing walls with two-pronged spears.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:decorative-arms-bident"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:petals-scattered",
+    "name": "Petals, Scattered",
+    "description": "House Decor: Enhances the ambiance near the Pool of Styx.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:petals-scattered"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:petals-shade-strewn",
+    "name": "Petals, Shade-Strewn",
+    "description": "House Decor: Adorns the area about the Pool of Styx.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:petals-shade-strewn"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:bonework-ominous",
+    "name": "Bonework, Ominous",
+    "description": "House Decor: Unnerves shades waiting for something in the House.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:bonework-ominous"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:chaise-divine",
+    "name": "Chaise, Divine",
+    "description": "House Decor: Deepens the oblivion of sleep.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:chaise-divine"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:mosaic-chthonic",
+    "name": "Mosaic, Chthonic",
+    "description": "House Decor: Gives the Prince's chambers a homely atmosphere.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:mosaic-chthonic"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:mosaic-minoan",
+    "name": "Mosaic, Minoan",
+    "description": "House Decor: Gives the Prince's chambers an exotic atmosphere.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:mosaic-minoan"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:petals-ever-falling",
+    "name": "Petals, Ever-Falling",
+    "description": "House Decor: Adds drama while rising defiantly from the Pool of Styx.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:petals-ever-falling"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:tombs-royal",
+    "name": "Tombs, Royal",
+    "description": "House Decor: Exposes mausoleums of ancient kings slain in war.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:tombs-royal"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:columns-divine",
+    "name": "Columns, Divine",
+    "description": "House Decor: Makes the columns similar to those on Olympus.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:columns-divine"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:columns-jeweled",
+    "name": "Columns, Jeweled",
+    "description": "House Decor: Encrusts stodgy stone columns with shiny gemstones.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:columns-jeweled"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:columns-ominous",
+    "name": "Columns, Ominous",
+    "description": "House Decor: Sets fearsome skeletal carvings into the scenery.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:columns-ominous"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:fireplace-infernal",
+    "name": "Fireplace, Infernal",
+    "description": "House Decor: Adds a hellish flame-wall by the Pool of Styx.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:fireplace-infernal"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:insignia-fated-order",
+    "name": "Insignia, Fated Order",
+    "description": "House Decor: Adorns the Great Hall with the Master's mark.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:insignia-fated-order"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:fireplace-nocturnal",
+    "name": "Fireplace, Nocturnal",
+    "description": "House Decor: Adds a resplendent flame-wall by the Pool of Styx.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:fireplace-nocturnal"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:treasures-boatman-s",
+    "name": "Treasures, Boatman's",
+    "description": "House Decor: Sets brilliant golden urns near the Pool of Styx.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:treasures-boatman-s"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:throne-hell-hound",
+    "name": "Throne, Hell-Hound",
+    "description": "House Decor: Alters the Great Throne with a hound motif.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:throne-hell-hound"
+      ]
+    }
+  },
+  {
+    "id": "contractor:great-hall:east-wing-fountain",
+    "name": "East Wing Fountain",
+    "description": "House Decor: Enhances atmosphere in an otherwise-dismal corner.",
+    "collection": "contractor",
+    "section": "great-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:great-hall:east-wing-fountain"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:seating-luxurious",
+    "name": "Seating, Luxurious",
+    "description": "House Decor: Enhances the viewing area near the West Hall.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:seating-luxurious"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-earthy",
+    "name": "Rug, Earthy",
+    "description": "House Decor: Adds a touch of grit to the West Hall.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:rug-earthy"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-chthonic",
+    "name": "Rug, Chthonic",
+    "description": "House Decor: Adds a touch of comfort to the West Hall.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:rug-chthonic"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-elysian",
+    "name": "Rug, Elysian",
+    "description": "House Decor: Adds some regal flair to the West Hall.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:rug-elysian"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-sanguine",
+    "name": "Rug, Sanguine",
+    "description": "House Decor: Adds a touch of melancholy to the West Hall.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:rug-sanguine"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-guardpost",
+    "name": "Rug, Guardpost",
+    "description": "House Decor: Adds supple flooring at the East Wing intersection.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:rug-guardpost"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:pedestals-gilded",
+    "name": "Pedestals, Gilded",
+    "description": "House Decor: Makes display-pedestals display-worthy themselves.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:pedestals-gilded"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:mirror-guardpost",
+    "name": "Mirror, Guardpost",
+    "description": "House Decor: Makes the path across the House look twice as long.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:mirror-guardpost"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:sculpture-bloodless",
+    "name": "Sculpture, Bloodless",
+    "description": "House Decor: Looks fearsome without attacking on sight.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:sculpture-bloodless"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:contraption-intricate",
+    "name": "Contraption, Intricate",
+    "description": "House Decor: Supposedly measures infinitesimal distances.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:contraption-intricate"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:landscape-tartarus",
+    "name": "Landscape, Tartarus",
+    "description": "House Decor: Depicts the lowest reaches of the Underworld.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:landscape-tartarus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:landscape-asphodel",
+    "name": "Landscape, Asphodel",
+    "description": "House Decor: Depicts the fiery River Phlegethon.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:landscape-asphodel"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:landscape-elysium",
+    "name": "Landscape, Elysium",
+    "description": "House Decor: Depicts the fields reserved for the greatest souls.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:landscape-elysium"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:sundial-imported",
+    "name": "Sundial, Imported",
+    "description": "House Decor: Tells time using Helios' flaming chariot (not included).",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:sundial-imported"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:portrait-cerberus",
+    "name": "Portrait, Cerberus",
+    "description": "House Decor: Depicts the three-headed monster in his prime.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:portrait-cerberus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:portrait-exalted-hero",
+    "name": "Portrait, Exalted Hero",
+    "description": "House Decor: Depicts the likeness of the champion of Elysium.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:portrait-exalted-hero"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:portrait-princess",
+    "name": "Portrait, Princess",
+    "description": "House Decor: Depicts the likeness of a Cretan princess.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:portrait-princess"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:bust-old-man",
+    "name": "Bust, Old Man",
+    "description": "House Decor: Renders in lifelike marble a distinguished poet.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:bust-old-man"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:painting-night",
+    "name": "Painting, Night",
+    "description": "House Decor: Depicts Nyx, Night Incarnate.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:painting-night"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:painting-prince",
+    "name": "Painting, Prince",
+    "description": "House Decor: Depicts the likeness of the son of the god of the dead.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:painting-prince"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:painting-fury-sisters",
+    "name": "Painting, Fury Sisters",
+    "description": "House Decor: Depicts the Erinyes in a rare simultaneous appearance.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:painting-fury-sisters"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:painting-god-of-the-dead",
+    "name": "Painting, God of the Dead",
+    "description": "House Decor: Depicts the likeness of Lord Hades.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:painting-god-of-the-dead"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:west-hall-fountain",
+    "name": "West Hall Fountain",
+    "description": "House Decor: Bubbles ceaselessly, soothing those within earshot. * Usage: Fountain used count",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:west-hall-fountain"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:chair-deathlike",
+    "name": "Chair, Deathlike",
+    "description": "House Decor: Adds seating near the southwest balcony.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:chair-deathlike"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:recliner-deathlike",
+    "name": "Recliner, Deathlike",
+    "description": "House Decor: Adds plush comfort near the southwest balcony.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:recliner-deathlike"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:rug-deathlike",
+    "name": "Rug, Deathlike",
+    "description": "House Decor: Adds melancholy flooring near the southwest balcony.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:rug-deathlike"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:table-deathlike",
+    "name": "Table, Deathlike",
+    "description": "House Decor: Adds a small utility space near the southwest balcony.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:table-deathlike"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:flames-deathlike",
+    "name": "Flames, Deathlike",
+    "description": "House Decor: Adds moody lighting near the southwest balcony.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:flames-deathlike"
+      ]
+    }
+  },
+  {
+    "id": "contractor:west-hall:sculpture-heroic",
+    "name": "Sculpture, Heroic",
+    "description": "House Decor: Impresses, even inspires onlookers.",
+    "collection": "contractor",
+    "section": "west-hall",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:west-hall:sculpture-heroic"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:service-deep-cleaning",
+    "name": "Service, Deep Cleaning",
+    "description": "House Repair: Gets rid of the huge clumps of fur shed by Cerberus.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "lounge:deep-cleaning-service"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:service-detailing",
+    "name": "Service, Detailing",
+    "description": "House Repair: Repairs the unsightly damage dealt by Cerberus.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "lounge:detailing-service"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-welcome",
+    "name": "Rug, Welcome",
+    "description": "House Decor: Softens the surface leading to the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:rug-welcome"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:seating-covered",
+    "name": "Seating, Covered",
+    "description": "House Decor: Cushions the posterior while waiting eternally.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:seating-covered"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:seating-olive",
+    "name": "Seating, Olive",
+    "description": "House Decor: Installs green sitting-stools in the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:seating-olive"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:tables-serpentine",
+    "name": "Tables, Serpentine",
+    "description": "House Decor: Sets up lounge tables with a snake-like theme.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:tables-serpentine"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:seating-red-hide",
+    "name": "Seating, Red Hide",
+    "description": "House Decor: Provides more places to sit and while away the time.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:seating-red-hide"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-earthy",
+    "name": "Rug, Earthy",
+    "description": "House Decor: Adds a touch of grit to the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:rug-earthy"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-chthonic",
+    "name": "Rug, Chthonic",
+    "description": "House Decor: Adds a touch of comfort to the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:rug-chthonic"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-elysian",
+    "name": "Rug, Elysian",
+    "description": "House Decor: Adds some regal flair to the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:rug-elysian"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:rug-sanguine",
+    "name": "Rug, Sanguine",
+    "description": "House Decor: Adds a touch of melancholy to the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:rug-sanguine"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:jar-treat-filled",
+    "name": "Jar, Treat-Filled",
+    "description": "House Decor: Contains unappetizing bits of sustenance.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:jar-treat-filled"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:meats-cured",
+    "name": "Meats, Cured",
+    "description": "House Decor: Displays meats cured of the disease of the living.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:meats-cured"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:delicacy-ambrosial",
+    "name": "Delicacy, Ambrosial",
+    "description": "House Decor: Preserves a rare treat for a truly special occasion.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:delicacy-ambrosial"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:oven-kitchenette",
+    "name": "Oven, Kitchenette",
+    "description": "House Decor: Cooks various foods to perfection (or anything really).",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:oven-kitchenette"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:fire-pit-wood-burning",
+    "name": "Fire Pit, Wood-Burning",
+    "description": "House Decor: Gives the lounge a sense of homely decency.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:fire-pit-wood-burning"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:cauldron-fiery",
+    "name": "Cauldron, Fiery",
+    "description": "House Decor: Conversation-starter for shades milling in the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:cauldron-fiery"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:kitchenette-expanded",
+    "name": "Kitchenette, Expanded",
+    "description": "House Decor: Makes the kitchen appear to serve superior cuisine.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:kitchenette-expanded"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:spice-rack-kitchenette",
+    "name": "Spice Rack, Kitchenette",
+    "description": "House Decor: Seasons dishes so even the dead can taste them.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:spice-rack-kitchenette"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:cutlery-kitchenette",
+    "name": "Cutlery, Kitchenette",
+    "description": "House Decor: Slice through pomegranates with disturbing ease.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:cutlery-kitchenette"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:aquarium-cubical",
+    "name": "Aquarium, Cubical",
+    "description": "House Decor: For river denizens transplanted from the Underworld. * Usage: Fishes caught count",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:aquarium-cubical"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:painting-skeletal",
+    "name": "Painting, Skeletal",
+    "description": "House Decor: Depicts a skeleton enjoying the afterlife.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:painting-skeletal"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:fireplace-burial",
+    "name": "Fireplace, Burial",
+    "description": "House Decor: Sets a flame-wall for all to see in the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:fireplace-burial"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:bat-cage-all-seeing",
+    "name": "Bat Cage, All-Seeing",
+    "description": "House Decor: Houses an obedient colony of surveillance-bats. * Usage: Bats eye overview of Great Hall, West Hall and Lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:bat-cage-all-seeing"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:shortcut-great-hall",
+    "name": "Shortcut, Great Hall",
+    "description": "House Decor: Adds a discreet, new western entrance to the lounge.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:shortcut-great-hall"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:prism-sphere-revolving",
+    "name": "Prism-Sphere, Revolving",
+    "description": "House Decor: Reflects light in a vividly hypnotic pattern.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:prism-sphere-revolving"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:prism-sphere-revolting",
+    "name": "Prism-Sphere, Revolting",
+    "description": "House Decor: Reflects light in a frankly upsetting pattern.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:prism-sphere-revolting"
+      ]
+    }
+  },
+  {
+    "id": "contractor:lounge:shelf-vintage",
+    "name": "Shelf, Vintage",
+    "description": "House Decor: Reinforcements for the long-depleted honor bar.",
+    "collection": "contractor",
+    "section": "lounge",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:lounge:shelf-vintage"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:pool-scrying",
+    "name": "Pool, Scrying",
+    "description": "Bedroom Decor: Contains faint traces of the past if you look closely. * Usage: Escapes attempted count and foes slain count.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:pool-scrying"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:wall-scroll-achilles",
+    "name": "Wall-Scroll, Achilles",
+    "description": "Bedroom Decor: Features a likeness of the greatest of the Greeks.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:wall-scroll-achilles"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:wall-scroll-dionysus",
+    "name": "Wall-Scroll, Dionysus",
+    "description": "Bedroom Decor: Features the jubilant and carefree god of wine.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:wall-scroll-dionysus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:rug-stately",
+    "name": "Rug, Stately",
+    "description": "Bedroom Decor: Gives more of a grown-up look to any bedchamber.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:rug-stately"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:recliner-fancy",
+    "name": "Recliner, Fancy",
+    "description": "Bedroom Decor: Seats one or more individuals (if they can sit).",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:recliner-fancy"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:wall-scroll-aphrodite",
+    "name": "Wall-Scroll, Aphrodite",
+    "description": "Bedroom Decor: Features the goddess of love and beauty herself.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:wall-scroll-aphrodite"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:arms-assorted",
+    "name": "Arms, Assorted",
+    "description": "Bedroom Decor: Showcases broken weapons from a historic siege.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:arms-assorted"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:table-entertainment",
+    "name": "Table, Entertainment",
+    "description": "Bedroom Decor: Contains a variety of frankly unplayable games.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:table-entertainment"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:weights-massive",
+    "name": "Weights, Massive",
+    "description": "Bedroom Decor: Remains firmly rooted, no matter one's strength.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:weights-massive"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:bedding-chthonic",
+    "name": "Bedding, Chthonic",
+    "description": "Bedroom Decor: Updates the bedchamber's namesake with a deathly motif.",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:bedding-chthonic"
+      ]
+    }
+  },
+  {
+    "id": "contractor:bedchambers:lyre-splendid",
+    "name": "Lyre, Splendid",
+    "description": "Bedroom Decor: Creates beautiful music, if you know how... * Usage: Required for Good Riddance",
+    "collection": "contractor",
+    "section": "bedchambers",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:bedchambers:lyre-splendid"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:final-expense",
+    "name": "Final Expense",
+    "description": "Sheet Music: Commissioned expressly for the Stygian boatman.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:final-expense"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:death-and-i",
+    "name": "Death and I",
+    "description": "Sheet Music: A brief and frankly unhappy piece Lord Hades enjoys.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:death-and-i"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:wretched-shades",
+    "name": "Wretched Shades",
+    "description": "Sheet Music: In memory of lives snuffed out and sent to this realm.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:wretched-shades"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:the-bloodless",
+    "name": "The Bloodless",
+    "description": "Sheet Music: In testament to the wrathful souls serving Lord Hades.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:the-bloodless"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:the-painful-way",
+    "name": "The Painful Way",
+    "description": "Sheet Music: About a quick turbulent trip down the River Styx.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:the-painful-way"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:mouth-of-styx",
+    "name": "Mouth of Styx",
+    "description": "Sheet Music: The hideous gloom of Tartarus in musical form.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:mouth-of-styx"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:out-of-tartarus",
+    "name": "Out of Tartarus",
+    "description": "Sheet Music: Were there a way out, this piece would be about it.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:out-of-tartarus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:scourge-of-the-furies",
+    "name": "Scourge of the Furies",
+    "description": "Sheet Music: In tribute to the well-feared Erinyes.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:scourge-of-the-furies"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:primordial-chaos",
+    "name": "Primordial Chaos",
+    "description": "Sheet Music: Ode to the oft-forgotten originator of all things.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:primordial-chaos"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:final-expense-payback",
+    "name": "Final Expense (Payback)",
+    "description": "Sheet Music: Commissioned expressly for the Stygian boatman. (Unlocked after a particularly sour encounter with the boatman)",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:final-expense-payback"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:through-asphodel",
+    "name": "Through Asphodel",
+    "description": "Sheet Music: About a once-lush meadows now awash in flame.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:through-asphodel"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:good-riddance",
+    "name": "Good Riddance",
+    "description": "Sheet Music: A rousing celebration of the afterlife. (Must first be requested from its original composer)",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:good-riddance"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:river-of-flame",
+    "name": "River of Flame",
+    "description": "Sheet Music: The feared River Phlegethon inspired this piece.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:river-of-flame"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:the-king-and-the-bull",
+    "name": "The King and the Bull",
+    "description": "Sheet Music: Dedicated to the King of Athens and the Minoan Bull.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:the-king-and-the-bull"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:the-exalted",
+    "name": "The Exalted",
+    "description": "Sheet Music: Tribute to the mighty heroes of Elysium.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:the-exalted"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:from-olympus",
+    "name": "From Olympus",
+    "description": "Sheet Music: Solemn piece reflecting the divide between realms.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:from-olympus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:gates-of-hell",
+    "name": "Gates of Hell",
+    "description": "Sheet Music: Dedicated to those trespassing in the Temple of Styx.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:gates-of-hell"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:lament-of-orpheus",
+    "name": "Lament of Orpheus",
+    "description": "Sheet Music: The court-musician's regrets captured in song form. (Must first be sung by Orpheus after gaining Affinity)",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:lament-of-orpheus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:last-words",
+    "name": "Last Words",
+    "description": "Sheet Music: Heralds the arrival of Thanatos, incarnate of death.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:last-words"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:god-of-the-dead",
+    "name": "God of the Dead",
+    "description": "Sheet Music: Commissioned long ago in honor of Lord Hades.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:god-of-the-dead"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:hymn-to-zagreus",
+    "name": "Hymn to Zagreus",
+    "description": "Sheet Music: Ballad of the Prince of the Underworld's exploits. (Must be composed by Orpheus after specific dialogue with Dionysus)",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:hymn-to-zagreus"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:on-the-coast",
+    "name": "On the Coast",
+    "description": "Sheet Music: Exotic piece uses instruments from the surface world.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:on-the-coast"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:in-the-blood",
+    "name": "In the Blood",
+    "description": "Sheet Music: Popular duet reflects on home and family.",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:in-the-blood"
+      ]
+    }
+  },
+  {
+    "id": "contractor:court-music:the-unseen-ones",
+    "name": "The Unseen Ones",
+    "description": "Sheet Music: Banned for containing too many music notes per second. (Requires fighting Hades with the Extremer Measures [Extreme Measures rank 4] condition active in the Pact of Punishment at least once, but not necessarily winning against him)",
+    "collection": "contractor",
+    "section": "court-music",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "contractor:court-music:the-unseen-ones"
+      ]
+    }
+  }
+]

@@ -29,6 +29,27 @@ export const factSchema = z.object({
   /** What the thing is or does, beyond the action the label states. */
   description: z.string().min(1).optional(),
   /**
+   * What the purchase costs, for a fact that is bought rather than earned.
+   *
+   * The House Contractor takes seven different currencies, so a bare number
+   * would not say which. Absent for anything that is not a purchase.
+   */
+  cost: z
+    .object({
+      amount: z.number().int().nonnegative(),
+      currency: z.enum([
+        'Gemstones',
+        'Diamond',
+        'Darkness',
+        'Ambrosia',
+        'Nectar',
+        'Chthonic Key',
+        'Obol',
+        'Titan Blood',
+      ]),
+    })
+    .optional(),
+  /**
    * True when this fact's own text states an outcome the player may not have
    * reached. The reveal can sit in the `label` as well as the `description`,
    * so the interface must hide both, not only the description.
