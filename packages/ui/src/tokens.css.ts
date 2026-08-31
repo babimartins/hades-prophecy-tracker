@@ -10,12 +10,30 @@ import { css, unsafeCSS } from 'lit'
  * large text and for meaningful non-text elements such as the progress bar
  * fill and the focus ring). See `.superpowers/sdd/2026-08-17-slice-2-codex/design-report.md`
  * for the computed ratios.
+ *
+ * The accent was `#e35563`, a red. On `#150e19` it read as an error on things
+ * that are only progress and selection, which is the objection the owner had
+ * already made about green reading as success. Bronze makes one warm scale
+ * with `--hd-color-done`: a bar fills bronze and turns gold when it completes.
+ *
+ * Measured against the page background `#150e19` and the surface `#241627`:
+ *
+ * | pair                  | ratio |
+ * | --------------------- | ----- |
+ * | accent on background  |  4.97 |
+ * | accent on surface     |  4.52 |
+ * | accent against done   |  1.90 |
+ *
+ * The last row is the constraint that rules out the brighter candidates. A bar
+ * that is part accent and part done must show which is which, and lilac or
+ * teal sit at 1.10 and 1.01 against the gold. No text is ever drawn on the
+ * accent: every accent background in the app is a pip or a bar fill.
  */
 export const colorTokens = {
   '--hd-color-text': '#f2e7d0',
   '--hd-color-muted': '#b9a98c',
   '--hd-color-surface': '#241627',
-  '--hd-color-accent': '#e35563',
+  '--hd-color-accent': '#b57433',
   '--hd-color-done': '#d8b34a',
 } as const
 
