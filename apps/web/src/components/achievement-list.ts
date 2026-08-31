@@ -123,14 +123,43 @@ export class AchievementList extends LitElement {
     details {
       margin-bottom: 12px;
     }
+    /**
+     * A section heading is a real control, not decorative small-caps text:
+     * a visible surface, a border, and a hit area worth tapping. The native
+     * disclosure marker is replaced by ::before so its rotation on open
+     * matches the surface treatment, instead of a bare triangle glyph with
+     * no background of its own.
+     */
     summary {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
       cursor: pointer;
+      display: flex;
       font-family: var(--hd-font-display, serif);
       font-weight: 600;
-      padding: 8px 0;
+      gap: 10px;
+      list-style: none;
+      padding: 10px 14px;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::before {
+      content: '▸';
+      display: inline-block;
+      transition: transform 120ms ease-out;
+    }
+    details[open] > summary::before {
+      transform: rotate(90deg);
+    }
+    summary:hover {
+      background: rgba(255, 255, 255, 0.09);
     }
     summary:focus-visible {
       outline: 2px solid ${colorVar('--hd-color-accent')};
+      outline-offset: 2px;
     }
     details ul {
       margin-top: 8px;

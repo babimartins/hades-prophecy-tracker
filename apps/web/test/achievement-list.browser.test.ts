@@ -257,6 +257,21 @@ describe('achievement-list', () => {
     expect(groups[1]!.open).toBe(true)
   })
 
+  it('looks like a control: a section heading has a visible surface, a border and a real hit area', async () => {
+    render(
+      html`<achievement-list .achievements=${sectioned} .facts=${{}}></achievement-list>`,
+      document.body,
+    )
+    const element = document.querySelector('achievement-list')!
+    await element.updateComplete
+    const summary = element.shadowRoot!.querySelector('details summary')!
+    const style = getComputedStyle(summary)
+    expect(style.backgroundColor).not.toBe('rgba(0, 0, 0, 0)')
+    expect(Number.parseFloat(style.borderTopWidth)).toBeGreaterThan(0)
+    // A comfortable hit area, not text sitting flush against its neighbours.
+    expect(Number.parseFloat(style.paddingTop)).toBeGreaterThanOrEqual(8)
+  })
+
   it('is keyboard-operable: the section heading is a native, focusable summary control', async () => {
     render(
       html`<achievement-list .achievements=${sectioned} .facts=${{}}></achievement-list>`,
