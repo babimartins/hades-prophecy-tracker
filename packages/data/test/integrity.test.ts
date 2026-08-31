@@ -1,4 +1,4 @@
-import { collectFactIds, NAMESPACES_WITHOUT_CAPABILITY } from '@hades/engine'
+import { collectFactIds, factTargets, NAMESPACES_WITHOUT_CAPABILITY } from '@hades/engine'
 import type { RequirementChild } from '@hades/schema'
 import { describe, expect, it } from 'vitest'
 import { dataset } from '../src/index.js'
@@ -159,12 +159,15 @@ describe('dataset integrity', () => {
 })
 
 describe('the subject roster', () => {
-  it('holds one entry per Codex entry, plus Persephone', () => {
-    // Persephone is the one subject the Codex cannot supply. The Codex page
-    // lists her in neither its section tables nor its exclusion list, yet she
-    // has facts and gives the Pom Blossom keepsake.
+  it('holds one entry per subject, Persephone included', () => {
+    // The Codex page's index lists 119 entries and never names Persephone.
+    // Three things on her own page say otherwise: it carries a Codex entry
+    // with Achilles' prose about her, it shows a 9-heart affinity gauge in the
+    // same shape as the other 24, and the Codex page itself says the hearts
+    // live "in the top right corner of their entries". Hearts imply an entry.
+    // The owner chose to follow that over the index. See decisions.md.
     const codexEntries = dataset.achievements.filter((a) => a.collection === 'codex')
-    expect(codexEntries).toHaveLength(119)
+    expect(codexEntries).toHaveLength(120)
     expect(dataset.subjects).toHaveLength(120)
     // The six weapons take their true name, so their subject id does not match
     // the Codex slug. Compare on the display name instead, which is shared.
@@ -172,7 +175,41 @@ describe('the subject roster', () => {
     const withoutCodexEntry = dataset.subjects.filter(
       (subject) => !codexNames.has(subject.name),
     )
-    expect(withoutCodexEntry.map((s) => s.id)).toEqual(['persephone'])
+    expect(withoutCodexEntry.map((s) => s.id)).toEqual([])
+  })
+
+  it('leaves Persephone without a Codex section, because no source gives her one', () => {
+    // Every other entry carries the section the Codex page files it under.
+    // Hers is absent from that page entirely, so guessing between Chthonic
+    // Gods and Others of Note would be inventing a fact.
+    const entries = dataset.achievements.filter((a) => a.collection === 'codex')
+    const sectionless = entries.filter((e) => e.section === undefined).map((e) => e.id)
+    expect(sectionless).toEqual(['codex:persephone'])
+  })
+
+  it('asks every Codex entry for the full gauge, never part of it', () => {
+    // A Codex entry is complete when the bond is forged, which is the whole
+    // gauge. Nothing pinned this, so Persephone's 9 could have been typed as a
+    // 7 and every test would still have passed.
+    const short: string[] = []
+    for (const entry of dataset.achievements.filter((a) => a.collection === 'codex')) {
+      for (const [id, target] of Object.entries(factTargets(entry.requirement))) {
+        if (!id.startsWith('nectar:')) continue
+        const max = dataset.facts.find((f) => f.id === id)?.max
+        if (target !== max) short.push(`${entry.id} -> ${id} ${target}/${max}`)
+      }
+    }
+    expect(short).toEqual([])
+  })
+
+  it('counts Persephone among the characters a bond can be forged with', () => {
+    // Dionysus' last heart needs bonds with 6 different characters, not 6
+    // Olympians. She has a gauge, so she is one of them.
+    const entry = dataset.achievements.find((a) => a.id === 'codex:dionysus')!
+    const bonds = (entry.requirement as { of: unknown[] }).of.find(
+      (n) => (n as { kind?: string }).kind === 'count',
+    ) as { of: { fact: string }[] }
+    expect(bonds.of.map((c) => c.fact)).toContain('nectar:persephone')
   })
 
   it('has no duplicate subject id', () => {
@@ -224,9 +261,9 @@ describe('facts tagged with a subject', () => {
   it('splits into tagged and deliberately subject-less', () => {
     // The two buckets partition the same array, so their sum is the total by
     // construction. The pinned numbers are what this test actually checks.
-    expect(tagged).toHaveLength(617)
+    expect(tagged).toHaveLength(620)
     expect(systemFacts).toHaveLength(267)
-    expect(dataset.facts).toHaveLength(884)
+    expect(dataset.facts).toHaveLength(887)
   })
 
   it('gives a system fact an empty list, never a missing key and never a subject', () => {
@@ -296,12 +333,15 @@ describe('fact descriptions', () => {
       contractor: 164,
       // The Queen's Plan dialogue, plus the Ambrosia counter behind Dionysus'
       // last heart. Each says how many conversations, or what the count is of.
-      talk: 4,
+      // Persephone's affinity says when she can be gifted at all; her gate
+      // says which conversation unlocks her 6th heart.
+      nectar: 1,
+      talk: 5,
       ambrosia: 1,
       // Skelly's three challenge statues, each naming its Heat level.
       combat: 3,
     })
-    expect(described).toHaveLength(625)
+    expect(described).toHaveLength(627)
   })
 
   it('never stores a wiki cross-reference in place of an answer', () => {

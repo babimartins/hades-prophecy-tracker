@@ -673,3 +673,36 @@ hearts. An earlier draft printed one on every row; she rejected it.
 A view with no entry behind it keeps the fact's own max. That is the subject
 page, and the header's overall figure. The keepsake's own page still shows 1/3
 as unfinished, because there the question is how far you took it.
+
+## 51. Persephone gets a Codex entry, and the Codex holds 120
+
+She was the only character with a keepsake and no affinity gauge, which is a
+hole in the question the owner opens the app to answer: who gets the next
+Ambrosia.
+
+Her gauge is certain: 9 hearts, first Nectar earns the Pom Blossom, and the 6th
+heart is locked until Zagreus assures her she is a good mother. Only the home
+for it was in doubt, because every other affinity fact hangs off a Codex entry
+and an earlier entry in `docs/domain-model.md` had settled that she has none.
+
+That settlement read one source. Three others disagree: her page carries the
+Codex prose, her page shows the gauge in the standard shape, and the Codex page
+says the hearts live inside entries. The owner chose the three.
+
+Her entry carries no section, because no source files her under one of the nine
+headings and guessing would invent a fact.
+
+Adding her also put her in the pool for Dionysus' last heart, which asks for
+bonds with 6 different **characters**, not 6 Olympians.
+
+Found by auditing an old plan document against the data: it said "26
+Nectar-eligible characters" where the dataset held 24. The other missing one is
+Bouldy, who can be gifted Nectar but "lacks an Affinity level", so he has
+nothing to track.
+
+## 52. A stale description survived four commits
+
+`codex:dionysus` read "that gate is not yet wired" after the gate was wired.
+Nothing tests description text against the requirement beside it, so it went
+unnoticed until this audit read the file for another reason. Descriptions that
+describe the state of the work rot; describe the game instead.

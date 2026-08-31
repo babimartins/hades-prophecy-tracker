@@ -322,7 +322,7 @@
   {
     "id": "codex:dionysus",
     "name": "Dionysus",
-    "description": "Max affinity with Dionysus through gifts. His final heart also needs bonds with 6 different characters; that gate is not yet wired.",
+    "description": "Max affinity with Dionysus through gifts. His final heart also needs bonds with 6 different characters and 10 Ambrosia given to anyone.",
     "collection": "codex",
     "section": "olympian-gods",
     "requirement": {
@@ -401,6 +401,11 @@
             {
               "kind": "atLeast",
               "fact": "nectar:skelly",
+              "value": 9
+            },
+            {
+              "kind": "atLeast",
+              "fact": "nectar:persephone",
               "value": 9
             },
             {
@@ -2005,5 +2010,23 @@
         "encounter:satyr-cultist"
       ]
     }
+  },
+  {
+    "id": "codex:persephone",
+    "name": "Persephone",
+    "collection": "codex",
+    "requirement": {
+      "kind": "all",
+      "of": [
+        "codex:persephone",
+        {
+          "kind": "atLeast",
+          "fact": "nectar:persephone",
+          "value": 9
+        },
+        "talk:persephone-good-mother"
+      ]
+    },
+    "description": "Max affinity with Persephone through gifts, after she returns to the House of Hades and you assure her she is a good mother."
   }
 ]
