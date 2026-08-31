@@ -35,6 +35,13 @@ describe('requirement-tree', () => {
     expect(items[0]!.getAttribute('label')).toBe('Do the first thing')
   })
 
+  it('shows no group label for a flat list of required steps — the meaning is obvious', async () => {
+    const element = mount({ kind: 'all', of: ['a:one', 'a:two'] })
+    await element.updateComplete
+    expect(element.shadowRoot!.textContent).not.toContain('All of')
+    expect(element.shadowRoot!.querySelectorAll('hd-checklist-item').length).toBe(2)
+  })
+
   it('shows the node kind for a nested group', async () => {
     const element = mount({
       kind: 'all',
