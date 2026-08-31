@@ -124,3 +124,55 @@ describe('subjects', () => {
     expect(validateDataset(withoutSubjects).subjects).toEqual([])
   })
 })
+
+describe('the optional fields the subject axis adds', () => {
+  it('accepts a fact tagged with two subjects', () => {
+    const data = structuredClone(validDataset)
+    data.facts[0]!.subjects = ['athena', 'demeter']
+    expect(validateDataset(data).facts[0]?.subjects).toEqual(['athena', 'demeter'])
+  })
+
+  it('tells an empty subject list apart from a missing one', () => {
+    const data = structuredClone(validDataset)
+    data.facts[0]!.subjects = []
+    data.facts[1]!.subjects = undefined
+    const parsed = validateDataset(data)
+    expect(parsed.facts[0]?.subjects).toEqual([])
+    expect(parsed.facts[1]?.subjects).toBeUndefined()
+  })
+
+  it('rejects a subject id with a bad shape inside a fact', () => {
+    const bad = structuredClone(validDataset)
+    bad.facts[0]!.subjects = ['Lord Hades']
+    expect(() => validateDataset(bad)).toThrow()
+  })
+
+  it('carries a description and a spoiler flag on a fact', () => {
+    const data = structuredClone(validDataset)
+    data.facts[0]!.description = 'Foes deal more damage.'
+    data.facts[0]!.spoiler = false
+    const parsed = validateDataset(data)
+    expect(parsed.facts[0]?.description).toBe('Foes deal more damage.')
+    expect(parsed.facts[0]?.spoiler).toBe(false)
+  })
+
+  it('carries a spoiler flag on an achievement', () => {
+    const data = structuredClone(validDataset)
+    data.achievements[0]!.spoiler = true
+    expect(validateDataset(data).achievements[0]?.spoiler).toBe(true)
+  })
+
+  it('carries a description on a collection', () => {
+    const data = structuredClone(validDataset)
+    data.collections[0]!.description = 'The in-game list of minor prophecies.'
+    expect(validateDataset(data).collections[0]?.description).toBe(
+      'The in-game list of minor prophecies.',
+    )
+  })
+
+  it('rejects an empty description rather than storing a blank one', () => {
+    const bad = structuredClone(validDataset)
+    bad.facts[0]!.description = ''
+    expect(() => validateDataset(bad)).toThrow()
+  })
+})

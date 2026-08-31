@@ -9,6 +9,8 @@ export const achievementSchema = z.object({
   collection: collectionIdSchema,
   requirement: requirementSchema,
   section: collectionIdSchema.optional(),
+  /** True when the description reveals something the player may not have reached. */
+  spoiler: z.boolean().optional(),
 })
 
 export type Achievement = z.infer<typeof achievementSchema>
