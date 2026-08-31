@@ -205,3 +205,39 @@ a combat milestone.
 
 The same rule keeps `talk:nyx-in-chaos-realm` on Nyx alone. Chaos's realm is
 where the conversation happens, not a participant.
+
+## 16. `next-steps-panel` goes, and the Characters table replaces it
+
+**Chosen:** drop the panel. The Characters and Weapons tables answer "what
+next" by sorting.
+
+**Alternative:** keep it as a sixth block on the shell.
+
+**Why:** the owner opens the app before a run to decide a loadout, and what she
+described wanting is comparison — "quantos corações tenho com cada personagem
+pra decidir pra quem dou ambrosia". Sorting the Hearts column ascending *is*
+the Ambrosia queue. The panel ranked facts by how many achievements they
+unblock, which is a different question and not one she asked.
+
+The engine's `nextSteps` stays. It is tested, pure, and a later view may want
+it; deleting the view does not oblige us to delete the answer.
+
+## 17. The shell owns the height, and `theme.css` gives up the body padding
+
+**Chosen:** `app-shell` is `100dvh` with `overflow: hidden`, and `html, body`
+are `height: 100%; overflow: hidden` with no padding.
+
+**Alternative:** keep the body padding and let the shell be `calc(100dvh - 48px)`.
+
+**Why:** the document must never be taller than the viewport, and body padding
+guarantees it is. `100dvh` rather than `100vh` so a phone's collapsing address
+bar does not leave a scrollable sliver — the exact failure the owner's rule
+exists to prevent.
+
+## 18. No backtick inside a `css` template's comments
+
+**Chosen:** write CSS comments without backticks.
+
+**Why:** not a preference. A backtick closes the tagged template, and the file
+fails to transform with `Syntax error "d"` pointing at the middle of a comment.
+It cost a build cycle on the first component of this phase.

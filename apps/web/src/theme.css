@@ -18,6 +18,18 @@
   color-scheme: dark;
 }
 
+/*
+ * The shell is the fixed-height frame: `app-shell` is `100dvh` with
+ * `overflow: hidden`, and whichever region holds a section's content scrolls
+ * inside it. So the document itself must never be taller than the viewport —
+ * no body padding, no body scroll.
+ */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background: #150e19;
   color: var(--hd-color-text, #f2e7d0);
@@ -33,5 +45,4 @@ body {
    * element here is the document itself, not a nested container.
    */
   overflow-anchor: none;
-  padding: 24px;
 }
