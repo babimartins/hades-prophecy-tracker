@@ -28,10 +28,30 @@ import { css, unsafeCSS } from 'lit'
  * that is part accent and part done must show which is which, and lilac or
  * teal sit at 1.10 and 1.01 against the gold. No text is ever drawn on the
  * accent: every accent background in the app is a pip or a bar fill.
+ *
+ * **Hue carries as much as contrast here.** Every foreground colour used to sit
+ * between 30 and 44 degrees: cream 41, muted 39, bronze 30, gold 44, against a
+ * background at 278. Four colours in one band, told apart by saturation alone,
+ * and the muted read as dusty gold rather than as quiet secondary text.
+ *
+ * The muted now takes the background's hue and the warm band is left to the two
+ * colours that mean something:
+ *
+ * | token  | hue | what it is        |
+ * | ------ | --- | ----------------- |
+ * | bg     | 278 | the page          |
+ * | surface| 289 | a panel           |
+ * | muted  | 280 | secondary text    |
+ * | accent |  30 | progress          |
+ * | done   |  44 | finished          |
+ * | text   |  34 | body text         |
+ *
+ * The cream also dropped from 57% saturation to 40%, so the gold is the warmest
+ * thing on screen rather than competing with every line of body text.
  */
 export const colorTokens = {
-  '--hd-color-text': '#f2e7d0',
-  '--hd-color-muted': '#b9a98c',
+  '--hd-color-text': '#efe6da',
+  '--hd-color-muted': '#ac9eb3',
   '--hd-color-surface': '#241627',
   '--hd-color-accent': '#b57433',
   '--hd-color-done': '#d8b34a',

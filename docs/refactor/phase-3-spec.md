@@ -182,7 +182,14 @@ progress and gold for done. Corrected here to what exists.
   completes.
 - An informational block is neutral, on the plain surface colour. Green read as
   success on something merely informative, which is why it is not used there.
+- **Secondary text is purple-grey `#ac9eb3`**, the background's own hue. It is
+  quiet by belonging to the page, not by being a faded accent.
 - Read every colour through `colorVar`, per `AGENTS.md`.
+
+Hue does as much work here as contrast. Every foreground colour once sat between
+30 and 44 degrees on a background at 278, so the four were told apart by
+saturation alone and the secondary text read as dusty gold. The warm band now
+holds only the two colours that mean something.
 
 The accent was `#e35563`, a red, until the owner said it read as an error on
 things that are only progress. The replacement had to clear 4.5:1 on both
